@@ -14,6 +14,7 @@ const IconMap: Record<string, any> = {
 };
 
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
@@ -22,14 +23,15 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
   const catFilter = searchParams.get('category');
   
   const [teamSize, setTeamSize] = useState(10);
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [matchLoading, setMatchLoading] = useState(false);
   const [highlightedTool, setHighlightedTool] = useState<string | null>(null);
 
-  const filteredTools = catFilter 
-    ? toolsData.filter((t: any) => t.category === catFilter)
-    : toolsData;
+  const filteredTools = toolsData
+    .filter((t: any) => !catFilter || t.category === catFilter)
+    .filter((t: any) => t.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
   const handleCompareChange = (toolName: string) => {
     setSelectedTools(prev => 
@@ -68,13 +70,25 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             {catFilter ? `Best ${catFilter} ` : "Find The Perfect "}
             <span style={{ background: 'linear-gradient(to right, var(--brand-primary), var(--brand-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SaaS Tool</span>
           </h1>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto 2rem' }}>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto 3rem' }}>
             Interactive pricing, AI-powered matchmaking, and unbiased feature comparisons.
           </p>
+
+          {/* Search Bar */}
+          <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 4rem' }}>
+             <Search style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
+             <input 
+               type="text" 
+               placeholder="Search 500+ software tools..." 
+               value={searchTerm}
+               onChange={(e) => setSearchTerm(e.target.value)}
+               style={{ width: '100%', padding: '1.5rem 1.5rem 1.5rem 4rem', borderRadius: '100px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-color)', color: 'white', fontSize: '1.1rem', outline: 'none', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
+             />
+          </div>
         </section>
 
         {/* Matchmaker */}
-        {!catFilter && (
+        {!catFilter && !searchTerm && (
           <section style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.05), rgba(168,85,247,0.05))', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '3rem', margin: '0 auto 4rem', maxWidth: '800px', textAlign: 'center', position: 'relative' }}>
             <span style={{ display: 'inline-block', padding: '0.4rem 1rem', borderRadius: '50px', background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '1rem' }}>AI Assistant</span>
             <h3 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>What is your primary goal today?</h3>
@@ -102,7 +116,7 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
         </section>
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '2rem' }}>{catFilter ? `${catFilter} Tools` : "Software Directory"}</h2>
+          <h2 style={{ fontSize: '2rem' }}>{catFilter ? `${catFilter} Tools` : searchTerm ? `Results for "${searchTerm}"` : "Software Directory"}</h2>
         </div>
 
         {/* Grid generated from JSON */}
@@ -239,20 +253,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                   {selectedToolsData.map((t: any) => (
                     <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem' }}>
                       <div style={{ fontSize: '1.2rem', fontWeight: 700 }}>${t.basePrice}<span style={{ fontSize: '0.8rem', opacity: 0.5 }}>{t.isFlat ? '/mo' : '/user'}</span></div>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Feature Comparison */}
-                {/* We will collect all unique features titles from selected tools */}
-                {Array.from(new Set(selectedToolsData.flatMap((t: any) => 
-                  (t.keyFeatures || []).map((f: any) => f.title)
-                ))).slice(0, 8).map((featureTitle: any) => (
-                  <tr key={featureTitle} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{featureTitle}</td>
-                    {selectedToolsData.map((t: any) => {
-                      const hasFeature = (t.keyFeatures || []).some((f: any) => f.title === featureTitle);
-                      return (
                         <td key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>
                           {hasFeature ? <CheckCircle2 color="var(--success)" size={20} /> : <X color="#666" size={20} />}
                         </td>

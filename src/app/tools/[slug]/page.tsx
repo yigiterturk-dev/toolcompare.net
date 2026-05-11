@@ -137,6 +137,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </div>
         </article>
       </main>
+      <Footer />
     </>
   );
 }
