@@ -192,24 +192,85 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(15px)', zIndex: 2000, display: 'flex', justifyContent: 'center', alignItems: 'center', opacity: isModalOpen ? 1 : 0, pointerEvents: isModalOpen ? 'auto' : 'none', transition: 'opacity 0.3s' }}>
         <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', width: '90%', maxWidth: '1000px', padding: '3rem', position: 'relative', transform: isModalOpen ? 'translateY(0)' : 'translateY(30px)', transition: 'transform 0.4s' }}>
           <button onClick={() => setIsModalOpen(false)} style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(255,255,255,0.1)', color: 'var(--text-secondary)', border: 'none', borderRadius: '50%', padding: '0.5rem', cursor: 'pointer' }}><X /></button>
-          <h2>Head-to-Head Comparison</h2>
-          <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '2rem' }}>
-            <thead>
-              <tr>
-                <th style={{ padding: '1.5rem', textAlign: 'left', borderBottom: '1px solid var(--border-color)', fontFamily: 'var(--font-outfit)', fontSize: '1.2rem', width: '33%' }}>Feature / Tool</th>
-                <th style={{ padding: '1.5rem', textAlign: 'left', borderBottom: '1px solid var(--border-color)', fontFamily: 'var(--font-outfit)', fontSize: '1.2rem', width: '33%' }}>{selectedTools[0] || '---'}</th>
-                <th style={{ padding: '1.5rem', textAlign: 'left', borderBottom: '1px solid var(--border-color)', fontFamily: 'var(--font-outfit)', fontSize: '1.2rem', width: '33%' }}>{selectedTools[1] || '---'}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={{ padding: '1.5rem', borderBottom: '1px solid var(--border-color)' }}><strong>API Access</strong></td>
-                <td style={{ padding: '1.5rem', borderBottom: '1px solid var(--border-color)' }}><Check color="var(--success)" style={{ verticalAlign: 'middle' }} /> Included</td>
-                <td style={{ padding: '1.5rem', borderBottom: '1px solid var(--border-color)' }}><Check color="var(--success)" style={{ verticalAlign: 'middle' }} /> Included</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', padding: '3rem', width: '90%', maxWidth: '1000px', zIndex: 1000, maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 50px 100px -20px rgba(0,0,0,0.8)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
+              <h2 style={{ fontSize: '2rem', fontWeight: 800 }}>Side-by-Side <span style={{ color: 'var(--brand-primary)' }}>Comparison</span></h2>
+              <button onClick={() => setIsModalOpen(false)} style={{ background: 'rgba(255,255,255,0.05)', border: 'none', color: 'white', cursor: 'pointer', padding: '0.5rem', borderRadius: '50%' }}><X size={24} /></button>
+            </div>
+
+            <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 1rem' }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left', padding: '1rem', color: 'var(--text-secondary)' }}>Key Metrics</th>
+                  {selectedToolsData.map((t: any) => (
+                    <th key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>
+                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `linear-gradient(135deg, ${t.color1}, ${t.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '1rem', fontWeight: 800 }}>{t.name.charAt(0)}</div>
+                        <span style={{ fontSize: '1.2rem' }}>{t.name}</span>
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {/* Score Row */}
+                <tr style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '16px' }}>
+                  <td style={{ padding: '1.5rem', fontWeight: 600 }}>Ease of Use</td>
+                  {selectedToolsData.map((t: any) => (
+                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem' }}>
+                      <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--brand-primary)' }}>{t.ease}%</div>
+                    </td>
+                  ))}
+                </tr>
+
+                {/* Features Score Row */}
+                <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
+                  <td style={{ padding: '1.5rem', fontWeight: 600 }}>Features Power</td>
+                  {selectedToolsData.map((t: any) => (
+                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem' }}>
+                      <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--brand-secondary)' }}>{t.featuresScore}%</div>
+                    </td>
+                  ))}
+                </tr>
+
+                {/* Pricing Row */}
+                <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
+                  <td style={{ padding: '1.5rem', fontWeight: 600 }}>Starting Price</td>
+                  {selectedToolsData.map((t: any) => (
+                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem' }}>
+                      <div style={{ fontSize: '1.2rem', fontWeight: 700 }}>${t.basePrice}<span style={{ fontSize: '0.8rem', opacity: 0.5 }}>{t.isFlat ? '/mo' : '/user'}</span></div>
+                    </td>
+                  ))}
+                </tr>
+
+                {/* Feature Comparison */}
+                {/* We will collect all unique features titles from selected tools */}
+                {Array.from(new Set(selectedToolsData.flatMap((t: any) => 
+                  (t.keyFeatures || []).map((f: any) => f.title)
+                ))).slice(0, 8).map((featureTitle: any) => (
+                  <tr key={featureTitle} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{featureTitle}</td>
+                    {selectedToolsData.map((t: any) => {
+                      const hasFeature = (t.keyFeatures || []).some((f: any) => f.title === featureTitle);
+                      return (
+                        <td key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>
+                          {hasFeature ? <CheckCircle2 color="var(--success)" size={20} /> : <X color="#666" size={20} />}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <div style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: `repeat(${selectedToolsData.length}, 1fr)`, gap: '2rem' }}>
+              {selectedToolsData.map((t: any) => (
+                <Link key={t.slug} href={`/tools/${t.slug}`} style={{ background: 'white', color: 'black', padding: '1.2rem', borderRadius: '16px', textDecoration: 'none', fontWeight: 800, textAlign: 'center', display: 'block' }}>
+                   View Full {t.name} Review
+                </Link>
+              ))}
+            </div>
+          </div>
       </div>
     </>
   );
