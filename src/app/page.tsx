@@ -67,7 +67,7 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.
           </p>
 
-          <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 4rem' }}>
+          <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 5rem' }}>
              <Search style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
              <input 
                type="text" 
@@ -77,14 +77,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                style={{ width: '100%', padding: '1.5rem 1.5rem 1.5rem 4rem', borderRadius: '100px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-color)', color: 'white', fontSize: '1.1rem', outline: 'none', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
              />
           </div>
-        </section>
-
-        <section style={{ maxWidth: '600px', margin: '0 auto 3rem', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '2rem', backdropFilter: 'blur(10px)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-            <div style={{ fontSize: '1.1rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Users /> Team Size</div>
-            <div style={{ fontFamily: 'var(--font-outfit)', fontSize: '1.5rem', fontWeight: 800, color: 'var(--brand-primary)' }}>{teamSize} Users</div>
-          </div>
-          <input type="range" min="1" max="100" value={teamSize} onChange={(e) => setTeamSize(parseInt(e.target.value))} />
         </section>
 
         <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
