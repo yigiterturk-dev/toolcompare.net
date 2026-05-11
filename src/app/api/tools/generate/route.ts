@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { OpenAI } from 'openai';
+import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 
@@ -7,70 +7,74 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-const toolsPath = path.join(process.cwd(), 'src', 'data', 'tools.json');
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { category, count, password } = body;
+    const { category, toolName, password } = body;
 
-    if (password !== process.env.ADMIN_PASSWORD) {
+    if (password !== "toolpass99") { // Basic protection for now
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const prompt = `You are a world-class SaaS reviewer and SEO expert. Generate a JSON object containing a single key "tools", which is an array of ${count || 5} real, popular SaaS tools in the "${category}" category.
-    The schema for EACH tool MUST be:
+    const prompt = `Generate a highly professional, deep-dive review for a SaaS tool named "${toolName || category}". 
+    The content MUST be elite-level, human-like, and authoritative. 
+
+    Format the response as a JSON object with these EXACT keys:
     {
-      "slug": "tool-name-lowercase-with-hyphens",
-      "name": "Exact Tool Name",
-      "iconName": "One of: Zap, Cloud, BarChart3, Database, Activity, CheckCircle, Layout, Mail, Shield",
-      "color1": "#hexcolor1",
-      "color2": "#hexcolor2",
-      "ease": integer 1-100,
-      "featuresScore": integer 1-100,
-      "category": "${category}",
-      "basePrice": integer,
-      "isFlat": boolean,
-      "shortDescription": "One punchy sentence.",
-      "longDescription": "3-paragraph comprehensive review in English.",
-      "keyFeatures": [
-        { "title": "Feature Name", "description": "1-2 sentences." },
-        { "title": "Feature Name", "description": "1-2 sentences." },
-        { "title": "Feature Name", "description": "1-2 sentences." }
-      ],
+      "name": "Proper Tool Name",
+      "category": "${category || 'SaaS'}",
+      "shortDescription": "A punchy, one-sentence value proposition.",
+      "longDescription": "EXACTLY THREE (3) long, professional paragraphs. Paragraph 1: Introduction and core philosophy. Paragraph 2: Key strengths and scaling capabilities. Paragraph 3: Trade-offs, ecosystem, and final recommendation. Total length should be at least 300 words.",
       "pros": ["Pro 1", "Pro 2", "Pro 3"],
       "cons": ["Con 1", "Con 2"],
-      "targetAudience": "Target audience description in English.",
-      "verdict": "Final verdict in English."
-    }`;
+      "keyFeatures": [
+        { "title": "Feature 1 Title", "description": "A detailed explanation of why this feature matters." },
+        { "title": "Feature 2 Title", "description": "..." },
+        { "title": "Feature 3 Title", "description": "..." }
+      ],
+      "targetAudience": "A specific description of who should use this and why.",
+      "verdict": "A powerful, one-sentence final expert opinion.",
+      "basePrice": 29,
+      "isFlat": false,
+      "ease": 90,
+      "featuresScore": 90,
+      "color1": "#3b82f6",
+      "color2": "#1d4ed8",
+      "iconName": "Zap"
+    }
+    
+    Return ONLY the JSON object.`;
 
-    const response = await openai.chat.completions.create({
+    const completion = await openai.chat.completions.create({
       model: "gpt-4o",
       messages: [{ role: "user", content: prompt }],
-      response_format: { type: "json_object" },
+      response_format: { type: "json_object" }
     });
 
-    const data = JSON.parse(response.choices[0].message.content || '{}');
-    const newTools = data.tools || [];
+    const content = completion.choices[0].message.content;
+    if (!content) throw new Error("No content from OpenAI");
 
-    // Read and Update JSON
-    const existingTools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
-    const existingSlugs = new Set(existingTools.map((t: any) => t.slug));
+    const newTool = JSON.parse(content);
+    newTool.slug = (newTool.name || "").toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
+
+    // Save to tools.json
+    const filePath = path.join(process.cwd(), 'src/data/tools.json');
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    const tools = JSON.parse(fileData);
     
-    const added = [];
-    for (const tool of newTools) {
-      if (!existingSlugs.has(tool.slug)) {
-        existingTools.push(tool);
-        added.push(tool);
-      }
+    // Check if exists, update or add
+    const index = tools.findIndex((t: any) => t.slug === newTool.slug);
+    if (index !== -1) {
+      tools[index] = { ...tools[index], ...newTool };
+    } else {
+      tools.push(newTool);
     }
 
-    fs.writeFileSync(toolsPath, JSON.stringify(existingTools, null, 2));
+    fs.writeFileSync(filePath, JSON.stringify(tools, null, 2));
 
-    return NextResponse.json({ success: true, addedCount: added.length, tools: added });
-
+    return NextResponse.json({ success: true, tool: newTool });
   } catch (error: any) {
-    console.error(error);
+    console.error("Generation Error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

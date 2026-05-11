@@ -7,8 +7,8 @@ export default function Footer() {
       <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', marginBottom: '4rem' }}>
         
         <div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-            <Layers style={{ color: 'var(--brand-primary)' }} /> ToolCompare
+          <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'white', display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
+            <img src="/logo.png" alt="ToolCompare Logo" style={{ width: '32px', height: '32px', objectFit: 'contain' }} /> ToolCompare
           </div>
           <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
             Find and compare the world's best software tools with deep-dive reviews and real-time pricing analysis.
