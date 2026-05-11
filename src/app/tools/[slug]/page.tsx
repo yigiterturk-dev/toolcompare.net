@@ -28,6 +28,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   if (!tool) notFound();
 
+  // Smart Data Normalization (Handle camelCase, snake_case, and nested objects)
+  const longDesc = tool.longDescription || tool.description || (tool.review?.text || tool.review?.body || tool.review?.introduction || "");
+  const features = tool.keyFeatures || tool.key_features || tool.features || [];
+  const targetAud = typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || tool.target_audience?.description || tool.target_audience?.text || tool.target_audience?.small_businesses || "");
+  const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
+
   return (
     <>
       <Header />
@@ -59,7 +65,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               <section>
                 <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>
                 <div style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
-                  {tool.longDescription || tool.description}
+                  {longDesc}
                 </div>
               </section>
 
@@ -68,39 +74,36 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <Award color="var(--brand-primary)" /> Key Features
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                  {(() => {
-                    const allFeatures = tool.keyFeatures || tool.features || [];
-                    return allFeatures.map((f: any, i: number) => {
-                      const title = typeof f === 'string' ? f : (f.title || f.name || f.text || "");
-                      const description = typeof f === 'object' ? (f.description || f.text || "") : "";
-                      return (
-                        <div key={i}>
-                          <h4 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{title}</h4>
-                          {description && <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{description}</p>}
-                        </div>
-                      );
-                    });
-                  })()}
+                  {features.map((f: any, i: number) => {
+                    const title = typeof f === 'string' ? f : (f.title || f.name || f.text || "");
+                    const description = typeof f === 'object' ? (f.description || f.text || "") : "";
+                    return (
+                      <div key={i}>
+                        <h4 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{title}</h4>
+                        {description && <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{description}</p>}
+                      </div>
+                    );
+                  })}
                 </div>
               </section>
 
-              <section>
-                 <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                   <Target color="var(--brand-secondary)" /> Target Audience
-                 </h2>
-                 <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                    {typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || "")}
-                 </p>
-              </section>
+              {targetAud && (
+                <section>
+                  <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                    <Target color="var(--brand-secondary)" /> Target Audience
+                  </h2>
+                  <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{targetAud}</p>
+                </section>
+              )}
 
-              <section style={{ borderLeft: '4px solid var(--brand-tertiary)', paddingLeft: '2rem', margin: '2rem 0' }}>
-                <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                  <MessageSquareQuote color="var(--brand-tertiary)" /> The Final Verdict
-                </h2>
-                <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>
-                  "{typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.text || tool.verdict?.text || "")}"
-                </p>
-              </section>
+              {verdictText && (
+                <section style={{ borderLeft: '4px solid var(--brand-tertiary)', paddingLeft: '2rem', margin: '2rem 0' }}>
+                  <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                    <MessageSquareQuote color="var(--brand-tertiary)" /> The Final Verdict
+                  </h2>
+                  <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>"{typeof verdictText === 'string' ? verdictText : (verdictText.text || "")}"</p>
+                </section>
+              )}
             </div>
 
             <aside>

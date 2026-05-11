@@ -49,12 +49,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
     }, 800);
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    e.currentTarget.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-    e.currentTarget.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-  };
-
   return (
     <>
       <Header />
@@ -77,31 +71,13 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
              <Search style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
              <input 
                type="text" 
-               placeholder="Search 500+ software tools..." 
+               placeholder="Search software tools..." 
                value={searchTerm}
                onChange={(e) => setSearchTerm(e.target.value)}
                style={{ width: '100%', padding: '1.5rem 1.5rem 1.5rem 4rem', borderRadius: '100px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-color)', color: 'white', fontSize: '1.1rem', outline: 'none', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
              />
           </div>
         </section>
-
-        {!catFilter && !searchTerm && (
-          <section style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.05), rgba(168,85,247,0.05))', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '3rem', margin: '0 auto 4rem', maxWidth: '800px', textAlign: 'center', position: 'relative' }}>
-            <span style={{ display: 'inline-block', padding: '0.4rem 1rem', borderRadius: '50px', background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '1rem' }}>AI Assistant</span>
-            <h3 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>What is your primary goal today?</h3>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Select your priority, and our algorithm will highlight the best tool instantly.</p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button onClick={() => handleMatch('hubspot-crm')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Database /> Manage Customers (CRM)</button>
-              <button onClick={() => handleMatch('asana')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle /> Track Projects</button>
-              <button onClick={() => handleMatch('activecampaign')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail /> Automate Emails</button>
-            </div>
-            {matchLoading && (
-              <div style={{ marginTop: '2rem', color: 'var(--brand-primary)', fontWeight: 600, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
-                <Loader2 className="animate-spin" /> Analyzing 10,000+ data points...
-              </div>
-            )}
-          </section>
-        )}
 
         <section style={{ maxWidth: '600px', margin: '0 auto 3rem', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '2rem', backdropFilter: 'blur(10px)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
@@ -111,41 +87,45 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
           <input type="range" min="1" max="100" value={teamSize} onChange={(e) => setTeamSize(parseInt(e.target.value))} />
         </section>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '2rem' }}>{catFilter ? `${catFilter} Tools` : searchTerm ? `Results for "${searchTerm}"` : "Software Directory"}</h2>
-        </div>
-
         <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
           {filteredTools.map((tool: any) => {
             const Icon = IconMap[tool.iconName] || Zap;
-            const total = tool.isFlat ? tool.basePrice : tool.basePrice * teamSize;
+            const isSelected = selectedTools.includes(tool.name);
             
             return (
-              <div key={tool.slug} id={`card-${tool.slug}`} onMouseMove={handleMouseMove} style={{ background: 'var(--surface-color)', border: `1px solid ${highlightedTool === tool.slug ? 'var(--brand-primary)' : 'var(--border-color)'}`, borderRadius: '20px', padding: '2rem', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', boxShadow: highlightedTool === tool.slug ? '0 0 30px rgba(99,102,241,0.2)' : 'none' }}>
+              <div key={tool.slug} id={`card-${tool.slug}`} style={{ background: 'var(--surface-color)', border: `1px solid ${highlightedTool === tool.slug ? 'var(--brand-primary)' : 'var(--border-color)'}`, borderRadius: '24px', padding: '2rem', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', boxShadow: isSelected ? '0 0 0 2px var(--brand-primary)' : 'none' }}>
                 <div style={{ position: 'relative', zIndex: 1 }}>
-                  <label style={{ position: 'absolute', top: 0, right: 0, display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer', color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.8rem', borderRadius: '50px', border: '1px solid var(--border-color)' }}>
-                    <input type="checkbox" checked={selectedTools.includes(tool.name)} onChange={() => handleCompareChange(tool.name)} style={{ accentColor: 'var(--brand-primary)' }} /> Compare
-                  </label>
+                  
+                  {/* Premium Compare Toggle */}
+                  <div 
+                    onClick={() => handleCompareChange(tool.name)}
+                    style={{ position: 'absolute', top: 0, right: 0, padding: '0.5rem 1rem', borderRadius: '50px', background: isSelected ? 'var(--brand-primary)' : 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', fontWeight: 700, transition: 'all 0.2s', color: isSelected ? 'white' : 'var(--text-secondary)' }}
+                  >
+                    {isSelected ? <Check size={14} /> : <div style={{ width: 14, height: 14, borderRadius: '50%', border: '2px solid currentColor' }} />}
+                    Compare
+                  </div>
                   
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', marginBottom: '1.5rem', marginTop: '1rem' }}>
-                    <div style={{ width: '60px', height: '60px', borderRadius: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})` }}>
+                    <div style={{ width: '64px', height: '64px', borderRadius: '18px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, boxShadow: `0 10px 20px ${tool.color1}44` }}>
                       <Icon size={32} color="#fff" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: '1.4rem' }}><Link href={`/tools/${tool.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{tool.name}</Link></h3>
-                      <span style={{ fontSize: '0.8rem', color: 'var(--brand-primary)' }}>{tool.category}</span>
+                      <h3 style={{ fontSize: '1.5rem', fontWeight: 700 }}>
+                        <Link href={`/tools/${tool.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{tool.name}</Link>
+                      </h3>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--brand-primary)', fontWeight: 600 }}>{tool.category}</span>
                     </div>
                   </div>
 
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem' }}>{tool.shortDescription || tool.description}</p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem', lineHeight: 1.5 }}>{tool.shortDescription}</p>
 
-                  <ul style={{ listStyle: 'none', marginBottom: '2rem', flexGrow: 1, padding: 0 }}>
+                  <ul style={{ listStyle: 'none', marginBottom: '2.5rem', flexGrow: 1, padding: 0 }}>
                     {(() => {
                       const allFeatures = tool.keyFeatures || tool.features || [];
                       return allFeatures.slice(0, 3).map((f: any, i: number) => {
-                        const title = typeof f === 'string' ? f : (f.title || f.name || f.text || "");
+                        const title = typeof f === 'string' ? f : (f.title || "");
                         return (
-                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.8rem', color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 500 }}>
                             <CheckCircle2 color="var(--success)" size={18} style={{ flexShrink: 0, marginTop: '2px' }} /> {title}
                           </li>
                         );
@@ -153,13 +133,26 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                     })()}
                   </ul>
 
-                  <div style={{ marginBottom: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+                  <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div>
-                      <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', display: 'flex', alignItems: 'baseline', gap: '0.2rem' }}>
-                        ${tool.basePrice} <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>{tool.isFlat ? '/mo' : '/user'}</span>
+                      <div style={{ fontSize: '2.2rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', letterSpacing: '-1px' }}>
+                        ${tool.basePrice}<span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>{tool.isFlat ? '/mo' : '/user'}</span>
                       </div>
                     </div>
-                    <Link href={`/tools/${tool.slug}`} style={{ background: 'var(--text-primary)', color: 'var(--bg-color)', padding: '0.6rem 1.2rem', borderRadius: '10px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Review</Link>
+                    
+                    {/* Premium Review Button */}
+                    <Link 
+                      href={`/tools/${tool.slug}`} 
+                      style={{ 
+                        background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`,
+                        color: 'white', padding: '0.8rem 1.8rem', borderRadius: '12px', textDecoration: 'none', 
+                        fontWeight: 700, fontSize: '0.95rem', boxShadow: `0 10px 20px ${tool.color1}33`,
+                        transition: 'transform 0.2s, box-shadow 0.2s'
+                      }}
+                      className="hover-scale"
+                    >
+                      Review
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -168,54 +161,58 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
         </section>
       </main>
 
-      <div style={{ position: 'fixed', bottom: selectedTools.length > 0 ? '40px' : '-100px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(15, 15, 20, 0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50px', padding: '0.8rem 1rem 0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '2rem', boxShadow: '0 10px 40px rgba(0,0,0,0.8)', transition: 'bottom 0.5s', zIndex: 1000 }}>
+      <div style={{ position: 'fixed', bottom: selectedTools.length > 0 ? '40px' : '-100px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(15, 15, 20, 0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50px', padding: '0.8rem 1rem 0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '2rem', boxShadow: '0 20px 60px rgba(0,0,0,0.8)', transition: 'bottom 0.5s', zIndex: 1000 }}>
         <div style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-          <div style={{ background: 'var(--brand-primary)', color: 'white', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem' }}>{selectedTools.length}</div>
-          <span>Tools Selected</span>
+          <div style={{ background: 'var(--brand-primary)', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 800 }}>{selectedTools.length}</div>
+          <span style={{ fontSize: '1rem' }}>Tools Ready to Compare</span>
         </div>
-        <button onClick={() => setIsModalOpen(true)} style={{ background: 'white', color: 'black', border: 'none', padding: '0.8rem 1.5rem', borderRadius: '50px', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Compare Now <ArrowRight size={18} /></button>
+        <button onClick={() => setIsModalOpen(true)} style={{ background: 'white', color: 'black', border: 'none', padding: '0.9rem 2rem', borderRadius: '50px', fontWeight: 800, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.6rem', boxShadow: '0 10px 30px rgba(255,255,255,0.2)' }}>Compare <ArrowRight size={20} /></button>
       </div>
 
       {isModalOpen && (
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(15px)', zIndex: 2000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ position: 'relative', background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', padding: '3rem', width: '90%', maxWidth: '1000px', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 50px 100px -20px rgba(0,0,0,0.8)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
-              <h2 style={{ fontSize: '2rem', fontWeight: 800 }}>Side-by-Side <span style={{ color: 'var(--brand-primary)' }}>Comparison</span></h2>
-              <button onClick={() => setIsModalOpen(false)} style={{ background: 'rgba(255,255,255,0.05)', border: 'none', color: 'white', cursor: 'pointer', padding: '0.5rem', borderRadius: '50%' }}><X size={24} /></button>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.9)', backdropFilter: 'blur(20px)', zIndex: 2000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ position: 'relative', background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', padding: '3rem', width: '95%', maxWidth: '1100px', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 50px 100px -20px rgba(0,0,0,1)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1.5px' }}>Side-by-Side <span style={{ background: 'linear-gradient(to right, var(--brand-primary), var(--brand-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Analysis</span></h2>
+              <button onClick={() => setIsModalOpen(false)} style={{ background: 'rgba(255,255,255,0.05)', border: 'none', color: 'white', cursor: 'pointer', padding: '0.8rem', borderRadius: '50%' }}><X size={28} /></button>
             </div>
-            <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 1rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 1.5rem' }}>
               <thead>
                 <tr>
-                  <th style={{ textAlign: 'left', padding: '1rem', color: 'var(--text-secondary)' }}>Key Metrics</th>
+                  <th style={{ textAlign: 'left', padding: '1rem', color: 'var(--text-secondary)', fontSize: '1rem' }}>Comparison Points</th>
                   {selectedToolsData.map((t: any) => (
                     <th key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>
-                      <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `linear-gradient(135deg, ${t.color1}, ${t.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 800 }}>{t.name.charAt(0)}</div>
-                        <span style={{ fontSize: '1.2rem' }}>{t.name}</span>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem' }}>
+                        <div style={{ width: '50px', height: '50px', borderRadius: '14px', background: `linear-gradient(135deg, ${t.color1}, ${t.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 800, fontSize: '1.2rem' }}>{t.name.charAt(0)}</div>
+                        <span style={{ fontSize: '1.3rem', fontWeight: 700 }}>{t.name}</span>
                       </div>
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                <tr style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '16px' }}>
-                  <td style={{ padding: '1.5rem', fontWeight: 600 }}>Ease of Use</td>
+                <tr style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '20px' }}>
+                  <td style={{ padding: '2rem', fontWeight: 700, fontSize: '1.1rem' }}>Ease of Use</td>
                   {selectedToolsData.map((t: any) => (
-                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem', color: 'var(--brand-primary)', fontSize: '1.5rem', fontWeight: 800 }}>{t.ease}%</td>
+                    <td key={t.slug} style={{ textAlign: 'center', padding: '2rem', color: 'var(--brand-primary)', fontSize: '1.8rem', fontWeight: 900 }}>{t.ease}%</td>
                   ))}
                 </tr>
                 <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
-                  <td style={{ padding: '1.5rem', fontWeight: 600 }}>Starting Price</td>
+                  <td style={{ padding: '2rem', fontWeight: 700, fontSize: '1.1rem' }}>Starting Price</td>
                   {selectedToolsData.map((t: any) => (
-                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem', fontSize: '1.2rem', fontWeight: 700 }}>${t.basePrice}<span style={{ fontSize: '0.8rem', opacity: 0.5 }}>{t.isFlat ? '/mo' : '/user'}</span></td>
+                    <td key={t.slug} style={{ textAlign: 'center', padding: '2rem', fontSize: '1.4rem', fontWeight: 800 }}>${t.basePrice}<span style={{ fontSize: '0.9rem', opacity: 0.5, fontWeight: 400 }}>{t.isFlat ? '/mo' : '/user'}</span></td>
                   ))}
                 </tr>
-                {Array.from(new Set(selectedToolsData.flatMap((t: any) => (t.keyFeatures || []).map((f: any) => f.title)))).slice(0, 6).map((title: any) => (
+                {Array.from(new Set(selectedToolsData.flatMap((t: any) => {
+                   const fts = t.keyFeatures || t.key_features || t.features || [];
+                   return fts.map((f: any) => typeof f === 'string' ? f : (f.title || ""));
+                }))).slice(0, 8).map((title: any) => (
                   <tr key={title} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{title}</td>
+                    <td style={{ padding: '1.2rem', color: 'var(--text-secondary)', fontSize: '1rem', fontWeight: 500 }}>{title}</td>
                     {selectedToolsData.map((t: any) => {
-                      const has = (t.keyFeatures || []).some((f: any) => f.title === title);
-                      return <td key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>{has ? <CheckCircle2 color="var(--success)" size={20} /> : <X color="#444" size={20} />}</td>
+                      const fts = t.keyFeatures || t.key_features || t.features || [];
+                      const has = fts.some((f: any) => (typeof f === 'string' ? f : (f.title || "")) === title);
+                      return <td key={t.slug} style={{ textAlign: 'center', padding: '1.2rem' }}>{has ? <CheckCircle2 color="var(--success)" size={24} /> : <X color="rgba(255,255,255,0.1)" size={24} />}</td>
                     })}
                   </tr>
                 ))}
