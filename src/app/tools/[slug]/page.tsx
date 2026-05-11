@@ -68,12 +68,19 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <Award color="var(--brand-primary)" /> Key Features
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                  {(tool.keyFeatures || (tool.features || []).map((f:any)=>({title:f, description: ""}))).map((f: any, i: number) => (
-                    <div key={i}>
-                      <h4 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{f.title || f}</h4>
-                      {f.description && <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{f.description}</p>}
-                    </div>
-                  ))}
+                  {(() => {
+                    const allFeatures = tool.keyFeatures || tool.features || [];
+                    return allFeatures.map((f: any, i: number) => {
+                      const title = typeof f === 'string' ? f : (f.title || f.name || f.text || "");
+                      const description = typeof f === 'object' ? (f.description || f.text || "") : "";
+                      return (
+                        <div key={i}>
+                          <h4 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{title}</h4>
+                          {description && <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{description}</p>}
+                        </div>
+                      );
+                    });
+                  })()}
                 </div>
               </section>
 
@@ -81,14 +88,18 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                  <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
                    <Target color="var(--brand-secondary)" /> Target Audience
                  </h2>
-                 <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{tool.targetAudience}</p>
+                 <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                    {typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || "")}
+                 </p>
               </section>
 
               <section style={{ borderLeft: '4px solid var(--brand-tertiary)', paddingLeft: '2rem', margin: '2rem 0' }}>
                 <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
                   <MessageSquareQuote color="var(--brand-tertiary)" /> The Final Verdict
                 </h2>
-                <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>"{tool.verdict}"</p>
+                <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>
+                  "{typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.text || tool.verdict?.text || "")}"
+                </p>
               </section>
             </div>
 

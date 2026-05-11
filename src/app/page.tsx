@@ -140,11 +140,17 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem' }}>{tool.shortDescription || tool.description}</p>
 
                   <ul style={{ listStyle: 'none', marginBottom: '2rem', flexGrow: 1, padding: 0 }}>
-                    {(tool.keyFeatures || (tool.features || []).map((f:any)=>({title:f}))).slice(0, 3).map((f: any, i: number) => (
-                      <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                        <CheckCircle2 color="var(--success)" size={18} style={{ flexShrink: 0, marginTop: '2px' }} /> {f.title || f}
-                      </li>
-                    ))}
+                    {(() => {
+                      const allFeatures = tool.keyFeatures || tool.features || [];
+                      return allFeatures.slice(0, 3).map((f: any, i: number) => {
+                        const title = typeof f === 'string' ? f : (f.title || f.name || f.text || "");
+                        return (
+                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                            <CheckCircle2 color="var(--success)" size={18} style={{ flexShrink: 0, marginTop: '2px' }} /> {title}
+                          </li>
+                        );
+                      });
+                    })()}
                   </ul>
 
                   <div style={{ marginBottom: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
