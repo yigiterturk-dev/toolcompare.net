@@ -8,6 +8,10 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata: Metadata = {
   title: "ToolCompare | Premium SaaS Insights",
   description: "Interactive pricing, AI-powered matchmaking, and unbiased feature comparisons.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

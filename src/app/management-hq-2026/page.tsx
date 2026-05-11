@@ -116,6 +116,44 @@ export default function AdminPanel() {
         <button onClick={() => setIsLoggedIn(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: '1px solid rgba(239, 68, 68, 0.2)', padding: '0.6rem 1.2rem', borderRadius: '10px', cursor: 'pointer' }}><LogOut size={18} /> Logout</button>
       </header>
 
+      {/* AI Generator Section */}
+      <section style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.1), rgba(168,85,247,0.1))', border: '1px solid var(--brand-primary)', borderRadius: '24px', padding: '2rem', marginBottom: '3rem' }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Zap color="var(--brand-primary)" /> AI Content Factory</h2>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>Enter a category to bulk-generate high-quality reviews and tools instantly.</p>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+          <input 
+            type="text" 
+            placeholder="e.g. Email Marketing, CRM, Video Editors..." 
+            id="ai-category"
+            style={{ flex: 1, padding: '1rem', borderRadius: '12px', background: '#050505', border: '1px solid #333', color: 'white' }} 
+          />
+          <button 
+            onClick={async () => {
+              const cat = (document.getElementById('ai-category') as HTMLInputElement).value;
+              if (!cat) return alert("Please enter a category");
+              setLoading(true);
+              const res = await fetch("/api/tools/generate", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ category: cat, count: 5, password })
+              });
+              const data = await res.json();
+              setLoading(false);
+              if (data.success) {
+                alert(`Successfully added ${data.addedCount} tools!`);
+                fetchTools();
+              } else {
+                alert("Error: " + data.error);
+              }
+            }}
+            disabled={loading}
+            style={{ padding: '0 2rem', borderRadius: '12px', background: 'white', color: 'black', fontWeight: 700, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+          >
+            {loading ? <Loader2 className="animate-spin" /> : "Generate 5 Tools"}
+          </button>
+        </div>
+      </section>
+
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '3rem' }}>
         
         {/* List of Tools */}
