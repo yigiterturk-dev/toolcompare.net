@@ -102,7 +102,7 @@ export default function Home() {
 
         {/* Grid generated from JSON */}
         <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
-          {toolsData.map((tool) => {
+          {toolsData.map((tool: any) => {
             const Icon = IconMap[tool.iconName] || Zap;
             const total = tool.isFlat ? tool.basePrice : tool.basePrice * teamSize;
             
@@ -148,12 +148,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem' }}>{tool.shortDescription}</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem' }}>{tool.shortDescription || tool.description}</p>
 
                   <ul style={{ listStyle: 'none', marginBottom: '2rem', flexGrow: 1, padding: 0 }}>
-                    {(tool.keyFeatures || []).slice(0, 3).map((f: any, i: number) => (
+                    {(tool.keyFeatures || (tool.features || []).map((f:any)=>({title:f}))).slice(0, 3).map((f: any, i: number) => (
                       <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.8rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-                        <CheckCircle2 color="var(--success)" size={18} style={{ flexShrink: 0, marginTop: '2px' }} /> {f.title}
+                        <CheckCircle2 color="var(--success)" size={18} style={{ flexShrink: 0, marginTop: '2px' }} /> {f.title || f}
                       </li>
                     ))}
                   </ul>

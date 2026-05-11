@@ -60,7 +60,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               <section>
                 <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>
                 <div style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
-                  {tool.longDescription}
+                  {tool.longDescription || tool.description}
                 </div>
               </section>
 
@@ -69,10 +69,10 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <Award color="var(--brand-primary)" /> Key Features
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                  {(tool.keyFeatures || []).map((f: any, i: number) => (
+                  {(tool.keyFeatures || (tool.features || []).map((f:any)=>({title:f, description: ""}))).map((f: any, i: number) => (
                     <div key={i}>
-                      <h4 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{f.title}</h4>
-                      <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{f.description}</p>
+                      <h4 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{f.title || f}</h4>
+                      {f.description && <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{f.description}</p>}
                     </div>
                   ))}
                 </div>
