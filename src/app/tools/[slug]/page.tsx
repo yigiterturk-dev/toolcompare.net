@@ -1,4 +1,10 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import toolsData from "@/data/tools.json";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
+import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -36,7 +42,6 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </Link>
 
         <article>
-          {/* Header Section */}
           <div style={{ marginBottom: '4rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
               <div style={{ width: '100px', height: '100px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
@@ -50,10 +55,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
-            
-            {/* Left Column: Deep Content */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-              
               <section>
                 <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>
                 <div style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
@@ -88,23 +90,15 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </h2>
                 <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>"{tool.verdict}"</p>
               </section>
-
             </div>
 
-            {/* Right Column: Sticky Sidebar Info */}
             <aside>
               <div style={{ position: 'sticky', top: '8rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                
-                {/* Score Card */}
                 <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem', textAlign: 'center' }}>
                    <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Ease of Use</span>
                    <div style={{ fontSize: '3.5rem', fontWeight: 800, color: 'var(--brand-primary)', fontFamily: 'var(--font-outfit)' }}>{tool.ease}%</div>
-                   <div style={{ height: '6px', background: 'var(--surface-light)', borderRadius: '10px', marginTop: '1rem', overflow: 'hidden' }}>
-                      <div style={{ width: `${tool.ease}%`, height: '100%', background: 'var(--brand-primary)' }}></div>
-                   </div>
                 </div>
 
-                {/* Pros/Cons Box */}
                 <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem' }}>
                   <h4 style={{ marginBottom: '1.5rem', color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={18} /> Pros</h4>
                   <ul style={{ listStyle: 'none', padding: 0, marginBottom: '2rem' }}>
@@ -120,20 +114,17 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   </ul>
                 </div>
 
-                {/* Pricing Box */}
                 <div style={{ background: 'linear-gradient(135deg, var(--brand-primary), var(--brand-secondary))', borderRadius: '24px', padding: '2rem', color: 'white' }}>
                    <p style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '0.5rem' }}>Pricing starts at</p>
                    <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', marginBottom: '1.5rem' }}>
                      ${tool.basePrice}<span style={{ fontSize: '1rem', fontWeight: 400, opacity: 0.8 }}>{tool.isFlat ? '/mo' : '/user/mo'}</span>
                    </div>
-                   <button style={{ width: '100%', background: 'white', color: 'black', border: 'none', padding: '1rem', borderRadius: '12px', fontWeight: 700, cursor: 'pointer', transition: 'transform 0.2s' }}>
+                   <button style={{ width: '100%', background: 'white', color: 'black', border: 'none', padding: '1rem', borderRadius: '12px', fontWeight: 700, cursor: 'pointer' }}>
                      Visit Website
                    </button>
                 </div>
-
               </div>
             </aside>
-
           </div>
         </article>
       </main>
