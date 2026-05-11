@@ -6,11 +6,14 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  title: "ToolCompare | Premium SaaS Insights",
-  description: "Interactive pricing, AI-powered matchmaking, and unbiased feature comparisons.",
+  title: "ToolCompare | The World's Best Software Tools, Compared",
+  description: "Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.",
+  icons: {
+    icon: "/logo.png",
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
