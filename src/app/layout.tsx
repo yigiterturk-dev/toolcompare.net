@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     icon: "/logo.png",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 };
 
