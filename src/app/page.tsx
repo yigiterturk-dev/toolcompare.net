@@ -1,22 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { 
   Layers, Zap, Shield, BarChart3, Cloud, Database, Activity, CheckCircle, Layout, Mail,
-  CheckCircle2, Check, X, Loader2, Users, ArrowRight
+  CheckCircle2, Check, X, Loader2, Users, ArrowRight, Search
 } from "lucide-react";
 import toolsData from "@/data/tools.json";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-// Map string icons to actual Lucide components
 const IconMap: Record<string, any> = {
   Zap, Cloud, BarChart3, Database, Activity, CheckCircle, Layout, Mail
 };
-
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 function ToolGrid({ toolsData }: { toolsData: any[] }) {
   const searchParams = useSearchParams();
@@ -32,6 +29,8 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
   const filteredTools = toolsData
     .filter((t: any) => !catFilter || t.category === catFilter)
     .filter((t: any) => t.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  const selectedToolsData = toolsData.filter((t: any) => selectedTools.includes(t.name));
 
   const handleCompareChange = (toolName: string) => {
     setSelectedTools(prev => 
@@ -74,7 +73,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             Interactive pricing, AI-powered matchmaking, and unbiased feature comparisons.
           </p>
 
-          {/* Search Bar */}
           <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 4rem' }}>
              <Search style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
              <input 
@@ -87,7 +85,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
           </div>
         </section>
 
-        {/* Matchmaker */}
         {!catFilter && !searchTerm && (
           <section style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.05), rgba(168,85,247,0.05))', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '3rem', margin: '0 auto 4rem', maxWidth: '800px', textAlign: 'center', position: 'relative' }}>
             <span style={{ display: 'inline-block', padding: '0.4rem 1rem', borderRadius: '50px', background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '1rem' }}>AI Assistant</span>
@@ -106,7 +103,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
           </section>
         )}
 
-        {/* Slider */}
         <section style={{ maxWidth: '600px', margin: '0 auto 3rem', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '2rem', backdropFilter: 'blur(10px)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
             <div style={{ fontSize: '1.1rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Users /> Team Size</div>
@@ -119,26 +115,13 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
           <h2 style={{ fontSize: '2rem' }}>{catFilter ? `${catFilter} Tools` : searchTerm ? `Results for "${searchTerm}"` : "Software Directory"}</h2>
         </div>
 
-        {/* Grid generated from JSON */}
         <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
           {filteredTools.map((tool: any) => {
             const Icon = IconMap[tool.iconName] || Zap;
             const total = tool.isFlat ? tool.basePrice : tool.basePrice * teamSize;
             
             return (
-              <div 
-                key={tool.slug} 
-                id={`card-${tool.slug}`}
-                onMouseMove={handleMouseMove}
-                style={{
-                  background: 'var(--surface-color)', border: `1px solid ${highlightedTool === tool.slug ? 'var(--brand-primary)' : 'var(--border-color)'}`,
-                  borderRadius: '20px', padding: '2rem', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column',
-                  transition: 'all 0.3s ease',
-                  boxShadow: highlightedTool === tool.slug ? '0 0 30px rgba(99,102,241,0.2)' : 'none'
-                }}
-              >
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'radial-gradient(circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255,255,255,0.06) 0%, transparent 400px)', zIndex: 0, opacity: 0, transition: 'opacity 0.3s' }} className="hover:opacity-100" />
-                
+              <div key={tool.slug} id={`card-${tool.slug}`} onMouseMove={handleMouseMove} style={{ background: 'var(--surface-color)', border: `1px solid ${highlightedTool === tool.slug ? 'var(--brand-primary)' : 'var(--border-color)'}`, borderRadius: '20px', padding: '2rem', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', boxShadow: highlightedTool === tool.slug ? '0 0 30px rgba(99,102,241,0.2)' : 'none' }}>
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <label style={{ position: 'absolute', top: 0, right: 0, display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer', color: 'var(--text-secondary)', background: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.8rem', borderRadius: '50px', border: '1px solid var(--border-color)' }}>
                     <input type="checkbox" checked={selectedTools.includes(tool.name)} onChange={() => handleCompareChange(tool.name)} style={{ accentColor: 'var(--brand-primary)' }} /> Compare
@@ -149,21 +132,8 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                       <Icon size={32} color="#fff" />
                     </div>
                     <div>
-                      <h3 style={{ fontSize: '1.4rem' }}>
-                        <Link href={`/tools/${tool.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{tool.name}</Link>
-                      </h3>
+                      <h3 style={{ fontSize: '1.4rem' }}><Link href={`/tools/${tool.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{tool.name}</Link></h3>
                       <span style={{ fontSize: '0.8rem', color: 'var(--brand-primary)' }}>{tool.category}</span>
-                    </div>
-                  </div>
-
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem', padding: '1rem', background: 'rgba(0,0,0,0.2)', borderRadius: '12px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
-                      <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Ease of Use</span>
-                      <div style={{ height: '4px', background: 'var(--surface-light)', borderRadius: '4px', overflow: 'hidden' }}><div style={{ width: `${tool.ease}%`, height: '100%', background: 'linear-gradient(90deg, var(--brand-primary), var(--brand-secondary))' }} /></div>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
-                      <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Features</span>
-                      <div style={{ height: '4px', background: 'var(--surface-light)', borderRadius: '4px', overflow: 'hidden' }}><div style={{ width: `${tool.featuresScore}%`, height: '100%', background: 'linear-gradient(90deg, var(--brand-primary), var(--brand-secondary))' }} /></div>
                     </div>
                   </div>
 
@@ -180,9 +150,8 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                   <div style={{ marginBottom: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                     <div>
                       <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', display: 'flex', alignItems: 'baseline', gap: '0.2rem' }}>
-                        ${tool.basePrice} <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400, fontFamily: 'var(--font-inter)' }}>{tool.isFlat ? '/flat rate' : '/user/mo'}</span>
+                        ${tool.basePrice} <span style={{ fontSize: '1rem', color: 'var(--text-secondary)', fontWeight: 400 }}>{tool.isFlat ? '/mo' : '/user'}</span>
                       </div>
-                      <span style={{ fontSize: '0.85rem', color: 'var(--brand-primary)', marginTop: '0.2rem', display: 'block', fontWeight: 600 }}>Total: ${total}/mo {tool.isFlat && "(No user fee)"}</span>
                     </div>
                     <Link href={`/tools/${tool.slug}`} style={{ background: 'var(--text-primary)', color: 'var(--bg-color)', padding: '0.6rem 1.2rem', borderRadius: '10px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Review</Link>
                   </div>
@@ -193,7 +162,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
         </section>
       </main>
 
-      {/* Compare Dock */}
       <div style={{ position: 'fixed', bottom: selectedTools.length > 0 ? '40px' : '-100px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(15, 15, 20, 0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50px', padding: '0.8rem 1rem 0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '2rem', boxShadow: '0 10px 40px rgba(0,0,0,0.8)', transition: 'bottom 0.5s', zIndex: 1000 }}>
         <div style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
           <div style={{ background: 'var(--brand-primary)', color: 'white', width: '24px', height: '24px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem' }}>{selectedTools.length}</div>
@@ -202,16 +170,13 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
         <button onClick={() => setIsModalOpen(true)} style={{ background: 'white', color: 'black', border: 'none', padding: '0.8rem 1.5rem', borderRadius: '50px', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Compare Now <ArrowRight size={18} /></button>
       </div>
 
-      {/* Modal */}
-      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(15px)', zIndex: 2000, display: 'flex', justifyContent: 'center', alignItems: 'center', opacity: isModalOpen ? 1 : 0, pointerEvents: isModalOpen ? 'auto' : 'none', transition: 'opacity 0.3s' }}>
-        <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', width: '90%', maxWidth: '1000px', padding: '3rem', position: 'relative', transform: isModalOpen ? 'translateY(0)' : 'translateY(30px)', transition: 'transform 0.4s' }}>
-          <button onClick={() => setIsModalOpen(false)} style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'rgba(255,255,255,0.1)', color: 'var(--text-secondary)', border: 'none', borderRadius: '50%', padding: '0.5rem', cursor: 'pointer' }}><X /></button>
-        <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', padding: '3rem', width: '90%', maxWidth: '1000px', zIndex: 1000, maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 50px 100px -20px rgba(0,0,0,0.8)' }}>
+      {isModalOpen && (
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(15px)', zIndex: 2000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ position: 'relative', background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', padding: '3rem', width: '90%', maxWidth: '1000px', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 50px 100px -20px rgba(0,0,0,0.8)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2.5rem' }}>
               <h2 style={{ fontSize: '2rem', fontWeight: 800 }}>Side-by-Side <span style={{ color: 'var(--brand-primary)' }}>Comparison</span></h2>
               <button onClick={() => setIsModalOpen(false)} style={{ background: 'rgba(255,255,255,0.05)', border: 'none', color: 'white', cursor: 'pointer', padding: '0.5rem', borderRadius: '50%' }}><X size={24} /></button>
             </div>
-
             <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 1rem' }}>
               <thead>
                 <tr>
@@ -219,7 +184,7 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                   {selectedToolsData.map((t: any) => (
                     <th key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>
                       <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `linear-gradient(135deg, ${t.color1}, ${t.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '1rem', fontWeight: 800 }}>{t.name.charAt(0)}</div>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `linear-gradient(135deg, ${t.color1}, ${t.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 800 }}>{t.name.charAt(0)}</div>
                         <span style={{ fontSize: '1.2rem' }}>{t.name}</span>
                       </div>
                     </th>
@@ -227,51 +192,41 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                 </tr>
               </thead>
               <tbody>
-                {/* Score Row */}
                 <tr style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '16px' }}>
                   <td style={{ padding: '1.5rem', fontWeight: 600 }}>Ease of Use</td>
                   {selectedToolsData.map((t: any) => (
-                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem' }}>
-                      <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--brand-primary)' }}>{t.ease}%</div>
-                    </td>
+                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem', color: 'var(--brand-primary)', fontSize: '1.5rem', fontWeight: 800 }}>{t.ease}%</td>
                   ))}
                 </tr>
-
-                {/* Features Score Row */}
-                <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
-                  <td style={{ padding: '1.5rem', fontWeight: 600 }}>Features Power</td>
-                  {selectedToolsData.map((t: any) => (
-                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem' }}>
-                      <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--brand-secondary)' }}>{t.featuresScore}%</div>
-                    </td>
-                  ))}
-                </tr>
-
-                {/* Pricing Row */}
                 <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
                   <td style={{ padding: '1.5rem', fontWeight: 600 }}>Starting Price</td>
                   {selectedToolsData.map((t: any) => (
-                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem' }}>
-                      <div style={{ fontSize: '1.2rem', fontWeight: 700 }}>${t.basePrice}<span style={{ fontSize: '0.8rem', opacity: 0.5 }}>{t.isFlat ? '/mo' : '/user'}</span></div>
-                        <td key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>
-                          {hasFeature ? <CheckCircle2 color="var(--success)" size={20} /> : <X color="#666" size={20} />}
-                        </td>
-                      );
+                    <td key={t.slug} style={{ textAlign: 'center', padding: '1.5rem', fontSize: '1.2rem', fontWeight: 700 }}>${t.basePrice}<span style={{ fontSize: '0.8rem', opacity: 0.5 }}>{t.isFlat ? '/mo' : '/user'}</span></td>
+                  ))}
+                </tr>
+                {Array.from(new Set(selectedToolsData.flatMap((t: any) => (t.keyFeatures || []).map((f: any) => f.title)))).slice(0, 6).map((title: any) => (
+                  <tr key={title} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ padding: '1rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{title}</td>
+                    {selectedToolsData.map((t: any) => {
+                      const has = (t.keyFeatures || []).some((f: any) => f.title === title);
+                      return <td key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>{has ? <CheckCircle2 color="var(--success)" size={20} /> : <X color="#444" size={20} />}</td>
                     })}
                   </tr>
                 ))}
               </tbody>
             </table>
-
-            <div style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: `repeat(${selectedToolsData.length}, 1fr)`, gap: '2rem' }}>
-              {selectedToolsData.map((t: any) => (
-                <Link key={t.slug} href={`/tools/${t.slug}`} style={{ background: 'white', color: 'black', padding: '1.2rem', borderRadius: '16px', textDecoration: 'none', fontWeight: 800, textAlign: 'center', display: 'block' }}>
-                   View Full {t.name} Review
-                </Link>
-              ))}
-            </div>
           </div>
-      </div>
+        </div>
+      )}
+      <Footer />
     </>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ToolGrid toolsData={toolsData} />
+    </Suspense>
   );
 }
