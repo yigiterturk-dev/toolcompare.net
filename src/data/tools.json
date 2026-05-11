@@ -1,0 +1,327 @@
+[
+  {
+    "slug": "hubspot-crm",
+    "name": "HubSpot CRM",
+    "iconName": "Database",
+    "color1": "#ff7a59",
+    "color2": "#c2553b",
+    "ease": 95,
+    "featuresScore": 90,
+    "features": [
+      "Free basic CRM",
+      "Advanced marketing automation",
+      "Seamless email integration"
+    ],
+    "basePrice": 20,
+    "isFlat": false,
+    "category": "CRM",
+    "description": "HubSpot is an all-in-one CRM platform designed to help scaling companies grow better. It provides tools for marketing, sales, content management, and customer service.",
+    "pros": [
+      "Extremely easy to use",
+      "Free tier is very generous",
+      "Massive integration ecosystem"
+    ],
+    "cons": [
+      "Enterprise plans get very expensive",
+      "Complex reporting requires paid add-ons"
+    ]
+  },
+  {
+    "slug": "salesforce",
+    "name": "Salesforce",
+    "iconName": "Cloud",
+    "color1": "#00a1e0",
+    "color2": "#006d9a",
+    "ease": 65,
+    "featuresScore": 100,
+    "features": [
+      "Limitless customization",
+      "Advanced AI analytics (Einstein)",
+      "Enterprise-grade security"
+    ],
+    "basePrice": 25,
+    "isFlat": false,
+    "category": "CRM",
+    "description": "Salesforce is the world's #1 CRM, offering incredibly deep functionality for enterprise sales, service, and marketing teams.",
+    "pros": [
+      "Can be customized to fit any business",
+      "Massive feature set",
+      "Industry standard"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "Requires dedicated admin often",
+      "Expensive add-ons"
+    ]
+  },
+  {
+    "slug": "pipedrive",
+    "name": "Pipedrive",
+    "iconName": "Activity",
+    "color1": "#00b259",
+    "color2": "#008a45",
+    "ease": 90,
+    "featuresScore": 80,
+    "features": [
+      "Visual sales pipelines",
+      "Activity-based selling",
+      "Easy email sync"
+    ],
+    "basePrice": 14,
+    "isFlat": false,
+    "category": "CRM",
+    "description": "Pipedrive is a sales-focused CRM designed by salespeople, for salespeople. It is known for its highly visual and intuitive pipeline interface.",
+    "pros": [
+      "Very visual and intuitive",
+      "Affordable",
+      "Great for small-medium sales teams"
+    ],
+    "cons": [
+      "Not ideal for enterprise",
+      "Lacks heavy marketing features"
+    ]
+  },
+  {
+    "slug": "asana",
+    "name": "Asana",
+    "iconName": "CheckCircle",
+    "color1": "#f06a6a",
+    "color2": "#c45454",
+    "ease": 90,
+    "featuresScore": 85,
+    "features": [
+      "List, board, and timeline views",
+      "Workflow automation",
+      "Custom fields and reporting"
+    ],
+    "basePrice": 10,
+    "isFlat": false,
+    "category": "Project Management",
+    "description": "Asana is a leading project and task management tool that helps teams organize, track, and manage their work seamlessly.",
+    "pros": [
+      "Beautiful user interface",
+      "Flexible project views",
+      "Great collaboration tools"
+    ],
+    "cons": [
+      "Can be overwhelming for simple tasks",
+      "No native time tracking"
+    ]
+  },
+  {
+    "slug": "trello",
+    "name": "Trello",
+    "iconName": "Layout",
+    "color1": "#0079bf",
+    "color2": "#005a91",
+    "ease": 100,
+    "featuresScore": 70,
+    "features": [
+      "Kanban board view",
+      "Power-Ups for integrations",
+      "Butler automation"
+    ],
+    "basePrice": 5,
+    "isFlat": false,
+    "category": "Project Management",
+    "description": "Trello is the ultimate visual way for teams to collaborate using Kanban boards. It's incredibly simple yet powerful enough for complex projects.",
+    "pros": [
+      "Simplest learning curve",
+      "Generous free plan",
+      "Highly visual"
+    ],
+    "cons": [
+      "Lacks advanced reporting",
+      "Not suitable for complex portfolios"
+    ]
+  },
+  {
+    "slug": "mailchimp",
+    "name": "Mailchimp",
+    "iconName": "Mail",
+    "color1": "#ffe01b",
+    "color2": "#d4b810",
+    "ease": 85,
+    "featuresScore": 85,
+    "features": [
+      "Drag-and-drop email builder",
+      "Audience segmentation",
+      "Basic automations"
+    ],
+    "basePrice": 13,
+    "isFlat": true,
+    "category": "Email Marketing",
+    "description": "Mailchimp is one of the most popular email marketing platforms, evolving into a full marketing automation platform for small businesses.",
+    "pros": [
+      "Great templates",
+      "Easy to start",
+      "Built-in CRM features"
+    ],
+    "cons": [
+      "Pricing scales poorly with list size",
+      "Automations are somewhat basic"
+    ]
+  },
+  {
+    "slug": "activecampaign",
+    "name": "ActiveCampaign",
+    "iconName": "Zap",
+    "color1": "#356ae6",
+    "color2": "#2852b5",
+    "ease": 70,
+    "featuresScore": 95,
+    "features": [
+      "Advanced logic automations",
+      "Site tracking",
+      "Integrated sales CRM"
+    ],
+    "basePrice": 29,
+    "isFlat": true,
+    "category": "Email Marketing",
+    "description": "ActiveCampaign gives you the email marketing, marketing automation, and CRM tools you need to create incredible customer experiences.",
+    "pros": [
+      "Extremely powerful automations",
+      "Great value for features",
+      "Deep segmenting"
+    ],
+    "cons": [
+      "UI can be sluggish",
+      "Steep learning curve for beginners"
+    ]
+  },
+  {
+    "slug": "openai-gpt-3",
+    "name": "OpenAI GPT-3",
+    "iconName": "Zap",
+    "color1": "#FF4500",
+    "color2": "#FFD700",
+    "ease": 85,
+    "featuresScore": 95,
+    "features": [
+      "Natural Language Processing",
+      "Text Generation",
+      "Language Translation"
+    ],
+    "basePrice": 20,
+    "isFlat": false,
+    "category": "AI Tools",
+    "description": "OpenAI GPT-3 is a leading AI language model designed to generate human-like text. It excels in tasks such as natural language processing, translation, and creative content creation.",
+    "pros": [
+      "Highly advanced language model",
+      "Flexible for multiple applications",
+      "Continuously improves with new data"
+    ],
+    "cons": [
+      "Requires understanding of API use",
+      "High processing power for optimal performance"
+    ]
+  },
+  {
+    "slug": "google-cloud-automl",
+    "name": "Google Cloud AutoML",
+    "iconName": "Cloud",
+    "color1": "#4285F4",
+    "color2": "#34A853",
+    "ease": 80,
+    "featuresScore": 90,
+    "features": [
+      "Custom Model Training",
+      "Auto Feature Engineering",
+      "Image Recognition"
+    ],
+    "basePrice": 30,
+    "isFlat": false,
+    "category": "AI Tools",
+    "description": "Google Cloud AutoML allows developers to create custom machine learning models with ease. The platform offers automatic model training and feature engineering, making it ideal for image and language tasks.",
+    "pros": [
+      "User-friendly interface",
+      "Strong integration with Google services",
+      "Scalable machine learning solutions"
+    ],
+    "cons": [
+      "Complex pricing model",
+      "Limited customization compared to manual ML coding"
+    ]
+  },
+  {
+    "slug": "ibm-watson-studio",
+    "name": "IBM Watson Studio",
+    "iconName": "BarChart3",
+    "color1": "#006699",
+    "color2": "#00B6FF",
+    "ease": 75,
+    "featuresScore": 88,
+    "features": [
+      "Data Preparation",
+      "Collaborative Workflows",
+      "AI Model Deployment"
+    ],
+    "basePrice": 40,
+    "isFlat": false,
+    "category": "AI Tools",
+    "description": "IBM Watson Studio provides a collaborative environment for data scientists and developers to prepare data, build models, and streamline AI deployments. It supports various AI and data science tasks seamlessly.",
+    "pros": [
+      "Comprehensive tools for AI lifecycle",
+      "Robust security features",
+      "Strong collaboration features"
+    ],
+    "cons": [
+      "Steeper learning curve for beginners",
+      "Can be resource-heavy on initial setup"
+    ]
+  },
+  {
+    "slug": "microsoft-azure-machine-learning",
+    "name": "Microsoft Azure Machine Learning",
+    "iconName": "Database",
+    "color1": "#0078D4",
+    "color2": "#001E4A",
+    "ease": 78,
+    "featuresScore": 92,
+    "features": [
+      "Model Training & Deployment",
+      "Automated ML",
+      "End-to-End ML Lifecycle"
+    ],
+    "basePrice": 25,
+    "isFlat": false,
+    "category": "AI Tools",
+    "description": "Microsoft Azure Machine Learning is designed to enable data scientists and developers to build ML models efficiently, leveraging automated machine learning and end-to-end lifecycle management features.",
+    "pros": [
+      "Integrates well with other Azure services",
+      "Strong support and documentation",
+      "Flexible deployment options"
+    ],
+    "cons": [
+      "May require significant Azure expertise",
+      "Complexity in pricing structure"
+    ]
+  },
+  {
+    "slug": "hugging-face-transformers",
+    "name": "Hugging Face Transformers",
+    "iconName": "Layout",
+    "color1": "#FF4500",
+    "color2": "#F0E68C",
+    "ease": 82,
+    "featuresScore": 93,
+    "features": [
+      "Pre-trained Models",
+      "Text Analysis",
+      "Easy Inference Pipelines"
+    ],
+    "basePrice": 15,
+    "isFlat": true,
+    "category": "AI Tools",
+    "description": "Hugging Face Transformers is a library offering thousands of pre-trained models for NLP tasks, allowing developers to quickly integrate text analysis and generation functions into applications.",
+    "pros": [
+      "Wide range of pre-trained models",
+      "Active community support",
+      "Simplifies implementation of NLP tasks"
+    ],
+    "cons": [
+      "Limited to NLP and related fields",
+      "Dependent on third-party integrations for maximum utility"
+    ]
+  }
+]
