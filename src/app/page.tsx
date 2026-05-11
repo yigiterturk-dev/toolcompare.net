@@ -159,6 +159,44 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             );
           })}
         </section>
+
+        {/* Newsletter Section */}
+        <section style={{ margin: '6rem 0', background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1))', border: '1px solid var(--border-color)', borderRadius: '40px', padding: '4rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '200px', height: '200px', background: 'var(--brand-primary)', filter: 'blur(100px)', opacity: 0.2 }}></div>
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 800 }}>Join the SaaS Elite</h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+              Get the weekly "Tool Report" featuring deep-dives into new software, exclusive discounts, and scaling tips.
+            </p>
+            <form 
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const email = (e.target as any).email.value;
+                const res = await fetch('/api/subscribe', {
+                  method: 'POST',
+                  body: JSON.stringify({ email }),
+                  headers: { 'Content-Type': 'application/json' }
+                });
+                if (res.ok) {
+                  alert("You're in! Welcome to the inner circle.");
+                  (e.target as any).reset();
+                }
+              }}
+              style={{ display: 'flex', gap: '1rem', maxWidth: '500px', margin: '0 auto', background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.1)' }}
+            >
+              <input 
+                name="email"
+                type="email" 
+                placeholder="Enter your work email" 
+                required
+                style={{ flexGrow: 1, background: 'transparent', border: 'none', color: 'white', padding: '0 1.5rem', outline: 'none', fontSize: '1rem' }}
+              />
+              <button type="submit" style={{ background: 'white', color: 'black', border: 'none', padding: '1rem 2rem', borderRadius: '100px', fontWeight: 800, cursor: 'pointer', transition: 'transform 0.2s' }} className="hover-scale">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
 
       <div style={{ position: 'fixed', bottom: selectedTools.length > 0 ? '40px' : '-100px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(15, 15, 20, 0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50px', padding: '0.8rem 1rem 0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '2rem', boxShadow: '0 20px 60px rgba(0,0,0,0.8)', transition: 'bottom 0.5s', zIndex: 1000 }}>
