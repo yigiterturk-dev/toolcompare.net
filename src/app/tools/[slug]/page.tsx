@@ -55,7 +55,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
             
             {/* Left Column: Deep Content */}
-            <div style={{ display: 'flex', flexArray: 'column', gap: '3rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
               
               <section>
                 <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>
