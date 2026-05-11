@@ -67,6 +67,29 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.
           </p>
 
+          <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
+            {['CRM', 'Marketing', 'Project Management', 'Design', 'Communication', 'Developer Tools', 'E-commerce'].map((cat) => (
+              <Link 
+                key={cat} 
+                href={`/?category=${cat}`}
+                style={{ 
+                  padding: '0.6rem 1.2rem', 
+                  borderRadius: '100px', 
+                  background: catFilter === cat ? 'var(--brand-primary)' : 'rgba(255,255,255,0.05)', 
+                  border: '1px solid rgba(255,255,255,0.1)', 
+                  color: catFilter === cat ? 'white' : 'var(--text-secondary)',
+                  textDecoration: 'none',
+                  fontSize: '0.85rem',
+                  fontWeight: 600,
+                  transition: 'all 0.2s'
+                }}
+                className="hover-scale"
+              >
+                {cat}
+              </Link>
+            ))}
+          </div>
+
           <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 5rem' }}>
              <Search style={{ position: 'absolute', left: '1.5rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
              <input 
