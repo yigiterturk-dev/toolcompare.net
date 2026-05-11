@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Layers, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Layers, Code, MessageSquare, Globe, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,9 +14,9 @@ export default function Footer() {
             The ultimate programmatic SEO platform for SaaS comparisons, reviews, and interactive pricing analysis.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href="#" style={{ color: 'var(--text-secondary)' }}><Twitter size={20} /></a>
-            <a href="#" style={{ color: 'var(--text-secondary)' }}><Github size={20} /></a>
-            <a href="#" style={{ color: 'var(--text-secondary)' }}><Linkedin size={20} /></a>
+            <a href="#" style={{ color: 'var(--text-secondary)' }}><MessageSquare size={20} /></a>
+            <a href="#" style={{ color: 'var(--text-secondary)' }}><Code size={20} /></a>
+            <a href="#" style={{ color: 'var(--text-secondary)' }}><Globe size={20} /></a>
           </div>
         </div>
 
