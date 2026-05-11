@@ -13,12 +13,23 @@ const IconMap: Record<string, any> = {
   Zap, Cloud, BarChart3, Database, Activity, CheckCircle, Layout, Mail
 };
 
-export default function Home() {
+import Header from "@/components/Header";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+
+function ToolGrid({ toolsData }: { toolsData: any[] }) {
+  const searchParams = useSearchParams();
+  const catFilter = searchParams.get('category');
+  
   const [teamSize, setTeamSize] = useState(10);
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [matchLoading, setMatchLoading] = useState(false);
   const [highlightedTool, setHighlightedTool] = useState<string | null>(null);
+
+  const filteredTools = catFilter 
+    ? toolsData.filter((t: any) => t.category === catFilter)
+    : toolsData;
 
   const handleCompareChange = (toolName: string) => {
     setSelectedTools(prev => 
@@ -45,25 +56,17 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <div className="ambient-bg">
         <div className="orb orb-1"></div>
         <div className="orb orb-2"></div>
       </div>
 
-      <header style={{ position: 'fixed', top: 0, width: '100%', padding: '1.2rem 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 100, background: 'rgba(5,5,5,0.7)', backdropFilter: 'blur(12px)', borderBottom: '1px solid var(--border-color)' }}>
-        <div style={{ fontSize: '1.8rem', fontWeight: 800, background: 'linear-gradient(135deg, #fff 0%, #a1a1aa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <Layers style={{ color: 'var(--brand-primary)' }} /> ToolCompare
-        </div>
-        <nav style={{ display: 'flex', gap: '2.5rem' }}>
-          <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500 }}>Categories</a>
-          <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500 }}>Top Picks 2026</a>
-        </nav>
-      </header>
-
       <main style={{ paddingTop: '8rem', maxWidth: '1400px', margin: '0 auto', padding: '0 5%' }}>
         <section style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto 3rem' }}>
           <h1 style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-1px' }}>
-            Find The Perfect <span style={{ background: 'linear-gradient(to right, var(--brand-primary), var(--brand-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SaaS Tool</span>
+            {catFilter ? `Best ${catFilter} ` : "Find The Perfect "}
+            <span style={{ background: 'linear-gradient(to right, var(--brand-primary), var(--brand-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SaaS Tool</span>
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto 2rem' }}>
             Interactive pricing, AI-powered matchmaking, and unbiased feature comparisons.
@@ -71,21 +74,23 @@ export default function Home() {
         </section>
 
         {/* Matchmaker */}
-        <section style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.05), rgba(168,85,247,0.05))', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '3rem', margin: '0 auto 4rem', maxWidth: '800px', textAlign: 'center', position: 'relative' }}>
-          <span style={{ display: 'inline-block', padding: '0.4rem 1rem', borderRadius: '50px', background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '1rem' }}>AI Assistant</span>
-          <h3 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>What is your primary goal today?</h3>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Select your priority, and our algorithm will highlight the best tool instantly.</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button onClick={() => handleMatch('hubspot-crm')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Database /> Manage Customers (CRM)</button>
-            <button onClick={() => handleMatch('asana')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle /> Track Projects</button>
-            <button onClick={() => handleMatch('activecampaign')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail /> Automate Emails</button>
-          </div>
-          {matchLoading && (
-            <div style={{ marginTop: '2rem', color: 'var(--brand-primary)', fontWeight: 600, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
-              <Loader2 className="animate-spin" /> Analyzing 10,000+ data points...
+        {!catFilter && (
+          <section style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.05), rgba(168,85,247,0.05))', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '3rem', margin: '0 auto 4rem', maxWidth: '800px', textAlign: 'center', position: 'relative' }}>
+            <span style={{ display: 'inline-block', padding: '0.4rem 1rem', borderRadius: '50px', background: 'rgba(255,255,255,0.1)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '1rem' }}>AI Assistant</span>
+            <h3 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>What is your primary goal today?</h3>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Select your priority, and our algorithm will highlight the best tool instantly.</p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <button onClick={() => handleMatch('hubspot-crm')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Database /> Manage Customers (CRM)</button>
+              <button onClick={() => handleMatch('asana')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle /> Track Projects</button>
+              <button onClick={() => handleMatch('activecampaign')} style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', padding: '1rem 1.5rem', borderRadius: '16px', color: 'var(--text-primary)', fontWeight: 500, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail /> Automate Emails</button>
             </div>
-          )}
-        </section>
+            {matchLoading && (
+              <div style={{ marginTop: '2rem', color: 'var(--brand-primary)', fontWeight: 600, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
+                <Loader2 className="animate-spin" /> Analyzing 10,000+ data points...
+              </div>
+            )}
+          </section>
+        )}
 
         {/* Slider */}
         <section style={{ maxWidth: '600px', margin: '0 auto 3rem', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)', borderRadius: '20px', padding: '2rem', backdropFilter: 'blur(10px)' }}>
@@ -97,12 +102,12 @@ export default function Home() {
         </section>
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
-          <h2 style={{ fontSize: '2rem' }}>Software Directory</h2>
+          <h2 style={{ fontSize: '2rem' }}>{catFilter ? `${catFilter} Tools` : "Software Directory"}</h2>
         </div>
 
         {/* Grid generated from JSON */}
         <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
-          {toolsData.map((tool: any) => {
+          {filteredTools.map((tool: any) => {
             const Icon = IconMap[tool.iconName] || Zap;
             const total = tool.isFlat ? tool.basePrice : tool.basePrice * teamSize;
             

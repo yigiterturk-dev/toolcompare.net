@@ -1,8 +1,4 @@
-import toolsData from "@/data/tools.json";
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
-import type { Metadata } from "next";
+import Header from "@/components/Header";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -28,6 +24,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
+      <Header />
       <div className="ambient-bg">
         <div className="orb orb-1"></div>
         <div className="orb orb-2" style={{ top: '60%', right: '-10%' }}></div>
