@@ -10,8 +10,8 @@ export default function Footer() {
           <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
             <Layers style={{ color: 'var(--brand-primary)' }} /> ToolCompare
           </div>
-          <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '2rem' }}>
-            The ultimate programmatic SEO platform for SaaS comparisons, reviews, and interactive pricing analysis.
+          <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
+            Find and compare the world's best software tools with deep-dive reviews and real-time pricing analysis.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
             <a href="#" style={{ color: 'var(--text-secondary)' }}><MessageSquare size={20} /></a>

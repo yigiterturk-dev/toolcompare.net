@@ -64,7 +64,7 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             <span style={{ background: 'linear-gradient(to right, var(--brand-primary), var(--brand-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SaaS Tool</span>
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto 3rem' }}>
-            Interactive pricing, AI-powered matchmaking, and unbiased feature comparisons.
+            Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.
           </p>
 
           <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 4rem' }}>
