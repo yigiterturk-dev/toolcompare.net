@@ -104,6 +104,43 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>"{typeof verdictText === 'string' ? verdictText : (verdictText.text || "")}"</p>
                 </section>
               )}
+
+              {/* Smart Alternatives Section */}
+              <section style={{ marginTop: '4rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
+                <h2 style={{ fontSize: '2rem', marginBottom: '2rem', letterSpacing: '-1px' }}>
+                  Best Alternatives to <span style={{ color: 'var(--brand-primary)' }}>{tool.name}</span>
+                </h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+                  {(toolsData as any[])
+                    .filter(t => t.category === tool.category && t.slug !== tool.slug)
+                    .sort(() => 0.5 - Math.random())
+                    .slice(0, 3)
+                    .map(alt => (
+                      <Link 
+                        key={alt.slug} 
+                        href={`/tools/${alt.slug}`}
+                        style={{ 
+                          background: 'rgba(255,255,255,0.03)', 
+                          border: '1px solid var(--border-color)', 
+                          borderRadius: '20px', 
+                          padding: '1.5rem', 
+                          textDecoration: 'none',
+                          transition: 'all 0.3s'
+                        }}
+                        className="hover-scale"
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                          <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `linear-gradient(135deg, ${alt.color1}, ${alt.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', fontWeight: 800 }}>
+                            {alt.name.charAt(0)}
+                          </div>
+                          <div style={{ fontWeight: 700, color: 'white' }}>{alt.name}</div>
+                        </div>
+                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{alt.shortDescription}</p>
+                      </Link>
+                    ))
+                  }
+                </div>
+              </section>
             </div>
 
             <aside>
@@ -133,9 +170,28 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                    <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', marginBottom: '1.5rem' }}>
                      ${tool.basePrice}<span style={{ fontSize: '1rem', fontWeight: 400, opacity: 0.8 }}>{tool.isFlat ? '/mo' : '/user/mo'}</span>
                    </div>
-                   <button style={{ width: '100%', background: 'white', color: 'black', border: 'none', padding: '1rem', borderRadius: '12px', fontWeight: 700, cursor: 'pointer' }}>
-                     Visit Website
-                   </button>
+                   <a 
+                    href={tool.websiteUrl || `https://www.google.com/search?q=${tool.name}+official+website`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{ 
+                      display: 'block',
+                      textAlign: 'center',
+                      width: '100%', 
+                      background: 'white', 
+                      color: 'black', 
+                      border: 'none', 
+                      padding: '1rem', 
+                      borderRadius: '12px', 
+                      fontWeight: 700, 
+                      cursor: 'pointer',
+                      textDecoration: 'none',
+                      transition: 'transform 0.2s'
+                    }}
+                    className="hover-scale"
+                   >
+                     Visit Official Website
+                   </a>
                 </div>
               </div>
             </aside>

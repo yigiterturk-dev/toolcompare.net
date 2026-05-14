@@ -1,26 +1,70 @@
+"use client";
+
 import Link from "next/link";
+import { Search, Plus, Menu } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
   return (
-    <header style={{ position: 'fixed', top: 0, width: '100%', padding: '0 5%', height: '100px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 100, background: 'rgba(5,5,5,0.9)', backdropFilter: 'blur(30px)', borderBottom: '1px solid rgba(255,255,255,0.1)', overflow: 'hidden' }}>
-      <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', height: '100%' }}>
-        <div style={{ width: '220px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-          <img 
-            src="/logo.png" 
-            alt="ToolCompare Logo" 
-            style={{ 
-              height: '350px', 
-              width: 'auto', 
-              objectFit: 'contain',
-              transform: 'scale(1.2)',
-              marginTop: '5px'
-            }} 
-          />
-        </div>
+    <header style={{ 
+      position: 'fixed', 
+      top: 0, 
+      width: '100%', 
+      padding: '0 5%', 
+      height: '80px', 
+      display: 'flex', 
+      justifyContent: 'space-between', 
+      alignItems: 'center', 
+      zIndex: 1000, 
+      background: 'rgba(5, 5, 5, 0.8)', 
+      backdropFilter: 'blur(20px)', 
+      borderBottom: '1px solid rgba(255, 255, 255, 0.05)' 
+    }}>
+      {/* LOGO AREA */}
+      <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '0.8rem' }}>
+        <img 
+          src="/logo.png" 
+          alt="ToolCompare Logo" 
+          style={{ height: '32px', width: 'auto', objectFit: 'contain' }} 
+        />
+        <span style={{ fontSize: '1.25rem', fontWeight: 900, color: 'white', letterSpacing: '-0.02em' }}>
+          ToolCompare
+        </span>
       </Link>
-      <nav style={{ display: 'flex', gap: '3rem', alignItems: 'center' }}>
-        <Link href="/categories" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s', fontSize: '0.95rem' }} className="hover:text-white">Categories</Link>
-        <Link href="/top-picks" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s', fontSize: '0.95rem' }} className="hover:text-white">Top Picks 2026</Link>
+
+      {/* NAVIGATION & ACTIONS */}
+      <nav style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginRight: '1rem' }}>
+          <Link href="/categories" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Categories</Link>
+          <Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Top Picks 2026</Link>
+        </div>
+
+
+        {/* CTA BUTTON */}
+        <Link 
+          href="/contact" 
+          style={{ 
+            background: 'white', 
+            color: 'black', 
+            padding: '0.6rem 1.2rem', 
+            borderRadius: '12px', 
+            fontWeight: 800, 
+            fontSize: '0.85rem', 
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            boxShadow: '0 4px 15px rgba(255,255,255,0.1)',
+            transition: 'transform 0.2s ease'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+          onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+        >
+          <Plus size={16} />
+          Submit Tool
+        </Link>
       </nav>
     </header>
   );
