@@ -94,35 +94,55 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.
           </p>
 
-          {/* Functional Search Bar */}
-          <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 3rem', width: '100%' }}>
+          {/* GIGANTIC PREMIUM SEARCH BAR */}
+          <div style={{ position: 'relative', maxWidth: '850px', margin: '0 auto 4rem', width: '100%', zIndex: 100 }}>
+            <div style={{ 
+              position: 'absolute', 
+              inset: '-2px', 
+              background: 'linear-gradient(90deg, var(--brand-primary), var(--brand-secondary))', 
+              borderRadius: '24px', 
+              filter: 'blur(10px)', 
+              opacity: 0.3,
+              zIndex: -1 
+            }}></div>
             <input 
               type="text" 
-              placeholder="Search 100+ premium tools..." 
+              placeholder="Search across 100+ AI tools, CRMs, and more..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{ 
                 width: '100%', 
-                padding: '1.2rem 1.5rem 1.2rem 3.5rem', 
-                borderRadius: '20px', 
-                background: 'rgba(255,255,255,0.05)', 
-                border: '1px solid rgba(255,255,255,0.1)', 
+                padding: '1.8rem 2rem 1.8rem 4.5rem', 
+                borderRadius: '22px', 
+                background: 'rgba(15, 15, 20, 0.8)', 
+                backdropFilter: 'blur(20px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)', 
                 color: 'white', 
-                fontSize: '1.1rem', 
+                fontSize: '1.4rem', 
+                fontWeight: '500',
                 outline: 'none',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-                transition: 'all 0.3s'
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
               }}
               onFocus={(e) => {
                 e.currentTarget.style.borderColor = 'var(--brand-primary)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                e.currentTarget.style.transform = 'scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 0 30px rgba(99, 102, 241, 0.3)';
               }}
               onBlur={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.5)';
               }}
             />
-            <Search size={22} style={{ position: 'absolute', left: '1.2rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--brand-primary)' }} />
+            <Search size={32} style={{ 
+              position: 'absolute', 
+              left: '1.5rem', 
+              top: '50%', 
+              transform: 'translateY(-50%)', 
+              color: 'var(--brand-primary)',
+              opacity: 0.8
+            }} />
           </div>
 
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
