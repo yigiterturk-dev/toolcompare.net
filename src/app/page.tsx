@@ -1,13 +1,12 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, useMemo } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { 
   Layers, Zap, Shield, BarChart3, Cloud, Database, Activity, CheckCircle, Layout, Mail,
   CheckCircle2, Check, X, Loader2, Users, ArrowRight, Search, Scale, Palette, ShoppingBag, Video, Star
 } from "lucide-react";
-import toolsData from "@/data/tools.json";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIAssistant from "@/components/AIAssistant";
@@ -17,18 +16,17 @@ const IconMap: Record<string, any> = {
   Zap, Cloud, BarChart3, Database, Activity, CheckCircle, Layout, Mail, Scale, Users, Palette, ShoppingBag, Video
 };
 
-function ToolGrid({ toolsData }: { toolsData: any[] }) {
+function ToolGrid() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const catFilter = searchParams.get('category');
   
-  const [teamSize, setTeamSize] = useState(10);
+  const [tools, setTools] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [matchLoading, setMatchLoading] = useState(false);
-  const [highlightedTool, setHighlightedTool] = useState<string | null>(null);
   const [userVotes, setUserVotes] = useState<Record<string, number>>({});
 
   const pageSize = 12;
@@ -45,34 +43,38 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
     }
   `;
 
-
+  useEffect(() => {
+    async function loadTools() {
+      try {
+        const res = await fetch("/api/tools");
+        const data = await res.json();
+        setTools(data);
+      } catch (e) {
+        console.error("Failed to load tools");
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadTools();
+  }, []);
 
   // Reset to page 1 when search or category changes
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, catFilter]);
 
-  const filteredTools = toolsData
-    .filter((t: any) => !catFilter || t.category === catFilter)
-    .filter((t: any) => t.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredTools = useMemo(() => {
+    return tools
+      .filter((t: any) => !catFilter || t.category === catFilter)
+      .filter((t: any) => t.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  }, [tools, catFilter, searchTerm]);
 
-  const selectedToolsData = toolsData.filter((t: any) => selectedTools.includes(t.name));
+  const selectedToolsData = tools.filter((t: any) => selectedTools.includes(t.name));
 
   const handleCompareChange = (toolName: string) => {
     setSelectedTools(prev => 
       prev.includes(toolName) ? prev.filter(t => t !== toolName) : [...prev, toolName]
     );
-  };
-
-  const handleMatch = (toolSlug: string) => {
-    setMatchLoading(true);
-    setHighlightedTool(null);
-    setTimeout(() => {
-      setMatchLoading(false);
-      setHighlightedTool(toolSlug);
-      const el = document.getElementById(`card-${toolSlug}`);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 800);
   };
 
   return (
@@ -94,7 +96,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
             Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.
           </p>
 
-          {/* GIGANTIC PREMIUM SEARCH BAR */}
           <div style={{ position: 'relative', maxWidth: '850px', margin: '0 auto 4rem', width: '100%', zIndex: 100 }}>
             <div style={{ 
               position: 'absolute', 
@@ -123,16 +124,6 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
                 outline: 'none',
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
                 transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
-              }}
-              onFocus={(e) => {
-                e.currentTarget.style.borderColor = 'var(--brand-primary)';
-                e.currentTarget.style.transform = 'scale(1.02)';
-                e.currentTarget.style.boxShadow = '0 0 30px rgba(99, 102, 241, 0.3)';
-              }}
-              onBlur={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.5)';
               }}
             />
             <Search size={32} style={{ 
@@ -179,12 +170,12 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
               </Link>
             ))}
           </div>
-
-          {/* Trending Comparisons Bar */}
+          
+          {/* Trending VS Bar */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap', opacity: 0.8 }}>
             <span style={{ fontSize: '0.8rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Trending VS:</span>
             {[
-              { label: 'OpenAI vs Claude', slug: 'openai-vs-claude' },
+              { label: 'ChatGPT vs Claude', slug: 'chatgpt-vs-claude' },
               { label: 'Slack vs Discord', slug: 'slack-vs-discord' },
               { label: 'Notion vs Trello', slug: 'notion-vs-trello' }
             ].map((vs) => (
@@ -209,209 +200,212 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
           </div>
         </section>
 
-        {/* AI Selection Wizard */}
         <section style={{ maxWidth: '1000px', margin: '4rem auto 8rem', position: 'relative', zIndex: 10 }}>
-           <AIWizard tools={toolsData} />
+           <AIWizard tools={tools} />
         </section>
 
         <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-          {filteredTools.slice((currentPage - 1) * pageSize, currentPage * pageSize).map((tool: any) => {
-            const Icon = IconMap[tool.iconName] || Zap;
-            const isSelected = selectedTools.includes(tool.name);
-            
-            return (
-              <div 
-                key={tool.slug} 
-                id={`card-${tool.slug}`} 
-                style={{ 
-                  background: 'var(--surface-color)', 
-                  border: `1px solid ${isSelected ? 'var(--brand-primary)' : 'rgba(255,255,255,0.06)'}`, 
-                  borderRadius: '28px', 
-                  padding: '2.5rem', 
-                  position: 'relative', 
-                  overflow: 'visible', 
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
-                  boxShadow: isSelected ? '0 20px 40px rgba(99, 102, 241, 0.2)' : '0 10px 30px rgba(0,0,0,0.2)',
-                  cursor: 'pointer'
-                }}
-                className="tool-card-hover"
-              >
-                {/* Modern Floating Tags & Smart Badges */}
-                <div style={{ position: 'absolute', top: '-15px', left: '2rem', display: 'flex', gap: '0.8rem', zIndex: 10 }}>
-                  {(() => {
-                    const badges = [];
-                    if (tool.basePrice <= 15 && tool.basePrice > 0) badges.push({ text: 'Budget Pick', color: '#10b981' });
-                    if (tool.featuresScore >= 95) badges.push({ text: "Editor's Choice", color: '#6366f1' });
-                    if (tool.ease >= 96) badges.push({ text: 'Top Rated', color: '#f59e0b' });
-                    
-                    return badges.map((b, i) => (
-                      <div key={i} style={{ 
-                        background: b.color, 
-                        color: 'white', 
-                        padding: '0.4rem 1rem', 
-                        fontSize: '0.65rem', 
-                        fontWeight: 900, 
-                        textTransform: 'uppercase', 
-                        borderRadius: '12px',
-                        boxShadow: `0 8px 16px ${b.color}44`,
-                        letterSpacing: '1px'
-                      }}>
-                        {b.text}
-                      </div>
-                    ));
-                  })()}
-                </div>
-
-                <div style={{ position: 'relative', zIndex: 1 }}>
-                  
-                  {/* Sleek Compare Toggle */}
-                  <div 
-                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleCompareChange(tool.name); }}
-                    style={{ 
-                      position: 'absolute', 
-                      top: '0', 
-                      right: '0', 
-                      padding: '0.5rem 1rem', 
-                      borderRadius: '14px', 
-                      background: isSelected ? 'var(--brand-primary)' : 'rgba(255,255,255,0.03)', 
-                      border: `1px solid ${isSelected ? 'white' : 'rgba(255,255,255,0.1)'}`, 
-                      cursor: 'pointer', 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      gap: '0.6rem', 
-                      fontSize: '0.75rem', 
-                      fontWeight: 800, 
-                      zIndex: 20,
-                      transition: 'all 0.3s', 
-                      color: 'white',
-                    }}
-                  >
-                    <div style={{ 
-                      width: '16px', 
-                      height: '16px', 
-                      borderRadius: '4px', 
-                      border: '2px solid white', 
-                      display: 'flex', 
-                      justifyContent: 'center', 
-                      alignItems: 'center',
-                      background: isSelected ? 'white' : 'transparent',
-                      transition: 'all 0.2s'
-                    }}>
-                      {isSelected && <Check size={12} color="var(--brand-primary)" strokeWidth={4} />}
-                    </div>
-                    COMPARE
+          {loading ? (
+            <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '5rem' }}>
+              <Loader2 className="animate-spin" size={48} style={{ color: 'var(--brand-primary)', margin: '0 auto' }} />
+              <p style={{ marginTop: '1rem', color: '#666' }}>Connecting to Database...</p>
+            </div>
+          ) : (
+            filteredTools.slice((currentPage - 1) * pageSize, currentPage * pageSize).map((tool: any) => {
+              const Icon = IconMap[tool.iconName] || Zap;
+              const isSelected = selectedTools.includes(tool.name);
+              
+              return (
+                <div 
+                  key={tool.slug} 
+                  id={`card-${tool.slug}`} 
+                  style={{ 
+                    background: 'var(--surface-color)', 
+                    border: `1px solid ${isSelected ? 'var(--brand-primary)' : 'rgba(255,255,255,0.06)'}`, 
+                    borderRadius: '28px', 
+                    padding: '2.5rem', 
+                    position: 'relative', 
+                    overflow: 'visible', 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    transition: 'all 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
+                    boxShadow: isSelected ? '0 20px 40px rgba(99, 102, 241, 0.2)' : '0 10px 30px rgba(0,0,0,0.2)',
+                    cursor: 'pointer'
+                  }}
+                  className="tool-card-hover"
+                >
+                  <div style={{ position: 'absolute', top: '-15px', left: '2rem', display: 'flex', gap: '0.8rem', zIndex: 10 }}>
+                    {(() => {
+                      const badges = [];
+                      if (tool.basePrice <= 15 && tool.basePrice > 0) badges.push({ text: 'Budget Pick', color: '#10b981' });
+                      if (tool.featuresScore >= 95) badges.push({ text: "Editor's Choice", color: '#6366f1' });
+                      if (tool.ease >= 96) badges.push({ text: 'Top Rated', color: '#f59e0b' });
+                      
+                      return badges.map((b, i) => (
+                        <div key={i} style={{ 
+                          background: b.color, 
+                          color: 'white', 
+                          padding: '0.4rem 1rem', 
+                          fontSize: '0.65rem', 
+                          fontWeight: 900, 
+                          textTransform: 'uppercase', 
+                          borderRadius: '12px',
+                          boxShadow: `0 8px 16px ${b.color}44`,
+                          letterSpacing: '1px'
+                        }}>
+                          {b.text}
+                        </div>
+                      ));
+                    })()}
                   </div>
-                  
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
-                    <div style={{ 
-                      width: '72px', 
-                      height: '72px', 
-                      borderRadius: '20px', 
-                      display: 'flex', 
-                      justifyContent: 'center', 
-                      alignItems: 'center', 
-                      background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, 
-                      boxShadow: `0 12px 24px ${tool.color1}44` 
-                    }}>
-                      <Icon size={36} color="#fff" />
+
+                  <div style={{ position: 'relative', zIndex: 1 }}>
+                    <div 
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleCompareChange(tool.name); }}
+                      style={{ 
+                        position: 'absolute', 
+                        top: '0', 
+                        right: '0', 
+                        padding: '0.5rem 1rem', 
+                        borderRadius: '14px', 
+                        background: isSelected ? 'var(--brand-primary)' : 'rgba(255,255,255,0.03)', 
+                        border: `1px solid ${isSelected ? 'white' : 'rgba(255,255,255,0.1)'}`, 
+                        cursor: 'pointer', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: '0.6rem', 
+                        fontSize: '0.75rem', 
+                        fontWeight: 800, 
+                        zIndex: 20,
+                        transition: 'all 0.3s', 
+                        color: 'white',
+                      }}
+                    >
+                      <div style={{ 
+                        width: '16px', 
+                        height: '16px', 
+                        borderRadius: '4px', 
+                        border: '2px solid white', 
+                        display: 'flex', 
+                        justifyContent: 'center', 
+                        alignItems: 'center',
+                        background: isSelected ? 'white' : 'transparent',
+                        transition: 'all 0.2s'
+                      }}>
+                        {isSelected && <Check size={12} color="var(--brand-primary)" strokeWidth={4} />}
+                      </div>
+                      COMPARE
                     </div>
-                    <div>
-                      <h3 style={{ fontSize: '1.6rem', fontWeight: 900, marginBottom: '0.4rem', paddingRight: '7rem', letterSpacing: '-0.5px' }}>
-                        <Link href={`/tools/${tool.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{tool.name}</Link>
-                      </h3>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                        <span style={{ fontSize: '0.75rem', color: 'var(--brand-primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>{tool.category}</span>
-                        <div style={{ display: 'flex', gap: '2px' }}>
-                          {[1, 2, 3, 4, 5].map((star) => {
-                            const rating = ((tool.ease + tool.featuresScore) / 40);
-                            return <Star key={star} size={10} fill={star <= Math.round(rating) ? "#fbbf24" : "transparent"} color={star <= Math.round(rating) ? "#fbbf24" : "#333"} />;
-                          })}
+                    
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
+                      <div style={{ 
+                        width: '72px', 
+                        height: '72px', 
+                        borderRadius: '20px', 
+                        display: 'flex', 
+                        justifyContent: 'center', 
+                        alignItems: 'center', 
+                        background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, 
+                        boxShadow: `0 12px 24px ${tool.color1}44` 
+                      }}>
+                        <Icon size={36} color="#fff" />
+                      </div>
+                      <div>
+                        <h3 style={{ fontSize: '1.6rem', fontWeight: 900, marginBottom: '0.4rem', paddingRight: '7rem', letterSpacing: '-0.5px' }}>
+                          <Link href={`/tools/${tool.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{tool.name}</Link>
+                        </h3>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                          <span style={{ fontSize: '0.75rem', color: 'var(--brand-primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>{tool.category}</span>
+                          <div style={{ display: 'flex', gap: '2px' }}>
+                            {[1, 2, 3, 4, 5].map((star) => {
+                              const baseScore = (tool.ease + tool.featuresScore) / 40;
+                              const userRating = userVotes[tool.slug] || 4.1;
+                              const finalRating = (baseScore * 0.6) + (userRating * 0.4);
+                              return <Star key={star} size={10} fill={star <= Math.round(finalRating) ? "#fbbf24" : "transparent"} color={star <= Math.round(finalRating) ? "#fbbf24" : "#333"} />;
+                            })}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-                     <div style={{ flex: 1, padding: '0.8rem', borderRadius: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-                       <div style={{ fontSize: '0.6rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>Ease of Use</div>
-                       <div style={{ fontSize: '1.1rem', fontWeight: 900, color: 'white' }}>{tool.ease}%</div>
-                     </div>
-                     <div style={{ flex: 1, padding: '0.8rem', borderRadius: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-                       <div style={{ fontSize: '0.6rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>Features</div>
-                       <div style={{ fontSize: '1.1rem', fontWeight: 900, color: 'white' }}>{tool.featuresScore}%</div>
-                     </div>
-                  </div>
-
-                  {/* Community Rating - Interactive */}
-                  <div style={{ background: 'rgba(99, 102, 241, 0.05)', borderRadius: '16px', padding: '1rem', marginBottom: '2rem', textAlign: 'center', border: '1px dashed rgba(99, 102, 241, 0.2)' }}>
-                    <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--brand-primary)', textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '1px' }}>
-                      {userVotes[tool.slug] ? "Thanks for your vote!" : "Rate this Tool"}
+                    <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
+                       <div style={{ flex: 1, padding: '0.8rem', borderRadius: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
+                         <div style={{ fontSize: '0.6rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>Ease of Use</div>
+                         <div style={{ fontSize: '1.1rem', fontWeight: 900, color: 'white' }}>{tool.ease}%</div>
+                       </div>
+                       <div style={{ flex: 1, padding: '0.8rem', borderRadius: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
+                         <div style={{ fontSize: '0.6rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>Features</div>
+                         <div style={{ fontSize: '1.1rem', fontWeight: 900, color: 'white' }}>{tool.featuresScore}%</div>
+                       </div>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '6px' }}>
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <Star 
-                          key={star} 
-                          size={18} 
-                          style={{ cursor: 'pointer', transition: 'transform 0.2s' }}
-                          className="star-hover"
-                          fill={star <= (userVotes[tool.slug] || 0) ? "#fbbf24" : "transparent"}
-                          color={star <= (userVotes[tool.slug] || 0) ? "#fbbf24" : "rgba(255,255,255,0.2)"}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setUserVotes(prev => ({ ...prev, [tool.slug]: star }));
-                          }}
-                        />
-                      ))}
-                    </div>
-                  </div>
 
-                  <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem', lineHeight: 1.5 }}>{tool.shortDescription}</p>
-
-                  <ul style={{ listStyle: 'none', marginBottom: '2.5rem', flexGrow: 1, padding: 0 }}>
-                    {(() => {
-                      const allFeatures = tool.keyFeatures || tool.features || [];
-                      return allFeatures.slice(0, 3).map((f: any, i: number) => {
-                        const title = typeof f === 'string' ? f : (f.title || "");
-                        return (
-                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.8rem', color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 500 }}>
-                            <CheckCircle2 color="var(--success)" size={18} style={{ flexShrink: 0, marginTop: '2px' }} /> {title}
-                          </li>
-                        );
-                      });
-                    })()}
-                  </ul>
-
-                  <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div>
-                      <div style={{ fontSize: '2.2rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', letterSpacing: '-1px' }}>
-                        ${tool.basePrice}<span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>{tool.isFlat ? '/mo' : '/user'}</span>
+                    {/* Community Rating - Interactive */}
+                    <div style={{ background: 'rgba(99, 102, 241, 0.05)', borderRadius: '16px', padding: '1rem', marginBottom: '2rem', textAlign: 'center', border: '1px dashed rgba(99, 102, 241, 0.2)' }}>
+                      <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--brand-primary)', textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '1px' }}>
+                        {userVotes[tool.slug] ? "Thanks for your vote!" : "Rate this Tool"}
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'center', gap: '6px' }}>
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star 
+                            key={star} 
+                            size={18} 
+                            style={{ cursor: 'pointer', transition: 'transform 0.2s' }}
+                            className="star-hover"
+                            fill={star <= (userVotes[tool.slug] || 0) ? "#fbbf24" : "transparent"}
+                            color={star <= (userVotes[tool.slug] || 0) ? "#fbbf24" : "rgba(255,255,255,0.2)"}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setUserVotes(prev => ({ ...prev, [tool.slug]: star }));
+                            }}
+                          />
+                        ))}
                       </div>
                     </div>
-                    
-                    {/* Premium Review Button */}
-                    <Link 
-                      href={`/tools/${tool.slug}`} 
-                      style={{ 
-                        background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`,
-                        color: 'white', padding: '0.8rem 1.8rem', borderRadius: '12px', textDecoration: 'none', 
-                        fontWeight: 700, fontSize: '0.95rem', boxShadow: `0 10px 20px ${tool.color1}33`,
-                        transition: 'transform 0.2s, box-shadow 0.2s'
-                      }}
-                      className="hover-scale"
-                    >
-                      Review
-                    </Link>
+
+                    <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem', lineHeight: 1.5 }}>{tool.shortDescription}</p>
+
+                    <ul style={{ listStyle: 'none', marginBottom: '2.5rem', flexGrow: 1, padding: 0 }}>
+                      {(() => {
+                        const allFeatures = tool.keyFeatures || tool.features || [];
+                        return allFeatures.slice(0, 3).map((f: any, i: number) => {
+                          const title = typeof f === 'string' ? f : (f.title || "");
+                          return (
+                            <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginBottom: '0.8rem', color: 'var(--text-primary)', fontSize: '0.9rem', fontWeight: 500 }}>
+                              <CheckCircle2 color="var(--success)" size={18} style={{ flexShrink: 0, marginTop: '2px' }} /> {title}
+                            </li>
+                          );
+                        });
+                      })()}
+                    </ul>
+
+                    <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div>
+                        <div style={{ fontSize: '2.2rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', letterSpacing: '-1px' }}>
+                          ${tool.basePrice}<span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>{tool.isFlat ? '/mo' : '/user'}</span>
+                        </div>
+                      </div>
+                      <Link 
+                        href={`/tools/${tool.slug}`} 
+                        style={{ 
+                          background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`,
+                          color: 'white', padding: '0.8rem 1.8rem', borderRadius: '12px', textDecoration: 'none', 
+                          fontWeight: 700, fontSize: '0.95rem', boxShadow: `0 10px 20px ${tool.color1}33`,
+                          transition: 'transform 0.2s, box-shadow 0.2s'
+                        }}
+                        className="hover-scale"
+                      >
+                        Review
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </section>
 
         {/* Pagination Controls */}
-        {filteredTools.length > pageSize && (
+        {!loading && filteredTools.length > pageSize && (
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', marginBottom: '5rem' }}>
             <button 
               onClick={() => {
@@ -499,6 +493,7 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
         </section>
       </main>
 
+      {/* Comparison Drawer */}
       <div style={{ position: 'fixed', bottom: selectedTools.length > 0 ? '40px' : '-100px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(15, 15, 20, 0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50px', padding: '0.8rem 1rem 0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '2rem', boxShadow: '0 20px 60px rgba(0,0,0,0.8)', transition: 'bottom 0.5s', zIndex: 1000 }}>
         <div style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
           <div style={{ background: 'var(--brand-primary)', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 800 }}>{selectedTools.length}</div>
@@ -506,13 +501,8 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
         </div>
         <button 
           onClick={() => {
-            const selectedToolsData = toolsData.filter(t => selectedTools.includes(t.name));
-            if (selectedToolsData.length >= 2) {
-              const slugs = selectedToolsData.slice(0, 2).map(t => t.slug).join('-vs-');
-              router.push(`/compare/${slugs}`);
-            } else {
-              setIsModalOpen(true);
-            }
+            const selectedSlugs = tools.filter((t: any) => selectedTools.includes(t.name)).map((t: any) => t.slug).join('-vs-');
+            router.push(`/compare/${selectedSlugs}`);
           }} 
           style={{ background: 'white', color: 'black', border: 'none', padding: '0.9rem 2rem', borderRadius: '50px', fontWeight: 800, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.6rem', boxShadow: '0 10px 30px rgba(255,255,255,0.2)' }}
         >
@@ -520,59 +510,7 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
         </button>
       </div>
 
-      {isModalOpen && (
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.9)', backdropFilter: 'blur(20px)', zIndex: 2000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ position: 'relative', background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', padding: '3rem', width: '95%', maxWidth: '1100px', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 50px 100px -20px rgba(0,0,0,1)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1.5px' }}>Side-by-Side <span style={{ background: 'linear-gradient(to right, var(--brand-primary), var(--brand-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Analysis</span></h2>
-              <button onClick={() => setIsModalOpen(false)} style={{ background: 'rgba(255,255,255,0.05)', border: 'none', color: 'white', cursor: 'pointer', padding: '0.8rem', borderRadius: '50%' }}><X size={28} /></button>
-            </div>
-            <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 1.5rem' }}>
-              <thead>
-                <tr>
-                  <th style={{ textAlign: 'left', padding: '1rem', color: 'var(--text-secondary)', fontSize: '1rem' }}>Comparison Points</th>
-                  {selectedToolsData.map((t: any) => (
-                    <th key={t.slug} style={{ textAlign: 'center', padding: '1rem' }}>
-                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.8rem' }}>
-                        <div style={{ width: '50px', height: '50px', borderRadius: '14px', background: `linear-gradient(135deg, ${t.color1}, ${t.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 800, fontSize: '1.2rem' }}>{t.name.charAt(0)}</div>
-                        <span style={{ fontSize: '1.3rem', fontWeight: 700 }}>{t.name}</span>
-                      </div>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                <tr style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '20px' }}>
-                  <td style={{ padding: '2rem', fontWeight: 700, fontSize: '1.1rem' }}>Ease of Use</td>
-                  {selectedToolsData.map((t: any) => (
-                    <td key={t.slug} style={{ textAlign: 'center', padding: '2rem', color: 'var(--brand-primary)', fontSize: '1.8rem', fontWeight: 900 }}>{t.ease}%</td>
-                  ))}
-                </tr>
-                <tr style={{ background: 'rgba(255,255,255,0.02)' }}>
-                  <td style={{ padding: '2rem', fontWeight: 700, fontSize: '1.1rem' }}>Starting Price</td>
-                  {selectedToolsData.map((t: any) => (
-                    <td key={t.slug} style={{ textAlign: 'center', padding: '2rem', fontSize: '1.4rem', fontWeight: 800 }}>${t.basePrice}<span style={{ fontSize: '0.9rem', opacity: 0.5, fontWeight: 400 }}>{t.isFlat ? '/mo' : '/user'}</span></td>
-                  ))}
-                </tr>
-                {Array.from(new Set(selectedToolsData.flatMap((t: any) => {
-                   const fts = t.keyFeatures || t.key_features || t.features || [];
-                   return fts.map((f: any) => typeof f === 'string' ? f : (f.title || ""));
-                }))).slice(0, 8).map((title: any) => (
-                  <tr key={title} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                    <td style={{ padding: '1.2rem', color: 'var(--text-secondary)', fontSize: '1rem', fontWeight: 500 }}>{title}</td>
-                    {selectedToolsData.map((t: any) => {
-                      const fts = t.keyFeatures || t.key_features || t.features || [];
-                      const has = fts.some((f: any) => (typeof f === 'string' ? f : (f.title || "")) === title);
-                      return <td key={t.slug} style={{ textAlign: 'center', padding: '1.2rem' }}>{has ? <CheckCircle2 color="var(--success)" size={24} /> : <X color="rgba(255,255,255,0.1)" size={24} />}</td>
-                    })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-      <AIAssistant tools={toolsData} />
+      <AIAssistant tools={tools} />
       <Footer />
     </>
   );
@@ -581,7 +519,7 @@ function ToolGrid({ toolsData }: { toolsData: any[] }) {
 export default function Home() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <ToolGrid toolsData={toolsData} />
+      <ToolGrid />
     </Suspense>
   );
 }

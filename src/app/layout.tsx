@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "ToolCompare | The World's Best Software Tools, Compared",
   description: "Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.",
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.svg",
   },
   robots: {
     index: false,

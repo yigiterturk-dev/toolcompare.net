@@ -1,57 +1,5 @@
 [
   {
-    "slug": "udf-reader",
-    "name": "Legal UDF Reader",
-    "iconName": "Scale",
-    "color1": "#6366f1",
-    "color2": "#a855f7",
-    "ease": 98,
-    "featuresScore": 95,
-    "features": [
-      "Instant .udf to .txt",
-      "UYAP v3 Compatible",
-      "%100 Private & Secure"
-    ],
-    "basePrice": 0,
-    "isFlat": true,
-    "category": "Legal Tools",
-    "shortDescription": "The ultimate UYAP document reader.",
-    "longDescription": "The Legal UDF Reader is a high-performance, browser-native tool specifically designed for the Turkish legal ecosystem. It allows lawyers and legal professionals to open and read .udf files—the standard format for UYAP—without needing to install bulky software or worry about privacy. By processing everything locally in the browser, it ensures that sensitive legal documents never touch a third-party server. It is the fastest, most secure way to convert official court documents into readable text for copy-pasting and analysis, significantly speeding up case preparation.",
-    "pros": [
-      "Zero server uploads: Your documents stay on your device, ensuring 100% privacy.",
-      "UYAP v3 Support: Compatible with the latest electronic signature formats and encryption.",
-      "Instant Conversion: Transform .udf files into readable text without any lag or waiting.",
-      "Mobile Friendly: Access and review your legal documents on the go from your smartphone."
-    ],
-    "cons": [
-      "No Editing: This is a read-only tool focused on text extraction and analysis.",
-      "Table Layouts: Complex tables might be extracted as plain text, losing some formatting.",
-      "Browser Dependent: Requires a modern web browser like Chrome, Safari, or Edge."
-    ],
-    "keyFeatures": [
-      {
-        "title": "Client-Side Processing",
-        "description": "All parsing happens in your browser; your sensitive data never leaves your computer."
-      },
-      {
-        "title": "Rapid Search",
-        "description": "Instantly find critical keywords within the converted document using standard search shortcuts."
-      },
-      {
-        "title": "UYAP Font Support",
-        "description": "Flawlessly displays special characters and Turkish fonts used in official legal papers."
-      },
-      {
-        "title": "Offline Capability",
-        "description": "Once loaded, the application can process files even without an active internet connection."
-      }
-    ],
-    "targetAudience": "Lawyers, Law Students, and Court Officials in Turkey.",
-    "verdict": "The most secure and professional way to handle UDF files without compromising confidentiality.",
-    "websiteUrl": "https://www.uyap.gov.tr",
-    "color": "#6366f1"
-  },
-  {
     "slug": "hubspot-crm",
     "name": "HubSpot CRM",
     "iconName": "Zap",
