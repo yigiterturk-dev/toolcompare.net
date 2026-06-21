@@ -156,7 +156,6 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                   {(toolsData as any[])
                     .filter(t => t.category === tool.category && t.slug !== tool.slug)
-                    .sort(() => 0.5 - Math.random())
                     .slice(0, 3)
                     .map(alt => (
                       <Link 

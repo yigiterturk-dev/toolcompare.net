@@ -109,7 +109,7 @@ export default async function ComparisonPage({ params }: any) {
         </div>
 
         {/* Detailed Comparison Table */}
-        <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '40px', padding: '4rem' }}>
+        <div className="compare-table" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '40px', padding: '4rem' }}>
           <ComparisonRow label="Category" val1={tool1.category} val2={tool2.category} />
           <ComparisonRow label="Ease of Use" val1={tool1.ease} val2={tool2.ease} type="score" />
           <ComparisonRow label="Features" val1={tool1.featuresScore} val2={tool2.featuresScore} type="score" />

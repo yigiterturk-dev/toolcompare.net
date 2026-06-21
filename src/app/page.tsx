@@ -497,14 +497,17 @@ function ToolGrid() {
       <div style={{ position: 'fixed', bottom: selectedTools.length > 0 ? '40px' : '-100px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(15, 15, 20, 0.85)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '50px', padding: '0.8rem 1rem 0.8rem 2rem', display: 'flex', alignItems: 'center', gap: '2rem', boxShadow: '0 20px 60px rgba(0,0,0,0.8)', transition: 'bottom 0.5s', zIndex: 1000 }}>
         <div style={{ fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
           <div style={{ background: 'var(--brand-primary)', color: 'white', width: '28px', height: '28px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 800 }}>{selectedTools.length}</div>
-          <span style={{ fontSize: '1rem' }}>Tools Ready to Compare</span>
+          <span style={{ fontSize: '1rem' }}>{selectedTools.length === 2 ? 'Ready to Compare' : 'Select exactly 2 tools'}</span>
         </div>
-        <button 
+        <button
           onClick={() => {
+            if (selectedTools.length !== 2) return;
             const selectedSlugs = tools.filter((t: any) => selectedTools.includes(t.name)).map((t: any) => t.slug).join('-vs-');
             router.push(`/compare/${selectedSlugs}`);
-          }} 
-          style={{ background: 'white', color: 'black', border: 'none', padding: '0.9rem 2rem', borderRadius: '50px', fontWeight: 800, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.6rem', boxShadow: '0 10px 30px rgba(255,255,255,0.2)' }}
+          }}
+          disabled={selectedTools.length !== 2}
+          aria-disabled={selectedTools.length !== 2}
+          style={{ background: 'white', color: 'black', border: 'none', padding: '0.9rem 2rem', borderRadius: '50px', fontWeight: 800, cursor: selectedTools.length === 2 ? 'pointer' : 'not-allowed', opacity: selectedTools.length === 2 ? 1 : 0.45, display: 'flex', alignItems: 'center', gap: '0.6rem', boxShadow: '0 10px 30px rgba(255,255,255,0.2)' }}
         >
           Compare <ArrowRight size={20} />
         </button>
