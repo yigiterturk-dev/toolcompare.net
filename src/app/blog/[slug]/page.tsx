@@ -5,23 +5,72 @@ import path from 'path';
 import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+function loadPosts(): any[] {
+  const postsPath = path.join(process.cwd(), 'src/data/posts.json');
+  if (fs.existsSync(postsPath)) {
+    try {
+      return JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+    } catch {
+      return [];
+    }
+  }
+  return [];
+}
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+  const { slug } = await params;
+  const post = loadPosts().find((p: any) => p.slug === slug);
+  if (!post) return { title: "Article Not Found", robots: { index: false, follow: false } };
+
+  return {
+    title: post.title,
+    description: post.excerpt || `Read ${post.title} on the ToolCompare blog.`,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `/blog/${slug}`,
+      images: post.image ? [{ url: post.image }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: post.image ? [post.image] : undefined,
+    },
+  };
+}
 
 export default async function BlogPost({ params }: any) {
-  const { slug } = params;
-  const postsPath = path.join(process.cwd(), 'src/data/posts.json');
-  let posts = [];
-  if (fs.existsSync(postsPath)) {
-    posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
-  }
-
-  const post = posts.find((p: any) => p.slug === slug);
+  const { slug } = await params;
+  const post = loadPosts().find((p: any) => p.slug === slug);
 
   if (!post) {
     notFound();
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolcompare.net";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image,
+    author: { "@type": "Organization", name: post.author || "ToolCompare Editorial" },
+    publisher: {
+      "@type": "Organization",
+      name: "ToolCompare",
+      logo: { "@type": "ImageObject", url: `${siteUrl}/logo.png` },
+    },
+    mainEntityOfPage: `${siteUrl}/blog/${slug}`,
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <main style={{ paddingTop: '10rem', paddingBottom: '10rem', maxWidth: '800px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%' }}>
         <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--brand-primary)', textDecoration: 'none', fontWeight: 700, marginBottom: '3rem' }}>

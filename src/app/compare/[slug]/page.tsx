@@ -16,9 +16,15 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   
   if (!tool1 || !tool2) return { title: "Comparison" };
 
+  const title = `${tool1.name} vs ${tool2.name} Comparison 2026: Which is Better?`;
+  const description = `Compare ${tool1.name} and ${tool2.name} side-by-side. Pricing, features, pros, cons, and expert verdict.`;
+
   return {
-    title: `${tool1.name} vs ${tool2.name} Comparison 2026: Which is Better? | ToolCompare`,
-    description: `Compare ${tool1.name} and ${tool2.name} side-by-side. Pricing, features, pros, cons, and expert verdict.`,
+    title,
+    description,
+    alternates: { canonical: `/compare/${resolvedParams.slug}` },
+    openGraph: { title, description, type: "article", url: `/compare/${resolvedParams.slug}` },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -31,6 +37,27 @@ export default async function ComparisonPage({ params }: any) {
   const tool2 = (toolsData as any[]).find((t) => t.slug === parts[1]);
 
   if (!tool1 || !tool2) notFound();
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolcompare.net";
+  const verdictSnippet = (v: any) => {
+    const s = typeof v === "string" ? v : "";
+    return s ? (s.length > 50 ? s.substring(0, 50) + "..." : s) : "—";
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Compare", item: `${siteUrl}/compare` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${tool1.name} vs ${tool2.name}`,
+        item: `${siteUrl}/compare/${resolvedParams.slug}`,
+      },
+    ],
+  };
 
   const ComparisonRow = ({ label, val1, val2, type = "text" }: any) => (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0', alignItems: 'center' }}>
@@ -46,8 +73,9 @@ export default async function ComparisonPage({ params }: any) {
 
   return (
     <div style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
-      
+
       <main style={{ paddingTop: '12rem', maxWidth: '1200px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%', paddingBottom: '10rem' }}>
         
         <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#666', textDecoration: 'none', marginBottom: '2rem' }}>
@@ -86,7 +114,7 @@ export default async function ComparisonPage({ params }: any) {
           <ComparisonRow label="Ease of Use" val1={tool1.ease} val2={tool2.ease} type="score" />
           <ComparisonRow label="Features" val1={tool1.featuresScore} val2={tool2.featuresScore} type="score" />
           <ComparisonRow label="Base Price" val1={`$${tool1.basePrice}/mo`} val2={`$${tool2.basePrice}/mo`} />
-          <ComparisonRow label="Verdict" val1={tool1.verdict.substring(0, 50) + "..."} val2={tool2.verdict.substring(0, 50) + "..."} />
+          <ComparisonRow label="Verdict" val1={verdictSnippet(tool1.verdict)} val2={verdictSnippet(tool2.verdict)} />
           
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '3rem 0 0' }}>
             <div></div>
@@ -94,7 +122,7 @@ export default async function ComparisonPage({ params }: any) {
               <a 
                 href={tool1.websiteUrl || `https://www.google.com/search?q=${tool1.name}+official+website`} 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="sponsored noopener noreferrer" 
                 style={{ background: 'var(--brand-primary)', color: 'white', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
               >
                 Visit {tool1.name}
@@ -104,7 +132,7 @@ export default async function ComparisonPage({ params }: any) {
               <a 
                 href={tool2.websiteUrl || `https://www.google.com/search?q=${tool2.name}+official+website`} 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="sponsored noopener noreferrer" 
                 style={{ background: 'white', color: 'black', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
               >
                 Visit {tool2.name}

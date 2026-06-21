@@ -86,7 +86,7 @@ function ToolGrid() {
         <div className="orb orb-2"></div>
       </div>
 
-      <main style={{ paddingTop: '40rem', maxWidth: '1400px', margin: '0 auto', padding: '0 5%' }}>
+      <main style={{ maxWidth: '1400px', margin: '0 auto', padding: '6rem 5% 0' }}>
         <section style={{ textAlign: 'center', maxWidth: '1000px', margin: '0 auto 5rem', position: 'relative', zIndex: 9999, marginTop: '5rem' }}>
           <h1 style={{ fontSize: 'clamp(3.5rem, 6vw, 5rem)', lineHeight: 1.1, marginBottom: '2rem', letterSpacing: '-2px', fontWeight: 900 }}>
             {catFilter ? `Best ${catFilter} ` : "Find The Perfect "}

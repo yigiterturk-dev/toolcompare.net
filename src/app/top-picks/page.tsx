@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import Link from "next/link";
 import { Award, Star, ArrowRight } from "lucide-react";
@@ -6,6 +7,7 @@ import { Award, Star, ArrowRight } from "lucide-react";
 export const metadata = {
   title: "Top Software Picks 2026 | ToolCompare",
   description: "Our hand-picked selection of the best SaaS tools for 2026 based on performance and features.",
+  alternates: { canonical: "/top-picks" },
 };
 
 export default function TopPicksPage() {
@@ -55,6 +57,7 @@ export default function TopPicksPage() {
           ))}
         </div>
       </main>
+      <Footer />
     </>
   );
 }

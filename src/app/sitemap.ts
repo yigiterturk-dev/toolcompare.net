@@ -4,18 +4,23 @@ import fs from 'fs';
 import path from 'path';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://toolcompare.net'
-  
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolcompare.net'
+
   // Base pages
   const routes = [
-    '',
-    '/blog',
-    '/top-picks',
+    { path: '', priority: 1, freq: 'daily' as const },
+    { path: '/categories', priority: 0.9, freq: 'weekly' as const },
+    { path: '/top-picks', priority: 0.9, freq: 'weekly' as const },
+    { path: '/blog', priority: 0.7, freq: 'daily' as const },
+    { path: '/submit', priority: 0.5, freq: 'monthly' as const },
+    { path: '/contact', priority: 0.4, freq: 'monthly' as const },
+    { path: '/privacy', priority: 0.2, freq: 'yearly' as const },
+    { path: '/terms', priority: 0.2, freq: 'yearly' as const },
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${baseUrl}${route.path}`,
     lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: 1,
+    changeFrequency: route.freq,
+    priority: route.priority,
   }))
 
   // Dynamic tool pages
@@ -28,11 +33,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic blog pages
   const postsPath = path.join(process.cwd(), 'src/data/posts.json');
-  let posts = [];
+  let posts: any[] = [];
   if (fs.existsSync(postsPath)) {
-    posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+    try {
+      posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+    } catch {
+      posts = [];
+    }
   }
-  
+
   const blogRoutes = posts.map((post: any) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(),
@@ -40,12 +49,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Smart Comparison Routes (Common ones)
-  const comparisonRoutes = [
-    { url: `${baseUrl}/compare/openai-vs-claude`, lastModified: new Date(), priority: 0.6 },
-    { url: `${baseUrl}/compare/slack-vs-discord`, lastModified: new Date(), priority: 0.6 },
-    { url: `${baseUrl}/compare/notion-vs-trello`, lastModified: new Date(), priority: 0.6 }
-  ]
+  // Featured comparison routes (slugs verified to exist in tools.json)
+  const slugSet = new Set((toolsData as any[]).map((t) => t.slug));
+  const featuredComparisons = [
+    'chatgpt-vs-claude',
+    'slack-vs-discord',
+    'notion-vs-trello',
+  ].filter((pair) => {
+    const [a, b] = pair.split('-vs-');
+    return slugSet.has(a) && slugSet.has(b);
+  });
+
+  const comparisonRoutes = featuredComparisons.map((pair) => ({
+    url: `${baseUrl}/compare/${pair}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
 
   return [...routes, ...toolRoutes, ...blogRoutes, ...comparisonRoutes]
 }

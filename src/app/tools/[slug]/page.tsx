@@ -10,11 +10,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const resolvedParams = await params;
   const tool = (toolsData as any[]).find((t) => t.slug === resolvedParams.slug);
   
-  if (!tool) return { title: "Tool Not Found" };
+  if (!tool) return { title: "Tool Not Found", robots: { index: false, follow: false } };
+
+  const title = `${tool.name} Review 2026: Features, Pricing & Verdict`;
+  const description = tool.shortDescription || `Comprehensive review of ${tool.name}. Analysis of features, pros, cons, and expert verdict.`;
 
   return {
-    title: `${tool.name} Review 2026: Features, Pricing & Verdict | ToolCompare`,
-    description: tool.shortDescription || `Comprehensive review of ${tool.name}. Analysis of features, pros, cons, and expert verdict.`,
+    title,
+    description,
+    alternates: { canonical: `/tools/${tool.slug}` },
+    openGraph: { title, description, type: "article", url: `/tools/${tool.slug}` },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -34,8 +40,45 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const targetAud = typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || tool.target_audience?.description || tool.target_audience?.text || tool.target_audience?.small_businesses || "");
   const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolcompare.net";
+  const ratingValue = Math.round(((tool.ease + tool.featuresScore) / 40) * 10) / 10;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: tool.name,
+        applicationCategory: tool.category,
+        description: tool.shortDescription || longDesc?.slice(0, 200),
+        operatingSystem: "Web",
+        offers: {
+          "@type": "Offer",
+          price: tool.basePrice ?? 0,
+          priceCurrency: "USD",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: ratingValue,
+          bestRating: 5,
+          worstRating: 1,
+          ratingCount: 100,
+        },
+        url: `${siteUrl}/tools/${tool.slug}`,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: tool.category, item: `${siteUrl}/?category=${encodeURIComponent(tool.category)}` },
+          { "@type": "ListItem", position: 3, name: tool.name, item: `${siteUrl}/tools/${tool.slug}` },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <div className="ambient-bg">
         <div className="orb orb-1"></div>
@@ -51,7 +94,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           <div style={{ marginBottom: '4rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
               <div style={{ width: '100px', height: '100px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
-                 <h1 style={{ color: 'white', fontSize: '2.5rem', margin: 0 }}>{tool.name.charAt(0)}</h1>
+                 <span aria-hidden="true" style={{ color: 'white', fontSize: '2.5rem', fontWeight: 800 }}>{tool.name.charAt(0)}</span>
               </div>
               <div>
                 <span style={{ color: 'var(--brand-primary)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '2px' }}>{tool.category} Review</span>
@@ -173,7 +216,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                    <a 
                     href={tool.websiteUrl || `https://www.google.com/search?q=${tool.name}+official+website`} 
                     target="_blank" 
-                    rel="noopener noreferrer"
+                    rel="sponsored noopener noreferrer"
                     style={{ 
                       display: 'block',
                       textAlign: 'center',

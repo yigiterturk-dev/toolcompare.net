@@ -2,6 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Lock, Eye, Database, Cookie } from "lucide-react";
 
+export const metadata = {
+  title: "Privacy Policy | ToolCompare",
+  description: "How ToolCompare collects, uses, and protects your data.",
+  alternates: { canonical: "/privacy" },
+};
+
 export default function PrivacyPage() {
   return (
     <>

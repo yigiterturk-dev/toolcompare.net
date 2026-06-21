@@ -1,12 +1,20 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { rateLimit, getClientIp } from '@/lib/rate-limit';
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
   try {
+    const ip = getClientIp(request);
+    if (!rateLimit(`subscribe:${ip}`, 5, 60_000)) {
+      return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 });
+    }
+
     const { email } = await request.json();
 
-    if (!email || !email.includes('@')) {
+    if (!email || typeof email !== 'string' || email.length > 254 || !EMAIL_REGEX.test(email)) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
     }
 

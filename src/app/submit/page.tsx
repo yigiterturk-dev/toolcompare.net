@@ -2,6 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Send, Rocket, Shield, Zap, Globe } from "lucide-react";
 
+export const metadata = {
+  title: "Submit Your SaaS Tool | ToolCompare",
+  description: "List your software tool on ToolCompare and reach thousands of monthly decision-makers.",
+  alternates: { canonical: "/submit" },
+};
+
 export default function SubmitToolPage() {
   return (
     <>

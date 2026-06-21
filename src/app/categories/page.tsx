@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import Link from "next/link";
-import { 
+import {
   Scale, 
   Users, 
   Briefcase, 
@@ -34,6 +35,7 @@ const categoryIcons: Record<string, any> = {
 export const metadata = {
   title: "Software Categories | ToolCompare",
   description: "Browse SaaS tools by category: CRM, AI, Project Management, and more.",
+  alternates: { canonical: "/categories" },
 };
 
 export default function CategoriesPage() {
@@ -68,6 +70,7 @@ export default function CategoriesPage() {
           })}
         </div>
       </main>
+      <Footer />
     </>
   );
 }

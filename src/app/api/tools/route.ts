@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { query, ensureTables } from '@/lib/db';
+import { checkAdminPassword } from '@/lib/auth';
 
 const toolsPath = path.join(process.cwd(), 'src', 'data', 'tools.json');
 
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { action, tool, slug, password } = body;
 
-    if (password !== process.env.ADMIN_PASSWORD) {
+    if (!checkAdminPassword(password)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 

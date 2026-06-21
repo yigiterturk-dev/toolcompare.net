@@ -1,13 +1,24 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+import { rateLimit, getClientIp } from '@/lib/rate-limit';
 
 export async function POST(request: Request) {
   try {
+    const ip = getClientIp(request);
+    if (!rateLimit(`chat:${ip}`, 15, 60_000)) {
+      return NextResponse.json({ error: 'Too many requests. Please slow down.' }, { status: 429 });
+    }
+
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: 'AI assistant is not configured.' }, { status: 503 });
+    }
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
     const { message, tools } = await request.json();
+
+    if (!message || typeof message !== 'string' || !Array.isArray(tools)) {
+      return NextResponse.json({ error: 'Invalid request.' }, { status: 400 });
+    }
 
     const systemPrompt = `You are the ToolCompare AI Expert. Your job is to help users find the best SaaS tools from our directory.
     
@@ -34,6 +45,7 @@ export async function POST(request: Request) {
     const reply = completion.choices[0].message.content;
     return NextResponse.json({ reply });
   } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Chat Error:", error);
+    return NextResponse.json({ error: 'Something went wrong. Please try again.' }, { status: 500 });
   }
 }

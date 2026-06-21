@@ -2,19 +2,21 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+import { checkAdminPassword } from '@/lib/auth';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { topic, password } = body;
 
-    if (password !== "toolpass99") {
+    if (!checkAdminPassword(password)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
+
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: 'AI generation is not configured.' }, { status: 503 });
+    }
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
     // Load tools to provide context to the AI
     const toolsPath = path.join(process.cwd(), 'src/data/tools.json');

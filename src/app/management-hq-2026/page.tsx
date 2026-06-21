@@ -47,10 +47,13 @@ export default function AdminDashboard() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "toolpass99") {
+    // Real authorization happens server-side: the entered password is sent with
+    // every privileged request and verified against ADMIN_PASSWORD. This gate is
+    // only a UX step that reveals the dashboard once a password has been entered.
+    if (password.trim().length > 0) {
       setIsLoggedIn(true);
     } else {
-      alert("Incorrect Password");
+      alert("Please enter the admin password.");
     }
   };
 

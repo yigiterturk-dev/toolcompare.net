@@ -2,6 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
 
+export const metadata = {
+  title: "Contact Us | ToolCompare",
+  description: "Get in touch with the ToolCompare team. Suggest a tool to review or ask us a question.",
+  alternates: { canonical: "/contact" },
+};
+
 export default function ContactPage() {
   return (
     <main style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>

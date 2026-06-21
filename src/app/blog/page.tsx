@@ -4,12 +4,23 @@ import Link from "next/link";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import fs from 'fs';
 import path from 'path';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SaaS Insights | ToolCompare Blog",
+  description: "Expert guides, trends, and strategies for choosing the best software tools.",
+  alternates: { canonical: "/blog" },
+};
 
 export default function BlogPage() {
   const postsPath = path.join(process.cwd(), 'src/data/posts.json');
-  let posts = [];
+  let posts: any[] = [];
   if (fs.existsSync(postsPath)) {
-    posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+    try {
+      posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+    } catch {
+      posts = [];
+    }
   }
 
   return (
@@ -25,8 +36,13 @@ export default function BlogPage() {
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>Expert guides, trends, and strategies for the modern software era.</p>
         </header>
 
+        {posts.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '4rem 0', color: 'var(--text-secondary)' }}>
+            <p style={{ fontSize: '1.1rem' }}>No articles published yet. Check back soon for expert SaaS insights.</p>
+          </div>
+        ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '3rem' }}>
-          {posts.map(post => (
+          {posts.map((post: any) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }} className="hover-scale">
               <article style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', overflow: 'hidden' }}>
                 <img src={post.image} alt={post.title} style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
@@ -45,6 +61,7 @@ export default function BlogPage() {
             </Link>
           ))}
         </div>
+        )}
       </main>
       <Footer />
     </>

@@ -2,6 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Shield, Scale, FileText, ExternalLink } from "lucide-react";
 
+export const metadata = {
+  title: "Terms of Service | ToolCompare",
+  description: "The terms and conditions for using ToolCompare.",
+  alternates: { canonical: "/terms" },
+};
+
 export default function TermsPage() {
   return (
     <>
