@@ -8,15 +8,22 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
-  const handleSubscribe = () => {
+  const handleSubscribe = async () => {
     if (!email || !email.includes("@")) return;
     setStatus("loading");
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error("Subscription failed");
       setStatus("success");
       setEmail("");
       setTimeout(() => setStatus("idle"), 3000);
-    }, 1200);
+    } catch {
+      setStatus("idle");
+    }
   };
 
   return (
