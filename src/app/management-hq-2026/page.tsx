@@ -14,7 +14,6 @@ export default function AdminDashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [password, setPassword] = useState("");
   const [tools, setTools] = useState<any[]>([]);
-  const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
   const [searchTerm, setSearchTerm] = useState("");
@@ -39,10 +38,6 @@ export default function AdminDashboard() {
     const res = await fetch("/api/tools");
     const data = await res.json();
     setTools(data);
-    
-    // Also fetch posts
-    const pRes = await fetch("/api/blog/generate", { method: 'GET' }); // I need to create a GET route for this or just use a helper
-    // For now I'll just skip the fetch and assume I'll add a proper fetch later
   };
 
   const handleLogin = (e: React.FormEvent) => {
