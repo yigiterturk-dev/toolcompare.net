@@ -28,6 +28,30 @@ export async function query(sql: string, params?: any[]) {
   }
 }
 
+// Best-effort table for affiliate click logging. Returns false when no DB is
+// configured (e.g. serverless without env vars), so callers can fall back to
+// structured stdout logging.
+export async function ensureClicksTable() {
+  if (!pool) return false;
+  try {
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS affiliate_clicks (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        tool_slug VARCHAR(255) NOT NULL,
+        ip VARCHAR(100),
+        referer VARCHAR(512),
+        user_agent VARCHAR(512),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX (tool_slug)
+      )
+    `);
+    return true;
+  } catch (error) {
+    console.error("Clicks table setup failed:", error);
+    return false;
+  }
+}
+
 // Check and Setup Tables
 export async function ensureTables() {
   if (!pool) return false;

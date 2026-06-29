@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import toolsData from '@/data/tools.json'
 import fs from 'fs';
 import path from 'path';
+import { getComparisonSlugs } from '@/lib/comparisons';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolcompare.net'
@@ -49,18 +50,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Featured comparison routes (slugs verified to exist in tools.json)
-  const slugSet = new Set((toolsData as any[]).map((t) => t.slug));
-  const featuredComparisons = [
-    'chatgpt-vs-claude',
-    'slack-vs-discord',
-    'notion-vs-trello',
-  ].filter((pair) => {
-    const [a, b] = pair.split('-vs-');
-    return slugSet.has(a) && slugSet.has(b);
-  });
-
-  const comparisonRoutes = featuredComparisons.map((pair) => ({
+  // Programmatic comparison routes — same-category, comparable tool pairs
+  // (thin-content guarded + capped in src/lib/comparisons.ts).
+  const comparisonRoutes = getComparisonSlugs().map((pair) => ({
     url: `${baseUrl}/compare/${pair}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
 import type { Metadata } from "next";
+import { getRelatedComparisons } from "@/lib/comparisons";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -41,6 +42,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolcompare.net";
+  const relatedComparisons = getRelatedComparisons(tool.slug);
   const ratingValue = Math.round(((tool.ease + tool.featuresScore) / 40) * 10) / 10;
   const jsonLd = {
     "@context": "https://schema.org",
@@ -212,20 +214,21 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                    <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', marginBottom: '1.5rem' }}>
                      ${tool.basePrice}<span style={{ fontSize: '1rem', fontWeight: 400, opacity: 0.8 }}>{tool.isFlat ? '/mo' : '/user/mo'}</span>
                    </div>
-                   <a 
-                    href={tool.websiteUrl || `https://www.google.com/search?q=${tool.name}+official+website`} 
-                    target="_blank" 
+                   {tool.websiteUrl ? (
+                   <a
+                    href={`/api/go/${tool.slug}`}
+                    target="_blank"
                     rel="sponsored noopener noreferrer"
-                    style={{ 
+                    style={{
                       display: 'block',
                       textAlign: 'center',
-                      width: '100%', 
-                      background: 'white', 
-                      color: 'black', 
-                      border: 'none', 
-                      padding: '1rem', 
-                      borderRadius: '12px', 
-                      fontWeight: 700, 
+                      width: '100%',
+                      background: 'white',
+                      color: 'black',
+                      border: 'none',
+                      padding: '1rem',
+                      borderRadius: '12px',
+                      fontWeight: 700,
                       cursor: 'pointer',
                       textDecoration: 'none',
                       transition: 'transform 0.2s'
@@ -234,7 +237,38 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                    >
                      Visit Official Website
                    </a>
+                   ) : (
+                   <div
+                    style={{
+                      display: 'block',
+                      textAlign: 'center',
+                      width: '100%',
+                      background: 'rgba(255,255,255,0.15)',
+                      color: 'rgba(255,255,255,0.7)',
+                      padding: '1rem',
+                      borderRadius: '12px',
+                      fontWeight: 700,
+                      cursor: 'not-allowed'
+                    }}
+                   >
+                     Link coming soon
+                   </div>
+                   )}
                 </div>
+
+                {relatedComparisons.length > 0 && (
+                <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem' }}>
+                  <h4 style={{ marginBottom: '1.2rem', fontSize: '0.95rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-secondary)' }}>Compare {tool.name} with</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                    {relatedComparisons.map((c) => (
+                      <Link key={c.pairSlug} href={`/compare/${c.pairSlug}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', padding: '0.8rem 1rem', borderRadius: '12px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-color)', color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
+                        <span>{tool.name} vs {c.name}</span>
+                        <span style={{ color: 'var(--brand-primary)' }}>→</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                )}
               </div>
             </aside>
           </div>

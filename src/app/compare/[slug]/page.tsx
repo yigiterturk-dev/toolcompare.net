@@ -5,6 +5,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
 import type { Metadata } from "next";
+import { getComparisonSlugs } from "@/lib/comparisons";
+
+// Pre-render the curated set of same-category comparison pages at build time.
+// Other valid pairs (e.g. those linked from tool pages) still render on demand.
+export function generateStaticParams() {
+  return getComparisonSlugs().map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const resolvedParams = await params;
@@ -119,24 +126,36 @@ export default async function ComparisonPage({ params }: any) {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '3rem 0 0' }}>
             <div></div>
             <div style={{ textAlign: 'center' }}>
-              <a 
-                href={tool1.websiteUrl || `https://www.google.com/search?q=${tool1.name}+official+website`} 
-                target="_blank" 
-                rel="sponsored noopener noreferrer" 
+              {tool1.websiteUrl ? (
+              <a
+                href={`/api/go/${tool1.slug}`}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
                 style={{ background: 'var(--brand-primary)', color: 'white', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
               >
                 Visit {tool1.name}
               </a>
+              ) : (
+              <span style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)', padding: '1rem 2rem', borderRadius: '14px', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block', cursor: 'not-allowed' }}>
+                Link coming soon
+              </span>
+              )}
             </div>
             <div style={{ textAlign: 'center' }}>
-              <a 
-                href={tool2.websiteUrl || `https://www.google.com/search?q=${tool2.name}+official+website`} 
-                target="_blank" 
-                rel="sponsored noopener noreferrer" 
+              {tool2.websiteUrl ? (
+              <a
+                href={`/api/go/${tool2.slug}`}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
                 style={{ background: 'white', color: 'black', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
               >
                 Visit {tool2.name}
               </a>
+              ) : (
+              <span style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.6)', padding: '1rem 2rem', borderRadius: '14px', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block', cursor: 'not-allowed' }}>
+                Link coming soon
+              </span>
+              )}
             </div>
           </div>
         </div>
