@@ -3,9 +3,15 @@ import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 import { checkAdminPassword } from '@/lib/auth';
+import { rateLimit, getClientIp } from '@/lib/rate-limit';
 
 export async function POST(request: Request) {
   try {
+    const ip = getClientIp(request);
+    if (!rateLimit(`blog-generate:${ip}`, 5, 60_000)) {
+      return NextResponse.json({ error: 'Too many requests. Please slow down.' }, { status: 429 });
+    }
+
     const body = await request.json();
     const { topic, password } = body;
 
