@@ -22,6 +22,12 @@ export async function POST(request: Request) {
     if (!process.env.OPENAI_API_KEY) {
       return NextResponse.json({ error: 'AI generation is not configured.' }, { status: 503 });
     }
+    if (process.env.NODE_ENV === 'production') {
+      return NextResponse.json(
+        { error: 'Persistent blog storage is not configured.' },
+        { status: 503 }
+      );
+    }
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
     // Load tools to provide context to the AI

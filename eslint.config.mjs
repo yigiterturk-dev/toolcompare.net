@@ -12,7 +12,17 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "app.js",
+    "generate-tools.js",
   ]),
+  {
+    rules: {
+      // The imported data catalogue is intentionally schemaless for now.
+      // Keep this visible as warnings while blocking correctness/security errors.
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react/no-unescaped-entities": "warn",
+    },
+  },
 ]);
 
 export default eslintConfig;

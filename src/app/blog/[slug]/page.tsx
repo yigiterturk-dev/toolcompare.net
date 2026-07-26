@@ -6,6 +6,7 @@ import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { escapeJsonLd, sanitizeArticleHtml } from "@/lib/sanitize";
 
 function loadPosts(): any[] {
   const postsPath = path.join(process.cwd(), 'src/data/posts.json');
@@ -70,7 +71,7 @@ export default async function BlogPost({ params }: any) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(jsonLd) }} />
       <Header />
       <main style={{ paddingTop: '10rem', paddingBottom: '10rem', maxWidth: '800px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%' }}>
         <Link href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--brand-primary)', textDecoration: 'none', fontWeight: 700, marginBottom: '3rem' }}>
@@ -93,7 +94,7 @@ export default async function BlogPost({ params }: any) {
 
         <div 
           style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.15rem', lineHeight: 1.9 }}
-          dangerouslySetInnerHTML={{ __html: post.content }} 
+          dangerouslySetInnerHTML={{ __html: sanitizeArticleHtml(post.content) }}
         />
 
         <footer style={{ marginTop: '6rem', paddingTop: '3rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

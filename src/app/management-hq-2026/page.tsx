@@ -30,15 +30,17 @@ export default function AdminDashboard() {
     keyFeatures: [{title: "", description: ""}]
   });
 
-  useEffect(() => {
-    if (isLoggedIn) fetchTools();
-  }, [isLoggedIn]);
-
-  const fetchTools = async () => {
+  async function fetchTools() {
     const res = await fetch("/api/tools");
     const data = await res.json();
     setTools(data);
-  };
+  }
+
+  /* eslint-disable react-hooks/set-state-in-effect */
+  useEffect(() => {
+    if (isLoggedIn) fetchTools();
+  }, [isLoggedIn]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();

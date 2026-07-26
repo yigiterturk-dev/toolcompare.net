@@ -59,7 +59,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true, source: 'database' });
     }
 
-    // 2. Fallback to JSON Action (Local Dev)
+    // Bundled source files are read-only/ephemeral on serverless production.
+    // Require the database instead of reporting a write that will disappear.
+    if (process.env.NODE_ENV === 'production') {
+      return NextResponse.json(
+        { error: 'Persistent database is not configured.' },
+        { status: 503 }
+      );
+    }
+
+    // 2. Fallback to JSON Action (Local Dev only)
     let tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
     if (action === 'add') tools.push(tool);
     else if (action === 'delete') tools = tools.filter((t: any) => t.slug !== slug);

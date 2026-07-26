@@ -18,6 +18,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
     }
 
+    if (process.env.NODE_ENV === 'production') {
+      return NextResponse.json(
+        { error: 'Newsletter storage is not configured.' },
+        { status: 503 }
+      );
+    }
+
     const filePath = path.join(process.cwd(), 'src/data/subscribers.json');
     
     // Ensure file exists

@@ -6,6 +6,21 @@ import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
 import type { Metadata } from "next";
 import { getComparisonSlugs } from "@/lib/comparisons";
+import { escapeJsonLd } from "@/lib/sanitize";
+
+function ComparisonRow({ label, val1, val2, type = "text" }: any) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0', alignItems: 'center' }}>
+      <div style={{ color: '#666', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase' }}>{label}</div>
+      <div style={{ textAlign: 'center', fontSize: '1.1rem', fontWeight: 600 }}>
+        {type === "score" ? <span style={{ color: 'white' }}>{val1}%</span> : val1}
+      </div>
+      <div style={{ textAlign: 'center', fontSize: '1.1rem', fontWeight: 600 }}>
+        {type === "score" ? <span style={{ color: 'white' }}>{val2}%</span> : val2}
+      </div>
+    </div>
+  );
+}
 
 // Pre-render the curated set of same-category comparison pages at build time.
 // Other valid pairs (e.g. those linked from tool pages) still render on demand.
@@ -66,21 +81,9 @@ export default async function ComparisonPage({ params }: any) {
     ],
   };
 
-  const ComparisonRow = ({ label, val1, val2, type = "text" }: any) => (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0', alignItems: 'center' }}>
-      <div style={{ color: '#666', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase' }}>{label}</div>
-      <div style={{ textAlign: 'center', fontSize: '1.1rem', fontWeight: 600 }}>
-        {type === "score" ? <span style={{ color: 'white' }}>{val1}%</span> : val1}
-      </div>
-      <div style={{ textAlign: 'center', fontSize: '1.1rem', fontWeight: 600 }}>
-        {type === "score" ? <span style={{ color: 'white' }}>{val2}%</span> : val2}
-      </div>
-    </div>
-  );
-
   return (
     <div style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(jsonLd) }} />
       <Header />
 
       <main style={{ paddingTop: '12rem', maxWidth: '1200px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%', paddingBottom: '10rem' }}>

@@ -59,9 +59,11 @@ function ToolGrid() {
   }, []);
 
   // Reset to page 1 when search or category changes
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, catFilter]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const filteredTools = useMemo(() => {
     return tools
