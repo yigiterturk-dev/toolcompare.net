@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <main style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
       <Header />
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '10rem 5% 5rem' }}>
+      <div className="contact-page" style={{ maxWidth: '1200px', margin: '0 auto', padding: '10rem 5% 5rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
           <h1 style={{ fontSize: '4rem', fontWeight: 900, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
             Get in <span style={{ color: '#444' }}>Touch</span>
@@ -38,15 +38,15 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div style={{ marginTop: '4rem', background: '#0a0a0a', border: '1px solid #1a1a1a', padding: '4rem', borderRadius: '24px' }}>
+        <div className="contact-form-card" style={{ marginTop: '4rem', background: '#0a0a0a', border: '1px solid #1a1a1a', padding: '4rem', borderRadius: '24px' }}>
           <form style={{ display: 'grid', gap: '1.5rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-              <input type="text" placeholder="Name" style={{ background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }} />
-              <input type="email" placeholder="Email" style={{ background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }} />
+            <div className="contact-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+              <input aria-label="Name" type="text" placeholder="Name" style={{ minWidth: 0, background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }} />
+              <input aria-label="Email" type="email" placeholder="Email" style={{ minWidth: 0, background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }} />
             </div>
-            <input type="text" placeholder="Subject" style={{ background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }} />
-            <textarea placeholder="Message" rows={6} style={{ background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }}></textarea>
-            <button style={{ background: 'white', color: 'black', padding: '1.2rem', borderRadius: '12px', fontWeight: 800, fontSize: '1.1rem', cursor: 'pointer', border: 'none' }}>
+            <input aria-label="Subject" type="text" placeholder="Subject" style={{ minWidth: 0, background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }} />
+            <textarea aria-label="Message" placeholder="Message" rows={6} style={{ minWidth: 0, background: '#111', border: '1px solid #222', padding: '1.2rem', borderRadius: '12px', color: 'white' }}></textarea>
+            <button type="submit" style={{ background: 'white', color: 'black', padding: '1.2rem', borderRadius: '12px', fontWeight: 800, fontSize: '1.1rem', cursor: 'pointer', border: 'none' }}>
               Send Message
             </button>
           </form>

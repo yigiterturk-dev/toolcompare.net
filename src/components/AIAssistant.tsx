@@ -91,6 +91,7 @@ export default function AIAssistant({ tools }: { tools: any[] }) {
           {/* Input */}
           <div style={{ padding: '1.2rem', borderTop: '1px solid rgba(255,255,255,0.05)', display: 'flex', gap: '0.6rem' }}>
             <input 
+              aria-label="Ask the AI assistant"
               type="text" 
               placeholder="Ask anything..." 
               value={input}

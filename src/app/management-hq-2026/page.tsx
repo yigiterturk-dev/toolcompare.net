@@ -109,11 +109,12 @@ export default function AdminDashboard() {
         <form onSubmit={handleLogin} style={{ background: '#111', padding: '3rem', borderRadius: '32px', border: '1px solid #222', width: '400px', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
             <div style={{ width: '60px', height: '60px', background: 'var(--brand-primary)', borderRadius: '15px', margin: '0 auto 1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Shield color="white" size={30} /></div>
-            <h2 style={{ color: 'white', fontSize: '1.5rem' }}>Terminal Access</h2>
+            <h1 style={{ color: 'white', fontSize: '1.5rem' }}>Terminal Access</h1>
             <p style={{ color: '#666', fontSize: '0.9rem' }}>Enter security clearance to manage ToolCompare</p>
           </div>
           <input 
             type="password" 
+            aria-label="Admin security key"
             placeholder="Security Key" 
             value={password}
             onChange={(e) => setPassword(e.target.value)}

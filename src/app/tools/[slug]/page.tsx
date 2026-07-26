@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
 import type { Metadata } from "next";
 import { getRelatedComparisons } from "@/lib/comparisons";
+import { escapeJsonLd } from "@/lib/sanitize";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
@@ -80,7 +81,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: escapeJsonLd(jsonLd) }} />
       <Header />
       <div className="ambient-bg">
         <div className="orb orb-1"></div>
@@ -94,7 +95,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
         <article>
           <div style={{ marginBottom: '4rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
+            <div className="tool-hero" style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
               <div style={{ width: '100px', height: '100px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
                  <span aria-hidden="true" style={{ color: 'white', fontSize: '2.5rem', fontWeight: 800 }}>{tool.name.charAt(0)}</span>
               </div>
@@ -105,7 +106,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
+          <div className="tool-detail-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
               <section>
                 <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>

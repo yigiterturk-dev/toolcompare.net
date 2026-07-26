@@ -109,6 +109,7 @@ function ToolGrid() {
               zIndex: -1 
             }}></div>
             <input 
+              aria-label="Search tools"
               type="text" 
               placeholder="Search across 100+ AI tools, CRMs, and more..." 
               value={searchTerm}
@@ -481,6 +482,7 @@ function ToolGrid() {
               style={{ display: 'flex', gap: '1rem', maxWidth: '500px', margin: '0 auto', background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '100px', border: '1px solid rgba(255,255,255,0.1)' }}
             >
               <input 
+                aria-label="Work email"
                 name="email"
                 type="email" 
                 placeholder="Enter your work email" 

@@ -87,7 +87,7 @@ export default function UdfReader() {
                 className="max-w-2xl mx-auto"
               >
                 <div className="text-center mb-12">
-                  <h2 className="text-4xl font-bold mb-4 tracking-tight">Legal <span className="text-[#6366f1]">UDF Reader</span></h2>
+                  <h1 className="text-4xl font-bold mb-4 tracking-tight">Legal <span className="text-[#6366f1]">UDF Reader</span></h1>
                   <p className="text-zinc-400 text-lg max-w-sm mx-auto leading-relaxed">
                     UYAP dökümanlarınızı güvenli bir şekilde görüntüleyin ve metin formatına dönüştürün.
                   </p>
@@ -97,6 +97,7 @@ export default function UdfReader() {
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-right from-[#6366f1] to-[#a855f7]"></div>
                   <input 
                     type="file" 
+                    aria-label="UDF document"
                     accept=".udf"
                     onChange={handleFileUpload}
                     className="absolute inset-0 opacity-0 cursor-pointer z-10"

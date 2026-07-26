@@ -100,7 +100,7 @@ export default async function ComparisonPage({ params }: any) {
         </div>
 
         {/* Head-to-Head Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', marginBottom: '4rem' }}>
+        <div className="comparison-head-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', marginBottom: '4rem' }}>
           <div></div>
           
           <div style={{ textAlign: 'center' }}>
@@ -164,7 +164,7 @@ export default async function ComparisonPage({ params }: any) {
         </div>
 
         {/* Expert Verdict Section */}
-        <div style={{ marginTop: '6rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+        <div className="comparison-verdict-grid" style={{ marginTop: '6rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
            <div style={{ background: 'var(--surface-color)', padding: '3rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
               <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}><CheckCircle2 color="var(--success)" /> Choose {tool1.name} if:</h3>
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{tool1.targetAudience}</p>

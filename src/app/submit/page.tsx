@@ -32,22 +32,22 @@ export default function SubmitToolPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Tool Name</label>
-                <input type="text" placeholder="e.g. Notion" style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
+                <input aria-label="Tool name" type="text" placeholder="e.g. Notion" style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Website URL</label>
-                <input type="url" placeholder="https://..." style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
+                <input aria-label="Tool website" type="url" placeholder="https://..." style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
               </div>
             </div>
 
             <div>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Your Email</label>
-              <input type="email" placeholder="you@company.com" style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
+              <input aria-label="Contact email" type="email" placeholder="you@company.com" style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
             </div>
 
             <div>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Short Description</label>
-              <textarea placeholder="Tell us what makes your tool unique..." style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', minHeight: '120px' }}></textarea>
+              <textarea aria-label="Tool description" placeholder="Tell us what makes your tool unique..." style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', minHeight: '120px' }}></textarea>
             </div>
 
             <div style={{ background: 'rgba(99, 102, 241, 0.05)', border: '1px solid rgba(99, 102, 241, 0.2)', padding: '2rem', borderRadius: '24px' }}>
