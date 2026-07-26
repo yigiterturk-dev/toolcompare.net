@@ -1,0 +1,30 @@
+protocol_version: NUSP-1.0
+project:
+  name: ToolCompare
+  slug: toolcompare
+  workspace: projects/toolcompare
+  mode: revise
+project_zero:
+  gate: 6
+  status: PASS
+  project_dna_version: existing-brand-v1
+  reference_pool_version: not-required-backend-revision
+delivery:
+  gate: G6
+  status: PASS_WITH_RECORDED_EXCEPTION
+specialists:
+  researcher: not_started
+  reference_scan: not_started
+  art_direction: not_started
+  motion: not_started
+  implementation: pass
+  visual_qa: pass
+approvals:
+  direction: existing_locked
+  static: pending
+  release: pending
+open_decisions:
+  - Hostinger MySQL credentials must be configured at runtime.
+  - OPENAI_API_KEY and CRON_SECRET must be configured at runtime.
+active_handoff: null
+updated_at: 2026-07-26T13:25:00+03:00

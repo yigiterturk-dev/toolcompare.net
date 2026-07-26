@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ToolCompare
 
-## Getting Started
+ToolCompare is a database-backed software directory with a controlled AI
+publishing pipeline. AI output never publishes directly: it enters a review
+queue, receives a deterministic quality score, and needs at least two HTTPS
+sources plus explicit admin approval.
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`. The private growth control room is available at
+`/management-hq-2026`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` into the environment settings on Hostinger. Persistent
+growth features require the MySQL `DB_*` variables. AI jobs additionally need
+`OPENAI_API_KEY`; the model can be changed with `OPENAI_MODEL`.
 
-## Learn More
+The worker is intentionally separate from web requests:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+curl -X POST https://toolcompare.net/api/cron/growth \
+  -H "Authorization: Bearer $CRON_SECRET"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Schedule this endpoint in Hostinger Cron every 10–15 minutes. A run processes
+up to three queued jobs. Failed jobs retry up to three times with a 15-minute
+backoff.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Publishing rules
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Quality score must be at least 80.
+- Two HTTPS sources are mandatory.
+- Drafts are stored in `content_reviews`.
+- Only the admin “Approve” action writes a tool into the live `tools` table.
+- Tool pages and the sitemap read from the database first and fall back to the
+  bundled JSON catalog when no database is configured.

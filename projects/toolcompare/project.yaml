@@ -1,0 +1,15 @@
+project:
+  name: ToolCompare
+  slug: toolcompare
+  mode: revise
+  type: software_directory_and_admin_webapp
+  workspace: projects/toolcompare
+revision:
+  scope: self-growing content ecosystem
+  approved_by_user: true
+  production_allowed: false
+assets:
+  brand_identity: PROVIDED
+  existing_catalog: PROVIDED
+  database_credentials: BLOCKING_UNKNOWN_FOR_RUNTIME_ONLY
+  openai_credentials: BLOCKING_UNKNOWN_FOR_RUNTIME_ONLY

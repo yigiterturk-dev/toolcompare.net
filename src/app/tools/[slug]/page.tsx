@@ -1,16 +1,16 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import toolsData from "@/data/tools.json";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
 import type { Metadata } from "next";
 import { getRelatedComparisons } from "@/lib/comparisons";
 import { escapeJsonLd } from "@/lib/sanitize";
+import { getAllTools, getToolBySlug } from "@/lib/tools-repository";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
-  const tool = (toolsData as any[]).find((t) => t.slug === resolvedParams.slug);
+  const tool = await getToolBySlug(resolvedParams.slug);
   
   if (!tool) return { title: "Tool Not Found", robots: { index: false, follow: false } };
 
@@ -26,21 +26,34 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export function generateStaticParams() {
-  return toolsData.map((tool: any) => ({ slug: tool.slug }));
+export async function generateStaticParams() {
+  return (await getAllTools()).map((tool) => ({ slug: tool.slug }));
 }
 
 export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const tool = (toolsData as any[]).find((t) => t.slug === resolvedParams.slug);
+  const [tool, toolsData] = await Promise.all([
+    getToolBySlug(resolvedParams.slug),
+    getAllTools(),
+  ]);
 
   if (!tool) notFound();
 
   // Smart Data Normalization (Handle camelCase, snake_case, and nested objects)
   const longDesc = tool.longDescription || tool.description || (tool.review?.text || tool.review?.body || tool.review?.introduction || "");
   const features = tool.keyFeatures || tool.key_features || tool.features || [];
-  const targetAud = typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || tool.target_audience?.description || tool.target_audience?.text || tool.target_audience?.small_businesses || "");
-  const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
+  const targetAud = typeof tool.targetAudience === "string"
+    ? tool.targetAudience
+    : tool.targetAudience?.description || tool.targetAudience?.text ||
+      tool.target_audience?.description || tool.target_audience?.text ||
+      tool.target_audience?.small_businesses || "";
+  const legacyExpertVerdict = typeof tool.expert_verdict === "string"
+    ? tool.expert_verdict
+    : tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || "";
+  const verdictText = typeof tool.verdict === "string"
+    ? tool.verdict
+    : tool.expertVerdict?.conclusion || tool.expertVerdict?.summary ||
+      tool.expertVerdict?.text || legacyExpertVerdict || tool.verdict?.text || "";
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolcompare.net";
   const relatedComparisons = getRelatedComparisons(tool.slug);
@@ -147,7 +160,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
                     <MessageSquareQuote color="var(--brand-tertiary)" /> The Final Verdict
                   </h2>
-                  <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>"{typeof verdictText === 'string' ? verdictText : (verdictText.text || "")}"</p>
+                  <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>&quot;{verdictText}&quot;</p>
                 </section>
               )}
 
@@ -157,7 +170,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   Best Alternatives to <span style={{ color: 'var(--brand-primary)' }}>{tool.name}</span>
                 </h2>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
-                  {(toolsData as any[])
+                  {toolsData
                     .filter(t => t.category === tool.category && t.slug !== tool.slug)
                     .slice(0, 3)
                     .map(alt => (

@@ -1,367 +1,290 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { 
-  Settings, Plus, Trash2, Save, LogOut, 
-  Database, Layout, Activity, CheckCircle, Mail, Zap, Cloud, BarChart3, Shield,
-  Loader2, Check, AlertCircle, ExternalLink, Globe, Award, TrendingUp, Search
+import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import {
+  Activity, ArrowUpRight, Check, Clock3, Database, ExternalLink,
+  Loader2, LogOut, RefreshCw, Search, ShieldCheck, Sparkles,
+  TriangleAlert, X,
 } from "lucide-react";
 import Link from "next/link";
+import "./growth-admin.css";
 
-const ICON_OPTIONS = ["Zap", "Cloud", "BarChart3", "Database", "Activity", "CheckCircle", "Layout", "Mail", "Shield"];
+type Job = {
+  id: number;
+  type: string;
+  status: string;
+  priority: number;
+  attempts: number;
+  quality_score: number | null;
+  error_message: string | null;
+  created_at: string;
+};
 
-export default function AdminDashboard() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+type Review = {
+  id: number;
+  content_key: string;
+  status: string;
+  quality_score: number;
+  reasons: string | string[];
+  source_count: number;
+  created_at: string;
+};
+
+type Snapshot = {
+  available: boolean;
+  jobs?: Job[];
+  reviews?: Review[];
+  tools?: { total: number; categories: number };
+  counts?: Array<{ status: string; count: number }>;
+};
+
+function parseReasons(value: string | string[]) {
+  if (Array.isArray(value)) return value;
+  try { return JSON.parse(value) as string[]; } catch { return []; }
+}
+
+function StatusPill({ value }: { value: string }) {
+  return <span className={`growth-status growth-status--${value}`}>{value.replace("_", " ")}</span>;
+}
+
+export default function GrowthAdminPage() {
   const [password, setPassword] = useState("");
-  const [tools, setTools] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState({ type: "", message: "" });
-  const [searchTerm, setSearchTerm] = useState("");
-  
-  // Form State
-  const [editMode, setEditMode] = useState(false);
-  const [formData, setFormData] = useState<any>({
-    slug: "", name: "", category: "", iconName: "Zap",
-    color1: "#6366f1", color2: "#a855f7",
-    ease: 90, featuresScore: 90, basePrice: 20, isFlat: false,
-    websiteUrl: "",
-    shortDescription: "", longDescription: "", targetAudience: "", verdict: "",
-    pros: ["", "", ""], cons: ["", ""],
-    keyFeatures: [{title: "", description: ""}]
-  });
+  const [authenticated, setAuthenticated] = useState(false);
+  const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
+  const [category, setCategory] = useState("");
+  const [count, setCount] = useState(1);
+  const [search, setSearch] = useState("");
+  const [busy, setBusy] = useState("");
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
-  async function fetchTools() {
-    const res = await fetch("/api/tools");
-    const data = await res.json();
-    setTools(data);
+  const load = useCallback(async (secret = password) => {
+    setBusy("load");
+    const response = await fetch("/api/admin/growth", {
+      headers: { "x-admin-password": secret },
+      cache: "no-store",
+    });
+    const data = await response.json();
+    setBusy("");
+    if (!response.ok) {
+      setAuthenticated(false);
+      setMessage({ type: "error", text: data.error || "Access denied." });
+      return false;
+    }
+    setSnapshot(data);
+    setAuthenticated(true);
+    setMessage(null);
+    return true;
+  }, [password]);
+
+  useEffect(() => {
+    if (!authenticated) return;
+    const timer = window.setInterval(() => load(), 30_000);
+    return () => window.clearInterval(timer);
+  }, [authenticated, load]);
+
+  async function login(event: FormEvent) {
+    event.preventDefault();
+    if (!password.trim()) return;
+    await load(password);
   }
 
-  /* eslint-disable react-hooks/set-state-in-effect */
-  useEffect(() => {
-    if (isLoggedIn) fetchTools();
-  }, [isLoggedIn]);
-  /* eslint-enable react-hooks/set-state-in-effect */
-
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Real authorization happens server-side: the entered password is sent with
-    // every privileged request and verified against ADMIN_PASSWORD. This gate is
-    // only a UX step that reveals the dashboard once a password has been entered.
-    if (password.trim().length > 0) {
-      setIsLoggedIn(true);
-    } else {
-      alert("Please enter the admin password.");
-    }
-  };
-
-  const handleSave = async () => {
-    setLoading(true);
-    const res = await fetch("/api/tools", {
+  async function mutate(body: Record<string, unknown>, key: string) {
+    setBusy(key);
+    const response = await fetch("/api/admin/growth", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        password,
-        action: editMode ? "update" : "add",
-        tool: formData
-      })
+      headers: { "content-type": "application/json", "x-admin-password": password },
+      body: JSON.stringify(body),
     });
-    
-    if (res.ok) {
-      setStatus({ type: "success", message: "Successfully updated!" });
-      fetchTools();
-      setEditMode(false);
-      resetForm();
-    } else {
-      setStatus({ type: "error", message: "Save failed." });
+    const data = await response.json();
+    setBusy("");
+    if (!response.ok || !data.success) {
+      setMessage({ type: "error", text: data.error || "Action failed." });
+      return;
     }
-    setLoading(false);
-    setTimeout(() => setStatus({ type: "", message: "" }), 3000);
-  };
-
-  const handleDelete = async (slug: string) => {
-    if (!confirm("Are you sure?")) return;
-    const res = await fetch("/api/tools", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password, action: "delete", slug })
+    setMessage({
+      type: "success",
+      text: body.action === "queue"
+        ? `Job #${data.jobId} entered the review pipeline.`
+        : "Review queue updated.",
     });
-    if (res.ok) fetchTools();
-  };
+    setCategory("");
+    await load();
+  }
 
-  const resetForm = () => {
-    setFormData({
-        slug: "", name: "", category: "", iconName: "Zap",
-        color1: "#6366f1", color2: "#a855f7",
-        ease: 90, featuresScore: 90, basePrice: 20, isFlat: false,
-        websiteUrl: "",
-        shortDescription: "", longDescription: "", targetAudience: "", verdict: "",
-        pros: ["", "", ""], cons: ["", ""],
-        keyFeatures: [{title: "", description: ""}]
-    });
-  };
+  const reviews = useMemo(() => {
+    const term = search.toLowerCase();
+    return (snapshot?.reviews ?? []).filter((item) =>
+      item.content_key.toLowerCase().includes(term) || item.status.toLowerCase().includes(term)
+    );
+  }, [search, snapshot]);
 
-  const filteredTools = tools.filter(t => t.name.toLowerCase().includes(searchTerm.toLowerCase()) || t.category.toLowerCase().includes(searchTerm.toLowerCase()));
-  const totalCategories = new Set(tools.map(t => t.category)).size;
+  const queued = snapshot?.counts?.find((item) => item.status === "queued")?.count ?? 0;
+  const pending = snapshot?.reviews?.filter((item) => item.status === "pending").length ?? 0;
+  const completed = snapshot?.counts?.find((item) => item.status === "completed")?.count ?? 0;
 
-  if (!isLoggedIn) {
+  if (!authenticated) {
     return (
-      <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#050505', fontFamily: 'Inter, sans-serif' }}>
-        <form onSubmit={handleLogin} style={{ background: '#111', padding: '3rem', borderRadius: '32px', border: '1px solid #222', width: '400px', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <div style={{ width: '60px', height: '60px', background: 'var(--brand-primary)', borderRadius: '15px', margin: '0 auto 1rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Shield color="white" size={30} /></div>
-            <h1 style={{ color: 'white', fontSize: '1.5rem' }}>Terminal Access</h1>
-            <p style={{ color: '#666', fontSize: '0.9rem' }}>Enter security clearance to manage ToolCompare</p>
-          </div>
-          <input 
-            type="password" 
-            aria-label="Admin security key"
-            placeholder="Security Key" 
+      <main className="growth-login">
+        <form className="growth-login__card" onSubmit={login}>
+          <div className="growth-brandmark" aria-hidden="true">TC</div>
+          <p className="growth-eyebrow">Private operations</p>
+          <h1>Growth control room</h1>
+          <p className="growth-muted">Review sources, quality and publishing decisions before content reaches ToolCompare.</p>
+          <label htmlFor="growth-password">Admin password</label>
+          <input
+            id="growth-password"
+            type="password"
+            autoComplete="current-password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            style={{ width: '100%', padding: '1.2rem', borderRadius: '14px', background: '#0a0a0a', border: '1px solid #333', color: 'white', marginBottom: '1.5rem', outline: 'none' }} 
+            onChange={(event) => setPassword(event.target.value)}
           />
-          <button type="submit" style={{ width: '100%', padding: '1.2rem', borderRadius: '14px', background: 'white', color: 'black', fontWeight: 700, border: 'none', cursor: 'pointer', fontSize: '1rem' }}>Initialize Dashboard</button>
+          {message && <p className="growth-inline-error"><TriangleAlert size={16} />{message.text}</p>}
+          <button className="growth-primary" type="submit" disabled={busy === "load"}>
+            {busy === "load" ? <Loader2 className="growth-spin" size={18} /> : <ShieldCheck size={18} />}
+            Open control room
+          </button>
         </form>
-      </div>
+      </main>
     );
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: '#050505', color: 'white', padding: '2rem 4%', fontFamily: 'Inter, sans-serif' }}>
-      {/* Top Navbar */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3rem', background: '#111', padding: '1rem 2rem', borderRadius: '20px', border: '1px solid #222' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div style={{ background: 'var(--brand-primary)', padding: '0.5rem', borderRadius: '10px' }}><Settings size={20} /></div>
-          <h1 style={{ fontSize: '1.2rem', fontWeight: 700 }}>ToolCompare <span style={{ color: '#666', fontWeight: 400 }}>/ Admin Control</span></h1>
-        </div>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-          <Link href="/" target="_blank" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.05)', color: 'white', textDecoration: 'none', padding: '0.6rem 1.2rem', borderRadius: '12px', fontSize: '0.9rem', border: '1px solid #333' }}><Globe size={16} /> View Site</Link>
-          <button onClick={() => setIsLoggedIn(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: '1px solid rgba(239, 68, 68, 0.2)', padding: '0.6rem 1.2rem', borderRadius: '12px', cursor: 'pointer', fontSize: '0.9rem' }}><LogOut size={16} /> Exit</button>
-        </div>
-      </header>
+    <div className="growth-shell">
+      <aside className="growth-sidebar">
+        <div className="growth-sidebar__brand"><span>TC</span><strong>ToolCompare</strong></div>
+        <nav aria-label="Management">
+          <a href="#overview" className="is-active"><Activity size={18} />Overview</a>
+          <a href="#queue"><Clock3 size={18} />Review queue <b>{pending}</b></a>
+          <a href="#jobs"><RefreshCw size={18} />Automation</a>
+          <Link href="/" target="_blank"><ExternalLink size={18} />View site</Link>
+        </nav>
+        <button className="growth-sidebar__logout" onClick={() => {
+          setAuthenticated(false);
+          setPassword("");
+          setSnapshot(null);
+        }}><LogOut size={18} />Lock dashboard</button>
+      </aside>
 
-      {/* Quick Stats */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '3rem' }}>
-        <div style={{ background: '#111', padding: '1.5rem', borderRadius: '24px', border: '1px solid #222' }}>
-          <p style={{ color: '#666', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Total Tools</p>
-          <div style={{ fontSize: '2rem', fontWeight: 800 }}>{tools.length}</div>
-        </div>
-        <div style={{ background: '#111', padding: '1.5rem', borderRadius: '24px', border: '1px solid #222' }}>
-          <p style={{ color: '#666', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Categories</p>
-          <div style={{ fontSize: '2rem', fontWeight: 800 }}>{totalCategories}</div>
-        </div>
-        <div style={{ background: '#111', padding: '1.5rem', borderRadius: '24px', border: '1px solid #222' }}>
-          <p style={{ color: '#666', fontSize: '0.85rem', marginBottom: '0.5rem' }}>SEO Health</p>
-          <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--success)' }}>Good</div>
-        </div>
-        <div style={{ background: 'linear-gradient(135deg, var(--brand-primary), var(--brand-secondary))', padding: '1.5rem', borderRadius: '24px', color: 'white' }}>
-          <p style={{ fontSize: '0.85rem', opacity: 0.8, marginBottom: '0.5rem' }}>Active Year</p>
-          <div style={{ fontSize: '2rem', fontWeight: 800 }}>2026</div>
-        </div>
-      </div>
-
-      {/* AI Generator Section */}
-      <section style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.1), rgba(168,85,247,0.1))', border: '1px solid var(--brand-primary)', borderRadius: '28px', padding: '2.5rem', marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+      <main className="growth-main">
+        <header className="growth-topbar" id="overview">
           <div>
-            <h2 style={{ fontSize: '1.6rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.7rem' }}><Zap color="var(--brand-primary)" fill="var(--brand-primary)" /> AI Content Factory</h2>
-            <p style={{ color: '#aaa' }}>Bulk generate professional reviews instantly. Duplicate tools are automatically skipped.</p>
+            <p className="growth-eyebrow">Operations / Growth</p>
+            <h1>Publishing pipeline</h1>
           </div>
-        </div>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <input 
-            type="text" 
-            placeholder="Enter category (e.g. Video Editing, SEO Tools...)" 
-            id="ai-category-dashboard"
-            style={{ flex: 1, minWidth: '300px', padding: '1.2rem', borderRadius: '16px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} 
-          />
-          <select 
-            id="ai-count-selector"
-            style={{ padding: '0 1.5rem', borderRadius: '16px', background: '#111', border: '1px solid #333', color: 'white', outline: 'none', cursor: 'pointer' }}
-          >
-            <option value="5">Generate 5 Tools</option>
-            <option value="10">Generate 10 Tools</option>
-          </select>
-          <button 
-            onClick={async () => {
-              const cat = (document.getElementById('ai-category-dashboard') as HTMLInputElement).value;
-              const count = (document.getElementById('ai-count-selector') as HTMLSelectElement).value;
-              if (!cat) return alert("Please enter a category");
-              setLoading(true);
-              const res = await fetch("/api/tools/generate", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ category: cat, count: parseInt(count), password })
-              });
-              const data = await res.json();
-              setLoading(false);
-              if (data.success) {
-                alert(`MISSION SUCCESS!\n\nAI found ${data.totalFound} tools.\nAdded ${data.addedCount} new tools.\nSkipped ${data.totalFound - data.addedCount} duplicates.`);
-                fetchTools();
-              } else {
-                alert("Error: " + data.error);
-              }
-            }}
-            disabled={loading}
-            style={{ padding: '0 2.5rem', height: '60px', borderRadius: '16px', background: 'white', color: 'black', fontWeight: 700, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.7rem', transition: 'transform 0.2s' }}
-          >
-            {loading ? <Loader2 className="animate-spin" /> : <><Plus size={20}/> Start Batch Production</>}
+          <button className="growth-icon-button" aria-label="Refresh dashboard" onClick={() => load()} disabled={busy === "load"}>
+            <RefreshCw size={18} className={busy === "load" ? "growth-spin" : ""} />
           </button>
-        </div>
-      </section>
+        </header>
 
-      {/* AI Blog Factory Section */}
-      <section style={{ background: 'linear-gradient(135deg, rgba(147,51,234,0.1), rgba(236,72,153,0.1))', border: '1px solid #ec4899', borderRadius: '28px', padding: '2.5rem', marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
+        {!snapshot?.available && (
+          <section className="growth-db-warning">
+            <Database size={22} />
+            <div><strong>Database connection required</strong><p>Set the DB_* variables on Hostinger to activate queues, reviews and cron processing.</p></div>
+          </section>
+        )}
+
+        {message && (
+          <div className={`growth-flash growth-flash--${message.type}`}>
+            {message.type === "success" ? <Check size={17} /> : <TriangleAlert size={17} />}
+            {message.text}
+            <button aria-label="Dismiss message" onClick={() => setMessage(null)}><X size={16} /></button>
+          </div>
+        )}
+
+        <section className="growth-kpis" aria-label="Pipeline summary">
+          <article><span>Published tools</span><strong>{snapshot?.tools?.total ?? "—"}</strong><small>{snapshot?.tools?.categories ?? 0} categories</small></article>
+          <article><span>Waiting jobs</span><strong>{queued}</strong><small>worker-ready</small></article>
+          <article><span>Needs review</span><strong>{pending}</strong><small>human decision</small></article>
+          <article><span>Completed jobs</span><strong>{completed}</strong><small>all time</small></article>
+        </section>
+
+        <section className="growth-compose">
           <div>
-            <h2 style={{ fontSize: '1.6rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.7rem' }}><Mail color="#ec4899" fill="#ec4899" /> AI Blog Factory</h2>
-            <p style={{ color: '#aaa' }}>Write 600+ word expert articles about any software trend instantly.</p>
+            <p className="growth-eyebrow">Controlled generation</p>
+            <h2>Queue a researched tool batch</h2>
+            <p className="growth-muted">Drafts need two sources and an 80+ quality score. Nothing publishes automatically.</p>
           </div>
-        </div>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-          <input 
-            type="text" 
-            placeholder="Article Topic (e.g. Why AI is changing SEO in 2026...)" 
-            id="ai-blog-topic"
-            style={{ flex: 1, padding: '1.2rem', borderRadius: '16px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} 
-          />
-          <button 
-            onClick={async () => {
-              const topic = (document.getElementById('ai-blog-topic') as HTMLInputElement).value;
-              if (!topic) return alert("Please enter a topic");
-              setLoading(true);
-              const res = await fetch("/api/blog/generate", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ topic, password })
-              });
-              const data = await res.json();
-              setLoading(false);
-              if (data.success) {
-                alert(`STORY PUBLISHED!\n\n"${data.post.title}" is now live on your blog.`);
-                (document.getElementById('ai-blog-topic') as HTMLInputElement).value = "";
-              } else {
-                alert("Error: " + data.error);
-              }
-            }}
-            disabled={loading}
-            style={{ padding: '0 2.5rem', height: '60px', borderRadius: '16px', background: 'white', color: 'black', fontWeight: 700, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.7rem' }}
-          >
-            {loading ? <Loader2 className="animate-spin" /> : <><Plus size={20}/> Generate Article</>}
-          </button>
-        </div>
-      </section>
-
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '2.5rem' }}>
-        
-        {/* Tool Browser */}
-        <section>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-            <h2 style={{ fontSize: '1.4rem' }}>Database Browser</h2>
-            <div style={{ position: 'relative' }}>
-              <Search style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: '#666' }} size={16} />
-              <input 
-                type="text" 
-                placeholder="Search tools..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                style={{ background: '#111', border: '1px solid #333', borderRadius: '10px', padding: '0.6rem 1rem 0.6rem 2.5rem', color: 'white', fontSize: '0.9rem', outline: 'none' }}
+          <form onSubmit={(event) => {
+            event.preventDefault();
+            mutate({ action: "queue", category, count }, "queue");
+          }}>
+            <label htmlFor="growth-category">Category</label>
+            <div className="growth-compose__row">
+              <input
+                id="growth-category"
+                value={category}
+                onChange={(event) => setCategory(event.target.value)}
+                placeholder="e.g. customer support software"
+                maxLength={100}
+                required
               />
+              <select aria-label="Draft count" value={count} onChange={(event) => setCount(Number(event.target.value))}>
+                <option value={1}>1 draft</option>
+                <option value={3}>3 drafts</option>
+                <option value={5}>5 drafts</option>
+              </select>
+              <button className="growth-primary" disabled={!snapshot?.available || busy === "queue"}>
+                {busy === "queue" ? <Loader2 className="growth-spin" size={18} /> : <Sparkles size={18} />}Queue
+              </button>
             </div>
+          </form>
+        </section>
+
+        <section className="growth-panel" id="queue">
+          <div className="growth-panel__head">
+            <div><p className="growth-eyebrow">Editorial gate</p><h2>Review queue</h2></div>
+            <label className="growth-search"><Search size={17} /><span className="sr-only">Search reviews</span><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Filter drafts" /></label>
           </div>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxHeight: '800px', overflowY: 'auto', paddingRight: '1rem' }} className="custom-scrollbar">
-            {/* Categorized List */}
-            {Array.from(new Set(filteredTools.map(t => t.category))).sort().map(cat => {
-              const catTools = filteredTools.filter(t => t.category === cat);
-              return (
-                <div key={cat}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.5rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', marginBottom: '1rem', border: '1px solid rgba(255,255,255,0.05)' }}>
-                    <span style={{ fontWeight: 800, fontSize: '0.8rem', color: 'var(--brand-primary)', textTransform: 'uppercase', letterSpacing: '1px' }}>{cat}</span>
-                    <span style={{ fontSize: '0.7rem', opacity: 0.5 }}>{catTools.length} items</span>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                    {catTools.map(tool => (
-                      <div key={tool.slug} style={{ background: '#111', padding: '0.8rem 1rem', borderRadius: '14px', border: '1px solid #222', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'all 0.2s' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                          <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 800, fontSize: '0.8rem' }}>{tool.name.charAt(0)}</div>
-                          <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>{tool.name}</div>
-                        </div>
-                        <div style={{ display: 'flex', gap: '0.4rem' }}>
-                          <button onClick={() => { setFormData(tool); setEditMode(true); window.scrollTo({top: 0, behavior: 'smooth'}); }} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid #222', color: 'white', padding: '0.4rem 0.6rem', borderRadius: '6px', cursor: 'pointer', fontSize: '0.75rem' }}>Edit</button>
-                          <button onClick={() => handleDelete(tool.slug)} style={{ background: 'rgba(239, 68, 68, 0.05)', border: '1px solid rgba(239, 68, 68, 0.1)', color: '#ef4444', padding: '0.4rem', borderRadius: '6px', cursor: 'pointer' }}><Trash2 size={14} /></button>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+          <div className="growth-review-list">
+            {reviews.length === 0 ? (
+              <div className="growth-empty"><ShieldCheck size={26} /><strong>Queue is clear</strong><p>New AI drafts will wait here for a human decision.</p></div>
+            ) : reviews.map((review) => (
+              <article className="growth-review" key={review.id}>
+                <div className="growth-review__score" data-pass={review.quality_score >= 80}>
+                  <strong>{review.quality_score}</strong><span>/100</span>
                 </div>
-              );
-            })}
+                <div className="growth-review__body">
+                  <div><h3>{review.content_key}</h3><StatusPill value={review.status} /></div>
+                  <p>{review.source_count} sources · {new Date(review.created_at).toLocaleDateString()}</p>
+                  {parseReasons(review.reasons).slice(0, 2).map((reason) => <small key={reason}>{reason}</small>)}
+                </div>
+                {review.status === "pending" && (
+                  <div className="growth-review__actions">
+                    <button onClick={() => mutate({ action: "reject", reviewId: review.id }, `reject-${review.id}`)}>Reject</button>
+                    <button onClick={() => mutate({ action: "retry", reviewId: review.id }, `retry-${review.id}`)}>Regenerate</button>
+                    <button className="growth-primary" disabled={review.quality_score < 80 || review.source_count < 2} onClick={() => mutate({ action: "approve", reviewId: review.id }, `approve-${review.id}`)}>Approve</button>
+                  </div>
+                )}
+              </article>
+            ))}
           </div>
         </section>
 
-        {/* Pro Editor Form */}
-        <section style={{ background: '#111', padding: '2.5rem', borderRadius: '28px', border: '1px solid #222' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-            <h2 style={{ fontSize: '1.4rem' }}>{editMode ? "Manual Editor" : "Quick Add Tool"}</h2>
-            {editMode && <button onClick={() => { setEditMode(false); resetForm(); }} style={{ background: 'transparent', border: 'none', color: '#666', cursor: 'pointer' }}>Cancel Edit</button>}
+        <section className="growth-panel" id="jobs">
+          <div className="growth-panel__head"><div><p className="growth-eyebrow">Worker history</p><h2>Automation jobs</h2></div></div>
+          <div className="growth-table-wrap">
+            <table>
+              <thead><tr><th>Job</th><th>Status</th><th>Attempts</th><th>Quality</th><th>Created</th></tr></thead>
+              <tbody>
+                {(snapshot?.jobs ?? []).map((job) => (
+                  <tr key={job.id}>
+                    <td><strong>#{job.id}</strong><span>{job.type.replace("_", " ")}</span></td>
+                    <td><StatusPill value={job.status} /></td>
+                    <td>{job.attempts}</td>
+                    <td>{job.quality_score ?? "—"}</td>
+                    <td>{new Date(job.created_at).toLocaleString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.2rem', marginBottom: '1.2rem' }}>
-            <div>
-              <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Tool Name</label>
-              <input value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} />
-            </div>
-            <div>
-              <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Category</label>
-              <input value={formData.category} onChange={(e) => setFormData({...formData, category: e.target.value})} style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} />
-            </div>
-          </div>
-
-          <div style={{ marginBottom: '1.2rem' }}>
-             <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Affiliate / Website URL</label>
-             <input value={formData.websiteUrl} onChange={(e) => setFormData({...formData, websiteUrl: e.target.value})} placeholder="https://..." style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'var(--brand-primary)', outline: 'none', fontWeight: 600 }} />
-          </div>
-
-          <div style={{ marginBottom: '1.2rem' }}>
-             <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Card Description (Short)</label>
-             <input value={formData.shortDescription} onChange={(e) => setFormData({...formData, shortDescription: e.target.value})} style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} />
-          </div>
-
-          <div style={{ marginBottom: '1.2rem' }}>
-             <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Deep Review (3+ Paragraphs)</label>
-             <textarea value={formData.longDescription} onChange={(e) => setFormData({...formData, longDescription: e.target.value})} style={{ width: '100%', padding: '1rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'white', minHeight: '180px', outline: 'none', lineHeight: 1.6 }} />
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
-             <div>
-                <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Base Price</label>
-                <input type="number" value={formData.basePrice} onChange={(e) => setFormData({...formData, basePrice: parseInt(e.target.value)})} style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} />
-             </div>
-             <div>
-                <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Ease (%)</label>
-                <input type="number" value={formData.ease} onChange={(e) => setFormData({...formData, ease: parseInt(e.target.value)})} style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} />
-             </div>
-             <div>
-                <label style={{ display: 'block', fontSize: '0.75rem', color: '#666', marginBottom: '0.4rem', textTransform: 'uppercase' }}>Features Score</label>
-                <input type="number" value={formData.featuresScore} onChange={(e) => setFormData({...formData, featuresScore: parseInt(e.target.value)})} style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', background: '#0a0a0a', border: '1px solid #333', color: 'white', outline: 'none' }} />
-             </div>
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
-            <button onClick={handleSave} disabled={loading} style={{ width: '100%', padding: '1.2rem', borderRadius: '16px', background: 'white', color: 'black', border: 'none', fontWeight: 800, cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.7rem', transition: 'background 0.2s' }}>
-               {loading ? <Loader2 className="animate-spin" /> : <><Save size={20}/> {editMode ? "Commit Changes" : "Publish to Site"}</>}
-            </button>
-          </div>
-
-          {status.message && (
-            <div style={{ marginTop: '1.5rem', padding: '1rem', borderRadius: '12px', background: status.type === 'success' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 129, 0.1)', color: status.type === 'success' ? '#10b981' : '#ef4444', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500 }}>
-              {status.type === 'success' ? <Check size={18} /> : <AlertCircle size={18} />} {status.message}
-            </div>
-          )}
         </section>
 
-      </div>
+        <footer className="growth-footer">
+          <span>Worker endpoint: POST /api/cron/growth</span>
+          <Link href="/tools/hubspot-crm" target="_blank">Inspect a live page <ArrowUpRight size={15} /></Link>
+        </footer>
+      </main>
     </div>
   );
 }

@@ -4,6 +4,9 @@ import path from 'path';
 
 async function setup() {
   try {
+    if (!pool) {
+      throw new Error("Database environment variables are not configured.");
+    }
     console.log("Starting Database Setup...");
 
     // 1. Create Tools Table

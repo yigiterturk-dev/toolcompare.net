@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next'
-import toolsData from '@/data/tools.json'
 import fs from 'fs';
 import path from 'path';
 import { getComparisonSlugs } from '@/lib/comparisons';
+import { getAllTools } from '@/lib/tools-repository';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://toolcompare.net'
 
   // Base pages
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Dynamic tool pages
-  const toolRoutes = (toolsData as any[]).map((tool: any) => ({
+  const toolRoutes = (await getAllTools()).map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
