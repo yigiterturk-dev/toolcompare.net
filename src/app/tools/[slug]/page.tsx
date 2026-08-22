@@ -12,9 +12,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   if (!tool) return { title: "Tool Not Found" };
 
+  const title = `${tool.name} Review 2026: Features, Pricing & Verdict | ToolCompare`;
+  const description =
+    tool.shortDescription ||
+    `Comprehensive review of ${tool.name}. Analysis of features, pros, cons, and expert verdict.`;
+  const url = `/tools/${tool.slug}`;
+
   return {
-    title: `${tool.name} Review 2026: Features, Pricing & Verdict | ToolCompare`,
-    description: tool.shortDescription || `Comprehensive review of ${tool.name}. Analysis of features, pros, cons, and expert verdict.`,
+    title,
+    description,
+    // Canonical yoktu: ayni sayfaya farkli yollardan (sorgu parametresi,
+    // www) gelindiginde Google hangisini asil sayacagini kendi tahmin
+    // ediyordu. Open Graph de yoktu; paylasilan link ciplak gorunuyordu.
+    alternates: { canonical: url },
+    openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -28,14 +40,59 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   if (!tool) notFound();
 
+
   // Smart Data Normalization (Handle camelCase, snake_case, and nested objects)
   const longDesc = tool.longDescription || tool.description || (tool.review?.text || tool.review?.body || tool.review?.introduction || "");
   const features = tool.keyFeatures || tool.key_features || tool.features || [];
   const targetAud = typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || tool.target_audience?.description || tool.target_audience?.text || tool.target_audience?.small_businesses || "");
   const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
 
+  // Yapilandirilmis veri. DIKKAT: buraya YALNIZCA sayfada gercekten gorunen
+  // ve elimizde olan bilgi konur. Genel bir yildiz puani BILEREK yok:
+  // elimizdeki tek gorunur skor "Ease of Use" (tek boyut), onu genel puan
+  // diye sunmak yanlis beyan olurdu ve Google zengin sonuclarda buna
+  // yaptirim uyguluyor. Genel puan gostermeye karar verilirse once sayfada
+  // gorunur olmali, sonra buraya reviewRating eklenmeli.
+  const sayfaUrl = `https://toolcompare.net/tools/${tool.slug}`;
+  const yapilandirilmis: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: tool.name,
+    description: tool.shortDescription || longDesc || undefined,
+    applicationCategory: tool.category || undefined,
+    operatingSystem: "Web",
+    url: sayfaUrl,
+    sameAs: tool.websiteUrl || undefined,
+  };
+  if (typeof tool.basePrice === "number") {
+    yapilandirilmis.offers = {
+      "@type": "Offer",
+      price: tool.basePrice,
+      priceCurrency: "USD",
+      // isFlat=false ise fiyat kullanici basina aylik; sayfada da boyle yaziyor.
+      description: tool.isFlat ? "Flat monthly price" : "Per user, per month",
+    };
+  }
+  if (verdictText) {
+    yapilandirilmis.review = {
+      "@type": "Review",
+      author: { "@type": "Organization", name: "ToolCompare" },
+      reviewBody: typeof verdictText === "string" ? verdictText : verdictText.text,
+      ...((tool.pros || []).length
+        ? { positiveNotes: { "@type": "ItemList", itemListElement: (tool.pros || []).map((x: string, i: number) => ({ "@type": "ListItem", position: i + 1, name: x })) } }
+        : {}),
+      ...((tool.cons || []).length
+        ? { negativeNotes: { "@type": "ItemList", itemListElement: (tool.cons || []).map((x: string, i: number) => ({ "@type": "ListItem", position: i + 1, name: x })) } }
+        : {}),
+    };
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(yapilandirilmis) }}
+      />
       <Header />
       <div className="ambient-bg">
         <div className="orb orb-1"></div>

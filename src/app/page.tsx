@@ -24,8 +24,47 @@ export default async function Home() {
   const sirali = [...kategoriler.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   for (const [, liste] of sirali) liste.sort((a, b) => a.name.localeCompare(b.name));
 
+  // Site geneli yapilandirilmis veri: arama kutusu (sitelinks searchbox) ve
+  // yayinci kimligi. Arac listesi ItemList olarak veriliyor ki Google
+  // katalogun kapsamini tek istekte gorsun.
+  const siteSemasi = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://toolcompare.net/#org",
+        name: "ToolCompare",
+        url: "https://toolcompare.net",
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://toolcompare.net/#site",
+        url: "https://toolcompare.net",
+        name: "ToolCompare",
+        publisher: { "@id": "https://toolcompare.net/#org" },
+      },
+      {
+        "@type": "ItemList",
+        name: `${tools.length} software tools reviewed`,
+        numberOfItems: tools.length,
+        itemListElement: tools
+          .filter((t: any) => t?.slug && t?.name)
+          .map((t: any, i: number) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: t.name,
+            url: `https://toolcompare.net/tools/${t.slug}`,
+          })),
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSemasi) }}
+      />
       <ToolGridClient initialTools={tools} />
 
       <nav
