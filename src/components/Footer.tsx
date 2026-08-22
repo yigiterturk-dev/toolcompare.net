@@ -31,9 +31,9 @@ export default function Footer() {
             Find and compare the world's best software tools with deep-dive reviews and real-time pricing analysis.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ color: '#444', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}><MessageSquare size={20} /></a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" style={{ color: '#444', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}><Code size={20} /></a>
-            <a href="https://toolcompare.net" style={{ color: '#444', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}><Globe size={20} /></a>
+            <a href="https://twitter.com" aria-label="ToolCompare on Twitter" target="_blank" rel="noopener noreferrer" style={{ color: '#444', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}><MessageSquare size={20} /></a>
+            <a href="https://github.com" aria-label="ToolCompare on GitHub" target="_blank" rel="noopener noreferrer" style={{ color: '#444', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}><Code size={20} /></a>
+            <a href="https://toolcompare.net" aria-label="ToolCompare home" style={{ color: '#444', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}><Globe size={20} /></a>
           </div>
         </div>
 

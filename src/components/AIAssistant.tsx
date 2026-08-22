@@ -41,7 +41,7 @@ export default function AIAssistant({ tools }: { tools: any[] }) {
   return (
     <>
       {/* Floating Button */}
-      <button 
+      <button aria-label="Open AI assistant" 
         onClick={() => setIsOpen(!isOpen)}
         style={{
           position: 'fixed', bottom: '2rem', right: '2rem', width: '64px', height: '64px',

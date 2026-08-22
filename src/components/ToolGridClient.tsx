@@ -102,7 +102,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
             }}></div>
             <input 
               type="text" 
-              placeholder="Search across 100+ AI tools, CRMs, and more..." 
+              aria-label="Search tools" placeholder="Search across 100+ AI tools, CRMs, and more..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               style={{ 
@@ -475,7 +475,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
               <input 
                 name="email"
                 type="email" 
-                placeholder="Enter your work email" 
+                aria-label="Work email" placeholder="Enter your work email" 
                 required
                 style={{ flexGrow: 1, background: 'transparent', border: 'none', color: 'white', padding: '0 1.5rem', outline: 'none', fontSize: '1rem' }}
               />
