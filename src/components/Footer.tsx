@@ -61,7 +61,7 @@ export default function Footer() {
           <div style={{ display: 'flex', gap: '0.5rem', position: 'relative' }}>
             <input 
               type="email" 
-              placeholder="Email address" 
+              aria-label="Email address for newsletter" placeholder="Email address" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               style={{ flex: 1, background: '#111', border: '1px solid #222', padding: '0.8rem', borderRadius: '10px', color: 'white', outline: 'none' }} 

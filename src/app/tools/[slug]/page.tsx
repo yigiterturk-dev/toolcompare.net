@@ -108,7 +108,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           <div style={{ marginBottom: '4rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
               <div style={{ width: '100px', height: '100px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
-                 <h1 style={{ color: 'white', fontSize: '2.5rem', margin: 0 }}>{tool.name.charAt(0)}</h1>
+                 <span aria-hidden="true" style={{ color: 'white', fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>{tool.name.charAt(0)}</span>
               </div>
               <div>
                 <span style={{ color: 'var(--brand-primary)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '2px' }}>{tool.category} Review</span>

@@ -14,6 +14,16 @@ export const metadata: Metadata = {
   // metadataBase olmadan canonical ve OG url'leri goreli kaliyordu; Google'in
   // hangi adresi kanonik sayacagi belirsizdi.
   metadataBase: new URL("https://toolcompare.net"),
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "ToolCompare | The World's Best Software Tools, Compared",
+    description:
+      "Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.",
+    url: "/",
+    siteName: "ToolCompare",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
