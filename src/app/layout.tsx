@@ -11,10 +11,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
-  robots: {
-    index: false,
-    follow: false,
-  },
+  // metadataBase olmadan canonical ve OG url'leri goreli kaliyordu; Google'in
+  // hangi adresi kanonik sayacagi belirsizdi.
+  metadataBase: new URL("https://toolcompare.net"),
 };
 
 export default function RootLayout({
