@@ -8,7 +8,23 @@ import { getTools } from "@/lib/tools";
 export const revalidate = 3600;
 
 export default async function Home() {
-  const tools = await getTools();
+  const tumArac = await getTools();
+
+  // Izgaranin gercekten kullandigi alanlar. Tam kayitlari prop gecirince
+  // (longDescription, pros, cons, keyFeatures, targetAudience, verdict...)
+  // hepsi HTML'e seri hale geliyor ve dokuman 518 KB'a cikiyordu. Bu alanlar
+  // yalnizca urun detay sayfasinda lazim; orada zaten dogrudan okunuyor.
+  const IZGARA_ALANLARI = [
+    "slug", "name", "category", "shortDescription",
+    "iconName", "color", "color1", "color2",
+    "ease", "featuresScore", "basePrice", "isFlat", "features",
+  ] as const;
+
+  const tools = tumArac.map((t: any) => {
+    const kucuk: Record<string, unknown> = {};
+    for (const alan of IZGARA_ALANLARI) if (t?.[alan] !== undefined) kucuk[alan] = t[alan];
+    return kucuk;
+  });
 
   // Izgara sayfalama yaptigi icin HTML'e yalnizca ilk sayfanin linkleri
   // giriyordu; kalan urun sayfalari hicbir yerden linklenmiyordu (orphan).
