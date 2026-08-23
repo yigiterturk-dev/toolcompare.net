@@ -2,11 +2,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
-import { kanonikSlug, akranlar } from "@/lib/compare";
+import { kanonikSlug, akranlar, karsilastirmaCiftleri } from "@/lib/compare";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
 import type { Metadata } from "next";
+
+/**
+ * Karsilastirma sayfalari build aninda uretilsin.
+ *
+ * Onceden bu rota tek DINAMIK sayfa turuydu: 417 sayfa HER istekte
+ * yeniden render ediliyordu (olculdu: ilk bayta 12,5 ms, statik
+ * sayfalarda 1,5-5,2 ms). Sitenin en kalabalik sayfa grubu ve arama
+ * motorunun en cok tarayacagi grup burasi.
+ *
+ * dynamicParams VARSAYILAN (true) birakildi: listede olmayan bir cift --
+ * ornegin ters sirali /compare/zapier-vs-1password -- yine calisir ve
+ * kanonik adresi gosterir. Kapatmak o adresleri 404 yapardi.
+ */
+export function generateStaticParams() {
+  return karsilastirmaCiftleri().map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const resolvedParams = await params;
