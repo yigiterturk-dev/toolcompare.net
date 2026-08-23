@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
-import { kanonikSlug, aracinKarsilastirmalari, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
@@ -92,7 +92,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const karsilastirmalar = aracinKarsilastirmalari(tool.slug, 5);
+  const karsilastirmalar = akranlar(tool.slug);
 
 
   return (

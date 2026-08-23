@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
-import { kanonikSlug, aracinKarsilastirmalari } from "@/lib/compare";
+import { kanonikSlug, akranlar } from "@/lib/compare";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
@@ -56,7 +56,8 @@ export default async function ComparisonPage({ params }: any) {
   const zengin = tool1.featuresScore >= tool2.featuresScore ? tool1 : tool2;
   const sade = zengin === tool1 ? tool2 : tool1;
 
-  const ilgili = aracinKarsilastirmalari(tool1.slug, 5).filter((t) => t.slug !== tool2.slug).slice(0, 4);
+  // Yalnizca akranlar: sitemap disi bir sayfaya link verilmemeli.
+  const ilgili = akranlar(tool1.slug).filter((t: any) => t.slug !== tool2.slug);
 
   const ComparisonRow = ({ label, val1, val2, type = "text" }: any) => (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0', alignItems: 'center' }}>

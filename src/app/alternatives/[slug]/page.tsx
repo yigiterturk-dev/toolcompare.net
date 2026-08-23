@@ -19,7 +19,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import toolsData from "@/data/tools.json";
-import { alternatifler, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { gitLinki } from "@/lib/outbound";
 
 function aracBul(slug: string): any {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   const tool = aracBul(slug);
   if (!tool) return { title: "Not Found" };
 
-  const alts = alternatifler(slug);
+  const alts = akranlar(slug);
   // Baslik 65 karakteri asarsa arama sonucunda kesilir.
   const cekirdek = `${alts.length} Best ${tool.name} Alternatives in 2026`;
   const title = cekirdek.length <= 51 ? `${cekirdek} | ToolCompare` : cekirdek;
@@ -56,7 +56,7 @@ export default async function AlternativesPage({ params }: any) {
   const tool = aracBul(slug);
   if (!tool) notFound();
 
-  const alts = alternatifler(slug);
+  const alts = akranlar(slug);
   // Sayfa yalnizca yeterli alternatif varsa anlamli.
   if (alts.length < EN_AZ_ALTERNATIF) notFound();
 

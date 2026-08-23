@@ -9,12 +9,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://toolcompare.net'
   
   // Base pages
+  // /blog BILEREK yok: posts.json hic olusmadigi icin sayfa bos, ustelik
+  // siteden hic link de almiyordu (oksuz). Bos bir sayfayi en yuksek
+  // oncelikle ilan etmek Google'a yanlis sinyal. Yazi eklenince
+  // asagidaki blogRoutes zaten kendiliginden dolar; o zaman buraya da
+  // geri konur.
   const routes = [
     '',
-    '/blog',
     '/top-picks',
     // /categories sitemap'te hic yoktu.
     '/categories',
+    // Footer'dan link alan ama sitemap'te olmayan sayfalar.
+    '/contact',
+    '/privacy',
+    '/terms',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

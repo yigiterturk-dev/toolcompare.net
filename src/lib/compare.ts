@@ -1,20 +1,20 @@
 /**
- * Karsilastirma ciftlerinin tek kaynagi.
+ * Karsilastirma ve alternatif sayfalarinin TEK KAYNAGI.
  *
- * NEDEN VAR: /compare/<a>-vs-<b> rotasi her cift icin calisiyordu ama
- * sitemap'e elle uc adres yazilmisti ve biri (openai-vs-claude) hic var
- * olmayan bir slug'a isaret ediyordu. Yani en yuksek ticari niyetli sayfa
- * turu -- "X vs Y" -- arama motoruna hic sunulmuyordu.
+ * NEDEN TEK KAYNAK OLMAK ZORUNDA (link taramasi, 2026-08-24):
+ * Sitemap ile ic link agi ayri kurallardan uretiliyordu ve birbirini
+ * tutmuyordu -- 252 sayfa siteden link aliyordu ama sitemap'te yoktu,
+ * 5 sayfa sitemap'teydi ama hicbir sayfadan link almiyordu (oksuz).
+ * Google'a "bu sayfa onemli" demenin yolu ona link vermektir; sitemap'te
+ * olup link almayan sayfa zayif, linklenip sitemap'te olmayan sayfa ise
+ * gec kesfedilir.
  *
- * IKI SINIR BILEREK KONDU:
+ * Cozum: her aracin AKRAN_ADEDI kadar akrani var; hem sayfa linkleri hem
+ * sitemap ayni listeden uretiliyor. Boylece her karsilastirma sayfasi
+ * hem sitemap'te hem de en az bir sayfadan linkli olmak zorunda.
  *
- * 1. Yalnizca AYNI KATEGORI icindeki ciftler. "Figma vs QuickBooks"
- *    kimsenin aradigi bir sey degil; uretmek sadece ince sayfa yigini
- *    olusturur.
- * 2. Kategori basina en iyi KATEGORI_BASINA_TAVAN arac. 121 aracin tum
- *    kombinasyonu 7.260 sayfa eder; Google'a yeni gorunmeye baslamis bir
- *    sitede bu, tarama butcesini yakmaktan baska ise yaramaz. Tavan
- *    yukseltilebilir -- ama once bu sayfalarin indekslendigi gorulmeli.
+ * AKRAN_ADEDI yukseltilirse hem sayfa sayisi hem ic link yogunlugu
+ * birlikte artar; ikisi ayrisamaz.
  */
 
 import toolsData from "@/data/tools.json";
@@ -26,97 +26,108 @@ export type Arac = {
   ease?: number;
   featuresScore?: number;
   basePrice?: number;
+  isFlat?: boolean;
+  shortDescription?: string;
+  cons?: string[];
 };
 
 const araclar = toolsData as Arac[];
 
-/** Kategori basina sitemap'e girecek en fazla arac sayisi. */
-export const KATEGORI_BASINA_TAVAN = 10;
+/** Her aracin kac akrani olacak. Sayfa sayisini da link agini da bu belirler. */
+export const AKRAN_ADEDI = 5;
 
-/** Kategori adlari tutarsiz yazilmis ("video editing" / "Design"). */
+/** Alternatif sayfasi icin gereken en az akran sayisi. Altinda sayfa uretilmez. */
+export const EN_AZ_ALTERNATIF = 3;
+
+/** Kategori adlari veride tutarsiz yazilmis ("video editing" / "Design"). */
 function kategoriAnahtari(k?: string): string {
   return (k || "diger").trim().toLowerCase();
 }
 
-/** Elimizdeki tek nesnel siralama olcutu: kullanim kolayligi + ozellik puani. */
+/** Elimizdeki tek nesnel siralama olcutu. */
 function kalitePuani(t: Arac): number {
   return (t.ease ?? 0) + (t.featuresScore ?? 0);
 }
 
 /**
  * Cift adresinin KANONIK hali her zaman alfabetik sirada.
- * Boylece "slack-vs-notion" ve "notion-vs-slack" ayni sayfanin iki kopyasi
- * olarak indekslenmez.
+ * "slack-vs-notion" ve "notion-vs-slack" ayni sayfanin iki kopyasi
+ * olarak indekslenmesin.
  */
 export function kanonikSlug(a: string, b: string): string {
   return a < b ? `${a}-vs-${b}` : `${b}-vs-${a}`;
 }
 
-/** Sitemap'e girecek karsilastirma adresleri. */
-export function karsilastirmaCiftleri(): string[] {
-  const kategoriler = new Map<string, Arac[]>();
-  for (const t of araclar) {
-    const k = kategoriAnahtari(t.category);
-    if (!kategoriler.has(k)) kategoriler.set(k, []);
-    kategoriler.get(k)!.push(t);
-  }
-
-  const ciftler: string[] = [];
-  for (const grup of kategoriler.values()) {
-    const secilenler = [...grup]
-      .sort((a, b) => kalitePuani(b) - kalitePuani(a))
-      .slice(0, KATEGORI_BASINA_TAVAN);
-
-    for (let i = 0; i < secilenler.length; i++) {
-      for (let j = i + 1; j < secilenler.length; j++) {
-        ciftler.push(kanonikSlug(secilenler[i].slug, secilenler[j].slug));
-      }
-    }
-  }
-  // Ayni cift iki kategoriden gelemez ama yine de tekillestir.
-  return [...new Set(ciftler)].sort();
-}
-
 /**
- * Bir aracin sayfasindan link verilecek karsilastirmalar.
- * Karsilastirma sayfalari aksi halde OKSUZ kalir: sitemap'te olurlar ama
- * siteden hicbir link almazlar, ki bu Google'a "onemsiz" sinyali verir.
+ * Bir aracin akranlari: ayni kategorideki en yuksek puanli diger araclar.
+ *
+ * BU FONKSIYON SISTEMIN OMURGASI. Sayfalarin verdigi her karsilastirma
+ * linki buradan gelir ve sitemap de buradan uretilir; ikisi ayrisamaz.
  */
-export function aracinKarsilastirmalari(slug: string, adet = 4): Arac[] {
+export function akranlar(slug: string, adet: number = AKRAN_ADEDI): Arac[] {
   const arac = araclar.find((t) => t.slug === slug);
   if (!arac) return [];
   return araclar
-    .filter(
-      (t) => t.slug !== slug && kategoriAnahtari(t.category) === kategoriAnahtari(arac.category)
-    )
+    .filter((t) => t.slug !== slug && kategoriAnahtari(t.category) === kategoriAnahtari(arac.category))
     .sort((a, b) => kalitePuani(b) - kalitePuani(a))
     .slice(0, adet);
 }
 
-// ── Alternatif sayfalari ──────────────────────────────────────────────
+/** Geriye donuk ad. */
+export const aracinKarsilastirmalari = akranlar;
+export const alternatifler = akranlar;
+
 
 /**
- * Bir aracin alternatifleri: ayni kategorideki diger araclar, puana gore.
+ * Anasayfadaki "Trending VS" seridi.
  *
- * ALT SINIR VAR: uc alternatiften azi olan arac icin sayfa uretilmez.
- * "Best X Alternatives" basligi altinda bir-iki secenek gostermek
- * ziyaretciye de arama motoruna da degersiz gelir; ince sayfa uretmek
- * yerine hic uretmemek dogrusu.
+ * Elle secilmis ciftler -- puana gore degil, insanlarin gercekten
+ * karsilastirdigi araclar oldugu icin. AMA elle yazilmis slug sessizce
+ * kirilir (sitemap'te 'openai-vs-claude' tam bunu yapmisti: var olmayan
+ * bir arac icin Google'a 404 ilan ediliyordu). Bu yuzden:
+ *   - liste burada, tek yerde durur
+ *   - oneCikanCiftler() her iki slug'in GERCEKTEN var oldugunu dogrular
+ *   - dogrulanan ciftler sitemap'e de girer, boylece anasayfadan link
+ *     alan bir sayfa sitemap disinda kalmaz
  */
-export const EN_AZ_ALTERNATIF = 3;
+const SECILMIS_CIFTLER: [string, string][] = [
+  ["chatgpt", "claude"],
+  ["slack", "discord"],
+  ["notion", "trello"],
+];
 
-export function alternatifler(slug: string, adet = 8): Arac[] {
-  return aracinKarsilastirmalari(slug, adet);
+export function oneCikanCiftler(): { slug: string; label: string }[] {
+  const sonuc: { slug: string; label: string }[] = [];
+  for (const [a, b] of SECILMIS_CIFTLER) {
+    const t1 = araclar.find((t) => t.slug === a);
+    const t2 = araclar.find((t) => t.slug === b);
+    if (!t1 || !t2) continue; // slug kirilmissa sessizce dus, 404 verme
+    sonuc.push({ slug: kanonikSlug(a, b), label: `${t1.name} vs ${t2.name}` });
+  }
+  return sonuc;
+}
+
+/** Sitemap'e girecek karsilastirma adresleri: akranlar + one cikan ciftler. */
+export function karsilastirmaCiftleri(): string[] {
+  const ciftler = new Set<string>();
+  for (const t of araclar) {
+    for (const a of akranlar(t.slug)) {
+      ciftler.add(kanonikSlug(t.slug, a.slug));
+    }
+  }
+  // Anasayfadan link alan ciftler de sitemap'te olmali.
+  for (const c of oneCikanCiftler()) ciftler.add(c.slug);
+  return [...ciftler].sort();
 }
 
 /** Alternatif sayfasi uretilecek araclar. */
 export function alternatifSayfasiOlanlar(): Arac[] {
-  return araclar.filter((t) => alternatifler(t.slug).length >= EN_AZ_ALTERNATIF);
+  return araclar.filter((t) => akranlar(t.slug).length >= EN_AZ_ALTERNATIF);
 }
 
 /**
  * Iki arac arasindaki farki ELDEKI VERIDEN tek cumleye cevirir.
- * Uydurma bir ustunluk iddiasi yok; veri karar veremiyorsa bunu soyler.
+ * Uydurma bir ustunluk iddiasi yok; fark kucukse o olcut hic yazilmaz.
  */
 export function farkCumlesi(asil: Arac, alt: Arac): string {
   const parcalar: string[] = [];

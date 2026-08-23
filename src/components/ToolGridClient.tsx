@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIAssistant from "@/components/AIAssistant";
 import AIWizard from "@/components/AIWizard";
+import { oneCikanCiftler } from "@/lib/compare";
 
 const IconMap: Record<string, any> = {
   Zap, Cloud, BarChart3, Database, Activity, CheckCircle, Layout, Mail, Scale, Users, Palette, ShoppingBag, Video
@@ -168,11 +169,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
           {/* Trending VS Bar */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap', opacity: 0.8 }}>
             <span style={{ fontSize: '0.8rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>Trending VS:</span>
-            {[
-              { label: 'ChatGPT vs Claude', slug: 'chatgpt-vs-claude' },
-              { label: 'Slack vs Discord', slug: 'slack-vs-discord' },
-              { label: 'Notion vs Trello', slug: 'notion-vs-trello' }
-            ].map((vs) => (
+            {oneCikanCiftler().map((vs) => (
               <Link 
                 key={vs.slug}
                 href={`/compare/${vs.slug}`}

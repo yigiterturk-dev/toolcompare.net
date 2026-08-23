@@ -19,14 +19,14 @@ export default function ContactPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           <div style={{ background: '#0a0a0a', border: '1px solid #1a1a1a', padding: '3rem', borderRadius: '24px' }}>
             <Mail size={32} style={{ color: 'white', marginBottom: '1.5rem' }} />
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Email Us</h3>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Email Us</h2>
             <p style={{ color: '#666', marginBottom: '1.5rem' }}>Our team is ready to assist you with any inquiries.</p>
             <a href="mailto:hello@toolcompare.net" style={{ color: 'white', fontWeight: 700, textDecoration: 'none', fontSize: '1.1rem' }}>hello@toolcompare.net</a>
           </div>
 
           <div style={{ background: '#0a0a0a', border: '1px solid #1a1a1a', padding: '3rem', borderRadius: '24px' }}>
             <MessageSquare size={32} style={{ color: 'white', marginBottom: '1.5rem' }} />
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Live Chat</h3>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Live Chat</h2>
             <p style={{ color: '#666', marginBottom: '1.5rem' }}>Available for our premium partners and tool vendors.</p>
             <span style={{ color: 'white', fontWeight: 700, fontSize: '1.1rem' }}>Available 9 AM - 6 PM EST</span>
           </div>
