@@ -2,6 +2,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
 
+import type { Metadata } from "next";
+
+// Kendi metadata'si yoktu: kok layout'unkini miras alip
+// anasayfayla AYNI baslik/aciklamayi kullaniyordu.
+export const metadata: Metadata = {
+  title: "Contact ToolCompare | ToolCompare",
+  description: "Questions about a review, a correction, or a listing? Here is how to reach the ToolCompare team.",
+  alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact ToolCompare | ToolCompare", description: "Questions about a review, a correction, or a listing? Here is how to reach the ToolCompare team.", url: "/contact", siteName: "ToolCompare", type: "website" },
+};
+
+
 export default function ContactPage() {
   return (
     <main style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>

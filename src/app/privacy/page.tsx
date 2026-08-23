@@ -2,6 +2,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Lock, Eye, Database, Cookie } from "lucide-react";
 
+import type { Metadata } from "next";
+
+// Kendi metadata'si yoktu: kok layout'unkini miras alip
+// anasayfayla AYNI baslik/aciklamayi kullaniyordu.
+export const metadata: Metadata = {
+  title: "Privacy Policy | ToolCompare",
+  description: "What ToolCompare collects, what it does not collect, and how visitor data is handled.",
+  alternates: { canonical: "/privacy" },
+  openGraph: { title: "Privacy Policy | ToolCompare", description: "What ToolCompare collects, what it does not collect, and how visitor data is handled.", url: "/privacy", siteName: "ToolCompare", type: "website" },
+};
+
+
 export default function PrivacyPage() {
   return (
     <>

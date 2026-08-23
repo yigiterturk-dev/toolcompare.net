@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri } from "@/lib/compare";
+import { listeSemasi } from "@/lib/yapilandirilmis";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
@@ -87,8 +88,15 @@ export default async function ComparisonPage({ params }: any) {
     </div>
   );
 
+  const sema = listeSemasi(
+    `${tool1.name} vs ${tool2.name}`,
+    `/compare/${kanonikSlug(tool1.slug, tool2.slug)}`,
+    [tool1, tool2]
+  );
+
   return (
     <div style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
       <Header />
       
       <main style={{ paddingTop: '12rem', maxWidth: '1200px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%', paddingBottom: '10rem' }}>

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import toolsData from "@/data/tools.json";
 import Link from "next/link";
 import { kategoriler } from "@/lib/categories";
+import { kirintiSemasi } from "@/lib/yapilandirilmis";
 import { 
   Scale, 
   Users, 
@@ -41,8 +42,11 @@ export default function CategoriesPage() {
   // Kategori adlari veride tutarsiz yazilmis; normallestirme src/lib/categories.ts'te.
   const kategoriListesi = kategoriler();
 
+  const sema = kirintiSemasi([{ ad: "Categories", yol: "/categories" }]);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
       <Header />
       <div className="ambient-bg">
         <div className="orb orb-1"></div>

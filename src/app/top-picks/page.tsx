@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import toolsData from "@/data/tools.json";
 import Link from "next/link";
 import { Award, Star, ArrowRight } from "lucide-react";
+import { listeSemasi } from "@/lib/yapilandirilmis";
 
 export const metadata = {
   title: "Top Software Picks 2026 | ToolCompare",
@@ -14,8 +15,11 @@ export default function TopPicksPage() {
     .sort((a: any, b: any) => (b.ease + b.featuresScore) - (a.ease + a.featuresScore))
     .slice(0, 5);
 
+  const sema = listeSemasi("Top Software Picks 2026", "/top-picks", topPicks);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
       <Header />
       <div className="ambient-bg">
         <div className="orb orb-2"></div>
@@ -23,10 +27,16 @@ export default function TopPicksPage() {
       
       <main style={{ paddingTop: '10rem', maxWidth: '1000px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ background: 'rgba(236, 72, 153, 0.1)', color: 'var(--brand-tertiary)', padding: '0.5rem 1.2rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>Editor's Choice</span>
+          <span style={{ background: 'rgba(236, 72, 153, 0.1)', color: 'var(--brand-tertiary)', padding: '0.5rem 1.2rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>Ranked by score</span>
           <h1 style={{ fontSize: '4rem', marginTop: '1rem', marginBottom: '1.5rem' }}>Top Picks <span style={{ color: 'var(--brand-tertiary)' }}>2026</span></h1>
+          {/* ONCEKI METIN: "We've analyzed over 500+ data points" -- boyle bir
+              olcum YOK. Sayfa araclari kolaylik + ozellik puanina gore
+              siraliyor, o kadar. Uydurma rakam kaldirildi ve yontem
+              oldugu gibi yazildi. */}
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto' }}>
-            We've analyzed over 500+ data points to find the absolute best software solutions for your business this year.
+            These are the {topPicks.length} highest-scoring tools across our whole directory of {toolsData.length},
+            ranked by ease of use plus feature depth. No one paid to be here, and this is a score — not a
+            claim that these are right for your team.
           </p>
         </div>
 
@@ -41,6 +51,11 @@ export default function TopPicksPage() {
                 </div>
                 <div>
                   <h2 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>{tool.name}</h2>
+                  {tool.shortDescription && (
+                    <p style={{ color: 'var(--text-secondary)', margin: '0 0 0.6rem', lineHeight: 1.6, maxWidth: '55ch' }}>
+                      {tool.shortDescription}
+                    </p>
+                  )}
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--brand-primary)', fontWeight: 600 }}>
                     <span style={{ fontSize: '0.9rem' }}>{tool.category}</span>
                     <div style={{ display: 'flex', gap: '2px' }}><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /></div>

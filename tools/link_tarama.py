@@ -27,6 +27,7 @@ kuyruk = deque(["/"])
 durum = {}
 gelen_link = defaultdict(set)   # hedef -> kaynak sayfalar
 kirik = []
+noindexli = set()
 
 while kuyruk:
     yol = kuyruk.popleft()
@@ -40,6 +41,10 @@ while kuyruk:
         if not any(k[0] == yol for k in kirik):
             kirik.append((yol, kod, sorted(gelen_link[yol])[:2]))
         continue
+
+    # noindex sayfalar sitemap'te olmayabilir; bu bilincli bir karar.
+    if re.search(r'name="robots"[^>]*content="[^"]*noindex', html):
+        noindexli.add(yol)
 
     for ham in re.findall(r'href="([^"]+)"', html):
         if not ham.startswith("/") or ham.startswith("//"):
@@ -64,8 +69,9 @@ print(f"\n2) OKSUZ SAYFA (sitemap'te ama link almiyor): {len(oksuz)}")
 for a in oksuz[:15]: print("   ", a)
 
 gizli = sorted(a for a, k in durum.items()
-               if k == 200 and a not in sitemapte and not VARLIK.search(a))
-print(f"\n3) LINKLENEN AMA SITEMAP'TE OLMAYAN: {len(gizli)}")
+               if k == 200 and a not in sitemapte and not VARLIK.search(a)
+               and a not in noindexli)
+print(f"\n3) LINKLENEN AMA SITEMAP'TE OLMAYAN: {len(gizli)}   (noindex olan {len(noindexli)} sayfa haric)")
 for a in gizli[:15]: print("   ", a)
 
 sys.exit(0)

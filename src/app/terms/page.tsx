@@ -2,6 +2,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Shield, Scale, FileText, ExternalLink } from "lucide-react";
 
+import type { Metadata } from "next";
+
+// Kendi metadata'si yoktu: kok layout'unkini miras alip
+// anasayfayla AYNI baslik/aciklamayi kullaniyordu.
+export const metadata: Metadata = {
+  title: "Terms of Service | ToolCompare",
+  description: "The terms that apply to using ToolCompare, including how our rankings work and how we make money.",
+  alternates: { canonical: "/terms" },
+  openGraph: { title: "Terms of Service | ToolCompare", description: "The terms that apply to using ToolCompare, including how our rankings work and how we make money.", url: "/terms", siteName: "ToolCompare", type: "website" },
+};
+
+
 export default function TermsPage() {
   return (
     <>

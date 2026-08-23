@@ -2,6 +2,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Send, Rocket, Shield, Zap, Globe } from "lucide-react";
 
+import type { Metadata } from "next";
+
+// Kendi metadata'si yoktu: kok layout'unkini miras alip
+// anasayfayla AYNI baslik/aciklamayi kullaniyordu.
+export const metadata: Metadata = {
+  title: "Submit a Tool | ToolCompare",
+  description: "Think a tool belongs in the ToolCompare directory? Send it in and we will review it.",
+  alternates: { canonical: "/submit" },
+  openGraph: { title: "Submit a Tool | ToolCompare", description: "Think a tool belongs in the ToolCompare directory? Send it in and we will review it.", url: "/submit", siteName: "ToolCompare", type: "website" },
+};
+
+
 export default function SubmitToolPage() {
   return (
     <>

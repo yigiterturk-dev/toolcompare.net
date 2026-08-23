@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import toolsData from '@/data/tools.json'
 import { karsilastirmaCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
-import { kategoriler } from '@/lib/categories'
+import { sitemapKategorileri } from '@/lib/categories'
 import fs from 'fs';
 import path from 'path';
 
@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Kategori sayfalari ("Best X Tools in 2026"). Bu sayfa turu yeni;
   // once yalnizca /?category=X sorgu adresi vardi ve o indekslenmiyordu.
-  const categoryRoutes = kategoriler().map((k) => ({
+  const categoryRoutes = sitemapKategorileri().map((k) => ({
     url: `${baseUrl}/categories/${k.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,

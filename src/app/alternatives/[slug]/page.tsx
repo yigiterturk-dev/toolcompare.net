@@ -21,6 +21,7 @@ import type { Metadata } from "next";
 import toolsData from "@/data/tools.json";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { gitLinki } from "@/lib/outbound";
+import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 
 function aracBul(slug: string): any {
   return (toolsData as any[]).find((t) => t.slug === slug);
@@ -62,8 +63,17 @@ export default async function AlternativesPage({ params }: any) {
 
   const enUcuz = [...alts].sort((a, b) => (a.basePrice ?? 0) - (b.basePrice ?? 0))[0];
 
+  const semalar = [
+    listeSemasi(`Best ${tool.name} Alternatives in 2026`, `/alternatives/${tool.slug}`, alts),
+    kirintiSemasi([
+      { ad: tool.name, yol: `/tools/${tool.slug}` },
+      { ad: `${tool.name} alternatives`, yol: `/alternatives/${tool.slug}` },
+    ]),
+  ];
+
   return (
     <div style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(semalar) }} />
       <Header />
       <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem 6rem' }}>
         <Link href={`/tools/${tool.slug}`} style={{ color: '#666', textDecoration: 'none', fontSize: '0.9rem' }}>

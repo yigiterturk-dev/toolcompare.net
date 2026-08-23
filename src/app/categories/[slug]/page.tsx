@@ -15,8 +15,9 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { kategoriBul, kategoriler } from "@/lib/categories";
+import { kategoriBul, kategoriler, EN_AZ_ARAC } from "@/lib/categories";
 import { kanonikSlug } from "@/lib/compare";
+import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 
 export function generateStaticParams() {
   return kategoriler().map((k) => ({ slug: k.slug }));
@@ -31,9 +32,16 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   const description = `We compared ${kategori.araclar.length} ${kategori.ad.toLowerCase()} tools on ease of use, feature depth and starting price. See the full ranking, pricing and who each one is for.`;
   const url = `/categories/${kategori.slug}`;
 
+  // Uc aractan azi olan kategori sayfasi sitemap'e girmiyor (ince).
+  // Ama /categories'ten link almaya devam ediyor -- yani ziyaretci
+  // erisebiliyor. Bu ikisi celismesin diye ACIKCA noindex: "ulasilabilir
+  // ama indeksleme" demek, sessizce sitemap disinda birakmaktan durust.
+  const indekslensin = kategori.araclar.length >= EN_AZ_ARAC;
+
   return {
     title,
     description,
+    robots: indekslensin ? undefined : { index: false, follow: true },
     alternates: { canonical: url },
     openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
     twitter: { card: "summary_large_image", title, description },
@@ -52,8 +60,17 @@ export default async function CategoryPage({ params }: any) {
   // Kategori icindeki en guclu iki arac: dogal "X vs Y" merakini karsilar.
   const [birinci, ikinci] = kategori.araclar;
 
+  const semalar = [
+    listeSemasi(`Best ${kategori.ad} Tools in 2026`, `/categories/${kategori.slug}`, kategori.araclar),
+    kirintiSemasi([
+      { ad: "Categories", yol: "/categories" },
+      { ad: kategori.ad, yol: `/categories/${kategori.slug}` },
+    ]),
+  ];
+
   return (
     <div style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(semalar) }} />
       <Header />
       <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem 6rem' }}>
         <Link href="/categories" style={{ color: '#666', textDecoration: 'none', fontSize: '0.9rem' }}>

@@ -76,3 +76,18 @@ export function kategoriler(): Kategori[] {
 export function kategoriBul(slug: string): Kategori | undefined {
   return kategoriler().find((k) => k.slug === slug);
 }
+
+/**
+ * Sitemap'e girecek kategoriler.
+ *
+ * ALT SINIR: "Best X Tools in 2026" basligi altinda bir-iki secenek
+ * gostermek ziyaretciye de arama motoruna da degersiz gelir. Denetimde
+ * olculdu: tek araclik kategoriler 178 kelimede kaliyordu.
+ * Sayfa yine ERISILEBILIR kalir (siteden link alir), sadece Google'a
+ * "bunu indeksle" diye ilan edilmez.
+ */
+export const EN_AZ_ARAC = 3;
+
+export function sitemapKategorileri(): Kategori[] {
+  return kategoriler().filter((k) => k.araclar.length >= EN_AZ_ARAC);
+}
