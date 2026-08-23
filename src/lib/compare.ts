@@ -18,6 +18,7 @@
  */
 
 import toolsData from "@/data/tools.json";
+import { fiyatDurumu } from "@/lib/fiyat";
 
 export type Arac = {
   slug: string;
@@ -132,11 +133,21 @@ export function alternatifSayfasiOlanlar(): Arac[] {
 export function farkCumlesi(asil: Arac, alt: Arac): string {
   const parcalar: string[] = [];
 
-  const fa = asil.basePrice ?? 0;
-  const fb = alt.basePrice ?? 0;
-  if (fb < fa) parcalar.push(`cheaper to start ($${fb} vs $${fa}/mo)`);
-  else if (fb > fa) parcalar.push(`pricier to start ($${fb} vs $${fa}/mo)`);
-  else parcalar.push(`the same starting price ($${fb}/mo)`);
+  // Fiyat yalnizca IKI TARAF DA dogrulanmissa karsilastirilir. Onceden
+  // dogrulanmamis fiyat 0 sayiliyor ve "cheaper to start ($0 vs $39/mo)"
+  // gibi yanlis cumleler uretiyordu (Stripe, AWS gibi kullanima gore
+  // fiyatlanan araclar icin).
+  const da = fiyatDurumu(asil);
+  const db = fiyatDurumu(alt);
+  if (da.karsilastirilabilir && db.karsilastirilabilir) {
+    const fa = da.aylik as number;
+    const fb = db.aylik as number;
+    if (fb < fa) parcalar.push(`cheaper to start (${db.kisa} vs ${da.kisa})`);
+    else if (fb > fa) parcalar.push(`pricier to start (${db.kisa} vs ${da.kisa})`);
+    else parcalar.push(`the same starting price (${db.kisa})`);
+  } else {
+    parcalar.push(`priced differently (${db.kisa} vs ${da.kisa})`);
+  }
 
   const ka = asil.ease ?? 0;
   const kb = alt.ease ?? 0;

@@ -4,6 +4,7 @@ import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri } from "@/lib/compare";
 import { listeSemasi } from "@/lib/yapilandirilmis";
+import { fiyatDurumu } from "@/lib/fiyat";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
@@ -66,8 +67,14 @@ export default async function ComparisonPage({ params }: any) {
 
   // Kisa cevap icin: hangi arac hangi olcutte onde? Sadece elimizdeki
   // sayilardan turetiliyor.
-  const ucuz = tool1.basePrice <= tool2.basePrice ? tool1 : tool2;
-  const pahali = ucuz === tool1 ? tool2 : tool1;
+  const f1 = fiyatDurumu(tool1);
+  const f2 = fiyatDurumu(tool2);
+  // Fiyat kiyasi ancak IKI TARAF DA dogrulanmissa yapilir.
+  const fiyatKiyaslanabilir = f1.karsilastirilabilir && f2.karsilastirilabilir;
+  const ucuz = fiyatKiyaslanabilir ? ((f1.aylik as number) <= (f2.aylik as number) ? tool1 : tool2) : null;
+  const pahali = ucuz ? (ucuz === tool1 ? tool2 : tool1) : null;
+  const ucuzF = ucuz ? fiyatDurumu(ucuz) : null;
+  const pahaliF = pahali ? fiyatDurumu(pahali) : null;
   const kolay = tool1.ease >= tool2.ease ? tool1 : tool2;
   const zor = kolay === tool1 ? tool2 : tool1;
   const zengin = tool1.featuresScore >= tool2.featuresScore ? tool1 : tool2;
@@ -121,9 +128,11 @@ export default async function ComparisonPage({ params }: any) {
           <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.9, paddingLeft: '1.2rem', margin: 0 }}>
             <li>
               <strong style={{ color: 'white' }}>Price:</strong>{' '}
-              {tool1.basePrice === tool2.basePrice
-                ? `both start at $${tool1.basePrice}/mo.`
-                : `${ucuz.name} is cheaper — $${ucuz.basePrice}/mo vs $${pahali.basePrice}/mo.`}
+              {!fiyatKiyaslanabilir
+                ? `not directly comparable — ${tool1.name} is ${f1.metin.toLowerCase()}, ${tool2.name} is ${f2.metin.toLowerCase()}.`
+                : (f1.aylik === f2.aylik
+                    ? `both start at ${f1.kisa}.`
+                    : `${ucuz!.name} is cheaper — ${ucuzF!.kisa} vs ${pahaliF!.kisa}.`)}
             </li>
             <li>
               <strong style={{ color: 'white' }}>Ease of use:</strong>{' '}
@@ -167,7 +176,7 @@ export default async function ComparisonPage({ params }: any) {
           <ComparisonRow label="Category" val1={tool1.category} val2={tool2.category} />
           <ComparisonRow label="Ease of Use" val1={tool1.ease} val2={tool2.ease} type="score" />
           <ComparisonRow label="Features" val1={tool1.featuresScore} val2={tool2.featuresScore} type="score" />
-          <ComparisonRow label="Base Price" val1={`$${tool1.basePrice}/mo`} val2={`$${tool2.basePrice}/mo`} />
+          <ComparisonRow label="Base Price" val1={f1.kisa} val2={f2.kisa} />
           
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '3rem 0 0' }}>
             <div></div>

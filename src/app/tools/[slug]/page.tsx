@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { fiyatDurumu } from "@/lib/fiyat";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
@@ -69,7 +70,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     url: sayfaUrl,
     sameAs: tool.websiteUrl || undefined,
   };
-  if (typeof tool.basePrice === "number") {
+  // Dogrulanmamis fiyat yapilandirilmis veriye KONMAZ: Google'a yanlis
+  // fiyat beyan etmek zengin sonuclarda yaptirim sebebi.
+  if (fiyatDurumu(tool).karsilastirilabilir) {
     yapilandirilmis.offers = {
       "@type": "Offer",
       price: tool.basePrice,
@@ -231,9 +234,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </div>
 
                 <div style={{ background: 'linear-gradient(135deg, var(--brand-primary), var(--brand-secondary))', borderRadius: '24px', padding: '2rem', color: 'white' }}>
-                   <p style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '0.5rem' }}>Pricing starts at</p>
+                   <p style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '0.5rem' }}>{fiyatDurumu(tool).karsilastirilabilir ? 'Pricing starts at' : 'Pricing'}</p>
                    <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', marginBottom: '1.5rem' }}>
-                     ${tool.basePrice}<span style={{ fontSize: '1rem', fontWeight: 400, opacity: 0.8 }}>{tool.isFlat ? '/mo' : '/user/mo'}</span>
+                     {fiyatDurumu(tool).karsilastirilabilir
+                       ? <>${tool.basePrice}<span style={{ fontSize: '1rem', fontWeight: 400, opacity: 0.8 }}>{tool.isFlat ? '/mo' : '/user/mo'}</span></>
+                       : <span style={{ fontSize: '1.4rem' }}>{fiyatDurumu(tool).metin}</span>}
                    </div>
                    <a 
                     href={gitLinki(tool.slug)} 

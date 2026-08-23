@@ -7,6 +7,7 @@ import {
   Loader2, Check, AlertCircle, ExternalLink, Globe, Award, TrendingUp, Search
 } from "lucide-react";
 import Link from "next/link";
+import { fiyatDurumu } from "@/lib/fiyat";
 
 const ICON_OPTIONS = ["Zap", "Cloud", "BarChart3", "Database", "Activity", "CheckCircle", "Layout", "Mail", "Shield"];
 
@@ -279,6 +280,39 @@ export default function AdminDashboard() {
             {loading ? <Loader2 className="animate-spin" /> : <><Plus size={20}/> Generate Article</>}
           </button>
         </div>
+      </section>
+
+      {/* Fiyati dogrulanmamis araclar */}
+      <section style={{ marginBottom: '2.5rem', background: '#0f0f0f', border: '1px solid #222', borderRadius: '24px', padding: '2rem' }}>
+        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.8rem' }}>Pricing not verified</h2>
+        <p style={{ color: '#888', fontSize: '0.9rem', marginTop: 0, lineHeight: 1.6 }}>
+          A <code style={{ color: 'var(--brand-primary)' }}>basePrice</code> of 0 used to be printed as
+          &quot;$0/mo&quot;, which was wrong for usage-based tools like Stripe and AWS. These tools are now
+          shown as unverified and are excluded from every price comparison and &quot;cheapest&quot; claim.
+          To fix one, add <code style={{ color: 'var(--brand-primary)' }}>fiyatModeli</code> to it in
+          tools.json: <code>&quot;bedava&quot;</code> (truly free), <code>&quot;ucretsiz-katman&quot;</code> (free tier,
+          paid plans exist), <code>&quot;kullanima-gore&quot;</code> (usage-based), or <code>&quot;aylik&quot;</code> with a real
+          monthly basePrice.
+        </p>
+        {(() => {
+          const eksik = tools.filter((t: any) => !fiyatDurumu(t).karsilastirilabilir);
+          if (!tools.length) return <p style={{ color: '#666', fontSize: '0.9rem' }}>Loading…</p>;
+          if (!eksik.length) return <p style={{ color: '#22c55e', fontWeight: 700 }}>All {tools.length} tools have verified pricing.</p>;
+          return (
+            <>
+              <p style={{ color: '#ef4444', fontWeight: 800, fontSize: '1.1rem', margin: '1.2rem 0 0.8rem' }}>
+                {eksik.length} of {tools.length} tools need a pricing model
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {eksik.map((t: any) => (
+                  <span key={t.slug} style={{ padding: '0.4rem 0.8rem', borderRadius: '10px', background: '#1a1a1a', border: '1px solid #333', fontSize: '0.85rem' }}>
+                    {t.name}
+                  </span>
+                ))}
+              </div>
+            </>
+          );
+        })()}
       </section>
 
       {/* Dis link tiklari */}

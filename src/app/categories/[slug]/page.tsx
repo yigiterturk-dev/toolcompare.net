@@ -18,6 +18,7 @@ import type { Metadata } from "next";
 import { kategoriBul, kategoriler, EN_AZ_ARAC } from "@/lib/categories";
 import { kanonikSlug } from "@/lib/compare";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
+import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
 export function generateStaticParams() {
   return kategoriler().map((k) => ({ slug: k.slug }));
@@ -53,9 +54,10 @@ export default async function CategoryPage({ params }: any) {
   const kategori = kategoriBul(slug);
   if (!kategori) notFound();
 
-  const enUcuz = [...kategori.araclar].sort(
-    (a, b) => (a.basePrice ?? Infinity) - (b.basePrice ?? Infinity)
-  )[0];
+  // "En ucuz" iddiasina yalnizca DOGRULANMIS fiyatlar girer; onceden
+  // dogrulanmamis 0'lar en basa gecip "cheapest is AWS at $0/mo" gibi
+  // yanlis cumleler uretiyordu.
+  const enUcuz = enUcuzArac(kategori.araclar as any);
 
   // Kategori icindeki en guclu iki arac: dogal "X vs Y" merakini karsilar.
   const [birinci, ikinci] = kategori.araclar;
@@ -85,7 +87,7 @@ export default async function CategoryPage({ params }: any) {
           We track {kategori.araclar.length} {kategori.ad.toLowerCase()} {kategori.araclar.length === 1 ? 'tool' : 'tools'}.
           The ranking below is ordered by our combined score — ease of use plus feature depth — and every
           entry shows what it costs to start.{' '}
-          {enUcuz ? <>The cheapest entry point is <strong style={{ color: 'white' }}>{enUcuz.name}</strong> at ${enUcuz.basePrice}/mo.</> : null}
+          {enUcuz ? <>The cheapest verified entry point is <strong style={{ color: 'white' }}>{enUcuz.name}</strong> at {fiyatDurumu(enUcuz as any).kisa}.</> : null}
         </p>
 
         <p style={{ color: '#666', fontSize: '0.9rem', maxWidth: '70ch', marginTop: '1rem' }}>
@@ -112,7 +114,7 @@ export default async function CategoryPage({ params }: any) {
                   </p>
                 )}
                 <p style={{ color: '#666', fontSize: '0.85rem', margin: '0.7rem 0 0' }}>
-                  From ${t.basePrice}{t.isFlat ? '/mo' : '/user/mo'} · Ease {t.ease} · Features {t.featuresScore}
+                  {fiyatDurumu(t as any).metin} · Ease {t.ease} · Features {t.featuresScore}
                 </p>
               </div>
             </li>

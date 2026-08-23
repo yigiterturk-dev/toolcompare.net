@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import AIAssistant from "@/components/AIAssistant";
 import AIWizard from "@/components/AIWizard";
 import { oneCikanCiftler } from "@/lib/compare";
+import { fiyatDurumu } from "@/lib/fiyat";
 
 const IconMap: Record<string, any> = {
   Zap, Cloud, BarChart3, Database, Activity, CheckCircle, Layout, Mail, Scale, Users, Palette, ShoppingBag, Video
@@ -372,7 +373,9 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                     <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border-color)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div>
                         <div style={{ fontSize: '2.2rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', letterSpacing: '-1px' }}>
-                          ${tool.basePrice}<span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>{tool.isFlat ? '/mo' : '/user'}</span>
+                          {fiyatDurumu(tool).karsilastirilabilir
+                            ? <>${tool.basePrice}<span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>{tool.isFlat ? '/mo' : '/user'}</span></>
+                            : <span style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 600 }}>{fiyatDurumu(tool).kisa}</span>}
                         </div>
                       </div>
                       <Link 

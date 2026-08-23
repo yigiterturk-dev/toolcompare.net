@@ -22,6 +22,7 @@ import toolsData from "@/data/tools.json";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { gitLinki } from "@/lib/outbound";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
+import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
 function aracBul(slug: string): any {
   return (toolsData as any[]).find((t) => t.slug === slug);
@@ -61,7 +62,7 @@ export default async function AlternativesPage({ params }: any) {
   // Sayfa yalnizca yeterli alternatif varsa anlamli.
   if (alts.length < EN_AZ_ALTERNATIF) notFound();
 
-  const enUcuz = [...alts].sort((a, b) => (a.basePrice ?? 0) - (b.basePrice ?? 0))[0];
+  const enUcuz = enUcuzArac(alts as any);
 
   const semalar = [
     listeSemasi(`Best ${tool.name} Alternatives in 2026`, `/alternatives/${tool.slug}`, alts),
@@ -88,8 +89,8 @@ export default async function AlternativesPage({ params }: any) {
           These are the {alts.length} closest tools to {tool.name} that we track, ordered by our combined
           score. Each entry says what it does differently — cheaper, easier, or deeper on features — based
           on the numbers we hold, not on who pays us.
-          {enUcuz && enUcuz.basePrice !== undefined && (
-            <> The cheapest way out is <strong style={{ color: 'white' }}>{enUcuz.name}</strong> at ${enUcuz.basePrice}/mo.</>
+          {enUcuz && (
+            <> The cheapest verified option is <strong style={{ color: 'white' }}>{enUcuz.name}</strong> at {fiyatDurumu(enUcuz as any).kisa}.</>
           )}
         </p>
 
