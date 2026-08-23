@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import toolsData from '@/data/tools.json'
-import { karsilastirmaCiftleri } from '@/lib/compare'
+import { karsilastirmaCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
 import { kategoriler } from '@/lib/categories'
 import fs from 'fs';
 import path from 'path';
@@ -64,5 +64,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  return [...routes, ...toolRoutes, ...categoryRoutes, ...blogRoutes, ...comparisonRoutes]
+  // "X alternatives" sayfalari. Ucuncu buyuk arama kalibi; bu niyetle
+  // gelen ziyaretci zaten ayrilmaya karar vermis oluyor.
+  const alternativeRoutes = alternatifSayfasiOlanlar().map((t) => ({
+    url: `${baseUrl}/alternatives/${t.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...routes, ...toolRoutes, ...categoryRoutes, ...alternativeRoutes, ...blogRoutes, ...comparisonRoutes]
 }

@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
-import { kanonikSlug, aracinKarsilastirmalari } from "@/lib/compare";
+import { kanonikSlug, aracinKarsilastirmalari, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
@@ -268,6 +268,13 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           {karsilastirmalar.length > 0 && (
             <section style={{ marginTop: '4rem' }}>
               <h2 style={{ fontSize: '1.4rem', marginBottom: '1.5rem' }}>Compare {tool.name} with alternatives</h2>
+              {karsilastirmalar.length >= EN_AZ_ALTERNATIF && (
+                <p style={{ marginBottom: '1.5rem' }}>
+                  <Link href={`/alternatives/${tool.slug}`} style={{ color: 'var(--brand-primary)', textDecoration: 'none', fontWeight: 700 }}>
+                    See all {tool.name} alternatives ranked →
+                  </Link>
+                </p>
+              )}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
                 {karsilastirmalar.map((t: any) => (
                   <Link

@@ -92,3 +92,48 @@ export function aracinKarsilastirmalari(slug: string, adet = 4): Arac[] {
     .sort((a, b) => kalitePuani(b) - kalitePuani(a))
     .slice(0, adet);
 }
+
+// ── Alternatif sayfalari ──────────────────────────────────────────────
+
+/**
+ * Bir aracin alternatifleri: ayni kategorideki diger araclar, puana gore.
+ *
+ * ALT SINIR VAR: uc alternatiften azi olan arac icin sayfa uretilmez.
+ * "Best X Alternatives" basligi altinda bir-iki secenek gostermek
+ * ziyaretciye de arama motoruna da degersiz gelir; ince sayfa uretmek
+ * yerine hic uretmemek dogrusu.
+ */
+export const EN_AZ_ALTERNATIF = 3;
+
+export function alternatifler(slug: string, adet = 8): Arac[] {
+  return aracinKarsilastirmalari(slug, adet);
+}
+
+/** Alternatif sayfasi uretilecek araclar. */
+export function alternatifSayfasiOlanlar(): Arac[] {
+  return araclar.filter((t) => alternatifler(t.slug).length >= EN_AZ_ALTERNATIF);
+}
+
+/**
+ * Iki arac arasindaki farki ELDEKI VERIDEN tek cumleye cevirir.
+ * Uydurma bir ustunluk iddiasi yok; veri karar veremiyorsa bunu soyler.
+ */
+export function farkCumlesi(asil: Arac, alt: Arac): string {
+  const parcalar: string[] = [];
+
+  const fa = asil.basePrice ?? 0;
+  const fb = alt.basePrice ?? 0;
+  if (fb < fa) parcalar.push(`cheaper to start ($${fb} vs $${fa}/mo)`);
+  else if (fb > fa) parcalar.push(`pricier to start ($${fb} vs $${fa}/mo)`);
+  else parcalar.push(`the same starting price ($${fb}/mo)`);
+
+  const ka = asil.ease ?? 0;
+  const kb = alt.ease ?? 0;
+  if (Math.abs(kb - ka) >= 5) parcalar.push(kb > ka ? "easier to pick up" : "harder to pick up");
+
+  const oa = asil.featuresScore ?? 0;
+  const ob = alt.featuresScore ?? 0;
+  if (Math.abs(ob - oa) >= 5) parcalar.push(ob > oa ? "deeper on features" : "lighter on features");
+
+  return parcalar.join(", ");
+}
