@@ -18,6 +18,9 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
   const [searchTerm, setSearchTerm] = useState("");
+  // Dis link tiklari: /go/<slug> katmaninin urettigi olcum.
+  const [clicks, setClicks] = useState<any>(null);
+  const [clicksLoading, setClicksLoading] = useState(false);
   
   // Form State
   const [editMode, setEditMode] = useState(false);
@@ -45,6 +48,21 @@ export default function AdminDashboard() {
     // For now I'll just skip the fetch and assume I'll add a proper fetch later
   };
 
+  const loadClicks = async () => {
+    setClicksLoading(true);
+    try {
+      const res = await fetch("/api/admin/clicks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      setClicks(res.ok ? await res.json() : null);
+    } catch {
+      setClicks(null);
+    }
+    setClicksLoading(false);
+  };
+
   // Parola artik istemci paketinde tutulmuyor; karari sunucu veriyor.
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,6 +75,7 @@ export default function AdminDashboard() {
       const data = await res.json().catch(() => ({}));
       if (res.ok && data?.ok) {
         setIsLoggedIn(true);
+        loadClicks();
       } else {
         alert(data?.error || "Incorrect Password");
       }
@@ -260,6 +279,63 @@ export default function AdminDashboard() {
             {loading ? <Loader2 className="animate-spin" /> : <><Plus size={20}/> Generate Article</>}
           </button>
         </div>
+      </section>
+
+      {/* Dis link tiklari */}
+      <section style={{ marginBottom: '2.5rem', background: '#0f0f0f', border: '1px solid #222', borderRadius: '24px', padding: '2rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.2rem', flexWrap: 'wrap', gap: '1rem' }}>
+          <h2 style={{ fontSize: '1.4rem', display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
+            <BarChart3 color="var(--brand-primary)" /> Outbound Clicks
+          </h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <span style={{ fontSize: '0.8rem', color: '#666' }}>
+              {clicks ? `${clicks.toplam} clicks · source: ${clicks.kaynak}` : ''}
+            </span>
+            <button
+              onClick={loadClicks}
+              disabled={clicksLoading}
+              style={{ padding: '0.6rem 1.2rem', borderRadius: '12px', background: '#1a1a1a', color: 'white', border: '1px solid #333', cursor: 'pointer', fontWeight: 600, fontSize: '0.85rem' }}
+            >
+              {clicksLoading ? 'Loading...' : 'Refresh'}
+            </button>
+          </div>
+        </div>
+
+        {!clicks || clicks.satirlar?.length === 0 ? (
+          <p style={{ color: '#666', fontSize: '0.9rem', margin: 0 }}>
+            No clicks recorded yet. Every outbound link goes through <code style={{ color: 'var(--brand-primary)' }}>/go/&lt;slug&gt;</code>; this table fills as visitors click through.
+          </p>
+        ) : (
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+              <thead>
+                <tr style={{ textAlign: 'left', color: '#666', fontSize: '0.75rem', textTransform: 'uppercase' }}>
+                  <th style={{ padding: '0.6rem 0.5rem' }}>Tool</th>
+                  <th style={{ padding: '0.6rem 0.5rem' }}>Clicks</th>
+                  <th style={{ padding: '0.6rem 0.5rem' }}>Last click</th>
+                  <th style={{ padding: '0.6rem 0.5rem' }}>Earning?</th>
+                </tr>
+              </thead>
+              <tbody>
+                {clicks.satirlar.map((r: any) => (
+                  <tr key={r.slug} style={{ borderTop: '1px solid #1e1e1e' }}>
+                    <td style={{ padding: '0.7rem 0.5rem', fontWeight: 600 }}>{r.name}</td>
+                    <td style={{ padding: '0.7rem 0.5rem', color: 'var(--brand-primary)', fontWeight: 700 }}>{r.adet}</td>
+                    <td style={{ padding: '0.7rem 0.5rem', color: '#888' }}>{r.son ? new Date(r.son).toLocaleString() : '-'}</td>
+                    <td style={{ padding: '0.7rem 0.5rem' }}>
+                      {r.affiliate
+                        ? <span style={{ color: '#22c55e', fontWeight: 700 }}>affiliate</span>
+                        : <span style={{ color: '#ef4444' }}>free</span>}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '1rem', marginBottom: 0 }}>
+              &quot;free&quot; = the click leaves the site with no affiliate tag, so it earns nothing. Add an <code>affiliateUrl</code> to that tool in tools.json once a program is approved.
+            </p>
+          </div>
+        )}
       </section>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '2.5rem' }}>
