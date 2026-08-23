@@ -45,12 +45,23 @@ export default function AdminDashboard() {
     // For now I'll just skip the fetch and assume I'll add a proper fetch later
   };
 
-  const handleLogin = (e: React.FormEvent) => {
+  // Parola artik istemci paketinde tutulmuyor; karari sunucu veriyor.
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "toolpass99") {
-      setIsLoggedIn(true);
-    } else {
-      alert("Incorrect Password");
+    try {
+      const res = await fetch("/api/admin/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data?.ok) {
+        setIsLoggedIn(true);
+      } else {
+        alert(data?.error || "Incorrect Password");
+      }
+    } catch {
+      alert("Could not reach the server");
     }
   };
 

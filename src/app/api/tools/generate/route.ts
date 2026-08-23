@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
+import { yoneticiMi, hizFreni, istekKaynagi } from '@/lib/adminAuth';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -12,7 +13,11 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { category, count = 1, password } = body;
 
-    if (password !== "toolpass99") {
+    if (!hizFreni(`uret:${istekKaynagi(request)}`, 5)) {
+      return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+    }
+
+    if (!yoneticiMi(password)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
