@@ -14,7 +14,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   if (!tool) return { title: "Tool Not Found" };
 
-  const title = `${tool.name} Review 2026: Features, Pricing & Verdict | ToolCompare`;
+  // Baslik 65 karakteri asarsa arama sonucunda kesilir. Marka adi
+  // uzun arac isimlerinde dusuruluyor ki asil ifade gorunur kalsin.
+  const cekirdek = `${tool.name} Review 2026: Features, Pricing & Verdict`;
+  const title = cekirdek.length <= 51 ? `${cekirdek} | ToolCompare` : cekirdek;
   const description =
     tool.shortDescription ||
     `Comprehensive review of ${tool.name}. Analysis of features, pros, cons, and expert verdict.`;
@@ -141,7 +144,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                     const description = typeof f === 'object' ? (f.description || f.text || "") : "";
                     return (
                       <div key={i}>
-                        <h4 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{title}</h4>
+                        <h3 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{title}</h3>
                         {description && <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{description}</p>}
                       </div>
                     );
@@ -213,13 +216,13 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </div>
 
                 <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem' }}>
-                  <h4 style={{ marginBottom: '1.5rem', color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={18} /> Pros</h4>
+                  <h3 style={{ marginBottom: '1.5rem', color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={18} /> Pros</h3>
                   <ul style={{ listStyle: 'none', padding: 0, marginBottom: '2rem' }}>
                     {(tool.pros || []).map((pro: string, i: number) => (
                       <li key={i} style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>• {pro}</li>
                     ))}
                   </ul>
-                  <h4 style={{ marginBottom: '1.5rem', color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><XCircle size={18} /> Cons</h4>
+                  <h3 style={{ marginBottom: '1.5rem', color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><XCircle size={18} /> Cons</h3>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
                     {(tool.cons || []).map((con: string, i: number) => (
                       <li key={i} style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>• {con}</li>

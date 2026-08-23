@@ -40,7 +40,7 @@ export default function TopPicksPage() {
                   {tool.name.charAt(0)}
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>{tool.name}</h3>
+                  <h2 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>{tool.name}</h2>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--brand-primary)', fontWeight: 600 }}>
                     <span style={{ fontSize: '0.9rem' }}>{tool.category}</span>
                     <div style={{ display: 'flex', gap: '2px' }}><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /><Star size={14} fill="currentColor" /></div>

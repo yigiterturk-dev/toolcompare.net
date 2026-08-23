@@ -18,7 +18,10 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   
   if (!tool1 || !tool2) return { title: "Comparison" };
 
-  const title = `${tool1.name} vs ${tool2.name} Comparison 2026: Which is Better? | ToolCompare`;
+  // Baslik 65 karakteri asarsa arama sonucunda kesilir; marka adi
+  // uzun ciftlerde dusuruluyor ki asil ifade ("X vs Y") gorunur kalsin.
+  const cekirdek = `${tool1.name} vs ${tool2.name}: Which Is Better in 2026?`;
+  const title = cekirdek.length <= 46 ? `${cekirdek} | ToolCompare` : cekirdek;
   const description = `Compare ${tool1.name} and ${tool2.name} side-by-side: pricing, ease of use, features, pros, cons and who each one is for.`;
 
   // "a-vs-b" ve "b-vs-a" ayni sayfa. Kanonik olan alfabetik sirali olan;

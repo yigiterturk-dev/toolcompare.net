@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Explore</h4>
+          <h2 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Explore</h2>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             <li><Link href="/categories" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>All Categories</Link></li>
             <li><Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Top Picks 2026</Link></li>
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Support</h4>
+          <h2 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Support</h2>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             <li><Link href="/terms" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Terms of Service</Link></li>
             <li><Link href="/privacy" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Privacy Policy</Link></li>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Newsletter</h4>
+          <h2 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Newsletter</h2>
           <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: '1rem' }}>Get the latest SaaS insights weekly.</p>
           <div style={{ display: 'flex', gap: '0.5rem', position: 'relative' }}>
             <input 
