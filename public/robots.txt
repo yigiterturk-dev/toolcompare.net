@@ -2,4 +2,6 @@ User-agent: *
 Allow: /
 # Dis link yonlendirmeleri: hedef sitenin kopyasi degil, sadece gecis.
 Disallow: /go/
+# Yonetici paneli: indekslenmemeli.
+Disallow: /management-hq-2026
 Sitemap: https://toolcompare.net/sitemap.xml

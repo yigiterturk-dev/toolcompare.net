@@ -1,26 +1,53 @@
+/**
+ * Bulten kaydi.
+ *
+ * DENETIMDE BULUNAN (2026-08-24):
+ *  - Hiz freni yoktu: uc herkese acik ve HER istekte diske yaziyor.
+ *    Bir dongu hem dosyayi sinirsiz sisirir hem diski doldurur.
+ *  - Dogrulama yalnizca "icinde @ var mi"ydi: uzunluk siniri yoktu,
+ *    'A@b' ile 'a@b' iki ayri kayit oluyordu.
+ *  - subscribers.json depoya commitlenmisti; abone e-postalari surum
+ *    kontrolune girmemeli (.gitignore'a alindi).
+ */
+
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { hizFreni, istekKaynagi } from '@/lib/adminAuth';
+
+const EPOSTA_SINIRI = 254; // RFC 5321'in pratik ust siniri
+const EPOSTA_BICIMI = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
-  try {
-    const { email } = await request.json();
+  if (!hizFreni(`abone:${istekKaynagi(request)}`, 5)) {
+    return NextResponse.json({ error: 'Too many requests. Please wait a moment.' }, { status: 429 });
+  }
 
-    if (!email || !email.includes('@')) {
+  try {
+    const govde = await request.json();
+    const ham = typeof govde?.email === 'string' ? govde.email.trim() : '';
+
+    if (!ham || ham.length > EPOSTA_SINIRI || !EPOSTA_BICIMI.test(ham)) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
     }
 
+    // Kucuk harfe cevir: 'A@b.com' ile 'a@b.com' ayni kisi.
+    const email = ham.toLowerCase();
+
     const filePath = path.join(process.cwd(), 'src/data/subscribers.json');
-    
-    // Ensure file exists
     if (!fs.existsSync(filePath)) {
       fs.writeFileSync(filePath, JSON.stringify([]));
     }
 
-    const fileData = fs.readFileSync(filePath, 'utf8');
-    const subscribers = JSON.parse(fileData);
+    let subscribers: string[] = [];
+    try {
+      subscribers = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      if (!Array.isArray(subscribers)) subscribers = [];
+    } catch {
+      // Dosya bozuksa sifirdan baslamak, isteği reddetmekten iyi.
+      subscribers = [];
+    }
 
-    // Check if already subscribed
     if (subscribers.includes(email)) {
       return NextResponse.json({ success: true, message: 'Already subscribed!' });
     }
@@ -30,6 +57,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, message: 'Welcome to the inner circle!' });
   } catch (error: any) {
+    console.error('subscribe route error:', error?.message);
     return NextResponse.json({ error: 'Subscription failed' }, { status: 500 });
   }
 }
