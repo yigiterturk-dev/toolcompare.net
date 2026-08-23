@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import toolsData from '@/data/tools.json'
+import { karsilastirmaCiftleri } from '@/lib/compare'
 import fs from 'fs';
 import path from 'path';
 
@@ -40,12 +41,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Smart Comparison Routes (Common ones)
-  const comparisonRoutes = [
-    { url: `${baseUrl}/compare/openai-vs-claude`, lastModified: new Date(), priority: 0.6 },
-    { url: `${baseUrl}/compare/slack-vs-discord`, lastModified: new Date(), priority: 0.6 },
-    { url: `${baseUrl}/compare/notion-vs-trello`, lastModified: new Date(), priority: 0.6 }
-  ]
+  // Karsilastirma sayfalari.
+  // Onceki hali elle yazilmis uc adresti ve biri (openai-vs-claude) var
+  // olmayan bir slug'a isaret ediyordu -- Google'a 404 ilan ediliyordu.
+  // Artik ciftler veriden uretiliyor; sinirlar src/lib/compare.ts'te.
+  const comparisonRoutes = karsilastirmaCiftleri().map((cift) => ({
+    url: `${baseUrl}/compare/${cift}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
 
   return [...routes, ...toolRoutes, ...blogRoutes, ...comparisonRoutes]
 }

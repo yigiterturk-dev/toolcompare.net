@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
+import { kanonikSlug, aracinKarsilastirmalari } from "@/lib/compare";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
@@ -87,6 +88,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         : {}),
     };
   }
+
+  const karsilastirmalar = aracinKarsilastirmalari(tool.slug, 5);
+
 
   return (
     <>
@@ -254,6 +258,26 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               </div>
             </aside>
           </div>
+
+          {/* Karsilastirma sayfalarina ic link. Bu sayfalar en yuksek
+              ticari niyetli sayfa turumuz ama siteden hic link almiyorlardi;
+              sitemap'te olup oksuz kalmak Google'a "onemsiz" sinyali verir. */}
+          {karsilastirmalar.length > 0 && (
+            <section style={{ marginTop: '4rem' }}>
+              <h2 style={{ fontSize: '1.4rem', marginBottom: '1.5rem' }}>Compare {tool.name} with alternatives</h2>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
+                {karsilastirmalar.map((t: any) => (
+                  <Link
+                    key={t.slug}
+                    href={`/compare/${kanonikSlug(tool.slug, t.slug)}`}
+                    style={{ padding: '0.8rem 1.4rem', borderRadius: '14px', background: 'var(--surface-color)', border: '1px solid var(--border-color)', color: 'inherit', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}
+                  >
+                    {tool.name} vs {t.name}
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
         </article>
       </main>
       <Footer />
