@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import toolsData from "@/data/tools.json";
 import Link from "next/link";
+import { kategoriler } from "@/lib/categories";
 import { 
   Scale, 
   Users, 
@@ -37,7 +38,8 @@ export const metadata = {
 };
 
 export default function CategoriesPage() {
-  const categories = Array.from(new Set(toolsData.map((t: any) => t.category)));
+  // Kategori adlari veride tutarsiz yazilmis; normallestirme src/lib/categories.ts'te.
+  const kategoriListesi = kategoriler();
 
   return (
     <>
@@ -52,15 +54,16 @@ export default function CategoriesPage() {
         </h1>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
-          {categories.map((cat) => {
-            const IconComponent = categoryIcons[cat as string] || Globe;
-            const count = toolsData.filter((t: any) => t.category === cat).length;
+          {kategoriListesi.map((kat) => {
+            const cat = kat.ad;
+            const IconComponent = categoryIcons[cat] || Globe;
+            const count = kat.araclar.length;
             return (
-              <div key={cat} style={{ background: '#0a0a0a', border: '1px solid #1a1a1a', borderRadius: '24px', padding: '2.5rem', transition: 'all 0.3s ease' }} className="category-card">
+              <div key={kat.slug} style={{ background: '#0a0a0a', border: '1px solid #1a1a1a', borderRadius: '24px', padding: '2.5rem', transition: 'all 0.3s ease' }} className="category-card">
                 <IconComponent size={32} color="white" style={{ marginBottom: '1.5rem' }} />
                 <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '0.5rem' }}>{cat}</h2>
                 <p style={{ color: '#666', marginBottom: '2rem', fontSize: '0.95rem' }}>{count} tools reviewed in this category.</p>
-                <Link href={`/?category=${cat}`} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
+                <Link href={`/categories/${kat.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
                   Explore Category <ArrowRight size={18} />
                 </Link>
               </div>
