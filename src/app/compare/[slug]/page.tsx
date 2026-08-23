@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
+import { gitLinki } from "@/lib/outbound";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
@@ -92,9 +93,9 @@ export default async function ComparisonPage({ params }: any) {
             <div></div>
             <div style={{ textAlign: 'center' }}>
               <a 
-                href={tool1.websiteUrl || `https://www.google.com/search?q=${tool1.name}+official+website`} 
+                href={gitLinki(tool1.slug)} 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer nofollow sponsored" 
                 style={{ background: 'var(--brand-primary)', color: 'white', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
               >
                 Visit {tool1.name}
@@ -102,9 +103,9 @@ export default async function ComparisonPage({ params }: any) {
             </div>
             <div style={{ textAlign: 'center' }}>
               <a 
-                href={tool2.websiteUrl || `https://www.google.com/search?q=${tool2.name}+official+website`} 
+                href={gitLinki(tool2.slug)} 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer nofollow sponsored" 
                 style={{ background: 'white', color: 'black', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
               >
                 Visit {tool2.name}

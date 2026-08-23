@@ -27,7 +27,7 @@ export default function TermsPage() {
             <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <Shield color="var(--brand-primary)" /> 2. Affiliate Disclosure (Mandatory)
             </h2>
-            <p>ToolCompare.net is a participant in various affiliate marketing programs. This means that we may earn a commission if you click on a link to a software provider and make a purchase. This comes at no additional cost to you. Our reviews are based on our own analysis and research, but the compensation we receive may influence the placement and order of tools on our site.</p>
+            <p>ToolCompare.net does not currently participate in any affiliate program and earns no commission from the links on this site. We may join such programs in the future; if that happens, this page will be updated before any paid link goes live and every compensated link will be marked as sponsored. Our rankings are based on our own analysis and research, and no company has paid for placement or a better verdict.</p>
           </section>
 
           <section style={{ marginBottom: '3rem' }}>
