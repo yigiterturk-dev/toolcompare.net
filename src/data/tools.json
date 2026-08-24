@@ -12202,7 +12202,7 @@
     "slug": "deepseek",
     "name": "DeepSeek",
     "category": "AI Tools",
-    "shortDescription": "Open-weight models and a chat assistant.",
+    "shortDescription": "Hosted API and commercially usable open-weight language models.",
     "websiteUrl": "https://www.deepseek.com",
     "incelendi": true,
     "basePrice": 0,
@@ -12214,19 +12214,46 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "DeepSeek publishes open-weight models and runs a hosted chat and API, priced well below most Western providers.",
+    "longDescription": "DeepSeek provides hosted chat and API services and publishes model weights for selected releases. API prices are model- and version-specific, while self-hosting requirements depend heavily on model size and inference format.",
     "pros": [
-      "Very low API pricing",
-      "Open weights you can run yourself",
-      "Strong performance on reasoning and code tasks"
+      "Published API rates: Current input, cached-input and output prices are listed per model.",
+      "Downloadable weights: Selected model releases provide weights and local-inference guidance.",
+      "Commercial use: The DeepSeek-V3 repository states that its Base and Chat models support commercial use."
     ],
     "cons": [
-      "Data handling and jurisdiction concerns for some organisations",
-      "Documentation is thinner in English",
-      "Availability has been inconsistent"
+      "Policy review required: Hosted use is governed by separate platform terms and privacy policy.",
+      "Large self-hosting footprint: The V3 release documents 671B total parameters and FP8 weights.",
+      "Version-sensitive costs: Model identifiers, capabilities and API rates can change.",
+      "Implementation limits: Official V3 demo requirements do not support macOS or Windows."
     ],
-    "targetAudience": "Developers who need capable models at low cost, or who want to self-host weights.",
-    "verdict": "Hard to beat on price per token. Check whether your data policy allows the hosted API before you build on it."
+    "keyFeatures": [
+      { "title": "Hosted model API", "description": "Provides documented chat-model endpoints with model-specific token pricing." },
+      { "title": "Open-weight releases", "description": "Publishes downloadable weights and inference instructions for selected models." },
+      { "title": "Prompt caching rates", "description": "Separates cache-hit and cache-miss input pricing in the current API table." },
+      { "title": "Commercial-use model terms", "description": "DeepSeek-V3 permits commercial use subject to its model license." }
+    ],
+    "targetAudience": "Developers comparing a hosted DeepSeek API integration with the operational cost and policy control of self-hosting its released weights.",
+    "bestFor": [
+      "Teams that have validated the current API model, rate and feature table",
+      "Organizations able to review DeepSeek's platform terms and privacy policy",
+      "Advanced infrastructure teams prepared for the hardware demands of large open-weight models"
+    ],
+    "skipIf": [
+      "Your data policy cannot accept the hosted service terms or processing path",
+      "You need lightweight local inference from the full DeepSeek-V3 release",
+      "Your application cannot tolerate model, feature or price changes without revalidation"
+    ],
+    "verdict": "Evaluate DeepSeek using the exact hosted model or self-hosted release you plan to run; price, infrastructure needs, licensing and data policy are separate decisions.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "DeepSeek API Docs — Pricing", "url": "https://api-docs.deepseek.com/quick_start/pricing", "checkedAt": "2026-08-24", "supports": ["current model identifiers", "context and feature table", "cached and uncached input pricing", "output pricing"] },
+        { "label": "DeepSeek — DeepSeek-V3 repository", "url": "https://github.com/deepseek-ai/DeepSeek-V3", "checkedAt": "2026-08-24", "supports": ["downloadable weights", "parameter count", "local inference guidance", "commercial use", "platform requirements"] },
+        { "label": "DeepSeek — Open Platform Terms", "url": "https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html", "checkedAt": "2026-08-24", "supports": ["API service scope", "developer obligations", "privacy-policy applicability"] }
+      ],
+      "limitations": ["Vendor documentation and terms were reviewed; ToolCompare did not independently benchmark model quality, API availability, latency or total self-hosting cost."]
+    }
   },
   {
     "slug": "groq",
@@ -12349,7 +12376,7 @@
     "slug": "replicate",
     "name": "Replicate",
     "category": "AI Tools",
-    "shortDescription": "Run and deploy open models via API.",
+    "shortDescription": "Run public models or deploy custom models behind an API.",
     "websiteUrl": "https://replicate.com",
     "incelendi": true,
     "basePrice": 0,
@@ -12361,19 +12388,47 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Replicate runs open machine-learning models behind an API, billed per second of compute, covering image, video, audio and language models.",
+    "longDescription": "Replicate exposes public, official and user-deployed machine-learning models through APIs. Billing depends on the model and deployment mode: public models generally bill active processing time, while private models and deployments can also bill setup and idle time.",
     "pros": [
-      "Thousands of community models, one API",
-      "Per-second billing with no idle cost",
-      "Can deploy your own models"
+      "Public and official catalog: Use community models or vendor-maintained official models.",
+      "Custom deployments: Package and expose your own model with chosen hardware and scaling.",
+      "Usage-based public models: Public model runs generally bill only active processing time.",
+      "Deployment controls: Configure hardware, minimum instances and scale-to-zero behavior."
     ],
     "cons": [
-      "Cold starts on infrequently used models",
-      "Costs climb with heavy image or video work",
-      "Model quality varies widely"
+      "Cold starts: Public and scale-to-zero workloads may wait for hardware to boot.",
+      "Idle billing boundary: Private models and deployments can incur idle charges.",
+      "Community variation: Public model ownership, maintenance and outputs are not uniform.",
+      "Workload-specific pricing: Some models bill by compute time and others by input or output."
     ],
-    "targetAudience": "Developers who want to use open models without managing GPUs.",
-    "verdict": "The easiest way to try many models quickly. Sustained heavy usage is cheaper on dedicated hardware."
+    "keyFeatures": [
+      { "title": "Public model API", "description": "Runs public models through a shared queue with usage-based billing rules." },
+      { "title": "Official models", "description": "Offers vendor-maintained models with stable APIs and published input/output pricing." },
+      { "title": "Custom deployments", "description": "Deploys packaged models onto selected hardware with configurable scaling." },
+      { "title": "Operational controls", "description": "Provides deployment monitoring, version updates and rollback support." }
+    ],
+    "targetAudience": "Developers who want API access to supported models or managed deployment of their own model without operating the underlying GPU fleet directly.",
+    "bestFor": [
+      "Testing public or official models through a common API workflow",
+      "Variable public-model workloads that benefit from active-time billing",
+      "Teams that need managed custom-model hardware and scaling controls"
+    ],
+    "skipIf": [
+      "Cold-start latency is unacceptable and you cannot fund always-on capacity",
+      "A required model lacks the maintenance, license or output consistency you need",
+      "You have not compared active, setup and idle charges for your deployment mode"
+    ],
+    "verdict": "Choose Replicate after matching the exact model type and scaling mode to your traffic; public-model and dedicated-deployment economics are materially different.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Replicate Docs — Billing", "url": "https://replicate.com/docs/topics/billing", "checkedAt": "2026-08-24", "supports": ["pay-as-you-go billing", "active-time public model billing", "setup and idle charges", "cold boots", "failed and canceled prediction rules"] },
+        { "label": "Replicate Docs — Official models", "url": "https://replicate.com/docs/topics/models/official-models", "checkedAt": "2026-08-24", "supports": ["official model catalog", "vendor maintenance", "stable APIs", "published input and output pricing", "warm availability"] },
+        { "label": "Replicate Docs — Deployments", "url": "https://replicate.com/docs/topics/deployments/", "checkedAt": "2026-08-24", "supports": ["dedicated endpoints", "hardware selection", "scaling controls", "scale to zero", "monitoring", "rollbacks"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently benchmark cold starts, availability, model output quality or workload cost."]
+    }
   },
   {
     "slug": "openrouter",
@@ -12437,7 +12492,7 @@
     "slug": "langchain",
     "name": "LangChain",
     "category": "AI Tools",
-    "shortDescription": "Framework for building LLM applications.",
+    "shortDescription": "Open-source framework for model- and tool-using applications.",
     "websiteUrl": "https://www.langchain.com",
     "incelendi": true,
     "basePrice": 0,
@@ -12449,19 +12504,48 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "LangChain is a framework for building applications on language models: chains, agents, tool calling and retrieval, with a large integration surface.",
+    "longDescription": "LangChain is an open-source framework for building model applications and agents through standard model interfaces, tools and integrations. LangGraph provides lower-level orchestration, while the separate LangSmith service covers tracing, evaluation and deployment workflows.",
     "pros": [
-      "Integrations for most model and data providers",
-      "Common patterns already implemented",
-      "Large community and examples"
+      "Standard model interface: Switch among supported providers through common abstractions.",
+      "Agent loop: create_agent runs model and tool calls until a documented stop condition.",
+      "Integration catalog: Official documentation lists more than 1,000 integrations.",
+      "Layered ecosystem: LangGraph and LangSmith cover lower-level orchestration and operations."
     ],
     "cons": [
-      "Abstractions can obscure what is actually sent to the model",
-      "Breaking changes between versions",
-      "Often more framework than a simple task needs"
+      "Additional abstraction: Debugging requires understanding the framework's message and tool flow.",
+      "Product boundary: LangChain, LangGraph and LangSmith solve different layers and have separate setup concerns.",
+      "Hosted-service costs: LangSmith traces and deployments can generate usage charges.",
+      "Simple-flow overhead: A direct provider SDK can require fewer components for a single model call."
     ],
-    "targetAudience": "Teams building multi-step LLM applications who want existing building blocks.",
-    "verdict": "Useful for complex flows. For a single prompt-and-response, calling the API directly is clearer and easier to debug."
+    "keyFeatures": [
+      { "title": "Model interfaces", "description": "Normalizes calls to supported chat and language-model providers." },
+      { "title": "Tool-using agents", "description": "Builds graph-backed loops that alternate between model output and tool execution." },
+      { "title": "Provider integrations", "description": "Connects models, tools, vector stores, loaders and other components through documented packages." },
+      { "title": "LangSmith integration", "description": "Adds optional tracing, evaluation and deployment services outside the core framework." }
+    ],
+    "targetAudience": "Teams building multi-step model applications that benefit from shared agent patterns and a broad integration catalog.",
+    "bestFor": [
+      "Agents that coordinate multiple model and tool calls",
+      "Applications that may switch among supported model providers",
+      "Teams adopting tracing and evaluation alongside framework abstractions"
+    ],
+    "skipIf": [
+      "The application is only a small number of direct, stable provider calls",
+      "Your team does not want framework abstractions in the model and tool path",
+      "You have not separated open-source framework needs from optional LangSmith usage and cost"
+    ],
+    "verdict": "Use LangChain when its agent and integration abstractions remove meaningful orchestration work; keep direct SDK calls as the baseline for simple flows.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "LangChain Docs — Agents", "url": "https://docs.langchain.com/oss/python/langchain/agents", "checkedAt": "2026-08-24", "supports": ["create_agent", "model and tool loop", "stop conditions", "LangGraph runtime"] },
+        { "label": "LangChain Docs — Models", "url": "https://docs.langchain.com/oss/python/langchain/models", "checkedAt": "2026-08-24", "supports": ["standard model interface", "provider integrations", "standalone and agent use", "tool calling"] },
+        { "label": "LangChain Docs — Provider integrations", "url": "https://docs.langchain.com/oss/python/integrations/providers/overview", "checkedAt": "2026-08-24", "supports": ["integration catalog", "documented provider packages", "more than 1,000 integrations"] },
+        { "label": "LangSmith Docs — Billing", "url": "https://docs.langchain.com/langsmith/billing", "checkedAt": "2026-08-24", "supports": ["billable traces", "deployment runs", "deployment uptime", "separate hosted-service usage"] }
+      ],
+      "limitations": ["Official documentation was reviewed; ToolCompare did not independently measure framework overhead, integration reliability or LangSmith operating cost for a production workload."]
+    }
   },
   {
     "slug": "llamaindex",
