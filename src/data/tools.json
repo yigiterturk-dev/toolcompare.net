@@ -15508,31 +15508,166 @@
     "slug": "oceanbase",
     "name": "OceanBase",
     "category": "Developer Tools",
-    "shortDescription": "Database management system.",
+    "shortDescription": "Apache-licensed distributed relational database with a MySQL-compatible Community Edition.",
     "websiteUrl": "https://open.oceanbase.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "OceanBase Database is an Apache-2.0 distributed relational database designed for transactional and analytical workloads. Community Edition provides MySQL mode, multitenancy, distributed transactions, replication and horizontal scaling; it is not a complete replacement for every MySQL feature. A single-node deployment is intended for evaluation and lacks distributed high availability, while the documented standard production topology starts with at least three suitably resourced hosts. Enterprise products, cloud service and commercial support are separate decisions.",
+    "pros": [
+      "Open core database: The main OceanBase Database repository is available under Apache License 2.0.",
+      "Distributed architecture: Paxos-based replication, multitenancy and scale-out target high-availability transactional systems.",
+      "MySQL migration path: Community Edition supports most MySQL 5.7 syntax and features plus selected MySQL 8.0 JSON functions.",
+      "Deployment options: Official tooling covers quick standalone evaluation, standard clusters, containers and Kubernetes."
+    ],
+    "cons": [
+      "Compatibility is partial: Unsupported syntax, functions, backup behavior and architectural differences require application-level testing.",
+      "Meaningful production footprint: The documented standard cluster requires at least three hosts, each starting at 4 vCPU, 16 GB RAM and 100 GB SSD.",
+      "Operational burden: Topology, tenants, storage, upgrades, observability, backup and recovery demand distributed-database expertise.",
+      "Edition boundaries: Oracle mode, management features and expert support differ between Community, Enterprise and Cloud offerings."
+    ],
+    "keyFeatures": [
+      { "title": "Distributed SQL", "description": "Runs relational transactions across a Paxos-backed distributed architecture." },
+      { "title": "MySQL mode", "description": "Offers broad, but explicitly incomplete, compatibility with MySQL 5.7 behavior." },
+      { "title": "Multitenancy", "description": "Separates database tenants and their resources within an OceanBase cluster." },
+      { "title": "Flexible deployment", "description": "Supports standalone evaluation and multi-host production deployment through official tools." }
+    ],
+    "targetAudience": "Database and platform teams evaluating distributed SQL for workloads that justify a multi-node operational model.",
+    "bestFor": [
+      "High-scale transactional systems that need horizontal growth and replicated availability",
+      "MySQL-origin applications after a representative compatibility and migration assessment",
+      "Teams able to operate a three-or-more-host database cluster or procure managed service"
+    ],
+    "skipIf": [
+      "A simple single-node relational database meets the workload and recovery requirements",
+      "The application assumes complete MySQL or Oracle compatibility without testing",
+      "The team cannot staff cluster operations, monitoring, upgrades and restore drills"
+    ],
+    "verdict": "Evaluate OceanBase only when distributed scale or availability justifies its footprint; run the real schema and queries through compatibility tests, benchmark representative load, and prove node-loss plus backup restoration before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "OceanBase — Official GitHub repository", "url": "https://github.com/oceanbase/oceanbase", "checkedAt": "2026-08-24", "supports": ["distributed relational database", "Paxos architecture", "MySQL compatibility positioning", "Apache License 2.0", "Linux-only all-in-one deployment", "source and contribution access"] },
+        { "label": "OceanBase Docs — Community Edition deployment", "url": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000004028264", "checkedAt": "2026-08-24", "supports": ["quick and standard deployment distinction", "single-node evaluation limitation", "lack of HA in quick deployment", "Linux Docker and OBD options", "three-host production minimum", "per-host starting resources"] },
+        { "label": "OceanBase Docs — MySQL compatibility", "url": "https://en.oceanbase.com/docs/common-oceanbase-database-10000000000829643", "checkedAt": "2026-08-24", "supports": ["Community Edition MySQL mode", "most MySQL 5.7 features and syntax", "selected MySQL 8.0 JSON functions", "unsupported features", "architectural differences"] },
+        { "label": "OceanBase Docs — Enterprise and Community differences", "url": "https://en.oceanbase.com/docs/enterprise-oceanbase-database-en-10000000000864412", "checkedAt": "2026-08-24", "supports": ["Community and Enterprise edition separation", "Community MySQL compatibility", "enterprise Oracle and MySQL positioning", "commercial support boundary", "distributed transactions multitenancy and scaling"] }
+      ],
+      "limitations": ["Official OceanBase repository and documentation were reviewed; ToolCompare did not install or benchmark OceanBase, compile the source, validate license obligations with counsel, test MySQL compatibility, migrate data, compare Enterprise or Cloud quotes, inspect every edition boundary, exercise node failure, configure security, or restore a backup. Hardware requirements are documented starting points rather than capacity guarantees."]
+    }
   },
   {
     "slug": "valkey",
     "name": "Valkey",
     "category": "Developer Tools",
-    "shortDescription": "Open source in-memory key–value database.",
+    "shortDescription": "BSD-licensed in-memory data store for caching, messaging, streams and database workloads.",
     "websiteUrl": "https://valkey.io/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Valkey is a BSD-licensed, vendor-neutral in-memory data structure server descended from Redis OSS 7.2.4. It supports RESP2/RESP3 clients, replication, Sentinel, Cluster, transactions, scripting, Pub/Sub, streams and configurable RDB or AOF persistence. Compatibility is strongest with Redis OSS 7.2 and earlier; Redis Community Edition 7.4+ data files are not compatible. Secure deployment is not automatic and requires network isolation, access control and, where needed, TLS.",
+    "pros": [
+      "Permissive open source: The server is community-developed under the BSD 3-Clause license.",
+      "Familiar ecosystem: RESP clients and Redis OSS 7.2-era configurations, modules and data formats ease many migrations.",
+      "Flexible roles: Data structures, expiry, scripting, transactions, Pub/Sub and streams cover cache and real-time patterns.",
+      "Scale and availability options: Replication, Sentinel and Cluster support failover and sharding topologies."
+    ],
+    "cons": [
+      "Compatibility has a boundary: Redis CE 7.4+ files are incompatible and future Valkey behavior can diverge.",
+      "Unsafe defaults require hardening: Official guidance warns against direct internet exposure and calls for firewalling, binding, ACL/authentication and optional TLS.",
+      "Durability is configurable: RDB, AOF and no-persistence modes have different data-loss, latency and recovery tradeoffs.",
+      "Cluster consistency limits: Asynchronous replication allows windows of acknowledged-write loss, especially during minority partitions."
+    ],
+    "keyFeatures": [
+      { "title": "Rich data structures", "description": "Stores strings, hashes, lists, sets, sorted sets, streams and specialized structures in memory." },
+      { "title": "Persistence choices", "description": "Supports periodic RDB snapshots, append-only logging, both together or no persistence." },
+      { "title": "Replication and failover", "description": "Uses asynchronous replication with Sentinel or Cluster deployment patterns." },
+      { "title": "RESP compatibility", "description": "Supports RESP2 and RESP3 and a documented migration path from Redis OSS through 7.2." }
+    ],
+    "targetAudience": "Platform and application teams needing a low-latency open-source data store and prepared to own memory, durability and security design.",
+    "bestFor": [
+      "Caches, ephemeral state, rate limits, queues, streams and real-time application data",
+      "Redis OSS 7.2-or-earlier migrations validated against the actual client, modules and persistence files",
+      "Teams that can operate protected standalone, Sentinel or Cluster deployments"
+    ],
+    "skipIf": [
+      "The system requires disk-first durability or zero acknowledged-write-loss guarantees",
+      "A Redis CE 7.4+ data file must be opened directly without a supported migration route",
+      "The service would be internet-exposed or deployed without firewall, ACL and recovery controls"
+    ],
+    "verdict": "Valkey is a strong open-source choice for Redis OSS-compatible in-memory workloads, but treat migration and durability as engineering work: test exact commands and files, harden every endpoint, size memory, and rehearse failover plus restoration.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Valkey Docs — Introduction", "url": "https://valkey.io/topics/introduction/", "checkedAt": "2026-08-24", "supports": ["BSD-licensed open source", "in-memory data structures", "database cache broker and streaming uses", "replication scripting transactions and expiry", "persistence options", "Sentinel and Cluster", "POSIX and Windows support boundary"] },
+        { "label": "Valkey Docs — Redis migration", "url": "https://valkey.io/topics/migration/", "checkedAt": "2026-08-24", "supports": ["Redis OSS 7.2.4 origin", "compatibility through Redis OSS 7.2", "RESP2 and RESP3", "client configuration and module compatibility", "RDB and AOF compatibility boundary", "Redis CE 7.4+ file incompatibility"] },
+        { "label": "Valkey Docs — Persistence", "url": "https://valkey.io/topics/persistence/", "checkedAt": "2026-08-24", "supports": ["RDB snapshots", "AOF logging", "combined mode", "disabled persistence", "backup use", "durability tradeoffs"] },
+        { "label": "Valkey Docs — Security", "url": "https://valkey.io/topics/security/", "checkedAt": "2026-08-24", "supports": ["trusted-environment security model", "internet exposure warning", "authentication boundary", "optional TLS", "client replication and cluster-bus TLS"] },
+        { "label": "Valkey Docs — Cluster specification", "url": "https://valkey.io/topics/cluster-spec/", "checkedAt": "2026-08-24", "supports": ["sharding and scale-out", "asynchronous replication", "best-effort write safety", "acknowledged-write loss windows", "partition availability conditions", "multi-key operation restrictions"] }
+      ],
+      "limitations": ["Official Valkey documentation was reviewed; ToolCompare did not compile or deploy the server, benchmark latency, inspect every command or module, migrate a Redis instance, test client compatibility, configure ACL/TLS, measure memory behavior, induce partitions, validate failover, or restore RDB/AOF backups. Compatibility depends on exact source and target versions and extensions."]
+    }
   },
   {
     "slug": "maptiler",
     "name": "MapTiler",
     "category": "Developer Tools",
-    "shortDescription": "Swiss provider of custom online maps.",
+    "shortDescription": "Hosted mapping platform with maps, geospatial APIs, data hosting and open-source JavaScript SDK.",
     "websiteUrl": "https://www.maptiler.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "MapTiler combines a proprietary hosted map service with APIs, map styles, global datasets and upload hosting. Its JavaScript SDK is public and BSD-licensed, but that license does not make MapTiler Cloud, built-in styles or map data open source. Cloud access requires authenticated requests, and plan rules govern commercial use, quotas, overage and attribution. The Free plan is limited to non-commercial use and R&D for commercial products, so public commercial launches need an appropriate paid agreement.",
+    "pros": [
+      "Integrated web-map stack: Hosted tiles, styles, geocoding and other APIs connect through one account and key system.",
+      "Open SDK code: MapTiler SDK JS is BSD-licensed and extends the open-source MapLibre GL JS renderer.",
+      "Usage-based growth path: Free, Flex and Custom plans support prototypes through larger deployments.",
+      "Attribution guidance: Official documentation explains required text, links and Free-plan logo treatment across media."
+    ],
+    "cons": [
+      "Free is not a general commercial plan: Terms restrict it to non-commercial use and commercial-product research and development.",
+      "Service and data remain licensed: Open SDK code does not grant unrestricted rights to hosted tiles, styles or datasets.",
+      "Variable operating cost: Sessions, API requests, data processing, 3D use and storage can create separate charges or limits.",
+      "Client keys need governance: Browser and mobile integrations expose API keys by design, so restrictions and monitoring are essential."
+    ],
+    "keyFeatures": [
+      { "title": "Interactive map SDK", "description": "Renders browser maps through a BSD-licensed SDK built on MapLibre GL JS." },
+      { "title": "Hosted maps and styles", "description": "Serves MapTiler styles, tiles and uploaded geospatial data from Cloud." },
+      { "title": "Location APIs", "description": "Provides authenticated mapping and location services through API requests." },
+      { "title": "Plan-based usage", "description": "Meters map sessions, searches, requests, processing and storage according to plan." }
+    ],
+    "targetAudience": "Web and product teams that need hosted global maps and APIs and can govern usage, keys, attribution and data licensing.",
+    "bestFor": [
+      "Interactive web maps using MapLibre-compatible tooling and managed global map delivery",
+      "Prototypes whose use genuinely fits the Free plan terms and quotas",
+      "Commercial products after forecasting sessions, requests, storage and required support"
+    ],
+    "skipIf": [
+      "A commercial production launch is expected to remain on the Free plan",
+      "The project cannot display required attribution or satisfy underlying data licenses",
+      "Offline or self-hosted operation is mandatory but the applicable product and license have not been validated"
+    ],
+    "verdict": "MapTiler is attractive for teams wanting a polished MapLibre-based hosted stack, but approve it only after classifying the use as commercial or non-commercial, modeling billable traffic, restricting keys, and auditing every style, dataset and attribution obligation.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "MapTiler — Cloud pricing", "url": "https://www.maptiler.com/cloud/pricing/", "checkedAt": "2026-08-24", "supports": ["Free Flex and Custom plans", "current plan positioning", "included usage", "session and request charging", "data-processing and storage charging", "usage limits and overage model"] },
+        { "label": "MapTiler — Cloud terms", "url": "https://www.maptiler.com/terms/cloud/", "checkedAt": "2026-08-24", "supports": ["Free-plan non-commercial limitation", "commercial-product R&D allowance", "limit-based suspension", "subscription feature boundaries", "usage fees", "custom agreements"] },
+        { "label": "MapTiler Docs — SDK JS", "url": "https://docs.maptiler.com/sdk-js/", "checkedAt": "2026-08-24", "supports": ["browser mapping SDK", "MapLibre GL JS foundation", "BSD license", "MapTiler platform integration", "API key requirement", "built-in styles and services"] },
+        { "label": "MapTiler — Official SDK JS repository", "url": "https://github.com/maptiler/maptiler-sdk-js", "checkedAt": "2026-08-24", "supports": ["public source code", "BSD 3-Clause license", "npm and CDN installation", "MapTiler Cloud orientation", "copyright restrictions on MapTiler data and styles"] },
+        { "label": "MapTiler Docs — Attribution", "url": "https://docs.maptiler.com/guides/map-design/attribution/add-attribution/", "checkedAt": "2026-08-24", "supports": ["required attribution", "MapTiler and OpenStreetMap credits", "Free-account logo requirement", "website mobile print video and game treatment", "SDK default display"] },
+        { "label": "MapTiler Docs — Authentication", "url": "https://docs.maptiler.com/cloud/api/authentication/", "checkedAt": "2026-08-24", "supports": ["authentication requirement", "client-side API keys", "mobile and web use", "backend service tokens", "secret-handling boundary"] }
+      ],
+      "limitations": ["Official MapTiler pricing, terms, SDK, authentication and attribution pages were reviewed; ToolCompare did not create an account, inspect a bill, test quotas or suspension, benchmark map delivery, audit coverage or geocoding quality, upload data, validate every dataset license, test mobile SDKs, obtain a commercial quote, or evaluate Engine/Server self-hosting. Pricing, quotas and terms may change after the review date."]
+    }
   },
   {
     "slug": "october",
