@@ -1,69 +1,68 @@
-"use client";
-
 import Link from "next/link";
-import { Plus } from "lucide-react";
+
+/*
+  Header.
+
+  Eskiden 12 satir inline style idi ve mobil davranisi globals.css'teki
+  `!important` media query'lerine bagliydi — yani stil iki yere dagilmisti
+  ve biri digerini eziyordu. Artik tek yerde, Tailwind siniflariyla.
+
+  Ayrica "use client" gerekmiyordu: bilesende state yok, tek sebebi
+  onMouseOver ile yapilan hover efektiydi. O efekt CSS'e tasindi, bilesen
+  sunucu bileseni oldu — tarayiciya inen JS azaldi.
+*/
+
+const NAV = [
+  { href: "/categories", label: "Categories" },
+  { href: "/top-picks", label: "Cheapest tools" },
+  { href: "/methodology", label: "How we rank" },
+];
 
 export default function Header() {
   return (
-    <header className="site-header" style={{
-      position: 'fixed', 
-      top: 0, 
-      width: '100%', 
-      padding: '0 5%', 
-      height: '80px', 
-      display: 'flex', 
-      justifyContent: 'space-between', 
-      alignItems: 'center', 
-      zIndex: 1000, 
-      background: 'rgba(5, 5, 5, 0.8)', 
-      backdropFilter: 'blur(20px)', 
-      borderBottom: '1px solid rgba(255, 255, 255, 0.05)' 
-    }}>
-      {/* LOGO AREA */}
-      <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '0.8rem' }}>
-        <img 
-          src="/logo.png" 
-          alt="ToolCompare Logo" 
-          style={{ height: '32px', width: 'auto', objectFit: 'contain' }} 
-        />
-        <span className="site-header-name" style={{ fontSize: '1.25rem', fontWeight: 900, color: 'white', letterSpacing: '-0.02em' }}>
-          ToolCompare
-        </span>
-      </Link>
-
-      {/* NAVIGATION & ACTIONS */}
-      <nav className="site-header-nav" style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-        <div className="site-header-links" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginRight: '1rem' }}>
-          <Link href="/categories" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Categories</Link>
-          <Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Cheapest Tools</Link>
-        </div>
-
-
-        {/* CTA BUTTON */}
-        <Link 
-          className="site-header-cta"
-          href="/contact" 
-          style={{ 
-            background: 'white', 
-            color: 'black', 
-            padding: '0.6rem 1.2rem', 
-            borderRadius: '12px', 
-            fontWeight: 800, 
-            fontSize: '0.85rem', 
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            boxShadow: '0 4px 15px rgba(255,255,255,0.1)',
-            transition: 'transform 0.2s ease'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+    <header className="sticky top-0 z-50 border-b border-line bg-surface/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center gap-2 no-underline"
+          aria-label="ToolCompare — home"
         >
-          <Plus size={16} />
-          Submit Tool
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="" aria-hidden="true" className="h-7 w-7 object-contain" />
+          <span className="font-serif text-lg font-semibold tracking-tight text-ink">
+            ToolCompare
+          </span>
         </Link>
-      </nav>
+
+        {/*
+          Gezinme mobilde gizleniyordu ve yerine hicbir sey konmuyordu:
+          telefondan gelen biri kategorilere ulasamiyordu. Artik kucuk
+          ekranda da duruyor, yatay kayan bir serit olarak.
+        */}
+        <nav aria-label="Main" className="min-w-0 flex-1">
+          <ul className="flex items-center justify-end gap-1 overflow-x-auto text-sm [scrollbar-width:none] sm:gap-2 [&::-webkit-scrollbar]:hidden">
+            {NAV.map((item) => (
+              <li key={item.href} className="shrink-0">
+                <Link
+                  href={item.href}
+                  data-tap
+                  className="inline-flex items-center rounded-[--radius-control] px-2 py-2 whitespace-nowrap text-ink-soft no-underline transition-colors duration-150 hover:text-ink sm:px-3"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <Link
+          href="/submit"
+          data-tap
+          className="hidden shrink-0 items-center rounded-[--radius-control] bg-brand px-4 py-2 text-sm font-medium text-brand-ink no-underline transition-opacity duration-150 hover:opacity-90 sm:inline-flex"
+        >
+          Submit a tool
+        </Link>
+      </div>
     </header>
   );
 }

@@ -26,7 +26,51 @@
  * Alan yoksa ve basePrice 0 ise: dogrulanmadi.
  */
 
-export type FiyatModeli = "bedava" | "ucretsiz-katman" | "kullanima-gore" | "aylik";
+export type FiyatModeli =
+  | "bedava"
+  | "ucretsiz-katman"
+  | "kullanima-gore"
+  | "aylik"
+  /* Katalog 121'den 512'ye buyurken veriye yazilan modeller. */
+  | "kullanici-basina"
+  | "abonelik"
+  | "abonelik-arti-islem"
+  | "teklif"
+  | "ucretsiz-kredi"
+  | "urun-bazli"
+  | "degisken";
+
+/*
+  DENETIMDE BULUNAN (2026-08-25): veri bu sozlesmeden kaymisti.
+  tools.json'da 13 farkli `fiyatModeli` degeri vardi, bu dosya 4 tanesini
+  taniyordu. Tanimayan her deger `return`a dusuyor ve sayfada
+  "Pricing not verified" yaziyordu -- MODEL VERIDE YAZILI OLDUGU HALDE.
+  Olculdu: 60 aracin modeli yazilmis ama tanimiyordu; 22'si basePrice > 0
+  oldugu icin kurtuluyordu, geriye kalan 38 arac sitede yanlis yere
+  "dogrulanmadi" diyordu.
+
+  Ikisi duz esanlamliydi ve once onlar tekillestiriliyor:
+    "ucretsiz"      -> "bedava"
+    "kullanim-bazli"-> "kullanima-gore"
+*/
+const ESANLAMLI: Record<string, FiyatModeli> = {
+  ucretsiz: "bedava",
+  "kullanim-bazli": "kullanima-gore",
+};
+
+/** Veriden gelen ham degeri sozlesmedeki modele cevirir. */
+function modeliCoz(ham: string | undefined): FiyatModeli | undefined {
+  if (!ham) return undefined;
+  return (ESANLAMLI[ham] ?? ham) as FiyatModeli;
+}
+
+/** Bu dosyanin tanidigi butun modeller. Denetim betigi bunu okuyor. */
+export const TANINAN_MODELLER: readonly string[] = [
+  "bedava", "ucretsiz-katman", "kullanima-gore", "aylik",
+  "kullanici-basina", "abonelik", "abonelik-arti-islem",
+  "teklif", "ucretsiz-kredi", "urun-bazli", "degisken",
+  ...Object.keys(ESANLAMLI),
+];
 
 export type Arac = {
   name: string;
@@ -48,8 +92,46 @@ export type FiyatDurumu = {
 };
 
 export function fiyatDurumu(t: Arac): FiyatDurumu {
-  const model = t.fiyatModeli ?? (typeof t.basePrice === "number" && t.basePrice > 0 ? "aylik" : undefined);
+  const model = modeliCoz(t.fiyatModeli) ?? (typeof t.basePrice === "number" && t.basePrice > 0 ? "aylik" : undefined);
   const birim = t.isFlat ? "/mo" : "/user/mo";
+  const fiyatVar = typeof t.basePrice === "number" && t.basePrice > 0;
+
+  /*
+    Abonelik ve kullanici-basina, rakami olan modeller: ikisi de aylik
+    tutar demek. Rakam yoksa fiyat iddia edilmiyor, model soyleniyor.
+  */
+  if ((model === "abonelik" || model === "kullanici-basina") && fiyatVar) {
+    return {
+      karsilastirilabilir: true,
+      aylik: t.basePrice as number,
+      metin: `From $${t.basePrice}${model === "kullanici-basina" ? "/user/mo" : birim}`,
+      kisa: `$${t.basePrice}${model === "kullanici-basina" ? "/user/mo" : birim}`,
+    };
+  }
+
+  /*
+    Asagidakilerin hicbiri sayisal karsilastirmaya GIRMEZ -- ama "bilinmiyor"
+    da degil. Fark onemli: musteriye "fiyatini bilmiyoruz" demekle "fiyati
+    teklife bagli" demek ayni sey degil.
+  */
+  if (model === "teklif") {
+    return { karsilastirilabilir: false, aylik: null, metin: "Custom pricing — quote required", kisa: "Quote only" };
+  }
+  if (model === "ucretsiz-kredi") {
+    return { karsilastirilabilir: false, aylik: null, metin: "Starts with free credits", kisa: "Free credits" };
+  }
+  if (model === "urun-bazli") {
+    return { karsilastirilabilir: false, aylik: null, metin: "Priced per product", kisa: "Per product" };
+  }
+  if (model === "abonelik-arti-islem") {
+    return { karsilastirilabilir: false, aylik: null, metin: "Subscription plus transaction fees", kisa: "Sub + fees" };
+  }
+  if (model === "degisken") {
+    return { karsilastirilabilir: false, aylik: null, metin: "Variable pricing", kisa: "Variable" };
+  }
+  if (model === "abonelik" || model === "kullanici-basina") {
+    return { karsilastirilabilir: false, aylik: null, metin: "Subscription — amount not verified", kisa: "Sub, amount TBC" };
+  }
 
   if (model === "aylik" && typeof t.basePrice === "number" && t.basePrice > 0) {
     return {
