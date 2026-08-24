@@ -12551,7 +12551,7 @@
     "slug": "llamaindex",
     "name": "LlamaIndex",
     "category": "AI Tools",
-    "shortDescription": "Data framework for LLM apps.",
+    "shortDescription": "Open-source framework for retrieval and agentic data applications.",
     "websiteUrl": "https://www.llamaindex.ai",
     "incelendi": true,
     "basePrice": 0,
@@ -12563,19 +12563,47 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "LlamaIndex connects language models to your own data, handling ingestion, indexing and retrieval.",
+    "longDescription": "LlamaIndex is an MIT-licensed application framework for connecting models to external data through loaders, indexes, retrievers, query engines and agents. The open-source packages are distinct from LlamaParse and other hosted document services.",
     "pros": [
-      "Focused specifically on retrieval over your data",
-      "Many connectors for data sources",
-      "Good documentation for RAG patterns"
+      "Retrieval components: Provides ingestion, indexing, storage and query abstractions.",
+      "Modular integrations: Core packages connect to separately installed model, embedding and vector-store providers.",
+      "Local persistence: Index state can be persisted and loaded without requiring the hosted platform.",
+      "Permissive license: The main Python framework is distributed under MIT terms."
     ],
     "cons": [
-      "Abstractions hide what reaches the model",
-      "API changes between versions",
-      "Overlaps heavily with other frameworks"
+      "Framework boundary: It does not replace the model, embedding service or production database you select.",
+      "Security responsibility: Input validation, authentication, rate limits and prompt-injection controls belong to the host application.",
+      "Package selection: The starter package installs defaults; customized deployments must choose integration packages explicitly.",
+      "Hosted product separation: LlamaParse and LlamaCloud capabilities and terms are separate from the open-source framework."
     ],
-    "targetAudience": "Teams building question answering over private documents.",
-    "verdict": "Sensible when retrieval is the core problem. For a simple lookup, plain code is easier to debug."
+    "keyFeatures": [
+      { "title": "Data connectors", "description": "Loads source documents into framework document and node structures." },
+      { "title": "Indexes and retrievers", "description": "Structures external data and retrieves context for model calls." },
+      { "title": "Provider integrations", "description": "Adds models, embeddings and vector stores as separate packages." },
+      { "title": "Local persistence", "description": "Persists supported index state to disk and reloads it later." }
+    ],
+    "targetAudience": "Developers building retrieval or agent workflows over external data who want modular Python components rather than a complete hosted application.",
+    "bestFor": [
+      "Retrieval-augmented applications that coordinate ingestion, indexing and querying",
+      "Teams that want to choose their own model, embedding and storage providers",
+      "Python applications that benefit from reusable retrieval and agent abstractions"
+    ],
+    "skipIf": [
+      "You need a database or hosted model rather than an application framework",
+      "A direct provider SDK and a small amount of application code already cover the workflow",
+      "Your team cannot implement web-layer security and untrusted-input controls around the library"
+    ],
+    "verdict": "Use LlamaIndex when its data and retrieval abstractions remove real integration work; evaluate the open-source framework separately from paid document services and underlying providers.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "LlamaIndex — Official repository", "url": "https://github.com/run-llama/llama_index", "checkedAt": "2026-08-24", "supports": ["MIT license", "framework scope", "core and integration packages", "data connectors", "retrieval components", "local persistence"] },
+        { "label": "LlamaIndex — Package metadata", "url": "https://github.com/run-llama/llama_index/blob/main/pyproject.toml", "checkedAt": "2026-08-24", "supports": ["Python requirement", "package dependencies", "MIT license", "framework classification"] },
+        { "label": "LlamaIndex — Security policy", "url": "https://github.com/run-llama/llama_index/security", "checkedAt": "2026-08-24", "supports": ["trusted execution assumption", "host application validation", "authentication responsibility", "prompt-injection boundary", "hosted-product separation"] }
+      ],
+      "limitations": ["Official repository documentation was reviewed; ToolCompare did not independently test retrieval quality, integration stability, framework overhead or hosted LlamaParse services."]
+    }
   },
   {
     "slug": "pinecone",
@@ -12758,7 +12786,7 @@
     "slug": "chroma",
     "name": "Chroma",
     "category": "AI Tools",
-    "shortDescription": "Embedding database for AI apps.",
+    "shortDescription": "Apache-licensed search infrastructure with local, server and cloud modes.",
     "websiteUrl": "https://www.trychroma.com",
     "incelendi": true,
     "basePrice": 0,
@@ -12770,25 +12798,54 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Chroma is an embedding database that runs in-process for development and as a server in production.",
+    "longDescription": "Chroma is Apache-licensed search infrastructure available through in-memory, persistent, client-server and hosted Cloud workflows. The in-memory client loses data when the process exits; persistence and production operations require a different mode.",
     "pros": [
-      "Trivial to start with in a script",
-      "Open source and free",
-      "Good for prototypes and small collections"
+      "Local entry point: An in-memory client supports small experiments without a separate service.",
+      "Persistence choices: Use a persistent client or client-server mode for durable local data.",
+      "Open-source core: The official repository uses the Apache 2.0 license.",
+      "Hosted option: Chroma Cloud provides usage-metered vector, hybrid and full-text search."
     ],
     "cons": [
-      "Not designed for very large scale",
-      "Fewer production features than rivals",
-      "Operational tooling is thin"
+      "In-memory data loss: Data disappears when the process using the in-memory client terminates.",
+      "Single-node sizing: Capacity and latency depend on records, dimensions, metadata and available hardware.",
+      "Cloud query accounting: Vector, metadata, full-text and regex predicates affect billed query work differently.",
+      "Mode transition: A prototype must deliberately select durable local, server or Cloud operation before production."
     ],
-    "targetAudience": "Developers prototyping retrieval before choosing a production store.",
-    "verdict": "The easiest place to start. Plan the migration path before your collection grows."
+    "keyFeatures": [
+      { "title": "In-memory client", "description": "Runs a temporary local database for development and experiments." },
+      { "title": "Persistent and server modes", "description": "Stores data locally or exposes Chroma through a separate server." },
+      { "title": "Chroma Cloud", "description": "Provides hosted serverless vector, hybrid and full-text search." },
+      { "title": "Usage-based cloud billing", "description": "Meters logical writes, queried and returned data, storage and selected sync operations." }
+    ],
+    "targetAudience": "Developers who want one search API spanning local experiments, self-hosted operation and a hosted Cloud path.",
+    "bestFor": [
+      "Local retrieval prototypes that can begin with an in-memory client",
+      "Applications that need an Apache-licensed self-hosted search component",
+      "Teams prepared to model Chroma Cloud usage from actual query predicates and data volume"
+    ],
+    "skipIf": [
+      "You are relying on the in-memory client for durable application data",
+      "Your production capacity has not been tested on representative hardware and data",
+      "Your cloud-cost estimate ignores full-text, regex or metadata predicate accounting"
+    ],
+    "verdict": "Choose Chroma after deciding the runtime mode up front; the local developer experience does not by itself prove production durability, capacity or cloud cost.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Chroma Docs — Getting started", "url": "https://docs.trychroma.com/docs/overview/getting-started", "checkedAt": "2026-08-24", "supports": ["in-memory client", "process-lifetime data loss", "persistent client", "client-server mode", "Chroma Cloud"] },
+        { "label": "Chroma — Official repository", "url": "https://github.com/chroma-core/chroma", "checkedAt": "2026-08-24", "supports": ["open-source project", "Apache 2.0 license", "Python and JavaScript clients", "client-server command", "hosted cloud"] },
+        { "label": "Chroma Docs — Cloud pricing", "url": "https://docs.trychroma.com/cloud/pricing", "checkedAt": "2026-08-24", "supports": ["usage-based billing", "logical writes", "read accounting", "storage", "free credits", "BYOC option"] },
+        { "label": "Chroma Docs — Single-node performance", "url": "https://docs.trychroma.com/production/administration/performance", "checkedAt": "2026-08-24", "supports": ["single-node scope", "hardware-sensitive capacity", "tested workload assumptions", "performance boundaries"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently benchmark Chroma OSS or Cloud, test durability failures, or calculate cost for a production workload."]
+    }
   },
   {
     "slug": "v0",
     "name": "v0",
     "category": "AI Tools",
-    "shortDescription": "Generates UI code from prompts.",
+    "shortDescription": "Prompt-driven web app generation, editing and Vercel deployment.",
     "websiteUrl": "https://v0.app",
     "incelendi": true,
     "basePrice": 0,
@@ -12800,19 +12857,48 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "v0 generates user interface code from a text description or an image, producing React components you can paste into a project.",
+    "longDescription": "v0 is Vercel's hosted environment for generating and editing web application code from prompts and images, synchronizing with GitHub and publishing to Vercel. Plans use credits, and generated output remains the user's responsibility to review for bugs, completeness and third-party rights.",
     "pros": [
-      "Turns a description into working components quickly",
-      "Output is real code, not a locked design file",
-      "Good for exploring layouts fast"
+      "Editable output: Generated code can be edited in v0 or exported to an existing codebase.",
+      "Application sandbox: Chats can run server code, API routes and development processes in isolated environments.",
+      "GitHub synchronization: Projects can exchange changes with a connected repository.",
+      "Vercel publishing: Generated applications can be built and deployed to Vercel."
     ],
     "cons": [
-      "Generated code needs cleanup before production",
-      "Opinionated about styling stack",
-      "Complex interactions still need hand-written work"
+      "Output review required: Vercel states that generated output may be incomplete, contain bugs or resemble third-party material.",
+      "Credit limits: Generations pause when available credits are exhausted.",
+      "Online dependency: Prompt processing and code generation require an internet connection.",
+      "Deployment coupling: One-click publishing targets Vercel and may be blocked by team deployment policies."
     ],
-    "targetAudience": "Developers who want a starting point for interface code rather than a blank file.",
-    "verdict": "A good accelerator for first drafts. Do not ship the output without reading it."
+    "keyFeatures": [
+      { "title": "Prompt and image input", "description": "Generates or modifies application code from text and visual context." },
+      { "title": "Isolated sandbox", "description": "Runs per-chat files, commands, server code and previews outside the production deployment." },
+      { "title": "Git integration", "description": "Synchronizes generated project changes with GitHub workflows." },
+      { "title": "Vercel deployment", "description": "Builds and publishes the project to Vercel with environment and domain controls." }
+    ],
+    "targetAudience": "Developers, designers and product teams that want an editable starting point for a web application and will review the resulting code before release.",
+    "bestFor": [
+      "Exploring interface and application directions through executable code",
+      "Teams already using GitHub and Vercel for web delivery",
+      "Projects with engineering review, tests and security checks after generation"
+    ],
+    "skipIf": [
+      "You need offline code generation or a fully self-hosted generation environment",
+      "No engineer can review generated dependencies, logic, accessibility and security",
+      "Your deployment policy or platform strategy does not permit Vercel publishing"
+    ],
+    "verdict": "Use v0 as a code-producing development environment, not as evidence that an application is production-ready; ownership of review, testing and rights assessment stays with the user.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "v0 Docs — FAQs", "url": "https://v0.dev/docs/faqs", "checkedAt": "2026-08-24", "supports": ["code export", "Git integration", "Vercel publishing", "internet requirement", "output ownership and risk", "data controls"] },
+        { "label": "v0 Docs — Pricing", "url": "https://v0.dev/docs/pricing", "checkedAt": "2026-08-24", "supports": ["plan structure", "monthly credits", "generation pause", "team controls", "data opt-out", "SAML SSO"] },
+        { "label": "v0 Docs — Sandbox", "url": "https://v0.dev/docs/sandbox", "checkedAt": "2026-08-24", "supports": ["server execution", "chat isolation", "filesystem lifecycle", "network policy", "production separation"] },
+        { "label": "v0 Docs — Deployments", "url": "https://v0.dev/docs/deployments", "checkedAt": "2026-08-24", "supports": ["Vercel deployment", "environment variables", "domains", "deployment protection", "deployment-policy restrictions", "rollback"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently assess generated-code quality, security, accessibility, intellectual-property risk, model accuracy or deployment reliability."]
+    }
   },
   {
     "slug": "bolt-new",
