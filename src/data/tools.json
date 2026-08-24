@@ -18221,21 +18221,51 @@
     "slug": "skype",
     "name": "Skype",
     "category": "Communication",
-    "shortDescription": "Retired telecommunications software service/application.",
+    "shortDescription": "Microsoft consumer calling and messaging service retired on May 5, 2025; retained here only as a migration and historical comparison record.",
     "websiteUrl": "https://www.skype.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Skype was Microsoft's consumer internet calling, video meeting and messaging service. It is no longer an active product choice: Microsoft retired free and paid Skype on May 5, 2025 and stopped selling paid Skype features to new customers. The replacement path was Microsoft Teams Free using Skype credentials, with eligible contacts and chats transferred. The final Skype Export Portal request deadline was June 15, 2026, and Microsoft warned that deletion of older inactive history began April 1, 2026. Skype for Business was explicitly outside this consumer retirement announcement and must be assessed separately.",
+    "pros": ["The historical service combined chat, voice, video and phone-network calling under a widely recognized identity.", "Microsoft provided a Teams Free migration path using existing Skype credentials.", "Remaining paid users were given Dial Pad access through the Skype web portal and Teams Free during transition.", "A documented export process existed before the final 2026 deadline."],
+    "cons": ["Consumer Skype has been retired since May 5, 2025 and cannot be selected for a new deployment.", "Paid Skype Credit, calling subscriptions and Skype Numbers are no longer sold to new customers.", "The June 15, 2026 export-request deadline has passed; unavailable or deleted history cannot be assumed recoverable.", "The retirement notice does not cover Skype for Business, so the two products must not be conflated."],
+    "keyFeatures": [{ "title": "Retired messaging", "description": "Previously provided consumer chat, file sharing and synchronized conversation history." }, { "title": "Retired calling", "description": "Previously supported internet voice/video plus paid calls and numbers for the telephone network." }, { "title": "Teams migration", "description": "Microsoft directed consumers to Teams Free using their Skype sign-in." }, { "title": "Historical export", "description": "The Skype Export Portal offered chat and media requests only through the now-passed June 2026 window." }],
+    "targetAudience": "Former Skype users documenting migration, retention and remaining paid-number obligations—not new buyers.",
+    "bestFor": ["Historical product comparisons", "Auditing whether a former Skype account was migrated to Teams Free", "Documenting legacy calling subscriptions or number-porting follow-up"],
+    "skipIf": ["You are choosing a current consumer messaging or meeting platform", "You expect to create a new Skype paid account, Credit balance or calling subscription", "You assume old Skype history is still exportable after the published deadline"],
+    "verdict": "Skype is retired and should be excluded from every new-product shortlist. Former users should inspect Teams Free and carrier records for what survived, but the official Skype export window has already closed and recovery must not be promised.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Microsoft Support — Skype retirement", "url": "https://support.microsoft.com/en-us/skype/skype-is-retiring-in-may-2025-what-you-need-to-know", "checkedAt": "2026-08-24", "supports": ["May 5 2025 retirement", "free and paid consumer scope", "Skype for Business exclusion", "Teams Free migration", "paid-feature sales stop", "Dial Pad transition", "April and June 2026 history and export deadlines", "irreversible deletion warning"] }
+    ], "limitations": ["Microsoft's official consumer Skype retirement notice was reviewed; ToolCompare did not sign in to a former account, test Teams migration, inspect a paid subscription or Skype Number, request an export before the deadline, attempt recovery, contact Microsoft or a carrier, or assess Skype for Business. The service is retired and transitional access for remaining paid users can change; this record must not imply current availability."] }
   },
   {
     "slug": "telegram",
     "name": "Telegram",
     "category": "Communication",
-    "shortDescription": "Message sent through telegraphy.",
+    "shortDescription": "Cloud messaging and broadcast platform with large groups, channels, bots and optional Premium features; end-to-end encryption is not the default for cloud chats.",
     "websiteUrl": "https://telegram.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": true, "acikKaynak": true, "sso": false },
+    "longDescription": "Telegram is a cloud-based messaging platform spanning mobile, desktop and web clients. Free users can synchronize cloud chats across devices, exchange files, create groups with up to 200,000 members and broadcast through channels with unlimited audiences. Telegram Premium is an optional, locally priced subscription that raises limits and adds 4 GB uploads, faster downloads, transcription, translation and other convenience features. Security depends on chat type: ordinary private chats, groups, channels and bot conversations are server-client encrypted cloud chats stored on Telegram's servers; only device-specific one-to-one Secret Chats add end-to-end encryption and are not synchronized to other devices.",
+    "pros": ["Large groups, broadcast channels and cross-device cloud history support community-scale communication.", "Bot API, MTProto API and Mini Apps enable deep automation and embedded services.", "Official client source and verifiable mobile builds provide more inspection evidence than a fully closed client stack.", "Optional Premium expands upload and productivity limits without removing the free service."],
+    "cons": ["Cloud chats—including ordinary one-to-one chats and groups—are not end-to-end encrypted; Telegram stores them for synchronization.", "Secret Chats are one-to-one and device/session specific, so they do not provide cloud history, group coverage or seamless device migration.", "Bots run through third-party owner infrastructure and can process the messages or inputs users send them.", "Public groups and channels expose posted content broadly, while large-community moderation, impersonation, scams and retention remain operator responsibilities."],
+    "keyFeatures": [{ "title": "Cloud messaging", "description": "Synchronizes messages, media and files across phones, tablets, desktops and browsers." }, { "title": "Groups and channels", "description": "Supports discussion groups up to 200,000 members and broadcasts to unlimited audiences." }, { "title": "Secret Chats", "description": "Provides separate device-specific one-to-one end-to-end encrypted conversations." }, { "title": "Developer platform", "description": "Offers client APIs, an HTTPS Bot API, bots and Mini Apps under platform terms." }],
+    "targetAudience": "Individuals, creators, communities and developers who prioritize large-scale cloud messaging and understand the privacy differences between chat types.",
+    "bestFor": ["Large public or private communities needing granular administrators and searchable shared history", "Creators broadcasting through channels", "Developers building bots or Mini Apps under Telegram's API and data-use terms"],
+    "skipIf": ["Every conversation and group must use end-to-end encryption by default", "Enterprise SSO, centralized retention, e-discovery and administrator-managed accounts are mandatory", "The organization cannot govern third-party bots, public content, moderation and phone-number account recovery"],
+    "verdict": "Telegram is powerful community and automation infrastructure, but 'Telegram is end-to-end encrypted' is an inaccurate blanket claim. Use cloud chats for synchronized convenience, Secret Chats only for supported one-to-one sensitive conversations, and treat every bot or public community as a separate trust boundary.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Telegram — FAQ", "url": "https://telegram.org/faq", "checkedAt": "2026-08-24", "supports": ["device support", "200000-member groups", "unlimited channel audiences", "file and call capabilities", "cloud versus Secret Chat encryption", "device-specific Secret Chats", "two-step verification", "open client and verifiable-build claims"] },
+      { "label": "Telegram — Privacy policy", "url": "https://telegram.org/privacy", "checkedAt": "2026-08-24", "supports": ["cloud-chat server storage", "Secret Chat end-to-end encryption and non-storage", "public-chat accessibility", "bot data boundary", "paid-post persistence"] },
+      { "label": "Telegram — Premium FAQ", "url": "https://telegram.org/faq_premium/?setln=en", "checkedAt": "2026-08-24", "supports": ["optional subscription", "4 GB uploads", "raised limits and features", "localized pricing", "App Store Play Store and PremiumBot purchase routes", "third-party payment processing"] },
+      { "label": "Telegram — Bot API", "url": "https://core.telegram.org/bots/api", "checkedAt": "2026-08-24", "supports": ["HTTPS Bot API", "authentication tokens", "GET POST and webhook methods", "local Bot API server", "file and connection boundaries"] },
+      { "label": "Telegram — API terms", "url": "https://core.telegram.org/api/terms", "checkedAt": "2026-08-24", "supports": ["free API use", "privacy and transparency duties", "own API ID", "branding rules", "sponsored-message requirement", "AI training restriction", "enforcement process"] }
+    ], "limitations": ["Official Telegram FAQ, privacy, Premium and developer sources were reviewed; ToolCompare did not register an account, subscribe, inspect localized checkout, send messages/files, create groups/channels/Secret Chats, verify encryption keys or builds, test calls/bots/Mini Apps/APIs/moderation/reporting/account recovery, measure delivery or contact support. Source availability does not make Telegram's server infrastructure open source. Vendor security claims were not independently audited, and app behavior, limits, pricing and policies can change."] }
   },
   {
     "slug": "viber",
@@ -18243,9 +18273,26 @@
     "category": "Communication",
     "shortDescription": "VoIP and instant messaging software.",
     "websiteUrl": "https://www.viber.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": false, "mobil": true, "acikKaynak": false, "sso": false },
+    "longDescription": "Rakuten Viber is a phone-number-based consumer messaging and calling service for mobile, desktop and tablet. Core app-to-app messaging and calling are free, while Viber Out uses purchased credit or automatically renewing monthly plans to call ordinary mobile and landline numbers. One-to-one chats, ordinary groups and one-to-one voice/video calls use end-to-end encryption on current clients. That protection does not extend to Communities, Channels, bot chats, group voice/video calls or paid Viber Out calls, which have different participant and delivery models. Viber also warns that Viber Out connectivity issues may occur in Turkey and several other countries.",
+    "pros": ["Current clients apply end-to-end encryption automatically to one-to-one chats, ordinary groups and one-to-one calls.", "Desktop and tablet companions extend a phone-number account across common devices.", "Groups, Communities and Channels cover private conversation, large community and one-way broadcast patterns.", "Viber Out provides a paid route to mobile and landline numbers that do not use Viber."],
+    "cons": ["Communities, Channels, bots, group calls and Viber Out calls are not end-to-end encrypted.", "Viber Out requires credit or a monthly auto-renewing plan, and country, destination and number-type exclusions apply.", "The vendor specifically warns of possible Viber Out connectivity issues in Turkey.", "Uninstalling, deactivating and cancelling paid plans are separate actions; deactivation can remove data or credit without cancelling a Viber Out subscription."],
+    "keyFeatures": [{ "title": "Private messaging", "description": "Provides one-to-one and group chat with media, calls and current-client end-to-end encryption." }, { "title": "Communities and Channels", "description": "Supports large interactive communities and administrator-led broadcasts without end-to-end encryption." }, { "title": "Viber Out", "description": "Uses paid credit or renewable plans for internet-originated calls to eligible telephone numbers." }, { "title": "Multi-device access", "description": "Links desktop and tablet clients to the primary mobile phone-number account." }],
+    "targetAudience": "Consumers and communities whose contacts already use Viber, plus callers who have verified Viber Out destination pricing and availability.",
+    "bestFor": ["Everyday one-to-one or small-group messaging among Viber users", "Communities and brands that accept the public or server-mediated channel model", "Occasional phone-network calling after comparing the exact destination rate and connection quality"],
+    "skipIf": ["Every group call, broadcast, bot interaction and telephone call must be end-to-end encrypted", "Enterprise SSO, managed identities, retention and compliance exports are required", "Turkey-based Viber Out calling is business-critical without a tested fallback"],
+    "verdict": "Viber is a capable consumer messenger where its network is already present, but its encryption claim has boundaries. Distinguish ordinary encrypted chats from Communities, Channels, bots, group calls and Viber Out, and never rely on a paid calling plan until the destination rate, renewal and local connectivity are tested.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Viber Help — End-to-end encryption", "url": "https://help.viber.com/hc/en-us/articles/8909167863453-End-to-end-encryption-in-chats", "checkedAt": "2026-08-24", "supports": ["version 6 requirement", "automatic encryption", "one-to-one chat group and call coverage", "server delivery behavior", "Community Channel bot group-call and Viber Out exclusions", "trusted-contact verification"] },
+      { "label": "Viber Help — Group Community and Channel comparison", "url": "https://help.viber.com/hc/en-us/articles/9412733574173-Comparison-group-vs-community-vs-channel", "checkedAt": "2026-08-24", "supports": ["group community and channel use cases", "posting and administration differences", "member visibility and statistics boundaries"] },
+      { "label": "Viber Help — What is Viber Out", "url": "https://help.viber.com/hc/en-us/articles/9174997922589-What-is-Viber-Out", "checkedAt": "2026-08-24", "supports": ["VoIP-to-phone scope", "credit and plan destination rules", "excluded number types", "internet requirement", "Turkey connectivity warning", "registration-number call classification"] },
+      { "label": "Viber Help — Viber Out plans and credit", "url": "https://help.viber.com/hc/en/articles/9209069652637", "checkedAt": "2026-08-24", "supports": ["credit or plan requirement", "monthly automatic renewal", "payment channels", "cancellation", "minute-plan combinations", "automatic credit top-up"] },
+      { "label": "Viber Help — Deactivate or uninstall", "url": "https://help.viber.com/hc/en-us/articles/9174583112861-Deactivate-or-uninstall-Viber-on-your-phone", "checkedAt": "2026-08-24", "supports": ["uninstall and deactivation distinction", "account and history deletion", "multi-device effect", "credit removal", "subscription cancellation boundary", "inactivity deactivation"] }
+    ], "limitations": ["Official Viber encryption, community, Viber Out and account-deactivation sources were reviewed; ToolCompare did not register an account, install/link devices, send messages, verify keys, make individual/group/Viber Out calls, buy or cancel credit/plans, inspect rates or checkout, test Turkey connectivity, create Communities/Channels/bots, back up or delete data, evaluate moderation or contact support. Prices, destination coverage, encryption behavior and policies can change; current app versions and local network conditions matter."] }
   },
   {
     "slug": "wechat",
