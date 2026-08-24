@@ -17737,44 +17737,81 @@
     "slug": "sumo-logic",
     "name": "Sumo Logic",
     "category": "Developer Tools",
-    "shortDescription": "U.S. information technology company.",
+    "shortDescription": "Cloud-hosted log analytics, observability and security platform with credit-based packaging.",
     "websiteUrl": "https://www.sumologic.com",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Sumo Logic is cloud-native log management and security analytics, sold as a service rather than software you run.",
-    "pros": [
-      "No infrastructure to operate",
-      "Security analytics built in",
-      "Scales without capacity planning"
-    ],
-    "cons": [
-      "Ingest-based pricing needs monitoring",
-      "Query language is its own dialect",
-      "Less flexible than self-hosted stacks"
-    ],
-    "targetAudience": "Teams wanting log analytics without running the platform.",
-    "verdict": "A reasonable middle ground between self-hosted and Splunk pricing."
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "Sumo Logic is a proprietary SaaS platform for collecting, searching and monitoring logs, metrics and traces, with security and observability packages. Current Flex packaging uses credits across data scanned, ingestion, storage, metrics and activated capabilities rather than one universal per-GB price. Plan, region and payment cadence affect list credit price, and retention is chargeable. A free account offers 1.25 credits per day, three users and seven-day log retention; the 30-day trial has its own credit, user, data and retention limits.",
+    "pros": ["Managed service: Teams avoid operating index clusters and search infrastructure.", "Unified telemetry: Logs, metrics, traces, dashboards and monitors share one cloud platform.", "Usage visibility: Flex accounts expose credit consumption and spikes in near real time.", "Security packages: Enterprise options add SIEM, entity-centric detections, automation and support."],
+    "cons": ["Credit arithmetic is multidimensional: Scan volume, storage, telemetry type, region and feature activation all influence cost.", "Unlimited is not free usage: It means volume can be quoted, while fees still vary with the selected configuration.", "Lower tiers are constrained: Free and trial accounts cap credits, users, retention or daily volume.", "SaaS control is bounded: Data location, export, query behavior and platform limits require verification before commitment."],
+    "keyFeatures": [{ "title": "Log search and analytics", "description": "Indexes and searches collected events for troubleshooting, dashboards and investigations." }, { "title": "Metrics and traces", "description": "Correlates infrastructure and application telemetry alongside logs." }, { "title": "Cloud SIEM", "description": "Adds security detections, entity context and investigation workflows in eligible packages." }, { "title": "Flex credits", "description": "Meters configured platform use through a shared credit pool with account-level tracking." }],
+    "targetAudience": "DevOps, SecOps and observability teams wanting managed telemetry analytics and able to govern scans, retention and data routing.",
+    "bestFor": ["Teams replacing self-managed log infrastructure with a SaaS service", "Mixed security and reliability workflows sharing telemetry", "Organizations able to replay representative searches and model credit use before contracting"],
+    "skipIf": ["The workload requires full control over the storage and query engine", "No one owns filtering, retention, scan efficiency and credit monitoring", "A free account's seven-day retention and three-user limit cannot support the evaluation"],
+    "verdict": "Sumo Logic can remove substantial platform operations, but its value depends on query and retention discipline; test real ingest plus scan patterns, price the target region and activated features, and set credit and data-management controls before production.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Sumo Logic — Pricing", "url": "https://www.sumologic.com/pricing", "checkedAt": "2026-08-24", "supports": ["Essentials and Enterprise Suite positioning", "credit model", "ingest retention and scan variables", "region and annual-commitment assumptions", "unlimited wording boundary", "self-serve and sales purchase routes", "30-day trial"] },
+      { "label": "Sumo Logic — Cloud Flex Credit terms", "url": "https://www.sumologic.com/pricing/cloud-flex-credit", "checkedAt": "2026-08-24", "supports": ["eligible-plan credit scope", "plan list-price differences", "region uplifts", "payment-term effects", "renewal pricing boundary"] },
+      { "label": "Sumo Logic Docs — Flex accounts", "url": "https://www.sumologic.com/help/docs/manage/manage-subscription/sumo-logic-flex-accounts/", "checkedAt": "2026-08-24", "supports": ["credit consumption dimensions", "1.25-credit free allocation", "three free users", "seven-day free retention", "trial credit and 1 GB daily profile", "20 trial users", "30-day trial retention", "throttling boundary", "Enterprise ingest budgets"] },
+      { "label": "Sumo Logic Docs — Signup and trial", "url": "https://www.sumologic.com/help/docs/get-started/sign-up/", "checkedAt": "2026-08-24", "supports": ["business-email signup", "trial feature scope", "1 GB daily trial volume", "trial forwarding metrics and alerts", "Essentials self-service", "Enterprise sales path", "paid conversion warning for pay-as-you-go trial flow"] }
+    ], "limitations": ["Official Sumo Logic pricing, credit terms and account documentation were reviewed; ToolCompare did not open an account, inspect checkout or an order form, ingest data, test collectors/APIs/SSO/search/SIEM/alerts/export, measure scans or credit burn, exceed trial limits, validate region residency, compare support, cancel service or recover archived data. Credit rates, promotions, packages and limits can change."] }
   },
   {
     "slug": "datastax",
     "name": "DataStax",
     "category": "Developer Tools",
-    "shortDescription": "Data management company.",
+    "shortDescription": "IBM-owned provider of Astra DB, a managed Cassandra-based database service for table, document and vector workloads.",
     "websiteUrl": "https://www.datastax.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "DataStax, now part of IBM, provides Astra DB Serverless: a managed database service powered by Apache Cassandra for CQL tables and Data API document/vector access. Pricing and billing are transitioning through IBM channels: Free organizations receive monthly credits, Standard can be pay-per-use, prepaid or marketplace based, and Enterprise requires an annual committed credit balance. Reads, writes, vector dimensions, storage, data transfer, private endpoints, multi-region replication and provisioned capacity can be separate meters. Managed Cassandra compatibility is intentionally guarded and does not expose every Cassandra administration tool or setting.",
+    "pros": ["Managed Cassandra foundation: The service removes node, repair and routine cluster administration from application teams.", "Multiple interfaces: Applications can use the Data API, CQL and supported drivers for different data models.", "Elastic and provisioned choices: Serverless usage can scale on demand, while PCUs address steadier production spikes.", "Cloud and region choice: Databases can be placed in supported AWS, Azure and Google Cloud regions."],
+    "cons": ["Billing has many meters: Operations, vectors, peak monthly storage, transfer and premium networking can all consume credits.", "Free databases can stop: Credit exhaustion suspends access, and inactive free databases can be hibernated and scheduled for deletion.", "Not unrestricted Cassandra: nodetool, JMX, cassandra.yaml and some CQL or compaction behavior are unavailable or guarded.", "Multi-region adds semantics and cost: Replication is eventually consistent and produces transfer charges."],
+    "keyFeatures": [{ "title": "Astra DB Serverless", "description": "Provides managed Cassandra-based databases with on-demand request and storage metering." }, { "title": "Data API and CQL", "description": "Supports document/vector operations and Cassandra-compatible table access through APIs and drivers." }, { "title": "Vector search", "description": "Stores vector-enabled collections and meters vector dimension operations by use." }, { "title": "Provisioned capacity", "description": "Offers PCU groups for workloads that require more predictable capacity than reactive serverless scaling." }],
+    "targetAudience": "Application and AI teams needing managed Cassandra-style scale or vector/document APIs without running database clusters.",
+    "bestFor": ["High-throughput key-based applications whose data model fits Cassandra access patterns", "Vector or document applications using the supported Data API guardrails", "Teams that can load-test rate limits and model storage, transfer and operation credits"],
+    "skipIf": ["The application requires joins, multi-row ACID transactions or relational query semantics", "Existing Cassandra operations depend on JMX, nodetool or custom cassandra.yaml settings", "Free-tier suspension or eventual multi-region consistency is unacceptable"],
+    "verdict": "Astra DB is useful when the workload genuinely fits Cassandra or its Data API, but managed convenience comes with guardrails and several billable dimensions; validate the data model, burst behavior, consistency and IBM subscription path with production-shaped tests before migration.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "DataStax Docs — Database limits", "url": "https://docs.datastax.com/en/astra-db-serverless/databases/database-limits.html", "checkedAt": "2026-08-24", "supports": ["Apache Cassandra foundation", "managed-service guardrails", "nodetool JMX and configuration exclusions", "single-region default", "eventual multi-region replication", "table collection and value limits", "default rate limits", "PCU recommendation", "free-plan restrictions"] },
+      { "label": "DataStax Docs — Credits and usage", "url": "https://docs.datastax.com/en/astra-db-serverless/administration/subscription-usage.html", "checkedAt": "2026-08-24", "supports": ["Free Standard and Enterprise billing", "IBM payment management", "free-credit suspension", "monthly drafting", "read write storage and transfer meters", "maximum-monthly storage measurement", "multi-region transfer charges", "private endpoints and PCUs"] },
+      { "label": "IBM Cloud Docs — Astra DB pricing", "url": "https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-wxd_astra_db_pp", "checkedAt": "2026-08-24", "supports": ["resource-unit meters", "provider region and tier price variance", "read and write pricing", "vector dimensions", "storage transfer private-link and PCU meters"] },
+      { "label": "DataStax Docs — Data API limits", "url": "https://docs.datastax.com/en/astra-db-serverless/api-reference/dataapi-limits.html", "checkedAt": "2026-08-24", "supports": ["collection table page and transaction limits", "vector result cap", "HTTP 200 responses containing errors", "partial data and error response possibility"] },
+      { "label": "DataStax — Joins IBM", "url": "https://preview.datastax.com/blog/datastax-joins-ibm", "checkedAt": "2026-08-24", "supports": ["IBM acquisition completion", "continuation positioning for customers", "IBM ownership context"] }
+    ], "limitations": ["Official DataStax and IBM documentation for Astra limits, billing, pricing and ownership was reviewed; ToolCompare did not create a database, confirm every region or current plan, benchmark CQL/Data API/vector search, test APIs/SSO/drivers, exhaust credits, trigger hibernation, request a PCU, configure private networking or customer keys, measure consistency, fail a region, restore backups, inspect an IBM contract or migrate Cassandra data. Rates and transition details can change."] }
   },
   {
     "slug": "cloudant",
     "name": "Cloudant",
     "category": "Developer Tools",
-    "shortDescription": "IBM software product.",
-    "websiteUrl": "https://cloudant.com/",
-    "incelendi": false,
+    "shortDescription": "IBM-managed JSON document database service based on Apache CouchDB APIs and replication.",
+    "websiteUrl": "https://www.ibm.com/products/cloudant",
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": true, "acikKaynak": false, "sso": true },
+    "longDescription": "IBM Cloudant is a proprietary managed JSON document database built on Apache CouchDB, with a compatible HTTPS API and replication protocol. The Lite plan is free for evaluation and fixes capacity at 20 reads, 10 writes and five global queries per second with 1 GB storage. Standard begins at one provisioned capacity block—100 reads, 50 writes and five global queries per second—includes 20 GB and bills capacity plus excess storage hourly. Dedicated Hardware adds workload isolation, private networking and selected compliance and key-management options. A Cloudant service is not the same as self-hosting CouchDB.",
+    "pros": ["Managed document service: IBM handles database servers, upgrades, patching and core high-availability infrastructure.", "CouchDB lineage: Compatible HTTP APIs and replication ease selected CouchDB application and migration patterns.", "Explicit capacity model: Read, write and global-query throughput are provisioned in documented blocks.", "Multi-region option: Application-managed replication can support active-active regional architectures."],
+    "cons": ["Lite is evaluation capacity: It cannot scale and blocks new writes above its storage limit.", "Capacity dimensions scale together: A workload dominated by one request class may pay for unused allowances in the others.", "Exceeding throughput returns 429: Applications need retry, backoff and load testing rather than assuming automatic unlimited scale.", "Cross-region is not automatic application resilience: Conflict behavior, traffic routing, monitoring and recovery remain design responsibilities."],
+    "keyFeatures": [{ "title": "JSON document database", "description": "Stores schema-flexible documents, attachments and secondary indexes behind HTTPS APIs." }, { "title": "CouchDB-compatible replication", "description": "Supports replication patterns between Cloudant regions and compatible CouchDB systems." }, { "title": "Provisioned throughput", "description": "Scales read, write and global-query capacity in linked blocks through the dashboard or API." }, { "title": "IBM IAM and SDKs", "description": "Integrates IBM Cloud access controls and provides supported Java, Node.js, Python, Swift, Go and mobile clients." }],
+    "targetAudience": "Teams building operational JSON applications that value managed CouchDB-compatible APIs and predictable provisioned throughput.",
+    "bestFor": ["Offline or distributed applications that benefit from CouchDB-style replication", "JSON workloads dominated by key lookups and well-designed partitioned queries", "Teams able to test request-class capacity, 429 handling and multi-region conflicts"],
+    "skipIf": ["The application depends on relational joins, broad ad-hoc SQL or multi-document ACID transactions", "Traffic is too unpredictable to provision and monitor request-class capacity", "A free Lite instance is being treated as a production SLA or scalable datastore"],
+    "verdict": "Cloudant remains a sound managed choice for CouchDB-shaped JSON workloads, but its capacity-block economics and replication semantics should drive the design; benchmark every request class, implement 429 backoff, and rehearse regional routing and conflict recovery before production.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "IBM Cloud Docs — What is Cloudant", "url": "https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-what-is-cloudant", "checkedAt": "2026-08-24", "supports": ["managed JSON DBaaS", "Apache CouchDB foundation", "compatible API and replication", "serverless operations boundary", "HTTPS access", "multi-region replication", "maintenance responsibility", "capacity and storage billing"] },
+      { "label": "IBM Cloud Docs — Plans and provisioning", "url": "https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-ibm-cloud-public", "checkedAt": "2026-08-24", "supports": ["Lite Standard and Dedicated Hardware plans", "Lite throughput and 1 GB storage", "Standard starting throughput and 20 GB", "hourly prorated billing", "scaling path", "Dedicated isolation BYOK networking and HIPAA configuration"] },
+      { "label": "IBM Cloud Docs — Usage and charges", "url": "https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-usage-and-charges", "checkedAt": "2026-08-24", "supports": ["request classes", "capacity block composition", "linked scaling", "hourly proration", "dashboard and API scaling", "asynchronous capacity changes", "429 and retry behavior"] },
+      { "label": "IBM Cloud Docs — Connecting", "url": "https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-connecting", "checkedAt": "2026-08-24", "supports": ["HTTPS endpoints", "IAM and legacy authentication", "IAM recommendation", "dashboard operations", "curl access", "supported Java Node.js Python Swift Go and mobile libraries"] },
+      { "label": "IBM Cloud Docs — Migration overview", "url": "https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-migrating-to-ibm-cloudant-on-ibm-cloud", "checkedAt": "2026-08-24", "supports": ["multi-tenant service", "CouchDB migration path", "capacity metrics", "Lite evaluation role", "Standard production positioning", "99.99% vendor SLA claim", "429 behavior"] }
+    ], "limitations": ["Official IBM Cloudant product, plan, billing, connection and migration documentation was reviewed; ToolCompare did not provision an instance, inspect the live cost estimator, test APIs/IAM/SDKs/indexes/search/replication, fill Lite storage, exceed throughput, measure latency, scale capacity, validate encryption or Dedicated isolation, create conflicts, simulate a zone or region outage, claim an SLA credit, restore data or migrate CouchDB. Prices, regions, limits and service terms can change."] }
   },
   {
     "slug": "informatica",
