@@ -16510,31 +16510,164 @@
     "slug": "ibm-cloud",
     "name": "IBM Cloud",
     "category": "Hosting",
-    "shortDescription": "Cloud computing platform by IBM.",
+    "shortDescription": "Enterprise cloud platform spanning compute, storage, networking, data, containers, AI and hybrid-cloud services.",
     "websiteUrl": "https://www.ibm.com/cloud",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-kredi",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "IBM Cloud is a proprietary cloud platform with infrastructure, managed data, Kubernetes, AI and hybrid-cloud services. New Pay-As-You-Go accounts require a credit card and advertise a $200 credit valid for 30 days; selected Lite plans remain free only within their service-specific limits. Catalog services use different metering and commitment models. Stopping an eligible VPC virtual server can suspend compute charges, but attached storage and other retained resources continue billing. IBM operates the underlying cloud infrastructure while customers remain responsible for their data, applications, guest operating systems and disaster-recovery design.",
+    "pros": [
+      "Broad enterprise catalog: Compute, storage, networking, databases, Kubernetes, AI and security services share one platform.",
+      "Hybrid-cloud alignment: IBM services and Red Hat technologies support organizations already operating across cloud and on-premises environments.",
+      "Multiple buying models: Lite plans, Pay-As-You-Go, reservations and enterprise spending commitments address different usage profiles.",
+      "Infrastructure automation: APIs and common infrastructure-as-code workflows enable repeatable provisioning and governance."
+    ],
+    "cons": [
+      "Free access is bounded: The signup credit expires after 30 days and each Lite plan has its own capacity and eligibility limits.",
+      "Costs are service-specific: Compute, storage, networking, licenses and managed services can be metered independently.",
+      "Stopping is not deletion: Persistent storage and other attached resources can keep accruing charges after compute is suspended.",
+      "Customer duties remain substantial: Guest OS patching, application security, data protection and cross-region recovery are not transferred to IBM."
+    ],
+    "keyFeatures": [
+      { "title": "Cloud catalog", "description": "Combines virtual infrastructure with managed container, data, integration, AI and security services." },
+      { "title": "VPC infrastructure", "description": "Provides regional virtual servers, networking, load balancing and persistent block storage." },
+      { "title": "Account choices", "description": "Supports limited Lite plans, usage billing and commitment-oriented enterprise purchasing." },
+      { "title": "Hybrid operations", "description": "Connects IBM Cloud services with Red Hat and enterprise hybrid-cloud operating patterns." }
+    ],
+    "targetAudience": "Enterprise engineering teams that need IBM's service catalog or hybrid-cloud ecosystem and can govern service-level cost, security and recovery responsibilities.",
+    "bestFor": [
+      "Organizations already standardizing on IBM or Red Hat technologies",
+      "Regulated or hybrid workloads after validating the exact service, region and compliance scope",
+      "Teams able to automate account controls, resource tagging, budgets and infrastructure lifecycle"
+    ],
+    "skipIf": [
+      "The business case assumes the whole catalog remains free after the introductory credit",
+      "A stopped virtual server is expected to have no attached storage or networking cost",
+      "The team has no owner for guest OS, application, data and disaster-recovery controls"
+    ],
+    "verdict": "IBM Cloud is a credible enterprise and hybrid-cloud option when its catalog matches an existing platform strategy; test the exact target region, model every retained resource after credits, confirm support terms, and prove cross-region recovery before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "IBM Cloud — Pricing", "url": "https://www.ibm.com/cloud/pricing", "checkedAt": "2026-08-24", "supports": ["Pay-As-You-Go catalog access", "$200 credit for 30 days", "credit-card requirement", "Lite plans within plan limits", "reservations and enterprise commitments", "basic and paid support positioning"] },
+        { "label": "IBM Cloud Docs — Account types", "url": "https://cloud.ibm.com/docs/account?topic=account-accounts", "checkedAt": "2026-08-24", "supports": ["new-account Pay-As-You-Go model", "introductory credit duration", "recurring billing until resource cancellation", "Lite plan limits", "basic support response-time boundary"] },
+        { "label": "IBM Cloud Docs — Suspend billing for a VPC virtual server", "url": "https://cloud.ibm.com/docs/vpc?topic=vpc-suspend-billing", "checkedAt": "2026-08-24", "supports": ["eligible stopped-instance compute suspension", "vCPU RAM license and instance-storage treatment", "continued billing for persistent VPC storage", "feature conditions"] },
+        { "label": "IBM Cloud Docs — Shared responsibilities", "url": "https://cloud.ibm.com/docs/overview?topic=overview-shared-responsibilities", "checkedAt": "2026-08-24", "supports": ["IBM infrastructure responsibility", "customer data application and guest-OS responsibility", "customer disaster-recovery responsibility", "secondary-region resource requirement"] },
+        { "label": "IBM Cloud Docs — Removing VPC block storage", "url": "https://cloud.ibm.com/docs/containers?topic=containers-storage-block-vpc-remove", "checkedAt": "2026-08-24", "supports": ["persistent-volume deletion behavior", "reclaim-policy effect", "continued billing when storage instance remains"] }
+      ],
+      "limitations": ["Official IBM pricing and documentation pages were reviewed; ToolCompare did not create an account, redeem credit, inspect a region-specific quote, deploy or benchmark a workload, test APIs/IAM/support, validate a compliance claim, calculate tax or egress, suspend every instance type, or restore a cross-region backup. Service plans, prices, regions and eligibility can change."]
+    }
   },
   {
     "slug": "cdnjs",
     "name": "Cdnjs",
     "category": "Hosting",
-    "shortDescription": "Content delivery network for web resources.",
+    "shortDescription": "Cloudflare-backed public CDN for versioned assets from open-source web libraries.",
     "websiteUrl": "https://cdnjs.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "cdnjs is a free, community-run CDN for open-source web-library assets, delivered through Cloudflare. Consumers select a library, exact version and file, then reference its public URL; the service also exposes library metadata through an API. Example markup published by Cloudflare uses a versioned URL and Subresource Integrity attributes. cdnjs' code repository is MIT-licensed, but each distributed library keeps its own license. It is a dependency-delivery service rather than private storage, a package-security review or a contractual availability guarantee.",
+    "pros": [
+      "No-cost public delivery: Supported open-source library assets are served globally through Cloudflare.",
+      "Versioned paths: URLs can identify an exact library release and file for reproducible front-end loading.",
+      "Integrity metadata: Published examples support browser Subresource Integrity checks when the correct hash is used.",
+      "Open project and API: Public repositories and metadata endpoints make the catalog inspectable and automatable."
+    ],
+    "cons": [
+      "Catalog scope is narrow: It is not private asset storage or a general-purpose origin/CDN product.",
+      "Package trust remains external: CDN availability does not prove that a library release or transitive code is safe.",
+      "Third-party dependency: Page delivery, privacy posture and CSP must account for requests to an external domain.",
+      "Licenses vary: The cdnjs repository license does not replace the license of each hosted library."
+    ],
+    "keyFeatures": [
+      { "title": "Library catalog", "description": "Indexes versioned files from supported open-source JavaScript and CSS libraries." },
+      { "title": "Cloudflare delivery", "description": "Serves cached public assets through Cloudflare's network." },
+      { "title": "API access", "description": "Exposes library, version and file metadata for discovery and tooling." },
+      { "title": "Integrity-ready snippets", "description": "Provides examples and hashes that can be used with browser SRI and crossorigin attributes." }
+    ],
+    "targetAudience": "Front-end developers who need simple public delivery of a supported open-source dependency and can pin, audit and fall back from that dependency.",
+    "bestFor": [
+      "Static sites loading a well-known public library at an exact reviewed version",
+      "Documentation and prototypes where a third-party CDN is permitted",
+      "Teams that enforce CSP, verify SRI hashes and retain a self-hosted fallback for critical assets"
+    ],
+    "skipIf": [
+      "Assets are private, proprietary or outside the cdnjs library catalog",
+      "Policy forbids third-party asset requests or requires a contractual SLA",
+      "The team cannot review the package license and code or pin an immutable version"
+    ],
+    "verdict": "cdnjs is a convenient free path for public, versioned web dependencies; use exact versions and valid SRI, review the library's own license and code, and self-host or provide a fallback when availability, privacy or supply-chain control is critical.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Cloudflare — cdnjs service", "url": "https://ajax.cdnjs.com/", "checkedAt": "2026-08-24", "supports": ["open-source library delivery", "Cloudflare operation", "versioned URL example", "Subresource Integrity example", "one-year asset caching", "terms privacy and abuse-policy boundary", "aggregate usage measurement"] },
+        { "label": "cdnjs — Asset repository", "url": "https://github.com/cdnjs/cdnjs", "checkedAt": "2026-08-24", "supports": ["public asset repository", "automated repository role", "separate package metadata repository", "separate website and API repositories", "MIT project license", "per-library license distinction", "Cloudflare sponsorship"] },
+        { "label": "cdnjs — Package metadata repository", "url": "https://github.com/cdnjs/packages", "checkedAt": "2026-08-24", "supports": ["package definitions", "automatic-update configuration", "community contribution workflow", "catalog maintenance boundary"] },
+        { "label": "cdnjs — API repository", "url": "https://github.com/cdnjs/api-server", "checkedAt": "2026-08-24", "supports": ["public API implementation", "library metadata access", "open-source API code"] }
+      ],
+      "limitations": ["Official Cloudflare and cdnjs repositories were reviewed; ToolCompare did not benchmark delivery, test a live outage or fallback, audit package provenance, scan hosted releases for malware, verify every SRI hash, assess privacy or licensing for a specific application, or obtain an availability SLA. Library contents, versions and policies can change."]
+    }
   },
   {
     "slug": "jsdelivr",
     "name": "JSDelivr",
     "category": "Hosting",
-    "shortDescription": "Content delivery network.",
+    "shortDescription": "Free multi-provider CDN for public open-source packages from npm, GitHub and related catalogs.",
     "websiteUrl": "https://www.jsdelivr.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "jsDelivr is a publicly available CDN for open-source files from npm, GitHub, WordPress and selected custom endpoints. Its terms permit free personal and commercial use without bandwidth or request limits when content and usage follow both jsDelivr and upstream-platform policies. The network uses multiple CDN providers and offers exact or aliased version URLs, an API, combination and optimization features. Production consumers should pin an exact reviewed release: aliases can resolve to newer code. The service is not general file/media hosting, private package delivery or a substitute for package, license and resilience review.",
+    "pros": [
+      "Free permitted use: The published terms allow personal and commercial use without request or bandwidth limits.",
+      "Broad public-package access: npm, GitHub and WordPress paths cover common open-source distribution workflows.",
+      "Resilient delivery design: Multiple CDN and DNS providers plus health-based routing reduce dependence on one edge network.",
+      "Developer tooling: Public APIs expose package versions, files, entry points, CDN URLs and download statistics."
+    ],
+    "cons": [
+      "Strict usage scope: General image, video, backup or bulk file hosting is prohibited.",
+      "Mutable aliases add risk: Unpinned version ranges or latest URLs can deliver code different from a reviewed build.",
+      "Upstream rules still apply: Content must satisfy npm, GitHub or other source-platform terms as well as jsDelivr's policy.",
+      "Free support is limited: Published terms promise a reasonable level of issue/email support, not a customer-specific response SLA."
+    ],
+    "keyFeatures": [
+      { "title": "Public package endpoints", "description": "Serves files from npm, GitHub, WordPress and approved custom open-source sources." },
+      { "title": "Multi-CDN routing", "description": "Uses multiple providers and monitoring-based failover for public asset delivery." },
+      { "title": "Version selection", "description": "Supports exact releases and convenient aliases; exact pins are safer for reproducible production builds." },
+      { "title": "Package API", "description": "Returns versions, files, entry points, CDN links and download statistics for tooling." }
+    ],
+    "targetAudience": "Developers distributing or consuming public open-source front-end packages who can follow the acceptable-use rules and control dependency versions.",
+    "bestFor": [
+      "Public npm or GitHub packages that need zero-cost global asset delivery",
+      "Static sites using exact reviewed dependency versions",
+      "Open-source maintainers who want public package metadata and download statistics"
+    ],
+    "skipIf": [
+      "The workload is proprietary, private, general-purpose storage or large-scale media hosting",
+      "The application requires negotiated uptime and support-response commitments",
+      "Security policy cannot allow a third-party domain or the build cannot pin and review dependencies"
+    ],
+    "verdict": "jsDelivr is unusually capable for free public open-source delivery, but its unlimited traffic is policy-bound rather than a generic hosting offer; pin exact versions, review upstream code and licenses, use integrity controls where available, and keep a self-hosted fallback for critical paths.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "jsDelivr — Usage documentation", "url": "https://github.com/jsdelivr/jsdelivr", "checkedAt": "2026-08-24", "supports": ["npm GitHub and WordPress endpoints", "exact and aliased version URLs", "permanent storage behavior", "multi-CDN design", "public open-source focus", "free service positioning"] },
+        { "label": "jsDelivr — Terms of Use", "url": "https://www.jsdelivr.com/terms/terms-of-use", "checkedAt": "2026-08-24", "supports": ["public no-subscription CDN", "free personal and commercial permitted use", "no bandwidth or request limits", "upstream-platform policy requirement", "reasonable support boundary", "general file and media hosting prohibition", "repository file-count guidance"] },
+        { "label": "jsDelivr — Public data API", "url": "https://github.com/jsdelivr/data.jsdelivr.com", "checkedAt": "2026-08-24", "supports": ["public package API", "versions files and entry points", "CDN URLs", "download statistics", "GitHub and npm package-size boundaries"] },
+        { "label": "jsDelivr — Terms and subprocessors", "url": "https://www.jsdelivr.com/terms/sub-processors", "checkedAt": "2026-08-24", "supports": ["third-party CDN traffic processing", "named infrastructure providers", "data-processing dependency boundary"] }
+      ],
+      "limitations": ["Official jsDelivr terms, repositories and documentation were reviewed; ToolCompare did not benchmark its network, verify every current provider, test DNS/CDN failover, scan a package, validate SRI for a chosen file, evaluate privacy or licensing for a specific deployment, exceed published soft limits, or obtain a contractual SLA. Policies, endpoints, limits and providers can change."]
+    }
   },
   {
     "slug": "gcore",
