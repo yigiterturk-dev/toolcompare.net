@@ -13999,11 +13999,62 @@
     "slug": "drupal",
     "name": "Drupal",
     "category": "Developer Tools",
-    "shortDescription": "Web content management system.",
+    "shortDescription": "Open-source PHP content-management framework with modular site architecture.",
     "websiteUrl": "https://www.drupal.org/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    },
+    "longDescription": "Drupal is GPL-licensed open-source content-management software for structured content, permissions, multilingual sites and extensible web applications. Core has no license fee, but production use requires compatible PHP, database and web-server infrastructure plus disciplined Composer updates, contributed-module review, security monitoring and custom development.",
+    "pros": [
+      "Structured content model: Core supports configurable content types, fields, taxonomies and display modes.",
+      "Access controls: Roles and permissions can govern administrative and publishing capabilities.",
+      "Extension ecosystem: Contributed modules and themes add functions beyond core.",
+      "Core JSON:API: Supported entities can be exposed through Drupal's standards-oriented API module."
+    ],
+    "cons": [
+      "Operations are not free: Hosting, engineering, upgrades, backups and security response remain customer costs.",
+      "Dependency governance: Composer, core, contributed modules, themes and custom code must remain compatible.",
+      "Version support moves: Only supported core branches receive the relevant bug or security fixes.",
+      "Server responsibility: Non-Apache deployments must recreate security behavior otherwise supplied through Drupal's .htaccess rules."
+    ],
+    "keyFeatures": [
+      { "title": "Content entities and fields", "description": "Models reusable structured content through configurable entity and field types." },
+      { "title": "Roles and permissions", "description": "Controls administrative and editorial actions by assigned user roles." },
+      { "title": "Modules and themes", "description": "Extends application behavior and presentation through core, contributed or custom packages." },
+      { "title": "JSON:API", "description": "Exposes supported entity resources through Drupal core's HTTP API module." }
+    ],
+    "targetAudience": "Organizations needing a customizable structured-content platform and able to fund ongoing PHP, Composer and Drupal engineering.",
+    "bestFor": [
+      "Content-heavy sites with custom structures, permissions and publishing workflows",
+      "Teams that need a modular open-source foundation rather than a fixed hosted site builder",
+      "Organizations with owners for dependencies, hosting, backups and security updates"
+    ],
+    "skipIf": [
+      "You need a fully managed no-maintenance website subscription",
+      "The team cannot test core, module, theme and PHP compatibility before upgrades",
+      "A required contributed module is abandoned or incompatible with a supported core branch"
+    ],
+    "verdict": "Choose Drupal when its structured-content and extension model justifies a maintained application platform; budget operations and upgrade engineering separately from the zero-dollar core license.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Drupal Docs — System requirements", "url": "https://www.drupal.org/docs/getting-started/system-requirements", "checkedAt": "2026-08-24", "supports": ["web-server requirement", "database requirement", "PHP requirement", "Composer requirement", "browser support", "production platform guidance"] },
+        { "label": "Drupal Docs — Composer requirements", "url": "https://www.drupal.org/docs/getting-started/system-requirements/composer-requirements", "checkedAt": "2026-08-24", "supports": ["Composer-managed installation and updates", "version-specific Composer requirements", "supported Composer versions", "security rationale"] },
+        { "label": "Drupal Docs — Web-server requirements", "url": "https://www.drupal.org/docs/getting-started/system-requirements/web-server-requirements", "checkedAt": "2026-08-24", "supports": ["Apache and Nginx", "PHP patching responsibility", "file permissions", "non-Apache security configuration", "IIS support boundary"] },
+        { "label": "Drupal Docs — Updating core", "url": "https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer", "checkedAt": "2026-08-24", "supports": ["supported major and minor branches", "bug-fix and security-fix windows", "Composer update process", "dry-run option", "maintenance workflow"] },
+        { "label": "Drupal Docs — JSON:API", "url": "https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module", "checkedAt": "2026-08-24", "supports": ["core JSON:API module", "entity resources", "HTTP methods", "authorization behavior"] },
+        { "label": "Drupal — Licensing", "url": "https://www.drupal.org/about/licensing", "checkedAt": "2026-08-24", "supports": ["GPL licensing", "open-source distribution", "contributed code licensing"] }
+      ],
+      "limitations": ["Official project documentation was reviewed; ToolCompare did not install Drupal, audit a module stack, test upgrades, benchmark hosting, verify accessibility or security, assess editor usability or calculate development and maintenance cost."]
+    }
   },
   {
     "slug": "joomla",
