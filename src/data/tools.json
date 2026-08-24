@@ -14395,21 +14395,112 @@
     "slug": "fossil",
     "name": "Fossil",
     "category": "Developer Tools",
-    "shortDescription": "Preserved remains or traces of organisms from a past geological age.",
+    "shortDescription": "Self-contained distributed SCM with wiki, tickets, forum and web interface.",
     "websiteUrl": "https://www.fossil-scm.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Fossil is BSD-licensed distributed source-control software that packages repository history, wiki, tickets, forum, documentation and a web interface in one executable and repository file. It can work locally and synchronize with another Fossil repository, but teams self-hosting it must operate the server, TLS or proxy layer, access policy, repository files and backups.",
+    "pros": [
+      "Integrated project data: Version history, wiki, tickets, forum and documentation travel with a cloned repository.",
+      "Single executable: Core project functions and the web interface are delivered through one Fossil program.",
+      "Offline workflow: Local repositories can record code and project-content changes before later synchronization.",
+      "Serving options: A repository can be served directly or through supported CGI and web-server arrangements."
+    ],
+    "cons": [
+      "Self-hosting responsibility: Public service requires server configuration, TLS, permissions, updates, monitoring and backups.",
+      "Fossil-specific ecosystem: Contributors and integrations must support Fossil rather than assume Git-compatible workflows.",
+      "Single-file care: Repository content is convenient to copy, but file permissions, integrity checks and tested recovery remain operational duties.",
+      "Built-in workflow fit: Teams needing a different review, issue or identity model must validate integrations or adapt their process."
+    ],
+    "keyFeatures": [
+      { "title": "Distributed version control", "description": "Clones, commits and synchronizes repository history between Fossil instances." },
+      { "title": "Built-in web UI", "description": "Shows timelines, diffs, files, tickets, wiki, forum and historical downloads." },
+      { "title": "Project knowledge", "description": "Stores wiki, embedded documentation and ticket history with repository data." },
+      { "title": "Self-hosted server", "description": "Serves one or multiple repositories directly or through supported CGI setups." }
+    ],
+    "targetAudience": "Small technical teams and projects that prefer an integrated self-hosted development system over assembling separate repository, wiki and ticket services.",
+    "bestFor": [
+      "Projects that want source history, tickets, wiki and forum replicated together",
+      "Teams comfortable administering a compact Fossil server and repository backups",
+      "Workflows whose contributors and automation explicitly support Fossil"
+    ],
+    "skipIf": [
+      "Required CI, IDE or deployment systems only accept Git repositories",
+      "The organization needs a managed SaaS identity, compliance and support package",
+      "Its review and issue process cannot fit or integrate with Fossil's built-in model"
+    ],
+    "verdict": "Choose Fossil when its integrated repository and project tools reduce more complexity than its smaller ecosystem adds; test the contributor toolchain and recovery process before adoption.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Fossil — Quick start", "url": "https://fossil-scm.org/home/doc/trunk/www/quickstart.wiki", "checkedAt": "2026-08-24", "supports": ["repository creation", "clone and sync", "local commits", "web UI", "server command", "single repository file"] },
+        { "label": "Fossil — Web interface", "url": "https://fossil-scm.org/home/doc/trunk/www/webui.wiki", "checkedAt": "2026-08-24", "supports": ["tickets", "wiki", "documentation", "timeline", "file history", "archive downloads", "offline project content"] },
+        { "label": "Fossil — CGI serving", "url": "https://fossil-scm.org/home/doc/trunk/www/server/any/cgi.md", "checkedAt": "2026-08-24", "supports": ["CGI deployment", "single and multiple repositories", "filesystem permissions", "temporary files", "TLS proxy configuration", "client compatibility"] },
+        { "label": "Fossil — Self-hosting repositories", "url": "https://fossil-scm.org/home/doc/trunk/www/selfhost.wiki", "checkedAt": "2026-08-24", "supports": ["multiple synchronized servers", "read-write replicas", "scheduled sync", "GitHub mirror example", "CGI deployment"] },
+        { "label": "Fossil — BSD license", "url": "https://fossil-scm.org/home/doc/trunk/COPYRIGHT-BSD2.txt", "checkedAt": "2026-08-24", "supports": ["BSD two-clause license", "source and binary redistribution", "copyright conditions", "warranty disclaimer"] }
+      ],
+      "limitations": ["Official project documentation was reviewed; ToolCompare did not operate a Fossil server, migrate a repository, test integrations, audit permissions, benchmark synchronization, validate security or exercise backup and disaster recovery."]
+    }
   },
   {
     "slug": "buildbot",
     "name": "Buildbot",
     "category": "Developer Tools",
-    "shortDescription": "Continuous integration testing framework.",
+    "shortDescription": "Open-source framework for operating configurable CI build masters and workers.",
     "websiteUrl": "https://www.buildbot.net/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Buildbot is a GPL-licensed Python framework for running continuous-integration build and test workflows on one buildmaster and one or more connected workers. It supplies schedulers, builders, status interfaces and a REST API, but it is self-operated software: teams provision worker environments, repositories, databases, authentication, secrets, upgrades, logs and build isolation.",
+    "pros": [
+      "Programmable workflows: Python configuration can describe arbitrary project-specific build steps and schedulers.",
+      "Worker diversity: Builders can target workers on different platforms and purpose-built environments.",
+      "Master and worker separation: Workers connect to the buildmaster and can sit behind a firewall while reaching source repositories.",
+      "Public REST API: Versioned endpoints expose Buildbot data and supported control operations."
+    ],
+    "cons": [
+      "Platform operations: Buildmaster, workers, database, web service, upgrades, availability and backups are customer-managed.",
+      "Untrusted-code risk: Worker accounts and environments need least privilege and isolation when builds execute contributor-controlled code.",
+      "Scale planning: Documentation recommends moving beyond default SQLite as builders, workers and users grow.",
+      "Configuration expertise: Flexible Python configuration increases ownership for testing, review and safe rollout of CI changes."
+    ],
+    "keyFeatures": [
+      { "title": "Buildmaster", "description": "Schedules build requests and decides which configured builders and workers execute them." },
+      { "title": "Workers", "description": "Run source checkout and arbitrary build steps in team-provisioned environments." },
+      { "title": "Schedulers and builders", "description": "Translate changes, timers or requests into concrete step-based builds." },
+      { "title": "Web and REST interfaces", "description": "Publishes status and provides versioned read and control endpoints with configured authentication." }
+    ],
+    "targetAudience": "Engineering organizations that need highly customized self-hosted CI and can operate Python services, databases and isolated build workers.",
+    "bestFor": [
+      "Projects requiring custom build logic across heterogeneous worker platforms",
+      "Teams willing to maintain CI configuration as Python code and operate the full service",
+      "Organizations able to isolate untrusted builds and manage secrets outside build logs"
+    ],
+    "skipIf": [
+      "You need a turnkey managed CI service with hosted workers and support included",
+      "No platform owner can maintain masters, databases, workers, logs and upgrades",
+      "Contributor-controlled builds cannot be isolated from credentials and sensitive infrastructure"
+    ],
+    "verdict": "Choose Buildbot for custom CI orchestration when operating the platform is an intentional engineering responsibility; prove worker isolation, secret handling, database scale and recovery before making it a release gate.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Buildbot Docs — Introduction", "url": "https://docs.buildbot.net/current/manual/introduction.html", "checkedAt": "2026-08-24", "supports": ["CI framework scope", "GPL license", "buildmaster and workers", "worker platforms", "source checkout requirement", "firewall topology", "arbitrary build steps"] },
+        { "label": "Buildbot Docs — Installation", "url": "https://docs.buildbot.net/current/manual/installation/index.html", "checkedAt": "2026-08-24", "supports": ["master and worker packages", "Python requirements", "PyPI installation", "web plugins", "worker setup", "least-privilege guidance"] },
+        { "label": "Buildbot Docs — Concepts", "url": "https://docs.buildbot.net/current/manual/concepts.html", "checkedAt": "2026-08-24", "supports": ["schedulers", "builders", "build requests", "build steps", "workers", "parallel capacity", "worker consistency"] },
+        { "label": "Buildbot Docs — Secret management", "url": "https://docs.buildbot.net/current/manual/secretsmanagement.html", "checkedAt": "2026-08-24", "supports": ["secret providers", "interpolation", "file secrets", "Vault integration", "configuration responsibility"] },
+        { "label": "Buildbot Docs — REST API", "url": "https://docs.buildbot.net/current/developer/rest.html", "checkedAt": "2026-08-24", "supports": ["public REST API", "API versioning", "JSON responses", "filtering and pagination", "control operations", "authentication", "OAuth2 API limitation"] },
+        { "label": "Buildbot Docs — Deployment", "url": "https://docs.buildbot.net/current/manual/deploy.html", "checkedAt": "2026-08-24", "supports": ["default SQLite", "database scaling guidance", "worker monitoring", "log retention", "restart and reconnect behavior", "deployment maintenance"] }
+      ],
+      "limitations": ["Official Buildbot documentation was reviewed; ToolCompare did not install a master or worker, execute untrusted builds, test authentication or secrets, benchmark database scale, assess plugins, perform upgrades or verify backup and recovery."]
+    }
   },
   {
     "slug": "hudson",
