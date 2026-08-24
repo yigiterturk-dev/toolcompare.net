@@ -16173,57 +16173,170 @@
     "slug": "gandi",
     "name": "Gandi",
     "category": "Hosting",
-    "shortDescription": "Domain registrar and web hosting company.",
+    "shortDescription": "Domain registrar with LiveDNS, DNSSEC, forwarding, privacy controls, API, email and hosting add-ons.",
     "websiteUrl": "https://www.gandi.net/",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Gandi is a domain registrar and hosting provider with a long-standing reputation for straightforward dealing.",
+    "isFlat": false,
+    "fiyatModeli": "degisken",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Gandi is an ICANN-oriented domain registrar with a large TLD catalog plus Anycast LiveDNS, DNSSEC, web and email forwarding, WHOIS privacy where registries permit it, an API, SSL and separate email/hosting products. Domain cost is not flat: creation, transfer, renewal, owner change and post-expiry restore differ by extension, country, currency, tax and promotional period. A low first-year price can therefore be far below the recurring renewal price.",
     "pros": [
-      "Transparent pricing without renewal tricks",
-      "Includes mail and TLS on many domains",
-      "Strong privacy stance"
+      "Published lifecycle pricing: Gandi exposes creation, transfer, renewal, owner-change and restore prices by TLD.",
+      "Included DNS tooling: LiveDNS provides Anycast nameservers, DNSSEC, templates and record history/rollback capabilities.",
+      "Domain automation: A public API and bulk configuration tools support portfolio administration.",
+      "Privacy controls: WHOIS masking is enabled by default where registry rules allow it, with WebAuthn account MFA available."
     ],
     "cons": [
-      "Domain prices are above the cheapest registrars",
-      "Hosting products are secondary",
-      "Interface changes have annoyed long-time users"
+      "Renewal can dwarf registration: The reviewed .com example was €11 to register and €31.98 to renew before tax in France.",
+      "Promotions are temporary: Registry campaigns, exchange rates and country pricing can change both availability and cost.",
+      "Privacy is not universal: Registry policy, registrant type and jurisdiction can prevent complete WHOIS masking.",
+      "Bundled services have boundaries: Free SSL is described as first-year and hosting/mail products require their own entitlement review."
     ],
-    "targetAudience": "People who want a registrar that does not play pricing games.",
-    "verdict": "You pay a little more and get less nonsense. For many that is the right trade."
+    "keyFeatures": [
+      { "title": "Domain lifecycle", "description": "Registers, transfers, renews, changes ownership and restores supported extensions." },
+      { "title": "LiveDNS", "description": "Hosts Anycast DNS with DNSSEC, templates, bulk operations and managed record changes." },
+      { "title": "Privacy and security", "description": "Offers registry-dependent WHOIS masking, account MFA and domain activity controls." },
+      { "title": "API and delegation", "description": "Automates domain/DNS work and delegates scoped permissions through organizations and teams." }
+    ],
+    "targetAudience": "Individuals and organizations prioritizing domain operations and DNS tooling over the lowest promotional registration price.",
+    "bestFor": [
+      "Domain portfolios needing API-driven DNS, templates and delegated administration",
+      "Registrants who compare registration, renewal, transfer and restore cost for each exact TLD",
+      "Teams wanting registrar, DNS, forwarding and optional email/hosting in one account"
+    ],
+    "skipIf": [
+      "The decision uses only a first-year promotion and ignores recurring renewal or restore fees",
+      "The required TLD does not permit the expected privacy, transfer or ownership workflow",
+      "Domain access, recovery contacts, MFA and off-provider DNS exports are not governed"
+    ],
+    "verdict": "Gandi can suit operationally serious domain portfolios, but evaluate each TLD over several years; secure account and registry contacts, export DNS records, test API automation, and document renewal, transfer and expiry recovery before moving critical domains.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Gandi — Domains", "url": "https://www.gandi.net/en/domain", "checkedAt": "2026-08-24", "supports": ["registration transfer and renewal price separation", "current sample TLD prices", "LiveDNS DNSSEC and templates", "first-year SSL", "forwarding and aliases", "free API", "WebAuthn MFA", "support schedule"] },
+        { "label": "Gandi — Full TLD pricing", "url": "https://www.gandi.net/en-US/domain/tld", "checkedAt": "2026-08-24", "supports": ["creation transfer renewal owner-change and restore columns", "US currency and tax context", "premium and registry variation", "exchange-rate changes", "corporate pricing grids"] },
+        { "label": "Gandi Docs — Domain names", "url": "https://docs.gandi.net/en/domain_names/", "checkedAt": "2026-08-24", "supports": ["domain management scope", "WHOIS privacy", "DNS records and nameservers", "manual and automatic renewal", "expiry restoration", "incoming transfer procedures", "bulk management"] },
+        { "label": "Gandi Help — Private WHOIS", "url": "https://helpdesk.gandi.net/hc/en-us/articles/14001556201756-Private-Whois", "checkedAt": "2026-08-24", "supports": ["default privacy setting", "redacted data", "anonymized email", "registry-dependent availability", "individual and organization distinction", "consent to publication when disabled"] },
+        { "label": "Gandi — Promotions", "url": "https://www.gandi.net/en-US/discounts", "checkedAt": "2026-08-24", "supports": ["time-limited registration promotions", "registry campaign variability", "included DNS DNSSEC SSL and support positioning"] },
+        { "label": "Gandi — Contracts", "url": "https://www.gandi.net/en/contracts/terms-of-service", "checkedAt": "2026-08-24", "supports": ["service-specific contracts", "domain registration terms", "DNS and SSL contractual separation"] }
+      ],
+      "limitations": ["Official Gandi product, price, documentation, help and contract-index pages were reviewed; ToolCompare did not register, renew, transfer or restore a domain, inspect checkout tax, test LiveDNS/API/MFA, validate every TLD rule, use email/hosting, contact support, or obtain corporate pricing. Sample prices are date-, country-, currency- and extension-specific and may change."]
+    }
   },
   {
     "slug": "name-com",
     "name": "Name.com",
     "category": "Hosting",
-    "shortDescription": "American internet services company.",
+    "shortDescription": "Domain registrar with DNS, Domain Safe privacy/security, transfer tools, REST API and optional hosting/email products.",
     "websiteUrl": "https://www.name.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "degisken",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Name.com is an ICANN-accredited registrar, part of Identity Digital, offering domains, DNS, forwarding, Domain Safe privacy/security, a REST API and separately sold hosting, WordPress, email, SSL and site-builder services. Domain pricing varies by TLD and individual name; premium domains can carry different registration, transfer and renewal prices. Eligible new registrations include free Domain Safe with WHOIS privacy, SSL and security locks, but registry restrictions mean privacy is not available for every extension.",
+    "pros": [
+      "Domain-focused controls: Registration, renewal, nameservers, DNS records, forwarding and transfer workflows are centralized.",
+      "Included eligible-domain protection: Domain Safe adds WHOIS privacy, SSL and essential locks to supported registrations.",
+      "Automation: The current CORE REST API includes production and sandbox endpoints for domains, DNS and privacy.",
+      "Transfer bundle: Incoming transfers generally include a renewal plus eligible privacy and SSL benefits."
+    ],
+    "cons": [
+      "No single domain price: Standard lists vary by TLD and specific premium names can cost more across lifecycle events.",
+      "Privacy exceptions: Some registries prohibit WHOIS privacy regardless of registrar packaging.",
+      "Advanced protection is separate: Domain Safe Pro and stricter Domain Lock Plus controls require their own purchase/setup path.",
+      "Transfer constraints: Age, recent transfer/contact changes, lock state, authorization code and TLD rules can delay movement."
+    ],
+    "keyFeatures": [
+      { "title": "Domain portfolio", "description": "Registers, renews, transfers and configures supported standard and premium domain names." },
+      { "title": "DNS and forwarding", "description": "Manages nameservers, record templates, URL forwarding and email routing." },
+      { "title": "Domain Safe", "description": "Bundles eligible WHOIS privacy, SSL and domain security locks with supported registrations." },
+      { "title": "CORE API", "description": "Provides versioned REST production and sandbox environments for automated domain operations." }
+    ],
+    "targetAudience": "Individuals, developers and small domain portfolios wanting registrar tools plus optional API automation and bundled protection.",
+    "bestFor": [
+      "Eligible domains where included privacy and basic security match requirements",
+      "Developer workflows that need a sandboxed API for domain and DNS automation",
+      "Incoming transfers after comparing exact TLD renewal and premium-name pricing"
+    ],
+    "skipIf": [
+      "The required TLD or registrant type cannot use WHOIS privacy",
+      "The purchase is based on a sale price without checking renewal, restore and premium fees",
+      "Critical domains would lack two-step verification, lock governance, recovery owners and DNS exports"
+    ],
+    "verdict": "Name.com is a capable registrar for modest portfolios and API users, but price the exact name through renewal and recovery, verify registry privacy rules, and secure transfers, account recovery and independent DNS records before consolidating critical domains.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Name.com — Domain catalog", "url": "https://www.name.com/domains", "checkedAt": "2026-08-24", "supports": ["TLD catalog", "standard and restricted extensions", "registry-driven pricing", "premium domains", "URL and email forwarding", "domain search"] },
+        { "label": "Name.com — Domain pricing", "url": "https://www.name.com/pricing", "checkedAt": "2026-08-24", "supports": ["standard-price scope", "individual-name variation", "premium-domain caveat", "TLD-dependent restore fee", "separate hosting products", "ICANN accreditation"] },
+        { "label": "Name.com — Domain transfer", "url": "https://www.name.com/domain-transfer", "checkedAt": "2026-08-24", "supports": ["incoming transfer workflow", "renewal inclusion", "privacy and SSL inclusion", "60-day restrictions", "unlock and authorization code", "premium transfer and renewal caveat"] },
+        { "label": "Name.com Support — WHOIS privacy", "url": "https://www.name.com/support/articles/205934677-adding-whois-privacy", "checkedAt": "2026-08-24", "supports": ["free Domain Safe on eligible registrations", "WHOIS privacy SSL and locks", "registry privacy exceptions", "Domain Safe Pro distinction", "privacy-management workflow"] },
+        { "label": "Name.com CORE API — Overview", "url": "https://docs.name.com/api/v1/overview", "checkedAt": "2026-08-24", "supports": ["domain DNS and privacy API scope", "REST interface", "production and sandbox endpoints", "path-based versioning"] },
+        { "label": "Name.com Support — Domain Lock Plus", "url": "https://www.name.com/support/articles/360001399428-enabling-domain-lock-plus", "checkedAt": "2026-08-24", "supports": ["two-step verification prerequisite", "internal and external transfer lock", "contact nameserver and privacy-change restrictions", "paid advanced protection"] },
+        { "label": "Name.com — Support center", "url": "https://www.name.com/support", "checkedAt": "2026-08-24", "supports": ["domain DNS renewal transfer hosting email and account documentation", "24/7 chat and ticket positioning"] }
+      ],
+      "limitations": ["Official Name.com catalog, pricing, transfer, support and API pages were reviewed; ToolCompare did not create an account, price or buy a specific domain, test checkout, renew, transfer or restore a name, use DNS/API/sandbox, enable two-step verification or locks, validate every registry policy, or evaluate hosting/email products. Prices and eligibility vary by domain, TLD, location and date."]
+    }
   },
   {
     "slug": "plesk",
     "name": "Plesk",
     "category": "Hosting",
-    "shortDescription": "Web hosting and data center automation software.",
+    "shortDescription": "Licensed server control panel for websites, domains, DNS, mail, databases, WordPress and hosting accounts.",
     "websiteUrl": "https://www.plesk.com/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Plesk is a server control panel for managing websites, domains, mail and databases without the command line.",
+    "basePrice": 12.04,
+    "isFlat": false,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Plesk Obsidian is proprietary server-management software installed on a separately purchased VPS or dedicated server. Web Admin, Web Pro and Web Host licenses apply per server and allow up to 10, 30 or unlimited domains, with edition-specific WordPress, developer, reseller and security capabilities. VPS and dedicated license types describe the permitted host environment, not different features. Plesk simplifies administration but the operator still owns server capacity, OS lifecycle, credentials, extension risk, monitoring and recoverable off-server backups.",
     "pros": [
-      "Manages many sites from one interface",
-      "Works on Linux and Windows",
-      "Extension ecosystem"
+      "Centralized administration: Manages sites, subscriptions, DNS, mail, databases, certificates and server settings from one panel.",
+      "Role-based editions: Domain limits and hosting-provider functions scale from owner to agency and reseller use cases.",
+      "WordPress tooling: Web Pro and Host include fuller WP Toolkit capabilities than Admin's limited SE edition.",
+      "Backup flexibility: Schedules full or incremental backups at server, account or subscription scope to local or external storage."
     ],
     "cons": [
-      "Licence cost per server",
-      "Adds its own layer to debug",
-      "Less relevant for containerised setups"
+      "Two bills: Plesk is not hosting, so infrastructure and any paid extensions are additional to the per-server license.",
+      "Edition limits matter: Web Admin stops at 10 domains and Web Pro at 30; reseller and multitenant functions require Host.",
+      "Panel exposure: A privileged internet-facing control plane increases patching, MFA, firewall and monitoring requirements.",
+      "Local backup coupling: Backups stored only on the managed server can disappear with server or subscription loss."
     ],
-    "targetAudience": "Agencies and hosts managing many sites on their own servers.",
-    "verdict": "Saves real time at scale. A single application server does not need it."
+    "keyFeatures": [
+      { "title": "Hosting control panel", "description": "Administers websites, domains, subscriptions, users, DNS, mail, databases and certificates." },
+      { "title": "Three editions", "description": "Maps Web Admin, Pro and Host to 10, 30 and unlimited-domain operational models." },
+      { "title": "WordPress management", "description": "Adds plan-dependent installation, staging, updates, security and site administration tools." },
+      { "title": "Backup and restore", "description": "Creates scheduled full or incremental archives locally or on configured external storage." }
+    ],
+    "targetAudience": "Site owners, agencies and hosting providers managing multiple conventional web stacks on their own servers.",
+    "bestFor": [
+      "Agencies standardizing PHP/WordPress, mail and database operations across many sites",
+      "Hosting providers needing subscriptions, accounts and reseller separation on supported servers",
+      "Teams whose domain count, extensions and OS lifecycle fit a priced edition"
+    ],
+    "skipIf": [
+      "A managed hosting service is expected to supply and operate the underlying server",
+      "The architecture is predominantly immutable containers or serverless services with little panel-managed state",
+      "The team cannot harden the panel, patch the OS and test encrypted off-server recovery"
+    ],
+    "verdict": "Plesk can reduce repetitive multi-site administration, but it does not outsource server operations; choose the edition by real domain and tenant count, price infrastructure and extensions, restrict privileged access, and restore an encrypted off-server backup before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Plesk — Pricing and editions", "url": "https://www.plesk.com/pricing/", "checkedAt": "2026-08-24", "supports": ["current VPS yearly prices", "Web Admin Pro and Host editions", "10 30 and unlimited domains", "WP Toolkit differences", "per-server licensing", "VPS and dedicated license types", "two-week trial", "automatic renewal", "14-day direct-store refund", "VAT exclusion", "hosting not included"] },
+        { "label": "Plesk Support — Purchasing a license", "url": "https://support.plesk.com/hc/en-us/articles/12378029233687-How-to-purchase-a-new-Plesk-license-in-Plesk-Online-Store", "checkedAt": "2026-08-24", "supports": ["monthly and yearly lease only", "three editions", "one subscription and invoice per license", "extensions during checkout", "payment methods", "online-store quote boundary"] },
+        { "label": "Plesk Docs — Backup and restoration", "url": "https://docs.plesk.com/en-US/obsidian/administrator-guide/backing-up-and-restoration.59256/", "checkedAt": "2026-08-24", "supports": ["server account and subscription backup", "scheduled backups", "configuration and content scope", "full and incremental modes", "internal and external storage", "deletion coupling"] },
+        { "label": "Plesk Docs — Hardware requirements", "url": "https://docs.plesk.com/release-notes/obsidian/hardware-requirements/", "checkedAt": "2026-08-24", "supports": ["server installation requirement", "memory disk and swap guidance", "workload-dependent sizing"] },
+        { "label": "Plesk Docs — Software requirements", "url": "https://docs.plesk.com/release-notes/obsidian/software-requirements/", "checkedAt": "2026-08-24", "supports": ["supported Linux and Windows systems", "architecture and virtualization requirements", "database and component compatibility", "OS lifecycle dependency"] },
+        { "label": "Plesk — Lifecycle policy", "url": "https://www.plesk.com/lifecycle-policy/", "checkedAt": "2026-08-24", "supports": ["product support lifecycle", "version maintenance and end-of-life implications", "update responsibility"] }
+      ],
+      "limitations": ["Official Plesk pricing, support, documentation and lifecycle pages were reviewed; ToolCompare did not purchase or install Plesk, validate displayed regional checkout, provision a server, test the API, panel security, WordPress Toolkit, mail, extensions, migration, updates, resource usage, backup encryption or restoration, or compare reseller/cloud-marketplace terms. Prices, supported operating systems and bundled features may change."]
+    }
   },
   {
     "slug": "alibaba-cloud",
