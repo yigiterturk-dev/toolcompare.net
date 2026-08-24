@@ -36,7 +36,8 @@ export default function TopPicksPage() {
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto' }}>
             These are the {topPicks.length} highest-scoring tools across our whole directory of {toolsData.length},
             ranked by ease of use plus feature depth. No one paid to be here, and this is a score — not a
-            claim that these are right for your team.
+            claim that these are right for your team.{' '}
+            <Link href="/methodology" style={{ color: 'var(--brand-tertiary)' }}>How we score tools</Link>.
           </p>
         </div>
 

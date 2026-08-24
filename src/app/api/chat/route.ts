@@ -19,9 +19,19 @@ import OpenAI from 'openai';
 import toolsData from '@/data/tools.json';
 import { hizFreni, istekKaynagi } from '@/lib/adminAuth';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+/**
+ * Istemci TEMBEL kuruluyor.
+ *
+ * Onceden modul seviyesindeydi: `next build` sayfa verisini toplarken bu
+ * modulu calistiriyor ve OPENAI_API_KEY yoksa BUILD PATLIYORDU. Yani
+ * anahtar env'den bir gun duserse deploy da duserdi -- oysa bu uc,
+ * anahtar olmadan sadece hata donmeliydi, tum siteyi dusurmemeliydi.
+ */
+let _openai: OpenAI | null = null;
+function openaiAl(): OpenAI {
+  if (!_openai) _openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  return _openai;
+}
 
 /** Kullanici mesajinin ust siniri. Uzun govde = yuksek jeton maliyeti. */
 const MESAJ_SINIRI = 1000;
@@ -72,7 +82,7 @@ export async function POST(request: Request) {
 
     Answer in English.`;
 
-    const completion = await openai.chat.completions.create({
+    const completion = await openaiAl().chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: systemPrompt },

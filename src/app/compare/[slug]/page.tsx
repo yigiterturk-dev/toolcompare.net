@@ -148,7 +148,8 @@ export default async function ComparisonPage({ params }: any) {
             </li>
           </ul>
           <p style={{ color: '#666', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
-            These lines are generated from the scores and prices we track, not from a paid placement. They cannot tell you which tool fits <em>your</em> workflow — the sections below are there for that.
+            These lines are generated from the scores and prices we track, not from a paid placement. They cannot tell you which tool fits <em>your</em> workflow — the sections below are there for that.{' '}
+            <Link href="/methodology" style={{ color: 'var(--brand-primary)' }}>How we score tools</Link>.
           </p>
         </div>
 

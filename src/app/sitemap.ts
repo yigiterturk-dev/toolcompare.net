@@ -23,6 +23,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/privacy',
     '/terms',
+    '/methodology',
+    // Metodoloji sayfasindan link aliyor; sitemap disinda kalmasin.
+    '/submit',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

@@ -1,0 +1,33 @@
+# ToolCompare
+
+> Independent comparisons of SaaS and software tools: pricing, ease of use,
+> feature depth, pros and cons. No vendor pays for placement.
+
+ToolCompare tracks software tools and publishes side-by-side comparisons,
+category rankings and alternative lists. Every ranking comes from our own
+scores, not from paid placement.
+
+## How to read our data
+
+- Prices are the published starting price where we could verify one.
+  Tools with usage-based pricing (for example Stripe or AWS) or with a free
+  tier are marked as such and are deliberately excluded from "cheapest"
+  claims rather than being shown as $0.
+- Scores ("ease of use", "feature depth") are our own editorial scores.
+  They are not vendor-supplied and not independently audited.
+- We do not publish star ratings or review counts, because we do not
+  collect them.
+
+## Main sections
+
+- /: full directory of tracked tools
+- /categories: tools grouped by category, ranked
+- /compare/<tool-a>-vs-<tool-b>: side-by-side comparison of two tools
+- /alternatives/<tool>: ranked alternatives to a tool
+- /tools/<tool>: full review of a single tool
+- /top-picks: highest-scoring tools across the whole directory
+- /terms: how we make money
+
+## Contact
+
+https://toolcompare.net/contact

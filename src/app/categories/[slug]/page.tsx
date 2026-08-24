@@ -92,7 +92,8 @@ export default async function CategoryPage({ params }: any) {
 
         <p style={{ color: '#666', fontSize: '0.9rem', maxWidth: '70ch', marginTop: '1rem' }}>
           No vendor has paid for a position on this page. The order comes from the scores we track, and
-          those scores cannot tell you which tool fits your team — read the individual reviews for that.
+          those scores cannot tell you which tool fits your team — read the individual reviews for that.{' '}
+          <Link href="/methodology" style={{ color: 'var(--brand-primary)' }}>How we score tools</Link>.
         </p>
 
         <ol style={{ listStyle: 'none', padding: 0, margin: '3rem 0 0' }}>

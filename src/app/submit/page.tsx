@@ -57,7 +57,7 @@ export default function SubmitToolPage() {
             </div>
 
             <div style={{ background: 'rgba(99, 102, 241, 0.05)', border: '1px solid rgba(99, 102, 241, 0.2)', padding: '2rem', borderRadius: '24px' }}>
-               <h4 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'white' }}><Shield size={18} color="var(--brand-primary)" /> Why list with us?</h4>
+               <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'white' }}><Shield size={18} color="var(--brand-primary)" /> Why list with us?</h2>
                <ul style={{ listStyle: 'none', padding: 0, color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Zap size={14} color="var(--brand-primary)" /> High-authority backlink for your SEO.</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Zap size={14} color="var(--brand-primary)" /> Targeted traffic from software decision-makers.</li>

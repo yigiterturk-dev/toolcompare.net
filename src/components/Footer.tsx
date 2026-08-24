@@ -49,6 +49,7 @@ export default function Footer() {
         <div>
           <h2 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Support</h2>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+            <li><Link href="/methodology" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>How We Score Tools</Link></li>
             <li><Link href="/terms" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Terms of Service</Link></li>
             <li><Link href="/privacy" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Privacy Policy</Link></li>
             <li><Link href="/contact" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Contact Us</Link></li>
