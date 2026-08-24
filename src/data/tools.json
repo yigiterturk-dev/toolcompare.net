@@ -12581,7 +12581,7 @@
     "slug": "pinecone",
     "name": "Pinecone",
     "category": "AI Tools",
-    "shortDescription": "Managed vector database.",
+    "shortDescription": "Managed vector search with serverless usage-based billing.",
     "websiteUrl": "https://www.pinecone.io",
     "incelendi": true,
     "basePrice": 0,
@@ -12593,25 +12593,54 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Pinecone is a managed vector database for similarity search, commonly used for retrieval in AI applications.",
+    "longDescription": "Pinecone is a managed search service for vector and document retrieval. Serverless indexes charge for read units, write units and storage; namespaces partition records and can isolate tenant workloads, while plan-specific quotas constrain indexes, storage, namespaces and backups.",
     "pros": [
-      "Fully managed, scales without tuning",
-      "Fast similarity search at large scale",
-      "Mature tooling and documentation"
+      "Managed serverless operation: Compute and storage provisioning is handled by the service.",
+      "Namespace partitioning: Queries and writes target one namespace at a time.",
+      "Metadata filtering: Filter expressions can narrow results using stored record metadata.",
+      "Usage visibility: Operations report units and the console provides cost breakdowns."
     ],
     "cons": [
-      "Costs more than self-hosted alternatives",
-      "Vendor lock-in for your index",
-      "Overkill for small datasets"
+      "Workload-sensitive cost: Query units grow with the size of the targeted namespace.",
+      "Plan quotas: Index, storage, namespace and backup limits vary by subscription tier.",
+      "Eventual consistency: A read immediately after a write may not return the latest state.",
+      "Backup availability: Serverless backups are unavailable on Starter and Builder plans."
     ],
-    "targetAudience": "Teams running retrieval at scale who do not want to operate a database.",
-    "verdict": "Reliable and boring in the good sense. Under a few hundred thousand vectors, cheaper options do the job."
+    "keyFeatures": [
+      { "title": "Serverless indexes", "description": "Stores and searches vectors without customer-managed database compute." },
+      { "title": "Namespaces", "description": "Partitions records for tenant isolation, scoped operations and cost control." },
+      { "title": "Metadata filters", "description": "Restricts retrieval using comparison and logical operators over metadata." },
+      { "title": "Usage metering", "description": "Bills serverless storage and read/write operations using documented units." }
+    ],
+    "targetAudience": "Teams that want a managed retrieval service and can design namespace boundaries around cost, isolation and plan quotas.",
+    "bestFor": [
+      "Applications that do not want to operate vector-search infrastructure",
+      "Multi-tenant designs that can use a namespace per tenant",
+      "Teams able to monitor read units, write units and storage by workload"
+    ],
+    "skipIf": [
+      "You require a self-hosted or open-source database deployment",
+      "Your consistency model requires every immediate post-write read to show the latest state",
+      "Your required indexes, regions, storage or backups exceed the selected plan's limits"
+    ],
+    "verdict": "Choose Pinecone when managed operations and namespace isolation justify a service-specific data model; estimate cost from real namespace sizes and request patterns before committing.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Pinecone Docs — Understanding cost", "url": "https://docs.pinecone.io/guides/manage-cost/understanding-cost", "checkedAt": "2026-08-24", "supports": ["serverless billing dimensions", "read units", "write units", "storage charges", "namespace-size query cost"] },
+        { "label": "Pinecone Docs — Indexing overview", "url": "https://docs.pinecone.io/guides/index-data/indexing-overview", "checkedAt": "2026-08-24", "supports": ["namespaces", "metadata filters", "tenant partitioning", "filter operators"] },
+        { "label": "Pinecone Docs — Database limits", "url": "https://docs.pinecone.io/reference/api/database-limits", "checkedAt": "2026-08-24", "supports": ["plan-specific quotas", "serverless index limits", "storage limits", "namespace limits", "backup availability"] },
+        { "label": "Pinecone Docs — Data modeling", "url": "https://docs.pinecone.io/guides/index-data/data-modeling", "checkedAt": "2026-08-24", "supports": ["eventual consistency", "namespace cost behavior", "multi-tenant design tradeoffs"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently benchmark recall, latency, availability or total cost for a production dataset."]
+    }
   },
   {
     "slug": "weaviate",
     "name": "Weaviate",
     "category": "AI Tools",
-    "shortDescription": "Open-source vector database.",
+    "shortDescription": "Open-source vector database with keyword and vector retrieval.",
     "websiteUrl": "https://weaviate.io",
     "incelendi": true,
     "basePrice": 0,
@@ -12623,25 +12652,54 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Weaviate is an open-source vector database with hybrid search that combines keyword and vector matching.",
+    "longDescription": "Weaviate is a BSD-licensed vector database available as a managed cloud service or a self-managed deployment. Its hybrid search runs keyword and vector searches together and fuses their results, with configurable weighting between the two components.",
     "pros": [
-      "Hybrid keyword and vector search",
-      "Open source, self-hostable",
-      "Built-in vectorisation modules"
+      "Hybrid retrieval: Combines BM25 keyword and vector results in one query.",
+      "Deployment choice: Use Weaviate Cloud or run the same database yourself.",
+      "Permissive license: The database repository uses the BSD 3-Clause license.",
+      "Configurable fusion: Adjust keyword/vector weighting and result fusion behavior."
     ],
     "cons": [
-      "Operating a cluster takes work",
-      "Memory hungry at scale",
-      "Concepts take time to learn"
+      "Self-hosting responsibility: Production security, scaling, storage, monitoring and backups require configuration.",
+      "Cloud billing lifecycle: Paid clusters continue billing until they are deleted.",
+      "Version boundaries: Client examples target current releases and preview features may change.",
+      "Backup caveats: Restore compatibility and multi-tenant backup behavior depend on version and tenant state."
     ],
-    "targetAudience": "Teams that need both keyword precision and semantic recall.",
-    "verdict": "Hybrid search is the differentiator. Pure vector needs are served by simpler tools."
+    "keyFeatures": [
+      { "title": "Hybrid search", "description": "Runs BM25 and vector search in parallel and combines their scores." },
+      { "title": "Fusion controls", "description": "Supports relative-score or ranked fusion plus an alpha weighting parameter." },
+      { "title": "Managed or self-hosted", "description": "Offers Weaviate Cloud and Docker or Kubernetes deployment paths." },
+      { "title": "Backup and restore", "description": "Supports cloud-object-storage backups, selected collections and incremental backups." }
+    ],
+    "targetAudience": "Teams that need combined keyword and semantic retrieval and want a choice between managed cloud and self-managed infrastructure.",
+    "bestFor": [
+      "Search systems that benefit from tuning keyword and vector relevance together",
+      "Organizations that require an open-source self-hosting option",
+      "Teams willing to operate Kubernetes or pay for a managed cloud cluster"
+    ],
+    "skipIf": [
+      "Your search needs are satisfied by a small embedded or direct in-process index",
+      "You cannot own self-hosted production operations or accept cloud usage billing",
+      "Your backup plan has not been tested against the exact Weaviate and tenant configuration"
+    ],
+    "verdict": "Choose Weaviate when hybrid ranking controls and deployment choice matter; validate relevance tuning and operational requirements on your own dataset.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Weaviate Docs — Hybrid search", "url": "https://docs.weaviate.io/weaviate/concepts/search/hybrid-search", "checkedAt": "2026-08-24", "supports": ["BM25 and vector combination", "parallel retrieval", "fusion methods", "alpha weighting", "threshold limitations"] },
+        { "label": "Weaviate Docs — Installation guides", "url": "https://docs.weaviate.io/deploy/installation-guides", "checkedAt": "2026-08-24", "supports": ["managed cloud", "self-managed database", "Docker and Kubernetes paths", "Windows limitation", "release-candidate warning"] },
+        { "label": "Weaviate — Official repository", "url": "https://github.com/weaviate/weaviate", "checkedAt": "2026-08-24", "supports": ["open-source database", "BSD 3-Clause license", "objects and vectors", "deployment options"] },
+        { "label": "Weaviate Docs — Backups", "url": "https://docs.weaviate.io/deploy/configuration/backups", "checkedAt": "2026-08-24", "supports": ["backup providers", "selected collections", "incremental backups", "restore version caveat", "multi-tenant limitations"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently benchmark retrieval quality, memory use, scaling behavior or cloud cost."]
+    }
   },
   {
     "slug": "qdrant",
     "name": "Qdrant",
     "category": "AI Tools",
-    "shortDescription": "Open-source vector search engine.",
+    "shortDescription": "Open-source vector search with managed and private deployment options.",
     "websiteUrl": "https://qdrant.tech",
     "incelendi": true,
     "basePrice": 0,
@@ -12653,19 +12711,48 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Qdrant is an open-source vector database with filtering, written in Rust, available self-hosted or as a managed cloud.",
+    "longDescription": "Qdrant is an open-source vector search engine available as self-hosted software, Managed Cloud, Hybrid Cloud or Private Cloud. It supports payload filtering and multi-stage or hybrid queries; operational responsibilities and platform features differ by deployment model.",
     "pros": [
-      "Open source, self-hostable at no licence cost",
-      "Filtering alongside vector search",
-      "Good performance per unit of hardware"
+      "Deployment range: Choose open-source, managed, hybrid or private operation.",
+      "Payload filtering: Combine nested logical conditions with vector retrieval.",
+      "Hybrid queries: Fuse dense and sparse or other prefetch result sets.",
+      "Managed operations: Cloud tiers add scaling, monitoring, backups and high-availability options."
     ],
     "cons": [
-      "You operate it unless you buy the cloud",
-      "Smaller ecosystem than the incumbents",
-      "Tuning takes some learning"
+      "Open-source operations: Self-hosted production requires your own security, replication, upgrades and recovery work.",
+      "Storage constraint: Qdrant requires block storage and does not support NFS or object storage as its database filesystem.",
+      "Free-tier boundary: The free cloud cluster is single-node and has limited CPU, memory and disk.",
+      "Hybrid prerequisites: Qdrant-managed Hybrid Cloud requires an Enterprise plan and a suitable Kubernetes environment."
     ],
-    "targetAudience": "Teams that want vector search without a permanent per-query bill.",
-    "verdict": "The pragmatic choice when you can run infrastructure. Managed cloud is there when you cannot."
+    "keyFeatures": [
+      { "title": "Vector and payload search", "description": "Combines similarity retrieval with indexed structured filtering." },
+      { "title": "Hybrid Query API", "description": "Builds multi-stage searches with prefetches and result-fusion methods." },
+      { "title": "Multiple deployment models", "description": "Runs as open-source software or through managed, hybrid and private offerings." },
+      { "title": "Cloud operations", "description": "Paid managed clusters provide scaling, monitoring, backups and high-availability configurations." }
+    ],
+    "targetAudience": "Teams choosing between direct ownership of vector-search infrastructure and Qdrant-managed deployment models.",
+    "bestFor": [
+      "Retrieval workloads that combine vector search with structured payload filters",
+      "Teams that require an open-source self-hosted path",
+      "Organizations comparing managed cloud with Kubernetes-based hybrid deployment"
+    ],
+    "skipIf": [
+      "Your storage platform only exposes NFS or object storage to the database",
+      "You expect self-hosted high availability and upgrades without operational work",
+      "Your production requirements exceed the free tier and no paid resource budget is available"
+    ],
+    "verdict": "Choose Qdrant after selecting the operational model first; the open-source, managed and hybrid paths expose different responsibilities, safeguards and costs.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Qdrant Docs — Deployment overview", "url": "https://qdrant.tech/documentation/guides/", "checkedAt": "2026-08-24", "supports": ["open-source deployment", "managed cloud", "hybrid cloud", "private cloud", "feature boundaries", "strict mode"] },
+        { "label": "Qdrant Docs — Hybrid queries", "url": "https://qdrant.tech/documentation/search/hybrid-queries/", "checkedAt": "2026-08-24", "supports": ["Query API", "prefetch", "multi-stage queries", "dense and sparse fusion", "RRF and DBSF"] },
+        { "label": "Qdrant Docs — Installation", "url": "https://qdrant.tech/documentation/installation/", "checkedAt": "2026-08-24", "supports": ["CPU architectures", "block storage requirement", "unsupported NFS and object storage", "self-hosting responsibilities", "cloud feature differences"] },
+        { "label": "Qdrant — Pricing", "url": "https://qdrant.tech/pricing/", "checkedAt": "2026-08-24", "supports": ["free-tier resources", "usage-based paid cloud", "high availability", "hybrid and private offerings", "SLA tiers"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently benchmark search quality, throughput, resource efficiency, uptime or migration behavior."]
+    }
   },
   {
     "slug": "chroma",
