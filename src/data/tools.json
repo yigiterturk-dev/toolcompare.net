@@ -17169,31 +17169,168 @@
     "slug": "advania",
     "name": "Advania",
     "category": "Hosting",
-    "shortDescription": "Swedish information technology company.",
+    "shortDescription": "Northern European IT services group delivering consulting, managed infrastructure, cloud, security and lifecycle services.",
     "websiteUrl": "https://advania.is/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Advania is a Northern European IT services group operating through local teams across Nordic markets, the UK and Ireland. It is not a self-service commodity web host: its scope includes consulting, infrastructure, public and private cloud, cybersecurity, managed operations, backup, disaster recovery, software and hardware lifecycle services. Engagements combine recurring contracts, projects, billable work and third-party products; scope, service level, residency and price are defined by the local Advania entity and customer contract. ToolCompare therefore records quote-based pricing rather than inventing a universal hosting plan.",
+    "pros": [
+      "Broad operational scope: Advania can combine cloud, infrastructure, cybersecurity, support and lifecycle work in one engagement.",
+      "Local delivery model: Country teams are positioned to adapt service and regulatory context to the customer's market.",
+      "Managed and sovereign options: Published capabilities include public, private and sovereign cloud operating models.",
+      "Vendor-spanning integration: The group combines its services with major infrastructure, software and cloud ecosystems."
+    ],
+    "cons": [
+      "No public universal price: Cost and minimum commitment require discovery, design and a negotiated contract.",
+      "Country offerings differ: Service catalog, legal entity, certifications, data location and support can vary by market.",
+      "Contract clarity is essential: Responsibility for patches, backups, recovery, licenses and security depends on the statement of work and SLA.",
+      "Too broad for simple hosting: Small sites may not justify an enterprise managed-services procurement process."
+    ],
+    "keyFeatures": [
+      { "title": "Managed IT operations", "description": "Designs, operates and supports infrastructure and applications through contracted service engagements." },
+      { "title": "Cloud services", "description": "Covers public-cloud integration plus private, shared-sovereign and dedicated-sovereign patterns by market." },
+      { "title": "Cyber resilience", "description": "Combines security, governance, business continuity, backup and disaster-recovery capabilities." },
+      { "title": "Technology lifecycle", "description": "Provides consulting, procurement, implementation, support and asset-lifecycle services." }
+    ],
+    "targetAudience": "Mid-market, enterprise and public-sector organizations in Advania's served countries seeking a locally delivered managed-IT partner.",
+    "bestFor": [
+      "Organizations outsourcing a defined portion of infrastructure and application operations",
+      "Nordic or UK projects requiring locally contracted cloud, security and continuity services",
+      "Complex environments where vendor integration and ongoing managed support matter more than self-service pricing"
+    ],
+    "skipIf": [
+      "The requirement is a low-cost instant web-hosting account with public plan prices",
+      "The local Advania entity cannot evidence the needed region, certification or incident-response scope",
+      "The proposal leaves ownership of backups, restores, patching, keys, licenses or exit assistance ambiguous"
+    ],
+    "verdict": "Advania is a managed-services partner rather than a directly comparable web host; shortlist it for complex regional operations only after the local team maps responsibilities, data locations, subcontractors, service credits, exit rights and a fully loaded multiyear price.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Advania — Group home", "url": "https://advania.com/", "checkedAt": "2026-08-24", "supports": ["Nordic UK and Ireland local-team model", "infrastructure cloud cybersecurity AI managed-services and lifecycle scope", "end-to-end design build and run positioning", "customer-segment scale"] },
+        { "label": "Advania — Countries", "url": "https://www.advania.com/countries/", "checkedAt": "2026-08-24", "supports": ["country operating footprint", "local-service model", "regional variation boundary"] },
+        { "label": "Advania — VMware cloud provider announcement", "url": "https://new.advania.com/article/advania-new-vmware-cloud-service-provider-pinnacle-tier-partner-in-the-broadcom-advantage-partner-program", "checkedAt": "2026-08-24", "supports": ["managed VMware Cloud Foundation offering", "private-cloud service", "sovereign-cloud and residency positioning", "partner-dependent service boundary"] },
+        { "label": "Advania — Annual and Sustainability Report", "url": "https://www.advania.com/library?itemid=9cc396c5-5e89-4325-ae07-d2963f7b8ddb&type=pdf", "checkedAt": "2026-08-24", "supports": ["group operating markets", "service hardware software billable-work and contract revenue mix", "managed IT and cloud contract scope", "IaaS SaaS and PaaS examples", "country-segment variation"] },
+        { "label": "Advania — Denmark managed-services expansion", "url": "https://advania.com/article/advania-and-cortex-join-forces-to-drive-growth-in-denmark", "checkedAt": "2026-08-24", "supports": ["infrastructure cloud storage and backup scope", "mid-market and public/private customer focus", "recurring engagement model", "local continuity positioning"] }
+      ],
+      "limitations": ["Official Advania group, country, announcement and reporting sources were reviewed; ToolCompare did not request a proposal, execute an NDA, inspect a statement of work, compare local price books, verify certifications or subprocessors, visit a facility, test a managed cloud, measure support or incident response, audit backups, or perform disaster recovery. Services, entities, partners and contractual responsibilities vary by country and customer."]
+    }
   },
   {
     "slug": "joyent",
     "name": "Joyent",
     "category": "Hosting",
-    "shortDescription": "American software and services company.",
+    "shortDescription": "Legacy Joyent brand for Triton DataCenter, now stewarded and commercially supported by MNX.",
     "websiteUrl": "https://www.joyent.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Joyent developed Triton, a SmartOS-based platform for operating virtual machines, OS containers, networking and object storage. In May 2022, MNX became steward of Triton trademarks, portal licensing and customer support; Joyent product links now redirect to Triton DataCenter. The platform remains actively published as open-source components with REST APIs and operator/end-user portals, while supported builds are supplied through MNX. This is private-cloud software and engineering support, not a low-cost public hosting account: published configurations start at multiple physical hosts and annual or monthly enterprise commitments.",
+    "pros": [
+      "Unified VM and container model: SmartOS zones and KVM workloads share integrated networking, storage and management.",
+      "Open implementation: Triton and SmartOS components are publicly developed with inspectable source repositories.",
+      "Automation-first design: REST APIs, CLI tools and operator/end-user portals support self-service infrastructure.",
+      "Commercial continuity: MNX supplies QA-tested supported builds and tiered engineering support."
+    ],
+    "cons": [
+      "Brand transition adds confusion: Current ownership and support sit with MNX even though legacy Joyent URLs and documents remain.",
+      "High infrastructure floor: Production deployments require multiple physical servers, networking and experienced operators.",
+      "Open source is not supported distribution: Commercial customers must obtain the licensed, QA-tested build through MNX support.",
+      "Specialized stack: SmartOS, zones, ZFS, head nodes and Triton operations demand skills less common than mainstream Kubernetes or hyperscaler tooling."
+    ],
+    "keyFeatures": [
+      { "title": "Triton Compute", "description": "Operates infrastructure containers, KVM virtual machines, networks, images and bare-metal-style workloads." },
+      { "title": "SmartOS foundation", "description": "Uses an illumos-derived live operating system with zones, ZFS, DTrace and hardware virtualization." },
+      { "title": "Cloud APIs", "description": "Exposes public provisioning APIs, command-line clients and operator and end-user portals." },
+      { "title": "Private-cloud support", "description": "MNX offers licensed builds, updates, architecture guidance and tiered operational response commitments." }
+    ],
+    "targetAudience": "Infrastructure operators with physical data-center capacity and a specific need for SmartOS/Triton container and VM economics.",
+    "bestFor": [
+      "Existing Triton estates continuing under an explicit MNX support agreement",
+      "Private clouds that benefit from high-density SmartOS zones alongside KVM guests",
+      "Engineering teams capable of operating physical networking, ZFS, SmartOS and Triton control-plane services"
+    ],
+    "skipIf": [
+      "The requirement is an instant commodity public-cloud or shared-hosting account",
+      "The organization cannot staff a multi-host private cloud or contract MNX operations",
+      "The plan assumes community builds receive the same QA, security updates and SLA as licensed releases"
+    ],
+    "verdict": "Joyent's technology survives as MNX-stewarded Triton DataCenter, a distinctive but specialized private-cloud stack; use the current Triton/MNX contract and supported build as authority, validate hardware and staffing costs, and prove upgrades plus full recovery in a pilot before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Triton DataCenter — Transition FAQ", "url": "https://console.tritondatacenter.com/blog/triton-transition-faq", "checkedAt": "2026-08-24", "supports": ["May 2022 MNX support transition", "trademark and portal-license stewardship", "existing MSA and SLA assignment", "renewal under MNX", "Joyent-to-MNX distinction"] },
+        { "label": "Triton DataCenter — Compute", "url": "https://www.tritondatacenter.com/triton/compute", "checkedAt": "2026-08-24", "supports": ["open-source platform positioning", "VM container storage and network integration", "REST APIs and portals", "SmartOS foundation", "support categories"] },
+        { "label": "Triton DataCenter — Private-cloud pricing", "url": "https://console.tritondatacenter.com/pricing", "checkedAt": "2026-08-24", "supports": ["five-host minimums", "managed-hardware monthly starting example", "on-prem annual base and node prices", "head-node charges", "storage minimums", "contact-sales boundaries"] },
+        { "label": "Triton Docs — Obtaining Triton DataCenter", "url": "https://docs.tritondatacenter.com/private-cloud/install/download", "checkedAt": "2026-08-24", "supports": ["MNX-supported delivery channel", "licensed-hardware restriction", "QA-tested supported builds", "community-source distinction", "update instruction delivery"] },
+        { "label": "Triton DataCenter — Source repository", "url": "https://github.com/TritonDataCenter/triton", "checkedAt": "2026-08-24", "supports": ["open-source implementation", "head-node and compute-node architecture", "SmartOS zones and KVM", "REST API CLI and portals", "development minimum hardware", "production planning prerequisites"] },
+        { "label": "Triton DataCenter — On-premise support", "url": "https://console.tritondatacenter.com/triton/on-premise", "checkedAt": "2026-08-24", "supports": ["support scope", "Professional Silver Gold and Platinum tiers", "severity response targets", "support-hour differences", "implementation-services boundary", "security update and package entitlement"] }
+      ],
+      "limitations": ["Official Joyent-redirected Triton, MNX transition, documentation, pricing and source pages were reviewed; ToolCompare did not contact MNX, inspect a current MSA, license a build, procure five hosts, validate hardware compatibility, install or benchmark Triton, test APIs, zones, KVM, Manta, networking, upgrades, security response, support SLA or disaster recovery. Pricing examples and supported configurations require direct confirmation."]
+    }
   },
   {
     "slug": "openshift",
     "name": "OpenShift",
     "category": "Hosting",
-    "shortDescription": "Cloud computing software.",
+    "shortDescription": "Red Hat enterprise Kubernetes application platform available as self-managed software or managed cloud services.",
     "websiteUrl": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": true },
+    "longDescription": "Red Hat OpenShift is an enterprise Kubernetes application-platform family, not a single hosting plan. Self-managed editions range from Virtualization Engine and Kubernetes Engine through Container Platform and Platform Plus; managed services run with AWS, Microsoft, Google or IBM under different billing and responsibility models. The advertised $0.076 per hour floor is based on a 4-vCPU three-year reservation and still requires a minimum worker configuration, so it is not a complete cluster price. Trials and a developer sandbox exist, while production cost includes subscriptions or service fees plus infrastructure, storage, networking and operations.",
+    "pros": [
+      "Deployment choice: Run supported self-managed editions across data center, public cloud and edge, or buy a managed cloud service.",
+      "Integrated platform: Kubernetes, RHEL CoreOS, developer console, Operators, GitOps, pipelines and service mesh can form one supported stack.",
+      "Enterprise support model: Paid editions add Red Hat lifecycle, security and support around tested platform combinations.",
+      "Open upstream path: OKD provides the community Kubernetes distribution that powers OpenShift, with Apache-licensed project components."
+    ],
+    "cons": [
+      "Real cost is multi-part: Worker minimums, infrastructure, storage, networking, subscriptions and operations exceed the headline unit rate.",
+      "Operational burden varies sharply: Self-managed customers own platform and infrastructure, while managed-service responsibility matrices still leave customer duties.",
+      "Edition complexity: Platform Plus, Container Platform, Kubernetes Engine, Virtualization Engine and cloud services bundle different capabilities.",
+      "Cluster overhead is significant: Small applications may be cheaper and simpler on a basic PaaS or managed container runtime."
+    ],
+    "keyFeatures": [
+      { "title": "Enterprise Kubernetes", "description": "Runs containerized workloads on a security-focused Kubernetes and RHEL CoreOS foundation." },
+      { "title": "Developer platform", "description": "Adds console, Operators, build and deployment workflows, GitOps, pipelines, serverless and service mesh by edition." },
+      { "title": "Hybrid deployment", "description": "Supports validated on-premises, cloud and edge infrastructure with consistent APIs and operational patterns." },
+      { "title": "Managed services", "description": "Offers jointly or vendor-managed OpenShift services on major public-cloud platforms with product-specific SLAs." }
+    ],
+    "targetAudience": "Organizations standardizing container and application operations across multiple teams or environments and able to fund platform engineering or a managed service.",
+    "bestFor": [
+      "Regulated or large multi-team Kubernetes estates needing a supported platform and lifecycle",
+      "Hybrid-cloud application portfolios where consistent APIs and deployment controls justify the overhead",
+      "Organizations choosing a managed service to transfer defined control-plane, patching and monitoring duties"
+    ],
+    "skipIf": [
+      "A handful of simple applications do not justify a minimum multi-node cluster and platform team",
+      "The budget treats the advertised reserved vCPU rate as the complete production price",
+      "The team has not selected an edition and documented the exact provider/customer responsibility matrix"
+    ],
+    "verdict": "OpenShift is a mature enterprise application platform when standardization and support outweigh cluster overhead; choose the exact edition and operating model first, price infrastructure and labor separately, and prove upgrades, policy enforcement and workload recovery before scaling adoption.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Red Hat — OpenShift pricing", "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing", "checkedAt": "2026-08-24", "supports": ["self-managed and cloud-service models", "$0.076 reserved rate assumptions", "minimum worker requirement", "managed-service provider billing support and SLA distinctions", "edition hierarchy", "trial options", "variable self-managed pricing"] },
+        { "label": "Red Hat — OpenShift product family", "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift", "checkedAt": "2026-08-24", "supports": ["managed and self-managed availability", "hybrid infrastructure positioning", "Platform Plus Container Platform Kubernetes Engine and Virtualization Engine distinctions", "operator and integrated-tool model"] },
+        { "label": "Red Hat — Try OpenShift", "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/try-it", "checkedAt": "2026-08-24", "supports": ["developer sandbox", "60-day self-managed trial", "existing-infrastructure requirement", "possible infrastructure cost", "Dedicated trial GCP cost", "Virtualization Engine bare-metal minimum"] },
+        { "label": "Red Hat — Choosing an OpenShift edition", "url": "https://www.redhat.com/en/resources/choosing-the-right-openshift-for-you-overview", "checkedAt": "2026-08-24", "supports": ["managed cloud and self-managed comparison", "pay-as-you-go and contract models", "support ownership", "self-managed infrastructure and platform responsibility", "customization tradeoff"] },
+        { "label": "Red Hat — Self-managed subscription guide", "url": "https://www.redhat.com/en/resources/self-managed-openshift-subscription-guide", "checkedAt": "2026-08-24", "supports": ["edition definitions", "supported-infrastructure boundary", "core-pair subscription use", "self-managed installation and management duty", "subscription sizing complexity"] },
+        { "label": "OKD — Community distribution", "url": "https://github.com/okd-project/okd", "checkedAt": "2026-08-24", "supports": ["community upstream relationship", "Kubernetes Fedora CoreOS CRI-O and extension components", "continuous and stable release distinction", "Apache 2 license with component caveat", "community support model"] }
+      ],
+      "limitations": ["Official Red Hat product, pricing, trial and subscription sources plus the official OKD repository were reviewed; ToolCompare did not size or purchase a subscription, verify a cloud marketplace quote, provision or benchmark a cluster, test SSO/APIs/operators/upgrades/security controls/support, inspect every responsibility matrix, calculate infrastructure or staff cost, induce node/region failure, or restore workloads. Editions, versions, prices, provider terms and supported platforms change."]
+    }
   },
   {
     "slug": "cloud-foundry",
