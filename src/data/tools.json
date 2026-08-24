@@ -1198,39 +1198,49 @@
     "basePrice": 0,
     "isFlat": true,
     "category": "AI Tools",
-    "shortDescription": "AI search engine.",
-    "longDescription": "Perplexity is a 'knowledge engine' that combines traditional search with AI intelligence. It searches the live web for every query, reads multiple sources, and provides a cited summary of the answer. This transparency makes it a favorite for researchers and students who need verified facts without the ad-filled scroll of Google. Its Pro plan allows users to switch between GPT-4o and Claude-3 models for even deeper analysis. It is essentially an ad-free, citation-backed, and intelligent future for information search.",
+    "shortDescription": "AI-powered search with links to original sources.",
+    "longDescription": "Perplexity searches the web and returns conversational answers with citations to original sources. Its free experience includes standard search and limited advanced usage; Pro expands access to Pro Search, Research, file analysis, model selection and creation tools. Citations make verification easier, but they do not guarantee that a summary accurately represents every source.",
     "pros": [
-      "Live Web Access: Always up-to-date with current news and real-time market data.",
-      "Direct Citations: Every sentence is backed by links to the original sources for verification.",
-      "Ad-Free Search: Provides answers directly without the clutter of sponsored results.",
-      "Hybrid Models: Switch between the world's best AI models within a single interface."
+      "Source access: Answers include citations and links that can be opened for verification.",
+      "Research workflow: Pro includes extended access to Pro Search and Research for multi-step questions.",
+      "Model selection: Pro users can choose among supported models within an existing search.",
+      "File analysis: Pro supports uploads including PDFs, CSVs, audio, video and images."
     ],
     "cons": [
-      "Summary Errors: Occasionally misses small nuances or misinterprets sources.",
-      "Interface: Functions more like a research assistant than a simple chat, which may take time to learn.",
-      "File Processing: Handling very large files can occasionally be slow."
+      "Source fidelity: A cited answer can still omit context or misread the linked material.",
+      "Usage limits: Advanced searches and models remain subject to plan and capacity limits.",
+      "Workflow fit: It is search-first, so it may not replace a general assistant or specialist research database."
     ],
     "keyFeatures": [
       {
-        "title": "Copilot Mode",
-        "description": "Interactive search that asks clarifying questions to find exactly what you need."
+        "title": "Pro Search",
+        "description": "Runs a more detailed search workflow and returns an answer with multiple references."
       },
       {
-        "title": "Perplexity Pages",
-        "description": "Turn your research results into a stylish, shareable article with one click."
+        "title": "Research",
+        "description": "Performs iterative searches for deeper reports on complex questions."
       },
       {
         "title": "File Analysis",
-        "description": "Upload PDFs or code files to analyze them alongside real-time web data."
+        "description": "Upload supported documents and media, then ask questions about their contents."
       },
       {
-        "title": "Collections",
-        "description": "Organize your research into themed folders and share them with your team."
+        "title": "Create files and apps",
+        "description": "A Pro creation workflow for reports, spreadsheets, dashboards and simple web applications."
       }
     ],
-    "targetAudience": "Researchers, Journalists, and Academic Students.",
-    "verdict": "The most modern, accurate, and fast way to search the internet—and Google's biggest nightmare.",
+    "targetAudience": "People who want a search-first assistant whose claims can be followed back to linked sources.",
+    "bestFor": [
+      "Web research where opening and checking original sources is part of the workflow",
+      "Users who want search, file analysis and model selection in one interface",
+      "Exploratory research that benefits from follow-up questions"
+    ],
+    "skipIf": [
+      "You need guaranteed source fidelity without manually reading citations",
+      "You need a specialist academic, legal or medical database",
+      "Your workflow cannot tolerate plan-dependent limits on advanced modes"
+    ],
+    "verdict": "Choose Perplexity when cited web research is the main job, and plan to open the sources before relying on important claims.",
     "color": "#22c55e",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.perplexity.ai",
@@ -1240,6 +1250,25 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
+    },
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "Perplexity Help — What is Perplexity?",
+          "url": "https://www.perplexity.ai/help-center/en/articles/10352155-what-is-perplexity",
+          "checkedAt": "2026-08-24",
+          "supports": ["web search", "conversational answers", "citations", "links to original sources"]
+        },
+        {
+          "label": "Perplexity Help — What is Perplexity Pro?",
+          "url": "https://www.perplexity.ai/help-center/en/articles/9385876-what-is-perplexity-pro",
+          "checkedAt": "2026-08-24",
+          "supports": ["Pro Search", "Research", "file analysis", "model selection", "Create files and apps", "usage limits"]
+        }
+      ],
+      "limitations": ["Vendor documentation was reviewed; citation accuracy and answer quality were not independently benchmarked."]
     }
   },
   {
@@ -8708,7 +8737,7 @@
     "slug": "gemini",
     "name": "Google Gemini",
     "category": "AI Tools",
-    "shortDescription": "Google's assistant and multimodal model.",
+    "shortDescription": "Google's multimodal assistant with optional Google app integrations.",
     "websiteUrl": "https://gemini.google.com",
     "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8720,19 +8749,73 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Google Gemini is a multimodal assistant that handles text, images and long documents, and connects to Google's own products.",
+    "longDescription": "Google Gemini is a multimodal assistant for text, files, images and video. A free experience is available, while Google AI plans increase usage limits and add benefits such as expanded access to Pro models, Deep Research and integrations across Google apps. Limits, storage bundles and feature availability vary by plan, account, age and region.",
     "pros": [
-      "Very large context window for long documents",
-      "Handles images and audio natively",
-      "Integrates with Workspace"
+      "Multimodal inputs: Gemini Apps can work with text, files, images and video.",
+      "Long-context paid plans: Google documents a larger context window for AI Pro and Ultra.",
+      "Google ecosystem: Paid plans include Gemini features in supported Google apps.",
+      "Research workflow: Deep Research is available with plan-dependent access."
     ],
     "cons": [
-      "Quality varies noticeably across tasks",
-      "Free tier limits are tight",
-      "Behaviour changes between model versions"
+      "Usage limits: Access depends on the selected model, feature and subscription tier.",
+      "Availability: Some benefits are restricted by region, language, age or account type.",
+      "Verification: Google warns that generative AI features can return inaccurate or inappropriate results."
     ],
-    "targetAudience": "People already working inside Google's tools who want an assistant nearby.",
-    "verdict": "Strong on long documents. Compare against alternatives on your own tasks before committing a workflow to it."
+    "keyFeatures": [
+      {
+        "title": "Multimodal conversations",
+        "description": "Work with prompts and supported files, images and video inside Gemini Apps."
+      },
+      {
+        "title": "Deep Research",
+        "description": "A research workflow with access and limits that depend on the user's plan."
+      },
+      {
+        "title": "Google app integrations",
+        "description": "Eligible AI plans include Gemini features across supported Google productivity apps."
+      },
+      {
+        "title": "Expanded context",
+        "description": "Google documents larger context windows for higher AI plan tiers."
+      }
+    ],
+    "targetAudience": "People already using Google products who want multimodal assistance and optional integration with supported Google apps.",
+    "bestFor": [
+      "Long-document and multimodal workflows that benefit from a larger paid-plan context window",
+      "People who want Gemini alongside supported Google apps",
+      "Users who value a free starting point before choosing a paid AI plan"
+    ],
+    "skipIf": [
+      "A required feature is unavailable for your region, language, age or account type",
+      "You need fixed, unlimited usage rather than plan-dependent quotas",
+      "You cannot independently verify important generated claims"
+    ],
+    "verdict": "Choose Gemini when Google integration and multimodal, long-context work matter; confirm regional availability and test the exact workflow before paying.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "Google One — Plans and pricing",
+          "url": "https://one.google.com/about/plans",
+          "checkedAt": "2026-08-24",
+          "supports": ["free Google account storage", "Google AI plan pricing", "Gemini limits", "Deep Research", "Google app benefits"]
+        },
+        {
+          "label": "Gemini Apps Help — Limits and upgrades",
+          "url": "https://support.google.com/gemini/answer/16275805?hl=en",
+          "checkedAt": "2026-08-24",
+          "supports": ["model access", "context windows", "multimodal inputs", "feature availability", "usage limits"]
+        },
+        {
+          "label": "Google One Help — Google AI Pro benefits",
+          "url": "https://support.google.com/googleone/answer/14534406?hl=en",
+          "checkedAt": "2026-08-24",
+          "supports": ["Deep Research", "Google app integrations", "regional restrictions", "generative AI limitations"]
+        }
+      ],
+      "limitations": ["Vendor documentation was reviewed; model quality and task performance were not independently benchmarked."]
+    }
   },
   {
     "slug": "mistral",
@@ -9010,6 +9093,7 @@
     "shortDescription": "AI code completion inside your editor.",
     "websiteUrl": "https://github.com/features/copilot",
     "incelendi": true,
+    "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -9018,19 +9102,66 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "GitHub Copilot suggests code as you type and answers questions about a repository, working inside most popular editors.",
+    "longDescription": "GitHub Copilot provides AI-assisted coding through code completion, chat, CLI and agent features. Copilot Free offers limited access; paid individual and organization plans add model choices, larger AI-credit allowances and administrative capabilities. Generated code still requires review, testing and normal security controls.",
     "pros": [
-      "Works in the editor you already use",
-      "Strong at boilerplate and repetitive patterns",
-      "Enterprise controls for code exclusion"
+      "Free entry point: Copilot Free provides limited access without a paid subscription.",
+      "Multiple surfaces: GitHub documents Copilot support across its app and CLI, with coding assistance in development workflows.",
+      "Plan range: Individual, organization and enterprise plans offer different models, allowances and controls."
     ],
     "cons": [
-      "Suggestions can be subtly wrong",
-      "Weaker on unusual or domain-specific code",
-      "Per-seat cost across a whole team adds up"
+      "Review required: Generated code can be incorrect, insecure or unsuitable for the repository.",
+      "Usage accounting: Advanced models and agent features consume plan-specific AI credits.",
+      "Team cost: Business and Enterprise plans are priced per granted seat."
     ],
-    "targetAudience": "Teams that want AI completion without changing editors.",
-    "verdict": "A steady productivity gain on routine code. It does not replace understanding what you are shipping."
+    "keyFeatures": [
+      {
+        "title": "Code completion",
+        "description": "Inline suggestions remain available across Copilot plans, with plan-specific access and allowances."
+      },
+      {
+        "title": "Copilot Chat",
+        "description": "Ask coding questions and work with repository context in supported GitHub and editor experiences."
+      },
+      {
+        "title": "Copilot CLI and app",
+        "description": "GitHub lists Copilot CLI and the Copilot app across current plan options."
+      },
+      {
+        "title": "Organization controls",
+        "description": "Business and Enterprise plans add centralized management and policy controls."
+      }
+    ],
+    "targetAudience": "Individual developers and teams that want AI coding assistance integrated with GitHub and supported development environments.",
+    "bestFor": [
+      "Developers who want a limited free tier before adopting a paid coding assistant",
+      "Teams that need centralized Copilot policies and seat management",
+      "Routine coding workflows where generated changes will be reviewed and tested"
+    ],
+    "skipIf": [
+      "You expect generated code to be safe or correct without review",
+      "Your organization cannot approve AI-credit or per-seat billing",
+      "Your development environment or data policy does not support Copilot"
+    ],
+    "verdict": "Choose GitHub Copilot when integrated coding assistance fits your workflow and governance; treat every generated change as unreviewed code.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "GitHub Docs — Plans for GitHub Copilot",
+          "url": "https://docs.github.com/en/copilot/get-started/plans",
+          "checkedAt": "2026-08-24",
+          "supports": ["Free plan", "individual plans", "organization plans", "monthly prices", "AI-credit allowances", "CLI and app"]
+        },
+        {
+          "label": "GitHub Docs — Copilot billing",
+          "url": "https://docs.github.com/en/billing/concepts/product-billing/github-copilot-billing",
+          "checkedAt": "2026-08-24",
+          "supports": ["AI-credit billing", "individual allowances", "organization credit pools", "usage-based charges"]
+        }
+      ],
+      "limitations": ["Vendor documentation was reviewed; code quality, security impact and productivity were not independently benchmarked."]
+    }
   },
   {
     "slug": "writesonic",
