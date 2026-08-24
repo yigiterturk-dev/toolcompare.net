@@ -15338,31 +15338,171 @@
     "slug": "pagecloud",
     "name": "PageCloud",
     "category": "Design",
-    "shortDescription": "Drag-and-drop website builder for small businesses.",
+    "shortDescription": "Hosted no-code website builder with visual editing, forms, analytics and optional ecommerce.",
     "websiteUrl": "https://www.pagecloud.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "PageCloud is a proprietary hosted website builder aimed at small businesses, service providers and agencies. It offers template and drag-and-drop editing, separate desktop and mobile layout controls, forms, blogs, SEO settings, privacy-oriented analytics, team roles and optional ecommerce. Designing is free, but publishing requires a subscription; the live site, editor, analytics and commerce remain service-dependent, so ownership and migration plans should be verified before adoption.",
+    "pros": [
+      "Visual editing: Templates, sections and free-form drag-and-drop controls reduce the need to write code.",
+      "Built-in growth tools: Forms, popups, blogs, SEO controls and analytics cover common small-business needs.",
+      "Team access: Admin, editor and blog-author roles support shared site maintenance.",
+      "Commerce option: Store plans add products, services, digital goods, inventory, shipping and multiple payment gateways."
+    ],
+    "cons": [
+      "Publishing is paid: The free experience is for designing; a plan is required to put the website live.",
+      "Hosted-platform dependency: Editor, hosting, analytics and native commerce rely on PageCloud availability and product policy.",
+      "Migration uncertainty: Official pages reviewed document account-to-account site transfer, not a complete portable source export.",
+      "Third-party coupling: Booking, CRM, reviews and many specialized functions rely on embeds or external services."
+    ],
+    "keyFeatures": [
+      { "title": "No-code editor", "description": "Builds responsive pages from templates, sections and draggable visual elements." },
+      { "title": "Forms and lead capture", "description": "Creates custom forms and popups and manages responses through the hosted dashboard." },
+      { "title": "SEO and analytics", "description": "Provides metadata, headings, redirects, sitemaps and privacy-oriented traffic and event reporting." },
+      { "title": "Optional ecommerce", "description": "Adds storefront, inventory, payment, shipping and multichannel selling capabilities through separate plans." }
+    ],
+    "targetAudience": "Small businesses and service teams that prefer a managed visual website platform over owning a code-based build stack.",
+    "bestFor": [
+      "Brochure, service and lead-generation websites maintained by non-developers",
+      "Small teams needing forms, blogs, analytics and visual updates in one service",
+      "Stores whose catalog, gateways and shipping rules fit PageCloud's ecommerce layer"
+    ],
+    "skipIf": [
+      "You require a complete source export and independently reproducible hosting workflow",
+      "Critical business logic cannot depend on embeds or a proprietary hosted builder",
+      "Required traffic, team, ecommerce or service limits have not been confirmed on a paid plan"
+    ],
+    "verdict": "Choose PageCloud when fast visual ownership matters more than code portability; build a real pilot, confirm the paid plan and ecommerce limits, and document domain, content, form-data and migration procedures before launch.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "PageCloud — Product home", "url": "https://www.pagecloud.com/", "checkedAt": "2026-08-24", "supports": ["hosted website builder", "free design entry", "paid publishing", "templates", "forms", "analytics", "popups", "ecommerce", "small-business positioning"] },
+        { "label": "PageCloud — Features", "url": "https://www.pagecloud.com/features", "checkedAt": "2026-08-24", "supports": ["drag-and-drop editor", "responsive and mobile editing", "blogs", "custom forms", "SEO controls", "analytics", "team roles", "embeds", "free design account"] },
+        { "label": "PageCloud — Pricing", "url": "https://www.pagecloud.com/pricing", "checkedAt": "2026-08-24", "supports": ["current plan structure", "USD pricing context", "premium-plan features", "builder analytics AI forms and SEO inclusion", "agency and ecommerce options"] },
+        { "label": "PageCloud — Ecommerce", "url": "https://www.pagecloud.com/features/e-commerce", "checkedAt": "2026-08-24", "supports": ["separate ecommerce subscription", "products services and digital goods", "inventory", "shipping", "payment gateways", "customer accounts", "third-party channels", "store migration claim"] },
+        { "label": "PageCloud Help — SEO", "url": "https://answers.pagecloud.com/help/site-settings/seo/", "checkedAt": "2026-08-24", "supports": ["custom domains", "titles and descriptions", "URL settings", "Open Graph tags", "sitemap", "robots.txt", "noindex and nofollow"] },
+        { "label": "PageCloud Help — Transfer site", "url": "https://answers.pagecloud.com/help/teams/transfer-site/", "checkedAt": "2026-08-24", "supports": ["account-to-account site transfer", "team-member prerequisite", "ownership workflow"] }
+      ],
+      "limitations": ["Official PageCloud product, feature, pricing and help pages were reviewed; ToolCompare did not create or publish a site, inspect plan checkout totals, test editor accessibility or responsiveness, export content, validate analytics privacy claims, submit forms, connect a domain, migrate a store, test payment gateways or transfer a site. A complete source-export path was not established from the reviewed official documentation."]
+    }
   },
   {
     "slug": "webnode",
     "name": "Webnode",
     "category": "Design",
-    "shortDescription": "Web development platform.",
-    "websiteUrl": "https://www.webnode.com/el/",
-    "incelendi": false,
+    "shortDescription": "Hosted website and ecommerce builder with free projects and tiered premium publishing features.",
+    "websiteUrl": "https://www.webnode.com/",
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Webnode is a proprietary hosted website builder offering free Webnode-subdomain projects and paid plans for custom domains, larger storage and bandwidth, email, ecommerce, multilingual sites, memberships, analytics integrations and backups. Premium applies to one website rather than an entire account, and feature limits vary sharply by tier. The platform reduces hosting administration but keeps the editable site inside Webnode's service.",
+    "pros": [
+      "Free hosted start: A website can be created and run on a Webnode-branded subdomain without a paid plan.",
+      "Tiered business features: Higher plans add custom domains, mailboxes, ecommerce, multilingual pages, memberships and integrations.",
+      "Managed fundamentals: Hosted sites receive platform-managed HTTPS and infrastructure.",
+      "Domain flexibility: Customers can register, transfer or DNS-assign an existing domain while retaining ownership."
+    ],
+    "cons": [
+      "Per-site subscription: Premium benefits apply to one project, not every website in the account.",
+      "Low-tier restrictions: Branding removal, ecommerce, analytics, languages, memberships, backups, email and bandwidth depend on plan.",
+      "Platform lock-in: Official material reviewed focuses on Webnode-hosted operation and domain transfer, not portable full-site source export.",
+      "Renewal planning: Free first-year domains and discounted displayed prices do not remove later subscription, domain or tax costs."
+    ],
+    "keyFeatures": [
+      { "title": "Hosted visual builder", "description": "Creates and publishes template-based websites without operating a web server." },
+      { "title": "Domains and email", "description": "Paid plans can connect custom domains and, by tier, provide branded mailboxes." },
+      { "title": "Multilingual and membership", "description": "Higher tiers add multiple language versions and registered-member limits." },
+      { "title": "Ecommerce plans", "description": "Selected plans add catalogs, orders, payments and other store capabilities with tier-specific limits." }
+    ],
+    "targetAudience": "Individuals and small organizations seeking an all-in-one hosted site with predictable features selected by plan.",
+    "bestFor": [
+      "Simple brochure or portfolio sites that fit a Webnode template and hosted workflow",
+      "Small multilingual or membership sites whose limits match Standard or higher tiers",
+      "Small stores after validating the dedicated ecommerce plan and payment requirements"
+    ],
+    "skipIf": [
+      "You need full source portability or independently reproducible hosting",
+      "The required backup, language, bandwidth, mailbox or member capacity exceeds the approved tier",
+      "Multiple sites are expected to share one premium subscription"
+    ],
+    "verdict": "Choose Webnode only after mapping every required feature to a specific per-site plan and renewal cost; retain control of the domain and establish a content, media, order and mailbox exit plan before the site becomes business-critical.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Webnode — Features", "url": "https://www.webnode.com/features/", "checkedAt": "2026-08-24", "supports": ["free Webnode subdomain", "custom domains", "managed HTTPS", "email", "ecommerce", "product import and export", "international selling", "support resources"] },
+        { "label": "Webnode — Website pricing", "url": "https://www.webnode.com/pricing-w2/", "checkedAt": "2026-08-24", "supports": ["current USD plan prices", "annual and monthly billing views", "storage and bandwidth", "domain voucher", "email accounts", "ecommerce", "branding", "analytics", "memberships", "languages", "backups", "tax exclusion"] },
+        { "label": "Webnode Support — Premium scope", "url": "https://www.webnode.com/support/what-is-premium/", "checkedAt": "2026-08-24", "supports": ["premium extends features and storage", "custom-domain prerequisite", "one website per premium subscription", "regional currency selection"] },
+        { "label": "Webnode Support — Domain transfer", "url": "https://www.webnode.com/support/domain-transfer-basic-information/", "checkedAt": "2026-08-24", "supports": ["premium requirement", "one-year renewal charge", "continued customer ownership", "Webnode technical administration", "transfer preparation"] },
+        { "label": "Webnode Support — Move premium services", "url": "https://www.webnode.com/support/move-premium-services/", "checkedAt": "2026-08-24", "supports": ["within-account project move", "owner-only operation", "subscription deactivation", "feature shutdown and data-deletion warning", "domain and mailbox movement"] },
+        { "label": "Webnode Support — Domains FAQ", "url": "https://www.webnode.com/support/domains-faq/", "checkedAt": "2026-08-24", "supports": ["multiple custom domains", "premium dependency", "separate domain service", "first-year voucher boundary", "transfer assistance"] }
+      ],
+      "limitations": ["Official Webnode feature, pricing and support pages were reviewed; ToolCompare did not create or publish a site, test the editor, inspect regional checkout or renewal prices, run a store, connect or transfer a domain, configure mail, validate backups, measure hosting performance or establish a full-site export. The absence of a documented portable source export in reviewed pages is not proof that no assisted migration option exists."]
+    }
   },
   {
     "slug": "ravendb",
     "name": "RavenDB",
     "category": "Developer Tools",
-    "shortDescription": "NoSQL document-oriented database.",
+    "shortDescription": "Distributed document database available self-hosted or as the managed RavenDB Cloud service.",
     "websiteUrl": "https://www.ravendb.net/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "RavenDB is a distributed document database with native clients, HTTP APIs, indexing, transactions, replication, subscriptions and an administration Studio. It can run self-hosted under license-specific feature and resource limits or as RavenDB Cloud. Free Developer, Community and Cloud options have important production, version, node, SLA and inactivity constraints; production architecture still requires explicit capacity, security, backup and recovery design.",
+    "pros": [
+      "Document-oriented client model: Sessions track changes, batch writes and persist SaveChanges as a single ACID transaction.",
+      "Distributed operation: Database groups replicate documents and related items across nodes with conflict policies.",
+      "Deployment choice: Teams can self-host clusters or use managed Free, Development, Production and Serverless cloud products.",
+      "Built-in operations: Studio and APIs cover indexing, backup, subscriptions, changes, ETL and administrative tasks."
+    ],
+    "cons": [
+      "License-specific behavior: Developer is non-production, Community requires the latest major version, and paid editions unlock different features and limits.",
+      "Free Cloud is not production-grade: It is single-node, has no SLA, uses monthly credit and can be terminated after inactivity.",
+      "Operational complexity: Self-hosted clusters require certificate, topology, storage, monitoring, upgrade and recovery expertise.",
+      "Backups need capacity and drills: Undersized cloud products can fail backup jobs, and configured backups must be restored in testing."
+    ],
+    "keyFeatures": [
+      { "title": "Document sessions", "description": "Provides unit-of-work change tracking, identity mapping, query and atomic batched writes through native clients." },
+      { "title": "Indexes and queries", "description": "Builds dynamic or static indexes for document queries and projections." },
+      { "title": "Clusters and replication", "description": "Replicates database items across a group and supports single-node or cluster-wide transaction modes." },
+      { "title": "Backup and restore", "description": "Schedules full or incremental logical backups and snapshots with compression, retention and encryption options." }
+    ],
+    "targetAudience": "Application teams needing a document database and prepared to validate RavenDB's client model, license tier and operational topology.",
+    "bestFor": [
+      "Document-centric applications benefiting from native unit-of-work clients and server-side indexes",
+      "Systems that need replication, subscriptions and integrated database administration",
+      "Teams choosing managed Cloud or capable of operating secure self-hosted clusters"
+    ],
+    "skipIf": [
+      "A relational model and SQL ecosystem are mandatory and no document-model pilot has been completed",
+      "The intended free license or cloud node does not permit the production topology and features",
+      "The team cannot operate certificates, upgrades, storage monitoring, backups and restore drills"
+    ],
+    "verdict": "Choose RavenDB only after modeling a representative workload and mapping every feature to the intended license and topology; benchmark indexes and storage, test failover, and prove encrypted off-system backup restoration before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "RavenDB Docs — Licensing overview", "url": "https://docs.ravendb.net/7.0/start/licensing/licensing-overview/", "checkedAt": "2026-08-24", "supports": ["license-key activation", "feature-set differences", "Developer non-production scope", "Community production scope and latest-major requirement", "Professional Enterprise and ISV licenses", "expiration and renewal"] },
+        { "label": "RavenDB Docs — License setup", "url": "https://docs.ravendb.net/7.1/start/installation/setup-wizard/provide-license-key", "checkedAt": "2026-08-24", "supports": ["one license per cluster", "free Developer and Community licenses", "AGPL limited mode", "unsecured and resource limitations", "production prohibition without license"] },
+        { "label": "RavenDB Docs — Document Store", "url": "https://docs.ravendb.net/7.2/client-api/what-is-a-document-store/", "checkedAt": "2026-08-24", "supports": ["native client API", "HTTP communication", "cluster topology", "X.509 certificate", "client caching", "sessions operations bulk insert subscriptions and Changes API"] },
+        { "label": "RavenDB Docs — Sessions", "url": "https://docs.ravendb.net/7.2/client-api/session/what-is-a-session-and-how-does-it-work/", "checkedAt": "2026-08-24", "supports": ["unit of work", "identity map", "change tracking", "batched SaveChanges", "ACID request boundary", "single-node and cluster-wide modes", "request limits"] },
+        { "label": "RavenDB Docs — Replication", "url": "https://docs.ravendb.net/7.2/server/clustering/replication/replication-overview", "checkedAt": "2026-08-24", "supports": ["internal external and hub-sink replication", "replicated item types", "conflict resolution", "transaction boundaries", "Raft-controlled cluster features"] },
+        { "label": "RavenDB Docs — Backup overview", "url": "https://docs.ravendb.net/7.2/backup/overview", "checkedAt": "2026-08-24", "supports": ["periodic and one-time backups", "full and incremental modes", "logical and snapshot types", "compression", "encryption", "retention", "Studio and API configuration"] },
+        { "label": "RavenDB Cloud Docs — Tiers and instances", "url": "https://docs.ravendb.net/cloud/cloud-instances", "checkedAt": "2026-08-24", "supports": ["Free Development Production and Serverless products", "free-node credit inactivity and no-SLA limits", "single versus three-node topology", "burstable and reserved resources", "backup capacity warning", "autoscaling and billing"] },
+        { "label": "RavenDB Cloud Docs — Overview", "url": "https://docs.ravendb.net/cloud/cloud-overview", "checkedAt": "2026-08-24", "supports": ["managed security monitoring backups and patches", "AWS and Azure hosting", "operator access", "instance and cluster model", "shared and reserved resources"] }
+      ],
+      "limitations": ["Official RavenDB licensing, client, cluster, backup and Cloud documentation was reviewed; ToolCompare did not install a server, inspect source-license obligations with counsel, obtain paid quotes, model data, benchmark queries or indexes, validate client SDK parity, test certificates, replication, conflict handling, failover, throttling, scaling, backup failure or restore. Features and limits depend on the exact release and license."]
+    }
   },
   {
     "slug": "oceanbase",
