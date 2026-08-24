@@ -17653,57 +17653,85 @@
     "slug": "mirantis",
     "name": "Mirantis",
     "category": "Hosting",
-    "shortDescription": "Cloud computing software and services company.",
+    "shortDescription": "Enterprise Kubernetes platform vendor focused on multi-cluster lifecycle management and support.",
     "websiteUrl": "https://www.mirantis.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Mirantis sells software and services for operating Kubernetes and container infrastructure. This record focuses on the current k0rdent Enterprise platform: a commercially supported distribution and extension of the Apache-licensed k0rdent project for template-driven provisioning and lifecycle management of clusters and services across AWS, Azure, GCP, vSphere, OpenStack and bare metal. It runs in a customer-controlled management cluster and uses Kubernetes APIs, Cluster API, Helm and other ecosystem components. Public transactional platform pricing is not listed; infrastructure, support tier, onboarding and managed-service scope require a quote.",
+    "pros": ["Kubernetes-native control: Clusters and services are represented through declarative resources and reusable templates.", "Infrastructure breadth: Validated providers span major public clouds, vSphere, OpenStack and bare metal.", "Open-core portability: Enterprise builds on Apache-licensed k0rdent and upstream standards such as Cluster API and Helm.", "Support choices: Mirantis documents 24×7 enterprise, fully managed, deployment and onboarding services."],
+    "cons": ["No public platform price: Software, support, services and infrastructure need a complete quote.", "A management platform adds a management cluster: Its availability, upgrades, credentials and backups need owners.", "Open and commercial scopes differ: Enterprise UI, hardened components, validated integrations and some features are not equivalent to upstream k0rdent.", "Provider support is version-specific: Templates, Kubernetes releases and integrations must be checked against the exact release."],
+    "keyFeatures": [{ "title": "Cluster lifecycle management", "description": "Provisions, updates, scales and removes Kubernetes clusters through Cluster API-backed templates." }, { "title": "Service templates", "description": "Installs and reconciles platform services and add-ons through Kubernetes-native definitions." }, { "title": "Multi-provider operation", "description": "Uses validated provider templates for public cloud, virtualization, OpenStack and bare-metal targets." }, { "title": "Observability and FinOps", "description": "Includes k0rdent components for monitoring, events, logs and cost-oriented visibility." }],
+    "targetAudience": "Enterprise platform-engineering teams managing many Kubernetes clusters across heterogeneous infrastructure.",
+    "bestFor": ["Organizations standardizing repeatable Kubernetes cluster and service templates", "Hybrid or multi-cloud estates with a dedicated platform team", "Buyers willing to validate release matrices, upgrade paths and support responsibilities in a production pilot"],
+    "skipIf": ["A single managed Kubernetes cluster already satisfies the workload", "The team cannot operate and recover a separate management cluster", "Open-source k0rdent capabilities are being assumed identical to the commercial Enterprise package"],
+    "verdict": "Mirantis k0rdent Enterprise is relevant for real multi-cluster platform engineering, not as a shortcut around Kubernetes operations; compare it with upstream k0rdent and managed-cloud control planes, obtain a full support quote, and prove management-cluster recovery plus provider upgrades before standardizing.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Mirantis Docs — k0rdent Enterprise introduction", "url": "https://docs.mirantis.com/k0rdent-enterprise/", "checkedAt": "2026-08-24", "supports": ["enterprise platform scope", "open-source k0rdent relationship", "validated supply chain", "24x7 and fully managed support", "cluster and service lifecycle components", "supported provider families"] },
+      { "label": "Mirantis Docs — Architecture", "url": "https://docs.mirantis.com/k0rdent-enterprise/latest/concepts/k0rdent-architecture/", "checkedAt": "2026-08-24", "supports": ["management and child cluster model", "Cluster API", "template-driven architecture", "Kubernetes APIs", "credential objects", "roles and access boundaries", "KCM KSM and KOF components"] },
+      { "label": "Mirantis Docs — Administration", "url": "https://docs.mirantis.com/k0rdent-enterprise/latest/admin/", "checkedAt": "2026-08-24", "supports": ["cluster lifecycle operations", "Helm and Sveltos service management", "GitOps compatibility", "provider credentials", "portability through upstream standards"] },
+      { "label": "Mirantis Docs — Release 1.4.1", "url": "https://docs.mirantis.com/k0rdent-enterprise/latest/release-notes/release-notes-v1.4.1/", "checkedAt": "2026-08-24", "supports": ["June 2026 release", "Enterprise versus Apache-2.0 upstream distinction", "versioned provider matrix", "enterprise-only features", "limited FIPS component scope"] },
+      { "label": "Mirantis Docs — Support and services", "url": "https://docs.mirantis.com/k0rdent-enterprise/latest/support/", "checkedAt": "2026-08-24", "supports": ["24x7 enterprise support", "fully managed support", "deployment and onboarding services", "contact-based purchasing path"] }
+    ], "limitations": ["Official Mirantis k0rdent Enterprise documentation, architecture, release and support pages were reviewed; ToolCompare did not request a quote, compare every Mirantis product, install a management cluster, inspect the commercial license, validate image provenance or FIPS certificates, connect a provider, test APIs/RBAC/GitOps, create or upgrade child clusters, induce failure, restore state or open a support case. Features and compatibility are release-specific."] }
   },
   {
     "slug": "snowflake-inc",
     "name": "Snowflake Inc.",
     "category": "Developer Tools",
-    "shortDescription": "Cloud-based data-warehousing company.",
+    "shortDescription": "Managed cloud data platform for analytics, engineering, sharing, applications and AI workloads.",
     "websiteUrl": "https://www.snowflake.com",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Snowflake is a cloud data warehouse that separates storage from compute, so you scale query power independently of data volume.",
-    "pros": [
-      "Compute and storage scale separately",
-      "Handles very large analytical workloads",
-      "Data sharing between organisations"
-    ],
-    "cons": [
-      "Consumption pricing can escalate fast",
-      "Requires governance to control spend",
-      "Overkill below serious data volumes"
-    ],
-    "targetAudience": "Companies running analytics on data too large for a normal database.",
-    "verdict": "The category leader for good reason. The bill is the thing teams underestimate."
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "Snowflake is a proprietary managed data platform available in selected AWS, Azure and Google Cloud regions. Its cost is consumption-based rather than a flat seat fee: virtual warehouses and serverless features consume credits, compressed storage is billed by average monthly capacity, and some cross-region or cross-cloud transfers add charges. Credit price depends on cloud, region, edition and on-demand versus committed capacity. Standard, Enterprise, Business Critical and Virtual Private Snowflake add different governance, resilience and isolation features; the calculator is an estimate, while the Service Consumption Table and contract govern actual rates.",
+    "pros": ["Separated compute and storage: Warehouses can be sized and suspended independently of persisted data.", "Managed operations: Snowflake handles core infrastructure, scaling and platform maintenance across supported clouds.", "Workload breadth: SQL analytics, data engineering, sharing, Snowpark, applications and AI services share a governed platform.", "Cost controls exist: Auto-suspend, resource monitors, budgets, alerts and usage views can constrain or expose consumption."],
+    "cons": ["Spend is workload-sensitive: Query shape, concurrency, warehouse size, serverless services, retention and transfer can all change cost.", "Edition and region affect unit economics: A generic per-credit number is not a universal quote.", "Proprietary service creates migration work: SQL compatibility does not make governance, sharing, procedures and AI features portable.", "Trial conversion can create charges: Adding payment converts the account and usage beyond remaining credits becomes billable."],
+    "keyFeatures": [{ "title": "Elastic virtual warehouses", "description": "Runs loading and query compute in independently sized clusters billed by credit consumption." }, { "title": "Managed storage", "description": "Stores compressed data separately and supports retention, cloning and sharing features by edition." }, { "title": "Snowpark and applications", "description": "Supports developer workloads alongside SQL analytics in the governed data environment." }, { "title": "Cost governance", "description": "Provides auto-suspend, monitoring, budgets, alerts and organization-level usage reporting." }],
+    "targetAudience": "Data teams needing a managed, scalable analytics and application platform across a supported public cloud.",
+    "bestFor": ["Variable analytical workloads that benefit from independently scalable compute", "Organizations consolidating governed SQL, engineering and sharing workflows", "Teams able to benchmark representative queries and enforce warehouse, serverless and transfer budgets"],
+    "skipIf": ["A predictable fixed monthly bill is mandatory without active consumption governance", "The workload needs unrestricted host access or database-engine extensions", "Cloud, region, edition and exit strategy have not been chosen before migration"],
+    "verdict": "Snowflake can simplify a broad data estate, but its operational convenience shifts—not removes—capacity planning; benchmark real workloads in the target cloud and edition, cap idle and serverless consumption, model retention and egress, and treat the Consumption Table plus contract as the price source.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Snowflake — Pricing", "url": "https://www.snowflake.com/en/pricing-options/", "checkedAt": "2026-08-24", "supports": ["consumption pricing", "four editions", "edition feature distinctions", "compressed average-monthly storage billing", "on-demand and prepaid capacity purchasing"] },
+      { "label": "Snowflake — Pricing calculator FAQ", "url": "https://www.snowflake.com/en/pricing-options/calculator/feedback-faqs/", "checkedAt": "2026-08-24", "supports": ["compute storage and transfer costs", "credit definition", "warehouse credit scaling", "per-second billing with 60-second minimum", "region and provider variance", "cost controls", "$400 30-day trial", "estimate boundary"] },
+      { "label": "Snowflake — Calculator overview", "url": "https://www.snowflake.com/en/pricing-options/calculator/overview/", "checkedAt": "2026-08-24", "supports": ["calculator is not a quote", "edition provider and account-type effects", "monthly arrears", "minimum charges", "workload-sizing uncertainty", "proof-of-concept recommendation"] },
+      { "label": "Snowflake Docs — Editions", "url": "https://docs.snowflake.com/en/user-guide/intro-editions", "checkedAt": "2026-08-24", "supports": ["successive edition model", "edition effect on unit costs", "region impact", "on-demand versus capacity distinction"] },
+      { "label": "Snowflake Docs — Trial accounts", "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account", "checkedAt": "2026-08-24", "supports": ["no-card signup", "30-day or balance exhaustion boundary", "compute and storage deductions", "auto-suspend guidance", "paid conversion and automatic billing", "threshold payments", "support-based cancellation", "trial limitations"] },
+      { "label": "Snowflake — Service Consumption Table", "url": "https://www.snowflake.com/legal-files/CreditConsumptionTable.pdf", "checkedAt": "2026-08-24", "supports": ["credit-consumption tables", "provider region and edition variance", "AI credit distinction", "storage pricing tables"] }
+    ], "limitations": ["Official Snowflake pricing, calculator, edition, trial and consumption sources were reviewed; ToolCompare did not create an account, validate every region or feature, run SQL/APIs/Snowpark/SSO, benchmark queries, test cost controls, load or share sensitive data, trigger transfer or serverless charges, inspect a capacity contract, restore data or migrate away. Actual consumption and negotiated prices require a workload pilot and agreement review."] }
   },
   {
     "slug": "splunk",
     "name": "Splunk",
     "category": "Developer Tools",
-    "shortDescription": "American technology company.",
+    "shortDescription": "Machine-data search and analytics platform available as managed Splunk Cloud Platform or self-managed Splunk Enterprise.",
     "websiteUrl": "https://www.splunk.com/",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Splunk searches and analyses machine data — logs, metrics and events — at enterprise scale.",
-    "pros": [
-      "Extremely powerful search across machine data",
-      "Mature security and compliance use cases",
-      "Large ecosystem of apps"
-    ],
-    "cons": [
-      "Priced by data volume and expensive",
-      "Query language takes learning",
-      "Heavy to operate"
-    ],
-    "targetAudience": "Enterprises with security or operational log requirements.",
-    "verdict": "Capable and costly. Most teams get further with cheaper log tooling."
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "Splunk Platform ingests, indexes, searches, alerts on and visualizes machine data. Splunk Cloud Platform is the vendor-managed SaaS deployment, while Splunk Enterprise is installed and operated on customer infrastructure. Pricing is quote based and may use workload capacity, daily ingest or other portfolio-specific measures: Cloud workload pricing uses Splunk Virtual Compute units, Enterprise workload pricing uses vCPUs, and ingest pricing measures GB per day for eligible deployments. Storage, retention, premium applications, support tier and data-routing choices must be scoped separately.",
+    "pros": ["Mature search workflow: SPL, dashboards, alerts and apps support broad security and operations investigations.", "Deployment choice: Buyers can use managed Cloud Platform or operate Enterprise in private, cloud or air-gapped environments.", "Pricing-model choice: Eligible customers can align licensing to compute workload or indexed data volume.", "Automation and federation: Documented REST APIs, processors and federated search support integration and data-placement strategies."],
+    "cons": ["No universal list price: A comparison requires data volume, search concurrency, retention and application scope.", "Telemetry growth needs governance: Noisy sources, expensive searches and longer retention can drive capacity and storage.", "Cloud administration is restricted: Splunk manages non-search tiers and limits some REST and configuration operations.", "Premium outcomes need work: SIEM, observability and IT-service use cases require content engineering, tuning and operational ownership."],
+    "keyFeatures": [{ "title": "Search Processing Language", "description": "Searches, correlates and transforms indexed events for investigation and reporting." }, { "title": "Ingestion and indexing", "description": "Collects telemetry from applications, services, servers, devices and sensors into controlled indexes." }, { "title": "Dashboards and alerts", "description": "Turns searches into visualizations, scheduled reports and operational detections." }, { "title": "REST APIs and apps", "description": "Extends search-tier workflows through documented endpoints, SDKs and Splunkbase integrations." }],
+    "targetAudience": "Security, IT operations and observability teams with substantial telemetry and resources to govern ingestion, searches and detection content.",
+    "bestFor": ["Cross-source investigations and operational analytics requiring flexible search", "Enterprises choosing between a managed control plane and self-managed deployment", "Teams that can baseline ingest, peak searches, retention and storage before contracting"],
+    "skipIf": ["A lightweight low-volume log viewer satisfies the requirement", "No one owns source filtering, schema quality, alert tuning and capacity monitoring", "The business case assumes unlimited data also means unlimited compute, retention or storage"],
+    "verdict": "Splunk remains powerful for high-value machine-data investigations, but value depends on disciplined data and search engineering; pilot both cost metrics with representative peaks, filter noise before indexing, price retention and premium apps, and verify Cloud API and administration limits.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Splunk — Platform pricing", "url": "https://www.splunk.com/en_us/products/pricing/platform-pricing.html", "checkedAt": "2026-08-24", "supports": ["Cloud Platform and Enterprise distinction", "workload and ingest options", "unlimited-user claim", "storage choices", "standard support inclusion", "quote and trial routes"] },
+      { "label": "Splunk — Platform pricing FAQ", "url": "https://www.splunk.com/en_us/products/pricing/faqs/enterprise-and-cloud.html", "checkedAt": "2026-08-24", "supports": ["Cloud SVC workload metric", "Enterprise vCPU workload metric", "GB-per-day ingest metric", "search and indexing cost drivers", "90-day indexed-data storage statement for ingest subscriptions", "volume discount positioning"] },
+      { "label": "Splunk — Pricing overview", "url": "https://www.splunk.com/en_us/products/pricing.html", "checkedAt": "2026-08-24", "supports": ["managed SaaS versus self-managed deployment", "activity workload ingest and entity models", "Enterprise Security editions", "cost-control tools", "portfolio purchasing", "standard versus premium support"] },
+      { "label": "Splunk — Cloud trial", "url": "https://www.splunk.com/en_us/download/splunk-cloud.html", "checkedAt": "2026-08-24", "supports": ["14-day no-card trial", "5 GB per day trial ingest", "hosted trial environment", "trial evaluation scope"] },
+      { "label": "Splunk Help — Cloud service details", "url": "https://help.splunk.com/en/splunk-cloud-platform/get-started/service-terms-and-policies/9.2.2406/information-about-the-service/splunk-cloud-platform-service-details", "checkedAt": "2026-08-24", "supports": ["ingestion APIs and sources", "workload versus ingest entitlement behavior", "Cloud Monitoring Console", "index administration", "encrypted-output restrictions"] },
+      { "label": "Splunk Help — REST API limitations", "url": "https://help.splunk.com/en/splunk-enterprise/leverage-rest-apis/rest-api-tutorials/9.2/rest-api-tutorials/access-requirements-and-limitations-for-the-splunk-cloud-platform-rest-api", "checkedAt": "2026-08-24", "supports": ["REST API and SDK access", "authentication tokens", "trial API exclusion", "search-tier-only boundary", "restricted administrator operations", "Splunk-managed tiers"] },
+      { "label": "Splunk Help — SAML SSO", "url": "https://help.splunk.com/?resourceId=Splunk_Security_HowSAMLSSOworks", "checkedAt": "2026-08-24", "supports": ["SAML 2.0 SSO", "provider examples", "role and attribute requirements", "Cloud SHA-256 requirement", "deprovisioning caveat", "customer IdP responsibility"] }
+    ], "limitations": ["Official Splunk pricing, trial, service-detail, REST and SAML pages were reviewed; ToolCompare did not obtain a quote, provision Cloud Platform or Enterprise, compare every portfolio SKU, ingest production telemetry, test SPL/dashboards/alerts/apps/APIs/SSO, measure SVC or vCPU use, exceed an entitlement, validate retention or export, tune SIEM content, inspect support response, test the uptime SLA, or migrate data. Pricing eligibility, packaging and service limits can change."] }
   },
   {
     "slug": "sumo-logic",
