@@ -12584,5 +12584,1965 @@
     ],
     "targetAudience": "Small service businesses that want sales and marketing in one place.",
     "verdict": "Convenient consolidation. Each individual part is beaten by a specialist tool."
+  },
+  {
+    "slug": "browserstack",
+    "name": "BrowserStack",
+    "category": "Developer Tools",
+    "shortDescription": "Cloud platform for testing websites and apps on real browsers and devices.",
+    "websiteUrl": "https://www.browserstack.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "appveyor",
+    "name": "AppVeyor",
+    "category": "Developer Tools",
+    "shortDescription": "AppVeyor is a hosted, distributed continuous integration service used to build and test projects hosted on GitHub and other source code hosting services (including GitLab and Bitbucket) on a Microsoft Windows virtual machine, as well as Ubuntu Linux virtual machines.",
+    "websiteUrl": "https://www.appveyor.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "travis-ci",
+    "name": "Travis CI",
+    "category": "Developer Tools",
+    "shortDescription": "Service to build and test software projects.",
+    "websiteUrl": "https://travis-ci.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "semaphore",
+    "name": "Semaphore",
+    "category": "Developer Tools",
+    "shortDescription": "Hosted continuous integration and delivery service for software teams.",
+    "websiteUrl": "https://semaphoreui.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cloudbees",
+    "name": "CloudBees",
+    "category": "Hosting",
+    "shortDescription": "Enterprise continuous integration and delivery platform built on Jenkins.",
+    "websiteUrl": "https://www.cloudbees.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "selenium",
+    "name": "Selenium",
+    "category": "Developer Tools",
+    "shortDescription": "Browser automation framework used for testing web applications.",
+    "websiteUrl": "https://selenium.dev/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "drupal",
+    "name": "Drupal",
+    "category": "Developer Tools",
+    "shortDescription": "Web content management system.",
+    "websiteUrl": "https://www.drupal.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "joomla",
+    "name": "Joomla",
+    "category": "Developer Tools",
+    "shortDescription": "Free and open-source web content management system.",
+    "websiteUrl": "https://www.joomla.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "typo3",
+    "name": "TYPO3",
+    "category": "Developer Tools",
+    "shortDescription": "Web content management framework.",
+    "websiteUrl": "https://typo3.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "prestashop",
+    "name": "PrestaShop",
+    "category": "E-commerce",
+    "shortDescription": "Open source e-commerce platform.",
+    "websiteUrl": "https://prestashop-project.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "filemaker",
+    "name": "FileMaker",
+    "category": "Developer Tools",
+    "shortDescription": "Database management system.",
+    "websiteUrl": "https://www.claris.com/filemaker/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "git",
+    "name": "Git",
+    "category": "Developer Tools",
+    "shortDescription": "Distributed version control software system.",
+    "websiteUrl": "https://git-scm.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mercurial",
+    "name": "Mercurial",
+    "category": "Developer Tools",
+    "shortDescription": "Distributed revision-control tool for software developers.",
+    "websiteUrl": "https://www.mercurial-scm.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "fossil",
+    "name": "Fossil",
+    "category": "Developer Tools",
+    "shortDescription": "Preserved remains or traces of organisms from a past geological age.",
+    "websiteUrl": "https://www.fossil-scm.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "buildbot",
+    "name": "Buildbot",
+    "category": "Developer Tools",
+    "shortDescription": "Continuous integration testing framework.",
+    "websiteUrl": "https://www.buildbot.net/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "hudson",
+    "name": "Hudson",
+    "category": "Developer Tools",
+    "shortDescription": "Topics referred to by the same term.",
+    "websiteUrl": "https://projects.eclipse.org/projects/technology.hudson",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bookstack",
+    "name": "BookStack",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source wiki software.",
+    "websiteUrl": "https://www.bookstackapp.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "grav",
+    "name": "Grav",
+    "category": "Developer Tools",
+    "shortDescription": "Topics referred to by the same term.",
+    "websiteUrl": "https://getgrav.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "movable-type",
+    "name": "Movable Type",
+    "category": "Developer Tools",
+    "shortDescription": "Blogging software.",
+    "websiteUrl": "https://movabletype.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mediawiki",
+    "name": "MediaWiki",
+    "category": "Developer Tools",
+    "shortDescription": "Free and open-source wiki software.",
+    "websiteUrl": "https://www.mediawiki.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "netlify-cms",
+    "name": "Netlify CMS",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source content management interface for static sites, now Decap CMS.",
+    "websiteUrl": "https://www.netlifycms.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bluefish",
+    "name": "Bluefish",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source editor for web developers, aimed at markup and code.",
+    "websiteUrl": "https://bluefish.openoffice.nl",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "netbeans",
+    "name": "NetBeans",
+    "category": "Developer Tools",
+    "shortDescription": "Integrated development environment software for software development.",
+    "websiteUrl": "https://netbeans.apache.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "xojo",
+    "name": "Xojo",
+    "category": "Developer Tools",
+    "shortDescription": "Programming environment and programming language.",
+    "websiteUrl": "https://www.xojo.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "uno-platform",
+    "name": "Uno Platform",
+    "category": "Developer Tools",
+    "shortDescription": "Open source cross-platform graphical user interface.",
+    "websiteUrl": "https://platform.uno/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mamp",
+    "name": "MAMP",
+    "category": "Developer Tools",
+    "shortDescription": "Web software type.",
+    "websiteUrl": "https://www.mamp.info/en/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "emmet",
+    "name": "Emmet",
+    "category": "Developer Tools",
+    "shortDescription": "Topics referred to by the same term.",
+    "websiteUrl": "https://emmet.io/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "capybara",
+    "name": "Capybara",
+    "category": "Developer Tools",
+    "shortDescription": "Ruby library for writing browser-based acceptance tests.",
+    "websiteUrl": "https://teamcapybara.github.io/capybara/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bootstrap-studio",
+    "name": "Bootstrap Studio",
+    "category": "Design",
+    "shortDescription": "Proprietary web design and development application.",
+    "websiteUrl": "https://bootstrapstudio.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cloud-cms",
+    "name": "Cloud CMS",
+    "category": "Developer Tools",
+    "shortDescription": "Cloud CMS is an enterprise content management system offered under both a SaaS and an On-Premises model using Docker containers.",
+    "websiteUrl": "https://www.cloudcms.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "pagecloud",
+    "name": "PageCloud",
+    "category": "Design",
+    "shortDescription": "Drag-and-drop website builder for small businesses.",
+    "websiteUrl": "https://www.pagecloud.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "webnode",
+    "name": "Webnode",
+    "category": "Design",
+    "shortDescription": "Web development platform.",
+    "websiteUrl": "https://www.webnode.com/el/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ravendb",
+    "name": "RavenDB",
+    "category": "Developer Tools",
+    "shortDescription": "NoSQL document-oriented database.",
+    "websiteUrl": "https://www.ravendb.net/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "oceanbase",
+    "name": "OceanBase",
+    "category": "Developer Tools",
+    "shortDescription": "Database management system.",
+    "websiteUrl": "https://open.oceanbase.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "valkey",
+    "name": "Valkey",
+    "category": "Developer Tools",
+    "shortDescription": "Open source in-memory key–value database.",
+    "websiteUrl": "https://valkey.io/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "maptiler",
+    "name": "MapTiler",
+    "category": "Developer Tools",
+    "shortDescription": "Swiss provider of custom online maps.",
+    "websiteUrl": "https://www.maptiler.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "october",
+    "name": "October",
+    "category": "Developer Tools",
+    "shortDescription": "Tenth month in the Julian and Gregorian calendars.",
+    "websiteUrl": "https://octobercms.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "backblaze",
+    "name": "Backblaze",
+    "category": "Hosting",
+    "shortDescription": "Backup and cloud hosting company.",
+    "websiteUrl": "https://www.backblaze.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "dreamhost",
+    "name": "DreamHost",
+    "category": "Hosting",
+    "shortDescription": "Web hosting provider and domain name registrar.",
+    "websiteUrl": "https://www.dreamhost.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "heroku",
+    "name": "Heroku",
+    "category": "Hosting",
+    "shortDescription": "Cloud Platform as a service.",
+    "websiteUrl": "https://www.heroku.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "hostinger",
+    "name": "Hostinger",
+    "category": "Hosting",
+    "shortDescription": "Lithuanian web hosting company.",
+    "websiteUrl": "https://www.hostinger.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ionos",
+    "name": "Ionos",
+    "category": "Hosting",
+    "shortDescription": "German web hoster and cloud service provider.",
+    "websiteUrl": "https://www.ionos.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ovhcloud",
+    "name": "OVHcloud",
+    "category": "Hosting",
+    "shortDescription": "French web hosting and cloud computing company.",
+    "websiteUrl": "https://www.ovhcloud.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "rackspace-technology",
+    "name": "Rackspace Technology",
+    "category": "Hosting",
+    "shortDescription": "American managed cloud computing company.",
+    "websiteUrl": "https://www.rackspace.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "scaleway",
+    "name": "Scaleway",
+    "category": "Hosting",
+    "shortDescription": "French cloud computing company.",
+    "websiteUrl": "https://www.scaleway.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "gandi",
+    "name": "Gandi",
+    "category": "Hosting",
+    "shortDescription": "Domain registrar and web hosting company.",
+    "websiteUrl": "https://www.gandi.net/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "name-com",
+    "name": "Name.com",
+    "category": "Hosting",
+    "shortDescription": "American internet services company.",
+    "websiteUrl": "https://www.name.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "plesk",
+    "name": "Plesk",
+    "category": "Hosting",
+    "shortDescription": "Web hosting and data center automation software.",
+    "websiteUrl": "https://www.plesk.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "alibaba-cloud",
+    "name": "Alibaba Cloud",
+    "category": "Hosting",
+    "shortDescription": "Chinese cloud computing company.",
+    "websiteUrl": "https://intl.aliyun.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "tencent-cloud",
+    "name": "Tencent Cloud",
+    "category": "Hosting",
+    "shortDescription": "Cloud computing platform provided by Tencent.",
+    "websiteUrl": "https://cloud.tencent.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "yandex-cloud",
+    "name": "Yandex Cloud",
+    "category": "Hosting",
+    "shortDescription": "Cloud-based service and infrastructure.",
+    "websiteUrl": "https://cloud.yandex.ru/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ibm-cloud",
+    "name": "IBM Cloud",
+    "category": "Hosting",
+    "shortDescription": "Cloud computing platform by IBM.",
+    "websiteUrl": "https://www.ibm.com/cloud",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cdnjs",
+    "name": "Cdnjs",
+    "category": "Hosting",
+    "shortDescription": "Content delivery network for web resources.",
+    "websiteUrl": "https://cdnjs.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "jsdelivr",
+    "name": "JSDelivr",
+    "category": "Hosting",
+    "shortDescription": "Content delivery network.",
+    "websiteUrl": "https://www.jsdelivr.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "gcore",
+    "name": "Gcore",
+    "category": "Hosting",
+    "shortDescription": "Public cloud and edge provider.",
+    "websiteUrl": "https://gcore.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "fasthosts",
+    "name": "Fasthosts",
+    "category": "Hosting",
+    "shortDescription": "Provider of Internet access and hosting services.",
+    "websiteUrl": "https://www.fasthosts.co.uk/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "heart-internet",
+    "name": "Heart Internet",
+    "category": "Hosting",
+    "shortDescription": "UK web hosting provider offering shared, reseller and dedicated plans.",
+    "websiteUrl": "https://www.heartinternet.uk/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bytemark",
+    "name": "Bytemark",
+    "category": "Hosting",
+    "shortDescription": "British internet hosting services company.",
+    "websiteUrl": "https://www.bytemark.co.uk/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "easily-ltd",
+    "name": "Easily Ltd",
+    "category": "Hosting",
+    "shortDescription": "Easily Ltd was once one of the UK’s largest domain name and webhosting companies.",
+    "websiteUrl": "https://easily.uk/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "123-reg",
+    "name": "123 Reg",
+    "category": "Hosting",
+    "shortDescription": "British domain registrar and web hosting company.",
+    "websiteUrl": "https://www.123-reg.co.uk/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "epik",
+    "name": "Epik",
+    "category": "Hosting",
+    "shortDescription": "American web services company.",
+    "websiteUrl": "https://www.epik.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "nearlyfreespeech",
+    "name": "NearlyFreeSpeech",
+    "category": "Hosting",
+    "shortDescription": "Web hosting provider and domain name registrar.",
+    "websiteUrl": "https://www.nearlyfreespeech.net/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "aruba-s-p-a",
+    "name": "Aruba S.p.A.",
+    "category": "Hosting",
+    "shortDescription": "Italian domain registrar and Web hosting company.",
+    "websiteUrl": "https://www.aruba.it/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "advania",
+    "name": "Advania",
+    "category": "Hosting",
+    "shortDescription": "Swedish information technology company.",
+    "websiteUrl": "https://advania.is/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "joyent",
+    "name": "Joyent",
+    "category": "Hosting",
+    "shortDescription": "American software and services company.",
+    "websiteUrl": "https://www.joyent.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "openshift",
+    "name": "OpenShift",
+    "category": "Hosting",
+    "shortDescription": "Cloud computing software.",
+    "websiteUrl": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cloud-foundry",
+    "name": "Cloud Foundry",
+    "category": "Hosting",
+    "shortDescription": "Open source, multi-cloud application platform as a service.",
+    "websiteUrl": "https://www.cloudfoundry.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "idrive-inc",
+    "name": "IDrive Inc.",
+    "category": "Hosting",
+    "shortDescription": "American data backup company.",
+    "websiteUrl": "https://www.idrive.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ultahost",
+    "name": "Ultahost",
+    "category": "Hosting",
+    "shortDescription": "Web hosting provider offering shared, VPS and dedicated servers.",
+    "websiteUrl": "https://ultahost.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "glowhost",
+    "name": "GlowHost",
+    "category": "Hosting",
+    "shortDescription": "American web hosting provider.",
+    "websiteUrl": "https://glowhost.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "uniregistry",
+    "name": "Uniregistry",
+    "category": "Hosting",
+    "shortDescription": "Domain name registrar.",
+    "websiteUrl": "https://uniregistry.link/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "sitew",
+    "name": "SiteW",
+    "category": "Design",
+    "shortDescription": "French company.",
+    "websiteUrl": "https://www.sitew.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ispconfig",
+    "name": "ISPConfig",
+    "category": "Hosting",
+    "shortDescription": "Hosting control panel for Linux.",
+    "websiteUrl": "https://www.ispconfig.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "panzura",
+    "name": "Panzura",
+    "category": "Hosting",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://panzura.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "citrix-cloud",
+    "name": "Citrix Cloud",
+    "category": "Hosting",
+    "shortDescription": "Cloud management service.",
+    "websiteUrl": "https://www.citrix.com/products/citrix-cloud",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mirantis",
+    "name": "Mirantis",
+    "category": "Hosting",
+    "shortDescription": "Cloud computing software and services company.",
+    "websiteUrl": "https://www.mirantis.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "snowflake-inc",
+    "name": "Snowflake Inc.",
+    "category": "Developer Tools",
+    "shortDescription": "Cloud-based data-warehousing company.",
+    "websiteUrl": "https://www.snowflake.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "splunk",
+    "name": "Splunk",
+    "category": "Developer Tools",
+    "shortDescription": "American technology company.",
+    "websiteUrl": "https://www.splunk.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "sumo-logic",
+    "name": "Sumo Logic",
+    "category": "Developer Tools",
+    "shortDescription": "U.S. information technology company.",
+    "websiteUrl": "https://www.sumologic.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "datastax",
+    "name": "DataStax",
+    "category": "Developer Tools",
+    "shortDescription": "Data management company.",
+    "websiteUrl": "https://www.datastax.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cloudant",
+    "name": "Cloudant",
+    "category": "Developer Tools",
+    "shortDescription": "IBM software product.",
+    "websiteUrl": "https://cloudant.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "informatica",
+    "name": "Informatica",
+    "category": "Developer Tools",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://www.informatica.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "boomi-lp",
+    "name": "Boomi, LP",
+    "category": "Developer Tools",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://boomi.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "caspio",
+    "name": "Caspio",
+    "category": "Developer Tools",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://www.caspio.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "smartbear-software",
+    "name": "SmartBear Software",
+    "category": "Developer Tools",
+    "shortDescription": "American information technology company.",
+    "websiteUrl": "https://smartbear.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "zscaler",
+    "name": "Zscaler",
+    "category": "Developer Tools",
+    "shortDescription": "American cybersecurity company.",
+    "websiteUrl": "https://www.zscaler.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cloudbolt",
+    "name": "CloudBolt",
+    "category": "Developer Tools",
+    "shortDescription": "American software developer of cloud management platform.",
+    "websiteUrl": "https://www.cloudbolt.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "surveymonkey",
+    "name": "SurveyMonkey",
+    "category": "Marketing",
+    "shortDescription": "American technology company.",
+    "websiteUrl": "https://www.surveymonkey.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "qualtrics",
+    "name": "Qualtrics",
+    "category": "Marketing",
+    "shortDescription": "Experience management company.",
+    "websiteUrl": "https://www.qualtrics.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "braze-inc",
+    "name": "Braze, Inc.",
+    "category": "Marketing",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://www.braze.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "weebly",
+    "name": "Weebly",
+    "category": "Design",
+    "shortDescription": "Web hosting service.",
+    "websiteUrl": "https://www.weebly.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "honeybook",
+    "name": "HoneyBook",
+    "category": "CRM",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://www.honeybook.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "jobvite",
+    "name": "Jobvite",
+    "category": "HR Software",
+    "shortDescription": "Cloud-based recruiting and human resources software platform.",
+    "websiteUrl": "https://www.jobvite.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "epos-now",
+    "name": "Epos Now",
+    "category": "E-commerce",
+    "shortDescription": "Software provider based in Norwich, England.",
+    "websiteUrl": "https://www.eposnow.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "titanfile",
+    "name": "TitanFile",
+    "category": "Productivity",
+    "shortDescription": "Secure file sharing and client collaboration platform.",
+    "websiteUrl": "https://www.titanfile.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "diligent-corporation",
+    "name": "Diligent Corporation",
+    "category": "Legal Tools",
+    "shortDescription": "American technology company.",
+    "websiteUrl": "https://diligent.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "skype",
+    "name": "Skype",
+    "category": "Communication",
+    "shortDescription": "Retired telecommunications software service/application.",
+    "websiteUrl": "https://www.skype.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "telegram",
+    "name": "Telegram",
+    "category": "Communication",
+    "shortDescription": "Message sent through telegraphy.",
+    "websiteUrl": "https://telegram.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "viber",
+    "name": "Viber",
+    "category": "Communication",
+    "shortDescription": "VoIP and instant messaging software.",
+    "websiteUrl": "https://www.viber.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "wechat",
+    "name": "WeChat",
+    "category": "Communication",
+    "shortDescription": "Chinese multi-purpose mobile app.",
+    "websiteUrl": "https://www.wechat.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "line",
+    "name": "Line",
+    "category": "Communication",
+    "shortDescription": "Topics referred to by the same term.",
+    "websiteUrl": "https://line.me/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "groupme",
+    "name": "GroupMe",
+    "category": "Communication",
+    "shortDescription": "Instant messaging software.",
+    "websiteUrl": "https://groupme.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "jitsi",
+    "name": "Jitsi",
+    "category": "Communication",
+    "shortDescription": "Videoconferencing and messaging software.",
+    "websiteUrl": "https://jitsi.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "threema",
+    "name": "Threema",
+    "category": "Communication",
+    "shortDescription": "Instant messaging smartphone service.",
+    "websiteUrl": "https://threema.ch",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "wire",
+    "name": "Wire",
+    "category": "Communication",
+    "shortDescription": "Single, usually cylindrical, flexible strand or bar or rod of metal.",
+    "websiteUrl": "https://wire.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "wickr",
+    "name": "Wickr",
+    "category": "Communication",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://wickr.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "briar",
+    "name": "Briar",
+    "category": "Communication",
+    "shortDescription": "Peer-to-peer encrypted messenger that works without central servers.",
+    "websiteUrl": "https://briarproject.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "jami",
+    "name": "Jami",
+    "category": "Communication",
+    "shortDescription": "Persian poet (1414–1492).",
+    "websiteUrl": "https://jami.net/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "linphone",
+    "name": "Linphone",
+    "category": "Communication",
+    "shortDescription": "Voice over IP software.",
+    "websiteUrl": "https://www.linphone.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "dingtalk",
+    "name": "DingTalk",
+    "category": "Communication",
+    "shortDescription": "Instant messaging software.",
+    "websiteUrl": "https://www.dingtalk.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "adobe-connect",
+    "name": "Adobe Connect",
+    "category": "Communication",
+    "shortDescription": "Software for remote connectivity.",
+    "websiteUrl": "https://www.connectusers.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "lifesize",
+    "name": "Lifesize",
+    "category": "Communication",
+    "shortDescription": "American telecommunications company.",
+    "websiteUrl": "https://www.lifesize.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "google-messages",
+    "name": "Google Messages",
+    "category": "Communication",
+    "shortDescription": "Messaging application developed by Google.",
+    "websiteUrl": "https://messages.google.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "gitea",
+    "name": "Gitea",
+    "category": "Developer Tools",
+    "shortDescription": "Free forge based on Git written in Go.",
+    "websiteUrl": "https://gitea.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "forgejo",
+    "name": "Forgejo",
+    "category": "Developer Tools",
+    "shortDescription": "Free and open-source software forge.",
+    "websiteUrl": "https://forgejo.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "gitee",
+    "name": "Gitee",
+    "category": "Developer Tools",
+    "shortDescription": "Proprietary Chinese software hosting platform.",
+    "websiteUrl": "https://gitee.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "kallithea",
+    "name": "Kallithea",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source source code management system for Mercurial and Git.",
+    "websiteUrl": "https://kallithea-scm.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "azure-devops-server",
+    "name": "Azure DevOps Server",
+    "category": "Developer Tools",
+    "shortDescription": "Source code management software.",
+    "websiteUrl": "https://visualstudio.com/tfs",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "redmine",
+    "name": "Redmine",
+    "category": "Project Management",
+    "shortDescription": "Computer bug tracking software.",
+    "websiteUrl": "https://www.redmine.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "openproject",
+    "name": "OpenProject",
+    "category": "Project Management",
+    "shortDescription": "Open-source project management software.",
+    "websiteUrl": "https://www.openproject.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "freedcamp",
+    "name": "Freedcamp",
+    "category": "Project Management",
+    "shortDescription": "Project management software.",
+    "websiteUrl": "https://freedcamp.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "toggl-track",
+    "name": "Toggl Track",
+    "category": "Productivity",
+    "shortDescription": "Cross-platform time tracking app.",
+    "websiteUrl": "https://toggl.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "workflowy",
+    "name": "Workflowy",
+    "category": "Productivity",
+    "shortDescription": "Outliner software.",
+    "websiteUrl": "https://workflowy.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "zulip",
+    "name": "Zulip",
+    "category": "Communication",
+    "shortDescription": "Open source chat and collaboration software.",
+    "websiteUrl": "https://zulip.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "microsoft-project",
+    "name": "Microsoft Project",
+    "category": "Project Management",
+    "shortDescription": "Project management software.",
+    "websiteUrl": "https://products.office.com/project",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "checkvist",
+    "name": "Checkvist",
+    "category": "Productivity",
+    "shortDescription": "Checkvist is a keyboard-focused online outliner.",
+    "websiteUrl": "https://checkvist.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mindomo",
+    "name": "Mindomo",
+    "category": "Productivity",
+    "shortDescription": "Online collaborative mind mapping software.",
+    "websiteUrl": "https://www.mindomo.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "tom-s-planner",
+    "name": "Tom's Planner",
+    "category": "Project Management",
+    "shortDescription": "Web-based project management tool.",
+    "websiteUrl": "https://www.tomsplanner.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "projectmanager-com",
+    "name": "ProjectManager.com",
+    "category": "Project Management",
+    "shortDescription": "Online project management with Gantt charts, timesheets and dashboards.",
+    "websiteUrl": "https://www.projectmanager.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "proworkflow",
+    "name": "ProWorkflow",
+    "category": "Project Management",
+    "shortDescription": "Project management software.",
+    "websiteUrl": "https://www.proworkflow.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "helix-alm",
+    "name": "Helix ALM",
+    "category": "Project Management",
+    "shortDescription": "Software developed by Perforce.",
+    "websiteUrl": "https://www.perforce.com/products/helix-alm",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "dotproject",
+    "name": "DotProject",
+    "category": "Project Management",
+    "shortDescription": "Project Management Software.",
+    "websiteUrl": "https://dotproject.net",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "planta-project",
+    "name": "PLANTA Project",
+    "category": "Project Management",
+    "shortDescription": "Project management software.",
+    "websiteUrl": "https://www.planta.de/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bigtime-enterprise-psa",
+    "name": "BigTime Enterprise PSA",
+    "category": "Project Management",
+    "shortDescription": "Software development company.",
+    "websiteUrl": "https://www.bigtime.net/bigtime-enterprise-psa/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ceiton",
+    "name": "CEITON",
+    "category": "Project Management",
+    "shortDescription": "Workflow management system for media industry.",
+    "websiteUrl": "https://www.ceiton.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cloudforge",
+    "name": "CloudForge",
+    "category": "Developer Tools",
+    "shortDescription": "Former software-as-a-service product.",
+    "websiteUrl": "https://cloudforge.solutions",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "teamforge",
+    "name": "TeamForge",
+    "category": "Developer Tools",
+    "shortDescription": "Formerly SourceForge Enterprise Edition.",
+    "websiteUrl": "https://www.collab.net/products/teamforge-alm",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "getresponse",
+    "name": "GetResponse",
+    "category": "Marketing",
+    "shortDescription": "Email marketing platform.",
+    "websiteUrl": "https://www.getresponse.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mailgun",
+    "name": "Mailgun",
+    "category": "Marketing",
+    "shortDescription": "Email delivery service.",
+    "websiteUrl": "https://mailgun.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mailjet",
+    "name": "Mailjet",
+    "category": "Marketing",
+    "shortDescription": "French email marketing platform.",
+    "websiteUrl": "https://www.mailjet.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "chartbeat",
+    "name": "Chartbeat",
+    "category": "Marketing",
+    "shortDescription": "American web analytics company.",
+    "websiteUrl": "https://chartbeat.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "statcounter",
+    "name": "StatCounter",
+    "category": "Marketing",
+    "shortDescription": "Web analytics service that reports visitor traffic and referrers.",
+    "websiteUrl": "https://statcounter.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "liveperson",
+    "name": "LivePerson",
+    "category": "Customer Service",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://www.liveperson.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "yoast-seo",
+    "name": "Yoast SEO",
+    "category": "Marketing",
+    "shortDescription": "Search engine optimization plugin for WordPress.",
+    "websiteUrl": "https://wordpress.org/plugins/wordpress-seo/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "phplist",
+    "name": "PhpList",
+    "category": "Marketing",
+    "shortDescription": "Mailing list software.",
+    "websiteUrl": "https://www.phplist.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "open-web-analytics",
+    "name": "Open Web Analytics",
+    "category": "Marketing",
+    "shortDescription": "Open-source, self-hosted web analytics framework.",
+    "websiteUrl": "https://www.openwebanalytics.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "awstats",
+    "name": "AWStats",
+    "category": "Marketing",
+    "shortDescription": "Web analytics reporting tool.",
+    "websiteUrl": "https://www.awstats.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "goaccess",
+    "name": "GoAccess",
+    "category": "Marketing",
+    "shortDescription": "Open-source web analytics application for Unix-like operating systems.",
+    "websiteUrl": "https://goaccess.io/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "lastpass",
+    "name": "LastPass",
+    "category": "Productivity",
+    "shortDescription": "Password management software.",
+    "websiteUrl": "https://lastpass.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "nordpass",
+    "name": "NordPass",
+    "category": "Productivity",
+    "shortDescription": "Password management software.",
+    "websiteUrl": "https://nordpass.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "enpass",
+    "name": "Enpass",
+    "category": "Productivity",
+    "shortDescription": "Password management software.",
+    "websiteUrl": "https://www.enpass.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "keeweb",
+    "name": "KeeWeb",
+    "category": "Productivity",
+    "shortDescription": "Free and open-source password management software.",
+    "websiteUrl": "https://keeweb.info/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "passwork",
+    "name": "Passwork",
+    "category": "Productivity",
+    "shortDescription": "Spanish password manager.",
+    "websiteUrl": "https://passwork.pro/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "simplenote",
+    "name": "Simplenote",
+    "category": "Productivity",
+    "shortDescription": "Note-taking application.",
+    "websiteUrl": "https://simplenote.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "tiddlywiki",
+    "name": "TiddlyWiki",
+    "category": "Productivity",
+    "shortDescription": "Personal wiki software.",
+    "websiteUrl": "https://tiddlywiki.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "prezi",
+    "name": "Prezi",
+    "category": "Design",
+    "shortDescription": "Online presentation design platform.",
+    "websiteUrl": "https://www.prezi.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "freeplane",
+    "name": "Freeplane",
+    "category": "Productivity",
+    "shortDescription": "Free mind mapping application.",
+    "websiteUrl": "https://www.freeplane.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "qownnotes",
+    "name": "QOwnNotes",
+    "category": "Productivity",
+    "shortDescription": "Note taking app with markdown support.",
+    "websiteUrl": "https://www.qownnotes.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "zim",
+    "name": "Zim",
+    "category": "Productivity",
+    "shortDescription": "Topics referred to by the same term.",
+    "websiteUrl": "https://zim-wiki.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "tagspaces",
+    "name": "TagSpaces",
+    "category": "Productivity",
+    "shortDescription": "Data manager and file navigator.",
+    "websiteUrl": "https://www.tagspaces.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "coreldraw",
+    "name": "CorelDRAW",
+    "category": "Design",
+    "shortDescription": "Vector graphics editor.",
+    "websiteUrl": "https://www.coreldraw.com/en/product/coreldraw/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "affinity",
+    "name": "Affinity",
+    "category": "Design",
+    "shortDescription": "Topics referred to by the same term.",
+    "websiteUrl": "https://affinity.studio",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "blackmagic-design",
+    "name": "Blackmagic Design",
+    "category": "Design",
+    "shortDescription": "Australian cinema manufacturer.",
+    "websiteUrl": "https://www.blackmagicdesign.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "picsart",
+    "name": "Picsart",
+    "category": "Design",
+    "shortDescription": "Armenian Cross-platform design, photo and video editing platform.",
+    "websiteUrl": "https://picsart.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "pixelmator-pro",
+    "name": "Pixelmator Pro",
+    "category": "Design",
+    "shortDescription": "Graphics editor for Mac developed by Apple.",
+    "websiteUrl": "https://www.pixelmator.com/pro/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "kinemaster",
+    "name": "KineMaster",
+    "category": "Design",
+    "shortDescription": "Mobile video editing application.",
+    "websiteUrl": "https://www.kinemaster.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "vegas-pro",
+    "name": "Vegas Pro",
+    "category": "Design",
+    "shortDescription": "Video editing software.",
+    "websiteUrl": "https://www.vegascreativesoftware.com/vegas-pro/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "xara-designer-pro",
+    "name": "Xara Designer Pro+",
+    "category": "Design",
+    "shortDescription": "Image editing suite.",
+    "websiteUrl": "https://www.xara.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "category": "AI Tools",
+    "shortDescription": "Image-generating machine learning model.",
+    "websiteUrl": "https://recraft.ai/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "screenpal",
+    "name": "ScreenPal",
+    "category": "Design",
+    "shortDescription": "US software company.",
+    "websiteUrl": "https://screenpal.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "canvas-x",
+    "name": "Canvas X",
+    "category": "Design",
+    "shortDescription": "Drawing and imaging computer program.",
+    "websiteUrl": "https://www.canvasgfx.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "civicrm",
+    "name": "CiviCRM",
+    "category": "CRM",
+    "shortDescription": "Constituency relationship management suite.",
+    "websiteUrl": "https://civicrm.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "sugarcrm",
+    "name": "SugarCRM",
+    "category": "CRM",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://www.sugarcrm.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "kayako",
+    "name": "Kayako",
+    "category": "Customer Service",
+    "shortDescription": "English software company.",
+    "websiteUrl": "https://www.kayako.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "livechat",
+    "name": "LiveChat",
+    "category": "Customer Service",
+    "shortDescription": "Online customer service software.",
+    "websiteUrl": "https://www.livechat.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "microsoft-dynamics",
+    "name": "Microsoft Dynamics",
+    "category": "CRM",
+    "shortDescription": "Microsoft's CRM and ERP application suite for business operations.",
+    "websiteUrl": "https://dynamics.microsoft.com/en-us/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "nationbuilder",
+    "name": "NationBuilder",
+    "category": "CRM",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://nationbuilder.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "onlyoffice",
+    "name": "OnlyOffice",
+    "category": "Productivity",
+    "shortDescription": "Office suite developed by Ascensio System SIA.",
+    "websiteUrl": "https://www.onlyoffice.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "servicetitan",
+    "name": "ServiceTitan",
+    "category": "CRM",
+    "shortDescription": "American software company.",
+    "websiteUrl": "https://servicetitan.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "snapforce-crm",
+    "name": "Snapforce CRM",
+    "category": "CRM",
+    "shortDescription": "CRM with built-in telephony aimed at small sales teams.",
+    "websiteUrl": "https://www.snapforce.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "dolibarr",
+    "name": "Dolibarr",
+    "category": "CRM",
+    "shortDescription": "Open source software for accounting.",
+    "websiteUrl": "https://www.dolibarr.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "erpnext",
+    "name": "ERPNext",
+    "category": "Finance Tools",
+    "shortDescription": "Enterprise resource planning software.",
+    "websiteUrl": "https://erpnext.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "freeagent",
+    "name": "FreeAgent",
+    "category": "Finance Tools",
+    "shortDescription": "British cloud-based accounting software company.",
+    "websiteUrl": "https://www.freeagent.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "quicken",
+    "name": "Quicken",
+    "category": "Finance Tools",
+    "shortDescription": "Personal finance management tool.",
+    "websiteUrl": "https://www.quicken.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "tally-solutions",
+    "name": "Tally Solutions",
+    "category": "Finance Tools",
+    "shortDescription": "Indian multinational technology company.",
+    "websiteUrl": "https://tallysolutions.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "tipalti",
+    "name": "Tipalti",
+    "category": "Finance Tools",
+    "shortDescription": "American financial technology company.",
+    "websiteUrl": "https://www.tipalti.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bench-accounting",
+    "name": "Bench Accounting",
+    "category": "Finance Tools",
+    "shortDescription": "North American financial technology company purchased by Employer.com.",
+    "websiteUrl": "https://bench.co/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ledgersmb",
+    "name": "LedgerSMB",
+    "category": "Finance Tools",
+    "shortDescription": "Accounting software planning system.",
+    "websiteUrl": "https://ledgersmb.org/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "7shifts",
+    "name": "7shifts",
+    "category": "HR Software",
+    "shortDescription": "Cloud-based restaurant management software company.",
+    "websiteUrl": "https://www.7shifts.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "hibob",
+    "name": "HiBob",
+    "category": "HR Software",
+    "shortDescription": "Israel-British human resources platform.",
+    "websiteUrl": "https://www.hibob.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "icims",
+    "name": "ICIMS",
+    "category": "HR Software",
+    "shortDescription": "Application management software.",
+    "websiteUrl": "https://www.icims.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "papaya-global",
+    "name": "Papaya Global",
+    "category": "HR Software",
+    "shortDescription": "Fintech SaaS company.",
+    "websiteUrl": "https://www.papayaglobal.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "paylocity",
+    "name": "Paylocity",
+    "category": "HR Software",
+    "shortDescription": "American financial software company.",
+    "websiteUrl": "https://www.paylocity.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "beamery",
+    "name": "Beamery",
+    "category": "HR Software",
+    "shortDescription": "British human resources software company.",
+    "websiteUrl": "https://beamery.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "otrs",
+    "name": "OTRS",
+    "category": "Customer Service",
+    "shortDescription": "Service management software.",
+    "websiteUrl": "https://www.otrs.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "uservoice",
+    "name": "UserVoice",
+    "category": "Customer Service",
+    "shortDescription": "Software-as-a-Service (SaaS) company.",
+    "websiteUrl": "https://www.uservoice.com/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
   }
 ]
