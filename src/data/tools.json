@@ -16342,31 +16342,169 @@
     "slug": "alibaba-cloud",
     "name": "Alibaba Cloud",
     "category": "Hosting",
-    "shortDescription": "Chinese cloud computing company.",
+    "shortDescription": "Global cloud platform offering ECS compute, storage, networking, databases, containers, security and analytics.",
     "websiteUrl": "https://intl.aliyun.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Alibaba Cloud is a proprietary cloud platform whose Elastic Compute Service (ECS) provides x86, Arm, GPU and bare-metal-style instance families with APIs and regional resources. ECS supports prepaid subscription, per-second pay-as-you-go and interruptible spot billing, plus commitment instruments. Compute, images, cloud disks, public outbound bandwidth and snapshots are distinct billable items. A normally stopped pay-as-you-go instance can keep billing; only eligible economical mode releases compute charges while retained disks, EIPs and snapshots continue.",
+    "pros": [
+      "Broad compute choice: ECS includes general, compute, memory, GPU, Arm, bare metal and other workload families.",
+      "Multiple billing modes: Subscription, pay-as-you-go, spot, Savings Plans and reserved instances cover different demand patterns.",
+      "Automation surface: Standard APIs and integrations with Terraform, ROS, OOS and Auto Scaling support repeatable infrastructure.",
+      "Regional architecture: Regions, zones, deployment sets and multi-zone patterns enable explicit placement and resilience design."
+    ],
+    "cons": [
+      "Component billing: Instance type, image, disks, public bandwidth and snapshots can each add separate charges.",
+      "Stopping may not stop cost: Standard stop retains resources and billing; economical mode has eligibility and restart-capacity risks.",
+      "Regional differences: Instance availability, rates, image use, network behavior and regulatory requirements vary by region.",
+      "IaaS responsibility: Customers patch operating systems, secure applications, configure least privilege, encrypt data and design recovery."
+    ],
+    "keyFeatures": [
+      { "title": "Elastic Compute Service", "description": "Runs API-managed virtual compute across numerous instance architectures and families." },
+      { "title": "Flexible purchasing", "description": "Combines prepaid, usage-based, spot and commitment-discount mechanisms." },
+      { "title": "Regional resources", "description": "Scopes instances, disks, images, snapshots, networks and keys to documented region or zone boundaries." },
+      { "title": "Snapshots and security", "description": "Provides disk snapshots, access controls, security groups, encryption and monitoring building blocks." }
+    ],
+    "targetAudience": "Engineering teams needing Alibaba Cloud's regional footprint or services and capable of governing a full IaaS cost and security model.",
+    "bestFor": [
+      "Asia-oriented and global workloads after validating the international account and exact region catalog",
+      "Elastic VM fleets managed through API, Terraform or Alibaba orchestration tools",
+      "Predictable workloads that can compare subscription commitments with pay-as-you-go and spot interruption"
+    ],
+    "skipIf": [
+      "The team assumes stopping an instance removes every associated charge",
+      "The required service, image, legal posture or support level has not been verified in the target region",
+      "No owner exists for OS patches, RAM permissions, network rules, encryption, snapshots and restore drills"
+    ],
+    "verdict": "Alibaba Cloud ECS is a broad IaaS option, especially where its Asian footprint matters; prototype in the target region, price every disk/IP/image/snapshot and traffic line, harden through least privilege, and prove multi-zone failure plus independent restore before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Alibaba Cloud Docs — What is ECS", "url": "https://www.alibabacloud.com/help/en/ecs/user-guide/what-is-ecs", "checkedAt": "2026-08-24", "supports": ["IaaS compute service", "x86 Arm GPU and bare-metal families", "APIs Terraform ROS and OOS", "billing methods", "regional placement", "billable compute image disk bandwidth and snapshot components"] },
+        { "label": "Alibaba Cloud Docs — ECS billing overview", "url": "https://www.alibabacloud.com/help/en/ecs/billing-overview", "checkedAt": "2026-08-24", "supports": ["component billing", "subscription pay-as-you-go and spot", "region-specific prices", "outbound network charging", "snapshot-copy fees", "expiration and overdue-payment data risk"] },
+        { "label": "Alibaba Cloud Docs — Instance type billing", "url": "https://www.alibabacloud.com/help/en/ecs/instance-types", "checkedAt": "2026-08-24", "supports": ["prepaid per-second and spot models", "spot reclamation", "compute-only example boundary", "release requirement", "normal-stop charging", "economical mode", "separate EBS EIP snapshot image and bandwidth"] },
+        { "label": "Alibaba Cloud Docs — Stop an instance", "url": "https://www.alibabacloud.com/help/en/ecs/user-guide/stop-an-instance", "checkedAt": "2026-08-24", "supports": ["billing effects by stop mode", "subscription and standard-mode continuation", "economical-mode eligibility", "retained disk EIP and snapshot charges", "force-stop data risk", "restart-capacity risk"] },
+        { "label": "Alibaba Cloud Docs — ECS shared responsibility", "url": "https://www.alibabacloud.com/help/en/ecs/user-guide/ecs-shared-responsibility-model", "checkedAt": "2026-08-24", "supports": ["provider infrastructure responsibility", "customer OS patching", "application security", "network configuration", "least-privilege access", "data encryption"] },
+        { "label": "Alibaba Cloud Docs — ECS resource locations", "url": "https://www.alibabacloud.com/help/en/ecs/user-guide/overview-47", "checkedAt": "2026-08-24", "supports": ["region and zone binding", "zone-specific instance and disk availability", "regional images snapshots security groups and keys", "cross-region copy requirements"] }
+      ],
+      "limitations": ["Official Alibaba Cloud ECS product and documentation pages were reviewed; ToolCompare did not create an international account, verify eligibility or trial offers, deploy or benchmark an instance, inspect live regional checkout, test API/IAM/support, calculate tax or currency effects, induce spot reclamation, validate compliance, or restore snapshots. Product availability, prices and contractual terms vary by account and region."]
+    }
   },
   {
     "slug": "tencent-cloud",
     "name": "Tencent Cloud",
     "category": "Hosting",
-    "shortDescription": "Cloud computing platform provided by Tencent.",
+    "shortDescription": "Cloud platform whose CVM service provides regional virtual machines with subscription, usage and spot billing.",
     "websiteUrl": "https://cloud.tencent.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Tencent Cloud is a proprietary cloud platform; this record focuses on the international Cloud Virtual Machine (CVM) service. CVM supports prepaid monthly/annual subscription, per-second pay-as-you-go settled hourly, spot and other purchasing models. The VM bill combines CPU/memory, system and data disks, images and public network usage. Shutdown waives compute only for eligible pay-as-you-go configurations; ineligible instances and retained disks, IPs or snapshots can continue charging. Services and rules differ between mainland China and international regions.",
+    "pros": [
+      "Flexible compute purchasing: Subscription, pay-as-you-go and interruptible spot options fit stable or variable workloads.",
+      "API provisioning: CVM instances can be purchased and managed through the international console or signed HTTPS APIs.",
+      "Regional isolation: Regions and availability zones expose explicit placement, private networking and cross-AZ recovery patterns.",
+      "Supporting primitives: Cloud disks, snapshots, images, security groups, load balancing and monitoring compose production systems."
+    ],
+    "cons": [
+      "Multi-part invoice: Compute, disks and network are separately relevant to total CVM cost.",
+      "Shutdown rules are conditional: Only eligible pay-as-you-go instances stop compute charges after shutdown.",
+      "Spot and overdue risk: Spot capacity can be repossessed and overdue/expired instances can ultimately be released unrecoverably.",
+      "Regional policy differences: Available types, image/OS operations, latency, compliance and network behavior vary by location."
+    ],
+    "keyFeatures": [
+      { "title": "Cloud Virtual Machine", "description": "Provides regional virtual compute with multiple instance types, images and attached disks." },
+      { "title": "Billing modes", "description": "Offers prepaid subscription, per-second pay-as-you-go, spot and commitment-oriented purchasing." },
+      { "title": "Network and placement", "description": "Uses VPCs, subnets, security groups, EIPs and availability zones for workload topology." },
+      { "title": "Images and snapshots", "description": "Captures disk state and templates within documented zone and region boundaries." }
+    ],
+    "targetAudience": "Teams requiring Tencent Cloud's regions or ecosystem and prepared to validate international account, billing and operational boundaries.",
+    "bestFor": [
+      "Asia-Pacific workloads after confirming service availability in the intended international region",
+      "Elastic server fleets provisioned through CVM APIs and infrastructure automation",
+      "Fault-tolerant batch jobs that can safely use interruptible spot capacity"
+    ],
+    "skipIf": [
+      "The architecture assumes mainland and international products or rules are interchangeable",
+      "The cost model ignores disks, public bandwidth, images, snapshots and retained stopped resources",
+      "The application cannot tolerate spot reclamation and has no multi-AZ or backup design"
+    ],
+    "verdict": "Tencent Cloud CVM is worth evaluating when its regional footprint fits, but use the international documentation and target-region console as authority; model every billable component, test shutdown/reclamation behavior, and prove hardened multi-AZ recovery before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Tencent Cloud Docs — CVM purchase methods", "url": "https://www.tencentcloud.com/document/product/213/506", "checkedAt": "2026-08-24", "supports": ["international purchase path", "console and API", "monthly and annual subscription", "per-second pay-as-you-go", "spot instances", "hourly settlement", "non-refundable subscription warning", "overdue and repossession risk"] },
+        { "label": "Tencent Cloud Docs — CVM billing overview", "url": "https://www.tencentcloud.com/document/product/213/2176", "checkedAt": "2026-08-24", "supports": ["CPU memory disk and network bill components", "hourly list and per-second billing", "tiered compute pricing", "shutdown eligibility distinction", "price-calculator boundary"] },
+        { "label": "Tencent Cloud Docs — Regions and zones", "url": "https://www.tencentcloud.com/document/product/213/6091", "checkedAt": "2026-08-24", "supports": ["region isolation", "availability-zone fault domains", "cross-AZ VPC networking", "multi-AZ recovery recommendation", "resource region and zone scope", "cross-region image copying"] },
+        { "label": "Tencent Cloud Docs — CVM API request structure", "url": "https://www.tencentcloud.com/document/product/213/31573", "checkedAt": "2026-08-24", "supports": ["international API endpoint", "regional endpoints", "HTTPS", "signed GET and POST requests", "request-size limits"] },
+        { "label": "Tencent Cloud Docs — Instance billing FAQ", "url": "https://www.tencentcloud.com/document/product/213/17283", "checkedAt": "2026-08-24", "supports": ["hourly automatic pay-as-you-go deductions", "automatic release scheduling", "cloud disk charges", "mainland and international OS-change difference"] },
+        { "label": "Tencent Cloud Docs — Snapshots", "url": "https://www.tencentcloud.com/document/product/213/36416", "checkedAt": "2026-08-24", "supports": ["point-in-time disk copies", "snapshot I/O impact", "shutdown requirement for attached-disk rollback", "manual snapshot retention after instance release", "regional scope"] }
+      ],
+      "limitations": ["Official Tencent Cloud international CVM documentation was reviewed; ToolCompare did not create an account, verify free-tier eligibility, inspect live pricing or every region, deploy or benchmark a VM, test APIs/CAM/support, calculate network and disk costs, induce spot or overdue release, configure security, or restore a snapshot. Some indexed documentation is AI-translated and product behavior can differ between mainland China and international sites."]
+    }
   },
   {
     "slug": "yandex-cloud",
     "name": "Yandex Cloud",
     "category": "Hosting",
-    "shortDescription": "Cloud-based service and infrastructure.",
+    "shortDescription": "Cloud platform offering compute, storage, managed data, containers, serverless, analytics and machine-learning services.",
     "websiteUrl": "https://cloud.yandex.ru/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-kredi",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Yandex Cloud is a proprietary cloud platform with Compute Cloud virtual machines and more than 50 infrastructure, data, container, serverless and ML services. Billing and signup depend on payer type, country and contracting entity. New business customers can receive a limited trial; new individuals start on consumption billing, while a separate initial grant requires a linked card and has exclusions. VM compute is billed per second while running, but disks, snapshots, images, public IPs, licenses and outbound traffic are separate and may continue after a VM stops or is deleted.",
+    "pros": [
+      "Broad managed catalog: Compute, object storage, databases, Kubernetes, serverless, analytics and ML share one platform.",
+      "Granular compute billing: VM CPU, RAM and eligible operating-system use accrue per second only while running.",
+      "Cost controls: Billing dashboards, budgets, alert thresholds, grants and commitment discounts support governance.",
+      "API-managed resources: Compute exposes HTTP APIs, IAM roles, quotas, instance groups, images and snapshots."
+    ],
+    "cons": [
+      "Access is country-dependent: Official signup documentation notes unsupported countries and different payer/contract flows.",
+      "Trial is not universal: Business customers and individuals receive different trial or consumption treatment, with grant exclusions.",
+      "Stopped VM is not zero cost: Disks bill from creation to deletion; images, snapshots, IPs, licenses and traffic are separate.",
+      "Regional/legal fit is specific: Currency, tax, data location, compliance and service availability depend on contracting entity and region."
+    ],
+    "keyFeatures": [
+      { "title": "Compute Cloud", "description": "Runs virtual machines, preemptible capacity and fault-tolerant instance groups." },
+      { "title": "Persistent storage", "description": "Uses zonally replicated disks plus separately billed snapshots and images." },
+      { "title": "Organization and IAM", "description": "Structures organizations, clouds and folders with role-based service access." },
+      { "title": "Billing controls", "description": "Tracks detailed usage, grants, budgets, notifications and commitment discounts." }
+    ],
+    "targetAudience": "Organizations whose geography, contracting options and workload needs align with Yandex Cloud's regional platform.",
+    "bestFor": [
+      "Workloads targeting Russia or supported surrounding markets after legal and residency review",
+      "Teams needing Yandex-native data, analytics or ML services alongside infrastructure",
+      "Businesses approved for trial or program credits with a plan for post-credit operating cost"
+    ],
+    "skipIf": [
+      "The payer country or required payment method is unsupported",
+      "The project assumes every new account receives the advertised maximum trial credit",
+      "Disks, snapshots, IPs, marketplace licenses, egress and recovery are absent from the cost model"
+    ],
+    "verdict": "Yandex Cloud can fit regionally aligned workloads, but eligibility and contract route are first-order checks; confirm payer support, price all persistent resources after credits, constrain IAM and quotas, and test zone failure plus independent restoration before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Yandex Cloud — Platform home", "url": "https://yandex.cloud/en", "checkedAt": "2026-08-24", "supports": ["service catalog breadth", "pay-as-you-go", "free-tier and reservation positioning", "two-month grant marketing", "regional platform positioning", "billing visibility"] },
+        { "label": "Yandex Cloud Docs — Billing-account signup", "url": "https://yandex.cloud/en/docs/billing/quickstart/", "checkedAt": "2026-08-24", "supports": ["billing-account requirement", "individual and business payer types", "business trial distinction", "individual consumption model", "country signup restriction", "60-day initial grant", "linked-card condition", "grant exclusions", "contract and currency variation"] },
+        { "label": "Yandex Cloud Docs — Compute pricing", "url": "https://yandex.cloud/en/docs/compute/pricing", "checkedAt": "2026-08-24", "supports": ["CPU RAM OS storage IP and egress components", "per-second running VM billing", "stopped compute waiver", "disk billing while stopped and after VM deletion", "snapshot and image charges", "contracting-entity currencies", "first 100 GB outbound allowance"] },
+        { "label": "Yandex Cloud Docs — Compute overview", "url": "https://yandex.cloud/en/docs/compute/", "checkedAt": "2026-08-24", "supports": ["virtual machines", "preemptible VMs", "instance groups", "zonal disk replication", "snapshots", "HTTP API", "IAM quotas and limits", "service-level reference"] },
+        { "label": "Yandex Cloud Docs — Compute quotas", "url": "https://yandex.cloud/en/docs/compute/concepts/limits", "checkedAt": "2026-08-24", "supports": ["organizational quotas", "technical limits", "quota-increase requests", "Quota Manager role requirement", "VM disk snapshot and host constraints"] },
+        { "label": "Yandex Cloud — Billing service", "url": "https://yandex.cloud/en/services/billing", "checkedAt": "2026-08-24", "supports": ["grant tracking", "granular expense views", "billing roles", "budget thresholds", "payment options", "six- and twelve-month commitment discounts", "residency-based currency"] }
+      ],
+      "limitations": ["Official Yandex Cloud platform, signup, billing and Compute documentation was reviewed; ToolCompare did not verify signup from Turkey, create a payer or organization, obtain a grant, inspect a live international quote, deploy or benchmark a VM, test APIs/IAM/support, assess sanctions or legal constraints, validate compliance, induce preemption, or restore a snapshot. Eligibility, currency, taxes, services and contracting entities can change."]
+    }
   },
   {
     "slug": "ibm-cloud",
