@@ -12232,7 +12232,7 @@
     "slug": "groq",
     "name": "Groq",
     "category": "AI Tools",
-    "shortDescription": "Very fast inference for open models.",
+    "shortDescription": "Hosted inference API with published model speeds, prices and rate limits.",
     "websiteUrl": "https://groq.com",
     "incelendi": true,
     "basePrice": 0,
@@ -12244,25 +12244,53 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Groq runs open models on custom hardware and is notable for how fast it returns tokens, which changes what feels possible in interactive applications.",
+    "longDescription": "GroqCloud hosts a defined catalog of production and preview models behind Groq and mostly OpenAI-compatible APIs. Its model table publishes estimated token speed, pricing, context windows and developer limits. Actual workload latency and output quality still depend on the selected model, prompt, load and account limits.",
     "pros": [
-      "Response speed well beyond typical providers",
-      "Straightforward, OpenAI-compatible API",
-      "Pay per token with no minimum"
+      "Published model data: The catalog lists indicative token speed alongside price and limits.",
+      "OpenAI client migration: Groq documents compatibility through an alternative base URL.",
+      "Free and developer limits: Current quotas are documented by model and organization.",
+      "Usage controls: Billing dashboards, spend limits and budget alerts are available."
     ],
     "cons": [
-      "Model selection limited to what they host",
-      "Capacity constraints at peak",
-      "No proprietary frontier models"
+      "Catalog boundary: Applications can only call models and systems currently hosted by GroqCloud.",
+      "Compatibility gaps: Some OpenAI request fields and output formats are not supported.",
+      "Rate limits: Requests can hit per-minute, per-day, token or audio limits at the organization level.",
+      "Preview risk: Preview models may be removed on short notice and are not documented for production use."
     ],
-    "targetAudience": "Applications where response latency is the user experience.",
-    "verdict": "Genuinely fast enough to change product decisions. Pick it for latency, not for model choice."
+    "keyFeatures": [
+      { "title": "Hosted model API", "description": "Calls active production and preview models using documented model IDs." },
+      { "title": "OpenAI compatibility", "description": "Supports OpenAI client libraries with a Groq base URL, subject to documented differences." },
+      { "title": "Published model metrics", "description": "Lists indicative token speed, price, context and limits for supported models." },
+      { "title": "Rate and spend controls", "description": "Provides quota headers, usage monitoring, spend limits and budget alerts." }
+    ],
+    "targetAudience": "Developers evaluating latency-sensitive inference on GroqCloud's supported model catalog.",
+    "bestFor": [
+      "Interactive workloads where measured response latency is a primary requirement",
+      "Teams migrating an OpenAI-style integration while accepting documented compatibility differences",
+      "Projects that fit GroqCloud's current production model catalog"
+    ],
+    "skipIf": [
+      "A required model or OpenAI API parameter is unsupported",
+      "Your production design depends on a preview model remaining available",
+      "Your organization cannot operate within model-specific rate limits"
+    ],
+    "verdict": "Choose Groq after benchmarking the exact production model and prompt mix; published token rates are useful evidence, not a guarantee of end-to-end application latency.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "GroqDocs — Supported models", "url": "https://console.groq.com/docs/models", "checkedAt": "2026-08-24", "supports": ["model catalog", "published token speeds", "prices", "context windows", "production and preview status"] },
+        { "label": "GroqDocs — Rate limits", "url": "https://console.groq.com/docs/rate-limits", "checkedAt": "2026-08-24", "supports": ["organization limits", "requests and token quotas", "429 responses", "rate-limit headers"] },
+        { "label": "GroqDocs — OpenAI compatibility", "url": "https://console.groq.com/docs/openai", "checkedAt": "2026-08-24", "supports": ["OpenAI client configuration", "Groq base URL", "unsupported fields", "Responses API"] }
+      ],
+      "limitations": ["Vendor-published speed and pricing were reviewed; ToolCompare did not benchmark end-to-end latency, availability or model quality."]
+    }
   },
   {
     "slug": "together-ai",
     "name": "Together AI",
     "category": "AI Tools",
-    "shortDescription": "Hosted open models and fine-tuning.",
+    "shortDescription": "Serverless and dedicated inference across hosted models and modalities.",
     "websiteUrl": "https://www.together.ai",
     "incelendi": true,
     "basePrice": 0,
@@ -12274,19 +12302,48 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Together AI hosts open models for inference and fine-tuning, with pricing per token and dedicated capacity options.",
+    "longDescription": "Together AI offers shared serverless inference and dedicated endpoints through the same API surface. Serverless models are billed by token or output unit and use dynamic rate limits; dedicated endpoints reserve hardware and bill by running time. Model availability, license, modality and price must be checked in the current catalog.",
     "pros": [
-      "Wide selection of open models",
-      "Fine-tuning available",
-      "Competitive per-token pricing"
+      "Two deployment modes: Prototype on serverless and move compatible workloads to dedicated endpoints.",
+      "Multiple modalities: The catalog includes text, image, video, audio, embedding and moderation options.",
+      "No serverless minimum: Supported serverless models bill by actual usage without provisioning.",
+      "Dedicated control: Reserved hardware provides endpoint-specific configuration and avoids shared-fleet limits."
     ],
     "cons": [
-      "Model availability changes over time",
-      "Performance varies by model and load",
-      "No proprietary frontier models"
+      "Catalog changes: Available models, prices and supported deployment modes can change.",
+      "Dynamic limits: Serverless quotas vary by model, capacity and recent successful usage.",
+      "Dedicated idle cost: Reserved endpoints bill while running regardless of request volume.",
+      "Access cost: Together currently documents a minimum credit purchase and no free trial."
     ],
-    "targetAudience": "Teams running open models in production without managing GPUs.",
-    "verdict": "A reasonable middle ground between raw GPUs and closed APIs."
+    "keyFeatures": [
+      { "title": "Serverless inference", "description": "Shared, per-usage access to supported models without provisioning replicas." },
+      { "title": "Dedicated endpoints", "description": "Reserved hardware with per-endpoint configuration and per-minute billing while running." },
+      { "title": "Shared API surface", "description": "Serverless and dedicated endpoints use the same inference APIs for compatible models." },
+      { "title": "Multimodal catalog", "description": "Current offerings span chat, image, video, audio, embeddings and moderation." }
+    ],
+    "targetAudience": "Teams that want hosted inference with a path from variable serverless traffic to reserved model infrastructure.",
+    "bestFor": [
+      "Prototyping or variable traffic on a supported serverless model",
+      "Steady workloads that justify reserved dedicated hardware",
+      "Teams that want one API surface across serverless and dedicated deployment"
+    ],
+    "skipIf": [
+      "You require a free trial before purchasing platform credits",
+      "A required model is unavailable in the chosen serverless or dedicated catalog",
+      "You cannot monitor dynamic rate limits or dedicated endpoint runtime cost"
+    ],
+    "verdict": "Choose Together AI when its current model catalog and serverless-to-dedicated path match your traffic; compare total workload cost rather than relying on a generic price claim.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Together AI Docs — Inference overview", "url": "https://docs.together.ai/docs/inference/overview", "checkedAt": "2026-08-24", "supports": ["serverless inference", "dedicated endpoints", "shared API", "per-token and per-minute billing", "deployment fit"] },
+        { "label": "Together AI Docs — Serverless models", "url": "https://docs.together.ai/docs/serverless/models", "checkedAt": "2026-08-24", "supports": ["model catalog", "modalities", "usage pricing", "no provisioning minimum", "rate limits", "batch discounts"] },
+        { "label": "Together AI Docs — Dedicated endpoints", "url": "https://docs.together.ai/docs/dedicated-endpoints/overview", "checkedAt": "2026-08-24", "supports": ["reserved hardware", "predictable performance", "configuration", "same inference APIs", "per-minute billing"] },
+        { "label": "Together AI Docs — Credits", "url": "https://docs.together.ai/docs/billing-credits", "checkedAt": "2026-08-24", "supports": ["credit usage", "minimum credit purchase", "no free trial", "fine-tuning and endpoint billing"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not benchmark model quality, latency, availability or total cost for a specific workload."]
+    }
   },
   {
     "slug": "replicate",
@@ -12334,19 +12391,47 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "OpenRouter puts one API in front of many model providers, so you can switch models or fail over without rewriting integration code.",
+    "longDescription": "OpenRouter provides one API and billing layer across multiple model providers. Requests can be routed by provider availability, price, throughput, parameter support and data policy, with optional fallbacks. Model charges vary by provider and modality; OpenRouter also charges fees when credits are purchased and under some BYOK usage conditions.",
     "pros": [
-      "One integration for many providers",
-      "Easy price and quality comparison",
-      "Fallback routing when a provider fails"
+      "Unified API: One interface exposes models from multiple providers.",
+      "Routing controls: Requests can prioritize provider order, price, throughput and parameter support.",
+      "Fallbacks: Compatible backup providers can be used when a selected provider is unavailable.",
+      "Privacy routing: Requests can be restricted by provider data policy or zero-data-retention support."
     ],
     "cons": [
-      "A small margin on top of provider pricing",
-      "Adds a dependency between you and the model",
-      "Provider-specific features may not pass through"
+      "Credit fees: OpenRouter documents a fee when purchasing credits even when inference pricing is passed through.",
+      "Additional dependency: Availability and behavior depend on OpenRouter plus the routed provider.",
+      "Provider variation: Prices, supported parameters, retention policies and model availability differ by route.",
+      "Metadata collection: Request metadata such as token counts and latency is retained for reporting."
     ],
-    "targetAudience": "Teams that want to avoid locking their product to one model vendor.",
-    "verdict": "Sensible insurance against vendor lock-in, and the margin is usually worth it."
+    "keyFeatures": [
+      { "title": "Unified model API", "description": "Access models from multiple providers through one API and consolidated billing account." },
+      { "title": "Provider routing", "description": "Choose provider order or route by price, throughput, parameters and data policy." },
+      { "title": "Fallback providers", "description": "Allow compatible providers to handle a request when the preferred route is unavailable." },
+      { "title": "Privacy controls", "description": "Limit routes by data-collection policy or zero-data-retention endpoints." }
+    ],
+    "targetAudience": "Developers who want one integration across several model providers and can govern route-specific cost and privacy differences.",
+    "bestFor": [
+      "Applications that need provider fallbacks without separate integrations",
+      "Teams that want centralized model usage and spend visibility",
+      "Workloads that can apply explicit provider and data-policy routing rules"
+    ],
+    "skipIf": [
+      "Your policy requires a direct contract and data path with one model provider",
+      "You cannot accept credit-purchase or applicable BYOK fees",
+      "You need identical behavior and feature support across every routed provider"
+    ],
+    "verdict": "Choose OpenRouter when multi-provider routing and consolidated billing justify another service in the request path; pin privacy, provider and budget policies explicitly.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "OpenRouter Docs — FAQ", "url": "https://openrouter.ai/docs/faq", "checkedAt": "2026-08-24", "supports": ["unified API", "provider pricing", "credit fees", "BYOK fees", "prompt logging defaults", "provider data policies"] },
+        { "label": "OpenRouter Docs — Provider routing", "url": "https://openrouter.ai/docs/guides/routing/provider-selection", "checkedAt": "2026-08-24", "supports": ["provider order", "fallbacks", "price routing", "throughput routing", "parameter support", "data collection controls"] },
+        { "label": "OpenRouter Docs — Data collection", "url": "https://openrouter.ai/docs/guides/privacy/data-collection", "checkedAt": "2026-08-24", "supports": ["prompt and response storage settings", "anonymous categorization", "request metadata collection"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; route availability, latency, model quality and downstream provider behavior were not independently benchmarked."]
+    }
   },
   {
     "slug": "langchain",
