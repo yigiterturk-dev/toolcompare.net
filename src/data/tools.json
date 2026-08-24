@@ -17465,31 +17465,107 @@
     "slug": "glowhost",
     "name": "GlowHost",
     "category": "Hosting",
-    "shortDescription": "American web hosting provider.",
+    "shortDescription": "Managed cPanel hosting provider with shared, reseller, cloud and dedicated-server plans.",
     "websiteUrl": "https://glowhost.com",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 4.95,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "GlowHost is a proprietary managed-hosting provider offering shared cPanel hosting, a site builder, reseller and semi-dedicated plans, managed cloud servers and dedicated servers. Shared hosting currently starts at $4.95 per month. New accounts are enrolled in recurring payments, renewal pricing may change, and cancellation must follow the provider's formal process. The advertised 91-day refund policy applies to an initial eligible hosting agreement, excludes cloud and dedicated servers plus several fees and add-ons, and deducts a payment-processing fee.",
+    "pros": ["Conventional hosting stack: Shared plans combine cPanel, email, SSL and common web-application installation.", "Broad upgrade path: Customers can move from shared hosting to reseller, semi-dedicated, cloud or dedicated resources.", "Managed options: Server products include provider assistance for routine infrastructure administration.", "Published service terms: Refund, billing, cancellation, resource-use and uptime-credit conditions are documented."],
+    "cons": ["Refund exclusions matter: Cloud and dedicated servers, setup, domains, software and add-ons are outside the headline guarantee.", "Automatic billing: New accounts use recurring payments unless the customer changes the payment arrangement.", "Backups are not a recovery guarantee: Storage or inode thresholds can exclude shared accounts and customers remain responsible for independent copies.", "Unlimited is conditional: Shared resources cannot be used as general backup or archive storage and remain subject to acceptable-use limits."],
+    "keyFeatures": [
+      { "title": "Shared cPanel hosting", "description": "Provides managed website, email, SSL and application-hosting features on shared plans." },
+      { "title": "Server upgrade path", "description": "Offers semi-dedicated, managed cloud, virtual dedicated and dedicated-server products." },
+      { "title": "Hosting refund window", "description": "Publishes a 91-day initial-hosting guarantee with product, fee and eligibility exclusions." },
+      { "title": "Uptime credit policy", "description": "Defines prorated service credits under specified monitoring and monthly-fee limits rather than proving zero downtime." }
+    ],
+    "targetAudience": "Small businesses and site owners wanting conventional managed cPanel hosting and willing to maintain independent backups.",
+    "bestFor": ["Small brochure, blog or commerce sites that fit shared-hosting resource policies", "Customers wanting one provider with shared-to-server upgrade options", "Teams that can verify renewal charges, cancellation timing and offsite restoration before launch"],
+    "skipIf": ["A cloud or dedicated purchase depends on the 91-day refund headline", "The workload is an archive, backup repository or resource-intensive custom application", "The organization requires a tested backup RPO/RTO, immutable recovery or independently measured uptime"],
+    "verdict": "GlowHost is a plausible conventional cPanel host with a wide product ladder, but the purchase decision should use the renewal invoice and exact product terms—not the headline refund or uptime language—and production data needs a separately tested offsite backup.",
+    "evidence": {
+      "status": "vendor-sourced", "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "GlowHost — Pricing", "url": "https://glowhost.com/pricing/", "checkedAt": "2026-08-24", "supports": ["shared hosting from $4.95 per month", "site-builder pricing", "reseller semi-dedicated cloud and dedicated product ranges", "plan-level price differences"] },
+        { "label": "GlowHost — Web hosting services", "url": "https://glowhost.com/web-hosting-service/", "checkedAt": "2026-08-24", "supports": ["shared cPanel hosting", "product upgrade path", "email SSL and application features", "managed-server positioning"] },
+        { "label": "GlowHost — Terms of service", "url": "https://glowhost.com/tos/", "checkedAt": "2026-08-24", "supports": ["91-day guarantee scope and exclusions", "processing-fee deduction", "automatic recurring payments", "renewal price changes", "formal cancellation requirement", "server cancellation lead time", "unlimited-resource restrictions", "backup exclusions and customer responsibility", "third-party application support boundary"] },
+        { "label": "GlowHost — Service-level agreement", "url": "https://glowhost.com/sla/", "checkedAt": "2026-08-24", "supports": ["refund eligibility boundary", "cloud and dedicated exclusions", "third-party product exclusions"] },
+        { "label": "GlowHost — Uptime guarantee", "url": "https://glowhost.com/web-hosting-features/the-best-guaranteed-web-hosting/", "checkedAt": "2026-08-24", "supports": ["shared reseller and semi-dedicated uptime-credit claim", "third-party monitoring condition", "prorated refund calculation", "monthly-fee credit cap"] }
+      ],
+      "limitations": ["Official GlowHost pricing, service, terms, SLA and uptime pages were reviewed; ToolCompare did not open an account, inspect checkout or renewal invoices, benchmark hosting, monitor uptime, test cPanel/email/SSL/support, exceed resource thresholds, verify backup cadence or integrity, cancel service, request a credit or refund, or perform a restore. Prices, locations, policies and eligibility can change."]
+    }
   },
   {
     "slug": "uniregistry",
     "name": "Uniregistry",
     "category": "Hosting",
-    "shortDescription": "Domain name registrar.",
+    "shortDescription": "Former domain registrar and marketplace acquired by GoDaddy; not evaluated as a current standalone signup option.",
     "websiteUrl": "https://uniregistry.link/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Uniregistry historically served domain investors with registrar, portfolio-management and aftermarket tools. GoDaddy announced the acquisition of Uniregistry's registrar and marketplace businesses in February 2020; the registry business was explicitly outside that transaction. ToolCompare therefore treats this entry as a legacy brand, not a currently comparable standalone registrar. New purchases should be evaluated against the current GoDaddy or Afternic product and terms, while legacy customers should confirm where each domain, listing, DNS configuration and billing relationship now resides.",
+    "pros": ["Historically investor-focused: The product was built around bulk domain registration, management and sales workflows.", "Acquisition is documented: GoDaddy's investor-relations release clearly identifies the registrar and marketplace assets acquired.", "Current transfer route exists: GoDaddy documents how eligible domains can be unlocked and transferred to another registrar."],
+    "cons": ["Not a current standalone choice: Historical Uniregistry features and prices should not be used for a new registrar comparison.", "Brand ambiguity: The registrar, marketplace and registry are distinct businesses and the registry was not part of the acquisition.", "Legacy-state verification is necessary: Domain registration, DNS, aftermarket listings and connected products may follow different systems or rules."],
+    "keyFeatures": [
+      { "title": "Legacy registrar", "description": "Previously provided domain registration and portfolio tools oriented toward domain investors." },
+      { "title": "Legacy marketplace", "description": "Previously supported domain listing, brokerage and aftermarket sales workflows." },
+      { "title": "GoDaddy acquisition", "description": "The registrar and marketplace businesses were acquired by GoDaddy; the registry was excluded." },
+      { "title": "Transfer eligibility", "description": "Current domain transfer procedures depend on the active registrar's lock, eligibility and authorization rules." }
+    ],
+    "targetAudience": "Researchers and legacy Uniregistry customers tracing historical registrar or marketplace relationships; not new registrar shoppers.",
+    "bestFor": ["Identifying the ownership history of a legacy Uniregistry registrar account", "Auditing where migrated domains, DNS and marketplace listings are currently administered", "Planning an eligible transfer only after validating the active registrar and preserving DNS records"],
+    "skipIf": ["You want to register a new domain with a currently operating standalone provider", "You are comparing present-day pricing, support or security from historical Uniregistry pages", "You have not confirmed whether the asset belongs to the former registrar, marketplace or separate registry business"],
+    "verdict": "Do not shortlist Uniregistry as a live standalone registrar. Treat it as a legacy record, locate the active GoDaddy/Afternic relationship for each asset, preserve DNS and connected-service details, then compare or transfer under current provider terms.",
+    "evidence": {
+      "status": "vendor-sourced", "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "GoDaddy Investor Relations — Uniregistry acquisition", "url": "https://aboutus.godaddy.net/newsroom/news-releases/press-release-details/2020/GoDaddy-Acquires-Uniregistrys-Registrar-Marketplace--Portfolio/default.aspx", "checkedAt": "2026-08-24", "supports": ["February 2020 acquisition announcement", "registrar and marketplace acquisition scope", "domain-investor focus", "registry exclusion", "expected closing boundary"] },
+        { "label": "GoDaddy — Aftermarket alignment", "url": "https://www.godaddy.com/resources/news/godaddy-aftermarket-alignment-commission-model-update", "checkedAt": "2026-08-24", "supports": ["2020 Uniregistry acquisition reference", "aftermarket product consolidation context", "Uniregistry nameserver legacy", "commission-model change boundary"] },
+        { "label": "GoDaddy Help — Transfer a domain away", "url": "https://www.godaddy.com/help/transfer-my-domain-away-from-godaddy-3560", "checkedAt": "2026-08-24", "supports": ["current transfer-away workflow", "unlock and protection prerequisites", "eligibility restrictions", "DNS and contact-information caution"] }
+      ],
+      "limitations": ["Official GoDaddy acquisition, aftermarket and current transfer sources were reviewed; ToolCompare did not access a legacy Uniregistry or migrated GoDaddy account, verify every migration date or customer path, inspect the separate registry business, inventory DNS or listings, test support, transfer a domain, or compare current GoDaddy/Afternic prices. This record is intentionally historical and should not be read as a current product review."]
+    }
   },
   {
     "slug": "sitew",
     "name": "SiteW",
     "category": "Design",
-    "shortDescription": "French company.",
+    "shortDescription": "French no-code website and online-store builder with bundled hosting and free-to-paid plans.",
     "websiteUrl": "https://www.sitew.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "SiteW is a proprietary French drag-and-drop builder for showcase sites and online stores, with hosting and responsive output included. The Discovery tier costs €0 but is limited to five pages, constrained storage, a SiteW subdomain and SiteW branding. Paid showcase plans currently begin at €8 monthly or €6.60 per month on annual billing; ecommerce begins at €25 monthly or €20.83 annual-equivalent, with product, category and payment-provider limits by tier. Paid subscriptions renew automatically unless cancelled at least five days before expiry, and renewal pricing may change.",
+    "pros": ["Low-friction start: A permanent free tier and a 15-day paid-feature trial are available without a card.", "Integrated service: Hosting, automatic updates, responsive output and customer support are bundled.", "Clear commerce limits: Product, category, payment-provider and zero-platform-commission claims are published by tier.", "Business-data export: Advanced plans support manual exports and Unlimited plans document automated authenticated downloads for selected data."],
+    "cons": ["Free-tier branding and caps: Discovery uses a SiteW address, displays SiteW mentions and permits five pages.", "Annual prices are equivalents: The lowest displayed monthly rates require annual payment; some monthly choices add setup fees.", "Automatic renewal: Paid terms require cancellation at least five days before expiry and allow renewal-price revision.", "Export is selective: Documentation lists forms, members, newsletter, orders and product data—not a portable export of the complete designed website."],
+    "keyFeatures": [
+      { "title": "Drag-and-drop builder", "description": "Creates responsive showcase sites without requiring customers to write code." },
+      { "title": "Hosted ecommerce", "description": "Adds stores with plan-specific product, category and payment-provider limits and no SiteW sales commission." },
+      { "title": "Bundled operations", "description": "Includes hosting, updates, bandwidth and support within the subscription." },
+      { "title": "Data exports and API", "description": "Exports selected business datasets manually on Advanced tiers and through authenticated download endpoints on Unlimited tiers." }
+    ],
+    "targetAudience": "French-speaking small businesses, associations and independent sellers wanting an all-in-one no-code site with predictable tier limits.",
+    "bestFor": ["Small brochure sites that can start within five pages and accept platform branding", "Businesses preferring bundled French hosting and support over self-managed infrastructure", "Stores whose catalogue and payment-provider needs fit a published ecommerce tier"],
+    "skipIf": ["You require source-code ownership or a documented full-site export to another host", "You need SSO, a general-purpose public API or unrestricted developer control", "The project cannot tolerate automatic renewal, advance debit timing or tier-specific page and storage caps"],
+    "verdict": "SiteW is a credible all-in-one builder for modest French-market sites and stores, but select the tier from real page, storage and catalogue needs, calendar the renewal deadline, and confirm a migration plan because the documented exports cover selected business data rather than the complete site design.",
+    "evidence": {
+      "status": "vendor-sourced", "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "SiteW — Plans", "url": "https://www.sitew.com/Offres-de-creation-de-sites-Internet", "checkedAt": "2026-08-24", "supports": ["free and paid plan prices", "monthly versus annual billing", "setup fees", "free-tier branding subdomain and five-page limit", "paid page and storage limits", "ecommerce product category and provider limits", "zero sales commission", "bundled hosting updates responsive design and bandwidth", "dashboard cancellation statement"] },
+        { "label": "SiteW Help — Plan overview", "url": "https://www.sitew.com/FAQ-sur-la-realisation-de-site/lc-Presentation-des-formules", "checkedAt": "2026-08-24", "supports": ["seven-plan structure", "showcase and ecommerce use cases", "annual-equivalent prices", "domain inclusion", "catalogue limits", "multi-user and priority-support distinctions"] },
+        { "label": "SiteW Help — Data export and API", "url": "https://www.sitew.com/FAQ-sur-la-realisation-de-site/sb-Exporter-vos-donnees-et-automatiser-leur-traitement-via-l-API-SiteW", "checkedAt": "2026-08-24", "supports": ["selected CSV or XLSX data exports", "forms members newsletter orders and products scope", "Advanced manual-export boundary", "Unlimited automated-download boundary", "HTTP Basic authentication"] },
+        { "label": "SiteW — General service terms", "url": "https://www.sitew.com/conditions-de-vente-de-sitew", "checkedAt": "2026-08-24", "supports": ["subscription durations", "automatic renewal", "five-day cancellation deadline", "renewal-effective cancellation", "annual debit timing", "renewal-price revision", "withdrawal and early-cancellation boundaries", "plan-change proration"] },
+        { "label": "SiteW Help — FAQ", "url": "https://www.sitew.com/FAQ-sur-la-realisation-de-site/", "checkedAt": "2026-08-24", "supports": ["15-day trial without card", "free-tier availability", "editor save and publish distinction", "plan upgrade behavior", "domain authorization-code workflow"] }
+      ],
+      "limitations": ["Official SiteW plan, help and service-term pages were reviewed; ToolCompare did not create or publish a site, inspect checkout or renewal debit, test templates/responsiveness/SEO/AI/support, connect a domain or payment provider, sell products, measure uptime or bandwidth, use the export endpoint, cancel a plan, or migrate a complete design. The documented endpoint is treated as a limited data-export API, not a general platform API; prices and terms can change."]
+    }
   },
   {
     "slug": "ispconfig",
