@@ -14171,11 +14171,57 @@
     "slug": "prestashop",
     "name": "PrestaShop",
     "category": "E-commerce",
-    "shortDescription": "Open source e-commerce platform.",
+    "shortDescription": "Self-hosted open-source commerce platform with modular storefront tooling.",
     "websiteUrl": "https://prestashop-project.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "PrestaShop is self-hosted open-source commerce software whose core is distributed under OSL 3.0. It provides catalog, order, customer and storefront foundations with modules and themes for extensions; production cost still includes compatible hosting, implementation, payment services, module licensing, upgrades, backups and security maintenance.",
+    "pros": [
+      "Commerce foundation: Core supplies product, customer, order and storefront management.",
+      "Source access: The core code and release process are publicly maintained under an open-source license.",
+      "Extension model: Native and third-party modules and themes add shop-specific behavior.",
+      "Deployment control: Teams can install release packages on compatible self-managed infrastructure."
+    ],
+    "cons": [
+      "Version-specific stack: PHP support and other requirements must be checked against the exact PrestaShop release.",
+      "Operational ownership: Server hardening, backups, monitoring and security updates are not included with the core license.",
+      "Extension risk: Module and theme quality, compatibility, licensing and maintenance vary independently from core.",
+      "Upgrade testing: Store code, overrides, theme, modules, data and checkout integrations require staged validation."
+    ],
+    "keyFeatures": [
+      { "title": "Catalog and orders", "description": "Provides the core data and administration workflows for products, customers and orders." },
+      { "title": "Modules and themes", "description": "Extends business logic, integrations and storefront presentation through separate packages." },
+      { "title": "Webservice", "description": "Offers a configurable webservice interface for supported shop resources." },
+      { "title": "Release packages", "description": "Distributes production-oriented archives separately from development source checkouts." }
+    ],
+    "targetAudience": "Merchants and agencies that need control over a customizable self-hosted store and can operate a PHP commerce application.",
+    "bestFor": [
+      "Stores whose required catalog and checkout behavior fits maintained PrestaShop modules",
+      "Teams that want source-level control over hosting and storefront implementation",
+      "Organizations able to stage updates and govern security, backups and payment integrations"
+    ],
+    "skipIf": [
+      "You need hosting, upgrades and incident response bundled into one managed subscription",
+      "A critical payment, shipping or compliance module does not support the chosen release",
+      "No owner can test and maintain PHP, database, core, modules, theme and overrides"
+    ],
+    "verdict": "Choose PrestaShop when self-hosted control justifies commerce-platform operations; validate the complete module and theme stack, then budget hosting and maintenance separately from the free core license.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "PrestaShop Docs — System requirements", "url": "https://devdocs.prestashop-project.org/9/basics/installation/system-requirements/", "checkedAt": "2026-08-24", "supports": ["web-server requirement", "PHP compatibility matrix", "database requirement", "memory recommendation", "PHP extensions", "Windows support boundary"] },
+        { "label": "PrestaShop Docs — Installation", "url": "https://devdocs.prestashop-project.org/9/basics/installation/", "checkedAt": "2026-08-24", "supports": ["self-hosted installation", "Docker and AMP options", "database setup", "release package versus source", "file permissions", "Composer and frontend dependencies"] },
+        { "label": "PrestaShop Project — License", "url": "https://www.prestashop-project.org/maintainers-guide/general-guidelines/license/", "checkedAt": "2026-08-24", "supports": ["OSL 3.0 core license", "AFL 3.0 native modules and Classic theme", "third-party license compatibility", "trademark boundary"] },
+        { "label": "PrestaShop Project — Security policy", "url": "https://www.prestashop-project.org/security/security-policy/", "checkedAt": "2026-08-24", "supports": ["vulnerability reporting", "affected-version assessment", "maintained-release fixes", "coordinated disclosure", "patch availability"] },
+        { "label": "PrestaShop Project — Security releases", "url": "https://www.prestashop-project.org/security/security-release-process/", "checkedAt": "2026-08-24", "supports": ["security advisories", "CVE process", "patch testing", "security release publication", "user update recommendation"] },
+        { "label": "PrestaShop Project — Release process", "url": "https://www.prestashop-project.org/maintainers-guide/processes/release/prestashop/", "checkedAt": "2026-08-24", "supports": ["release types", "production ZIP contents", "QA step", "module compatibility update", "release publication"] }
+      ],
+      "limitations": ["Official project documentation was reviewed; ToolCompare did not install or operate a shop, audit modules or themes, test checkout and payment flows, perform an upgrade, benchmark hosting, validate security or calculate total commerce operating cost."]
+    }
   },
   {
     "slug": "filemaker",
