@@ -622,7 +622,8 @@
     ],
     "targetAudience": "Video Editors, YouTubers, and Filmmakers.",
     "verdict": "The most powerful video kurgu software for anyone seeking professional production quality.",
-    "color": "#2d005f"
+    "color": "#2d005f",
+    "websiteUrl": "https://www.adobe.com/products/premiere.html"
   },
   {
     "slug": "capcut",
@@ -779,7 +780,8 @@
     ],
     "targetAudience": "Large Corporations and IT Managers.",
     "verdict": "The most secure and integrated collaboration platform for teams using Microsoft 365.",
-    "color": "#6264a7"
+    "color": "#6264a7",
+    "websiteUrl": "https://www.microsoft.com/microsoft-teams/group-chat-software"
   },
   {
     "slug": "zoom",
@@ -830,7 +832,8 @@
     ],
     "targetAudience": "Educators, Sales Teams, and Businesses of all sizes.",
     "verdict": "Still the best option for those prioritizing video quality and reliability above all else.",
-    "color": "#2d8cff"
+    "color": "#2d8cff",
+    "websiteUrl": "https://zoom.us"
   },
   {
     "slug": "elevenlabs",
@@ -881,7 +884,8 @@
     ],
     "targetAudience": "Content Creators, Game Developers, and Marketing Professionals.",
     "verdict": "The highest quality way to produce professional-grade AI narration on the planet.",
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "websiteUrl": "https://elevenlabs.io"
   },
   {
     "slug": "midjourney",
@@ -932,7 +936,8 @@
     ],
     "targetAudience": "Concept Artists, Architects, and Creative Copywriters.",
     "verdict": "The undisputed best tool for generating elite AI visuals and pushing creative limits.",
-    "color": "#000000"
+    "color": "#000000",
+    "websiteUrl": "https://www.midjourney.com"
   },
   {
     "slug": "claude",
@@ -983,7 +988,8 @@
     ],
     "targetAudience": "Software Engineers, Technical Writers, and Data Analysts.",
     "verdict": "The best AI assistant in the market for deep thinking, technical analysis, and coding.",
-    "color": "#d97757"
+    "color": "#d97757",
+    "websiteUrl": "https://claude.ai"
   },
   {
     "slug": "perplexity",
@@ -1035,7 +1041,8 @@
     "targetAudience": "Researchers, Journalists, and Academic Students.",
     "verdict": "The most modern, accurate, and fast way to search the internet—and Google's biggest nightmare.",
     "color": "#22c55e",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.perplexity.ai"
   },
   {
     "slug": "1password",
@@ -1086,7 +1093,8 @@
     ],
     "targetAudience": "Privacy-Conscious Users and Corporate Security Teams.",
     "verdict": "If you don't want to leave your digital security to chance, this is the best solution on the market.",
-    "color": "#0072ce"
+    "color": "#0072ce",
+    "websiteUrl": "https://1password.com"
   },
   {
     "slug": "hotjar",
@@ -1137,7 +1145,8 @@
     ],
     "targetAudience": "UX Designers, E-commerce Owners, and Product Managers.",
     "verdict": "The best 'magnifying glass' you can attach to your site to understand human behavior.",
-    "color": "#ff1c5c"
+    "color": "#ff1c5c",
+    "websiteUrl": "https://www.hotjar.com"
   },
   {
     "slug": "todoist",
@@ -1188,7 +1197,8 @@
     ],
     "targetAudience": "Busy Professionals, Students, and Minimalism Lovers.",
     "verdict": "The best-balanced app for recording and managing your daily tasks at lightning speed.",
-    "color": "#e44332"
+    "color": "#e44332",
+    "websiteUrl": "https://todoist.com"
   },
   {
     "slug": "buffer",
@@ -1239,7 +1249,8 @@
     ],
     "targetAudience": "Social Media Managers, Creators, and Small Business Owners.",
     "verdict": "The best tool for those seeking a simple, reliable, and affordable social media solution.",
-    "color": "#2c3338"
+    "color": "#2c3338",
+    "websiteUrl": "https://buffer.com"
   },
   {
     "slug": "gusto",
@@ -1290,7 +1301,8 @@
     ],
     "targetAudience": "Startups and Small Business Owners.",
     "verdict": "A platform that transforms 'boring' HR and payroll into a pleasant, modern experience.",
-    "color": "#f48c71"
+    "color": "#f48c71",
+    "websiteUrl": "https://gusto.com"
   },
   {
     "slug": "quickbooks",
@@ -1341,7 +1353,8 @@
     ],
     "targetAudience": "SMEs, Accountants, and Solopreneurs.",
     "verdict": "The most trusted accounting tool in the world for keeping your business finances under control.",
-    "color": "#2ca01c"
+    "color": "#2ca01c",
+    "websiteUrl": "https://quickbooks.intuit.com"
   },
   {
     "slug": "mailchimp",
@@ -1392,7 +1405,8 @@
     ],
     "targetAudience": "E-commerce Brands, Bloggers, and Small Marketing Teams.",
     "verdict": "The go-to choice for those seeking a reliable, stylish, and popular email marketing solution.",
-    "color": "#ffe01b"
+    "color": "#ffe01b",
+    "websiteUrl": "https://mailchimp.com"
   },
   {
     "slug": "github",
@@ -1444,7 +1458,8 @@
     "targetAudience": "Software Developers, Engineering Teams, and Open Source Fans.",
     "verdict": "The de-facto standard for modern software development; the true home of code.",
     "color": "#24292e",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://github.com"
   },
   {
     "slug": "vercel",
@@ -1496,7 +1511,8 @@
     "targetAudience": "Frontend Developers, UI Designers, and Modern Web Teams.",
     "verdict": "The best way to take web projects live with professional infrastructure in seconds.",
     "color": "#000000",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://vercel.com"
   },
   {
     "slug": "jasper",
@@ -1547,7 +1563,8 @@
     ],
     "targetAudience": "Marketing Agencies, Content Teams, and Brand Managers.",
     "verdict": "The most professional AI choice for consistent, high-volume enterprise content production.",
-    "color": "#6366f1"
+    "color": "#6366f1",
+    "websiteUrl": "https://www.jasper.ai"
   },
   {
     "slug": "copy-ai",
@@ -1598,7 +1615,8 @@
     ],
     "targetAudience": "E-commerce Managers, Social Media Specialists, and Growth Teams.",
     "verdict": "The best 'workflow' tool for automating marketing operations and rapid content creation.",
-    "color": "#22c55e"
+    "color": "#22c55e",
+    "websiteUrl": "https://www.copy.ai"
   },
   {
     "slug": "descript",
@@ -1649,7 +1667,8 @@
     ],
     "targetAudience": "Podcasters, Educators, and Video Content Creators.",
     "verdict": "A revolutionary tool that turns video kurgu from a technical chore into a writing process.",
-    "color": "#000000"
+    "color": "#000000",
+    "websiteUrl": "https://www.descript.com"
   },
   {
     "slug": "loom",
@@ -1700,7 +1719,8 @@
     ],
     "targetAudience": "Product Managers, Developers, and Remote Teams.",
     "verdict": "The most practical tool for killing meetings and speeding up team communication.",
-    "color": "#625df5"
+    "color": "#625df5",
+    "websiteUrl": "https://www.loom.com"
   },
   {
     "slug": "calendly",
@@ -1751,7 +1771,8 @@
     ],
     "targetAudience": "Sales Teams, Consultants, and HR Professionals.",
     "verdict": "The easiest way to take control of your calendar and look professional to clients.",
-    "color": "#006bff"
+    "color": "#006bff",
+    "websiteUrl": "https://calendly.com"
   },
   {
     "slug": "miro",
@@ -1802,7 +1823,8 @@
     ],
     "targetAudience": "Product Designers, Strategists, and Agile Teams.",
     "verdict": "The world's best digital canvas for visual thinking and aligning teams on a common vision.",
-    "color": "#ffd02f"
+    "color": "#ffd02f",
+    "websiteUrl": "https://miro.com"
   },
   {
     "slug": "zapier",
@@ -1853,7 +1875,8 @@
     ],
     "targetAudience": "Ops Managers, Marketers, and Solopreneurs.",
     "verdict": "The undisputed market leader for making different apps talk to each other without code.",
-    "color": "#ff4f00"
+    "color": "#ff4f00",
+    "websiteUrl": "https://zapier.com"
   },
   {
     "slug": "make",
@@ -1904,7 +1927,8 @@
     ],
     "targetAudience": "Developers, No-Code Builders, and Tech-Ops Professionals.",
     "verdict": "The best tool for technical users seeking total control and cost efficiency in automations.",
-    "color": "#7214ff"
+    "color": "#7214ff",
+    "websiteUrl": "https://www.make.com"
   },
   {
     "slug": "airtable",
@@ -1955,7 +1979,8 @@
     ],
     "targetAudience": "Ops Managers, Editorial Teams, and No-Code Enthusiasts.",
     "verdict": "The best hybrid solution for teams seeking a professional database with Excel ease.",
-    "color": "#18bfff"
+    "color": "#18bfff",
+    "websiteUrl": "https://www.airtable.com"
   },
   {
     "slug": "clickup",
@@ -2006,7 +2031,8 @@
     ],
     "targetAudience": "Agile Teams, Agencies, and Complex Project Managers.",
     "verdict": "The most powerful and feature-rich option if you want everything in one single place.",
-    "color": "#7b68ee"
+    "color": "#7b68ee",
+    "websiteUrl": "https://clickup.com"
   },
   {
     "slug": "monday",
@@ -2057,7 +2083,8 @@
     ],
     "targetAudience": "Marketing Teams, HR Departments, and Teams Seeking Visual Clarity.",
     "verdict": "The most pleasant and fastest-to-adopt project management tool on the market.",
-    "color": "#ff3d57"
+    "color": "#ff3d57",
+    "websiteUrl": "https://monday.com"
   },
   {
     "slug": "trello",
@@ -2108,7 +2135,8 @@
     ],
     "targetAudience": "Freelancers, Small Teams, and Personal Planners.",
     "verdict": "The best 'card-based' task manager for those seeking simplicity and visual speed.",
-    "color": "#0079bf"
+    "color": "#0079bf",
+    "websiteUrl": "https://trello.com"
   },
   {
     "slug": "jira",
@@ -2159,7 +2187,8 @@
     ],
     "targetAudience": "Software Engineers, Product Owners, and QA Teams.",
     "verdict": "The world's most powerful tool for managing professional software development processes.",
-    "color": "#0052cc"
+    "color": "#0052cc",
+    "websiteUrl": "https://www.atlassian.com/software/jira"
   },
   {
     "slug": "zendesk",
@@ -2210,7 +2239,8 @@
     ],
     "targetAudience": "Support Teams and Large E-commerce Companies.",
     "verdict": "The global standard for professional, scalable, and omnichannel customer support.",
-    "color": "#03363d"
+    "color": "#03363d",
+    "websiteUrl": "https://www.zendesk.com"
   },
   {
     "slug": "intercom",
@@ -2261,7 +2291,8 @@
     ],
     "targetAudience": "SaaS Companies, Software Teams, and Modern Startups.",
     "verdict": "The best tool for transforming customer communication into a modern, AI-powered conversation.",
-    "color": "#286efa"
+    "color": "#286efa",
+    "websiteUrl": "https://www.intercom.com"
   },
   {
     "slug": "shopify",
@@ -2312,7 +2343,8 @@
     ],
     "targetAudience": "E-commerce Entrepreneurs and Retail Brands.",
     "verdict": "The world's best platform for starting, growing, and scaling an e-commerce empire.",
-    "color": "#96bf48"
+    "color": "#96bf48",
+    "websiteUrl": "https://www.shopify.com"
   },
   {
     "slug": "magento",
@@ -2364,7 +2396,8 @@
     "targetAudience": "Large Corporate Brands and Complex B2B Businesses.",
     "verdict": "The only choice for giant brands with complex enterprise needs seeking 'total freedom.'",
     "color": "#f46f25",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://business.adobe.com/products/magento/magento-commerce.html"
   },
   {
     "slug": "bigcommerce",
@@ -2415,7 +2448,8 @@
     ],
     "targetAudience": "Growing Brands and B2B-Focused Retailers.",
     "verdict": "The smartest choice for brands seeking corporate features without paying extra commissions.",
-    "color": "#383131"
+    "color": "#383131",
+    "websiteUrl": "https://www.bigcommerce.com"
   },
   {
     "slug": "framer",
@@ -2466,7 +2500,8 @@
     ],
     "targetAudience": "Product Designers, Portfolio Owners, and Modern Startups.",
     "verdict": "The home of the most stylish sites made by designers 'without a developer.'",
-    "color": "#0055ff"
+    "color": "#0055ff",
+    "websiteUrl": "https://www.framer.com"
   },
   {
     "slug": "spline",
@@ -2518,7 +2553,8 @@
     "targetAudience": "Web Designers, Creative Developers, and Product Brands.",
     "verdict": "The easiest way to add 'wow-factor' interactive 3D experiences to any website.",
     "color": "#ff4d8d",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://spline.design"
   },
   {
     "slug": "aws",
@@ -2570,7 +2606,8 @@
     "targetAudience": "Cloud Engineers, Large Enterprises, and Scalable Startups.",
     "verdict": "The world's most powerful and detailed cloud infrastructure; the pro's choice.",
     "color": "#232f3e",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://aws.amazon.com"
   },
   {
     "slug": "google-cloud",
@@ -2622,7 +2659,8 @@
     "targetAudience": "Data Scientists, Mobile Developers, and AI Companies.",
     "verdict": "The smartest cloud infrastructure for modern, data-and-AI-driven projects.",
     "color": "#4285f4",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://cloud.google.com"
   },
   {
     "slug": "digitalocean",
@@ -2673,7 +2711,8 @@
     ],
     "targetAudience": "Solo Developers, Startups, and Small Businesses.",
     "verdict": "The best way to use the power of the cloud without the complexity and at a fair price.",
-    "color": "#008bcf"
+    "color": "#008bcf",
+    "websiteUrl": "https://www.digitalocean.com"
   },
   {
     "slug": "mongodb",
@@ -2725,7 +2764,8 @@
     "targetAudience": "Full-stack Developers and Big Data Companies.",
     "verdict": "The world's number one NoSQL choice for modern, fast, and flexible app development.",
     "color": "#4db33d",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.mongodb.com"
   },
   {
     "slug": "supabase",
@@ -2777,7 +2817,8 @@
     "targetAudience": "Next.js Developers, Frontend-focused Coders, and Startups.",
     "verdict": "The fastest, most reliable, and most 'free' (open-source) choice for a modern backend.",
     "color": "#3ecf8e",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://supabase.com"
   },
   {
     "slug": "ghost",
@@ -2828,7 +2869,8 @@
     ],
     "targetAudience": "Independent Writers, Newsletter Publishers, and Modern Media Firms.",
     "verdict": "The most elite publishing platform for those looking to earn from their writing.",
-    "color": "#15171a"
+    "color": "#15171a",
+    "websiteUrl": "https://ghost.org"
   },
   {
     "slug": "beehiiv",
@@ -2880,7 +2922,8 @@
     "targetAudience": "Professional Newsletter Publishers and Content Entrepreneurs.",
     "verdict": "The current best platform for those looking to turn their newsletter into a business.",
     "color": "#fef08a",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.beehiiv.com"
   },
   {
     "slug": "strapi",
@@ -2932,7 +2975,8 @@
     "targetAudience": "Backend Developers, Corporate Digital Teams, and Modern Agencies.",
     "verdict": "The best CMS for building a modern, multi-purpose, and fully-controlled content hub.",
     "color": "#4945ff",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://strapi.io"
   },
   {
     "slug": "strava",
@@ -2984,7 +3028,8 @@
     "targetAudience": "Runners, Cyclists, and Fitness Enthusiasts.",
     "verdict": "An unrivaled app for turning your workouts into data and a social achievement.",
     "color": "#fc4c02",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.strava.com"
   },
   {
     "slug": "substack",
@@ -3036,7 +3081,8 @@
     "targetAudience": "Writers, Journalists, and Thought Leaders.",
     "verdict": "The world's easiest and most popular way to build an audience and earn from writing.",
     "color": "#ff6719",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://substack.com"
   },
   {
     "slug": "postman",
@@ -3088,7 +3134,8 @@
     "targetAudience": "Backend Developers, QA Engineers, and Frontend Coders.",
     "verdict": "An essential tool that every developer working with APIs must have on their machine.",
     "color": "#ef5b25",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.postman.com"
   },
   {
     "slug": "sentry",
@@ -3140,7 +3187,8 @@
     "targetAudience": "Software Developers, DevOps Engineers, and Product Managers.",
     "verdict": "The best defense line for protecting user experience and speeding up the 'bug' fix cycle.",
     "color": "#362d59",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://sentry.io"
   },
   {
     "slug": "firebase",
@@ -3192,7 +3240,8 @@
     "targetAudience": "Mobile App Developers and Rapid Prototyping Specialists.",
     "verdict": "The strongest ecosystem for those who want to focus on features instead of server management.",
     "color": "#ffca28",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://firebase.google.com"
   },
   {
     "slug": "contentful",
@@ -3244,7 +3293,8 @@
     "targetAudience": "Global Brands, Digital Marketing Teams, and Enterprise Architects.",
     "verdict": "The most reliable infrastructure for managing digital content at a global scale.",
     "color": "#24292e",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.contentful.com"
   },
   {
     "slug": "wix",
@@ -3295,7 +3345,8 @@
     ],
     "targetAudience": "Small Business Owners, Artists, and Personal Brands.",
     "verdict": "The standard choice for those wanting to build the fastest and most visual site with zero tech skills.",
-    "color": "#000000"
+    "color": "#000000",
+    "websiteUrl": "https://www.wix.com"
   },
   {
     "slug": "squarespace",
@@ -3346,7 +3397,8 @@
     ],
     "targetAudience": "Photographers, Artists, and Boutique Brands.",
     "verdict": "The best tool for building an elegant, minimalist, and high-end website.",
-    "color": "#000000"
+    "color": "#000000",
+    "websiteUrl": "https://www.squarespace.com"
   },
   {
     "slug": "carrd",
@@ -3397,7 +3449,8 @@
     ],
     "targetAudience": "Personal Brands, Freelancers, and Landing Page Creators.",
     "verdict": "The cheapest and most practical one-page site builder on the internet today.",
-    "color": "#3b82f6"
+    "color": "#3b82f6",
+    "websiteUrl": "https://carrd.co"
   },
   {
     "slug": "klaviyo",
@@ -3449,7 +3502,8 @@
     "targetAudience": "E-commerce Brands and Digital Marketing Agencies.",
     "verdict": "The most powerful and intelligent tool for turning e-commerce data into revenue.",
     "color": "#000000",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.klaviyo.com"
   },
   {
     "slug": "twilio",
@@ -3501,7 +3555,8 @@
     "targetAudience": "Software Engineers, Startups, and System Architects.",
     "verdict": "The world's number one API provider for those looking to code and scale communication.",
     "color": "#f22f46",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://www.twilio.com"
   },
   {
     "slug": "gumroad",
@@ -3553,7 +3608,8 @@
     "targetAudience": "Digital Creators, Writers, and Software Developers.",
     "verdict": "The best starting point for selling products with just a link and no complex setup.",
     "color": "#ff90e8",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://gumroad.com"
   },
   {
     "slug": "kajabi",
@@ -3604,7 +3660,8 @@
     ],
     "targetAudience": "Online Instructors, Coaches, and Info-Entrepreneurs.",
     "verdict": "The best tool money can buy if you want to grow an education business under one roof.",
-    "color": "#0040fb"
+    "color": "#0040fb",
+    "websiteUrl": "https://kajabi.com"
   },
   {
     "slug": "skool",
@@ -3655,7 +3712,8 @@
     ],
     "targetAudience": "Community Founders, Consultants, and Group Coaches.",
     "verdict": "The best app for building a vibrant community where members actually learn and stay active.",
-    "color": "#22c55e"
+    "color": "#22c55e",
+    "websiteUrl": "https://www.skool.com"
   },
   {
     "slug": "azure",
@@ -3707,7 +3765,8 @@
     "targetAudience": "Enterprise IT Managers, .NET Developers, and Large Organizations.",
     "verdict": "The premier choice for large-scale enterprises deeply integrated into the Microsoft ecosystem.",
     "color": "#0078d4",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://azure.microsoft.com"
   },
   {
     "slug": "cloudflare",
@@ -3759,7 +3818,8 @@
     "targetAudience": "Website Owners, Developers, and Security Engineers.",
     "verdict": "The essential first line of defense and performance for any modern website.",
     "color": "#f38020",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.cloudflare.com"
   },
   {
     "slug": "postgresql",
@@ -3811,7 +3871,8 @@
     "targetAudience": "Backend Developers, Data Engineers, and System Architects.",
     "verdict": "The most professional, reliable, and powerful database choice for any serious software project.",
     "color": "#336791",
-    "fiyatModeli": "bedava"
+    "fiyatModeli": "bedava",
+    "websiteUrl": "https://www.postgresql.org"
   },
   {
     "slug": "redis",
@@ -3863,7 +3924,8 @@
     "targetAudience": "Backend Engineers and DevOps Professionals.",
     "verdict": "The indispensable speed layer for any modern, high-traffic web application.",
     "color": "#d82c20",
-    "fiyatModeli": "bedava"
+    "fiyatModeli": "bedava",
+    "websiteUrl": "https://redis.io"
   },
   {
     "slug": "docker",
@@ -3915,7 +3977,8 @@
     "targetAudience": "DevOps Engineers and Software Developers.",
     "verdict": "The essential standard for modern software shipping and deployment.",
     "color": "#2496ed",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.docker.com"
   },
   {
     "slug": "netlify",
@@ -3967,7 +4030,8 @@
     "targetAudience": "Frontend Developers and Jamstack Enthusiasts.",
     "verdict": "The most user-friendly and feature-rich platform for hosting static and modern web apps.",
     "color": "#00ad9f",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.netlify.com"
   },
   {
     "slug": "terraform",
@@ -4019,7 +4083,8 @@
     "targetAudience": "DevOps Engineers and Cloud Architects.",
     "verdict": "The industry-standard tool for managing complex cloud infrastructure through code.",
     "color": "#623ce4",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.terraform.io"
   },
   {
     "slug": "datadog",
@@ -4070,7 +4135,8 @@
     ],
     "targetAudience": "DevOps Engineers and Enterprise IT Teams.",
     "verdict": "The most powerful and comprehensive monitoring tool for modern cloud-native enterprises.",
-    "color": "#632ca6"
+    "color": "#632ca6",
+    "websiteUrl": "https://www.datadoghq.com"
   },
   {
     "slug": "appwrite",
@@ -4122,7 +4188,8 @@
     "targetAudience": "Flutter Developers and Self-hosting Enthusiasts.",
     "verdict": "The best open-source alternative for building modern backends with total data ownership.",
     "color": "#f02e65",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://appwrite.io"
   },
   {
     "slug": "wix-studio",
@@ -4173,7 +4240,8 @@
     ],
     "targetAudience": "Web Agencies and Professional UI Designers.",
     "verdict": "The ultimate platform for agencies looking to build high-end, custom websites at scale.",
-    "color": "#000000"
+    "color": "#000000",
+    "websiteUrl": "https://www.wix.com/studio"
   },
   {
     "slug": "podia",
@@ -4224,7 +4292,8 @@
     ],
     "targetAudience": "Solopreneurs and Online Course Creators.",
     "verdict": "The best balance of simplicity and features for individual creators looking to monetize.",
-    "color": "#4b2ad3"
+    "color": "#4b2ad3",
+    "websiteUrl": "https://www.podia.com"
   },
   {
     "slug": "teachable",
@@ -4275,7 +4344,8 @@
     ],
     "targetAudience": "Professional Educators and Training Businesses.",
     "verdict": "A solid, dependable platform with a primary focus on high-quality course delivery.",
-    "color": "#2d3436"
+    "color": "#2d3436",
+    "websiteUrl": "https://teachable.com"
   },
   {
     "slug": "convertkit",
@@ -4326,7 +4396,8 @@
     ],
     "targetAudience": "Blogger, YouTubers, and Professional Creators.",
     "verdict": "The best email platform for those looking for powerful automation without the corporate headache.",
-    "color": "#f16567"
+    "color": "#f16567",
+    "websiteUrl": "https://kit.com"
   },
   {
     "slug": "activecampaign",
@@ -4377,7 +4448,8 @@
     ],
     "targetAudience": "E-commerce Businesses and Advanced Marketing Teams.",
     "verdict": "The most powerful automation platform for those who have outgrown basic email tools.",
-    "color": "#004cff"
+    "color": "#004cff",
+    "websiteUrl": "https://www.activecampaign.com"
   },
   {
     "slug": "plaid",
@@ -4429,7 +4501,8 @@
     "targetAudience": "Fintech Developers and Financial App Founders.",
     "verdict": "The undisputed standard for connecting any software to the world's banking system.",
     "color": "#000000",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://plaid.com"
   },
   {
     "slug": "paddle",
@@ -4481,7 +4554,8 @@
     "targetAudience": "SaaS Founders and Global Software Companies.",
     "verdict": "The best choice for software startups who want to sell globally without a tax headache.",
     "color": "#000000",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://www.paddle.com"
   },
   {
     "slug": "lemonsqueezy",
@@ -4533,7 +4607,8 @@
     "targetAudience": "Solo SaaS Founders and Modern Digital Creators.",
     "verdict": "The most stylish and simple way to sell software and digital products globally.",
     "color": "#f5d300",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://www.lemonsqueezy.com"
   },
   {
     "slug": "obsidian",
@@ -4585,7 +4660,8 @@
     "targetAudience": "Knowledge Workers, Students, and Privacy Advocates.",
     "verdict": "The ultimate tool for building a private, networked, and long-lasting knowledge base.",
     "color": "#7c3aed",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://obsidian.md"
   },
   {
     "slug": "linear",
@@ -4636,7 +4712,8 @@
     ],
     "targetAudience": "Product Engineers and High-Growth Tech Startups.",
     "verdict": "The fastest and most elegant project management tool for modern software teams.",
-    "color": "#5e6ad2"
+    "color": "#5e6ad2",
+    "websiteUrl": "https://linear.app"
   },
   {
     "slug": "typeform",
@@ -4687,7 +4764,8 @@
     ],
     "targetAudience": "Marketers, Researchers, and High-End Brands.",
     "verdict": "The best tool for creating forms that people actually enjoy filling out.",
-    "color": "#262627"
+    "color": "#262627",
+    "websiteUrl": "https://www.typeform.com"
   },
   {
     "slug": "replit",
@@ -4739,7 +4817,8 @@
     "targetAudience": "Student Developers, AI Hackers, and Rapid Prototypers.",
     "verdict": "The fastest way to go from an idea to a live, functioning application.",
     "color": "#f26b1d",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://replit.com"
   },
   {
     "slug": "loom-ai",
@@ -4790,7 +4869,8 @@
     ],
     "targetAudience": "Product Managers, Sales Teams, and Customer Success.",
     "verdict": "The ultimate way to make async video communication truly professional and efficient.",
-    "color": "#625df5"
+    "color": "#625df5",
+    "websiteUrl": "https://www.loom.com/ai"
   },
   {
     "slug": "obsidian-sync",
@@ -4841,7 +4921,8 @@
     ],
     "targetAudience": "Privacy-conscious Obsidian Users and Power Notetakers.",
     "verdict": "The best and most secure way to keep your local knowledge base updated on all devices.",
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "websiteUrl": "https://obsidian.md/sync"
   },
   {
     "slug": "surfer-seo",
@@ -4892,7 +4973,8 @@
     ],
     "targetAudience": "Content Strategists and SEO Content Writers.",
     "verdict": "The most practical and effective tool for writing content that actually ranks on Google.",
-    "color": "#ff4d4d"
+    "color": "#ff4d4d",
+    "websiteUrl": "https://surferseo.com"
   },
   {
     "slug": "vanta",
@@ -4943,7 +5025,8 @@
     ],
     "targetAudience": "SaaS Founders, CTOs, and Security Teams.",
     "verdict": "The most effective way to turn complex security compliance into a competitive advantage.",
-    "color": "#000000"
+    "color": "#000000",
+    "websiteUrl": "https://www.vanta.com"
   },
   {
     "slug": "posthog",
@@ -4995,7 +5078,8 @@
     "targetAudience": "Product Managers, Developers, and Growth Teams.",
     "verdict": "The best 'product-first' analytics tool for teams who want to build with data.",
     "color": "#000000",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://posthog.com"
   },
   {
     "slug": "mixpanel",
@@ -5047,7 +5131,8 @@
     "targetAudience": "Product Managers and Data Analysts.",
     "verdict": "The most professional and deep choice for serious product behavior analysis.",
     "color": "#7856ff",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://mixpanel.com"
   },
   {
     "slug": "logrocket",
@@ -5099,7 +5184,8 @@
     "targetAudience": "Frontend Developers and UX Researchers.",
     "verdict": "An indispensable tool for debugging and optimizing modern web applications.",
     "color": "#764abc",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://logrocket.com"
   },
   {
     "slug": "segment",
@@ -5151,7 +5237,8 @@
     "targetAudience": "Data Engineers and Growth Marketers.",
     "verdict": "The premier infrastructure for managing and scaling customer data at an enterprise level.",
     "color": "#52bd94",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://segment.com"
   },
   {
     "slug": "zapier-interfaces",
@@ -5203,7 +5290,8 @@
     "targetAudience": "Ops Managers and Solopreneurs.",
     "verdict": "The fastest way to build an interactive, AI-powered app on top of your existing automations.",
     "color": "#ff4f00",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://zapier.com/interfaces"
   },
   {
     "slug": "clarity",
@@ -5255,7 +5343,8 @@
     "targetAudience": "Website Owners and UX Designers.",
     "verdict": "The best free 'Hotjar alternative' on the market with no compromises on power.",
     "color": "#0078d4",
-    "fiyatModeli": "bedava"
+    "fiyatModeli": "bedava",
+    "websiteUrl": "https://clarity.microsoft.com"
   },
   {
     "slug": "amplitude",
@@ -5307,7 +5396,8 @@
     "targetAudience": "Product Leaders and Enterprise Data Teams.",
     "verdict": "The most powerful platform for companies whose business depends on their product's performance.",
     "color": "#231f20",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://amplitude.com"
   },
   {
     "slug": "bubble",
@@ -5358,7 +5448,8 @@
     ],
     "targetAudience": "Non-technical Founders and No-code Developers.",
     "verdict": "The undisputed king of no-code for building real, functional web applications.",
-    "color": "#00a1ff"
+    "color": "#00a1ff",
+    "websiteUrl": "https://bubble.io"
   },
   {
     "slug": "sanity",
@@ -5410,7 +5501,8 @@
     "targetAudience": "Digital Agencies and Enterprise Product Teams.",
     "verdict": "The most modern and developer-friendly way to manage complex, multi-platform content.",
     "color": "#f03e2f",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.sanity.io"
   },
   {
     "slug": "xano",
@@ -5461,7 +5553,8 @@
     ],
     "targetAudience": "No-code Builders and Scalable App Founders.",
     "verdict": "The best 'backend-as-a-service' for those who want no-code ease with professional power.",
-    "color": "#001a4d"
+    "color": "#001a4d",
+    "websiteUrl": "https://www.xano.com"
   },
   {
     "slug": "flutterflow",
@@ -5512,7 +5605,8 @@
     ],
     "targetAudience": "Mobile App Founders and Visual Designers.",
     "verdict": "The most professional way to build native mobile apps without (or with) coding.",
-    "color": "#4b39ef"
+    "color": "#4b39ef",
+    "websiteUrl": "https://flutterflow.io"
   },
   {
     "slug": "grammarly",
@@ -5564,7 +5658,8 @@
     "targetAudience": "Students, Professionals, and Non-native English Speakers.",
     "verdict": "The essential tool for anyone who wants to write with confidence and professionalism.",
     "color": "#05a67e",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.grammarly.com"
   },
   {
     "slug": "notion-ai",
@@ -5615,7 +5710,8 @@
     ],
     "targetAudience": "Notion Users, Content Creators, and Knowledge Teams.",
     "verdict": "The best AI implementation for those who want to work smarter inside their existing docs.",
-    "color": "#000000"
+    "color": "#000000",
+    "websiteUrl": "https://www.notion.so/product/ai"
   },
   {
     "slug": "adobe-firefly",
@@ -5666,7 +5762,8 @@
     ],
     "targetAudience": "Graphic Designers, Photographers, and Corporate Brands.",
     "verdict": "The only generative AI tool built from the ground up for professional, legal, and creative work.",
-    "color": "#ff0000"
+    "color": "#ff0000",
+    "websiteUrl": "https://www.adobe.com/products/firefly.html"
   },
   {
     "slug": "copy-ai-workflows",
@@ -5717,58 +5814,8 @@
     ],
     "targetAudience": "Growth Marketers and Content Agencies.",
     "verdict": "The best tool for companies that want to automate their entire content production at scale.",
-    "color": "#22c55e"
-  },
-  {
-    "slug": "riverflow",
-    "name": "Riverflow",
-    "iconName": "Activity",
-    "color1": "#3b82f6",
-    "color2": "#2563eb",
-    "ease": 95,
-    "featuresScore": 85,
-    "features": [
-      "Social Monitoring",
-      "Trends",
-      "Viral Alerts"
-    ],
-    "basePrice": 0,
-    "isFlat": true,
-    "category": "Marketing",
-    "shortDescription": "Real-time social trends.",
-    "longDescription": "Riverflow is a modern social monitoring tool that helps brands and creators stay on top of what's 'trending' right now. It tracks hashtags, keywords, and viral topics across TikTok, X, and Instagram in real-time. Unlike traditional social listening tools, Riverflow is designed for speed and action, alerting you to rising trends before they peak. This allows marketers to join relevant conversations and create trend-aligned content while it's still fresh, significantly increasing their chances of viral reach.",
-    "pros": [
-      "Early Alerts: Find trends before they become mainstream and saturated.",
-      "Cross-Platform: Unified view of trending topics across all major social networks.",
-      "Simple Interface: Focused strictly on trends and alerts, not complex tables.",
-      "Influencer Tracking: See what the top voices in your niche are talking about right now."
-    ],
-    "cons": [
-      "Historical Data: Not as strong as enterprise tools for long-term historical analysis.",
-      "Limited Deep Analytics: Focused more on 'what's happening now' than 'why'.",
-      "Niche Focus: May miss very specific, small-scale community trends."
-    ],
-    "keyFeatures": [
-      {
-        "title": "Viral Alerts",
-        "description": "Get notified the moment a keyword or topic starts to gain rapid momentum."
-      },
-      {
-        "title": "Hashtag Discovery",
-        "description": "Identify the most effective hashtags to use for current trending conversations."
-      },
-      {
-        "title": "Trend Prediction",
-        "description": "Uses AI to predict which rising topics are most likely to stay relevant."
-      },
-      {
-        "title": "Niche Monitoring",
-        "description": "Create custom 'rivers' to track specific topics relevant only to your industry."
-      }
-    ],
-    "targetAudience": "Social Media Managers and Viral Content Creators.",
-    "verdict": "The best radar for staying ahead of the fast-moving social media curve.",
-    "color": "#3b82f6"
+    "color": "#22c55e",
+    "websiteUrl": "https://www.copy.ai"
   },
   {
     "slug": "perplexity-pages",
@@ -5820,7 +5867,8 @@
     "targetAudience": "Researchers, Journalists, and Content Marketers.",
     "verdict": "The future of fact-based content creation and instant knowledge sharing.",
     "color": "#22c55e",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.perplexity.ai"
   },
   {
     "slug": "notion-calendar",
@@ -5872,7 +5920,8 @@
     "targetAudience": "Notion Power Users and Modern Professionals.",
     "verdict": "The most beautiful and integrated calendar for those who live in Notion.",
     "color": "#000000",
-    "fiyatModeli": "bedava"
+    "fiyatModeli": "bedava",
+    "websiteUrl": "https://www.notion.so/product/calendar"
   },
   {
     "slug": "hey-email",
@@ -5923,265 +5972,7 @@
     ],
     "targetAudience": "Privacy Seekers and Busy Professionals who hate email.",
     "verdict": "The most innovative and peaceful way to handle email in the 21st century.",
-    "color": "#4b2ad3"
-  },
-  {
-    "name": "PayMaster Pro",
-    "category": "payment gateway",
-    "shortDescription": "Streamline your online transactions with PayMaster Pro's seamless and secure payment processing solutions.",
-    "longDescription": "PayMaster Pro stands at the forefront of financial technology as a highly secure and efficient payment gateway, designed to facilitate smooth, reliable transactions while minimizing friction for merchants and customers alike. Built on cutting-edge architecture with a focus on usability and scalability, PayMaster Pro's core philosophy is driven by the commitment to empower businesses of all sizes with dynamic, easy-to-implement payment solutions that foster growth and trust in an increasingly digital marketplace.\n\nThe key strengths of PayMaster Pro lie in its robust security features, comprehensive analytics, and unmatched integration capabilities. By employing end-to-end encryption and advanced fraud detection technologies, the platform significantly reduces the risk of financial breaches, thereby preserving consumer trust. Furthermore, its powerful analytics tools provide businesses with valuable insights into transaction data, facilitating better decision-making and strategy formulation. With seamless integration across various platforms and e-commerce solutions, PayMaster Pro offers unparalleled scaling potential, ensuring businesses can expand without hindrance as their transaction volumes grow.\n\nHowever, like any sophisticated tool, PayMaster Pro does have trade-offs that must be considered. While its powerful features offer immense value, they can present a learning curve for users unfamiliar with payment platforms. Additionally, the ecosystem of PayMaster Pro is primarily designed for businesses with a strong online presence, potentially limiting its utility for smaller, offline-centric enterprises. Overall, for businesses looking to elevate their payment processes in a comprehensive and secure manner, PayMaster Pro comes highly recommended as a premier solution that successfully balances innovation with ease of use.",
-    "pros": [
-      "Excellent security features",
-      "Insightful analytics",
-      "Seamless integration"
-    ],
-    "cons": [
-      "Steep learning curve",
-      "Less suited for offline businesses"
-    ],
-    "keyFeatures": [
-      {
-        "title": "Advanced Fraud Detection",
-        "description": "Employs sophisticated algorithms and machine learning to identify and prevent fraudulent transactions, ensuring the safety and security of both merchants and consumers."
-      },
-      {
-        "title": "Comprehensive Analytics Dashboard",
-        "description": "Provides deep insights into transaction patterns and customer behaviors, helping businesses make informed strategic decisions and optimize revenue streams."
-      },
-      {
-        "title": "Multi-Platform Integration",
-        "description": "Offers seamless compatibility with a plethora of e-commerce platforms and custom APIs, allowing businesses to effortlessly incorporate the payment gateway into their existing systems."
-      }
-    ],
-    "targetAudience": "Ideal for e-commerce businesses and online merchants seeking a reliable and secure solution to manage and optimize their payment processes.",
-    "verdict": "PayMaster Pro is a top-tier choice for businesses aiming to enhance their payment capabilities with cutting-edge technology.",
-    "basePrice": 29,
-    "isFlat": false,
-    "ease": 90,
-    "featuresScore": 90,
-    "color1": "#3b82f6",
-    "color2": "#1d4ed8",
-    "iconName": "Zap",
-    "slug": "paymaster-pro"
-  },
-  {
-    "name": "VidSmart Pro",
-    "category": "video editing",
-    "shortDescription": "Advanced AI-powered video editing for precision and creativity.",
-    "longDescription": "VidSmart Pro redefines professional video editing by incorporating cutting-edge AI technology to streamline and enhance the editing process. This tool is designed specifically for producing high-quality videos with efficiency, offering capabilities that were traditionally reserved for large production studios. The seamless integration of AI enhances the editor's ability to refine details with remarkable precision, while simultaneously allowing for creative spontaneity.\n\nThe platform provides a robust environment where editors can harness AI for automated tasks such as video stabilization, color correction, and smart video cutting. This means that editors can focus more on the creative aspects of the video rather than getting bogged down by monotonous tasks. The user interface is both intuitive and feature-rich, designed to cater to both novice editors seeking to learn and experts looking for deep customization options.\n\nVidSmart Pro also comes with an innovative collaborative feature that permits multiple users to work on the same project in real time. This facilitates teamwork, ensuring that projects are completed efficiently and with input from multiple stakeholders. The security protocols are enterprise-grade, ensuring that sensitive footage and creative assets are protected at all times.",
-    "pros": [
-      "AI-enhanced editing",
-      "Intuitive UI",
-      "Advanced collaborative tools",
-      "Robust security"
-    ],
-    "cons": [
-      "Steeper learning curve for advanced features",
-      "Requires a strong internet connection for collaboration"
-    ],
-    "keyFeatures": [
-      {
-        "title": "AI-Powered Editing",
-        "description": "Utilizes artificial intelligence for tasks such as auto-cutting, color correction, and stabilization."
-      },
-      {
-        "title": "Real-time Collaboration",
-        "description": "Supports multiple users working on the same project simultaneously, enhancing teamwork and efficiency."
-      },
-      {
-        "title": "Comprehensive Editing Suite",
-        "description": "Offers a full range of editing tools, from basic cuts to advanced VFX rendering."
-      },
-      {
-        "title": "Secure Cloud Storage",
-        "description": "Ensures all project files and assets are stored securely with enterprise-grade encryption."
-      }
-    ],
-    "targetAudience": "Professional video editors, small to mid-sized video production studios, creative agencies.",
-    "verdict": "VidSmart Pro is a top choice for those looking to integrate AI into their video editing workflow, offering precision and dynamic collaboration features.",
-    "basePrice": 49,
-    "isFlat": false,
-    "ease": 85,
-    "featuresScore": 92,
-    "color1": "#3b82f6",
-    "color2": "#1d4ed8",
-    "iconName": "Zap",
-    "slug": "vidsmart-pro"
-  },
-  {
-    "name": "EditFlow Elite",
-    "category": "video editing",
-    "shortDescription": "Intuitive timeline editing for dynamic content creators.",
-    "longDescription": "EditFlow Elite elevates video editing by focusing on an extraordinarily intuitive timeline interface that caters to creators focused on crafting narrative-driven content. This tool emphasizes enhancing the storytelling process, enabling editors to manage complex storylines with ease through a clean, visually driven workspace.\n\nOne of the standout features of EditFlow Elite is its timeline customization capability, which allows users to shape their narrative structure according to project needs. The interface supports multiple layers and sophisticated transitions, which are essential for crafting compelling stories in both short-form and long-form content. The ability to see and modify every aspect of the video's timeline provides editors with an unprecedented level of control over the storytelling process.\n\nAdditionally, EditFlow Elite understands the importance of sound in storytelling. It includes advanced audio tools that ensure both dialogue and background scores are seamlessly integrated into the video. Beyond its baseline functionalities, the tool provides various plugins that can extend its capabilities, catering to the specialized needs of any project.",
-    "pros": [
-      "User-friendly timeline",
-      "Advanced audio integration",
-      "Customizable interface",
-      "Supports various plugins"
-    ],
-    "cons": [
-      "Limited built-in visual effects",
-      "Requires additional plugins for niche needs"
-    ],
-    "keyFeatures": [
-      {
-        "title": "Timeline Customization",
-        "description": "Allows flexible manipulation of storylines with a highly visual interface."
-      },
-      {
-        "title": "Advanced Audio Tools",
-        "description": "Integrated audio editing tools for voice and music synchronization."
-      },
-      {
-        "title": "Layered Editing",
-        "description": "Multiple editing layers for streamlined, dynamic storytelling."
-      },
-      {
-        "title": "Plugin Support",
-        "description": "Extend the software's capabilities with a variety of compatible plugins."
-      }
-    ],
-    "targetAudience": "Content creators, narrative-driven video editors, independent filmmakers.",
-    "verdict": "EditFlow Elite is perfect for editors seeking a sophisticated timeline tool that offers deep customization for storytelling projects.",
-    "basePrice": 39,
-    "isFlat": false,
-    "ease": 88,
-    "featuresScore": 85,
-    "color1": "#3b82f6",
-    "color2": "#1d4ed8",
-    "iconName": "Zap",
-    "slug": "editflow-elite"
-  },
-  {
-    "name": "ClipForge X",
-    "category": "video editing",
-    "shortDescription": "Enhanced efficiency in short-form video editing with AI assistance.",
-    "longDescription": "ClipForge X is designed to dominate the short-form video editing space with its promise of enhanced speed and precision powered by AI functionalities. With the surge of platforms like TikTok, Instagram Reels, and YouTube Shorts, creating captivating short content quickly is imperative, and ClipForge X is a frontrunner in this domain.\n\nThe tool offers AI-powered editing shortcuts that significantly reduce the time and effort required for high-quality output. From automated scene detection and clipping to integrated social media-friendly templates, ClipForge X is engineered to get editors from raw footage to a completed, platform-ready video in record time. Its streamlined interface ensures that even users with minimal editing experience can produce professional-looking clips rapidly.\n\nMoreover, ClipForge X boasts an ever-growing library of trendy effects and transitions, all of which are optimized for quick implementation. This not only keeps content fresh and engaging but also allows creators to align with rapidly changing social media trends efficiently. The drag-and-drop simplicity coupled with an array of smart templates empowers creators to maintain a steady and impactful content flow.",
-    "pros": [
-      "Speed and efficiency",
-      "AI-powered shortcuts",
-      "Social media integration",
-      "Trendy effects library"
-    ],
-    "cons": [
-      "Less suited for long-form content",
-      "Limited customization for advanced editors"
-    ],
-    "keyFeatures": [
-      {
-        "title": "AI-Powered Editing Shortcuts",
-        "description": "Streamlined tools that automate common editing tasks for efficiency."
-      },
-      {
-        "title": "Social Media Integration",
-        "description": "Direct exports and optimizations for popular social media platforms."
-      },
-      {
-        "title": "Trendy Effects Library",
-        "description": "Constantly updated library of effects and transitions tailored for short-form content."
-      },
-      {
-        "title": "Smart Templates",
-        "description": "Pre-designed templates that can be quickly adjusted for rapid content production."
-      }
-    ],
-    "targetAudience": "Social media managers, content marketers, influencers, and digital creators.",
-    "verdict": "ClipForge X excels in enabling rapid content creation, particularly for influencers and social media teams aiming for instant engagement.",
-    "basePrice": 29,
-    "isFlat": true,
-    "ease": 95,
-    "featuresScore": 87,
-    "color1": "#3b82f6",
-    "color2": "#1d4ed8",
-    "iconName": "Zap",
-    "slug": "clipforge-x"
-  },
-  {
-    "name": "SceneCraft",
-    "category": "video editing",
-    "shortDescription": "Comprehensive 3D video editing and VFX in one accessible platform.",
-    "longDescription": "SceneCraft sets itself apart by offering a platform specifically annotated with powerful tools for creating and editing 3D videos and integrating complex visual effects. As digital content increasingly leans towards incorporating 3D elements, SceneCraft ensures that editors have access to tools that traditionally would require multiple software solutions.\n\nThe platform is particularly notable for its ability to render and manipulate 3D models within a video context, providing powerful visual effect solutions that are highly interactive and dynamic. It caters to both beginners with an intuitive workspace and professionals seeking advanced 3D VFX tools. The clean, user-friendly design allows users of all skill levels to navigate its various features without feeling overwhelmed.\n\nSceneCraft also offers extensive support for importing and exporting a variety of file formats, ensuring compatibility with industry-standard workflows. This adaptability, combined with comprehensive customer support and an active user community, makes SceneCraft a viable alternative for any production looking to include sophisticated effects and 3D content in their video projects.",
-    "pros": [
-      "3D video editing",
-      "Visual effects capability",
-      "Intuitive interface",
-      "Broad format compatibility"
-    ],
-    "cons": [
-      "Resource-intensive",
-      "Learning curve for advanced 3D tools"
-    ],
-    "keyFeatures": [
-      {
-        "title": "Integrated 3D Model Editing",
-        "description": "Tools for rendering and editing 3D models directly within video projects."
-      },
-      {
-        "title": "Dynamic VFX Suite",
-        "description": "Comprehensive suite for integrating high-level visual effects with ease."
-      },
-      {
-        "title": "Broad File Support",
-        "description": "Import and export a wide range of formats to accommodate varied workflows."
-      },
-      {
-        "title": "Community Resources",
-        "description": "Access to extensive tutorials and a community of users for support and inspiration."
-      }
-    ],
-    "targetAudience": "3D artists, VFX professionals, animation studios, and advanced editors.",
-    "verdict": "SceneCraft is an indispensable tool for editors looking to incorporate 3D elements and advanced visual effects into their video projects.",
-    "basePrice": 59,
-    "isFlat": false,
-    "ease": 80,
-    "featuresScore": 95,
-    "color1": "#3b82f6",
-    "color2": "#1d4ed8",
-    "iconName": "Zap",
-    "slug": "scenecraft"
-  },
-  {
-    "name": "MetaMotion Studio",
-    "category": "video editing",
-    "shortDescription": "Motion graphics and video editing combined for compelling visual stories.",
-    "longDescription": "MetaMotion Studio is a unique offering in the video editing market, blending traditional video editing with sophisticated motion graphics capabilities. This integration enables users to create visually striking content that stands out in an increasingly competitive digital landscape. Perfect for editing tasks that require not only meticulous footage handling but also dynamic visual storytelling through animation and graphics.\n\nThe tool's motion graphics features are commendable, offering a plethora of pre-animated templates and customization options that allow editors to create bespoke animations efficiently. These features are seamlessly integrated into the video editing timeline, facilitating a unified workflow that saves time and boosts creative output. Additionally, the software's rendering engine is optimized for speed, ensuring that your high-quality motion graphics do not hinder editing pace.\n\nFurthermore, MetaMotion Studio provides immaculate integration with other creative tools through well-crafted APIs, promoting a synergistic creative environment for professionals who depend on multiple tools. This versatility ensures that creators can easily bring in assets from external tools and still maintain the project’s overall coherence, making it a popular choice among creative teams in advertising and media production.",
-    "pros": [
-      "Advanced motion graphics",
-      "API integration",
-      "Optimized rendering speed",
-      "Enhanced creative workflow"
-    ],
-    "cons": [
-      "Steep learning curve",
-      "High system requirements"
-    ],
-    "keyFeatures": [
-      {
-        "title": "Integrated Motion Graphics",
-        "description": "Incorporate dynamic graphics and animations directly in the editing timeline."
-      },
-      {
-        "title": "Pre-animated Templates",
-        "description": "Ready-to-use templates for quick and easy motion graphic creation."
-      },
-      {
-        "title": "API Integration",
-        "description": "Seamlessly connects with other creative software to expand functionality."
-      },
-      {
-        "title": "Fast Rendering Engine",
-        "description": "Efficient rendering of high-quality motion projects to streamline workflows."
-      }
-    ],
-    "targetAudience": "Video editors, motion graphic artists, advertising agencies, media production houses.",
-    "verdict": "MetaMotion Studio excels as a hybrid tool for both motion graphics and video editing, offering a versatile and efficient workflow for creative professionals.",
-    "basePrice": 69,
-    "isFlat": false,
-    "ease": 82,
-    "featuresScore": 93,
-    "color1": "#3b82f6",
-    "color2": "#1d4ed8",
-    "iconName": "Zap",
-    "slug": "metamotion-studio"
+    "color": "#4b2ad3",
+    "websiteUrl": "https://www.hey.com"
   }
 ]

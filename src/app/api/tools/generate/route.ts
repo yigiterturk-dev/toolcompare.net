@@ -89,6 +89,19 @@ export async function POST(request: Request) {
       
       // Duplicate Check
       if (!existingSlugs.has(newTool.slug)) {
+        // KAPI: satici linki olmayan arac KAYDEDILMEZ.
+        // Bu ucun urettigi alti kayit (PayMaster Pro, VidSmart Pro,
+        // EditFlow Elite, ClipForge X, SceneCraft, MetaMotion Studio)
+        // gercekte var olmayan urunlerdi ve hepsinin ortak isareti
+        // linksiz olmalariydi. Var olmayan urunu inceleyen bir
+        // karsilastirma sitesinin baska hicbir iddiasina guvenilmez.
+        if (!newTool?.websiteUrl || !/^https:\/\/[^\s]+\.[^\s]+/.test(newTool.websiteUrl)) {
+          return NextResponse.json(
+            { error: `Rejected "${newTool?.name ?? 'unnamed'}": a tool must have a real https:// website URL. If the model cannot name one, the tool probably does not exist.` },
+            { status: 422 }
+          );
+        }
+
         existingTools.push(newTool);
         existingSlugs.add(newTool.slug);
         addedCount++;
