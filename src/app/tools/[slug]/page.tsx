@@ -234,11 +234,15 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </div>
 
                 <div style={{ background: 'linear-gradient(135deg, var(--brand-primary), var(--brand-secondary))', borderRadius: '24px', padding: '2rem', color: 'white' }}>
-                   <p style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '0.5rem' }}>{fiyatDurumu(tool).karsilastirilabilir ? 'Pricing starts at' : 'Pricing'}</p>
+                   <p style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '0.5rem' }}>{typeof tool.basePrice === "number" && tool.basePrice > 0 && fiyatDurumu(tool).karsilastirilabilir ? 'Pricing starts at' : 'Pricing'}</p>
                    <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', marginBottom: '1.5rem' }}>
-                     {fiyatDurumu(tool).karsilastirilabilir
+                     {/* Metni HER ZAMAN fiyatDurumu uretir. Onceden buradan
+                         dogrudan basePrice basiliyordu; gercekten bedava olan
+                         araclarda "$0/mo" cikiyor, oysa geri kalan her sayfa
+                         "Free" diyordu -- ayni arac iki farkli sey soyluyordu. */}
+                     {typeof tool.basePrice === "number" && tool.basePrice > 0 && fiyatDurumu(tool).karsilastirilabilir
                        ? <>${tool.basePrice}<span style={{ fontSize: '1rem', fontWeight: 400, opacity: 0.8 }}>{tool.isFlat ? '/mo' : '/user/mo'}</span></>
-                       : <span style={{ fontSize: '1.4rem' }}>{fiyatDurumu(tool).metin}</span>}
+                       : <span style={{ fontSize: '1.6rem' }}>{fiyatDurumu(tool).metin}</span>}
                    </div>
                    <a 
                     href={gitLinki(tool.slug)} 

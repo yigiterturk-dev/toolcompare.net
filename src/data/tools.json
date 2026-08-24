@@ -49,7 +49,8 @@
     "targetAudience": "SaaS Companies, Marketing Agencies, and High-Growth Sales Teams.",
     "verdict": "The number one CRM choice for teams prioritizing ease of use and long-term scalability.",
     "websiteUrl": "https://www.hubspot.com",
-    "color": "#ff7a59"
+    "color": "#ff7a59",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "slack",
@@ -257,7 +258,8 @@
     "targetAudience": "E-commerce Founders, Developers, and SaaS Builders.",
     "verdict": "The most secure, modern, and powerful way to accept payments globally.",
     "websiteUrl": "https://stripe.com",
-    "color": "#635bff"
+    "color": "#635bff",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "figma",
@@ -672,7 +674,8 @@
     "targetAudience": "TikTok Creators and Social Media Managers.",
     "verdict": "The most practical tool for fast, impressive, and trend-aligned video editing.",
     "websiteUrl": "https://www.capcut.com",
-    "color": "#000000"
+    "color": "#000000",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "discord",
@@ -724,7 +727,8 @@
     "targetAudience": "Gamers, Developer Communities, and AI Artists.",
     "verdict": "The world's best platform for building and managing dynamic online communities.",
     "websiteUrl": "https://discord.com",
-    "color": "#5865f2"
+    "color": "#5865f2",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "ms-teams",
@@ -1030,7 +1034,8 @@
     ],
     "targetAudience": "Researchers, Journalists, and Academic Students.",
     "verdict": "The most modern, accurate, and fast way to search the internet—and Google's biggest nightmare.",
-    "color": "#22c55e"
+    "color": "#22c55e",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "1password",
@@ -1438,7 +1443,8 @@
     ],
     "targetAudience": "Software Developers, Engineering Teams, and Open Source Fans.",
     "verdict": "The de-facto standard for modern software development; the true home of code.",
-    "color": "#24292e"
+    "color": "#24292e",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "vercel",
@@ -1489,7 +1495,8 @@
     ],
     "targetAudience": "Frontend Developers, UI Designers, and Modern Web Teams.",
     "verdict": "The best way to take web projects live with professional infrastructure in seconds.",
-    "color": "#000000"
+    "color": "#000000",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "jasper",
@@ -2356,7 +2363,8 @@
     ],
     "targetAudience": "Large Corporate Brands and Complex B2B Businesses.",
     "verdict": "The only choice for giant brands with complex enterprise needs seeking 'total freedom.'",
-    "color": "#f46f25"
+    "color": "#f46f25",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "bigcommerce",
@@ -2509,7 +2517,8 @@
     ],
     "targetAudience": "Web Designers, Creative Developers, and Product Brands.",
     "verdict": "The easiest way to add 'wow-factor' interactive 3D experiences to any website.",
-    "color": "#ff4d8d"
+    "color": "#ff4d8d",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "aws",
@@ -2560,7 +2569,8 @@
     ],
     "targetAudience": "Cloud Engineers, Large Enterprises, and Scalable Startups.",
     "verdict": "The world's most powerful and detailed cloud infrastructure; the pro's choice.",
-    "color": "#232f3e"
+    "color": "#232f3e",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "google-cloud",
@@ -2611,7 +2621,8 @@
     ],
     "targetAudience": "Data Scientists, Mobile Developers, and AI Companies.",
     "verdict": "The smartest cloud infrastructure for modern, data-and-AI-driven projects.",
-    "color": "#4285f4"
+    "color": "#4285f4",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "digitalocean",
@@ -2713,7 +2724,8 @@
     ],
     "targetAudience": "Full-stack Developers and Big Data Companies.",
     "verdict": "The world's number one NoSQL choice for modern, fast, and flexible app development.",
-    "color": "#4db33d"
+    "color": "#4db33d",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "supabase",
@@ -2764,7 +2776,8 @@
     ],
     "targetAudience": "Next.js Developers, Frontend-focused Coders, and Startups.",
     "verdict": "The fastest, most reliable, and most 'free' (open-source) choice for a modern backend.",
-    "color": "#3ecf8e"
+    "color": "#3ecf8e",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "ghost",
@@ -2866,7 +2879,8 @@
     ],
     "targetAudience": "Professional Newsletter Publishers and Content Entrepreneurs.",
     "verdict": "The current best platform for those looking to turn their newsletter into a business.",
-    "color": "#fef08a"
+    "color": "#fef08a",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "strapi",
@@ -2917,7 +2931,8 @@
     ],
     "targetAudience": "Backend Developers, Corporate Digital Teams, and Modern Agencies.",
     "verdict": "The best CMS for building a modern, multi-purpose, and fully-controlled content hub.",
-    "color": "#4945ff"
+    "color": "#4945ff",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "strava",
@@ -2968,7 +2983,8 @@
     ],
     "targetAudience": "Runners, Cyclists, and Fitness Enthusiasts.",
     "verdict": "An unrivaled app for turning your workouts into data and a social achievement.",
-    "color": "#fc4c02"
+    "color": "#fc4c02",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "substack",
@@ -3019,7 +3035,8 @@
     ],
     "targetAudience": "Writers, Journalists, and Thought Leaders.",
     "verdict": "The world's easiest and most popular way to build an audience and earn from writing.",
-    "color": "#ff6719"
+    "color": "#ff6719",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "postman",
@@ -3070,7 +3087,8 @@
     ],
     "targetAudience": "Backend Developers, QA Engineers, and Frontend Coders.",
     "verdict": "An essential tool that every developer working with APIs must have on their machine.",
-    "color": "#ef5b25"
+    "color": "#ef5b25",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "sentry",
@@ -3121,7 +3139,8 @@
     ],
     "targetAudience": "Software Developers, DevOps Engineers, and Product Managers.",
     "verdict": "The best defense line for protecting user experience and speeding up the 'bug' fix cycle.",
-    "color": "#362d59"
+    "color": "#362d59",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "firebase",
@@ -3172,7 +3191,8 @@
     ],
     "targetAudience": "Mobile App Developers and Rapid Prototyping Specialists.",
     "verdict": "The strongest ecosystem for those who want to focus on features instead of server management.",
-    "color": "#ffca28"
+    "color": "#ffca28",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "contentful",
@@ -3223,7 +3243,8 @@
     ],
     "targetAudience": "Global Brands, Digital Marketing Teams, and Enterprise Architects.",
     "verdict": "The most reliable infrastructure for managing digital content at a global scale.",
-    "color": "#24292e"
+    "color": "#24292e",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "wix",
@@ -3427,7 +3448,8 @@
     ],
     "targetAudience": "E-commerce Brands and Digital Marketing Agencies.",
     "verdict": "The most powerful and intelligent tool for turning e-commerce data into revenue.",
-    "color": "#000000"
+    "color": "#000000",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "twilio",
@@ -3478,7 +3500,8 @@
     ],
     "targetAudience": "Software Engineers, Startups, and System Architects.",
     "verdict": "The world's number one API provider for those looking to code and scale communication.",
-    "color": "#f22f46"
+    "color": "#f22f46",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "gumroad",
@@ -3529,7 +3552,8 @@
     ],
     "targetAudience": "Digital Creators, Writers, and Software Developers.",
     "verdict": "The best starting point for selling products with just a link and no complex setup.",
-    "color": "#ff90e8"
+    "color": "#ff90e8",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "kajabi",
@@ -3682,7 +3706,8 @@
     ],
     "targetAudience": "Enterprise IT Managers, .NET Developers, and Large Organizations.",
     "verdict": "The premier choice for large-scale enterprises deeply integrated into the Microsoft ecosystem.",
-    "color": "#0078d4"
+    "color": "#0078d4",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "cloudflare",
@@ -3733,7 +3758,8 @@
     ],
     "targetAudience": "Website Owners, Developers, and Security Engineers.",
     "verdict": "The essential first line of defense and performance for any modern website.",
-    "color": "#f38020"
+    "color": "#f38020",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "postgresql",
@@ -3784,7 +3810,8 @@
     ],
     "targetAudience": "Backend Developers, Data Engineers, and System Architects.",
     "verdict": "The most professional, reliable, and powerful database choice for any serious software project.",
-    "color": "#336791"
+    "color": "#336791",
+    "fiyatModeli": "bedava"
   },
   {
     "slug": "redis",
@@ -3835,7 +3862,8 @@
     ],
     "targetAudience": "Backend Engineers and DevOps Professionals.",
     "verdict": "The indispensable speed layer for any modern, high-traffic web application.",
-    "color": "#d82c20"
+    "color": "#d82c20",
+    "fiyatModeli": "bedava"
   },
   {
     "slug": "docker",
@@ -3886,7 +3914,8 @@
     ],
     "targetAudience": "DevOps Engineers and Software Developers.",
     "verdict": "The essential standard for modern software shipping and deployment.",
-    "color": "#2496ed"
+    "color": "#2496ed",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "netlify",
@@ -3937,7 +3966,8 @@
     ],
     "targetAudience": "Frontend Developers and Jamstack Enthusiasts.",
     "verdict": "The most user-friendly and feature-rich platform for hosting static and modern web apps.",
-    "color": "#00ad9f"
+    "color": "#00ad9f",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "terraform",
@@ -3988,7 +4018,8 @@
     ],
     "targetAudience": "DevOps Engineers and Cloud Architects.",
     "verdict": "The industry-standard tool for managing complex cloud infrastructure through code.",
-    "color": "#623ce4"
+    "color": "#623ce4",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "datadog",
@@ -4090,7 +4121,8 @@
     ],
     "targetAudience": "Flutter Developers and Self-hosting Enthusiasts.",
     "verdict": "The best open-source alternative for building modern backends with total data ownership.",
-    "color": "#f02e65"
+    "color": "#f02e65",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "wix-studio",
@@ -4396,7 +4428,8 @@
     ],
     "targetAudience": "Fintech Developers and Financial App Founders.",
     "verdict": "The undisputed standard for connecting any software to the world's banking system.",
-    "color": "#000000"
+    "color": "#000000",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "paddle",
@@ -4447,7 +4480,8 @@
     ],
     "targetAudience": "SaaS Founders and Global Software Companies.",
     "verdict": "The best choice for software startups who want to sell globally without a tax headache.",
-    "color": "#000000"
+    "color": "#000000",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "lemonsqueezy",
@@ -4498,7 +4532,8 @@
     ],
     "targetAudience": "Solo SaaS Founders and Modern Digital Creators.",
     "verdict": "The most stylish and simple way to sell software and digital products globally.",
-    "color": "#f5d300"
+    "color": "#f5d300",
+    "fiyatModeli": "kullanima-gore"
   },
   {
     "slug": "obsidian",
@@ -4549,7 +4584,8 @@
     ],
     "targetAudience": "Knowledge Workers, Students, and Privacy Advocates.",
     "verdict": "The ultimate tool for building a private, networked, and long-lasting knowledge base.",
-    "color": "#7c3aed"
+    "color": "#7c3aed",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "linear",
@@ -4702,7 +4738,8 @@
     ],
     "targetAudience": "Student Developers, AI Hackers, and Rapid Prototypers.",
     "verdict": "The fastest way to go from an idea to a live, functioning application.",
-    "color": "#f26b1d"
+    "color": "#f26b1d",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "loom-ai",
@@ -4957,7 +4994,8 @@
     ],
     "targetAudience": "Product Managers, Developers, and Growth Teams.",
     "verdict": "The best 'product-first' analytics tool for teams who want to build with data.",
-    "color": "#000000"
+    "color": "#000000",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "mixpanel",
@@ -5008,7 +5046,8 @@
     ],
     "targetAudience": "Product Managers and Data Analysts.",
     "verdict": "The most professional and deep choice for serious product behavior analysis.",
-    "color": "#7856ff"
+    "color": "#7856ff",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "logrocket",
@@ -5059,7 +5098,8 @@
     ],
     "targetAudience": "Frontend Developers and UX Researchers.",
     "verdict": "An indispensable tool for debugging and optimizing modern web applications.",
-    "color": "#764abc"
+    "color": "#764abc",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "segment",
@@ -5110,7 +5150,8 @@
     ],
     "targetAudience": "Data Engineers and Growth Marketers.",
     "verdict": "The premier infrastructure for managing and scaling customer data at an enterprise level.",
-    "color": "#52bd94"
+    "color": "#52bd94",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "zapier-interfaces",
@@ -5161,7 +5202,8 @@
     ],
     "targetAudience": "Ops Managers and Solopreneurs.",
     "verdict": "The fastest way to build an interactive, AI-powered app on top of your existing automations.",
-    "color": "#ff4f00"
+    "color": "#ff4f00",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "clarity",
@@ -5212,7 +5254,8 @@
     ],
     "targetAudience": "Website Owners and UX Designers.",
     "verdict": "The best free 'Hotjar alternative' on the market with no compromises on power.",
-    "color": "#0078d4"
+    "color": "#0078d4",
+    "fiyatModeli": "bedava"
   },
   {
     "slug": "amplitude",
@@ -5263,7 +5306,8 @@
     ],
     "targetAudience": "Product Leaders and Enterprise Data Teams.",
     "verdict": "The most powerful platform for companies whose business depends on their product's performance.",
-    "color": "#231f20"
+    "color": "#231f20",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "bubble",
@@ -5365,7 +5409,8 @@
     ],
     "targetAudience": "Digital Agencies and Enterprise Product Teams.",
     "verdict": "The most modern and developer-friendly way to manage complex, multi-platform content.",
-    "color": "#f03e2f"
+    "color": "#f03e2f",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "xano",
@@ -5518,7 +5563,8 @@
     ],
     "targetAudience": "Students, Professionals, and Non-native English Speakers.",
     "verdict": "The essential tool for anyone who wants to write with confidence and professionalism.",
-    "color": "#05a67e"
+    "color": "#05a67e",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "notion-ai",
@@ -5773,7 +5819,8 @@
     ],
     "targetAudience": "Researchers, Journalists, and Content Marketers.",
     "verdict": "The future of fact-based content creation and instant knowledge sharing.",
-    "color": "#22c55e"
+    "color": "#22c55e",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "notion-calendar",
@@ -5824,7 +5871,8 @@
     ],
     "targetAudience": "Notion Power Users and Modern Professionals.",
     "verdict": "The most beautiful and integrated calendar for those who live in Notion.",
-    "color": "#000000"
+    "color": "#000000",
+    "fiyatModeli": "bedava"
   },
   {
     "slug": "hey-email",
