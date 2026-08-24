@@ -24,56 +24,86 @@ export default function PrivacyPage() {
             <Lock color="#10b981" size={40} />
           </div>
           <h1 style={{ fontSize: '3.5rem', fontWeight: 900, letterSpacing: '-2px', marginBottom: '1rem' }}>Privacy <span style={{ color: '#10b981' }}>Policy</span></h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>Last updated: May 2026</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>Last updated: August 2026</p>
         </header>
 
         <article style={{ color: 'var(--text-secondary)', lineHeight: 1.8, fontSize: '1.1rem' }}>
           <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-              <Eye color="#10b981" /> 1. Information We Collect
-            </h2>
-            <p>We collect information that you provide directly to us, such as when you subscribe to our newsletter or use our AI Assistant. This may include your name, email address, and any messages you send. We also automatically collect certain information when you visit our site, including your IP address, browser type, and operating system.</p>
+            <p style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.3)', borderRadius: '20px', padding: '1.8rem' }}>
+              <strong style={{ color: 'white' }}>The short version:</strong> this site sets no cookies, runs no
+              analytics, and has no advertising trackers. We store an email address only if you type one into
+              the newsletter box. Everything below describes exactly what does happen — nothing more.
+            </p>
           </section>
 
           <section style={{ marginBottom: '3rem' }}>
             <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-              <Cookie color="#10b981" /> 2. Cookies & Tracking
+              <Cookie color="#10b981" /> 1. Cookies and analytics
             </h2>
-            <p>ToolCompare.net uses cookies and similar tracking technologies to track the activity on our service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
-          </section>
-
-          <section style={{ marginBottom: '3rem', background: 'rgba(16, 185, 129, 0.05)', padding: '2rem', borderRadius: '24px', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
-            <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-              <Database color="#10b981" /> 3. How We Use Your Data
-            </h2>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li>• To provide and maintain our Service (including tool recommendations).</li>
-              <li>• To notify you about changes to our Service.</li>
-              <li>• To provide customer support and newsletter updates.</li>
-              <li>• To gather analysis or valuable information so that we can improve our Service.</li>
-              <li>• To monitor the usage of our Service.</li>
-            </ul>
+            <p>
+              We set no cookies. We run no analytics package — no Google Analytics, no tag manager, no
+              third-party advertising or behavioural trackers — and we do not write anything to your browser&apos;s
+              local storage. There is no cookie banner on this site because there is nothing to consent to.
+            </p>
           </section>
 
           <section style={{ marginBottom: '3rem' }}>
             <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-               4. Third-Party Links
+              <Eye color="#10b981" /> 2. What we record when you click through to a tool
             </h2>
-            <p>Our website contains links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+            <p>
+              Links to a tool&apos;s own website go through <code style={{ color: 'var(--brand-primary)' }}>/go/&lt;tool&gt;</code>{' '}
+              before forwarding you on. When that happens we record three things: which tool was clicked, which
+              page of ours you clicked it from, and the time.
+            </p>
+            <p>
+              We do <strong style={{ color: 'white' }}>not</strong> record your IP address, your browser or device,
+              or any identifier that could link one click to another or to you. The purpose is to know which
+              tools readers are interested in, not who our readers are.
+            </p>
           </section>
 
           <section style={{ marginBottom: '3rem' }}>
             <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-               5. Data Security
+              <Database color="#10b981" /> 3. Newsletter and the AI assistant
             </h2>
-            <p>The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+            <p>
+              <strong style={{ color: 'white' }}>Newsletter:</strong> if you enter an email address we store that
+              address, and nothing else. No name, no other field. Ask us and we will delete it.
+            </p>
+            <p>
+              <strong style={{ color: 'white' }}>AI assistant:</strong> the message you type is sent to OpenAI to
+              generate the reply, and is covered by their handling of it while that happens. We do not store your
+              messages. Do not type anything confidential into it — that is true of every AI chat box, including ours.
+            </p>
           </section>
 
           <section style={{ marginBottom: '3rem' }}>
             <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-               6. Contact Us
+              <Lock color="#10b981" /> 4. IP addresses
             </h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at: support@toolcompare.net</p>
+            <p>
+              Your IP address is used momentarily, in memory, to limit how many requests a single source can make
+              — the ordinary protection that stops one visitor from flooding the newsletter form or the AI
+              assistant. It is not written to our database and not tied to anything you do. Our hosting provider
+              keeps its own server access logs, as every web host does.
+            </p>
+          </section>
+
+          <section style={{ marginBottom: '3rem' }}>
+            <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem' }}>5. Links to other sites</h2>
+            <p>
+              Once you reach a tool&apos;s own website you are on their site under their privacy policy, not ours.
+              We have no control over what they collect.
+            </p>
+          </section>
+
+          <section style={{ marginBottom: '3rem' }}>
+            <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem' }}>6. Changes</h2>
+            <p>
+              If we ever start collecting something not listed above, this page will say so before it happens.
+              Questions or a deletion request: <a href="mailto:support@toolcompare.net" style={{ color: 'var(--brand-primary)' }}>support@toolcompare.net</a>.
+            </p>
           </section>
         </article>
       </main>

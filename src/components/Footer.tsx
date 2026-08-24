@@ -28,7 +28,7 @@ export default function Footer() {
             <img src="/logo.png" alt="ToolCompare Logo" style={{ width: '32px', height: '32px', objectFit: 'contain' }} /> ToolCompare
           </div>
           <p style={{ color: '#888', lineHeight: 1.6, marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-            Find and compare the world's best software tools with deep-dive reviews and real-time pricing analysis.
+            Compare software tools on what they actually cost to start — with the pricing model spelled out, and no invented quality scores.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
             <a href="https://twitter.com" aria-label="ToolCompare on Twitter" target="_blank" rel="noopener noreferrer" style={{ color: '#444', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = 'white'} onMouseOut={(e) => e.currentTarget.style.color = '#444'}><MessageSquare size={20} /></a>
@@ -41,7 +41,7 @@ export default function Footer() {
           <h2 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Explore</h2>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
             <li><Link href="/categories" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>All Categories</Link></li>
-            <li><Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Top Picks 2026</Link></li>
+            <li><Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Cheapest Tools 2026</Link></li>
             <li><Link href="/" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Software Directory</Link></li>
           </ul>
         </div>
@@ -49,7 +49,7 @@ export default function Footer() {
         <div>
           <h2 style={{ color: 'white', marginBottom: '1.5rem', fontSize: '1.1rem' }}>Support</h2>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-            <li><Link href="/methodology" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>How We Score Tools</Link></li>
+            <li><Link href="/methodology" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>How We Rank Tools</Link></li>
             <li><Link href="/terms" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Terms of Service</Link></li>
             <li><Link href="/privacy" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Privacy Policy</Link></li>
             <li><Link href="/contact" style={{ color: '#888', textDecoration: 'none', fontSize: '0.95rem' }}>Contact Us</Link></li>
@@ -96,7 +96,7 @@ export default function Footer() {
 
       <div style={{ maxWidth: '1400px', margin: '0 auto', borderTop: '1px solid #1a1a1a', paddingTop: '2rem', textAlign: 'center' }}>
         <p style={{ color: '#444', fontSize: '0.85rem' }}>
-          &copy; 2026 ToolCompare. All rights reserved. Disclosure: We may earn a commission from tools listed on this site.
+          &copy; 2026 ToolCompare. All rights reserved. We are in no affiliate programme and earn no commission from the links on this site. If that changes, it will say so here first.
         </p>
       </div>
     </footer>

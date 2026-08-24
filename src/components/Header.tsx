@@ -38,7 +38,7 @@ export default function Header() {
       <nav style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginRight: '1rem' }}>
           <Link href="/categories" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Categories</Link>
-          <Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Top Picks 2026</Link>
+          <Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Cheapest Tools</Link>
         </div>
 
 

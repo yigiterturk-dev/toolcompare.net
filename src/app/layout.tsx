@@ -7,7 +7,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   title: "ToolCompare | The World's Best Software Tools, Compared",
-  description: "Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.",
+  description: "Software tools compared on what they cost to start. Every price says whether it is verified, usage-based or a free tier — and we publish no invented quality scores.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ToolCompare | The World's Best Software Tools, Compared",
     description:
-      "Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.",
+      "Software tools compared on what they cost to start. Every price says whether it is verified, usage-based or a free tier — and we publish no invented quality scores.",
     url: "/",
     siteName: "ToolCompare",
     type: "website",

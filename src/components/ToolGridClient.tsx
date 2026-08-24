@@ -88,7 +88,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
             <span style={{ background: 'linear-gradient(to right, #6366f1, #a855f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>SaaS Tool</span>
           </h1>
           <p style={{ fontSize: '1.4rem', color: 'rgba(255,255,255,0.6)', maxWidth: '800px', margin: '0 auto 4rem', lineHeight: 1.6 }}>
-            Unbiased reviews, side-by-side comparisons, and real-time pricing for the world's top software tools.
+            Independent comparisons of software tools. Every price says whether it is verified, usage-based or a free tier — and we do not publish invented quality scores.
           </p>
 
           <div style={{ position: 'relative', maxWidth: '850px', margin: '0 auto 4rem', width: '100%', zIndex: 100 }}>

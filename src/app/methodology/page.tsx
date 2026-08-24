@@ -21,12 +21,12 @@ import { dogrulanmamisSayisi } from "@/lib/fiyat";
 import { kategoriler } from "@/lib/categories";
 
 export const metadata: Metadata = {
-  title: "How We Score and Rank Tools | ToolCompare",
+  title: "How We Rank Tools | ToolCompare",
   description:
     "Where our scores come from, what our prices mean, what we could not verify, and how ToolCompare makes money. Written plainly, including the weak spots.",
   alternates: { canonical: "/methodology" },
   openGraph: {
-    title: "How We Score and Rank Tools | ToolCompare",
+    title: "How We Rank Tools | ToolCompare",
     description:
       "Where our scores come from, what our prices mean, what we could not verify, and how ToolCompare makes money.",
     url: "/methodology",
@@ -51,12 +51,12 @@ export default function MethodologyPage() {
       <Header />
       <main style={{ maxWidth: '760px', margin: '0 auto', padding: '4rem 2rem 6rem' }}>
         <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', fontWeight: 900, letterSpacing: '-0.03em', marginBottom: '1.5rem' }}>
-          How we score and rank tools
+          How we rank tools
         </h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: 1.75 }}>
-          Every page on this site puts tools in an order and uses words like &quot;best&quot;, &quot;cheapest&quot; and
-          &quot;easier&quot;. This page explains where those judgements come from — including the places where
-          our data is weak. If a comparison site will not tell you its method, the ranking is worth nothing.
+          Every page on this site puts tools in an order. This page explains what decides that order, what
+          our prices do and do not mean, and which claims we deliberately refuse to make. If a comparison
+          site will not tell you its method, its ranking is worth nothing.
         </p>
 
         <B>
