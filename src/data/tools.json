@@ -186,25 +186,25 @@
     "ease": 99,
     "featuresScore": 100,
     "features": [
-      "GPT-4o",
-      "Data Analysis",
-      "DALL-E"
+      "Advanced Reasoning",
+      "File and Data Analysis",
+      "Image Generation"
     ],
     "basePrice": 20,
     "isFlat": false,
     "category": "AI Tools",
-    "shortDescription": "Leading conversational AI.",
-    "longDescription": "ChatGPT, developed by OpenAI, is a revolutionary generative AI assistant that has fundamentally changed human-computer interaction. Powered by the cutting-edge GPT-4o model, it excels in everything from complex coding and strategic planning to creative writing and deep data analysis. It is multi-modal, meaning it can speak with you, interpret images you upload, and generate high-fidelity art via DALL-E 3. ChatGPT acts as a tireless, highly intelligent partner for your digital tasks, a personal tutor for any subject, and a creative brainstorming companion.",
+    "shortDescription": "Conversational AI with reasoning, files, voice and image tools.",
+    "longDescription": "ChatGPT is OpenAI's conversational AI product for writing, research, coding, file analysis, voice and image workflows. The Plus plan expands access to models and tools beyond the free tier, while API usage is sold and billed separately. Availability and usage limits can change, so this record links to OpenAI's current plan documentation instead of treating a model name as permanent.",
     "pros": [
-      "World-Leading Intelligence: Unmatched reasoning and logic capabilities among AI models.",
-      "Versatility: Offers value for everyone from software engineers to marketing professionals.",
-      "Rapid Evolution: Receives near-monthly updates with the latest research and features.",
-      "Ease of Use: No technical knowledge required—just chat to get the results you need."
+      "Broad tool access: Plus documents expanded access to reasoning, voice, image generation, file analysis and deep research.",
+      "Multimodal workflow: Text, files, voice and images can be handled inside the same product.",
+      "Custom workflows: Projects, tasks and custom GPTs are included in the documented Plus feature set.",
+      "Free entry point: A limited free tier is available before upgrading to a paid individual plan."
     ],
     "cons": [
-      "Hallucination Risk: Can occasionally present false information with great confidence.",
-      "Privacy Concerns: Users must be careful about sharing sensitive or proprietary data.",
-      "Free Tier Limits: Access to the most intelligent models is restricted for free users."
+      "Usage limits: Plus can still apply message or tool caps, particularly during high demand.",
+      "Separate API billing: A ChatGPT subscription does not include API usage.",
+      "Output verification: Generated answers still require review when factual accuracy or source fidelity matters."
     ],
     "keyFeatures": [
       {
@@ -216,16 +216,26 @@
         "description": "Upload spreadsheets to generate instant charts, visualizations, and statistical reports."
       },
       {
-        "title": "DALL-E 3 Integration",
-        "description": "Generate high-quality, artistic images directly from your text descriptions."
+        "title": "ChatGPT Images",
+        "description": "Create and edit images from a conversation or the dedicated Images experience."
       },
       {
         "title": "Voice Conversation",
-        "description": "Engage with the AI in real-time using a near-human, emotionally resonant voice."
+        "description": "Use voice conversations, with plan-dependent access to video and screen sharing."
       }
     ],
-    "targetAudience": "Developers, Students, Content Creators, and Knowledge Workers.",
-    "verdict": "The undisputed king of the AI era, capable of handling almost any digital task.",
+    "targetAudience": "People who want reasoning, file analysis, voice and image generation in one consumer AI workspace.",
+    "bestFor": [
+      "Mixed text, file, voice and image workflows",
+      "Users who want custom GPTs and project-based organization",
+      "People who want to start on a limited free tier"
+    ],
+    "skipIf": [
+      "You expect the $20 subscription to include API usage",
+      "Your workflow cannot tolerate variable usage limits",
+      "You need answers accepted without human verification"
+    ],
+    "verdict": "Choose ChatGPT when one workspace for reasoning, files, voice and image creation matters more than specializing around a single workflow.",
     "websiteUrl": "https://chatgpt.com",
     "color": "#10a37f",
     "incelendi": true,
@@ -234,6 +244,25 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
+    },
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "OpenAI — What is ChatGPT Plus?",
+          "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+          "checkedAt": "2026-08-24",
+          "supports": ["$20 monthly Plus price", "usage limits", "voice", "image generation", "file analysis", "API billed separately"]
+        },
+        {
+          "label": "OpenAI — Images in ChatGPT",
+          "url": "https://help.openai.com/en/articles/11084440-images-in-chatgpt",
+          "checkedAt": "2026-08-24",
+          "supports": ["image creation and editing", "web and mobile availability"]
+        }
+      ],
+      "limitations": ["Vendor documentation was reviewed; this record is not a ToolCompare benchmark."]
     }
   },
   {
@@ -1082,38 +1111,48 @@
     "isFlat": false,
     "category": "AI Tools",
     "shortDescription": "Helpful AI assistant.",
-    "longDescription": "Claude, developed by Anthropic using 'Constitutional AI' principles, is an AI assistant focused on honesty and helpfulness. It is particularly renowned for its superior performance in complex coding tasks, technical writing, and nuanced reasoning. Its 'Artifacts' feature allows users to see and interact with code, UI designs, and documents in a dedicated side window. With a massive context window, Claude can analyze thousands of lines of code or entire books in one go, offering a more human-like and less robotic writing style than its peers.",
+    "longDescription": "Claude is Anthropic's conversational AI product for writing, analysis, code and connected knowledge workflows. Anthropic's current Pro documentation lists more usage, Projects, Research, extended thinking, tool connections and Claude Code access. The plan is $20 when billed monthly in the US, with regional pricing and an annual discount available.",
     "pros": [
-      "Superior Coding: One of the smartest models for software development and debugging.",
-      "Artifacts UI: The ability to view and edit generated content live is revolutionary.",
-      "Natural Tone: Writes with a much more fluid and less artificial tone than ChatGPT.",
-      "Massive Context: Can process and interpret books' worth of data in a single session."
+      "Project organization: Pro includes unlimited Projects for grouping chats and documents.",
+      "Research workflow: Anthropic lists Research and Google Workspace connections in Pro.",
+      "Extended thinking: Pro includes access to extended thinking and additional Claude models.",
+      "Developer access: Claude Code is included as a documented Pro capability."
     ],
     "cons": [
-      "Message Limits: Even Pro users can hit daily limits during periods of heavy usage.",
-      "No Image Generation: Does not offer an integrated tool like DALL-E for art.",
-      "Web Search: Its current web browsing capacity is not as fast as Perplexity."
+      "Usage limits: Pro provides more usage than Free but remains subject to limits.",
+      "Regional pricing: The monthly amount and taxes can vary by location.",
+      "Plan fit: Max tiers are separate upgrades for users who need substantially more capacity."
     ],
     "keyFeatures": [
       {
         "title": "Claude Artifacts",
-        "description": "Run and view code, websites, and graphics in a live side-by-side panel."
+        "description": "Create and work with code, documents and visual outputs in a dedicated workspace."
       },
       {
         "title": "Projects",
         "description": "Define a custom knowledge base for your AI assistant to work within."
       },
       {
-        "title": "200k Context Window",
-        "description": "Analyze an entire software project or a massive PDF in one single conversation."
+        "title": "Research and Connections",
+        "description": "Use Research and connect supported workspace tools under the current Pro plan."
       },
       {
-        "title": "Safety Architecture",
-        "description": "Built from the ground up to follow strict ethical and safety standards."
+        "title": "Extended Thinking",
+        "description": "Use additional reasoning time for complex tasks where the selected model supports it."
       }
     ],
-    "targetAudience": "Software Engineers, Technical Writers, and Data Analysts.",
-    "verdict": "The best AI assistant in the market for deep thinking, technical analysis, and coding.",
+    "targetAudience": "People who prioritize project-based writing, analysis, research connections and Claude Code access.",
+    "bestFor": [
+      "Project-based writing and document analysis",
+      "Users who want Research and supported workspace connections",
+      "Developers who want Claude Code included with Pro"
+    ],
+    "skipIf": [
+      "You need a paid plan with no usage limits",
+      "You want the lowest monthly price through month-to-month billing",
+      "Your decision depends on an independently benchmarked quality winner"
+    ],
+    "verdict": "Choose Claude when Projects, Research, connected documents and Claude Code match the workflow you actually need.",
     "color": "#d97757",
     "websiteUrl": "https://claude.ai",
     "incelendi": true,
@@ -1122,6 +1161,25 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
+    },
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "Anthropic — Claude pricing",
+          "url": "https://www.anthropic.com/pricing?subjects=claude&type=product",
+          "checkedAt": "2026-08-24",
+          "supports": ["$20 monthly Pro price", "$17 annual equivalent", "Projects", "Research", "connections", "Claude Code", "extended thinking"]
+        },
+        {
+          "label": "Anthropic Help — Claude Pro cost",
+          "url": "https://support.anthropic.com/en/articles/8325610-how-much-does-claude-pro-cost",
+          "checkedAt": "2026-08-24",
+          "supports": ["US monthly price", "regional pricing", "tax treatment", "annual subscription option"]
+        }
+      ],
+      "limitations": ["Vendor documentation was reviewed; this record is not a ToolCompare benchmark."]
     }
   },
   {

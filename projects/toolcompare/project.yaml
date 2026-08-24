@@ -1,0 +1,15 @@
+project:
+  name: ToolCompare
+  slug: toolcompare
+  mode: revise
+  type: software_directory_and_comparison_webapp
+  workspace: projects/toolcompare
+revision:
+  scope: source-backed evidence and decision-quality content
+  approved_by_user: true
+  production_allowed: false
+assets:
+  brand_identity: PROVIDED
+  existing_catalog: PROVIDED
+  official_vendor_sources: TO_BE_CREATED
+  historical_pricing_dataset: TO_BE_CREATED

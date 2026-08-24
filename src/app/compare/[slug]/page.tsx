@@ -5,6 +5,7 @@ import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi } from "@/lib/compare";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     : cekirdek.length <= 65 ? cekirdek
     : kisa.length <= 65 ? kisa
     : `${tool1.name} vs ${tool2.name}`;
-  const description = `Compare ${tool1.name} and ${tool2.name} side-by-side: pricing, ease of use, features, pros, cons and who each one is for.`;
+  const description = `Compare ${tool1.name} and ${tool2.name} side-by-side: verified pricing, documented features, trade-offs, source dates and who each one fits.`;
 
   // "a-vs-b" ve "b-vs-a" ayni sayfa. Kanonik olan alfabetik sirali olan;
   // aksi halde ayni icerik iki adreste indekslenir ve ikisi de zayiflar.
@@ -81,6 +82,8 @@ export default async function ComparisonPage({ params }: any) {
   // sayilardan turetiliyor.
   const f1 = fiyatDurumu(tool1);
   const f2 = fiyatDurumu(tool2);
+  const e1 = toolEvidence(tool1);
+  const e2 = toolEvidence(tool2);
   // Fiyat kiyasi ancak IKI TARAF DA dogrulanmissa yapilir.
   const fiyatKiyaslanabilir = f1.karsilastirilabilir && f2.karsilastirilabilir;
   const ucuz = fiyatKiyaslanabilir ? ((f1.aylik as number) <= (f2.aylik as number) ? tool1 : tool2) : null;
@@ -92,7 +95,7 @@ export default async function ComparisonPage({ params }: any) {
   const ilgili = akranlar(tool1.slug).filter((t: any) => t.slug !== tool2.slug);
 
   const ComparisonRow = ({ label, val1, val2, type = "text" }: any) => (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0', alignItems: 'center' }}>
+    <div className="compare-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0', alignItems: 'center' }}>
       <div style={{ color: '#666', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase' }}>{label}</div>
       <div style={{ textAlign: 'center', fontSize: '1.1rem', fontWeight: 600 }}>
         {type === "score" ? <span style={{ color: 'white' }}>{val1}%</span> : val1}
@@ -124,7 +127,7 @@ export default async function ComparisonPage({ params }: any) {
           <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '1.5rem', letterSpacing: '-2px' }}>
             {tool1.name} <span style={{ color: 'var(--brand-primary)' }}>vs</span> {tool2.name}
           </h1>
-          <p style={{ color: '#888', fontSize: '1.25rem' }}>The ultimate side-by-side head-to-head analysis for 2026.</p>
+          <p style={{ color: '#888', fontSize: '1.25rem' }}>A source-aware comparison of pricing, documented capabilities and workflow fit.</p>
         </div>
 
         {/* Kisa cevap. Ziyaretci "hangisi?" diye geliyor; cevabi sayfanin
@@ -219,17 +222,56 @@ export default async function ComparisonPage({ params }: any) {
           </div>
         </div>
 
-        {/* Expert Verdict Section */}
-        <div style={{ marginTop: '6rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+        {/* Workflow fit. These are bounded use cases, not an overall winner. */}
+        <div className="compare-two-column" style={{ marginTop: '6rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
            <div style={{ background: 'var(--surface-color)', padding: '3rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
               <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}><CheckCircle2 color="var(--success)" /> Choose {tool1.name} if:</h3>
-              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{tool1.targetAudience}</p>
+              <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.7, paddingLeft: '1.2rem', margin: 0 }}>
+                {(tool1.bestFor?.length ? tool1.bestFor : [tool1.targetAudience]).filter(Boolean).map((item: string) => <li key={item}>{item}</li>)}
+              </ul>
            </div>
            <div style={{ background: 'var(--surface-color)', padding: '3rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
               <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}><CheckCircle2 color="var(--success)" /> Choose {tool2.name} if:</h3>
-              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{tool2.targetAudience}</p>
+              <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.7, paddingLeft: '1.2rem', margin: 0 }}>
+                {(tool2.bestFor?.length ? tool2.bestFor : [tool2.targetAudience]).filter(Boolean).map((item: string) => <li key={item}>{item}</li>)}
+              </ul>
            </div>
         </div>
+
+        {(tool1.skipIf?.length || tool2.skipIf?.length) && (
+          <div className="compare-two-column" style={{ marginTop: '2rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+            {[tool1, tool2].map((tool: any) => (
+              <div key={tool.slug} style={{ padding: '2rem', borderRadius: '24px', border: '1px solid rgba(245,158,11,0.3)', background: 'rgba(245,158,11,0.06)' }}>
+                <h3 style={{ marginBottom: '1rem' }}>Skip {tool.name} if:</h3>
+                <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.7, paddingLeft: '1.2rem', margin: 0 }}>
+                  {(tool.skipIf || []).map((item: string) => <li key={item}>{item}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {(e1 || e2) && (
+          <section className="compare-evidence" style={{ marginTop: '3rem', padding: '2.5rem', borderRadius: '28px', background: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
+            <h2 style={{ fontSize: '1.4rem', marginBottom: '0.7rem' }}>Evidence and freshness</h2>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: 0 }}>
+              Vendor documentation supports plan and feature claims. It does not establish an overall quality winner.
+            </p>
+            <div className="compare-two-column" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginTop: '1.5rem' }}>
+              {[[tool1, e1], [tool2, e2]].map(([tool, evidence]: any) => (
+                <div key={tool.slug}>
+                  <h3 style={{ marginBottom: '0.5rem' }}>{tool.name}</h3>
+                  {evidence ? <>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{evidenceLabel(evidence.status)} · reviewed {evidence.reviewedAt}</p>
+                    <ul style={{ paddingLeft: '1.2rem', lineHeight: 1.8 }}>
+                      {evidence.sources.map((source: any) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--brand-primary)' }}>{source.label}</a> <span style={{ color: '#666' }}>({source.checkedAt})</span></li>)}
+                    </ul>
+                  </> : <p style={{ color: '#888' }}>Sources have not been attached to this record yet.</p>}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {!tool1.verdict && !tool2.verdict && (
           <div style={{ marginTop: '3rem', background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.35)', borderRadius: '20px', padding: '1.8rem' }}>
@@ -245,7 +287,7 @@ export default async function ComparisonPage({ params }: any) {
         {/* Arti / eksi. Onceki halde bu veri tools.json'da duruyordu ama
             karsilastirma sayfasinda hic gosterilmiyordu -- sayfayi ince
             birakan asil eksik buydu. */}
-        <div style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+        <div className="compare-two-column" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
           {[tool1, tool2].filter((t: any) => (t.pros || []).length || (t.cons || []).length).map((t: any) => (
             <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2.5rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
               <h3 style={{ marginBottom: '1.5rem' }}>{t.name}: pros &amp; cons</h3>
@@ -269,7 +311,7 @@ export default async function ComparisonPage({ params }: any) {
 
         {/* Tam degerlendirme. Tabloda ortasindan kesilip "..." ile
             biten metin hem kullaniciya hem arama motoruna degersizdi. */}
-        <div style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+        <div className="compare-two-column" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
           {[tool1, tool2].filter((t: any) => t.verdict).map((t: any) => (
             <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2.5rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
               <h3 style={{ marginBottom: '1.2rem' }}>Our verdict on {t.name}</h3>

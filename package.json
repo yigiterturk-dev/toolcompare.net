@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "node app.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:claims": "node scripts/verify-claims.mjs"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

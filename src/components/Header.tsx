@@ -1,14 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Search, Plus, Menu } from "lucide-react";
-import { useState } from "react";
+import { Plus } from "lucide-react";
 
 export default function Header() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
   return (
-    <header style={{ 
+    <header className="site-header" style={{
       position: 'fixed', 
       top: 0, 
       width: '100%', 
@@ -29,14 +26,14 @@ export default function Header() {
           alt="ToolCompare Logo" 
           style={{ height: '32px', width: 'auto', objectFit: 'contain' }} 
         />
-        <span style={{ fontSize: '1.25rem', fontWeight: 900, color: 'white', letterSpacing: '-0.02em' }}>
+        <span className="site-header-name" style={{ fontSize: '1.25rem', fontWeight: 900, color: 'white', letterSpacing: '-0.02em' }}>
           ToolCompare
         </span>
       </Link>
 
       {/* NAVIGATION & ACTIONS */}
-      <nav style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-        <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginRight: '1rem' }}>
+      <nav className="site-header-nav" style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
+        <div className="site-header-links" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', marginRight: '1rem' }}>
           <Link href="/categories" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Categories</Link>
           <Link href="/top-picks" style={{ color: '#888', textDecoration: 'none', fontWeight: 500, fontSize: '0.9rem', transition: 'color 0.2s' }}>Cheapest Tools</Link>
         </div>
@@ -44,6 +41,7 @@ export default function Header() {
 
         {/* CTA BUTTON */}
         <Link 
+          className="site-header-cta"
           href="/contact" 
           style={{ 
             background: 'white', 

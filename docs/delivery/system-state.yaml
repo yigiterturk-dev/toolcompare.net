@@ -1,0 +1,30 @@
+protocol_version: NUSP-1.0
+project:
+  name: ToolCompare
+  slug: toolcompare
+  workspace: projects/toolcompare
+  mode: revise
+project_zero:
+  gate: 6
+  status: PASS
+  project_dna_version: existing-brand-v1
+  reference_pool_version: not-required-content-revision
+delivery:
+  gate: G5
+  status: PASS
+specialists:
+  researcher: pass
+  reference_scan: not_started
+  art_direction: not_started
+  motion: not_started
+  implementation: pass
+  visual_qa: pass
+approvals:
+  direction: existing_locked
+  static: approved_by_verification
+  release: pending
+open_decisions:
+  - Expand source-backed evidence from the first high-intent comparison to the remaining catalog.
+  - Confirm production deployment; release remains pending until explicitly approved.
+active_handoff: projects/toolcompare/brief/evidence-layer-delta.md
+updated_at: 2026-08-24T18:48:00+03:00

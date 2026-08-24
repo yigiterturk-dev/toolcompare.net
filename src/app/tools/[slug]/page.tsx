@@ -5,6 +5,7 @@ import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
+import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
@@ -59,6 +60,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const features = tool.keyFeatures || tool.key_features || tool.features || [];
   const targetAud = typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || tool.target_audience?.description || tool.target_audience?.text || tool.target_audience?.small_businesses || "");
   const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
+  const evidence = toolEvidence(tool);
 
   // Yapilandirilmis veri. DIKKAT: buraya YALNIZCA sayfada gercekten gorunen
   // ve elimizde olan bilgi konur. Genel bir yildiz puani BILEREK yok:
@@ -125,18 +127,18 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
         <article>
           <div style={{ marginBottom: '4rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
+            <div className="tool-review-hero" style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
               <div style={{ width: '100px', height: '100px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
                  <span aria-hidden="true" style={{ color: 'white', fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>{tool.name.charAt(0)}</span>
               </div>
               <div>
                 <span style={{ color: 'var(--brand-primary)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '2px' }}>{tool.category} Review</span>
-                <h1 style={{ fontSize: '4rem', margin: 0, letterSpacing: '-2px', lineHeight: 1 }}>{tool.name}</h1>
+                <h1 className="tool-review-title" style={{ fontSize: '4rem', margin: 0, letterSpacing: '-2px', lineHeight: 1 }}>{tool.name}</h1>
               </div>
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
+          <div className="tool-review-layout" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
               {!incelendi && (
                 <section style={{ background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.35)', borderRadius: '20px', padding: '1.8rem' }}>
@@ -319,6 +321,35 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               not fill the gap with a guess.
             </p>
           </section>
+
+          {evidence && (
+            <section style={{ marginTop: '4rem' }}>
+              <h2 style={{ fontSize: '1.4rem', marginBottom: '1.2rem' }}>Evidence and freshness</h2>
+              <div style={{ maxWidth: '760px', padding: '1.25rem', borderRadius: '16px', background: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem 1.5rem', marginBottom: '1rem' }}>
+                  <span><strong>Status:</strong> {evidenceLabel(evidence.status)}</span>
+                  <span><strong>Reviewed:</strong> {evidence.reviewedAt}</span>
+                </div>
+                <div style={{ display: 'grid', gap: '0.8rem' }}>
+                  {evidence.sources.map((source) => (
+                    <div key={source.url}>
+                      <a href={source.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--brand-primary)', fontWeight: 700 }}>
+                        {source.label} ↗
+                      </a>
+                      <div style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginTop: '0.2rem' }}>
+                        Checked {source.checkedAt} · Supports: {source.supports.join(', ')}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {evidence.limitations && (
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', margin: '1rem 0 0' }}>
+                    <strong>Limit:</strong> {evidence.limitations.join(' ')}
+                  </p>
+                )}
+              </div>
+            </section>
+          )}
 
           {/* Karsilastirma sayfalarina ic link. Bu sayfalar en yuksek
               ticari niyetli sayfa turumuz ama siteden hic link almiyorlardi;
