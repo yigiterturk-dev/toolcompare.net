@@ -16006,70 +16006,168 @@
     "slug": "ovhcloud",
     "name": "OVHcloud",
     "category": "Hosting",
-    "shortDescription": "French web hosting and cloud computing company.",
+    "shortDescription": "Cloud provider spanning public cloud, bare metal, VPS, hosted private cloud, storage and managed services.",
     "websiteUrl": "https://www.ovhcloud.com",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "OVHcloud is a European provider of dedicated servers, VPS and cloud, known for low prices on bare metal.",
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-kredi",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "OVHcloud is a proprietary infrastructure provider offering Public Cloud compute, Kubernetes, databases, storage and networking alongside VPS, dedicated servers and hosted private cloud. Public Cloud is normally pay-as-you-go by actual resource usage, with optional monthly or commitment pricing and a promotional trial credit. Instance prices do not automatically include attached storage, backup, extra IPs, load balancers or every regional network charge; resources continue billing until deleted, not merely powered off.",
     "pros": [
-      "Strong price on dedicated hardware",
-      "European data sovereignty",
-      "Wide product range"
+      "Broad infrastructure choice: Virtual instances, bare metal, containers, storage, networking and managed data products share one catalog.",
+      "Published metering: Hourly and monthly compute, storage, IP and network line items are documented by location.",
+      "Included traffic in many regions: Public instance egress is included outside the documented Asia-Pacific exception.",
+      "Automation surface: OpenStack-compatible APIs, CLI and infrastructure-as-code tooling support repeatable provisioning."
     ],
     "cons": [
-      "Support is documentation-first",
-      "Interface is complex",
-      "Managed services trail the hyperscalers"
+      "Total cost has multiple parts: Volumes, snapshots, backups, IPs, gateways, load balancers, licenses and managed services bill separately.",
+      "Deletion controls spend: A stopped Public Cloud instance remains chargeable until it is deleted.",
+      "Regional differences: Product availability, prices and outbound-traffic treatment vary by location and contracting entity.",
+      "Customer operations remain substantial: VM patching, identity, application availability, backups and recovery require explicit ownership."
     ],
-    "targetAudience": "Teams wanting European hosting and comfortable managing servers.",
-    "verdict": "Excellent value on bare metal. Expect to solve your own problems."
+    "keyFeatures": [
+      { "title": "Public Cloud compute", "description": "Provides hourly or monthly virtual and metal instances across workload-oriented families." },
+      { "title": "Storage and backup", "description": "Offers block and object storage, images, snapshots and separately metered instance backup." },
+      { "title": "Cloud networking", "description": "Includes private networks with optional floating IPs, gateways and load balancers." },
+      { "title": "Managed platforms", "description": "Adds Kubernetes and data services whose control planes and dependent resources have separate terms." }
+    ],
+    "targetAudience": "Infrastructure teams seeking a broad cloud and bare-metal catalog and able to operate workloads through APIs and explicit cost controls.",
+    "bestFor": [
+      "VM, bare-metal and storage workloads whose required services exist in the chosen region",
+      "Teams wanting OpenStack-style automation and comparatively simple network pricing",
+      "European deployment strategies after contractual residency and support review"
+    ],
+    "skipIf": [
+      "The workload assumes identical products, prices or traffic rules in every region",
+      "The team cannot patch systems, design redundancy, monitor spend and rehearse recovery",
+      "A compute headline price is being treated as the complete production architecture cost"
+    ],
+    "verdict": "OVHcloud is credible for cost-conscious infrastructure and European deployments, but select an exact product and region; model every attached resource, automate deletion and budgets, and prove multi-zone availability plus off-system restoration before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "OVHcloud — Public Cloud pricing", "url": "https://www.ovhcloud.com/en/public-cloud/prices/", "checkedAt": "2026-08-24", "supports": ["trial credit", "hourly and monthly billing", "current compute line items", "separate backup and storage", "network and IP prices", "egress inclusion and APAC exception", "Kubernetes control-plane boundary", "pay-as-you-go and commitments", "per-project invoicing"] },
+        { "label": "OVHcloud — Public Cloud FAQ", "url": "https://www.ovhcloud.com/en/public-cloud/faq/", "checkedAt": "2026-08-24", "supports": ["public-cloud product model", "billing until deletion", "free inbound and private traffic", "project organization", "API and OpenStack tooling"] },
+        { "label": "OVHcloud — Public Cloud catalog", "url": "https://www.ovhcloud.com/en/public-cloud/", "checkedAt": "2026-08-24", "supports": ["compute storage network database analytics and container product breadth", "on-demand provisioning", "regional cloud positioning"] },
+        { "label": "OVHcloud Help — Public Cloud documentation", "url": "https://help.ovhcloud.com/csm/en-public-cloud?id=kb_browse_cat&kb_id=574a8325551974502d4c6e78b74219ed", "checkedAt": "2026-08-24", "supports": ["instance and project administration", "network storage backup and security guidance", "API and CLI operational scope"] }
+      ],
+      "limitations": ["Official OVHcloud product, pricing, FAQ and help material was reviewed; ToolCompare did not open an account, redeem credit, deploy or benchmark resources, validate all regional catalogs, calculate taxes or currency conversion, test APIs, IAM, support, SLA credits, DDoS controls, backups or disaster recovery, or inspect dedicated/VPS/private-cloud contracts. Prices and terms may change after the review date."]
+    }
   },
   {
     "slug": "rackspace-technology",
     "name": "Rackspace Technology",
     "category": "Hosting",
-    "shortDescription": "American managed cloud computing company.",
+    "shortDescription": "Managed multicloud, professional-services and private-cloud provider layered over major infrastructure platforms.",
     "websiteUrl": "https://www.rackspace.com/",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Rackspace provides managed hosting and managed services across public clouds, selling expertise more than infrastructure.",
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Rackspace Technology is primarily a managed-service and professional-services layer for AWS, Microsoft Azure, Google Cloud and private-cloud environments rather than one interchangeable public-cloud product. Engagements can cover strategy, migration, landing zones, security, FinOps and day-to-day operations. Scope is contract-specific: Rackspace and the customer retain different responsibilities for applications, data, identity and operations. For Fanatical Support for AWS, Rackspace resells AWS, consolidates infrastructure and management fees, and does not pass through the AWS Free Tier.",
     "pros": [
-      "Managed service across several clouds",
-      "Support is the product",
-      "Long enterprise track record"
+      "Multicloud expertise: Services span AWS, Azure, Google Cloud and hosted/private-cloud environments.",
+      "Operational coverage: Selected offerings provide 24x7 ticket and phone support, monitoring response and account tooling.",
+      "Project services: Strategy, readiness, migration, landing-zone, FinOps and security engagements address transformation work.",
+      "Consolidated AWS administration: Rackspace can establish accounts, centralize access and combine infrastructure with service billing."
     ],
     "cons": [
-      "Expensive relative to self-managed",
-      "Value depends on how much help you need",
-      "Less relevant if you have your own ops team"
+      "Quote and scope dependency: Value, deliverables, response targets and responsibility boundaries depend on the signed service level.",
+      "Additional management cost: AWS infrastructure is billed at list rate and Rackspace service fees are added separately.",
+      "Free-tier exclusion: Official AWS offering documentation says the AWS Free Tier is unavailable through Fanatical Support accounts.",
+      "Provider and reseller coupling: Account ownership, billing, tooling and exit procedures require careful contractual review."
     ],
-    "targetAudience": "Organisations that want someone else to run their cloud.",
-    "verdict": "You are buying people, not servers. Judge it on that."
+    "keyFeatures": [
+      { "title": "Managed public cloud", "description": "Adds operations, governance and support around AWS, Azure and Google Cloud environments." },
+      { "title": "Professional services", "description": "Provides assessments, architecture, migrations, modernization, security and FinOps engagements." },
+      { "title": "Private cloud", "description": "Designs and operates dedicated cloud platforms for control, sovereignty and specialized workloads." },
+      { "title": "Support and tooling", "description": "Uses portal, tickets, monitoring, account access and billing tools according to service scope." }
+    ],
+    "targetAudience": "Organizations with complex cloud estates that need external engineering and operations capacity under an explicit managed-service contract.",
+    "bestFor": [
+      "Enterprises lacking sufficient 24x7 cloud operations, migration or security expertise",
+      "Multicloud programs needing a common service partner and governance approach",
+      "Regulated workloads after validating exact scope, evidence, BAA and customer obligations"
+    ],
+    "skipIf": [
+      "An internal platform team already covers the required operations more economically",
+      "The organization expects a fixed self-service infrastructure price without management fees",
+      "Account portability, responsibility matrix, exit assistance and service outcomes are not contractually defined"
+    ],
+    "verdict": "Evaluate Rackspace as an operating partner, not a commodity server comparison: issue a workload-specific RFP, map every RACI and response target, compare infrastructure-plus-service cost, and contract for account ownership, evidence, transition and exit.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Rackspace — Professional Services", "url": "https://www.rackspace.com/services/professional-services", "checkedAt": "2026-08-24", "supports": ["AWS Azure and GCP scope", "strategy and readiness", "migration and landing zones", "modern cloud infrastructure", "FinOps and security services", "managed-services engagement model"] },
+        { "label": "Rackspace Docs — AWS overview", "url": "https://docs.rackspace.com/docs/amazon-web-services", "checkedAt": "2026-08-24", "supports": ["Fanatical Support for AWS", "AWS account structure", "Rackspace tooling", "contact-led signup"] },
+        { "label": "Rackspace Docs — AWS pricing", "url": "https://docs.rackspace.com/docs/pricing", "checkedAt": "2026-08-24", "supports": ["management fees in addition to AWS", "AWS list-rate infrastructure billing", "reserved and spot fee basis", "customer-portal fee visibility", "AWS Free Tier exclusion"] },
+        { "label": "Rackspace Docs — AWS billing", "url": "https://docs.rackspace.com/docs/billing", "checkedAt": "2026-08-24", "supports": ["Rackspace reseller relationship", "consolidated bill", "currency conversion premiums", "billing cycles", "pooled service-fee calculation", "portal estimates"] },
+        { "label": "Rackspace Docs — AWS features", "url": "https://docs.rackspace.com/docs/features", "checkedAt": "2026-08-24", "supports": ["human expertise and automation", "account hardening", "MFA root handling", "temporary IAM access", "centralized CloudTrail and configuration logging", "service-dependent features"] },
+        { "label": "Rackspace Docs — AWS support", "url": "https://docs.rackspace.com/docs/support", "checkedAt": "2026-08-24", "supports": ["24x7x365 availability", "ticket and phone channels", "automated monitoring tickets", "customer portal"] },
+        { "label": "Rackspace Docs — Compliance boundary", "url": "https://docs.rackspace.com/docs/compliance", "checkedAt": "2026-08-24", "supports": ["service-provider assessment scope", "customer solution not automatically compliant", "QSA limitation", "HIPAA and BAA considerations"] }
+      ],
+      "limitations": ["Official Rackspace service and AWS product documentation was reviewed; ToolCompare did not request a proposal, sign a contract, inspect current Elastic Engineering or Optimizer rate cards, validate every cloud offering, test the portal or support response, audit delivery staff, confirm account-transfer mechanics, calculate a real workload bill, or review legal, SLA, security and exit terms. Most commercially decisive details require a scoped quote."]
+    }
   },
   {
     "slug": "scaleway",
     "name": "Scaleway",
     "category": "Hosting",
-    "shortDescription": "French cloud computing company.",
+    "shortDescription": "European public cloud offering virtual and bare-metal compute, storage, networking and managed platforms.",
     "websiteUrl": "https://www.scaleway.com/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Scaleway is a French cloud provider offering instances, managed databases and object storage with transparent pricing.",
+    "basePrice": 0.43,
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Scaleway is a proprietary European cloud with virtual and GPU instances, bare metal, object/block storage, networking, Kubernetes, databases and serverless services. Virtual instances are pay-as-you-go by powered-on time; the advertised compute rate excludes storage and attached public IPv4, while list prices include IPv6 and egress. Savings Plans trade commitment for discounts. On raw instances the customer owns operating-system updates, access, application security, availability and backup design; managed products move only specified responsibilities to Scaleway.",
     "pros": [
-      "Clear pricing and a clean console",
-      "European jurisdiction",
-      "Good developer tooling"
+      "Published component pricing: Instance families show hourly and approximate monthly compute rates by availability zone.",
+      "Egress-inclusive VM pricing: Current list rates include outbound traffic and IPv6 for virtual instances.",
+      "European footprint: Products run in named European regions and availability zones.",
+      "Automation options: Console, APIs, CLI and infrastructure-as-code tooling support programmatic operations."
     ],
     "cons": [
-      "Smaller service catalogue than AWS",
-      "Fewer regions",
-      "Some services are newer and less proven"
+      "Compute is not the full bill: Local/block storage, snapshots and attached public IPv4 are separate line items.",
+      "Powered-on time bills: CPU instances accrue charges during startup and standby, not only active workload execution.",
+      "Availability varies: Instance families, SLAs and products differ by region and availability zone.",
+      "VM operations are customer-owned: OS patching, configuration, access control, backups and application resilience are not managed away."
     ],
-    "targetAudience": "European teams that want a modern cloud without hyperscaler complexity.",
-    "verdict": "A credible European alternative. Check that the specific managed services you need are mature."
+    "keyFeatures": [
+      { "title": "Virtual instances", "description": "Offers development, general-purpose, memory, compute, GPU and other VM families." },
+      { "title": "Storage choices", "description": "Attaches local or block volumes and provides object, archive and snapshot services." },
+      { "title": "Managed cloud products", "description": "Includes Kubernetes, databases, registries and serverless services with product-specific boundaries." },
+      { "title": "Usage and commitments", "description": "Combines hourly use with optional Savings Plan discounts for committed consumption." }
+    ],
+    "targetAudience": "European-focused engineering teams comfortable operating cloud resources and validating a smaller regional product footprint.",
+    "bestFor": [
+      "Development and production VMs whose instance family exists in the required availability zones",
+      "European cloud strategies after legal, residency and disaster-recovery review",
+      "Workloads benefiting from included VM egress and explicit hourly component pricing"
+    ],
+    "skipIf": [
+      "The architecture requires a service or global region footprint absent from the current catalog",
+      "The team assumes storage, IPv4, snapshots and support are included in the compute price",
+      "No owner exists for instance hardening, OS updates, backups and multi-zone recovery"
+    ],
+    "verdict": "Scaleway is a practical European cloud option when its regional catalog fits; price compute, storage, IPv4 and support together, verify product SLA by zone, and test provisioning, failure and independent restoration with the actual workload.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Scaleway — Virtual Instance pricing", "url": "https://www.scaleway.com/en/pricing/virtual-instances/", "checkedAt": "2026-08-24", "supports": ["current hourly and approximate monthly prices", "availability-zone selection", "instance specifications", "egress and IPv6 inclusion", "storage and public IPv4 exclusion", "snapshot and Flexible IP prices", "pre-tax amounts", "Savings Plans"] },
+        { "label": "Scaleway Docs — Instance pricing", "url": "https://www.scaleway.com/en/docs/instances/reference-content/understanding-instance-pricing/", "checkedAt": "2026-08-24", "supports": ["pay-as-you-go model", "hourly instance billing", "separate local and block storage", "console estimates", "budget tracking", "commitment discounts"] },
+        { "label": "Scaleway Docs — Instances FAQ", "url": "https://www.scaleway.com/en/docs/instances/faq/", "checkedAt": "2026-08-24", "supports": ["compute storage and IP bill components", "powered-on billing", "CPU and GPU granularity", "snapshot and image behavior", "regional availability"] },
+        { "label": "Scaleway — Shared responsibility", "url": "https://www.scaleway.com/en/shared-responsibility-model/", "checkedAt": "2026-08-24", "supports": ["provider and customer duty separation", "physical and control-plane responsibility", "customer access and resource lifecycle duties", "VM operating-system responsibility", "managed-database distinction"] },
+        { "label": "Scaleway Docs — Instance responsibility model", "url": "https://www.scaleway.com/en/docs/instances/reference-content/instances-shared-responsibility-model/", "checkedAt": "2026-08-24", "supports": ["instance availability boundary", "backup responsibility", "configuration and security ownership", "storage-performance dependency"] },
+        { "label": "Scaleway — Instance SLA", "url": "https://www.scaleway.com/en/virtual-instances/sla/", "checkedAt": "2026-08-24", "supports": ["covered instance service", "SLA terms", "claim and evidence process", "service exclusions"] }
+      ],
+      "limitations": ["Official Scaleway pricing, FAQ, SLA and responsibility documentation was reviewed; ToolCompare did not create an account, deploy or benchmark an instance, verify every zone and product, inspect invoices or taxes, test APIs/IAM/support, compare Savings Plan terms, induce failure, validate storage durability, restore a backup, or assess legal and residency requirements. Prices, availability and terms may change after the review date."]
+    }
   },
   {
     "slug": "gandi",
