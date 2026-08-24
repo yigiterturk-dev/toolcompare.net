@@ -1,0 +1,986 @@
+[
+  {
+    "slug": "gitlab",
+    "name": "GitLab",
+    "category": "Developer Tools",
+    "websiteUrl": "https://about.gitlab.com",
+    "shortDescription": "DevOps platform with built-in CI/CD and issue tracking.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "bitbucket",
+    "name": "Bitbucket",
+    "category": "Developer Tools",
+    "websiteUrl": "https://bitbucket.org",
+    "shortDescription": "Git hosting from Atlassian, tightly tied to Jira.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "circleci",
+    "name": "CircleCI",
+    "category": "Developer Tools",
+    "websiteUrl": "https://circleci.com",
+    "shortDescription": "Continuous integration and delivery pipelines.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "jenkins",
+    "name": "Jenkins",
+    "category": "Developer Tools",
+    "websiteUrl": "https://www.jenkins.io",
+    "shortDescription": "Open-source automation server for build pipelines.",
+    "fiyatModeli": "bedava"
+  },
+  {
+    "slug": "kubernetes",
+    "name": "Kubernetes",
+    "category": "Developer Tools",
+    "websiteUrl": "https://kubernetes.io",
+    "shortDescription": "Open-source container orchestration.",
+    "fiyatModeli": "bedava"
+  },
+  {
+    "slug": "ansible",
+    "name": "Ansible",
+    "category": "Developer Tools",
+    "websiteUrl": "https://www.ansible.com",
+    "shortDescription": "Agentless configuration management and automation.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "grafana",
+    "name": "Grafana",
+    "category": "Developer Tools",
+    "websiteUrl": "https://grafana.com",
+    "shortDescription": "Dashboards and visualisation for metrics and logs.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "prometheus",
+    "name": "Prometheus",
+    "category": "Developer Tools",
+    "websiteUrl": "https://prometheus.io",
+    "shortDescription": "Open-source metrics collection and alerting.",
+    "fiyatModeli": "bedava"
+  },
+  {
+    "slug": "new-relic",
+    "name": "New Relic",
+    "category": "Developer Tools",
+    "websiteUrl": "https://newrelic.com",
+    "shortDescription": "Application performance monitoring and observability.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "bugsnag",
+    "name": "Bugsnag",
+    "category": "Developer Tools",
+    "websiteUrl": "https://www.bugsnag.com",
+    "shortDescription": "Error monitoring and application stability scores.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "planetscale",
+    "name": "PlanetScale",
+    "category": "Developer Tools",
+    "websiteUrl": "https://planetscale.com",
+    "shortDescription": "Serverless MySQL platform with branching.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "neon",
+    "name": "Neon",
+    "category": "Developer Tools",
+    "websiteUrl": "https://neon.tech",
+    "shortDescription": "Serverless Postgres with database branching.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "railway",
+    "name": "Railway",
+    "category": "Developer Tools",
+    "websiteUrl": "https://railway.com",
+    "shortDescription": "Deploy apps and databases from a repo.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "render",
+    "name": "Render",
+    "category": "Developer Tools",
+    "websiteUrl": "https://render.com",
+    "shortDescription": "Managed hosting for services, static sites and databases.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "fly-io",
+    "name": "Fly.io",
+    "category": "Developer Tools",
+    "websiteUrl": "https://fly.io",
+    "shortDescription": "Run application containers close to users.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "insomnia",
+    "name": "Insomnia",
+    "category": "Developer Tools",
+    "websiteUrl": "https://insomnia.rest",
+    "shortDescription": "API client for designing and testing requests.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "swagger",
+    "name": "Swagger",
+    "category": "Developer Tools",
+    "websiteUrl": "https://swagger.io",
+    "shortDescription": "OpenAPI tooling for documenting and testing APIs.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "sourcegraph",
+    "name": "Sourcegraph",
+    "category": "Developer Tools",
+    "websiteUrl": "https://sourcegraph.com",
+    "shortDescription": "Code search across large codebases.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "elastic",
+    "name": "Elastic",
+    "category": "Developer Tools",
+    "websiteUrl": "https://www.elastic.co",
+    "shortDescription": "Search and log analytics built on Elasticsearch.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "hasura",
+    "name": "Hasura",
+    "category": "Developer Tools",
+    "websiteUrl": "https://hasura.io",
+    "shortDescription": "Instant GraphQL APIs over your database.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "sketch",
+    "name": "Sketch",
+    "category": "Design",
+    "websiteUrl": "https://www.sketch.com",
+    "shortDescription": "Vector interface design for macOS.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "adobe-xd",
+    "name": "Adobe XD",
+    "category": "Design",
+    "websiteUrl": "https://helpx.adobe.com/xd/get-started.html",
+    "shortDescription": "Adobe's interface and prototyping tool.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "penpot",
+    "name": "Penpot",
+    "category": "Design",
+    "websiteUrl": "https://penpot.app",
+    "shortDescription": "Open-source design and prototyping tool.",
+    "fiyatModeli": "bedava"
+  },
+  {
+    "slug": "blender",
+    "name": "Blender",
+    "category": "Design",
+    "websiteUrl": "https://www.blender.org",
+    "shortDescription": "Open-source 3D modelling, animation and rendering.",
+    "fiyatModeli": "bedava"
+  },
+  {
+    "slug": "procreate",
+    "name": "Procreate",
+    "category": "Design",
+    "websiteUrl": "https://procreate.com",
+    "shortDescription": "Illustration app for iPad.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "affinity-designer",
+    "name": "Affinity Designer",
+    "category": "Design",
+    "websiteUrl": "https://affinity.serif.com/designer/",
+    "shortDescription": "One-off purchase vector design software.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "lottiefiles",
+    "name": "LottieFiles",
+    "category": "Design",
+    "websiteUrl": "https://lottiefiles.com",
+    "shortDescription": "Create and ship lightweight animations.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "removebg",
+    "name": "remove.bg",
+    "category": "Design",
+    "websiteUrl": "https://www.remove.bg",
+    "shortDescription": "Automatic image background removal.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "photopea",
+    "name": "Photopea",
+    "category": "Design",
+    "websiteUrl": "https://www.photopea.com",
+    "shortDescription": "Browser-based image editor that opens PSD files.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "hootsuite",
+    "name": "Hootsuite",
+    "category": "Marketing",
+    "websiteUrl": "https://www.hootsuite.com",
+    "shortDescription": "Schedule and manage social accounts in one place.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "later",
+    "name": "Later",
+    "category": "Marketing",
+    "websiteUrl": "https://later.com",
+    "shortDescription": "Visual social scheduling built around Instagram.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "sprout-social",
+    "name": "Sprout Social",
+    "category": "Marketing",
+    "websiteUrl": "https://sproutsocial.com",
+    "shortDescription": "Social management and reporting for teams.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "moz",
+    "name": "Moz",
+    "category": "Marketing",
+    "websiteUrl": "https://moz.com",
+    "shortDescription": "SEO toolset with rank tracking and link data.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "ubersuggest",
+    "name": "Ubersuggest",
+    "category": "Marketing",
+    "websiteUrl": "https://neilpatel.com/ubersuggest/",
+    "shortDescription": "Keyword research and site audit tool.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "screaming-frog",
+    "name": "Screaming Frog",
+    "category": "Marketing",
+    "websiteUrl": "https://www.screamingfrog.co.uk/seo-spider/",
+    "shortDescription": "Desktop crawler for technical SEO audits.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "brevo",
+    "name": "Brevo",
+    "category": "Marketing",
+    "websiteUrl": "https://www.brevo.com",
+    "shortDescription": "Email, SMS and marketing automation.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "mailerlite",
+    "name": "MailerLite",
+    "category": "Marketing",
+    "websiteUrl": "https://www.mailerlite.com",
+    "shortDescription": "Email marketing with a generous free tier.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "drip",
+    "name": "Drip",
+    "category": "Marketing",
+    "websiteUrl": "https://www.drip.com",
+    "shortDescription": "Ecommerce email and automation.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "customer-io",
+    "name": "Customer.io",
+    "category": "Marketing",
+    "websiteUrl": "https://customer.io",
+    "shortDescription": "Behavioural messaging across email and push.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "optinmonster",
+    "name": "OptinMonster",
+    "category": "Marketing",
+    "websiteUrl": "https://optinmonster.com",
+    "shortDescription": "Popups and lead capture forms.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "unbounce",
+    "name": "Unbounce",
+    "category": "Marketing",
+    "websiteUrl": "https://unbounce.com",
+    "shortDescription": "Landing page builder with A/B testing.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "instapage",
+    "name": "Instapage",
+    "category": "Marketing",
+    "websiteUrl": "https://instapage.com",
+    "shortDescription": "Landing pages for paid campaigns.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "crazy-egg",
+    "name": "Crazy Egg",
+    "category": "Marketing",
+    "websiteUrl": "https://www.crazyegg.com",
+    "shortDescription": "Heatmaps and click tracking.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "matomo",
+    "name": "Matomo",
+    "category": "Marketing",
+    "websiteUrl": "https://matomo.org",
+    "shortDescription": "Privacy-focused, self-hostable web analytics.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "plausible",
+    "name": "Plausible",
+    "category": "Marketing",
+    "websiteUrl": "https://plausible.io",
+    "shortDescription": "Lightweight, cookie-free web analytics.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "fathom-analytics",
+    "name": "Fathom Analytics",
+    "category": "Marketing",
+    "websiteUrl": "https://usefathom.com",
+    "shortDescription": "Simple privacy-first analytics.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "evernote",
+    "name": "Evernote",
+    "category": "Productivity",
+    "websiteUrl": "https://evernote.com",
+    "shortDescription": "Long-running note taking and web clipping.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "bear",
+    "name": "Bear",
+    "category": "Productivity",
+    "websiteUrl": "https://bear.app",
+    "shortDescription": "Markdown notes for Apple devices.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "craft",
+    "name": "Craft",
+    "category": "Productivity",
+    "websiteUrl": "https://www.craft.do",
+    "shortDescription": "Document and note app with a strong editor.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "things",
+    "name": "Things",
+    "category": "Productivity",
+    "websiteUrl": "https://culturedcode.com/things/",
+    "shortDescription": "Task manager for Apple devices.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "omnifocus",
+    "name": "OmniFocus",
+    "category": "Productivity",
+    "websiteUrl": "https://www.omnigroup.com/omnifocus/",
+    "shortDescription": "Task management built around GTD.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "ticktick",
+    "name": "TickTick",
+    "category": "Productivity",
+    "websiteUrl": "https://ticktick.com",
+    "shortDescription": "Tasks, habits and calendar in one app.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "raycast",
+    "name": "Raycast",
+    "category": "Productivity",
+    "websiteUrl": "https://www.raycast.com",
+    "shortDescription": "Keyboard launcher and command palette for macOS.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "alfred",
+    "name": "Alfred",
+    "category": "Productivity",
+    "websiteUrl": "https://www.alfredapp.com",
+    "shortDescription": "macOS launcher with workflows.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "cron",
+    "name": "Notion Calendar",
+    "category": "Productivity",
+    "websiteUrl": "https://www.notion.so/product/calendar",
+    "shortDescription": "Calendar app for scheduling.",
+    "fiyatModeli": "bedava"
+  },
+  {
+    "slug": "motion",
+    "name": "Motion",
+    "category": "Productivity",
+    "websiteUrl": "https://www.usemotion.com",
+    "shortDescription": "AI calendar that schedules your tasks.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "reclaim",
+    "name": "Reclaim.ai",
+    "category": "Productivity",
+    "websiteUrl": "https://reclaim.ai",
+    "shortDescription": "Automatic calendar blocking for habits and tasks.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "superhuman",
+    "name": "Superhuman",
+    "category": "Productivity",
+    "websiteUrl": "https://superhuman.com",
+    "shortDescription": "Fast keyboard-first email client.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "readwise",
+    "name": "Readwise",
+    "category": "Productivity",
+    "websiteUrl": "https://readwise.io",
+    "shortDescription": "Collects and resurfaces your highlights.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "obsidian-publish",
+    "name": "Obsidian Publish",
+    "category": "Productivity",
+    "websiteUrl": "https://obsidian.md/publish",
+    "shortDescription": "Publish an Obsidian vault as a website.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "bitwarden",
+    "name": "Bitwarden",
+    "category": "Productivity",
+    "websiteUrl": "https://bitwarden.com",
+    "shortDescription": "Open-source password manager.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "dashlane",
+    "name": "Dashlane",
+    "category": "Productivity",
+    "websiteUrl": "https://www.dashlane.com",
+    "shortDescription": "Password manager with dark web monitoring.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "proton-mail",
+    "name": "Proton Mail",
+    "category": "Productivity",
+    "websiteUrl": "https://proton.me/mail",
+    "shortDescription": "Encrypted email from Switzerland.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "basecamp",
+    "name": "Basecamp",
+    "category": "Project Management",
+    "websiteUrl": "https://basecamp.com",
+    "shortDescription": "Projects, messages and to-dos in one place.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "wrike",
+    "name": "Wrike",
+    "category": "Project Management",
+    "websiteUrl": "https://www.wrike.com",
+    "shortDescription": "Work management for larger teams.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "smartsheet",
+    "name": "Smartsheet",
+    "category": "Project Management",
+    "websiteUrl": "https://www.smartsheet.com",
+    "shortDescription": "Spreadsheet-style work and project management.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "shortcut",
+    "name": "Shortcut",
+    "category": "Project Management",
+    "websiteUrl": "https://www.shortcut.com",
+    "shortDescription": "Issue tracking built for software teams.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "height",
+    "name": "Height",
+    "category": "Project Management",
+    "websiteUrl": "https://height.app",
+    "shortDescription": "Project tracker with an AI-first workflow.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "teamwork",
+    "name": "Teamwork",
+    "category": "Project Management",
+    "websiteUrl": "https://www.teamwork.com",
+    "shortDescription": "Client work and project management.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "google-meet",
+    "name": "Google Meet",
+    "category": "Communication",
+    "websiteUrl": "https://meet.google.com",
+    "shortDescription": "Video meetings from Google Workspace.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "webex",
+    "name": "Webex",
+    "category": "Communication",
+    "websiteUrl": "https://www.webex.com",
+    "shortDescription": "Cisco's meetings and calling platform.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "mattermost",
+    "name": "Mattermost",
+    "category": "Communication",
+    "websiteUrl": "https://mattermost.com",
+    "shortDescription": "Self-hostable team messaging.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "rocket-chat",
+    "name": "Rocket.Chat",
+    "category": "Communication",
+    "websiteUrl": "https://www.rocket.chat",
+    "shortDescription": "Open-source team chat you can host yourself.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "twist",
+    "name": "Twist",
+    "category": "Communication",
+    "websiteUrl": "https://twist.com",
+    "shortDescription": "Threaded, asynchronous team messaging.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "hetzner",
+    "name": "Hetzner",
+    "category": "Hosting",
+    "websiteUrl": "https://www.hetzner.com",
+    "shortDescription": "European cloud and dedicated servers.",
+    "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "linode",
+    "name": "Akamai Linode",
+    "category": "Hosting",
+    "websiteUrl": "https://www.linode.com",
+    "shortDescription": "Cloud compute instances.",
+    "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "vultr",
+    "name": "Vultr",
+    "category": "Hosting",
+    "websiteUrl": "https://www.vultr.com",
+    "shortDescription": "Cloud compute in many regions.",
+    "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "render-hosting",
+    "name": "Render Hosting",
+    "category": "Hosting",
+    "websiteUrl": "https://render.com",
+    "shortDescription": "Managed application hosting.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "railway-hosting",
+    "name": "Railway Hosting",
+    "category": "Hosting",
+    "websiteUrl": "https://railway.com",
+    "shortDescription": "Deploy services straight from a repo.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "fastly",
+    "name": "Fastly",
+    "category": "Hosting",
+    "websiteUrl": "https://www.fastly.com",
+    "shortDescription": "Edge cloud and CDN.",
+    "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "bunny-net",
+    "name": "Bunny.net",
+    "category": "Hosting",
+    "websiteUrl": "https://bunny.net",
+    "shortDescription": "Low-cost CDN and edge storage.",
+    "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "woocommerce",
+    "name": "WooCommerce",
+    "category": "E-commerce",
+    "websiteUrl": "https://woocommerce.com",
+    "shortDescription": "Open-source store plugin for WordPress.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "squarespace-commerce",
+    "name": "Squarespace Commerce",
+    "category": "E-commerce",
+    "websiteUrl": "https://www.squarespace.com/ecommerce-website",
+    "shortDescription": "Online store built into Squarespace.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "ecwid",
+    "name": "Ecwid",
+    "category": "E-commerce",
+    "websiteUrl": "https://www.ecwid.com",
+    "shortDescription": "Add a store to any existing website.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "shopware",
+    "name": "Shopware",
+    "category": "E-commerce",
+    "websiteUrl": "https://www.shopware.com",
+    "shortDescription": "Open-source commerce platform from Germany.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "snipcart",
+    "name": "Snipcart",
+    "category": "E-commerce",
+    "websiteUrl": "https://snipcart.com",
+    "shortDescription": "Drop-in shopping cart for custom sites.",
+    "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "chargebee",
+    "name": "Chargebee",
+    "category": "E-commerce",
+    "websiteUrl": "https://www.chargebee.com",
+    "shortDescription": "Subscription billing and revenue management.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "recurly",
+    "name": "Recurly",
+    "category": "E-commerce",
+    "websiteUrl": "https://recurly.com",
+    "shortDescription": "Subscription management and billing.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "gemini",
+    "name": "Google Gemini",
+    "category": "AI Tools",
+    "websiteUrl": "https://gemini.google.com",
+    "shortDescription": "Google's assistant and multimodal model.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "mistral",
+    "name": "Mistral AI",
+    "category": "AI Tools",
+    "websiteUrl": "https://mistral.ai",
+    "shortDescription": "Open-weight and hosted language models.",
+    "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "hugging-face",
+    "name": "Hugging Face",
+    "category": "AI Tools",
+    "websiteUrl": "https://huggingface.co",
+    "shortDescription": "Hosting and community for open models.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "category": "AI Tools",
+    "websiteUrl": "https://runwayml.com",
+    "shortDescription": "Generative video and editing tools.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "suno",
+    "name": "Suno",
+    "category": "AI Tools",
+    "websiteUrl": "https://suno.com",
+    "shortDescription": "Generates songs from a text prompt.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "category": "AI Tools",
+    "websiteUrl": "https://www.synthesia.io",
+    "shortDescription": "AI presenter videos from a script.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "category": "AI Tools",
+    "websiteUrl": "https://www.heygen.com",
+    "shortDescription": "AI avatar video generation.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "category": "AI Tools",
+    "websiteUrl": "https://otter.ai",
+    "shortDescription": "Meeting transcription and notes.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "category": "AI Tools",
+    "websiteUrl": "https://fireflies.ai",
+    "shortDescription": "Records and summarises meetings.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "category": "AI Tools",
+    "websiteUrl": "https://cursor.com",
+    "shortDescription": "AI-native code editor.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "AI Tools",
+    "websiteUrl": "https://github.com/features/copilot",
+    "shortDescription": "AI code completion inside your editor.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic",
+    "category": "AI Tools",
+    "websiteUrl": "https://writesonic.com",
+    "shortDescription": "AI writing for marketing content.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "freshdesk",
+    "name": "Freshdesk",
+    "category": "Customer Service",
+    "websiteUrl": "https://www.freshworks.com/freshdesk/",
+    "shortDescription": "Help desk and ticketing.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "help-scout",
+    "name": "Help Scout",
+    "category": "Customer Service",
+    "websiteUrl": "https://www.helpscout.com",
+    "shortDescription": "Shared inbox and help centre.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "crisp",
+    "name": "Crisp",
+    "category": "Customer Service",
+    "websiteUrl": "https://crisp.chat",
+    "shortDescription": "Live chat and shared inbox.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "tidio",
+    "name": "Tidio",
+    "category": "Customer Service",
+    "websiteUrl": "https://www.tidio.com",
+    "shortDescription": "Live chat with chatbots for small stores.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "front",
+    "name": "Front",
+    "category": "Customer Service",
+    "websiteUrl": "https://front.com",
+    "shortDescription": "Shared inbox for customer conversations.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "xero",
+    "name": "Xero",
+    "category": "Finance Tools",
+    "websiteUrl": "https://www.xero.com",
+    "shortDescription": "Cloud accounting for small business.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "wave",
+    "name": "Wave",
+    "category": "Finance Tools",
+    "websiteUrl": "https://www.waveapps.com",
+    "shortDescription": "Free accounting and invoicing.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "freshbooks",
+    "name": "FreshBooks",
+    "category": "Finance Tools",
+    "websiteUrl": "https://www.freshbooks.com",
+    "shortDescription": "Invoicing and accounting for freelancers.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "ramp",
+    "name": "Ramp",
+    "category": "Finance Tools",
+    "websiteUrl": "https://ramp.com",
+    "shortDescription": "Corporate cards and spend management.",
+    "fiyatModeli": "bedava"
+  },
+  {
+    "slug": "brex",
+    "name": "Brex",
+    "category": "Finance Tools",
+    "websiteUrl": "https://www.brex.com",
+    "shortDescription": "Corporate cards and expense management.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "deel",
+    "name": "Deel",
+    "category": "HR Software",
+    "websiteUrl": "https://www.deel.com",
+    "shortDescription": "Global payroll and contractor compliance.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "remote-com",
+    "name": "Remote",
+    "category": "HR Software",
+    "websiteUrl": "https://remote.com",
+    "shortDescription": "Employer of record and global payroll.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "rippling",
+    "name": "Rippling",
+    "category": "HR Software",
+    "websiteUrl": "https://www.rippling.com",
+    "shortDescription": "HR, IT and payroll in one system.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "bamboohr",
+    "name": "BambooHR",
+    "category": "HR Software",
+    "websiteUrl": "https://www.bamboohr.com",
+    "shortDescription": "HR software for small and mid-size companies.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "docusign",
+    "name": "DocuSign",
+    "category": "Legal Tools",
+    "websiteUrl": "https://www.docusign.com",
+    "shortDescription": "Electronic signatures and agreements.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "pandadoc",
+    "name": "PandaDoc",
+    "category": "Legal Tools",
+    "websiteUrl": "https://www.pandadoc.com",
+    "shortDescription": "Proposals, contracts and e-signature.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "drata",
+    "name": "Drata",
+    "category": "Legal Tools",
+    "websiteUrl": "https://drata.com",
+    "shortDescription": "Compliance automation for SOC 2 and ISO.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "pipedrive",
+    "name": "Pipedrive",
+    "category": "CRM",
+    "websiteUrl": "https://www.pipedrive.com",
+    "shortDescription": "Sales pipeline CRM for small teams.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "salesforce",
+    "name": "Salesforce",
+    "category": "CRM",
+    "websiteUrl": "https://www.salesforce.com",
+    "shortDescription": "Enterprise CRM platform.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "zoho-crm",
+    "name": "Zoho CRM",
+    "category": "CRM",
+    "websiteUrl": "https://www.zoho.com/crm/",
+    "shortDescription": "CRM within the wider Zoho suite.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "close",
+    "name": "Close",
+    "category": "CRM",
+    "websiteUrl": "https://www.close.com",
+    "shortDescription": "CRM built around calling and email for sales teams.",
+    "fiyatModeli": "aylik"
+  },
+  {
+    "slug": "attio",
+    "name": "Attio",
+    "category": "CRM",
+    "websiteUrl": "https://attio.com",
+    "shortDescription": "Flexible, data-driven CRM.",
+    "fiyatModeli": "ucretsiz-katman"
+  },
+  {
+    "slug": "folk",
+    "name": "folk",
+    "category": "CRM",
+    "websiteUrl": "https://www.folk.app",
+    "shortDescription": "Lightweight relationship CRM.",
+    "fiyatModeli": "aylik"
+  }
+]

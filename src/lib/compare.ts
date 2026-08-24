@@ -21,6 +21,8 @@ import toolsData from "@/data/tools.json";
 import { fiyatDurumu } from "@/lib/fiyat";
 
 export type Arac = {
+  incelendi?: boolean;
+  verdict?: string;
   slug: string;
   name: string;
   category?: string;
@@ -178,4 +180,27 @@ export function farkCumlesi(asil: Arac, alt: Arac): string {
   // "easier to pick up" / "deeper on features" kalemleri KALDIRILDI:
   // dayandiklari puanlar uydurmaydi ve ayrim yapamiyordu.
   return parcalar.join(", ");
+}
+
+/**
+ * Bir karsilastirma sayfasi indekslenmeye deger mi?
+ *
+ * IKI TARAFI DA incelenmemis cift, iki isimden ve iki fiyattan ibaret
+ * kalir. Bunlar erisilebilir kalir (siteden link alirlar, ziyaretci
+ * fiyat kiyasini gorur) ama Google'a "bunu indeksle" denmez -- ince
+ * kategori sayfalarinda uygulanan kuralin aynisi.
+ */
+export function ciftIndekslenebilirMi(a: Arac | undefined, b: Arac | undefined): boolean {
+  const ai = Boolean(a?.incelendi ?? a?.verdict);
+  const bi = Boolean(b?.incelendi ?? b?.verdict);
+  return ai || bi;
+}
+
+/** Sitemap'e girecek ciftler: en az bir tarafi incelenmis olanlar. */
+export function sitemapCiftleri(): string[] {
+  const harita = new Map(araclar.map((t) => [t.slug, t]));
+  return karsilastirmaCiftleri().filter((c) => {
+    const [a, b] = c.split("-vs-");
+    return ciftIndekslenebilirMi(harita.get(a), harita.get(b));
+  });
 }

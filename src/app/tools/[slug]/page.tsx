@@ -17,11 +17,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   // Baslik 65 karakteri asarsa arama sonucunda kesilir. Marka adi
   // uzun arac isimlerinde dusuruluyor ki asil ifade gorunur kalsin.
-  const cekirdek = `${tool.name} Review 2026: Features, Pricing & Verdict`;
+  // Katalogda olup HENUZ INCELENMEMIS araclar var. Onlara "Review ...
+  // & Verdict" demek, yazmadigimiz bir incelemeyi varmis gibi gostermek
+  // olurdu.
+  const incelendi = Boolean(tool.incelendi ?? tool.verdict);
+  const cekirdek = incelendi
+    ? `${tool.name} Review 2026: Features, Pricing & Verdict`
+    : `${tool.name}: Pricing and Alternatives (2026)`;
   const title = cekirdek.length <= 51 ? `${cekirdek} | ToolCompare` : cekirdek;
-  const description =
-    tool.shortDescription ||
-    `Comprehensive review of ${tool.name}. Analysis of features, pros, cons, and expert verdict.`;
+  const description = incelendi
+    ? (tool.shortDescription || `Comprehensive review of ${tool.name}.`)
+    : `${tool.shortDescription || tool.name} What it costs to start and the closest alternatives we track — we have not published a full review of ${tool.name} yet.`;
   const url = `/tools/${tool.slug}`;
 
   return {
@@ -95,6 +101,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const incelendi = Boolean(tool.incelendi ?? tool.verdict);
   const karsilastirmalar = akranlar(tool.slug);
 
 
@@ -130,13 +137,27 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-              <section>
-                <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>
-                <div style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
-                  {longDesc}
-                </div>
-              </section>
+              {!incelendi && (
+                <section style={{ background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.35)', borderRadius: '20px', padding: '1.8rem' }}>
+                  <h2 style={{ fontSize: '1.2rem', marginBottom: '0.6rem' }}>We have not reviewed {tool.name} yet</h2>
+                  <p style={{ color: 'var(--text-secondary)', margin: 0, lineHeight: 1.7 }}>
+                    It is in our directory so you can find it, see what it costs to start and compare it with
+                    the closest alternatives we track. But we have not written a verdict, pros or cons for it,
+                    so this page does not pretend to have one.
+                  </p>
+                </section>
+              )}
 
+              {longDesc && (
+                <section>
+                  <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>
+                  <div style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
+                    {longDesc}
+                  </div>
+                </section>
+              )}
+
+              {features.length > 0 && (
               <section style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2.5rem' }}>
                 <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
                   <Award color="var(--brand-primary)" /> Key Features
@@ -154,6 +175,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   })}
                 </div>
               </section>
+              )}
 
               {targetAud && (
                 <section>
@@ -218,6 +240,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                    <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--brand-primary)', fontFamily: 'var(--font-outfit)' }}>{fiyatDurumu(tool).metin}</div>
                 </div>
 
+                {((tool.pros || []).length > 0 || (tool.cons || []).length > 0) && (
                 <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem' }}>
                   <h3 style={{ marginBottom: '1.5rem', color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={18} /> Pros</h3>
                   <ul style={{ listStyle: 'none', padding: 0, marginBottom: '2rem' }}>
@@ -232,6 +255,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                     ))}
                   </ul>
                 </div>
+                )}
 
                 <div style={{ background: 'linear-gradient(135deg, var(--brand-primary), var(--brand-secondary))', borderRadius: '24px', padding: '2rem', color: 'white' }}>
                    <p style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '0.5rem' }}>{typeof tool.basePrice === "number" && tool.basePrice > 0 && fiyatDurumu(tool).karsilastirilabilir ? 'Pricing starts at' : 'Pricing'}</p>

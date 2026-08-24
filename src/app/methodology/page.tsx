@@ -38,6 +38,7 @@ export const metadata: Metadata = {
 export default function MethodologyPage() {
   const araclar = toolsData as any[];
   const toplam = araclar.length;
+  const incelenen = araclar.filter((t) => t.incelendi ?? t.verdict).length;
   const dogrulanmamis = dogrulanmamisSayisi(araclar);
   const dogrulanmis = toplam - dogrulanmamis;
 
@@ -131,8 +132,18 @@ export default function MethodologyPage() {
         <B>
           <h2 style={{ fontSize: '1.6rem', margin: '3rem 0 1rem' }}>Coverage</h2>
           <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            We track {toplam} tools across {kategoriler().length} categories. That is a fraction of the market,
-            so &quot;best&quot; on this site means best of what we track — not best in existence. Missing something?{' '}
+            We list {toplam} tools across {kategoriler().length} categories, and{' '}
+            <strong style={{ color: 'white' }}>{incelenen} of them have a written review</strong> — a verdict,
+            pros and cons. The other {toplam - incelenen} are directory entries: we can tell you what they are,
+            what they cost to start and what the closest alternatives are, and their pages say plainly that we
+            have not reviewed them. We would rather list a tool honestly than pad it with a verdict we did not
+            write.
+          </p>
+          <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
+            Every tool here was checked by machine before it was added: we fetch the vendor&apos;s own website and
+            confirm the page really belongs to that tool. That check exists because six entries on this site
+            once turned out to be products that did not exist at all. They have been removed, and nothing gets
+            in now without passing it. Missing something?{' '}
             <Link href="/submit" style={{ color: 'var(--brand-primary)' }}>Send it in</Link>.
           </p>
         </B>

@@ -50,7 +50,8 @@
     "verdict": "The number one CRM choice for teams prioritizing ease of use and long-term scalability.",
     "websiteUrl": "https://www.hubspot.com",
     "color": "#ff7a59",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "incelendi": true
   },
   {
     "slug": "slack",
@@ -102,7 +103,8 @@
     "targetAudience": "Tech Teams, Remote Workers, and Large Corporate Enterprises.",
     "verdict": "An indispensable tool for moving team communication away from email and into a faster era.",
     "websiteUrl": "https://slack.com",
-    "color": "#4a154b"
+    "color": "#4a154b",
+    "incelendi": true
   },
   {
     "slug": "notion",
@@ -154,7 +156,8 @@
     "targetAudience": "Founders, Writers, Creators, and Modern Product Teams.",
     "verdict": "The ultimate solution for centralizing scattered notes and projects into one smart hub.",
     "websiteUrl": "https://www.notion.so",
-    "color": "#000000"
+    "color": "#000000",
+    "incelendi": true
   },
   {
     "slug": "chatgpt",
@@ -206,7 +209,8 @@
     "targetAudience": "Developers, Students, Content Creators, and Knowledge Workers.",
     "verdict": "The undisputed king of the AI era, capable of handling almost any digital task.",
     "websiteUrl": "https://chatgpt.com",
-    "color": "#10a37f"
+    "color": "#10a37f",
+    "incelendi": true
   },
   {
     "slug": "stripe",
@@ -259,7 +263,8 @@
     "verdict": "The most secure, modern, and powerful way to accept payments globally.",
     "websiteUrl": "https://stripe.com",
     "color": "#635bff",
-    "fiyatModeli": "kullanima-gore"
+    "fiyatModeli": "kullanima-gore",
+    "incelendi": true
   },
   {
     "slug": "figma",
@@ -311,7 +316,8 @@
     "targetAudience": "Product Designers, Developers, and Digital Agencies.",
     "verdict": "The undisputed world leader in modern UI/UX design and team collaboration.",
     "websiteUrl": "https://www.figma.com",
-    "color": "#f24e1e"
+    "color": "#f24e1e",
+    "incelendi": true
   },
   {
     "slug": "webflow",
@@ -363,7 +369,8 @@
     "targetAudience": "Web Designers, Freelancers, and Marketing Teams.",
     "verdict": "The most powerful tool for designers to build high-end, custom professional websites.",
     "websiteUrl": "https://webflow.com",
-    "color": "#4353ff"
+    "color": "#4353ff",
+    "incelendi": true
   },
   {
     "slug": "asana",
@@ -415,7 +422,8 @@
     "targetAudience": "Project Managers, Agencies, and Large Corporate Teams.",
     "verdict": "A balanced and disciplined tool for managing complex team projects with transparency.",
     "websiteUrl": "https://asana.com",
-    "color": "#f06a6a"
+    "color": "#f06a6a",
+    "incelendi": true
   },
   {
     "slug": "semrush",
@@ -467,7 +475,8 @@
     "targetAudience": "SEO Specialists, Digital Marketers, and Content Strategists.",
     "verdict": "An indispensable suite for serious marketers aiming for data-driven organic growth.",
     "websiteUrl": "https://www.semrush.com",
-    "color": "#ff642d"
+    "color": "#ff642d",
+    "incelendi": true
   },
   {
     "slug": "ahrefs",
@@ -519,7 +528,8 @@
     "targetAudience": "SEO Agencies, Link Builders, and Data-Driven Marketers.",
     "verdict": "The most reliable tool in the market for backlink research and organic growth strategy.",
     "websiteUrl": "https://ahrefs.com",
-    "color": "#0047ff"
+    "color": "#0047ff",
+    "incelendi": true
   },
   {
     "slug": "canva",
@@ -571,7 +581,8 @@
     "targetAudience": "Social Media Managers, SMB Owners, and Students.",
     "verdict": "The world's best platform for fast, high-quality, and practical visual content creation.",
     "websiteUrl": "https://www.canva.com",
-    "color": "#00c4cc"
+    "color": "#00c4cc",
+    "incelendi": true
   },
   {
     "slug": "premiere-pro",
@@ -623,7 +634,8 @@
     "targetAudience": "Video Editors, YouTubers, and Filmmakers.",
     "verdict": "The most powerful video kurgu software for anyone seeking professional production quality.",
     "color": "#2d005f",
-    "websiteUrl": "https://www.adobe.com/products/premiere.html"
+    "websiteUrl": "https://www.adobe.com/products/premiere.html",
+    "incelendi": true
   },
   {
     "slug": "capcut",
@@ -676,7 +688,8 @@
     "verdict": "The most practical tool for fast, impressive, and trend-aligned video editing.",
     "websiteUrl": "https://www.capcut.com",
     "color": "#000000",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "incelendi": true
   },
   {
     "slug": "discord",
@@ -729,7 +742,8 @@
     "verdict": "The world's best platform for building and managing dynamic online communities.",
     "websiteUrl": "https://discord.com",
     "color": "#5865f2",
-    "fiyatModeli": "ucretsiz-katman"
+    "fiyatModeli": "ucretsiz-katman",
+    "incelendi": true
   },
   {
     "slug": "ms-teams",
@@ -781,7 +795,8 @@
     "targetAudience": "Large Corporations and IT Managers.",
     "verdict": "The most secure and integrated collaboration platform for teams using Microsoft 365.",
     "color": "#6264a7",
-    "websiteUrl": "https://www.microsoft.com/microsoft-teams/group-chat-software"
+    "websiteUrl": "https://www.microsoft.com/microsoft-teams/group-chat-software",
+    "incelendi": true
   },
   {
     "slug": "zoom",
@@ -833,7 +848,8 @@
     "targetAudience": "Educators, Sales Teams, and Businesses of all sizes.",
     "verdict": "Still the best option for those prioritizing video quality and reliability above all else.",
     "color": "#2d8cff",
-    "websiteUrl": "https://zoom.us"
+    "websiteUrl": "https://zoom.us",
+    "incelendi": true
   },
   {
     "slug": "elevenlabs",
@@ -885,7 +901,8 @@
     "targetAudience": "Content Creators, Game Developers, and Marketing Professionals.",
     "verdict": "The highest quality way to produce professional-grade AI narration on the planet.",
     "color": "#6366f1",
-    "websiteUrl": "https://elevenlabs.io"
+    "websiteUrl": "https://elevenlabs.io",
+    "incelendi": true
   },
   {
     "slug": "midjourney",
@@ -937,7 +954,8 @@
     "targetAudience": "Concept Artists, Architects, and Creative Copywriters.",
     "verdict": "The undisputed best tool for generating elite AI visuals and pushing creative limits.",
     "color": "#000000",
-    "websiteUrl": "https://www.midjourney.com"
+    "websiteUrl": "https://www.midjourney.com",
+    "incelendi": true
   },
   {
     "slug": "claude",
@@ -989,7 +1007,8 @@
     "targetAudience": "Software Engineers, Technical Writers, and Data Analysts.",
     "verdict": "The best AI assistant in the market for deep thinking, technical analysis, and coding.",
     "color": "#d97757",
-    "websiteUrl": "https://claude.ai"
+    "websiteUrl": "https://claude.ai",
+    "incelendi": true
   },
   {
     "slug": "perplexity",
@@ -1042,7 +1061,8 @@
     "verdict": "The most modern, accurate, and fast way to search the internet—and Google's biggest nightmare.",
     "color": "#22c55e",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.perplexity.ai"
+    "websiteUrl": "https://www.perplexity.ai",
+    "incelendi": true
   },
   {
     "slug": "1password",
@@ -1094,7 +1114,8 @@
     "targetAudience": "Privacy-Conscious Users and Corporate Security Teams.",
     "verdict": "If you don't want to leave your digital security to chance, this is the best solution on the market.",
     "color": "#0072ce",
-    "websiteUrl": "https://1password.com"
+    "websiteUrl": "https://1password.com",
+    "incelendi": true
   },
   {
     "slug": "hotjar",
@@ -1146,7 +1167,8 @@
     "targetAudience": "UX Designers, E-commerce Owners, and Product Managers.",
     "verdict": "The best 'magnifying glass' you can attach to your site to understand human behavior.",
     "color": "#ff1c5c",
-    "websiteUrl": "https://www.hotjar.com"
+    "websiteUrl": "https://www.hotjar.com",
+    "incelendi": true
   },
   {
     "slug": "todoist",
@@ -1198,7 +1220,8 @@
     "targetAudience": "Busy Professionals, Students, and Minimalism Lovers.",
     "verdict": "The best-balanced app for recording and managing your daily tasks at lightning speed.",
     "color": "#e44332",
-    "websiteUrl": "https://todoist.com"
+    "websiteUrl": "https://todoist.com",
+    "incelendi": true
   },
   {
     "slug": "buffer",
@@ -1250,7 +1273,8 @@
     "targetAudience": "Social Media Managers, Creators, and Small Business Owners.",
     "verdict": "The best tool for those seeking a simple, reliable, and affordable social media solution.",
     "color": "#2c3338",
-    "websiteUrl": "https://buffer.com"
+    "websiteUrl": "https://buffer.com",
+    "incelendi": true
   },
   {
     "slug": "gusto",
@@ -1302,7 +1326,8 @@
     "targetAudience": "Startups and Small Business Owners.",
     "verdict": "A platform that transforms 'boring' HR and payroll into a pleasant, modern experience.",
     "color": "#f48c71",
-    "websiteUrl": "https://gusto.com"
+    "websiteUrl": "https://gusto.com",
+    "incelendi": true
   },
   {
     "slug": "quickbooks",
@@ -1354,7 +1379,8 @@
     "targetAudience": "SMEs, Accountants, and Solopreneurs.",
     "verdict": "The most trusted accounting tool in the world for keeping your business finances under control.",
     "color": "#2ca01c",
-    "websiteUrl": "https://quickbooks.intuit.com"
+    "websiteUrl": "https://quickbooks.intuit.com",
+    "incelendi": true
   },
   {
     "slug": "mailchimp",
@@ -1406,7 +1432,8 @@
     "targetAudience": "E-commerce Brands, Bloggers, and Small Marketing Teams.",
     "verdict": "The go-to choice for those seeking a reliable, stylish, and popular email marketing solution.",
     "color": "#ffe01b",
-    "websiteUrl": "https://mailchimp.com"
+    "websiteUrl": "https://mailchimp.com",
+    "incelendi": true
   },
   {
     "slug": "github",
@@ -1459,7 +1486,8 @@
     "verdict": "The de-facto standard for modern software development; the true home of code.",
     "color": "#24292e",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://github.com"
+    "websiteUrl": "https://github.com",
+    "incelendi": true
   },
   {
     "slug": "vercel",
@@ -1512,7 +1540,8 @@
     "verdict": "The best way to take web projects live with professional infrastructure in seconds.",
     "color": "#000000",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://vercel.com"
+    "websiteUrl": "https://vercel.com",
+    "incelendi": true
   },
   {
     "slug": "jasper",
@@ -1564,7 +1593,8 @@
     "targetAudience": "Marketing Agencies, Content Teams, and Brand Managers.",
     "verdict": "The most professional AI choice for consistent, high-volume enterprise content production.",
     "color": "#6366f1",
-    "websiteUrl": "https://www.jasper.ai"
+    "websiteUrl": "https://www.jasper.ai",
+    "incelendi": true
   },
   {
     "slug": "copy-ai",
@@ -1616,7 +1646,8 @@
     "targetAudience": "E-commerce Managers, Social Media Specialists, and Growth Teams.",
     "verdict": "The best 'workflow' tool for automating marketing operations and rapid content creation.",
     "color": "#22c55e",
-    "websiteUrl": "https://www.copy.ai"
+    "websiteUrl": "https://www.copy.ai",
+    "incelendi": true
   },
   {
     "slug": "descript",
@@ -1668,7 +1699,8 @@
     "targetAudience": "Podcasters, Educators, and Video Content Creators.",
     "verdict": "A revolutionary tool that turns video kurgu from a technical chore into a writing process.",
     "color": "#000000",
-    "websiteUrl": "https://www.descript.com"
+    "websiteUrl": "https://www.descript.com",
+    "incelendi": true
   },
   {
     "slug": "loom",
@@ -1720,7 +1752,8 @@
     "targetAudience": "Product Managers, Developers, and Remote Teams.",
     "verdict": "The most practical tool for killing meetings and speeding up team communication.",
     "color": "#625df5",
-    "websiteUrl": "https://www.loom.com"
+    "websiteUrl": "https://www.loom.com",
+    "incelendi": true
   },
   {
     "slug": "calendly",
@@ -1772,7 +1805,8 @@
     "targetAudience": "Sales Teams, Consultants, and HR Professionals.",
     "verdict": "The easiest way to take control of your calendar and look professional to clients.",
     "color": "#006bff",
-    "websiteUrl": "https://calendly.com"
+    "websiteUrl": "https://calendly.com",
+    "incelendi": true
   },
   {
     "slug": "miro",
@@ -1824,7 +1858,8 @@
     "targetAudience": "Product Designers, Strategists, and Agile Teams.",
     "verdict": "The world's best digital canvas for visual thinking and aligning teams on a common vision.",
     "color": "#ffd02f",
-    "websiteUrl": "https://miro.com"
+    "websiteUrl": "https://miro.com",
+    "incelendi": true
   },
   {
     "slug": "zapier",
@@ -1876,7 +1911,8 @@
     "targetAudience": "Ops Managers, Marketers, and Solopreneurs.",
     "verdict": "The undisputed market leader for making different apps talk to each other without code.",
     "color": "#ff4f00",
-    "websiteUrl": "https://zapier.com"
+    "websiteUrl": "https://zapier.com",
+    "incelendi": true
   },
   {
     "slug": "make",
@@ -1928,7 +1964,8 @@
     "targetAudience": "Developers, No-Code Builders, and Tech-Ops Professionals.",
     "verdict": "The best tool for technical users seeking total control and cost efficiency in automations.",
     "color": "#7214ff",
-    "websiteUrl": "https://www.make.com"
+    "websiteUrl": "https://www.make.com",
+    "incelendi": true
   },
   {
     "slug": "airtable",
@@ -1980,7 +2017,8 @@
     "targetAudience": "Ops Managers, Editorial Teams, and No-Code Enthusiasts.",
     "verdict": "The best hybrid solution for teams seeking a professional database with Excel ease.",
     "color": "#18bfff",
-    "websiteUrl": "https://www.airtable.com"
+    "websiteUrl": "https://www.airtable.com",
+    "incelendi": true
   },
   {
     "slug": "clickup",
@@ -2032,7 +2070,8 @@
     "targetAudience": "Agile Teams, Agencies, and Complex Project Managers.",
     "verdict": "The most powerful and feature-rich option if you want everything in one single place.",
     "color": "#7b68ee",
-    "websiteUrl": "https://clickup.com"
+    "websiteUrl": "https://clickup.com",
+    "incelendi": true
   },
   {
     "slug": "monday",
@@ -2084,7 +2123,8 @@
     "targetAudience": "Marketing Teams, HR Departments, and Teams Seeking Visual Clarity.",
     "verdict": "The most pleasant and fastest-to-adopt project management tool on the market.",
     "color": "#ff3d57",
-    "websiteUrl": "https://monday.com"
+    "websiteUrl": "https://monday.com",
+    "incelendi": true
   },
   {
     "slug": "trello",
@@ -2136,7 +2176,8 @@
     "targetAudience": "Freelancers, Small Teams, and Personal Planners.",
     "verdict": "The best 'card-based' task manager for those seeking simplicity and visual speed.",
     "color": "#0079bf",
-    "websiteUrl": "https://trello.com"
+    "websiteUrl": "https://trello.com",
+    "incelendi": true
   },
   {
     "slug": "jira",
@@ -2188,7 +2229,8 @@
     "targetAudience": "Software Engineers, Product Owners, and QA Teams.",
     "verdict": "The world's most powerful tool for managing professional software development processes.",
     "color": "#0052cc",
-    "websiteUrl": "https://www.atlassian.com/software/jira"
+    "websiteUrl": "https://www.atlassian.com/software/jira",
+    "incelendi": true
   },
   {
     "slug": "zendesk",
@@ -2240,7 +2282,8 @@
     "targetAudience": "Support Teams and Large E-commerce Companies.",
     "verdict": "The global standard for professional, scalable, and omnichannel customer support.",
     "color": "#03363d",
-    "websiteUrl": "https://www.zendesk.com"
+    "websiteUrl": "https://www.zendesk.com",
+    "incelendi": true
   },
   {
     "slug": "intercom",
@@ -2292,7 +2335,8 @@
     "targetAudience": "SaaS Companies, Software Teams, and Modern Startups.",
     "verdict": "The best tool for transforming customer communication into a modern, AI-powered conversation.",
     "color": "#286efa",
-    "websiteUrl": "https://www.intercom.com"
+    "websiteUrl": "https://www.intercom.com",
+    "incelendi": true
   },
   {
     "slug": "shopify",
@@ -2344,7 +2388,8 @@
     "targetAudience": "E-commerce Entrepreneurs and Retail Brands.",
     "verdict": "The world's best platform for starting, growing, and scaling an e-commerce empire.",
     "color": "#96bf48",
-    "websiteUrl": "https://www.shopify.com"
+    "websiteUrl": "https://www.shopify.com",
+    "incelendi": true
   },
   {
     "slug": "magento",
@@ -2397,7 +2442,8 @@
     "verdict": "The only choice for giant brands with complex enterprise needs seeking 'total freedom.'",
     "color": "#f46f25",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://business.adobe.com/products/magento/magento-commerce.html"
+    "websiteUrl": "https://business.adobe.com/products/magento/magento-commerce.html",
+    "incelendi": true
   },
   {
     "slug": "bigcommerce",
@@ -2449,7 +2495,8 @@
     "targetAudience": "Growing Brands and B2B-Focused Retailers.",
     "verdict": "The smartest choice for brands seeking corporate features without paying extra commissions.",
     "color": "#383131",
-    "websiteUrl": "https://www.bigcommerce.com"
+    "websiteUrl": "https://www.bigcommerce.com",
+    "incelendi": true
   },
   {
     "slug": "framer",
@@ -2501,7 +2548,8 @@
     "targetAudience": "Product Designers, Portfolio Owners, and Modern Startups.",
     "verdict": "The home of the most stylish sites made by designers 'without a developer.'",
     "color": "#0055ff",
-    "websiteUrl": "https://www.framer.com"
+    "websiteUrl": "https://www.framer.com",
+    "incelendi": true
   },
   {
     "slug": "spline",
@@ -2554,7 +2602,8 @@
     "verdict": "The easiest way to add 'wow-factor' interactive 3D experiences to any website.",
     "color": "#ff4d8d",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://spline.design"
+    "websiteUrl": "https://spline.design",
+    "incelendi": true
   },
   {
     "slug": "aws",
@@ -2607,7 +2656,8 @@
     "verdict": "The world's most powerful and detailed cloud infrastructure; the pro's choice.",
     "color": "#232f3e",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://aws.amazon.com"
+    "websiteUrl": "https://aws.amazon.com",
+    "incelendi": true
   },
   {
     "slug": "google-cloud",
@@ -2660,7 +2710,8 @@
     "verdict": "The smartest cloud infrastructure for modern, data-and-AI-driven projects.",
     "color": "#4285f4",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://cloud.google.com"
+    "websiteUrl": "https://cloud.google.com",
+    "incelendi": true
   },
   {
     "slug": "digitalocean",
@@ -2712,7 +2763,8 @@
     "targetAudience": "Solo Developers, Startups, and Small Businesses.",
     "verdict": "The best way to use the power of the cloud without the complexity and at a fair price.",
     "color": "#008bcf",
-    "websiteUrl": "https://www.digitalocean.com"
+    "websiteUrl": "https://www.digitalocean.com",
+    "incelendi": true
   },
   {
     "slug": "mongodb",
@@ -2765,7 +2817,8 @@
     "verdict": "The world's number one NoSQL choice for modern, fast, and flexible app development.",
     "color": "#4db33d",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.mongodb.com"
+    "websiteUrl": "https://www.mongodb.com",
+    "incelendi": true
   },
   {
     "slug": "supabase",
@@ -2818,7 +2871,8 @@
     "verdict": "The fastest, most reliable, and most 'free' (open-source) choice for a modern backend.",
     "color": "#3ecf8e",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://supabase.com"
+    "websiteUrl": "https://supabase.com",
+    "incelendi": true
   },
   {
     "slug": "ghost",
@@ -2870,7 +2924,8 @@
     "targetAudience": "Independent Writers, Newsletter Publishers, and Modern Media Firms.",
     "verdict": "The most elite publishing platform for those looking to earn from their writing.",
     "color": "#15171a",
-    "websiteUrl": "https://ghost.org"
+    "websiteUrl": "https://ghost.org",
+    "incelendi": true
   },
   {
     "slug": "beehiiv",
@@ -2923,7 +2978,8 @@
     "verdict": "The current best platform for those looking to turn their newsletter into a business.",
     "color": "#fef08a",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.beehiiv.com"
+    "websiteUrl": "https://www.beehiiv.com",
+    "incelendi": true
   },
   {
     "slug": "strapi",
@@ -2976,7 +3032,8 @@
     "verdict": "The best CMS for building a modern, multi-purpose, and fully-controlled content hub.",
     "color": "#4945ff",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://strapi.io"
+    "websiteUrl": "https://strapi.io",
+    "incelendi": true
   },
   {
     "slug": "strava",
@@ -3029,7 +3086,8 @@
     "verdict": "An unrivaled app for turning your workouts into data and a social achievement.",
     "color": "#fc4c02",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.strava.com"
+    "websiteUrl": "https://www.strava.com",
+    "incelendi": true
   },
   {
     "slug": "substack",
@@ -3082,7 +3140,8 @@
     "verdict": "The world's easiest and most popular way to build an audience and earn from writing.",
     "color": "#ff6719",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://substack.com"
+    "websiteUrl": "https://substack.com",
+    "incelendi": true
   },
   {
     "slug": "postman",
@@ -3135,7 +3194,8 @@
     "verdict": "An essential tool that every developer working with APIs must have on their machine.",
     "color": "#ef5b25",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.postman.com"
+    "websiteUrl": "https://www.postman.com",
+    "incelendi": true
   },
   {
     "slug": "sentry",
@@ -3188,7 +3248,8 @@
     "verdict": "The best defense line for protecting user experience and speeding up the 'bug' fix cycle.",
     "color": "#362d59",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://sentry.io"
+    "websiteUrl": "https://sentry.io",
+    "incelendi": true
   },
   {
     "slug": "firebase",
@@ -3241,7 +3302,8 @@
     "verdict": "The strongest ecosystem for those who want to focus on features instead of server management.",
     "color": "#ffca28",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://firebase.google.com"
+    "websiteUrl": "https://firebase.google.com",
+    "incelendi": true
   },
   {
     "slug": "contentful",
@@ -3294,7 +3356,8 @@
     "verdict": "The most reliable infrastructure for managing digital content at a global scale.",
     "color": "#24292e",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.contentful.com"
+    "websiteUrl": "https://www.contentful.com",
+    "incelendi": true
   },
   {
     "slug": "wix",
@@ -3346,7 +3409,8 @@
     "targetAudience": "Small Business Owners, Artists, and Personal Brands.",
     "verdict": "The standard choice for those wanting to build the fastest and most visual site with zero tech skills.",
     "color": "#000000",
-    "websiteUrl": "https://www.wix.com"
+    "websiteUrl": "https://www.wix.com",
+    "incelendi": true
   },
   {
     "slug": "squarespace",
@@ -3398,7 +3462,8 @@
     "targetAudience": "Photographers, Artists, and Boutique Brands.",
     "verdict": "The best tool for building an elegant, minimalist, and high-end website.",
     "color": "#000000",
-    "websiteUrl": "https://www.squarespace.com"
+    "websiteUrl": "https://www.squarespace.com",
+    "incelendi": true
   },
   {
     "slug": "carrd",
@@ -3450,7 +3515,8 @@
     "targetAudience": "Personal Brands, Freelancers, and Landing Page Creators.",
     "verdict": "The cheapest and most practical one-page site builder on the internet today.",
     "color": "#3b82f6",
-    "websiteUrl": "https://carrd.co"
+    "websiteUrl": "https://carrd.co",
+    "incelendi": true
   },
   {
     "slug": "klaviyo",
@@ -3503,7 +3569,8 @@
     "verdict": "The most powerful and intelligent tool for turning e-commerce data into revenue.",
     "color": "#000000",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.klaviyo.com"
+    "websiteUrl": "https://www.klaviyo.com",
+    "incelendi": true
   },
   {
     "slug": "twilio",
@@ -3556,7 +3623,8 @@
     "verdict": "The world's number one API provider for those looking to code and scale communication.",
     "color": "#f22f46",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://www.twilio.com"
+    "websiteUrl": "https://www.twilio.com",
+    "incelendi": true
   },
   {
     "slug": "gumroad",
@@ -3609,7 +3677,8 @@
     "verdict": "The best starting point for selling products with just a link and no complex setup.",
     "color": "#ff90e8",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://gumroad.com"
+    "websiteUrl": "https://gumroad.com",
+    "incelendi": true
   },
   {
     "slug": "kajabi",
@@ -3661,7 +3730,8 @@
     "targetAudience": "Online Instructors, Coaches, and Info-Entrepreneurs.",
     "verdict": "The best tool money can buy if you want to grow an education business under one roof.",
     "color": "#0040fb",
-    "websiteUrl": "https://kajabi.com"
+    "websiteUrl": "https://kajabi.com",
+    "incelendi": true
   },
   {
     "slug": "skool",
@@ -3713,7 +3783,8 @@
     "targetAudience": "Community Founders, Consultants, and Group Coaches.",
     "verdict": "The best app for building a vibrant community where members actually learn and stay active.",
     "color": "#22c55e",
-    "websiteUrl": "https://www.skool.com"
+    "websiteUrl": "https://www.skool.com",
+    "incelendi": true
   },
   {
     "slug": "azure",
@@ -3766,7 +3837,8 @@
     "verdict": "The premier choice for large-scale enterprises deeply integrated into the Microsoft ecosystem.",
     "color": "#0078d4",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://azure.microsoft.com"
+    "websiteUrl": "https://azure.microsoft.com",
+    "incelendi": true
   },
   {
     "slug": "cloudflare",
@@ -3819,7 +3891,8 @@
     "verdict": "The essential first line of defense and performance for any modern website.",
     "color": "#f38020",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.cloudflare.com"
+    "websiteUrl": "https://www.cloudflare.com",
+    "incelendi": true
   },
   {
     "slug": "postgresql",
@@ -3872,7 +3945,8 @@
     "verdict": "The most professional, reliable, and powerful database choice for any serious software project.",
     "color": "#336791",
     "fiyatModeli": "bedava",
-    "websiteUrl": "https://www.postgresql.org"
+    "websiteUrl": "https://www.postgresql.org",
+    "incelendi": true
   },
   {
     "slug": "redis",
@@ -3925,7 +3999,8 @@
     "verdict": "The indispensable speed layer for any modern, high-traffic web application.",
     "color": "#d82c20",
     "fiyatModeli": "bedava",
-    "websiteUrl": "https://redis.io"
+    "websiteUrl": "https://redis.io",
+    "incelendi": true
   },
   {
     "slug": "docker",
@@ -3978,7 +4053,8 @@
     "verdict": "The essential standard for modern software shipping and deployment.",
     "color": "#2496ed",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.docker.com"
+    "websiteUrl": "https://www.docker.com",
+    "incelendi": true
   },
   {
     "slug": "netlify",
@@ -4031,7 +4107,8 @@
     "verdict": "The most user-friendly and feature-rich platform for hosting static and modern web apps.",
     "color": "#00ad9f",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.netlify.com"
+    "websiteUrl": "https://www.netlify.com",
+    "incelendi": true
   },
   {
     "slug": "terraform",
@@ -4084,7 +4161,8 @@
     "verdict": "The industry-standard tool for managing complex cloud infrastructure through code.",
     "color": "#623ce4",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.terraform.io"
+    "websiteUrl": "https://www.terraform.io",
+    "incelendi": true
   },
   {
     "slug": "datadog",
@@ -4136,7 +4214,8 @@
     "targetAudience": "DevOps Engineers and Enterprise IT Teams.",
     "verdict": "The most powerful and comprehensive monitoring tool for modern cloud-native enterprises.",
     "color": "#632ca6",
-    "websiteUrl": "https://www.datadoghq.com"
+    "websiteUrl": "https://www.datadoghq.com",
+    "incelendi": true
   },
   {
     "slug": "appwrite",
@@ -4189,7 +4268,8 @@
     "verdict": "The best open-source alternative for building modern backends with total data ownership.",
     "color": "#f02e65",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://appwrite.io"
+    "websiteUrl": "https://appwrite.io",
+    "incelendi": true
   },
   {
     "slug": "wix-studio",
@@ -4241,7 +4321,8 @@
     "targetAudience": "Web Agencies and Professional UI Designers.",
     "verdict": "The ultimate platform for agencies looking to build high-end, custom websites at scale.",
     "color": "#000000",
-    "websiteUrl": "https://www.wix.com/studio"
+    "websiteUrl": "https://www.wix.com/studio",
+    "incelendi": true
   },
   {
     "slug": "podia",
@@ -4293,7 +4374,8 @@
     "targetAudience": "Solopreneurs and Online Course Creators.",
     "verdict": "The best balance of simplicity and features for individual creators looking to monetize.",
     "color": "#4b2ad3",
-    "websiteUrl": "https://www.podia.com"
+    "websiteUrl": "https://www.podia.com",
+    "incelendi": true
   },
   {
     "slug": "teachable",
@@ -4345,7 +4427,8 @@
     "targetAudience": "Professional Educators and Training Businesses.",
     "verdict": "A solid, dependable platform with a primary focus on high-quality course delivery.",
     "color": "#2d3436",
-    "websiteUrl": "https://teachable.com"
+    "websiteUrl": "https://teachable.com",
+    "incelendi": true
   },
   {
     "slug": "convertkit",
@@ -4397,7 +4480,8 @@
     "targetAudience": "Blogger, YouTubers, and Professional Creators.",
     "verdict": "The best email platform for those looking for powerful automation without the corporate headache.",
     "color": "#f16567",
-    "websiteUrl": "https://kit.com"
+    "websiteUrl": "https://kit.com",
+    "incelendi": true
   },
   {
     "slug": "activecampaign",
@@ -4449,7 +4533,8 @@
     "targetAudience": "E-commerce Businesses and Advanced Marketing Teams.",
     "verdict": "The most powerful automation platform for those who have outgrown basic email tools.",
     "color": "#004cff",
-    "websiteUrl": "https://www.activecampaign.com"
+    "websiteUrl": "https://www.activecampaign.com",
+    "incelendi": true
   },
   {
     "slug": "plaid",
@@ -4502,7 +4587,8 @@
     "verdict": "The undisputed standard for connecting any software to the world's banking system.",
     "color": "#000000",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://plaid.com"
+    "websiteUrl": "https://plaid.com",
+    "incelendi": true
   },
   {
     "slug": "paddle",
@@ -4555,7 +4641,8 @@
     "verdict": "The best choice for software startups who want to sell globally without a tax headache.",
     "color": "#000000",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://www.paddle.com"
+    "websiteUrl": "https://www.paddle.com",
+    "incelendi": true
   },
   {
     "slug": "lemonsqueezy",
@@ -4608,7 +4695,8 @@
     "verdict": "The most stylish and simple way to sell software and digital products globally.",
     "color": "#f5d300",
     "fiyatModeli": "kullanima-gore",
-    "websiteUrl": "https://www.lemonsqueezy.com"
+    "websiteUrl": "https://www.lemonsqueezy.com",
+    "incelendi": true
   },
   {
     "slug": "obsidian",
@@ -4661,7 +4749,8 @@
     "verdict": "The ultimate tool for building a private, networked, and long-lasting knowledge base.",
     "color": "#7c3aed",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://obsidian.md"
+    "websiteUrl": "https://obsidian.md",
+    "incelendi": true
   },
   {
     "slug": "linear",
@@ -4713,7 +4802,8 @@
     "targetAudience": "Product Engineers and High-Growth Tech Startups.",
     "verdict": "The fastest and most elegant project management tool for modern software teams.",
     "color": "#5e6ad2",
-    "websiteUrl": "https://linear.app"
+    "websiteUrl": "https://linear.app",
+    "incelendi": true
   },
   {
     "slug": "typeform",
@@ -4765,7 +4855,8 @@
     "targetAudience": "Marketers, Researchers, and High-End Brands.",
     "verdict": "The best tool for creating forms that people actually enjoy filling out.",
     "color": "#262627",
-    "websiteUrl": "https://www.typeform.com"
+    "websiteUrl": "https://www.typeform.com",
+    "incelendi": true
   },
   {
     "slug": "replit",
@@ -4818,7 +4909,8 @@
     "verdict": "The fastest way to go from an idea to a live, functioning application.",
     "color": "#f26b1d",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://replit.com"
+    "websiteUrl": "https://replit.com",
+    "incelendi": true
   },
   {
     "slug": "loom-ai",
@@ -4870,7 +4962,8 @@
     "targetAudience": "Product Managers, Sales Teams, and Customer Success.",
     "verdict": "The ultimate way to make async video communication truly professional and efficient.",
     "color": "#625df5",
-    "websiteUrl": "https://www.loom.com/ai"
+    "websiteUrl": "https://www.loom.com/ai",
+    "incelendi": true
   },
   {
     "slug": "obsidian-sync",
@@ -4922,7 +5015,8 @@
     "targetAudience": "Privacy-conscious Obsidian Users and Power Notetakers.",
     "verdict": "The best and most secure way to keep your local knowledge base updated on all devices.",
     "color": "#7c3aed",
-    "websiteUrl": "https://obsidian.md/sync"
+    "websiteUrl": "https://obsidian.md/sync",
+    "incelendi": true
   },
   {
     "slug": "surfer-seo",
@@ -4974,7 +5068,8 @@
     "targetAudience": "Content Strategists and SEO Content Writers.",
     "verdict": "The most practical and effective tool for writing content that actually ranks on Google.",
     "color": "#ff4d4d",
-    "websiteUrl": "https://surferseo.com"
+    "websiteUrl": "https://surferseo.com",
+    "incelendi": true
   },
   {
     "slug": "vanta",
@@ -5026,7 +5121,8 @@
     "targetAudience": "SaaS Founders, CTOs, and Security Teams.",
     "verdict": "The most effective way to turn complex security compliance into a competitive advantage.",
     "color": "#000000",
-    "websiteUrl": "https://www.vanta.com"
+    "websiteUrl": "https://www.vanta.com",
+    "incelendi": true
   },
   {
     "slug": "posthog",
@@ -5079,7 +5175,8 @@
     "verdict": "The best 'product-first' analytics tool for teams who want to build with data.",
     "color": "#000000",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://posthog.com"
+    "websiteUrl": "https://posthog.com",
+    "incelendi": true
   },
   {
     "slug": "mixpanel",
@@ -5132,7 +5229,8 @@
     "verdict": "The most professional and deep choice for serious product behavior analysis.",
     "color": "#7856ff",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://mixpanel.com"
+    "websiteUrl": "https://mixpanel.com",
+    "incelendi": true
   },
   {
     "slug": "logrocket",
@@ -5185,7 +5283,8 @@
     "verdict": "An indispensable tool for debugging and optimizing modern web applications.",
     "color": "#764abc",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://logrocket.com"
+    "websiteUrl": "https://logrocket.com",
+    "incelendi": true
   },
   {
     "slug": "segment",
@@ -5238,7 +5337,8 @@
     "verdict": "The premier infrastructure for managing and scaling customer data at an enterprise level.",
     "color": "#52bd94",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://segment.com"
+    "websiteUrl": "https://segment.com",
+    "incelendi": true
   },
   {
     "slug": "zapier-interfaces",
@@ -5291,7 +5391,8 @@
     "verdict": "The fastest way to build an interactive, AI-powered app on top of your existing automations.",
     "color": "#ff4f00",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://zapier.com/interfaces"
+    "websiteUrl": "https://zapier.com/interfaces",
+    "incelendi": true
   },
   {
     "slug": "clarity",
@@ -5344,7 +5445,8 @@
     "verdict": "The best free 'Hotjar alternative' on the market with no compromises on power.",
     "color": "#0078d4",
     "fiyatModeli": "bedava",
-    "websiteUrl": "https://clarity.microsoft.com"
+    "websiteUrl": "https://clarity.microsoft.com",
+    "incelendi": true
   },
   {
     "slug": "amplitude",
@@ -5397,7 +5499,8 @@
     "verdict": "The most powerful platform for companies whose business depends on their product's performance.",
     "color": "#231f20",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://amplitude.com"
+    "websiteUrl": "https://amplitude.com",
+    "incelendi": true
   },
   {
     "slug": "bubble",
@@ -5449,7 +5552,8 @@
     "targetAudience": "Non-technical Founders and No-code Developers.",
     "verdict": "The undisputed king of no-code for building real, functional web applications.",
     "color": "#00a1ff",
-    "websiteUrl": "https://bubble.io"
+    "websiteUrl": "https://bubble.io",
+    "incelendi": true
   },
   {
     "slug": "sanity",
@@ -5502,7 +5606,8 @@
     "verdict": "The most modern and developer-friendly way to manage complex, multi-platform content.",
     "color": "#f03e2f",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.sanity.io"
+    "websiteUrl": "https://www.sanity.io",
+    "incelendi": true
   },
   {
     "slug": "xano",
@@ -5554,7 +5659,8 @@
     "targetAudience": "No-code Builders and Scalable App Founders.",
     "verdict": "The best 'backend-as-a-service' for those who want no-code ease with professional power.",
     "color": "#001a4d",
-    "websiteUrl": "https://www.xano.com"
+    "websiteUrl": "https://www.xano.com",
+    "incelendi": true
   },
   {
     "slug": "flutterflow",
@@ -5606,7 +5712,8 @@
     "targetAudience": "Mobile App Founders and Visual Designers.",
     "verdict": "The most professional way to build native mobile apps without (or with) coding.",
     "color": "#4b39ef",
-    "websiteUrl": "https://flutterflow.io"
+    "websiteUrl": "https://flutterflow.io",
+    "incelendi": true
   },
   {
     "slug": "grammarly",
@@ -5659,7 +5766,8 @@
     "verdict": "The essential tool for anyone who wants to write with confidence and professionalism.",
     "color": "#05a67e",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.grammarly.com"
+    "websiteUrl": "https://www.grammarly.com",
+    "incelendi": true
   },
   {
     "slug": "notion-ai",
@@ -5711,7 +5819,8 @@
     "targetAudience": "Notion Users, Content Creators, and Knowledge Teams.",
     "verdict": "The best AI implementation for those who want to work smarter inside their existing docs.",
     "color": "#000000",
-    "websiteUrl": "https://www.notion.so/product/ai"
+    "websiteUrl": "https://www.notion.so/product/ai",
+    "incelendi": true
   },
   {
     "slug": "adobe-firefly",
@@ -5763,7 +5872,8 @@
     "targetAudience": "Graphic Designers, Photographers, and Corporate Brands.",
     "verdict": "The only generative AI tool built from the ground up for professional, legal, and creative work.",
     "color": "#ff0000",
-    "websiteUrl": "https://www.adobe.com/products/firefly.html"
+    "websiteUrl": "https://www.adobe.com/products/firefly.html",
+    "incelendi": true
   },
   {
     "slug": "copy-ai-workflows",
@@ -5815,7 +5925,8 @@
     "targetAudience": "Growth Marketers and Content Agencies.",
     "verdict": "The best tool for companies that want to automate their entire content production at scale.",
     "color": "#22c55e",
-    "websiteUrl": "https://www.copy.ai"
+    "websiteUrl": "https://www.copy.ai",
+    "incelendi": true
   },
   {
     "slug": "perplexity-pages",
@@ -5868,7 +5979,8 @@
     "verdict": "The future of fact-based content creation and instant knowledge sharing.",
     "color": "#22c55e",
     "fiyatModeli": "ucretsiz-katman",
-    "websiteUrl": "https://www.perplexity.ai"
+    "websiteUrl": "https://www.perplexity.ai",
+    "incelendi": true
   },
   {
     "slug": "notion-calendar",
@@ -5921,7 +6033,8 @@
     "verdict": "The most beautiful and integrated calendar for those who live in Notion.",
     "color": "#000000",
     "fiyatModeli": "bedava",
-    "websiteUrl": "https://www.notion.so/product/calendar"
+    "websiteUrl": "https://www.notion.so/product/calendar",
+    "incelendi": true
   },
   {
     "slug": "hey-email",
@@ -5973,6 +6086,1201 @@
     "targetAudience": "Privacy Seekers and Busy Professionals who hate email.",
     "verdict": "The most innovative and peaceful way to handle email in the 21st century.",
     "color": "#4b2ad3",
-    "websiteUrl": "https://www.hey.com"
+    "websiteUrl": "https://www.hey.com",
+    "incelendi": true
+  },
+  {
+    "slug": "gitlab",
+    "name": "GitLab",
+    "category": "Developer Tools",
+    "shortDescription": "DevOps platform with built-in CI/CD and issue tracking.",
+    "websiteUrl": "https://about.gitlab.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bitbucket",
+    "name": "Bitbucket",
+    "category": "Developer Tools",
+    "shortDescription": "Git hosting from Atlassian, tightly tied to Jira.",
+    "websiteUrl": "https://bitbucket.org",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "circleci",
+    "name": "CircleCI",
+    "category": "Developer Tools",
+    "shortDescription": "Continuous integration and delivery pipelines.",
+    "websiteUrl": "https://circleci.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "jenkins",
+    "name": "Jenkins",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source automation server for build pipelines.",
+    "websiteUrl": "https://www.jenkins.io",
+    "incelendi": false,
+    "fiyatModeli": "bedava",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "kubernetes",
+    "name": "Kubernetes",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source container orchestration.",
+    "websiteUrl": "https://kubernetes.io",
+    "incelendi": false,
+    "fiyatModeli": "bedava",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ansible",
+    "name": "Ansible",
+    "category": "Developer Tools",
+    "shortDescription": "Agentless configuration management and automation.",
+    "websiteUrl": "https://www.ansible.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "grafana",
+    "name": "Grafana",
+    "category": "Developer Tools",
+    "shortDescription": "Dashboards and visualisation for metrics and logs.",
+    "websiteUrl": "https://grafana.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "prometheus",
+    "name": "Prometheus",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source metrics collection and alerting.",
+    "websiteUrl": "https://prometheus.io",
+    "incelendi": false,
+    "fiyatModeli": "bedava",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "new-relic",
+    "name": "New Relic",
+    "category": "Developer Tools",
+    "shortDescription": "Application performance monitoring and observability.",
+    "websiteUrl": "https://newrelic.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bugsnag",
+    "name": "Bugsnag",
+    "category": "Developer Tools",
+    "shortDescription": "Error monitoring and application stability scores.",
+    "websiteUrl": "https://www.bugsnag.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "planetscale",
+    "name": "PlanetScale",
+    "category": "Developer Tools",
+    "shortDescription": "Serverless MySQL platform with branching.",
+    "websiteUrl": "https://planetscale.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "neon",
+    "name": "Neon",
+    "category": "Developer Tools",
+    "shortDescription": "Serverless Postgres with database branching.",
+    "websiteUrl": "https://neon.tech",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "railway",
+    "name": "Railway",
+    "category": "Developer Tools",
+    "shortDescription": "Deploy apps and databases from a repo.",
+    "websiteUrl": "https://railway.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "render",
+    "name": "Render",
+    "category": "Developer Tools",
+    "shortDescription": "Managed hosting for services, static sites and databases.",
+    "websiteUrl": "https://render.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "fly-io",
+    "name": "Fly.io",
+    "category": "Developer Tools",
+    "shortDescription": "Run application containers close to users.",
+    "websiteUrl": "https://fly.io",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "insomnia",
+    "name": "Insomnia",
+    "category": "Developer Tools",
+    "shortDescription": "API client for designing and testing requests.",
+    "websiteUrl": "https://insomnia.rest",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "swagger",
+    "name": "Swagger",
+    "category": "Developer Tools",
+    "shortDescription": "OpenAPI tooling for documenting and testing APIs.",
+    "websiteUrl": "https://swagger.io",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "sourcegraph",
+    "name": "Sourcegraph",
+    "category": "Developer Tools",
+    "shortDescription": "Code search across large codebases.",
+    "websiteUrl": "https://sourcegraph.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "elastic",
+    "name": "Elastic",
+    "category": "Developer Tools",
+    "shortDescription": "Search and log analytics built on Elasticsearch.",
+    "websiteUrl": "https://www.elastic.co",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "hasura",
+    "name": "Hasura",
+    "category": "Developer Tools",
+    "shortDescription": "Instant GraphQL APIs over your database.",
+    "websiteUrl": "https://hasura.io",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "sketch",
+    "name": "Sketch",
+    "category": "Design",
+    "shortDescription": "Vector interface design for macOS.",
+    "websiteUrl": "https://www.sketch.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "penpot",
+    "name": "Penpot",
+    "category": "Design",
+    "shortDescription": "Open-source design and prototyping tool.",
+    "websiteUrl": "https://penpot.app",
+    "incelendi": false,
+    "fiyatModeli": "bedava",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "blender",
+    "name": "Blender",
+    "category": "Design",
+    "shortDescription": "Open-source 3D modelling, animation and rendering.",
+    "websiteUrl": "https://www.blender.org",
+    "incelendi": false,
+    "fiyatModeli": "bedava",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "procreate",
+    "name": "Procreate",
+    "category": "Design",
+    "shortDescription": "Illustration app for iPad.",
+    "websiteUrl": "https://procreate.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "affinity-designer",
+    "name": "Affinity Designer",
+    "category": "Design",
+    "shortDescription": "One-off purchase vector design software.",
+    "websiteUrl": "https://affinity.serif.com/designer/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "removebg",
+    "name": "remove.bg",
+    "category": "Design",
+    "shortDescription": "Automatic image background removal.",
+    "websiteUrl": "https://www.remove.bg",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "photopea",
+    "name": "Photopea",
+    "category": "Design",
+    "shortDescription": "Browser-based image editor that opens PSD files.",
+    "websiteUrl": "https://www.photopea.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "hootsuite",
+    "name": "Hootsuite",
+    "category": "Marketing",
+    "shortDescription": "Schedule and manage social accounts in one place.",
+    "websiteUrl": "https://www.hootsuite.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "later",
+    "name": "Later",
+    "category": "Marketing",
+    "shortDescription": "Visual social scheduling built around Instagram.",
+    "websiteUrl": "https://later.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "sprout-social",
+    "name": "Sprout Social",
+    "category": "Marketing",
+    "shortDescription": "Social management and reporting for teams.",
+    "websiteUrl": "https://sproutsocial.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "moz",
+    "name": "Moz",
+    "category": "Marketing",
+    "shortDescription": "SEO toolset with rank tracking and link data.",
+    "websiteUrl": "https://moz.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "screaming-frog",
+    "name": "Screaming Frog",
+    "category": "Marketing",
+    "shortDescription": "Desktop crawler for technical SEO audits.",
+    "websiteUrl": "https://www.screamingfrog.co.uk/seo-spider/",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "brevo",
+    "name": "Brevo",
+    "category": "Marketing",
+    "shortDescription": "Email, SMS and marketing automation.",
+    "websiteUrl": "https://www.brevo.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mailerlite",
+    "name": "MailerLite",
+    "category": "Marketing",
+    "shortDescription": "Email marketing with a generous free tier.",
+    "websiteUrl": "https://www.mailerlite.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "customer-io",
+    "name": "Customer.io",
+    "category": "Marketing",
+    "shortDescription": "Behavioural messaging across email and push.",
+    "websiteUrl": "https://customer.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "optinmonster",
+    "name": "OptinMonster",
+    "category": "Marketing",
+    "shortDescription": "Popups and lead capture forms.",
+    "websiteUrl": "https://optinmonster.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "unbounce",
+    "name": "Unbounce",
+    "category": "Marketing",
+    "shortDescription": "Landing page builder with A/B testing.",
+    "websiteUrl": "https://unbounce.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "instapage",
+    "name": "Instapage",
+    "category": "Marketing",
+    "shortDescription": "Landing pages for paid campaigns.",
+    "websiteUrl": "https://instapage.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "crazy-egg",
+    "name": "Crazy Egg",
+    "category": "Marketing",
+    "shortDescription": "Heatmaps and click tracking.",
+    "websiteUrl": "https://www.crazyegg.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "matomo",
+    "name": "Matomo",
+    "category": "Marketing",
+    "shortDescription": "Privacy-focused, self-hostable web analytics.",
+    "websiteUrl": "https://matomo.org",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "plausible",
+    "name": "Plausible",
+    "category": "Marketing",
+    "shortDescription": "Lightweight, cookie-free web analytics.",
+    "websiteUrl": "https://plausible.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "fathom-analytics",
+    "name": "Fathom Analytics",
+    "category": "Marketing",
+    "shortDescription": "Simple privacy-first analytics.",
+    "websiteUrl": "https://usefathom.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "evernote",
+    "name": "Evernote",
+    "category": "Productivity",
+    "shortDescription": "Long-running note taking and web clipping.",
+    "websiteUrl": "https://evernote.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bear",
+    "name": "Bear",
+    "category": "Productivity",
+    "shortDescription": "Markdown notes for Apple devices.",
+    "websiteUrl": "https://bear.app",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "craft",
+    "name": "Craft",
+    "category": "Productivity",
+    "shortDescription": "Document and note app with a strong editor.",
+    "websiteUrl": "https://www.craft.do",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "things",
+    "name": "Things",
+    "category": "Productivity",
+    "shortDescription": "Task manager for Apple devices.",
+    "websiteUrl": "https://culturedcode.com/things/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "omnifocus",
+    "name": "OmniFocus",
+    "category": "Productivity",
+    "shortDescription": "Task management built around GTD.",
+    "websiteUrl": "https://www.omnigroup.com/omnifocus/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ticktick",
+    "name": "TickTick",
+    "category": "Productivity",
+    "shortDescription": "Tasks, habits and calendar in one app.",
+    "websiteUrl": "https://ticktick.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "raycast",
+    "name": "Raycast",
+    "category": "Productivity",
+    "shortDescription": "Keyboard launcher and command palette for macOS.",
+    "websiteUrl": "https://www.raycast.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "alfred",
+    "name": "Alfred",
+    "category": "Productivity",
+    "shortDescription": "macOS launcher with workflows.",
+    "websiteUrl": "https://www.alfredapp.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "motion",
+    "name": "Motion",
+    "category": "Productivity",
+    "shortDescription": "AI calendar that schedules your tasks.",
+    "websiteUrl": "https://www.usemotion.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "reclaim",
+    "name": "Reclaim.ai",
+    "category": "Productivity",
+    "shortDescription": "Automatic calendar blocking for habits and tasks.",
+    "websiteUrl": "https://reclaim.ai",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "superhuman",
+    "name": "Superhuman",
+    "category": "Productivity",
+    "shortDescription": "Fast keyboard-first email client.",
+    "websiteUrl": "https://superhuman.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "readwise",
+    "name": "Readwise",
+    "category": "Productivity",
+    "shortDescription": "Collects and resurfaces your highlights.",
+    "websiteUrl": "https://readwise.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "obsidian-publish",
+    "name": "Obsidian Publish",
+    "category": "Productivity",
+    "shortDescription": "Publish an Obsidian vault as a website.",
+    "websiteUrl": "https://obsidian.md/publish",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bitwarden",
+    "name": "Bitwarden",
+    "category": "Productivity",
+    "shortDescription": "Open-source password manager.",
+    "websiteUrl": "https://bitwarden.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "dashlane",
+    "name": "Dashlane",
+    "category": "Productivity",
+    "shortDescription": "Password manager with dark web monitoring.",
+    "websiteUrl": "https://www.dashlane.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "proton-mail",
+    "name": "Proton Mail",
+    "category": "Productivity",
+    "shortDescription": "Encrypted email from Switzerland.",
+    "websiteUrl": "https://proton.me/mail",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "basecamp",
+    "name": "Basecamp",
+    "category": "Project Management",
+    "shortDescription": "Projects, messages and to-dos in one place.",
+    "websiteUrl": "https://basecamp.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "wrike",
+    "name": "Wrike",
+    "category": "Project Management",
+    "shortDescription": "Work management for larger teams.",
+    "websiteUrl": "https://www.wrike.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "smartsheet",
+    "name": "Smartsheet",
+    "category": "Project Management",
+    "shortDescription": "Spreadsheet-style work and project management.",
+    "websiteUrl": "https://www.smartsheet.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "shortcut",
+    "name": "Shortcut",
+    "category": "Project Management",
+    "shortDescription": "Issue tracking built for software teams.",
+    "websiteUrl": "https://www.shortcut.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "teamwork",
+    "name": "Teamwork",
+    "category": "Project Management",
+    "shortDescription": "Client work and project management.",
+    "websiteUrl": "https://www.teamwork.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "google-meet",
+    "name": "Google Meet",
+    "category": "Communication",
+    "shortDescription": "Video meetings from Google Workspace.",
+    "websiteUrl": "https://meet.google.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mattermost",
+    "name": "Mattermost",
+    "category": "Communication",
+    "shortDescription": "Self-hostable team messaging.",
+    "websiteUrl": "https://mattermost.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "rocket-chat",
+    "name": "Rocket.Chat",
+    "category": "Communication",
+    "shortDescription": "Open-source team chat you can host yourself.",
+    "websiteUrl": "https://www.rocket.chat",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "twist",
+    "name": "Twist",
+    "category": "Communication",
+    "shortDescription": "Threaded, asynchronous team messaging.",
+    "websiteUrl": "https://twist.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "hetzner",
+    "name": "Hetzner",
+    "category": "Hosting",
+    "shortDescription": "European cloud and dedicated servers.",
+    "websiteUrl": "https://www.hetzner.com",
+    "incelendi": false,
+    "fiyatModeli": "kullanima-gore",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "render-hosting",
+    "name": "Render Hosting",
+    "category": "Hosting",
+    "shortDescription": "Managed application hosting.",
+    "websiteUrl": "https://render.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "railway-hosting",
+    "name": "Railway Hosting",
+    "category": "Hosting",
+    "shortDescription": "Deploy services straight from a repo.",
+    "websiteUrl": "https://railway.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "fastly",
+    "name": "Fastly",
+    "category": "Hosting",
+    "shortDescription": "Edge cloud and CDN.",
+    "websiteUrl": "https://www.fastly.com",
+    "incelendi": false,
+    "fiyatModeli": "kullanima-gore",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bunny-net",
+    "name": "Bunny.net",
+    "category": "Hosting",
+    "shortDescription": "Low-cost CDN and edge storage.",
+    "websiteUrl": "https://bunny.net",
+    "incelendi": false,
+    "fiyatModeli": "kullanima-gore",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "woocommerce",
+    "name": "WooCommerce",
+    "category": "E-commerce",
+    "shortDescription": "Open-source store plugin for WordPress.",
+    "websiteUrl": "https://woocommerce.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "squarespace-commerce",
+    "name": "Squarespace Commerce",
+    "category": "E-commerce",
+    "shortDescription": "Online store built into Squarespace.",
+    "websiteUrl": "https://www.squarespace.com/ecommerce-website",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ecwid",
+    "name": "Ecwid",
+    "category": "E-commerce",
+    "shortDescription": "Add a store to any existing website.",
+    "websiteUrl": "https://www.ecwid.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "shopware",
+    "name": "Shopware",
+    "category": "E-commerce",
+    "shortDescription": "Open-source commerce platform from Germany.",
+    "websiteUrl": "https://www.shopware.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "snipcart",
+    "name": "Snipcart",
+    "category": "E-commerce",
+    "shortDescription": "Drop-in shopping cart for custom sites.",
+    "websiteUrl": "https://snipcart.com",
+    "incelendi": false,
+    "fiyatModeli": "kullanima-gore",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "chargebee",
+    "name": "Chargebee",
+    "category": "E-commerce",
+    "shortDescription": "Subscription billing and revenue management.",
+    "websiteUrl": "https://www.chargebee.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "recurly",
+    "name": "Recurly",
+    "category": "E-commerce",
+    "shortDescription": "Subscription management and billing.",
+    "websiteUrl": "https://recurly.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "gemini",
+    "name": "Google Gemini",
+    "category": "AI Tools",
+    "shortDescription": "Google's assistant and multimodal model.",
+    "websiteUrl": "https://gemini.google.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "mistral",
+    "name": "Mistral AI",
+    "category": "AI Tools",
+    "shortDescription": "Open-weight and hosted language models.",
+    "websiteUrl": "https://mistral.ai",
+    "incelendi": false,
+    "fiyatModeli": "kullanima-gore",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "hugging-face",
+    "name": "Hugging Face",
+    "category": "AI Tools",
+    "shortDescription": "Hosting and community for open models.",
+    "websiteUrl": "https://huggingface.co",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "category": "AI Tools",
+    "shortDescription": "Generative video and editing tools.",
+    "websiteUrl": "https://runwayml.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "suno",
+    "name": "Suno",
+    "category": "AI Tools",
+    "shortDescription": "Generates songs from a text prompt.",
+    "websiteUrl": "https://suno.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "category": "AI Tools",
+    "shortDescription": "AI presenter videos from a script.",
+    "websiteUrl": "https://www.synthesia.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "category": "AI Tools",
+    "shortDescription": "AI avatar video generation.",
+    "websiteUrl": "https://www.heygen.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "category": "AI Tools",
+    "shortDescription": "Meeting transcription and notes.",
+    "websiteUrl": "https://otter.ai",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "category": "AI Tools",
+    "shortDescription": "Records and summarises meetings.",
+    "websiteUrl": "https://fireflies.ai",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "category": "AI Tools",
+    "shortDescription": "AI-native code editor.",
+    "websiteUrl": "https://cursor.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "AI Tools",
+    "shortDescription": "AI code completion inside your editor.",
+    "websiteUrl": "https://github.com/features/copilot",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "writesonic",
+    "name": "Writesonic",
+    "category": "AI Tools",
+    "shortDescription": "AI writing for marketing content.",
+    "websiteUrl": "https://writesonic.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "freshdesk",
+    "name": "Freshdesk",
+    "category": "Customer Service",
+    "shortDescription": "Help desk and ticketing.",
+    "websiteUrl": "https://www.freshworks.com/freshdesk/",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "help-scout",
+    "name": "Help Scout",
+    "category": "Customer Service",
+    "shortDescription": "Shared inbox and help centre.",
+    "websiteUrl": "https://www.helpscout.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "crisp",
+    "name": "Crisp",
+    "category": "Customer Service",
+    "shortDescription": "Live chat and shared inbox.",
+    "websiteUrl": "https://crisp.chat",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "tidio",
+    "name": "Tidio",
+    "category": "Customer Service",
+    "shortDescription": "Live chat with chatbots for small stores.",
+    "websiteUrl": "https://www.tidio.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "front",
+    "name": "Front",
+    "category": "Customer Service",
+    "shortDescription": "Shared inbox for customer conversations.",
+    "websiteUrl": "https://front.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "xero",
+    "name": "Xero",
+    "category": "Finance Tools",
+    "shortDescription": "Cloud accounting for small business.",
+    "websiteUrl": "https://www.xero.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "wave",
+    "name": "Wave",
+    "category": "Finance Tools",
+    "shortDescription": "Free accounting and invoicing.",
+    "websiteUrl": "https://www.waveapps.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "freshbooks",
+    "name": "FreshBooks",
+    "category": "Finance Tools",
+    "shortDescription": "Invoicing and accounting for freelancers.",
+    "websiteUrl": "https://www.freshbooks.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "ramp",
+    "name": "Ramp",
+    "category": "Finance Tools",
+    "shortDescription": "Corporate cards and spend management.",
+    "websiteUrl": "https://ramp.com",
+    "incelendi": false,
+    "fiyatModeli": "bedava",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "brex",
+    "name": "Brex",
+    "category": "Finance Tools",
+    "shortDescription": "Corporate cards and expense management.",
+    "websiteUrl": "https://www.brex.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "deel",
+    "name": "Deel",
+    "category": "HR Software",
+    "shortDescription": "Global payroll and contractor compliance.",
+    "websiteUrl": "https://www.deel.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "remote-com",
+    "name": "Remote",
+    "category": "HR Software",
+    "shortDescription": "Employer of record and global payroll.",
+    "websiteUrl": "https://remote.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "rippling",
+    "name": "Rippling",
+    "category": "HR Software",
+    "shortDescription": "HR, IT and payroll in one system.",
+    "websiteUrl": "https://www.rippling.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "bamboohr",
+    "name": "BambooHR",
+    "category": "HR Software",
+    "shortDescription": "HR software for small and mid-size companies.",
+    "websiteUrl": "https://www.bamboohr.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "docusign",
+    "name": "DocuSign",
+    "category": "Legal Tools",
+    "shortDescription": "Electronic signatures and agreements.",
+    "websiteUrl": "https://www.docusign.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "pipedrive",
+    "name": "Pipedrive",
+    "category": "CRM",
+    "shortDescription": "Sales pipeline CRM for small teams.",
+    "websiteUrl": "https://www.pipedrive.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "salesforce",
+    "name": "Salesforce",
+    "category": "CRM",
+    "shortDescription": "Enterprise CRM platform.",
+    "websiteUrl": "https://www.salesforce.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "zoho-crm",
+    "name": "Zoho CRM",
+    "category": "CRM",
+    "shortDescription": "CRM within the wider Zoho suite.",
+    "websiteUrl": "https://www.zoho.com/crm/",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "close",
+    "name": "Close",
+    "category": "CRM",
+    "shortDescription": "CRM built around calling and email for sales teams.",
+    "websiteUrl": "https://www.close.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "attio",
+    "name": "Attio",
+    "category": "CRM",
+    "shortDescription": "Flexible, data-driven CRM.",
+    "websiteUrl": "https://attio.com",
+    "incelendi": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "basePrice": 0,
+    "isFlat": true
+  },
+  {
+    "slug": "folk",
+    "name": "folk",
+    "category": "CRM",
+    "shortDescription": "Lightweight relationship CRM.",
+    "websiteUrl": "https://www.folk.app",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true
   }
 ]

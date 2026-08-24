@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import toolsData from '@/data/tools.json'
-import { karsilastirmaCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
+import { sitemapCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
 import { sitemapKategorileri } from '@/lib/categories'
 import fs from 'fs';
 import path from 'path';
@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Onceki hali elle yazilmis uc adresti ve biri (openai-vs-claude) var
   // olmayan bir slug'a isaret ediyordu -- Google'a 404 ilan ediliyordu.
   // Artik ciftler veriden uretiliyor; sinirlar src/lib/compare.ts'te.
-  const comparisonRoutes = karsilastirmaCiftleri().map((cift) => ({
+  const comparisonRoutes = sitemapCiftleri().map((cift) => ({
     url: `${baseUrl}/compare/${cift}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,

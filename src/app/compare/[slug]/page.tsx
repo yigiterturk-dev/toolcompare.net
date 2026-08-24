@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
-import { kanonikSlug, akranlar, karsilastirmaCiftleri } from "@/lib/compare";
+import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi } from "@/lib/compare";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { notFound } from "next/navigation";
@@ -46,9 +46,13 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   // aksi halde ayni icerik iki adreste indekslenir ve ikisi de zayiflar.
   const canonical = `/compare/${kanonikSlug(tool1.slug, tool2.slug)}`;
 
+  // Iki tarafi da incelenmemis cift indekslenmez; sayfa yine calisir.
+  const indekslensin = ciftIndekslenebilirMi(tool1 as any, tool2 as any);
+
   return {
     title,
     description,
+    robots: indekslensin ? undefined : { index: false, follow: true },
     alternates: { canonical },
     openGraph: { title, description, url: canonical, siteName: "ToolCompare", type: "article" },
     twitter: { card: "summary_large_image", title, description },
@@ -204,11 +208,22 @@ export default async function ComparisonPage({ params }: any) {
            </div>
         </div>
 
+        {!tool1.verdict && !tool2.verdict && (
+          <div style={{ marginTop: '3rem', background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.35)', borderRadius: '20px', padding: '1.8rem' }}>
+            <strong style={{ color: 'white' }}>Neither tool has a full review yet.</strong>
+            <p style={{ color: 'var(--text-secondary)', margin: '0.6rem 0 0', lineHeight: 1.7 }}>
+              Both are in our directory, so this page compares what we can state factually — what each one is
+              and what it costs to start. We have not written pros, cons or a verdict for either, and we are
+              not going to invent them to fill the page.
+            </p>
+          </div>
+        )}
+
         {/* Arti / eksi. Onceki halde bu veri tools.json'da duruyordu ama
             karsilastirma sayfasinda hic gosterilmiyordu -- sayfayi ince
             birakan asil eksik buydu. */}
         <div style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-          {[tool1, tool2].map((t: any) => (
+          {[tool1, tool2].filter((t: any) => (t.pros || []).length || (t.cons || []).length).map((t: any) => (
             <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2.5rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
               <h3 style={{ marginBottom: '1.5rem' }}>{t.name}: pros &amp; cons</h3>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem' }}>
@@ -232,7 +247,7 @@ export default async function ComparisonPage({ params }: any) {
         {/* Tam degerlendirme. Tabloda ortasindan kesilip "..." ile
             biten metin hem kullaniciya hem arama motoruna degersizdi. */}
         <div style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-          {[tool1, tool2].map((t: any) => (
+          {[tool1, tool2].filter((t: any) => t.verdict).map((t: any) => (
             <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2.5rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
               <h3 style={{ marginBottom: '1.2rem' }}>Our verdict on {t.name}</h3>
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>{t.verdict}</p>
