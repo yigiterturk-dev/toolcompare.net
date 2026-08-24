@@ -10,7 +10,7 @@ degil Google aramasina gidiyordu.
 Bu betik ayni seyin sessizce tekrar olmasini engeller.
 """
 import json, re, sys
-from collections import Counter
+from collections import Counter, defaultdict
 
 araclar = json.load(open("src/data/tools.json", encoding="utf-8"))
 bulgular = []
@@ -51,6 +51,33 @@ modelsiz = [t["slug"] for t in araclar
             if not t.get("fiyatModeli") and (t.get("basePrice") or 0) == 0]
 if modelsiz:
     bulgular.append(("UYARI", f"{len(modelsiz)} aracin fiyat modeli girilmemis: {modelsiz}"))
+
+# 7) AYNI URUNUN IKI KAYDI.
+#    Bulundu (2026-08-24): "Render" ve "Render Hosting", "Railway" ve
+#    "Railway Hosting", "Supabase" ve "Supabase Platform" ayni urundu.
+#    Ayrica baska urunlerin FIYAT KADEMESI ya da OZELLIGI ayri arac gibi
+#    listelenmisti (Todoist Pro, Shopify Plus, Notion AI, Loom AI,
+#    Zapier Interfaces...). Ayni urunu iki kez listelemek katalogu sisirir
+#    ve birbirinin kopyasi karsilastirma sayfalari uretir
+#    ("Render vs Render Hosting"). 22 kayit silindi.
+#
+#    KURAL: ayri satin alinabilen, ayri markali urun kalir; bir urunun
+#    kademesi veya ozelligi olan kayit kalmaz. Ayni alan adina isaret eden
+#    kayitlar burada UYARI olarak listelenir -- otomatik silinmez, cunku
+#    GitHub/GitHub Copilot gibi mesru ciftler de var.
+import urllib.parse
+alanlar = defaultdict(list)
+for t in araclar:
+    if not t.get("websiteUrl"):
+        continue
+    a = urllib.parse.urlparse(t["websiteUrl"]).netloc.lower()
+    if a.startswith("www."):
+        a = a[4:]
+    alanlar[a].append(t["slug"])
+coklu = {a: s for a, s in alanlar.items() if len(s) > 1}
+if coklu:
+    ozet = "; ".join(f"{a}: {','.join(s)}" for a, s in sorted(coklu.items())[:6])
+    bulgular.append(("UYARI", f"{len(coklu)} alan adinda birden fazla kayit (ayni urun olabilir) -> {ozet}"))
 
 print(f"denetlenen arac: {len(araclar)}")
 if not bulgular:
