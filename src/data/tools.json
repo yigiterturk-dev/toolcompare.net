@@ -17978,57 +17978,80 @@
     "slug": "surveymonkey",
     "name": "SurveyMonkey",
     "category": "Marketing",
-    "shortDescription": "American technology company.",
+    "shortDescription": "Self-service survey platform with free, team and enterprise tiers, response allowances and separately sold respondent panels.",
     "websiteUrl": "https://www.surveymonkey.com/",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 30,
     "isFlat": true,
-    "longDescription": "SurveyMonkey builds surveys and collects responses, with analysis and benchmarking on paid tiers.",
-    "pros": [
-      "Fast to build a competent survey",
-      "Question types and logic cover most needs",
-      "Widely recognised by respondents"
-    ],
-    "cons": [
-      "Response limits on lower plans",
-      "Advanced analysis behind higher tiers",
-      "Branding on the free plan"
-    ],
-    "targetAudience": "Anyone who needs survey responses without building a form system.",
-    "verdict": "The default survey tool. Research teams needing rigour use specialist software."
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": true, "acikKaynak": false, "sso": true },
+    "longDescription": "SurveyMonkey creates and distributes surveys, forms and quizzes, then analyzes collected responses. The free Basic tier is constrained to 10 questions per survey; paid individual and team plans add question types, logic, exports and higher response allowances. The current US pricing page lists Team Advantage at $30 per user per month and Team Premier at $92 per user per month, both billed annually and starting with three users. Enterprise capabilities and pricing require a sales process. 'Unlimited surveys' is not unlimited data collection: annual or per-survey response rules, overage charges and separately purchased SurveyMonkey Audience responses still apply.",
+    "pros": ["Low-friction survey creation and multiple collection channels suit routine feedback workflows.", "Paid tiers add skip logic, randomization, exports, collaboration and analysis without building survey infrastructure.", "Enterprise options add centralized administration, SSO, regional hosting choices and selected governance controls.", "OAuth-based APIs support authorized integration with survey and response data within application limits."],
+    "cons": ["The free tier's 10-question limit and restricted response access make it unsuitable for many formal studies.", "Responses—including incomplete or later-deleted responses—can count toward allowances, and unused annual capacity does not roll over.", "Team plans start at three seats; extra collaborators and response overages can create additional charges.", "Audience panel responses are a separate purchase and do not remove the need to validate sampling quality and research design."],
+    "keyFeatures": [{ "title": "Survey authoring", "description": "Builds surveys, forms and quizzes with tier-dependent question types, logic and branding controls." }, { "title": "Collection and analysis", "description": "Distributes links or other collectors and provides tier-dependent exports, filters and analysis." }, { "title": "Team administration", "description": "Adds shared assets, seats and administrative controls, with enterprise identity options." }, { "title": "API access", "description": "OAuth 2.0 APIs expose surveys, collectors and responses subject to application and endpoint limits." }],
+    "targetAudience": "Individuals and organizations that need a hosted survey workflow and can size question, seat, response, analysis and governance requirements before purchase.",
+    "bestFor": ["Routine customer, employee, event or market-feedback surveys", "Teams that value templates and fast distribution over custom survey software", "Enterprises prepared to contract identity, hosting and administration requirements explicitly"],
+    "skipIf": ["The free tier must support more than 10 questions or guaranteed access to every collected response", "A statistically rigorous panel and research methodology are assumed to come automatically with the software", "Seat, response-overage and data-retention rules cannot be accepted"],
+    "verdict": "SurveyMonkey is a practical general-purpose survey service, but the purchase unit is not merely 'a survey': model seats, questions, annual responses, overage, exports and Audience recruitment separately, then test the exact collector and analysis workflow before committing.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "SurveyMonkey — Plans and pricing", "url": "https://www.surveymonkey.com/pricing/details/", "checkedAt": "2026-08-24", "supports": ["free 10-question limit", "Team Advantage and Team Premier prices", "three-user team minimum", "annual billing", "response allowances and overage", "Enterprise route", "Audience separation", "seat and device terms"] },
+      { "label": "SurveyMonkey Help — Response limits", "url": "https://help.surveymonkey.com/en/surveymonkey/billing/response-limits/", "checkedAt": "2026-08-24", "supports": ["response counting", "incomplete and deleted response treatment", "no rollover", "overage billing", "per-survey access and deletion rules", "Audience exclusion"] },
+      { "label": "SurveyMonkey — Enterprise", "url": "https://www.surveymonkey.com/product/enterprise/", "checkedAt": "2026-08-24", "supports": ["SSO", "administration", "regional hosting", "custom branding", "offline and SMS collection", "Salesforce and Power BI integrations"] },
+      { "label": "SurveyMonkey — API v3 documentation", "url": "https://api.surveymonkey.com/v3/docs", "checkedAt": "2026-08-24", "supports": ["OAuth 2.0", "survey collector and response APIs", "draft and private app limits", "pagination and survey-size limits", "possible paid limit increases"] }
+    ], "limitations": ["Official SurveyMonkey pricing, response-limit, enterprise and API sources were reviewed; ToolCompare did not create an account or survey, collect or purchase responses, inspect checkout or renewal, test exports/logic/mobile/offline/SMS/API/SSO/hosting, validate panel quality, reach a limit, incur an overage, test deletion or contact support. Prices, allowances, retention and regional availability can change."] }
   },
   {
     "slug": "qualtrics",
     "name": "Qualtrics",
     "category": "Marketing",
-    "shortDescription": "Experience management company.",
+    "shortDescription": "Survey and experience-management platform spanning self-service research and separately packaged enterprise CX and EX suites.",
     "websiteUrl": "https://www.qualtrics.com/",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 420,
     "isFlat": true,
-    "longDescription": "Qualtrics runs experience management programmes: customer, employee and product research at enterprise scale.",
-    "pros": [
-      "Serious research methodology built in",
-      "Handles complex survey logic",
-      "Strong analysis and reporting"
-    ],
-    "cons": [
-      "Enterprise pricing and contracts",
-      "Far more than simple survey needs",
-      "Implementation requires training"
-    ],
-    "targetAudience": "Organisations running formal research programmes.",
-    "verdict": "The right tool for genuine research. For a customer feedback form it is absurd overkill."
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": true, "acikKaynak": false, "sso": true },
+    "longDescription": "Qualtrics combines survey research with Customer Experience, Employee Experience and Strategy & Research suites. A restricted free account exists, but it omits capabilities such as email and SMS distribution, the offline app, APIs and third-party integrations. The current self-service Strategic Research offer starts at $420 per month ($5,040 annually); its 30-day trial advertises 500 responses, three active surveys and 22 question types, while the purchased self-service license includes 1,000 responses or equivalent interactions. Larger capacities and broader suites require a custom plan. CX and Strategy & Research are interaction-priced; EX is employee-priced, so one public starter figure does not represent an enterprise deployment.",
+    "pros": ["Complex question, logic and analysis capabilities support structured research beyond a basic feedback form.", "Paid distribution spans links, QR, web embeds, email, SMS and offline collection, depending on license.", "Suite packaging connects survey responses with broader customer, employee and research workflows.", "Interaction usage reporting gives administrators a way to monitor metered consumption."],
+    "cons": ["The free account excludes API, third-party integrations, email, SMS and offline collection and has restricted logic and branding.", "The $420 monthly starting price covers a specific Strategic Research package, not the complete CX, EX or enterprise platform.", "Responses, calls, chats, emails, reviews, video minutes or other records may consume interactions depending on the product and contract.", "Trial downgrades and brand migration can remove premium capability or require manual migration and recreation of some assets."],
+    "keyFeatures": [{ "title": "Survey research", "description": "Builds multilingual surveys with tier-dependent logic, question types, quotas and analysis." }, { "title": "Experience suites", "description": "Packages customer, employee and strategy/research use cases under different usage models." }, { "title": "Multi-channel collection", "description": "Paid capabilities can distribute through email, SMS, web, QR, links and offline workflows." }, { "title": "Usage governance", "description": "Tracks contract-defined interactions and exposes administrative usage reports." }],
+    "targetAudience": "Research and experience-management teams that need sophisticated survey programs and can govern interaction capacity, suite scope and implementation.",
+    "bestFor": ["Structured market, product or academic-style survey programs needing advanced logic and analysis", "Enterprise CX or EX programs that will integrate multiple feedback channels", "Organizations with administrators who can monitor interaction consumption and contract terms"],
+    "skipIf": ["A simple free form with API access or email distribution is the requirement", "The team assumes every Qualtrics suite and integration is included in the $420 starter package", "No owner exists for research design, governance, migration and usage monitoring"],
+    "verdict": "Qualtrics is capable research and experience-management infrastructure, but its free account, self-service research plan and enterprise suites are materially different products. Select the exact suite, enumerate interaction types and capacity, and validate distribution, migration, identity and export requirements in writing.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Qualtrics Support — Free accounts", "url": "https://www.qualtrics.com/support/survey-platform/managing-your-account/trial-accounts/", "checkedAt": "2026-08-24", "supports": ["free-account scope", "eight question types", "logic and branding restrictions", "distribution limits", "no API or third-party integrations", "no offline app"] },
+      { "label": "Qualtrics Support — Self-service licenses", "url": "https://www.qualtrics.com/support/getting-started-qualtrics/free-accounts-trials/self-service-licenses/", "checkedAt": "2026-08-24", "supports": ["flat-rate self-service model", "1000-response or interaction allowance", "custom-plan route", "FedRAMP exclusion", "brand-migration boundaries"] },
+      { "label": "Qualtrics — Free trial and Strategic Research pricing", "url": "https://www.qualtrics.com/free-trial/", "checkedAt": "2026-08-24", "supports": ["$420 monthly and $5040 annual starting price", "30-day trial", "500 trial responses", "three active surveys", "22 question types", "language and analysis scope"] },
+      { "label": "Qualtrics — Pricing and packaging updates", "url": "https://www.qualtrics.com/pricing-packaging-updates/", "checkedAt": "2026-08-24", "supports": ["CX EX and Strategy and Research suites", "interaction pricing for CX and research", "employee pricing for EX", "usage tracking"] },
+      { "label": "Qualtrics Support — DesignXM trial", "url": "https://www.qualtrics.com/support/getting-started-qualtrics/free-accounts-trials/designxm-trial/", "checkedAt": "2026-08-24", "supports": ["automatic downgrade", "no extension or repeat trial", "loss of premium feature access", "continued survey and response access"] }
+    ], "limitations": ["Official Qualtrics free-account, self-service, trial, pricing-update and support sources were reviewed; ToolCompare did not register, buy or renew a license, build a survey, collect an interaction, test logic/analysis/export/API/SSO/SMS/email/offline/mobile/integrations, migrate a brand, verify FedRAMP or contract language, contact sales or support, or evaluate research validity. Prices, entitlements and interaction definitions can change and agreements control actual rights."] }
   },
   {
     "slug": "braze-inc",
-    "name": "Braze, Inc.",
+    "name": "Braze",
     "category": "Marketing",
-    "shortDescription": "American software company.",
+    "shortDescription": "Enterprise customer-engagement platform for instrumented, cross-channel lifecycle messaging and journey orchestration.",
     "websiteUrl": "https://www.braze.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": true, "mobil": true, "acikKaynak": false, "sso": true },
+    "longDescription": "Braze is a proprietary customer-engagement platform that ingests behavioral and profile data, segments users and orchestrates campaigns and multi-step Canvases across mobile, web and purchased messaging channels. Public checkout pricing is not listed: platform pricing scales with Monthly Active Users, while Action Credits, Message Credits and add-ons can affect total cost. Current editions are Go, Select, Pro and Enterprise. Mobile and web push plus in-app messaging are included across those editions, but email, SMS/MMS/RCS, WhatsApp, LINE, Content Cards, Banners, Audience Sync, Webhooks and Message Archiving are listed as add-ons in the current entitlement handbook.",
+    "pros": ["Combines real-time profile and event data with segmentation, campaigns and journey orchestration.", "SDK and REST API paths support mobile, web and server-side data and messaging integrations.", "Frequency caps, rate limits, experiments and Canvas flows support controlled lifecycle programs.", "SAML SSO, 2FA, granular permissions and security events support enterprise administration."],
+    "cons": ["No public price: MAU volume, edition, channels, credits, data and services require a scoped quote.", "Common channels are not universally included; email, messaging, webhooks and several content surfaces are add-ons requiring credits.", "Value depends on correct SDK and event instrumentation, identity reconciliation, consent, deliverability and data governance.", "API and campaign rate limits, downstream system capacity and entitlement ceilings must be designed and monitored."],
+    "keyFeatures": [{ "title": "Customer profiles", "description": "Combines user attributes, events and channel engagement for segmentation and personalization." }, { "title": "Campaigns and Canvas", "description": "Runs one-off campaigns and multi-step journeys with experiments, caps and rate controls." }, { "title": "Cross-channel delivery", "description": "Supports mobile and web push, in-app messaging and separately entitled email or messaging channels." }, { "title": "Developer platform", "description": "Provides SDKs and REST APIs for instrumentation, profile updates and programmatic messaging." }],
+    "targetAudience": "Product-led and consumer brands with meaningful mobile or web audiences, engineering support and mature lifecycle-marketing operations.",
+    "bestFor": ["High-volume mobile or web products coordinating behavioral lifecycle journeys", "Teams that can maintain event schemas, user identity, consent and channel deliverability", "Enterprises prepared to negotiate MAU, channel, credit, data and service entitlements together"],
+    "skipIf": ["The need is only a low-volume newsletter or simple transactional email sender", "Engineering cannot own SDK integration, identity mapping and ongoing data quality", "A budget decision requires transparent self-service pricing before technical discovery"],
+    "verdict": "Braze is a strong fit for instrumented cross-channel lifecycle programs, not a plug-and-play mailing list. Prove the event and identity model, map every required channel to its add-on and credit treatment, load-test API and send paths, and obtain a quote that exposes MAU and overage assumptions.",
+    "evidence": { "status": "vendor-sourced", "reviewedAt": "2026-08-24", "sources": [
+      { "label": "Braze — Pricing", "url": "https://www.braze.com/pricing", "checkedAt": "2026-08-24", "supports": ["Go Select Pro and Enterprise editions", "quote and trial route", "MAU-scaled pricing", "customer-profile distinction", "campaign and Canvas scope", "SAML SSO", "2FA and permissions"] },
+      { "label": "Braze — FY27 Entitlement Handbook", "url": "https://www.braze.com/docs/ko/assets/unlisted_docs/download_file/Braze_Entitlements_Handbook_27.pdf", "checkedAt": "2026-08-24", "supports": ["edition entitlements", "included push and in-app channels", "email SMS WhatsApp LINE and other add-ons", "Message Credit requirement", "Action Credit boundary", "AI invocation allowances", "landing-page and feature-flag limits"] },
+      { "label": "Braze — Developer portal", "url": "https://www.braze.com/dev-portal", "checkedAt": "2026-08-24", "supports": ["mobile and web SDK integration", "REST API availability", "data and messaging developer use cases"] },
+      { "label": "Braze — Data Platform anniversary", "url": "https://www.braze.com/resources/articles/2025-braze-data-platform-anniversary", "checkedAt": "2026-08-24", "supports": ["API usage dashboard", "rate-limit and error alerts", "data quality and monitoring context"] }
+    ], "limitations": ["Official Braze pricing, entitlement, developer and API-monitoring sources were reviewed; ToolCompare did not request a quote or trial, sign a contract, integrate SDKs or APIs, send messages, inspect MAU calculation in a tenant, consume credits, test SSO/SCIM/permissions, validate identity/consent/deliverability, benchmark latency or throughput, verify every regional endpoint, test exports or contact support. Edition, add-on, credit and commercial terms can change; the signed order form controls actual entitlements."] }
   },
   {
     "slug": "weebly",
