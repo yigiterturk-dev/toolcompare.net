@@ -15003,31 +15003,169 @@
     "slug": "uno-platform",
     "name": "Uno Platform",
     "category": "Developer Tools",
-    "shortDescription": "Open source cross-platform graphical user interface.",
+    "shortDescription": "Open-source .NET UI framework for Windows, mobile, web and Skia desktop targets.",
     "websiteUrl": "https://platform.uno/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Uno Platform is an Apache-2.0-licensed .NET UI framework for building applications from a shared C# and XAML or C# Markup codebase across Windows, Android, iOS, WebAssembly, macOS and Linux. Its open-source runtime is complemented by account-based Studio tooling such as Hot Reload and Hot Design. Actual target coverage depends on the development host, IDE, .NET workloads, platform SDKs and renderer, so single-codebase does not mean identical tooling or behavior everywhere.",
+    "pros": [
+      "Broad target matrix: One .NET solution can target Windows, Android, iOS, browsers, macOS and Linux.",
+      "Familiar Microsoft UI model: C#, XAML and WinUI-aligned APIs reduce conceptual switching for .NET UI teams.",
+      "Open-source core: The Uno repository is available under Apache License 2.0.",
+      "Multiple IDE choices: Official setup paths cover Visual Studio, VS Code and JetBrains Rider."
+    ],
+    "cons": [
+      "Host-dependent targets: iOS requires a current Mac/Xcode path, while WinAppSDK development is unavailable from macOS and Linux hosts.",
+      "Compatibility matrix: IDE, host OS, target, .NET version and renderer combinations do not all offer the same build or debugging support.",
+      "Upgrade work: Migration notes include removed target frameworks, tooling updates and platform-specific API changes.",
+      "Studio boundaries: Hot Design requires sign-in, supported project versions and XAML; it excludes C# Markup and currently has target limitations."
+    ],
+    "keyFeatures": [
+      { "title": "Shared .NET UI", "description": "Uses C# with XAML or C# Markup to share application and interface code across targets." },
+      { "title": "WebAssembly target", "description": "Runs supported .NET UI applications in modern desktop and mobile browsers." },
+      { "title": "Skia desktop", "description": "Targets desktop environments on Windows, macOS and supported Linux configurations." },
+      { "title": "Studio tooling", "description": "Adds account-based Hot Reload and Hot Design workflows where the compatibility matrix permits." }
+    ],
+    "targetAudience": ".NET teams that need a shared UI codebase across several verified desktop, mobile and web targets.",
+    "bestFor": [
+      "C# teams extending WinUI-style skills beyond Windows",
+      "Products whose required hosts and targets appear in the supported environment matrix",
+      "Applications that can test and tune each platform rather than assume pixel-identical behavior"
+    ],
+    "skipIf": [
+      "A required target or debugging workflow is unsupported from the team's development hosts",
+      "The product depends heavily on native controls or APIs not proven through Uno abstractions",
+      "You cannot maintain platform SDKs, .NET workloads and target-specific QA"
+    ],
+    "verdict": "Choose Uno Platform after proving the exact host–IDE–target combinations, not from the target list alone; build a representative feature slice on every shipping platform and rehearse framework upgrades before standardizing.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Uno Platform Docs — Quick Start", "url": "https://platform.uno/docs/articles/get-started.html", "checkedAt": "2026-08-24", "supports": ["single-codebase scope", "C# and XAML", "Visual Studio VS Code and Rider", "host and target compatibility matrix", "iOS Mac requirement", "debugging limitations"] },
+        { "label": "Uno Platform Docs — Supported platforms", "url": "https://platform.uno/docs/articles/getting-started/requirements.html", "checkedAt": "2026-08-24", "supports": ["Windows Android iOS WebAssembly macOS and Linux targets", "minimum platform versions", "target frameworks", "browser support", "renderer guidance"] },
+        { "label": "Uno Platform Docs — Visual Studio setup", "url": "https://platform.uno/docs/articles/get-started-vs-2022.html", "checkedAt": "2026-08-24", "supports": ["Visual Studio versions", "required workloads", "Uno extension", "development prerequisites"] },
+        { "label": "Uno Platform Docs — Sign in and licensing", "url": "https://platform.uno/docs/articles/get-started-licensing.html", "checkedAt": "2026-08-24", "supports": ["Uno account", "IDE sign-in", "Studio tooling", "project SDK requirement"] },
+        { "label": "Uno Platform Docs — Hot Design", "url": "https://platform.uno/docs/articles/studio/Hot%20Design/hot-design-getstarted-guide.html", "checkedAt": "2026-08-24", "supports": ["runtime visual designer", "license activation", "XAML requirement", "C# Markup exclusion", "WinAppSDK limitation", "Hot Reload dependency"] },
+        { "label": "Uno Platform Docs — Migration guide", "url": "https://platform.uno/docs/articles/migrating-from-previous-releases.html", "checkedAt": "2026-08-24", "supports": ["framework migrations", "removed .NET targets", "IDE tooling updates", "breaking changes", "platform API changes"] },
+        { "label": "Uno Platform — Source repository", "url": "https://github.com/unoplatform/uno", "checkedAt": "2026-08-24", "supports": ["source availability", "Apache-2.0 license", "open-source runtime", "issue and release history"] }
+      ],
+      "limitations": ["Official Uno Platform documentation and source repository were reviewed; ToolCompare did not create or migrate an application, activate Studio, test Hot Reload or Hot Design, validate native APIs, assess accessibility, benchmark rendering, audit NuGet dependencies or run the same UI across supported targets. Commercial Studio terms were not independently quoted."]
+    }
   },
   {
     "slug": "mamp",
     "name": "MAMP",
     "category": "Developer Tools",
-    "shortDescription": "Web software type.",
+    "shortDescription": "Local Apache/Nginx, PHP/Python and MySQL development stack for macOS and Windows.",
     "websiteUrl": "https://www.mamp.info/en/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "MAMP packages a local web-development environment for macOS and Windows, while the paid MAMP PRO application adds multi-site management, broader runtime selection, local SSL, database tools, snapshots, backups and deployment conveniences. It is designed for local development rather than production hosting; project files and databases remain local assets that require backups, and matching a production runtime still needs deliberate configuration and testing.",
+    "pros": [
+      "Quick local stack: Bundles web server, database and language runtimes without assembling each component manually.",
+      "Free entry point: The MAMP edition supports one local site with Apache or Nginx, MySQL, PHP and Python.",
+      "PRO project controls: Paid editions add unlimited hosts, multiple runtime versions, SSL, snapshots and database utilities.",
+      "Platform documentation: Separate official installation guidance covers current macOS and Windows environments."
+    ],
+    "cons": [
+      "Local-only role: MAMP does not replace production hosting, deployment security, monitoring or disaster recovery.",
+      "Free/PRO differences: Many conveniences in marketing material—including multiple hosts, snapshots and extended configuration—require MAMP PRO.",
+      "Environment drift: Bundled versions and local settings can differ from production and hide compatibility problems.",
+      "Local data risk: Upgrades and uninstall operations require explicit database and project backups; Windows guidance warns to back up database data."
+    ],
+    "keyFeatures": [
+      { "title": "Bundled local servers", "description": "Runs Apache or Nginx with MySQL and selected PHP or Python versions on a workstation." },
+      { "title": "Single free host", "description": "The comparison matrix limits standard MAMP to one configured site or host." },
+      { "title": "PRO multi-site controls", "description": "Adds unlimited virtual hosts, per-site settings, local SSL and extended server configuration." },
+      { "title": "PRO maintenance tools", "description": "Adds database utilities, snapshots, backups and selected site-transfer workflows." }
+    ],
+    "targetAudience": "Web and WordPress developers who want a packaged local environment on macOS or Windows.",
+    "bestFor": [
+      "Local PHP, database and CMS development on a workstation",
+      "Developers who need to switch among supported runtime versions without Docker or Homebrew",
+      "Multiple local sites when the paid PRO feature set and license fit"
+    ],
+    "skipIf": [
+      "You need a production server, managed deployment platform or team-shared environment",
+      "Exact infrastructure parity and reproducible container images are mandatory",
+      "A required database, extension or runtime version is absent from the selected MAMP edition"
+    ],
+    "verdict": "Use MAMP for local development only after matching its bundled versions to production; choose free versus PRO from the official matrix, protect databases and projects before upgrades, and validate deployment in a separate production-like environment.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "MAMP — Comparison matrix", "url": "https://www.mamp.info/en/comparison-matrix/", "checkedAt": "2026-08-24", "supports": ["MAMP versus MAMP PRO", "host limits", "web servers", "database and language runtimes", "SSL", "snapshots and backups", "database tools", "support boundaries"] },
+        { "label": "MAMP Docs — About MAMP PRO", "url": "https://documentation.mamp.info/en/MAMP-PRO-Mac/Getting-started/", "checkedAt": "2026-08-24", "supports": ["local configuration application", "Apache and Nginx", "MySQL Redis and Memcached", "PHP and Python versions", "text editor", "remote transfer", "Docker and Homebrew distinction"] },
+        { "label": "MAMP Docs — macOS installation", "url": "https://documentation.mamp.info/en/MAMP-PRO-Mac/Getting-started/Installation/", "checkedAt": "2026-08-24", "supports": ["macOS requirements", "disk requirement", "administrator account", "helper daemon", "installation layout"] },
+        { "label": "MAMP Docs — Windows installation", "url": "https://documentation.mamp.info/en/MAMP-Windows/Installation/", "checkedAt": "2026-08-24", "supports": ["Windows requirements", "write-permission needs", "MAMP and PRO bundled installer", "database backup before upgrade", "uninstall behavior"] },
+        { "label": "MAMP — Store", "url": "https://www.mamp.info/en/store/", "checkedAt": "2026-08-24", "supports": ["local-development positioning", "MAMP PRO license model", "first-year updates", "renewal cancellation", "multi-project and WordPress features"] },
+        { "label": "MAMP — Terms of Service", "url": "https://www.mamp.info/en/terms-of-service/", "checkedAt": "2026-08-24", "supports": ["MAMP PRO public prices", "one-time and subscription options", "update entitlement", "tax exclusion", "license restrictions", "renewal terms"] }
+      ],
+      "limitations": ["Official MAMP product, documentation, comparison, store and terms pages were reviewed; ToolCompare did not install either edition, test bundled runtimes, compare macOS and Windows parity, migrate a site, validate SSL, benchmark databases, audit local security, verify production parity or restore an upgrade backup. Prices and included versions may change after the review date."]
+    }
   },
   {
     "slug": "emmet",
     "name": "Emmet",
     "category": "Developer Tools",
-    "shortDescription": "Topics referred to by the same term.",
+    "shortDescription": "Open-source toolkit that expands CSS-like abbreviations into HTML, CSS and related code.",
     "websiteUrl": "https://emmet.io/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Emmet is an MIT-licensed code-generation toolkit embedded in or added to editors. It parses compact, CSS-selector-like abbreviations and expands them into HTML, XML, CSS and related snippets, with tab stops where an editor integration supports them. It accelerates repetitive authoring but does not validate semantics, accessibility, security or browser behavior, and exact commands and customization paths depend on the host editor's implementation.",
+    "pros": [
+      "Fast repetitive markup: Short abbreviations generate nested elements, attributes, text and repeated items.",
+      "CSS assistance: The toolkit also expands property-oriented abbreviations and values for stylesheet authoring.",
+      "Editor ecosystem: Emmet is integrated into or available for many popular code editors.",
+      "Extensible core: The open-source packages can support editor integrations and custom snippet behavior."
+    ],
+    "cons": [
+      "Editor-dependent behavior: Availability, key bindings, language detection, tab stops and settings vary by integration.",
+      "Generated code still needs review: Expansion does not guarantee semantic HTML, accessible labels, secure attributes or project conventions.",
+      "Syntax learning curve: Complex abbreviations can become slower and more error-prone than several small expansions.",
+      "Documentation age: Parts of the official documentation describe older plugin-era customization and must be checked against the current editor."
+    ],
+    "keyFeatures": [
+      { "title": "Abbreviation expansion", "description": "Transforms CSS-like element expressions into structured markup with one editor command." },
+      { "title": "Nesting and multiplication", "description": "Uses operators for child, sibling, climb-up, grouping and repeated structures." },
+      { "title": "Attributes and text", "description": "Generates IDs, classes, custom attributes, numbering and text nodes from abbreviation syntax." },
+      { "title": "Custom snippets", "description": "Supported integrations can extend or override snippets and generation preferences." }
+    ],
+    "targetAudience": "Frontend developers and markup authors whose editor provides a maintained Emmet integration.",
+    "bestFor": [
+      "Repeated HTML structures and common CSS declarations",
+      "Rapid prototypes where generated output is immediately reviewed",
+      "Teams that standardize editor settings and keep linting and accessibility checks separate"
+    ],
+    "skipIf": [
+      "Your editor lacks a maintained or compatible Emmet implementation",
+      "Generated markup would bypass required review, formatting or accessibility gates",
+      "The team expects Emmet to provide compilation, debugging or browser testing"
+    ],
+    "verdict": "Use Emmet as a typing accelerator, not a correctness layer; standardize the host-editor integration and pair expansions with formatting, linting, accessibility checks and code review.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Emmet Docs — Abbreviations", "url": "https://docs.emmet.io/abbreviations/", "checkedAt": "2026-08-24", "supports": ["runtime expansion", "CSS-selector-like syntax", "HTML and XML generation", "editor tab stops", "toolkit scope"] },
+        { "label": "Emmet Docs — Abbreviation syntax", "url": "https://docs.emmet.io/abbreviations/syntax/", "checkedAt": "2026-08-24", "supports": ["elements", "nesting operators", "multiplication", "attributes", "text", "grouping", "complex-abbreviation caution"] },
+        { "label": "Emmet Docs — CSS abbreviations", "url": "https://docs.emmet.io/css-abbreviations/", "checkedAt": "2026-08-24", "supports": ["CSS property expansion", "values", "vendor prefixes", "fuzzy matching"] },
+        { "label": "Emmet Docs — Customization", "url": "https://docs.emmet.io/customization/", "checkedAt": "2026-08-24", "supports": ["custom snippets", "preferences", "syntax profiles", "JavaScript extensions", "editor-plugin differences"] },
+        { "label": "Emmet — Source repository", "url": "https://github.com/emmetio/emmet", "checkedAt": "2026-08-24", "supports": ["current toolkit scope", "source packages", "HTML and CSS focus", "MIT license", "open-source status"] }
+      ],
+      "limitations": ["Official Emmet documentation and source repository were reviewed; ToolCompare did not test any editor integration, compare expansion behavior, audit generated markup, validate accessibility or security, measure productivity, exercise customization or verify the maintenance status of third-party plugins. Some official documentation pages are several years old."]
+    }
   },
   {
     "slug": "capybara",
