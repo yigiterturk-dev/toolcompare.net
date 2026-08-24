@@ -14227,34 +14227,113 @@
     "slug": "filemaker",
     "name": "FileMaker",
     "category": "Developer Tools",
-    "shortDescription": "Database management system.",
+    "shortDescription": "Licensed low-code platform for building and hosting custom data apps.",
     "websiteUrl": "https://www.claris.com/filemaker/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "kullanici-basina",
+    "kriterler": { "api": true, "mobil": true, "acikKaynak": false, "sso": true },
+    "longDescription": "Claris FileMaker is a licensed low-code platform for creating custom data applications and delivering them through desktop, iPhone, iPad and web clients. Teams choose Claris-managed FileMaker Cloud, self-managed FileMaker Server or qualifying third-party hosting; user ranges, hosted-app count, storage, API transfer, plug-ins and operational responsibility vary by option and tier.",
+    "pros": [
+      "Integrated app builder: Combines data, layouts, scripts, permissions and application logic.",
+      "Multiple clients: FileMaker Pro, FileMaker Go and WebDirect cover desktop, supported Apple mobile devices and browsers.",
+      "Hosting choice: Offers Claris-managed Cloud, customer-managed Server and third-party hosting paths.",
+      "Data interfaces: FileMaker Data API, OData and Admin API cover supported data and administration use cases."
+    ],
+    "cons": [
+      "Layered licensing: User count, hosting option and selected tier shape cost and entitlements.",
+      "Cloud quotas: Current tiers document hosted-app, storage, active-flow, web-view and outbound API-transfer limits.",
+      "Cloud plug-in boundary: Claris states that FileMaker Cloud does not support plug-ins, while Server and third-party hosting can.",
+      "Self-hosting work: FileMaker Server makes the customer responsible for hardware, operating system, updates, performance and infrastructure practices."
+    ],
+    "keyFeatures": [
+      { "title": "Custom app builder", "description": "Builds data-centric workflows with layouts, scripts, calculations and access controls." },
+      { "title": "Cloud or Server hosting", "description": "Deploys through Claris-managed infrastructure or customer-controlled FileMaker Server." },
+      { "title": "Mobile and web access", "description": "Uses FileMaker Go on iPhone and iPad and WebDirect for supported browsers." },
+      { "title": "REST data interfaces", "description": "Exposes hosted data and administrative operations through supported APIs and OData." }
+    ],
+    "targetAudience": "Organizations building internal custom applications that can standardize on FileMaker clients, licensing and a governed hosting model.",
+    "bestFor": [
+      "Business workflows needing a tailored data application rather than an off-the-shelf SaaS process",
+      "Teams choosing explicitly between managed Cloud simplicity and Server infrastructure control",
+      "Deployments whose users, apps, storage and API transfer fit the selected license"
+    ],
+    "skipIf": [
+      "Required plug-ins must run in FileMaker Cloud",
+      "Expected app, storage or API-transfer usage exceeds the acceptable tier or purchase agreement",
+      "You need an open-source application stack without named-user licensing"
+    ],
+    "verdict": "Choose FileMaker when faster custom-app delivery outweighs platform licensing and ecosystem dependence; price the actual users, hosting, apps, storage, API traffic, integrations and operations together.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Claris — FileMaker", "url": "https://www.claris.com/filemaker/", "checkedAt": "2026-08-24", "supports": ["low-code custom apps", "FileMaker Pro", "FileMaker Cloud", "FileMaker Server", "FileMaker Go", "WebDirect", "access controls"] },
+        { "label": "Claris — Pricing", "url": "https://www.claris.com/pricing/", "checkedAt": "2026-08-24", "supports": ["per-user annual billing", "Cloud and Server choice", "user ranges", "hosted-app limits", "storage limits", "API transfer allowance", "Connect flows", "Studio web views"] },
+        { "label": "Claris — Hosting options", "url": "https://www.claris.com/filemaker/hosting/", "checkedAt": "2026-08-24", "supports": ["Cloud versus Server versus third party", "maintenance ownership", "backup responsibility", "plug-in support boundary", "infrastructure cost", "hosting selection"] },
+        { "label": "Claris Help — FileMaker Cloud introduction", "url": "https://help.claris.com/en/cloud-help/content/introduction.html", "checkedAt": "2026-08-24", "supports": ["Claris ID sign-on", "Data API", "OData", "Admin API", "REST architecture", "Cloud administration"] },
+        { "label": "Claris Help — Server license settings", "url": "https://help.claris.com/en/server-help/content/license-settings.html", "checkedAt": "2026-08-24", "supports": ["license certificate", "purchase agreement", "client connection limits", "license synchronization", "trial conversion"] },
+        { "label": "Claris — FileMaker Server", "url": "https://www.claris.com/filemaker/server/", "checkedAt": "2026-08-24", "supports": ["self-hosted deployment", "macOS Windows and Linux", "infrastructure control", "OAuth and Active Directory", "remote backup and standby add-ons", "trial"] }
+      ],
+      "limitations": ["Vendor pricing, product pages and help documentation were reviewed; ToolCompare did not purchase licenses, build an app, test clients or APIs, measure transfer and performance, operate Server, validate Cloud controls or calculate implementation and migration cost."]
+    }
   },
   {
     "slug": "git",
     "name": "Git",
     "category": "Developer Tools",
-    "shortDescription": "Distributed version control software system.",
+    "shortDescription": "Free distributed version-control software for local and shared repositories.",
     "websiteUrl": "https://git-scm.com",
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Git is the distributed version control system nearly all software development now runs on, tracking history locally and merging work between people.",
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Git is GPLv2-licensed distributed version-control software that stores snapshots, branches, tags and repository history locally and exchanges objects with other repositories through supported transports. Git itself is not a hosted collaboration service: accounts, pull requests, access policy, off-machine backups, issue tracking and CI require separate infrastructure or a hosting provider.",
     "pros": [
-      "The industry standard, so skills and tooling transfer everywhere",
-      "Works fully offline; every clone is a complete repository",
-      "Free and open source"
+      "Distributed history: A normal clone creates local repository objects and remote-tracking branches for offline work.",
+      "Branching tools: Branch, switch, merge, rebase and worktree commands support multiple development patterns.",
+      "Transport choice: Current documentation covers SSH, Git, HTTP and HTTPS repository URLs.",
+      "Open-source core: Git is distributed under GPL version 2 without a software license fee."
     ],
     "cons": [
-      "Command line concepts confuse newcomers for months",
-      "Rewriting history is easy to get wrong",
-      "Large binary files need extra tooling"
+      "Hosting not included: Git alone does not supply identities, review UI, protected branches, CI or remote availability.",
+      "History-changing commands: Reset, rebase, filter and force-push workflows need explicit team policy and recovery knowledge.",
+      "Credential handling is externalized: Git delegates secure credential storage to configured helpers or platform mechanisms.",
+      "Repository design matters: Large histories, binaries, submodules and shared-object optimizations introduce additional maintenance choices."
     ],
-    "targetAudience": "Every software team, and anyone versioning text files.",
-    "verdict": "Not really a choice any more. The learning curve is real but it is the price of entry."
+    "keyFeatures": [
+      { "title": "Commits and history", "description": "Records content snapshots and parent relationships in a local object database." },
+      { "title": "Branches and merges", "description": "Maintains movable branch references and combines divergent lines of development." },
+      { "title": "Distributed remotes", "description": "Fetches from and pushes to separately administered repositories over supported transports." },
+      { "title": "Clone controls", "description": "Supports full, shallow, sparse, partial, bare and mirror clone modes with different tradeoffs." }
+    ],
+    "targetAudience": "Developers and technical teams that need versioned source history and can define hosting, access, backup and collaboration policy around the core tool.",
+    "bestFor": [
+      "Text-oriented source repositories needing local history and branching",
+      "Teams selecting their own hosting and code-review workflow",
+      "Projects whose contributors can follow an agreed merge, rebase and recovery policy"
+    ],
+    "skipIf": [
+      "You expect user management, pull requests, CI and remote backups from the core installation",
+      "The primary assets are large binaries and no suitable storage strategy has been selected",
+      "The team cannot govern credentials, destructive history changes and repository recovery"
+    ],
+    "verdict": "Choose Git as the version-control engine only after choosing the surrounding host, access controls, backup model and workflow; evaluate those layers separately from the free command-line core.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Git — About", "url": "https://git-scm.com/about", "checkedAt": "2026-08-24", "supports": ["command-line core", "hosting-service distinction", "tool ecosystem", "GPLv2 license", "open-source status"] },
+        { "label": "Git Docs — git-clone", "url": "https://git-scm.com/docs/git-clone", "checkedAt": "2026-08-24", "supports": ["local clone", "remote-tracking branches", "full and shallow history", "partial and sparse clone", "bare and mirror modes", "supported transports", "shared-object risk"] },
+        { "label": "Git Docs — git-branch", "url": "https://git-scm.com/docs/git-branch", "checkedAt": "2026-08-24", "supports": ["branch creation", "tracking configuration", "branch deletion", "merged status", "remote-tracking branches"] },
+        { "label": "Git Docs — git-merge", "url": "https://git-scm.com/docs/git-merge", "checkedAt": "2026-08-24", "supports": ["history integration", "merge commits", "conflicts", "abort behavior", "fast-forward modes"] },
+        { "label": "Git Docs — Credentials", "url": "https://git-scm.com/docs/gitcredentials", "checkedAt": "2026-08-24", "supports": ["credential prompts", "credential helpers", "storage options", "OAuth helpers", "external authentication"] },
+        { "label": "Git Docs — Maintenance", "url": "https://git-scm.com/docs/git-gc", "checkedAt": "2026-08-24", "supports": ["repository cleanup", "object optimization", "pruning", "concurrent-operation caution", "configuration"] }
+      ],
+      "limitations": ["Official Git pages and command documentation were reviewed; ToolCompare did not benchmark repositories, test recovery, audit a hosting provider, compare GUIs, validate large-file strategies or assess a team's workflow adoption and security practices."]
+    }
   },
   {
     "slug": "mercurial",
