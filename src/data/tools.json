@@ -14339,24 +14339,57 @@
     "slug": "mercurial",
     "name": "Mercurial",
     "category": "Developer Tools",
-    "shortDescription": "Distributed revision-control tool for software developers.",
+    "shortDescription": "Free distributed source control with local history and Python extensions.",
     "websiteUrl": "https://www.mercurial-scm.org",
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Mercurial is a distributed version control system contemporary with Git, known for a more consistent command set.",
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Mercurial is GPL-licensed distributed source-control software in which each normal repository copy contains local project history for offline commits, branches and merges. The Python-based core can be extended with bundled or external extensions, but hosting, review workflows, identity, backups and CI are separate choices that must explicitly support Mercurial repositories.",
     "pros": [
-      "Commands are more predictable than Git's",
-      "Good performance on large repositories",
-      "Clear documentation"
+      "Distributed operation: Developers can commit and inspect full local history without a central server connection.",
+      "Consistent core interface: The project documents a compact command model with hazardous behavior moved behind opt-in extensions.",
+      "Extension system: Bundled and external Python extensions can add commands or alter workflows.",
+      "Active releases: The official project page lists maintained release notes through the current release line."
     ],
     "cons": [
-      "Ecosystem and hosting support have collapsed relative to Git",
-      "Fewer people know it",
-      "Most CI tools assume Git"
+      "Hosting not included: Access control, code review, issues and remote availability require hgweb or a compatible external service.",
+      "Integration validation: Teams must confirm that chosen IDE, CI, deployment and hosting tools support Mercurial.",
+      "Extension compatibility: Archived installation guidance warns that internal API changes can break extensions or dependent tools.",
+      "Archived wiki risk: The former project wiki is explicitly marked discontinued and potentially outdated, so current docs take precedence."
     ],
-    "targetAudience": "Teams with an existing Mercurial history.",
-    "verdict": "Technically fine, practically isolated. New projects should use Git for ecosystem reasons alone."
+    "keyFeatures": [
+      { "title": "Local repositories", "description": "Keeps project history locally for offline commit, diff, branch and merge operations." },
+      { "title": "Clone, pull and push", "description": "Exchanges changesets between independently administered repositories." },
+      { "title": "Named branches and bookmarks", "description": "Provides multiple mechanisms for organizing lines and heads of development." },
+      { "title": "Extensions", "description": "Adds or changes commands through bundled, third-party or custom Python modules." }
+    ],
+    "targetAudience": "Teams maintaining Mercurial repositories or selecting a distributed VCS after confirming compatible hosting and delivery integrations.",
+    "bestFor": [
+      "Existing Mercurial codebases that need continued distributed version control",
+      "Teams whose required host, CI and editor integrations explicitly support Mercurial",
+      "Workflows that benefit from Mercurial's core command model and selected extensions"
+    ],
+    "skipIf": [
+      "A required hosting or delivery service supports only another version-control system",
+      "Critical extensions are unmaintained or depend on unstable Mercurial internals",
+      "You expect the core tool to include hosted reviews, identity management and backups"
+    ],
+    "verdict": "Choose Mercurial on verified workflow fit, not broad ecosystem assumptions; inventory every host, extension and CI integration, then test upgrades against that exact toolchain.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Mercurial — About", "url": "https://www.mercurial-scm.org/about", "checkedAt": "2026-08-24", "supports": ["distributed architecture", "local full history", "branching and merging", "platform implementation", "extension model", "GPLv2-or-later license", "current release notes"] },
+        { "label": "Mercurial Help — Commands", "url": "https://www.mercurial-scm.org/help/commands", "checkedAt": "2026-08-24", "supports": ["core commands", "clone pull and push", "commit and merge", "branches and bookmarks", "repository operations"] },
+        { "label": "Mercurial Help — Extensions", "url": "https://www.mercurial-scm.org/help/topics/extensions", "checkedAt": "2026-08-24", "supports": ["extension activation", "bundled extensions", "third-party extensions", "configuration", "compatibility responsibility"] },
+        { "label": "Mercurial — 7.2 release notes", "url": "https://www.mercurial-scm.org/relnotes/7.2", "checkedAt": "2026-08-24", "supports": ["2026 maintenance releases", "behavior changes", "bug and corruption fixes", "Python support", "experimental feature boundaries", "upgrade evidence"] },
+        { "label": "Mercurial Wiki archive — Publishing repositories", "url": "https://wiki.mercurial-scm.org/PublishingRepositories", "checkedAt": "2026-08-24", "supports": ["archived-document warning", "hgweb publishing", "temporary hg serve boundary", "authentication requirement", "external hosting choices"] },
+        { "label": "Mercurial Wiki archive — Download", "url": "https://wiki.mercurial-scm.org/Download", "checkedAt": "2026-08-24", "supports": ["archived-document warning", "source packages", "binary package paths", "internal API stability warning", "extension breakage risk"] }
+      ],
+      "limitations": ["Official current pages and explicitly marked archived project documentation were reviewed; ToolCompare did not benchmark Mercurial, migrate a repository, test hosting or CI integrations, audit extensions, exercise recovery or compare team adoption with another VCS."]
+    }
   },
   {
     "slug": "fossil",
