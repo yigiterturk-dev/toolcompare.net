@@ -12701,9 +12701,22 @@
     "category": "Developer Tools",
     "shortDescription": "Distributed version control software system.",
     "websiteUrl": "https://git-scm.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Git is the distributed version control system nearly all software development now runs on, tracking history locally and merging work between people.",
+    "pros": [
+      "The industry standard, so skills and tooling transfer everywhere",
+      "Works fully offline; every clone is a complete repository",
+      "Free and open source"
+    ],
+    "cons": [
+      "Command line concepts confuse newcomers for months",
+      "Rewriting history is easy to get wrong",
+      "Large binary files need extra tooling"
+    ],
+    "targetAudience": "Every software team, and anyone versioning text files.",
+    "verdict": "Not really a choice any more. The learning curve is real but it is the price of entry."
   },
   {
     "slug": "mercurial",
@@ -12711,9 +12724,22 @@
     "category": "Developer Tools",
     "shortDescription": "Distributed revision-control tool for software developers.",
     "websiteUrl": "https://www.mercurial-scm.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Mercurial is a distributed version control system contemporary with Git, known for a more consistent command set.",
+    "pros": [
+      "Commands are more predictable than Git's",
+      "Good performance on large repositories",
+      "Clear documentation"
+    ],
+    "cons": [
+      "Ecosystem and hosting support have collapsed relative to Git",
+      "Fewer people know it",
+      "Most CI tools assume Git"
+    ],
+    "targetAudience": "Teams with an existing Mercurial history.",
+    "verdict": "Technically fine, practically isolated. New projects should use Git for ecosystem reasons alone."
   },
   {
     "slug": "fossil",
@@ -12961,9 +12987,22 @@
     "category": "Hosting",
     "shortDescription": "Backup and cloud hosting company.",
     "websiteUrl": "https://www.backblaze.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Backblaze provides very cheap object storage and computer backup, with S3-compatible APIs.",
+    "pros": [
+      "Storage price well below the large clouds",
+      "S3-compatible, so tooling works",
+      "No egress fee to several CDN partners"
+    ],
+    "cons": [
+      "Fewer regions than AWS",
+      "Fewer surrounding services",
+      "Support is lighter"
+    ],
+    "targetAudience": "Anyone storing large volumes of data or backups.",
+    "verdict": "The obvious choice when storage cost dominates. Pair it with a CDN to avoid egress charges."
   },
   {
     "slug": "dreamhost",
@@ -12971,9 +13010,22 @@
     "category": "Hosting",
     "shortDescription": "Web hosting provider and domain name registrar.",
     "websiteUrl": "https://www.dreamhost.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "DreamHost offers shared, VPS and managed WordPress hosting with a long track record and clear pricing.",
+    "pros": [
+      "Honest pricing without aggressive renewal jumps",
+      "Unlimited traffic on many plans",
+      "Long-standing reputation"
+    ],
+    "cons": [
+      "Performance trails premium managed hosts",
+      "Control panel is proprietary",
+      "Support can be slow at peak"
+    ],
+    "targetAudience": "Small sites that want dependable hosting without renewal surprises.",
+    "verdict": "A safe, unexciting choice, which is what most small sites need."
   },
   {
     "slug": "heroku",
@@ -12981,9 +13033,22 @@
     "category": "Hosting",
     "shortDescription": "Cloud Platform as a service.",
     "websiteUrl": "https://www.heroku.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Heroku popularised git-push deployment and still runs applications with add-on services and no server management.",
+    "pros": [
+      "Deploying is genuinely one command",
+      "Large add-on marketplace",
+      "Mature and predictable"
+    ],
+    "cons": [
+      "Expensive relative to raw infrastructure",
+      "Free tier was removed",
+      "Innovation has slowed under Salesforce"
+    ],
+    "targetAudience": "Teams that value deployment simplicity over hosting cost.",
+    "verdict": "Still pleasant to use, but newer platforms offer similar simplicity for less money."
   },
   {
     "slug": "hostinger",
@@ -12991,9 +13056,22 @@
     "category": "Hosting",
     "shortDescription": "Lithuanian web hosting company.",
     "websiteUrl": "https://www.hostinger.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Hostinger sells low-cost shared, cloud and WordPress hosting with heavy first-term discounts.",
+    "pros": [
+      "Very low entry pricing",
+      "Own control panel is simple",
+      "Global data centre choice"
+    ],
+    "cons": [
+      "Renewal prices are much higher than the first term",
+      "Resource limits on cheap plans",
+      "Upsells throughout the interface"
+    ],
+    "targetAudience": "Personal sites and small projects on a tight budget.",
+    "verdict": "Cheap to start and considerably less cheap to keep. Budget for the renewal from day one."
   },
   {
     "slug": "ionos",
@@ -13011,9 +13089,22 @@
     "category": "Hosting",
     "shortDescription": "French web hosting and cloud computing company.",
     "websiteUrl": "https://www.ovhcloud.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "OVHcloud is a European provider of dedicated servers, VPS and cloud, known for low prices on bare metal.",
+    "pros": [
+      "Strong price on dedicated hardware",
+      "European data sovereignty",
+      "Wide product range"
+    ],
+    "cons": [
+      "Support is documentation-first",
+      "Interface is complex",
+      "Managed services trail the hyperscalers"
+    ],
+    "targetAudience": "Teams wanting European hosting and comfortable managing servers.",
+    "verdict": "Excellent value on bare metal. Expect to solve your own problems."
   },
   {
     "slug": "rackspace-technology",
@@ -13021,9 +13112,22 @@
     "category": "Hosting",
     "shortDescription": "American managed cloud computing company.",
     "websiteUrl": "https://www.rackspace.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Rackspace provides managed hosting and managed services across public clouds, selling expertise more than infrastructure.",
+    "pros": [
+      "Managed service across several clouds",
+      "Support is the product",
+      "Long enterprise track record"
+    ],
+    "cons": [
+      "Expensive relative to self-managed",
+      "Value depends on how much help you need",
+      "Less relevant if you have your own ops team"
+    ],
+    "targetAudience": "Organisations that want someone else to run their cloud.",
+    "verdict": "You are buying people, not servers. Judge it on that."
   },
   {
     "slug": "scaleway",
@@ -13031,9 +13135,22 @@
     "category": "Hosting",
     "shortDescription": "French cloud computing company.",
     "websiteUrl": "https://www.scaleway.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Scaleway is a French cloud provider offering instances, managed databases and object storage with transparent pricing.",
+    "pros": [
+      "Clear pricing and a clean console",
+      "European jurisdiction",
+      "Good developer tooling"
+    ],
+    "cons": [
+      "Smaller service catalogue than AWS",
+      "Fewer regions",
+      "Some services are newer and less proven"
+    ],
+    "targetAudience": "European teams that want a modern cloud without hyperscaler complexity.",
+    "verdict": "A credible European alternative. Check that the specific managed services you need are mature."
   },
   {
     "slug": "gandi",
@@ -13041,9 +13158,22 @@
     "category": "Hosting",
     "shortDescription": "Domain registrar and web hosting company.",
     "websiteUrl": "https://www.gandi.net/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Gandi is a domain registrar and hosting provider with a long-standing reputation for straightforward dealing.",
+    "pros": [
+      "Transparent pricing without renewal tricks",
+      "Includes mail and TLS on many domains",
+      "Strong privacy stance"
+    ],
+    "cons": [
+      "Domain prices are above the cheapest registrars",
+      "Hosting products are secondary",
+      "Interface changes have annoyed long-time users"
+    ],
+    "targetAudience": "People who want a registrar that does not play pricing games.",
+    "verdict": "You pay a little more and get less nonsense. For many that is the right trade."
   },
   {
     "slug": "name-com",
@@ -13061,9 +13191,22 @@
     "category": "Hosting",
     "shortDescription": "Web hosting and data center automation software.",
     "websiteUrl": "https://www.plesk.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Plesk is a server control panel for managing websites, domains, mail and databases without the command line.",
+    "pros": [
+      "Manages many sites from one interface",
+      "Works on Linux and Windows",
+      "Extension ecosystem"
+    ],
+    "cons": [
+      "Licence cost per server",
+      "Adds its own layer to debug",
+      "Less relevant for containerised setups"
+    ],
+    "targetAudience": "Agencies and hosts managing many sites on their own servers.",
+    "verdict": "Saves real time at scale. A single application server does not need it."
   },
   {
     "slug": "alibaba-cloud",
@@ -13351,9 +13494,22 @@
     "category": "Developer Tools",
     "shortDescription": "Cloud-based data-warehousing company.",
     "websiteUrl": "https://www.snowflake.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Snowflake is a cloud data warehouse that separates storage from compute, so you scale query power independently of data volume.",
+    "pros": [
+      "Compute and storage scale separately",
+      "Handles very large analytical workloads",
+      "Data sharing between organisations"
+    ],
+    "cons": [
+      "Consumption pricing can escalate fast",
+      "Requires governance to control spend",
+      "Overkill below serious data volumes"
+    ],
+    "targetAudience": "Companies running analytics on data too large for a normal database.",
+    "verdict": "The category leader for good reason. The bill is the thing teams underestimate."
   },
   {
     "slug": "splunk",
@@ -13361,9 +13517,22 @@
     "category": "Developer Tools",
     "shortDescription": "American technology company.",
     "websiteUrl": "https://www.splunk.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Splunk searches and analyses machine data — logs, metrics and events — at enterprise scale.",
+    "pros": [
+      "Extremely powerful search across machine data",
+      "Mature security and compliance use cases",
+      "Large ecosystem of apps"
+    ],
+    "cons": [
+      "Priced by data volume and expensive",
+      "Query language takes learning",
+      "Heavy to operate"
+    ],
+    "targetAudience": "Enterprises with security or operational log requirements.",
+    "verdict": "Capable and costly. Most teams get further with cheaper log tooling."
   },
   {
     "slug": "sumo-logic",
@@ -13371,9 +13540,22 @@
     "category": "Developer Tools",
     "shortDescription": "U.S. information technology company.",
     "websiteUrl": "https://www.sumologic.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Sumo Logic is cloud-native log management and security analytics, sold as a service rather than software you run.",
+    "pros": [
+      "No infrastructure to operate",
+      "Security analytics built in",
+      "Scales without capacity planning"
+    ],
+    "cons": [
+      "Ingest-based pricing needs monitoring",
+      "Query language is its own dialect",
+      "Less flexible than self-hosted stacks"
+    ],
+    "targetAudience": "Teams wanting log analytics without running the platform.",
+    "verdict": "A reasonable middle ground between self-hosted and Splunk pricing."
   },
   {
     "slug": "datastax",
@@ -13461,9 +13643,22 @@
     "category": "Marketing",
     "shortDescription": "American technology company.",
     "websiteUrl": "https://www.surveymonkey.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "SurveyMonkey builds surveys and collects responses, with analysis and benchmarking on paid tiers.",
+    "pros": [
+      "Fast to build a competent survey",
+      "Question types and logic cover most needs",
+      "Widely recognised by respondents"
+    ],
+    "cons": [
+      "Response limits on lower plans",
+      "Advanced analysis behind higher tiers",
+      "Branding on the free plan"
+    ],
+    "targetAudience": "Anyone who needs survey responses without building a form system.",
+    "verdict": "The default survey tool. Research teams needing rigour use specialist software."
   },
   {
     "slug": "qualtrics",
@@ -13471,9 +13666,22 @@
     "category": "Marketing",
     "shortDescription": "Experience management company.",
     "websiteUrl": "https://www.qualtrics.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Qualtrics runs experience management programmes: customer, employee and product research at enterprise scale.",
+    "pros": [
+      "Serious research methodology built in",
+      "Handles complex survey logic",
+      "Strong analysis and reporting"
+    ],
+    "cons": [
+      "Enterprise pricing and contracts",
+      "Far more than simple survey needs",
+      "Implementation requires training"
+    ],
+    "targetAudience": "Organisations running formal research programmes.",
+    "verdict": "The right tool for genuine research. For a customer feedback form it is absurd overkill."
   },
   {
     "slug": "braze-inc",
@@ -13491,9 +13699,22 @@
     "category": "Design",
     "shortDescription": "Web hosting service.",
     "websiteUrl": "https://www.weebly.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Weebly is a drag-and-drop website builder, now part of Square, with commerce features attached.",
+    "pros": [
+      "Simple enough for non-technical owners",
+      "Square payments integrated",
+      "Cheap entry plans"
+    ],
+    "cons": [
+      "Less design flexibility than rivals",
+      "Development has slowed since acquisition",
+      "SEO controls are limited"
+    ],
+    "targetAudience": "Very small businesses that need a simple site quickly.",
+    "verdict": "Adequate and increasingly overtaken. Squarespace and Wix are more actively developed."
   },
   {
     "slug": "honeybook",
@@ -13721,9 +13942,22 @@
     "category": "Developer Tools",
     "shortDescription": "Free forge based on Git written in Go.",
     "websiteUrl": "https://gitea.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Gitea is a lightweight, self-hostable Git service with issues, pull requests and CI, running comfortably on modest hardware.",
+    "pros": [
+      "Runs on very little hardware",
+      "Familiar interface for GitHub users",
+      "Open source with no seat limits"
+    ],
+    "cons": [
+      "Fewer features than GitHub or GitLab",
+      "You handle backups and upgrades",
+      "Smaller plugin ecosystem"
+    ],
+    "targetAudience": "Teams that want their own Git host without running GitLab.",
+    "verdict": "The pragmatic self-hosted choice. GitLab does more; Gitea does enough with far less overhead."
   },
   {
     "slug": "forgejo",
@@ -13731,9 +13965,22 @@
     "category": "Developer Tools",
     "shortDescription": "Free and open-source software forge.",
     "websiteUrl": "https://forgejo.org/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Forgejo is a community-governed fork of Gitea, created to keep the project fully open and independently run.",
+    "pros": [
+      "Community governance rather than a single company",
+      "Same low resource needs as Gitea",
+      "Actively developed"
+    ],
+    "cons": [
+      "Younger project identity",
+      "Smaller ecosystem",
+      "Migration considerations if you switch back"
+    ],
+    "targetAudience": "Self-hosters who care about project governance as well as features.",
+    "verdict": "Choose it over Gitea if governance matters to you; the day-to-day experience is close to identical."
   },
   {
     "slug": "gitee",
@@ -13771,9 +14018,22 @@
     "category": "Project Management",
     "shortDescription": "Computer bug tracking software.",
     "websiteUrl": "https://www.redmine.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Redmine is an open-source project management and issue tracking application that has run reliably for over a decade.",
+    "pros": [
+      "Free and self-hostable with no seat limits",
+      "Plugin ecosystem covers most needs",
+      "Stable and predictable"
+    ],
+    "cons": [
+      "Interface looks its age",
+      "Plugins vary in quality and maintenance",
+      "Ruby stack needs someone to maintain it"
+    ],
+    "targetAudience": "Organisations that want issue tracking without licence costs.",
+    "verdict": "Unfashionable and still working. If the dated interface is acceptable, it costs nothing but hosting."
   },
   {
     "slug": "openproject",
@@ -13781,9 +14041,22 @@
     "category": "Project Management",
     "shortDescription": "Open-source project management software.",
     "websiteUrl": "https://www.openproject.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "OpenProject is open-source project management with Gantt charts, agile boards and time tracking, self-hostable or cloud.",
+    "pros": [
+      "Classic project management and agile in one tool",
+      "Self-hostable with no per-seat licence",
+      "Gantt and baseline features included"
+    ],
+    "cons": [
+      "Enterprise features are behind the paid edition",
+      "Self-hosting is real maintenance",
+      "Interface is functional rather than fast"
+    ],
+    "targetAudience": "Organisations needing formal project planning without commercial licensing.",
+    "verdict": "The most complete open-source option for traditional project management."
   },
   {
     "slug": "freedcamp",
@@ -13791,9 +14064,22 @@
     "category": "Project Management",
     "shortDescription": "Project management software.",
     "websiteUrl": "https://freedcamp.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Freedcamp offers tasks, discussions, files and calendars with an unusually generous free tier for unlimited users.",
+    "pros": [
+      "Unlimited users on the free plan",
+      "Covers the basics competently",
+      "Cheap paid tiers"
+    ],
+    "cons": [
+      "Interface is dated",
+      "Advanced features are add-on priced",
+      "Reporting is limited"
+    ],
+    "targetAudience": "Small teams and non-profits that cannot pay per seat.",
+    "verdict": "Hard to beat on price. Teams needing polish will pay for it elsewhere."
   },
   {
     "slug": "toggl-track",
@@ -13801,9 +14087,22 @@
     "category": "Productivity",
     "shortDescription": "Cross-platform time tracking app.",
     "websiteUrl": "https://toggl.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Toggl Track records time with a one-click timer across desktop, mobile and browser, then reports it for billing or analysis.",
+    "pros": [
+      "Starting a timer takes one click",
+      "Works everywhere including a browser extension",
+      "Reports suitable for client billing"
+    ],
+    "cons": [
+      "Team features need a paid plan",
+      "Manual tracking depends on discipline",
+      "Project management features are thin"
+    ],
+    "targetAudience": "Freelancers and agencies who bill by the hour.",
+    "verdict": "The least annoying time tracker, which is the only quality that matters in one."
   },
   {
     "slug": "workflowy",
@@ -13811,9 +14110,22 @@
     "category": "Productivity",
     "shortDescription": "Outliner software.",
     "websiteUrl": "https://workflowy.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "WorkFlowy is a single infinite outline: everything is a bullet you can zoom into, tag and search.",
+    "pros": [
+      "One structure to learn, nothing to configure",
+      "Zooming into any bullet keeps focus",
+      "Very fast"
+    ],
+    "cons": [
+      "Outline structure does not suit every kind of note",
+      "Limited formatting",
+      "Collaboration is basic"
+    ],
+    "targetAudience": "People who think in nested lists.",
+    "verdict": "Beautifully simple if the outline model fits your head. If it does not, nothing will convince you."
   },
   {
     "slug": "zulip",
@@ -13821,9 +14133,22 @@
     "category": "Communication",
     "shortDescription": "Open source chat and collaboration software.",
     "websiteUrl": "https://zulip.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Zulip organises chat into topics inside channels, so conversations stay readable even when you were away for a day.",
+    "pros": [
+      "Topic threading makes catching up genuinely possible",
+      "Open source and self-hostable",
+      "Good for asynchronous, distributed teams"
+    ],
+    "cons": [
+      "Topic discipline must be taught to the team",
+      "Interface is denser than Slack",
+      "Smaller integration ecosystem"
+    ],
+    "targetAudience": "Distributed teams that lose context in flat chat.",
+    "verdict": "The threading model solves a real Slack problem. It only works if the team maintains it."
   },
   {
     "slug": "microsoft-project",
@@ -13831,9 +14156,22 @@
     "category": "Project Management",
     "shortDescription": "Project management software.",
     "websiteUrl": "https://products.office.com/project",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Microsoft Project is the long-standing tool for formal project scheduling: dependencies, critical path and resource levelling.",
+    "pros": [
+      "Serious scheduling capability",
+      "Expected in many enterprise and construction contexts",
+      "Integrates with the Microsoft stack"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "Licensing is confusing",
+      "Overkill for anything but formal projects"
+    ],
+    "targetAudience": "Project managers running plans with real dependencies and resources.",
+    "verdict": "Still the reference for critical-path planning. Software teams almost never need it."
   },
   {
     "slug": "checkvist",
@@ -13961,9 +14299,22 @@
     "category": "Marketing",
     "shortDescription": "Email marketing platform.",
     "websiteUrl": "https://www.getresponse.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "GetResponse combines email marketing with landing pages, automation and webinar hosting.",
+    "pros": [
+      "Webinars included, which rivals charge extra for",
+      "Automation builder is capable",
+      "Landing pages built in"
+    ],
+    "cons": [
+      "Interface tries to do a lot at once",
+      "Deliverability is mid-pack",
+      "List-size pricing"
+    ],
+    "targetAudience": "Small businesses that run webinars alongside email marketing.",
+    "verdict": "The webinar inclusion is the differentiator. Pure email senders have better options."
   },
   {
     "slug": "mailgun",
@@ -13971,9 +14322,22 @@
     "category": "Marketing",
     "shortDescription": "Email delivery service.",
     "websiteUrl": "https://mailgun.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Mailgun is a developer-focused email API for sending, receiving and tracking mail at volume.",
+    "pros": [
+      "Strong API and inbound routing",
+      "Detailed logs and analytics",
+      "Scales to high volume"
+    ],
+    "cons": [
+      "Support tiers cost extra",
+      "Deliverability depends on IP setup",
+      "Interface is developer-oriented"
+    ],
+    "targetAudience": "Applications sending transactional email programmatically.",
+    "verdict": "A solid technical choice. Budget for a dedicated IP if volume matters."
   },
   {
     "slug": "mailjet",
@@ -13981,9 +14345,22 @@
     "category": "Marketing",
     "shortDescription": "French email marketing platform.",
     "websiteUrl": "https://www.mailjet.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Mailjet handles transactional and marketing email with a collaborative template editor and European data hosting.",
+    "pros": [
+      "Real-time collaboration on templates",
+      "EU data residency option",
+      "Transactional and marketing together"
+    ],
+    "cons": [
+      "Deliverability trails specialist providers",
+      "Interface can be slow",
+      "Advanced features on higher tiers"
+    ],
+    "targetAudience": "European teams needing both marketing and transactional email.",
+    "verdict": "The EU hosting and template collaboration are the reasons to pick it."
   },
   {
     "slug": "chartbeat",
@@ -13991,9 +14368,22 @@
     "category": "Marketing",
     "shortDescription": "American web analytics company.",
     "websiteUrl": "https://chartbeat.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Chartbeat shows what is happening on your site right now, built for newsrooms deciding what to promote.",
+    "pros": [
+      "Real-time attention data, not just pageviews",
+      "Built around editorial decisions",
+      "Big-screen dashboards for newsrooms"
+    ],
+    "cons": [
+      "Priced for publishers",
+      "Little value outside editorial contexts",
+      "Historical analysis is not the focus"
+    ],
+    "targetAudience": "Publishers making live decisions about content placement.",
+    "verdict": "Excellent for newsrooms and irrelevant for almost everyone else."
   },
   {
     "slug": "statcounter",
@@ -14001,9 +14391,22 @@
     "category": "Marketing",
     "shortDescription": "Web analytics service that reports visitor traffic and referrers.",
     "websiteUrl": "https://statcounter.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "StatCounter provides simple visitor analytics with a long history and a usable free tier.",
+    "pros": [
+      "Simple and quick to read",
+      "Free tier for small sites",
+      "Visitor-level detail"
+    ],
+    "cons": [
+      "Log limits on the free plan",
+      "Interface is dated",
+      "Fewer features than modern analytics"
+    ],
+    "targetAudience": "Small sites wanting basic visitor stats without complexity.",
+    "verdict": "Old-fashioned and functional. Privacy-focused alternatives are more current."
   },
   {
     "slug": "liveperson",
@@ -14021,9 +14424,22 @@
     "category": "Marketing",
     "shortDescription": "Search engine optimization plugin for WordPress.",
     "websiteUrl": "https://wordpress.org/plugins/wordpress-seo/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Yoast SEO manages the technical SEO of a WordPress site: meta tags, sitemaps, schema and content checks.",
+    "pros": [
+      "Handles WordPress SEO plumbing correctly",
+      "Content analysis guides non-specialists",
+      "Free version covers the essentials"
+    ],
+    "cons": [
+      "Readability advice is formulaic",
+      "Premium upsells are persistent",
+      "Adds weight to the admin interface"
+    ],
+    "targetAudience": "Anyone running SEO on a WordPress site.",
+    "verdict": "The default for good reason. Treat its green lights as hygiene, not strategy."
   },
   {
     "slug": "phplist",
@@ -14071,9 +14487,22 @@
     "category": "Productivity",
     "shortDescription": "Password management software.",
     "websiteUrl": "https://lastpass.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "LastPass is a password manager with browser-first design and business features.",
+    "pros": [
+      "Wide platform coverage",
+      "Easy for non-technical users",
+      "Business admin controls"
+    ],
+    "cons": [
+      "Repeated security incidents damaged trust",
+      "Free tier restricted to one device type",
+      "Interface changes have been unpopular"
+    ],
+    "targetAudience": "Teams already using it, weighing whether to move.",
+    "verdict": "Capable, but the breach history is a real consideration. Most alternatives now look safer."
   },
   {
     "slug": "nordpass",
@@ -14081,9 +14510,22 @@
     "category": "Productivity",
     "shortDescription": "Password management software.",
     "websiteUrl": "https://nordpass.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "NordPass is a password manager from the NordVPN team, with modern encryption and a clean interface.",
+    "pros": [
+      "Clean, simple interface",
+      "Data breach scanner included",
+      "Reasonable family and business pricing"
+    ],
+    "cons": [
+      "Younger than established rivals",
+      "Fewer power-user features",
+      "Bundled upsells with other Nord products"
+    ],
+    "targetAudience": "People who want straightforward password management.",
+    "verdict": "Perfectly good. Bitwarden costs less and 1Password is more polished."
   },
   {
     "slug": "enpass",
@@ -14091,9 +14533,22 @@
     "category": "Productivity",
     "shortDescription": "Password management software.",
     "websiteUrl": "https://www.enpass.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Enpass stores passwords locally and syncs through your own cloud account rather than the vendor's servers.",
+    "pros": [
+      "Your vault syncs via your own cloud, not theirs",
+      "One-off licence option",
+      "Works offline"
+    ],
+    "cons": [
+      "You are responsible for sync and backup",
+      "Interface is plainer than rivals",
+      "Team features are limited"
+    ],
+    "targetAudience": "People who do not want a vendor holding their vault at all.",
+    "verdict": "The right model if you distrust hosted vaults. It moves responsibility to you."
   },
   {
     "slug": "keeweb",
@@ -14121,9 +14576,22 @@
     "category": "Productivity",
     "shortDescription": "Note-taking application.",
     "websiteUrl": "https://simplenote.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Simplenote is free, fast, plain-text note taking that syncs everywhere and does nothing else.",
+    "pros": [
+      "Genuinely free with no tier",
+      "Instant sync and search",
+      "Available on every platform"
+    ],
+    "cons": [
+      "Plain text only, no attachments",
+      "No organisation beyond tags",
+      "No collaboration to speak of"
+    ],
+    "targetAudience": "People who want notes to open instantly and stay out of the way.",
+    "verdict": "Does one thing perfectly. Anyone needing structure will outgrow it in a week."
   },
   {
     "slug": "tiddlywiki",
@@ -14131,9 +14599,22 @@
     "category": "Productivity",
     "shortDescription": "Personal wiki software.",
     "websiteUrl": "https://tiddlywiki.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "TiddlyWiki is a self-contained personal wiki that lives in a single HTML file you own outright.",
+    "pros": [
+      "Entire wiki is one portable file",
+      "No server or account needed",
+      "Highly customisable"
+    ],
+    "cons": [
+      "Setup and sync require effort",
+      "Concepts are unusual at first",
+      "Not built for collaboration"
+    ],
+    "targetAudience": "People who want a personal knowledge base with no dependencies at all.",
+    "verdict": "Remarkable engineering and genuinely yours forever. The learning curve is the price."
   },
   {
     "slug": "prezi",
@@ -14141,9 +14622,22 @@
     "category": "Design",
     "shortDescription": "Online presentation design platform.",
     "websiteUrl": "https://www.prezi.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Prezi presents on a zoomable canvas rather than a sequence of slides.",
+    "pros": [
+      "Visually distinctive presentations",
+      "Zooming can express structure well",
+      "Good for non-linear talks"
+    ],
+    "cons": [
+      "Overused zooming makes audiences seasick",
+      "Less suited to dense information",
+      "Subscription required for most features"
+    ],
+    "targetAudience": "Presenters whose content has a spatial or hierarchical structure.",
+    "verdict": "Effective when the structure genuinely is spatial. Used as decoration it hurts more than helps."
   },
   {
     "slug": "freeplane",
@@ -14191,9 +14685,22 @@
     "category": "Design",
     "shortDescription": "Vector graphics editor.",
     "websiteUrl": "https://www.coreldraw.com/en/product/coreldraw/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "CorelDRAW is a long-established vector design suite, strong in print, signage and apparel workflows.",
+    "pros": [
+      "Deep vector and print production features",
+      "One-off licence still available",
+      "Strong in signage and apparel trades"
+    ],
+    "cons": [
+      "Interface is dense and dated",
+      "Weaker for screen and interface design",
+      "Smaller community than Adobe"
+    ],
+    "targetAudience": "Print, signage and apparel designers with established workflows.",
+    "verdict": "Entrenched in specific trades for good reasons. Screen designers should look elsewhere."
   },
   {
     "slug": "affinity",
@@ -14221,9 +14728,22 @@
     "category": "Design",
     "shortDescription": "Armenian Cross-platform design, photo and video editing platform.",
     "websiteUrl": "https://picsart.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Picsart is a mobile-first photo and video editor with templates and AI tools aimed at social content.",
+    "pros": [
+      "Large template library",
+      "Fast on mobile",
+      "AI editing tools included"
+    ],
+    "cons": [
+      "Ads and upsells in the free version",
+      "Output quality varies",
+      "Not a professional editing tool"
+    ],
+    "targetAudience": "Creators producing social content on a phone.",
+    "verdict": "Good for quick social assets. Professional work needs a desktop editor."
   },
   {
     "slug": "pixelmator-pro",
@@ -14231,9 +14751,22 @@
     "category": "Design",
     "shortDescription": "Graphics editor for Mac developed by Apple.",
     "websiteUrl": "https://www.pixelmator.com/pro/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Pixelmator Pro is a native macOS image editor with a one-off price and machine-learning editing tools.",
+    "pros": [
+      "Native and fast on Apple hardware",
+      "One-off purchase",
+      "Handles PSD files"
+    ],
+    "cons": [
+      "macOS only",
+      "Fewer advanced features than Photoshop",
+      "Smaller plugin ecosystem"
+    ],
+    "targetAudience": "Mac users who need serious image editing without a subscription.",
+    "verdict": "The best value image editor on macOS."
   },
   {
     "slug": "kinemaster",
@@ -14301,9 +14834,22 @@
     "category": "CRM",
     "shortDescription": "Constituency relationship management suite.",
     "websiteUrl": "https://civicrm.org/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "CiviCRM is open-source constituent relationship management built for non-profits, memberships and campaigns.",
+    "pros": [
+      "Free and self-hostable",
+      "Built for donations, memberships and events",
+      "Integrates with WordPress and Drupal"
+    ],
+    "cons": [
+      "Requires technical setup and maintenance",
+      "Interface is functional rather than modern",
+      "Small implementer community"
+    ],
+    "targetAudience": "Non-profits and membership organisations with technical support available.",
+    "verdict": "The standard open-source non-profit CRM. Budget for someone to run it."
   },
   {
     "slug": "sugarcrm",
@@ -14311,9 +14857,22 @@
     "category": "CRM",
     "shortDescription": "American software company.",
     "websiteUrl": "https://www.sugarcrm.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "SugarCRM is a customisable CRM available as cloud or self-hosted, with a history in open source.",
+    "pros": [
+      "Highly customisable",
+      "Self-hosting option remains",
+      "Strong workflow automation"
+    ],
+    "cons": [
+      "Customisation implies implementation work",
+      "Interface trails newer rivals",
+      "Licensing changed away from open source"
+    ],
+    "targetAudience": "Organisations needing a CRM shaped to an unusual process.",
+    "verdict": "Flexible and unglamorous. Pick it when standard CRMs cannot model your process."
   },
   {
     "slug": "kayako",
@@ -14341,9 +14900,22 @@
     "category": "CRM",
     "shortDescription": "Microsoft's CRM and ERP application suite for business operations.",
     "websiteUrl": "https://dynamics.microsoft.com/en-us/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Microsoft Dynamics 365 covers CRM and ERP across sales, service, finance and operations, integrated with the Microsoft stack.",
+    "pros": [
+      "Deep Microsoft 365 and Power Platform integration",
+      "Covers CRM and ERP in one family",
+      "Enterprise governance and compliance"
+    ],
+    "cons": [
+      "Module licensing is complex and expensive",
+      "Implementation is a project",
+      "Overkill for small teams"
+    ],
+    "targetAudience": "Enterprises already standardised on Microsoft.",
+    "verdict": "Natural for Microsoft shops. Getting the licensing right is half the work."
   },
   {
     "slug": "nationbuilder",
@@ -14401,9 +14973,22 @@
     "category": "Finance Tools",
     "shortDescription": "Enterprise resource planning software.",
     "websiteUrl": "https://erpnext.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "ERPNext is an open-source ERP covering accounting, inventory, manufacturing, HR and CRM in one system.",
+    "pros": [
+      "Full ERP scope with no licence fee",
+      "Self-hostable with complete control",
+      "Active community"
+    ],
+    "cons": [
+      "Implementation and configuration are substantial",
+      "Requires technical maintenance",
+      "Localisation varies by country"
+    ],
+    "targetAudience": "Small and mid-size businesses wanting ERP without licence costs.",
+    "verdict": "Genuinely capable for the price. The saving is in licences, not in effort."
   },
   {
     "slug": "freeagent",
@@ -14411,9 +14996,22 @@
     "category": "Finance Tools",
     "shortDescription": "British cloud-based accounting software company.",
     "websiteUrl": "https://www.freeagent.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "FreeAgent is accounting software for freelancers and small businesses, strong in the UK where it handles tax filing.",
+    "pros": [
+      "UK tax filing built in",
+      "Clear interface for non-accountants",
+      "Free with some UK business accounts"
+    ],
+    "cons": [
+      "Best value in the UK only",
+      "Fewer integrations than larger rivals",
+      "Limited for inventory businesses"
+    ],
+    "targetAudience": "UK freelancers and small service companies.",
+    "verdict": "Excellent inside the UK, much less compelling outside it."
   },
   {
     "slug": "quicken",
@@ -14421,9 +15019,22 @@
     "category": "Finance Tools",
     "shortDescription": "Personal finance management tool.",
     "websiteUrl": "https://www.quicken.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Quicken manages personal and small business finances on the desktop, with a long history and a subscription model.",
+    "pros": [
+      "Deep personal finance features",
+      "Long track record and stable data model",
+      "Works offline"
+    ],
+    "cons": [
+      "Subscription for what used to be owned software",
+      "Interface is dated",
+      "Bank connections break periodically"
+    ],
+    "targetAudience": "People managing detailed personal or rental finances.",
+    "verdict": "Still the most capable personal finance tool. The move to subscription annoyed a loyal base."
   },
   {
     "slug": "tally-solutions",
@@ -14441,9 +15052,22 @@
     "category": "Finance Tools",
     "shortDescription": "American financial technology company.",
     "websiteUrl": "https://www.tipalti.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Tipalti automates mass payouts and supplier payments, including tax forms and cross-border compliance.",
+    "pros": [
+      "Handles global payouts and tax documentation",
+      "Reduces manual finance work at volume",
+      "Supplier onboarding portal"
+    ],
+    "cons": [
+      "Priced for companies paying many suppliers",
+      "Implementation takes finance process work",
+      "Overkill for a handful of payments"
+    ],
+    "targetAudience": "Companies paying many suppliers, affiliates or creators internationally.",
+    "verdict": "Valuable at payout volume. Below that, your bank and accounting tool suffice."
   },
   {
     "slug": "bench-accounting",
@@ -14481,9 +15105,22 @@
     "category": "HR Software",
     "shortDescription": "Israel-British human resources platform.",
     "websiteUrl": "https://www.hibob.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "HiBob is HR software for mid-size companies, with a focus on culture, engagement and a friendly interface.",
+    "pros": [
+      "Interface staff actually use voluntarily",
+      "Good engagement and culture features",
+      "Flexible org structures"
+    ],
+    "cons": [
+      "Payroll depends on partners in many countries",
+      "Pricing is quote-based",
+      "Less depth than enterprise suites"
+    ],
+    "targetAudience": "Growing companies where HR adoption by staff matters.",
+    "verdict": "The adoption advantage is real. Payroll coverage is the thing to check first."
   },
   {
     "slug": "icims",
@@ -14491,9 +15128,22 @@
     "category": "HR Software",
     "shortDescription": "Application management software.",
     "websiteUrl": "https://www.icims.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "iCIMS is enterprise talent acquisition software covering sourcing, applicant tracking and onboarding at scale.",
+    "pros": [
+      "Handles high-volume enterprise hiring",
+      "Strong compliance and reporting",
+      "Large integration ecosystem"
+    ],
+    "cons": [
+      "Enterprise pricing and long contracts",
+      "Implementation is a project",
+      "Interface feels heavy"
+    ],
+    "targetAudience": "Large organisations hiring continuously at volume.",
+    "verdict": "Built for scale. Small teams should not go near it."
   },
   {
     "slug": "papaya-global",
@@ -14511,9 +15161,22 @@
     "category": "HR Software",
     "shortDescription": "American financial software company.",
     "websiteUrl": "https://www.paylocity.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "Paylocity provides US payroll and HR with self-service and workforce management features.",
+    "pros": [
+      "Solid US payroll and tax handling",
+      "Employee self-service reduces HR load",
+      "Workforce management included"
+    ],
+    "cons": [
+      "US only",
+      "Implementation takes time",
+      "Support quality varies by account"
+    ],
+    "targetAudience": "US companies wanting payroll and HR from one vendor.",
+    "verdict": "A dependable US payroll choice. Irrelevant outside the US."
   },
   {
     "slug": "beamery",
@@ -14531,9 +15194,22 @@
     "category": "Customer Service",
     "shortDescription": "Service management software.",
     "websiteUrl": "https://www.otrs.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "OTRS is an open-source service management and ticketing system used for IT service desks.",
+    "pros": [
+      "Open source with a self-hosted option",
+      "ITSM process support",
+      "No per-agent licence when self-hosted"
+    ],
+    "cons": [
+      "Configuration is complex",
+      "Interface is dated",
+      "Commercial edition needed for some features"
+    ],
+    "targetAudience": "IT service desks that need process compliance without commercial licensing.",
+    "verdict": "Capable where ITSM process matters. Expect configuration work, not a quick setup."
   },
   {
     "slug": "uservoice",
@@ -14541,8 +15217,21 @@
     "category": "Customer Service",
     "shortDescription": "Software-as-a-Service (SaaS) company.",
     "websiteUrl": "https://www.uservoice.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "longDescription": "UserVoice collects product feedback and feature requests, letting customers vote and product teams see demand.",
+    "pros": [
+      "Customer voting surfaces real demand",
+      "Keeps requests out of support inboxes",
+      "Closes the loop with requesters"
+    ],
+    "cons": [
+      "Loudest customers are not always right",
+      "Priced above simple feedback boards",
+      "Public roadmaps invite expectations"
+    ],
+    "targetAudience": "Product teams drowning in feature requests from customers.",
+    "verdict": "Useful for structure. Voting is a signal, not a roadmap."
   }
 ]
