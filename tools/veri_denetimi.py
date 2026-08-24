@@ -79,6 +79,49 @@ if coklu:
     ozet = "; ".join(f"{a}: {','.join(s)}" for a, s in sorted(coklu.items())[:6])
     bulgular.append(("UYARI", f"{len(coklu)} alan adinda birden fazla kayit (ayni urun olabilir) -> {ozet}"))
 
+# 8) BIR ADIN DIGERININ ICINDE GECMESI.
+#    Alan adi kontrolu her seyi yakalamiyor: ayni urun iki farkli adreste
+#    olabilir. Ama SADECE metin benzerligine bakmak gurultu uretiyor --
+#    olculdu: Dropbox/Box, Readwise/Wise, Wave/Shortwave ve
+#    PlanetScale/Plane birbirinden tamamen ayri urunler oldugu halde
+#    eslesti. O yuzden iki ek sart aranir:
+#      (a) ayni alan adini paylasiyorlar, VEYA
+#      (b) fazladan gecen kelimeler BILINEN EK kelimeler
+#          (Pro, Plus, Cloud, Studio, Hosting, Teams, AI...)
+#    Bu iki sart, gercek ciftleri (Render/Render Hosting, Todoist/
+#    Todoist Pro) yakalarken tesadufi benzerlikleri eliyor.
+EKLER = {"pro", "plus", "cloud", "studio", "hosting", "platform", "team",
+         "teams", "ai", "app", "suite", "enterprise", "business", "premium",
+         "online", "store", "commerce", "insights", "workflows", "pages",
+         "phone", "calendar", "meet", "mail", "docs", "analytics",
+         "sync", "publish", "network", "tools"}
+
+def _sade(x):
+    return re.sub(r"[^a-z0-9]", "", x.lower())
+
+def _alan(t):
+    if not t.get("websiteUrl"):
+        return ""
+    a = urllib.parse.urlparse(t["websiteUrl"]).netloc.lower()
+    return a[4:] if a.startswith("www.") else a
+
+supheli = []
+for i, a in enumerate(araclar):
+    for b in araclar[i + 1:]:
+        na, nb = _sade(a["name"]), _sade(b["name"])
+        if not na or not nb or na == nb:
+            continue
+        if na not in nb and nb not in na:
+            continue
+        uzun, kisa = (b, a) if len(nb) > len(na) else (a, b)
+        fazla = {k.lower() for k in uzun["name"].split()} - {k.lower() for k in kisa["name"].split()}
+        if _alan(a) and _alan(a) == _alan(b):
+            supheli.append(f"{a['slug']}+{b['slug']} (ayni alan)")
+        elif fazla and fazla <= EKLER:
+            supheli.append(f"{a['slug']}+{b['slug']} (ek kelime: {','.join(sorted(fazla))})")
+if supheli:
+    bulgular.append(("UYARI", f"{len(supheli)} olasi ayni-urun cifti -> {'; '.join(supheli[:6])}"))
+
 print(f"denetlenen arac: {len(araclar)}")
 if not bulgular:
     print("BULGU YOK -- veri temiz")
