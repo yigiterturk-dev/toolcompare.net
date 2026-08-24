@@ -13287,7 +13287,7 @@
     "slug": "workday",
     "name": "Workday",
     "category": "HR Software",
-    "shortDescription": "Enterprise HR and finance suite.",
+    "shortDescription": "Multi-tenant enterprise platform for HR, finance and operations.",
     "websiteUrl": "https://www.workday.com",
     "incelendi": true,
     "basePrice": 0,
@@ -13298,25 +13298,54 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Workday is an enterprise HR and finance suite covering the full employee lifecycle at large scale.",
+    "longDescription": "Workday is a multi-tenant SaaS platform whose product families cover human capital management, financial management, planning, procurement and related operations. Organizations can connect or extend it through APIs, connectors, orchestration tools and Workday Extend; exact modules and commercial terms require a scoped agreement.",
     "pros": [
-      "Handles genuine enterprise complexity",
-      "One system for HR and finance",
-      "Strong reporting and compliance"
+      "Unified product families: HR, finance, planning and operations can share one platform and data model.",
+      "Configurable processes: HCM and finance products cover multiple documented business-process areas.",
+      "Integration surface: Workday documents public APIs, connectors, batch tools and orchestration capabilities.",
+      "Extension platform: Workday Extend can add tenant-native data objects, processes and experiences."
     ],
     "cons": [
-      "Implementation is a long, expensive project",
-      "Requires trained administrators",
-      "Far beyond small company needs"
+      "Scoped procurement: Public pages direct buyers to sales rather than publishing one universal package and price.",
+      "Configuration breadth: Modules, security roles, business processes and integrations require explicit design.",
+      "Extension boundaries: Some developer and AI capabilities have separate availability or early-access conditions.",
+      "Migration dependency: Value and risk depend on the organization's source data, connected systems and rollout governance."
     ],
-    "targetAudience": "Large enterprises with dedicated HR systems teams.",
-    "verdict": "The enterprise standard. If you are asking whether you need it, you do not."
+    "keyFeatures": [
+      { "title": "Human capital management", "description": "Supports core HR, talent, compensation, recruiting, workforce and related people processes." },
+      { "title": "Financial management", "description": "Covers accounting, reporting, expenses, revenue, projects and selected finance operations." },
+      { "title": "Integration tooling", "description": "Connects external systems through APIs, prebuilt connectors, orchestration and batch interfaces." },
+      { "title": "Platform extensions", "description": "Builds custom applications and processes that inherit Workday's tenant security model." }
+    ],
+    "targetAudience": "Organizations evaluating a shared enterprise platform across HR, finance and operations with dedicated implementation and governance capacity.",
+    "bestFor": [
+      "Enterprises seeking connected HR and finance product families",
+      "Organizations prepared to govern roles, processes, integrations and data migration",
+      "Teams that need supported APIs and tenant-native platform extensions"
+    ],
+    "skipIf": [
+      "You need transparent self-serve pricing before a sales and scope process",
+      "Your requirement is a narrow standalone workflow with little cross-functional data",
+      "No internal owner or implementation partner can govern configuration and migration"
+    ],
+    "verdict": "Evaluate Workday as a configurable enterprise program, not a single HR app; prove module fit, integration scope, governance and total implementation obligations in the contract and rollout plan.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Workday — HCM Suite", "url": "https://www.workday.com/en-us/products/human-capital-management/hcm-suite.html", "checkedAt": "2026-08-24", "supports": ["HCM product scope", "core HR", "talent and workforce processes", "integration ecosystem", "AI feature positioning"] },
+        { "label": "Workday — Financial Management", "url": "https://www.workday.com/en-us/products/financial-management/overview.html", "checkedAt": "2026-08-24", "supports": ["finance product scope", "accounting", "reporting", "expenses", "revenue", "risk and controls"] },
+        { "label": "Workday — ERP suite", "url": "https://www.workday.com/en-us/products/suite.html/", "checkedAt": "2026-08-24", "supports": ["multi-tenant SaaS", "shared data model", "HR and finance", "planning and procurement", "third-party integration"] },
+        { "label": "Workday — Platform extensions", "url": "https://www.workday.com/en-us/products/platform-product-extensions/overview.html", "checkedAt": "2026-08-24", "supports": ["public APIs", "connectors", "Workday Orchestrate", "Workday Extend", "security inheritance", "early-access AI boundary"] }
+      ],
+      "limitations": ["Vendor product pages were reviewed; ToolCompare did not obtain a customer-specific quote, inspect a contract, test a tenant, measure implementation duration or verify migration, compliance and ROI outcomes."]
+    }
   },
   {
     "slug": "lever",
     "name": "Lever",
     "category": "HR Software",
-    "shortDescription": "Applicant tracking and recruiting CRM.",
+    "shortDescription": "Applicant tracking and candidate relationship management platform.",
     "websiteUrl": "https://www.lever.co",
     "incelendi": true,
     "basePrice": 0,
@@ -13327,25 +13356,55 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Lever combines applicant tracking with a recruiting CRM, so you can nurture candidates over time rather than only process applicants.",
+    "longDescription": "Lever combines applicant tracking and candidate relationship management with recruiting automation, analytics and integrations. Pricing is customized by company size, hiring volume, features, integrations and support; API and requisition capabilities vary by package and integration model.",
     "pros": [
-      "Candidate nurturing built in",
-      "Good collaboration for hiring panels",
-      "Strong sourcing features"
+      "ATS and CRM together: Tracks active applicants while maintaining and nurturing broader candidate pipelines.",
+      "Recruiting workflows: Supports job posting, scheduling, feedback, approvals and offers.",
+      "Candidate campaigns: CRM features can organize, rediscover and contact prospects or past applicants.",
+      "Integration interfaces: Provides Data API, Postings API, webhooks and an OAuth partner process."
     ],
     "cons": [
-      "Priced for funded companies",
-      "Setup requires process decisions",
-      "Reporting less deep than rivals"
+      "Quote-based pricing: Cost depends on organization and selected product, integration and support scope.",
+      "Package gates: Requisitions, legacy API keys, manual webhooks and some integrations require specific packages or features.",
+      "Credential sensitivity: API keys and webhook signing tokens can expose candidate and recruiting data.",
+      "Migration work: Moving from another ATS requires field, file, history and cutover decisions."
     ],
-    "targetAudience": "Companies that source candidates actively rather than waiting for applications.",
-    "verdict": "The CRM side is the reason to choose it over a plain applicant tracker."
+    "keyFeatures": [
+      { "title": "Applicant tracking", "description": "Manages postings, applications, candidate stages, interviews, feedback and offers." },
+      { "title": "Recruiting CRM", "description": "Builds talent pools and nurture workflows for prospects and previous applicants." },
+      { "title": "Automation and analytics", "description": "Provides configurable recruiting workflows and pipeline reporting." },
+      { "title": "APIs and webhooks", "description": "Connects job sites, HR systems and recruiting partners with package-specific access." }
+    ],
+    "targetAudience": "Talent acquisition teams that need both applicant processing and ongoing candidate relationship workflows.",
+    "bestFor": [
+      "Teams sourcing and nurturing prospects in addition to processing applicants",
+      "Recruiting operations that need configurable stages, feedback and offers",
+      "Organizations whose required integrations are included in the selected Lever package"
+    ],
+    "skipIf": [
+      "You require public fixed pricing before product scoping",
+      "A needed requisition, API, webhook or partner integration is outside your package",
+      "Your team lacks controls for candidate-data access, integration credentials and migration"
+    ],
+    "verdict": "Choose Lever when the combined ATS and CRM workflow matches how your team recruits; validate package gates, data migration and every integration credential before signing.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Lever — Product overview", "url": "https://www.lever.co/", "checkedAt": "2026-08-24", "supports": ["ATS and CRM scope", "candidate management", "automation", "analytics", "integrations", "custom pricing inputs"] },
+        { "label": "Lever — LeverTRM", "url": "https://www.lever.co/lever-trm", "checkedAt": "2026-08-24", "supports": ["ATS and CRM combination", "nurture campaigns", "structured scorecards", "scheduling", "offers", "pipeline analytics"] },
+        { "label": "Lever Developer — API overview", "url": "https://hire.lever.co/developer/documentation", "checkedAt": "2026-08-24", "supports": ["HTTPS API", "API key authentication", "credential privileges", "webhooks", "postings", "candidate and offer data"] },
+        { "label": "Lever Developer — Partner process", "url": "https://hire.lever.co/developer/partner", "checkedAt": "2026-08-24", "supports": ["OAuth partner onboarding", "sandbox and production review", "package-gated requisitions", "legacy API and webhook requirements"] },
+        { "label": "Lever Help — ATS migration", "url": "https://help.lever.co/s/article/Migrating-your-data-from-another-Applicant-Tracking-System-1", "checkedAt": "2026-08-24", "supports": ["assisted migration path", "source ATS transition", "current migration guidance pointer"] }
+      ],
+      "limitations": ["Vendor pages and developer documentation were reviewed; ToolCompare did not obtain a quote, run a migration, test recruiting workflows, evaluate AI recommendations or audit candidate-data processing and hiring outcomes."]
+    }
   },
   {
     "slug": "greenhouse",
     "name": "Greenhouse",
     "category": "HR Software",
-    "shortDescription": "Structured hiring and applicant tracking.",
+    "shortDescription": "Applicant tracking built around configurable structured hiring workflows.",
     "websiteUrl": "https://www.greenhouse.com",
     "incelendi": true,
     "basePrice": 0,
@@ -13356,19 +13415,49 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Greenhouse is applicant tracking built around structured hiring: defined scorecards, interview kits and consistent evaluation.",
+    "longDescription": "Greenhouse Recruiting is applicant-tracking software with job setup, scorecards, interview plans and interview kits for a structured hiring process. It also provides multiple APIs, integrations, SSO and configurable candidate-data retention; the customer remains responsible for process design and applicable privacy rules.",
     "pros": [
-      "Structured interviews reduce ad-hoc decisions",
-      "Strong reporting on hiring funnel",
-      "Wide integration ecosystem"
+      "Predetermined scorecards: Candidate feedback can use role-specific skills, traits and qualifications.",
+      "Interview kits: Interviewers receive assigned questions, focus attributes, candidate material and feedback forms.",
+      "Integration surface: Greenhouse documents five APIs plus prebuilt recruiting and HR-system integrations.",
+      "Retention controls: Administrators can configure office-specific candidate anonymization rules."
     ],
     "cons": [
-      "Priced for funded companies, not small teams",
-      "Setup effort before value appears",
-      "Requires discipline to use as intended"
+      "Process setup: Teams must define role criteria, scorecards, interview plans and submission expectations.",
+      "Privacy responsibility: Greenhouse recommends legal counsel when configuring candidate retention and consent behavior.",
+      "API lifecycle: Harvest v1 and v2 are scheduled to become unavailable after August 31, 2026.",
+      "SSO cutover risk: Hard enablement deletes user passwords and can disrupt third-party users outside the IdP."
     ],
-    "targetAudience": "Companies hiring at volume that want a repeatable process.",
-    "verdict": "Worth it if you will actually follow the structure. Used casually it is an expensive inbox."
+    "keyFeatures": [
+      { "title": "Structured scorecards", "description": "Evaluates candidates against predetermined job attributes and recommendations." },
+      { "title": "Interview plans and kits", "description": "Assigns interview focus areas, questions, preparation and feedback forms." },
+      { "title": "Recruiting APIs", "description": "Exposes Harvest, Job Board, Assessment, Ingestion and Onboarding interfaces." },
+      { "title": "Data retention rules", "description": "Configures candidate anonymization timing, fields and notifications by office." }
+    ],
+    "targetAudience": "Recruiting organizations willing to define and enforce a repeatable evaluation process while governing candidate data and integrations.",
+    "bestFor": [
+      "Hiring teams standardizing role criteria, interviews and scorecard feedback",
+      "Organizations connecting a documented recruiting and HR technology stack",
+      "Administrators prepared to configure SSO and candidate retention with legal guidance"
+    ],
+    "skipIf": [
+      "Your interviewers will not use defined kits or submit consistent scorecards",
+      "You cannot assign owners for candidate privacy, retention and integration credentials",
+      "A planned integration still depends on Harvest v1 or v2 beyond its deprecation date"
+    ],
+    "verdict": "Choose Greenhouse for the process your team will actually enforce, not for the label of structured hiring; validate adoption, privacy rules, API versions and identity cutover before rollout.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Greenhouse Support — Structured hiring", "url": "https://support.greenhouse.io/hc/en-us/articles/360039539772-Structured-hiring-guide", "checkedAt": "2026-08-24", "supports": ["role kickoff", "scorecard setup", "interview planning", "submission expectations", "roundup process"] },
+        { "label": "Greenhouse Support — Interview kits", "url": "https://support.greenhouse.io/hc/en-us/articles/115002226746-Interview-kit-overview", "checkedAt": "2026-08-24", "supports": ["interview preparation", "focus attributes", "questions", "consistent framework", "plan availability"] },
+        { "label": "Greenhouse Support — API overview", "url": "https://support.greenhouse.io/hc/en-us/articles/10568627186203-Greenhouse-API-overview", "checkedAt": "2026-08-24", "supports": ["five API families", "integration use cases", "candidate submission", "Harvest v1 and v2 deprecation"] },
+        { "label": "Greenhouse Support — SSO configuration", "url": "https://support.greenhouse.io/hc/en-us/articles/360040753811-Configure-single-sign-on-SSO-for-Greenhouse-Recruiting", "checkedAt": "2026-08-24", "supports": ["SAML SSO", "soft and hard enablement", "third-party user impact", "password deletion", "tier availability"] },
+        { "label": "Greenhouse Support — Data retention", "url": "https://support.greenhouse.io/hc/en-us/articles/360002418112-Configure-a-data-retention-rule", "checkedAt": "2026-08-24", "supports": ["candidate anonymization", "office-specific rules", "retention timing", "notifications", "legal-counsel recommendation"] }
+      ],
+      "limitations": ["Vendor support documentation was reviewed; ToolCompare did not obtain pricing, test an account, audit privacy compliance, measure interviewer adoption or validate claims about hiring quality and bias reduction."]
+    }
   },
   {
     "slug": "ironclad",
