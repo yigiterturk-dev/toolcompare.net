@@ -16673,31 +16673,166 @@
     "slug": "gcore",
     "name": "Gcore",
     "category": "Hosting",
-    "shortDescription": "Public cloud and edge provider.",
+    "shortDescription": "Global edge and public-cloud platform offering virtual machines, containers, storage, networking and security services.",
     "websiteUrl": "https://gcore.com/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 8.93,
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Gcore is a proprietary edge and cloud provider with virtual machines, bare metal, managed Kubernetes, containers, functions, storage and networking across a region-dependent footprint. Its current VM page advertises Standard dedicated-vCPU instances from €8.93 per month, free egress and compute billing only while instances are active; prices exclude VAT and vary by location and configuration. The wider cloud calculator shows separate pricing for storage, addresses, load balancers and other services. Pay-as-you-go capacity is available rather than guaranteed, and retained resources must be checked individually when compute stops or is deleted.",
+    "pros": [
+      "Distributed footprint: Cloud regions and edge-network services can place workloads near geographically diverse users.",
+      "Flexible infrastructure: Virtual machines, bare metal, Kubernetes, containers, functions and storage share one platform.",
+      "Automation support: The control panel, documented API and Terraform-oriented workflows enable repeatable provisioning.",
+      "Active-compute billing: Current VM positioning waives VM compute while stopped and includes egress for eligible VM offers."
+    ],
+    "cons": [
+      "Headline price is conditional: VM family, region, storage, operating system, IPs and VAT change the total.",
+      "Stopped compute is not the whole bill: Persistent storage, snapshots, addresses and adjacent services can remain chargeable.",
+      "Capacity and terms vary: Pay-as-you-go capacity is provided as available, while spot and committed orders have different rules.",
+      "Service-level claims are product-specific: A Kubernetes or Functions SLA must not be assumed to cover every cloud component."
+    ],
+    "keyFeatures": [
+      { "title": "Virtual infrastructure", "description": "Offers shared or dedicated-vCPU virtual machines, GPU options and bare metal in selected regions." },
+      { "title": "Container services", "description": "Provides managed Kubernetes and managed container execution with separately billed worker resources and options." },
+      { "title": "Storage and networking", "description": "Combines block, file and object storage with IP, load-balancing and edge-network services." },
+      { "title": "API automation", "description": "Exposes project- and region-scoped infrastructure actions through authenticated APIs." }
+    ],
+    "targetAudience": "Infrastructure teams needing Gcore's edge-adjacent regional footprint and able to validate each component's pricing, availability and operational contract.",
+    "bestFor": [
+      "Latency-sensitive workloads after testing the exact target Gcore region",
+      "VM or Kubernetes deployments that benefit from eligible included egress",
+      "Teams managing infrastructure through APIs and explicit lifecycle automation"
+    ],
+    "skipIf": [
+      "The budget assumes the advertised starting VM price includes every disk, IP, license and service",
+      "The architecture requires guaranteed on-demand capacity without a suitable committed agreement",
+      "A product-specific SLA or compliance badge is being treated as platform-wide coverage"
+    ],
+    "verdict": "Gcore is worth testing for globally distributed cloud and edge workloads, but compare the exact region and full resource graph rather than the headline VM rate; confirm capacity and SLA terms, remove retained resources deliberately, and prove backup restoration before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Gcore — Cloud pricing", "url": "https://gcore.com/pricing/cloud", "checkedAt": "2026-08-24", "supports": ["region-dependent calculator", "VM bare-metal and managed-service catalog", "Kubernetes control-plane price", "worker and add-on costs", "object-storage metering", "VAT exclusion", "location variation"] },
+        { "label": "Gcore — Virtual machines", "url": "https://gcore.com/cloud/virtual-machines", "checkedAt": "2026-08-24", "supports": ["current starting prices", "active-instance billing claim", "eligible free egress", "shared and dedicated compute choices", "GPU option", "regional variation", "control-panel API and Terraform positioning"] },
+        { "label": "Gcore Docs — Instance actions", "url": "https://gcore.com/docs/api-reference/instances/perform-a-specific-action-on-an-instance", "checkedAt": "2026-08-24", "supports": ["authenticated instance API", "project and region scope", "start stop reboot suspend and resume actions", "bare-metal suspend boundary"] },
+        { "label": "Gcore — Legal information", "url": "https://gcore.com/legal", "checkedAt": "2026-08-24", "supports": ["pay-as-you-go charging basis", "as-available PAYG capacity", "spot capacity boundary", "prepaid and postpaid models", "service-order precedence", "instance deletion termination example"] },
+        { "label": "Gcore — Managed Kubernetes", "url": "https://gcore.com/cloud/managed-kubernetes", "checkedAt": "2026-08-24", "supports": ["free control-plane positioning", "worker-node and optional-service billing", "VM versus bare-metal egress distinction", "99.9 percent Kubernetes-specific SLA", "regional price comparison boundary"] }
+      ],
+      "limitations": ["Official Gcore product, pricing, legal and API pages were reviewed; ToolCompare did not create an account, inspect a final regional invoice, deploy or benchmark a VM, test the API or Terraform provider, verify every egress case, stop and delete resources, induce capacity failure, validate certification scope, test support, or restore a backup. Prices, regions, providers, service levels and legal terms can change."]
+    }
   },
   {
     "slug": "fasthosts",
     "name": "Fasthosts",
     "category": "Hosting",
-    "shortDescription": "Provider of Internet access and hosting services.",
+    "shortDescription": "UK provider of shared web hosting, domains, email, cloud servers and dedicated infrastructure.",
     "websiteUrl": "https://www.fasthosts.co.uk/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 5.75,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Fasthosts is a UK hosting provider; this record focuses on its managed shared Web Hosting rather than its separately governed VPS, cloud or dedicated-server products. The Start plan currently advertises £1 per month for the first three months and then £5.75 per month, excluding VAT, with one site, 100 GB SSD storage, one first-year domain, one mailbox and uncapped bandwidth. Packages renew under the contract and payment terms. A 30-day guarantee covers named hosting products but excludes domain-registration cost and many server or add-on services. Customers remain responsible for maintaining current independent backups.",
+    "pros": [
+      "Clear starter bundle: Shared plans combine site space, databases, mailbox, domain promotion and a control panel.",
+      "Uncapped bandwidth positioning: The current shared-hosting page does not impose a stated traffic cap on these packages.",
+      "Low-friction trial period: Eligible initial hosting purchases can use the documented 30-day money-back process.",
+      "UK-oriented service: UK infrastructure and local-market support suit small organizations targeting that jurisdiction."
+    ],
+    "cons": [
+      "Promotion is temporary: The low introductory price rises to the displayed standard monthly rate.",
+      "Guarantee exclusions matter: Domains, servers, add-ons and later account changes are not covered like the initial eligible hosting order.",
+      "Backup ownership stays with the customer: Provider archives are not a promised on-demand recovery source.",
+      "Shared-hosting limits remain: Runtime, storage, database and acceptable-use constraints can make heavier applications unsuitable."
+    ],
+    "keyFeatures": [
+      { "title": "Shared web hosting", "description": "Hosts one or more sites on managed infrastructure with SSD storage and a provider control panel." },
+      { "title": "Databases and apps", "description": "Includes MySQL or MSSQL allowances and a one-click application installer by plan." },
+      { "title": "Domain and email bundle", "description": "Selected plans include a first-year domain and a plan-specific mailbox allowance." },
+      { "title": "Initial refund window", "description": "Eligible named hosting products can be cancelled through the documented 30-day guarantee process." }
+    ],
+    "targetAudience": "UK-focused individuals and small businesses seeking conventional managed shared hosting without administering a server.",
+    "bestFor": [
+      "Brochure sites and small CMS deployments within the selected plan's resource limits",
+      "Customers who prefer a bundled UK hosting, domain and mailbox workflow",
+      "Teams that maintain independent backups and understand renewal pricing before purchase"
+    ],
+    "skipIf": [
+      "The application needs root access, custom daemons, elastic infrastructure or guaranteed compute isolation",
+      "The buying decision only works at the short introductory price",
+      "The recovery plan depends on Fasthosts exposing its internal archival copies"
+    ],
+    "verdict": "Fasthosts shared hosting is a straightforward UK small-site bundle, but budget at the post-promotion rate, read domain and refund exclusions, verify workload limits, and keep an independently restorable backup outside the hosting account.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Fasthosts — Web Hosting", "url": "https://www.fasthosts.co.uk/web-hosting", "checkedAt": "2026-08-24", "supports": ["current Start promotion and standard price", "site storage domain mailbox and database allowances", "uncapped bandwidth claim", "control panel", "one-click installer", "30-day guarantee positioning"] },
+        { "label": "Fasthosts — 30-day money-back guarantee", "url": "https://www.fasthosts.co.uk/terms/policies/30-day-money-back-guarantee", "checkedAt": "2026-08-24", "supports": ["eligible product list", "30-day request deadline", "domain and additional-cost deductions", "server VPS reseller and add-on exclusions", "initial-purchase-only boundary", "one-use restriction"] },
+        { "label": "Fasthosts — General terms", "url": "https://www.fasthosts.co.uk/terms/general-terms-and-conditions", "checkedAt": "2026-08-24", "supports": ["contract renewal and cancellation notice", "continuous payment authority", "price-change timing", "general non-refund rule", "customer backup responsibility", "archival restore boundary", "data and security obligations"] },
+        { "label": "Fasthosts — Terms index", "url": "https://www.fasthosts.co.uk/terms", "checkedAt": "2026-08-24", "supports": ["product-specific contract separation", "web-hosting SLA reference", "server email domain and reseller term families"] },
+        { "label": "Fasthosts — Cloud server terms", "url": "https://www.fasthosts.co.uk/terms/servers/cloud-server", "checkedAt": "2026-08-24", "supports": ["server administration and patch responsibility", "no-provider-backup boundary for cloud servers", "irreversible deletion warning", "cloud-server distinction from managed shared hosting"] }
+      ],
+      "limitations": ["Official Fasthosts product and terms pages were reviewed; ToolCompare did not purchase hosting, verify checkout or VAT, test the control panel, deploy or benchmark a site, measure support or uptime, validate unlimited-bandwidth behavior under load, exercise cancellation, request a refund, test email or migration, inspect backups, or perform a restore. Promotions, plan limits and contract terms can change."]
+    }
   },
   {
     "slug": "heart-internet",
     "name": "Heart Internet",
     "category": "Hosting",
-    "shortDescription": "UK web hosting provider offering shared, reseller and dedicated plans.",
+    "shortDescription": "UK hosting provider offering cPanel web hosting, managed WordPress, reseller plans, VPS and dedicated servers.",
     "websiteUrl": "https://www.heartinternet.uk/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 5.99,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "Heart Internet is a UK hosting provider; this record evaluates its current cPanel shared Web Hosting. The Plus plan advertises a discounted first year and renews at £71.88 yearly or £5.99 monthly, excluding VAT. It includes one website, 25 GB NVMe storage, one SSL certificate, two 5 GB mailboxes, 50 GB monthly bandwidth, databases and backups. Higher tiers raise these quotas. The terms make customers responsible for current backup copies, can suspend hosting after the monthly bandwidth allowance is exceeded, and delete hosted data immediately and permanently when a service is cancelled.",
+    "pros": [
+      "Published renewal prices: The plan page shows both discounted first-term totals and standard renewal amounts.",
+      "Practical site bundle: cPanel, SSL, email, databases, backups and one-click applications cover common small-site needs.",
+      "Plan-level security features: The page lists firewalling, malware scanning, AutoSSL and control-panel 2FA.",
+      "Defined quotas: Site count, storage, mailboxes and monthly bandwidth are explicit for each shared plan."
+    ],
+    "cons": [
+      "Renewal costs rise: First-year discounts should not be used as the long-term monthly budget.",
+      "Bandwidth is capped: Exceeding the monthly allowance can suspend the site until upgrade or the next calendar month.",
+      "Included backups are not sole protection: Contract terms still require the customer to keep appropriate current copies.",
+      "Cancellation is destructive: Associated hosted data is stated to be deleted immediately and permanently."
+    ],
+    "keyFeatures": [
+      { "title": "cPanel management", "description": "Manages sites, files, databases, domains, email and SSL through cPanel with single sign-on." },
+      { "title": "Tiered shared plans", "description": "Sets explicit website, NVMe storage, SSL, mailbox, subdomain and monthly-bandwidth quotas." },
+      { "title": "Security bundle", "description": "Includes plan-level AutoSSL, firewalling, malware scans and control-panel two-factor authentication." },
+      { "title": "Hosting backups", "description": "Advertises included backups while the contract preserves the customer's independent-backup duty." }
+    ],
+    "targetAudience": "UK small businesses, agencies and site owners wanting conventional cPanel hosting with explicit quotas and bundled email.",
+    "bestFor": [
+      "Small public sites that fit the selected storage and monthly-bandwidth allowance",
+      "Customers preferring cPanel, bundled mailboxes and UK infrastructure",
+      "Teams that price the renewal term and export independent files, databases and email backups"
+    ],
+    "skipIf": [
+      "Traffic can exceed the plan allowance and automatic suspension is unacceptable",
+      "The application needs root access, background daemons or isolated compute guarantees",
+      "The exit plan assumes account data remains available after cancellation"
+    ],
+    "verdict": "Heart Internet's current cPanel plans are transparent, practical UK shared hosting for bounded sites; choose by renewal price and real quotas, verify the exact backup controls, maintain an external restore copy, and migrate data before cancelling.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Heart Internet — cPanel Web Hosting", "url": "https://www.heartinternet.uk/web-hosting", "checkedAt": "2026-08-24", "supports": ["current first-term and renewal prices", "VAT exclusion", "site storage SSL mailbox and bandwidth quotas", "cPanel single sign-on", "included backups", "security features", "30-day guarantee positioning", "99.9 percent web-hosting uptime claim"] },
+        { "label": "Heart Internet — Terms and Conditions", "url": "https://www.heartinternet.uk/terms/heart-internet-ltd-terms-and-conditions", "checkedAt": "2026-08-24", "supports": ["30-day hosting guarantee", "free-domain refund exclusion", "VAT and basket pricing", "customer backup responsibility", "provider archive boundary", "bandwidth suspension", "repository-use prohibition", "immediate permanent deletion after cancellation"] },
+        { "label": "Heart Internet — Acceptable Use Policy", "url": "https://www.heartinternet.uk/terms/acceptable-use-policy", "checkedAt": "2026-08-24", "supports": ["shared-processing limits", "daemon cron proxy gaming and peer-to-peer restrictions", "no offsite-backup use", "web-visible content requirement", "enforcement boundary"] },
+        { "label": "Heart Internet Support — Restore my site", "url": "https://www.heartinternet.uk/support/article/restore-my-site.html", "checkedAt": "2026-08-24", "supports": ["Managed WordPress-specific 30-day backup history", "file database or combined restore", "post-backup-change loss warning", "product-specific backup distinction"] },
+        { "label": "Heart Internet — Server SLA", "url": "https://www.heartinternet.uk/terms/service-level-agreement", "checkedAt": "2026-08-24", "supports": ["VPS and dedicated-server-specific 99.99 percent network SLA", "credit claim process", "exclusions", "customer backup responsibility", "separation from shared-hosting uptime positioning"] }
+      ],
+      "limitations": ["Official Heart Internet product, terms, acceptable-use, support and SLA pages were reviewed; ToolCompare did not purchase a plan, verify checkout or VAT, test cPanel or SSO, deploy or benchmark a site, monitor uptime, exceed bandwidth, test malware protection, inspect backup schedules for current cPanel plans, perform a restore, contact support, cancel service, or claim a refund or SLA credit. Promotions, quotas, platform details and terms can change."]
+    }
   },
   {
     "slug": "bytemark",
