@@ -15171,31 +15171,168 @@
     "slug": "capybara",
     "name": "Capybara",
     "category": "Developer Tools",
-    "shortDescription": "Ruby library for writing browser-based acceptance tests.",
+    "shortDescription": "Ruby acceptance-test DSL that drives web applications through interchangeable drivers.",
     "websiteUrl": "https://teamcapybara.github.io/capybara/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Capybara is an MIT-licensed Ruby library and acceptance-testing DSL that simulates user interaction with web applications. It supplies finders, matchers, actions, sessions and automatic waiting while delegating actual execution to drivers such as the fast RackTest default or browser-capable Selenium. It is not itself a browser, test runner or assertion framework, and test fidelity, JavaScript support, isolation and concurrency behavior depend on the chosen driver and surrounding stack.",
+    "pros": [
+      "User-oriented DSL: Tests express visits, form actions, element queries and expectations close to browser behavior.",
+      "Automatic synchronization: Finders and matchers wait up to configured limits for asynchronous page state.",
+      "Driver portability: The same high-level API can run against RackTest, Selenium and compatible third-party drivers.",
+      "Framework integration: Official guidance covers use with RSpec, Minitest and other Ruby test setups."
+    ],
+    "cons": [
+      "Default driver has no JavaScript: RackTest is fast but cannot validate client-side behavior or interact with remote applications.",
+      "Browser tests cost more: Selenium-style drivers add browser binaries, timing variability and infrastructure overhead.",
+      "Thread and data isolation: Transactional database strategies may not share state with a separately threaded application server.",
+      "Ambiguous selectors can fail: Capybara intentionally raises on multiple matches unless the query is made specific."
+    ],
+    "keyFeatures": [
+      { "title": "Navigation and actions", "description": "Visits pages, fills fields, clicks controls, attaches files and manipulates supported browser state." },
+      { "title": "Finders and matchers", "description": "Queries accessible labels, text, CSS and XPath with configurable matching behavior." },
+      { "title": "Automatic waiting", "description": "Retries eligible queries and expectations while asynchronous content settles." },
+      { "title": "Interchangeable drivers", "description": "Routes the DSL through RackTest, Selenium or compatible external drivers with different capabilities." }
+    ],
+    "targetAudience": "Ruby teams writing acceptance or system tests for web applications with an explicitly selected driver stack.",
+    "bestFor": [
+      "Ruby application journeys expressed through user-visible behavior",
+      "Test suites that mix fast non-JavaScript coverage with selected real-browser scenarios",
+      "Teams prepared to manage browser drivers, test data and asynchronous behavior"
+    ],
+    "skipIf": [
+      "The test stack is not Ruby-based and gains no value from a Ruby DSL",
+      "You expect the default RackTest driver to execute JavaScript or test a remote URL",
+      "The suite lacks a strategy for database isolation, browser dependencies and flaky-state diagnosis"
+    ],
+    "verdict": "Choose Capybara for readable Ruby acceptance tests, but select drivers per scenario: keep RackTest where server-rendered behavior is enough and prove critical JavaScript journeys with a maintained browser driver and deterministic data isolation.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Capybara — Project site", "url": "https://teamcapybara.github.io/capybara/", "checkedAt": "2026-08-24", "supports": ["Ruby library scope", "user interaction simulation", "driver abstraction", "Selenium WebKit and pure-Ruby drivers", "automatic synchronization", "RubyGems installation"] },
+        { "label": "Capybara — Source and README", "url": "https://github.com/teamcapybara/capybara", "checkedAt": "2026-08-24", "supports": ["acceptance-test DSL", "RackTest default", "RackTest JavaScript and remote-app limitations", "Selenium driver", "RSpec and Minitest integration", "waiting behavior", "sessions", "threading and transaction caveats", "MIT license"] },
+        { "label": "RubyGems — Capybara", "url": "https://rubygems.org/gems/capybara", "checkedAt": "2026-08-24", "supports": ["current gem releases", "runtime dependencies", "required Ruby version", "source and documentation links", "MIT license"] },
+        { "label": "Capybara API documentation", "url": "https://rubydoc.info/gems/capybara", "checkedAt": "2026-08-24", "supports": ["session API", "node actions", "finders", "matchers", "selector API", "driver interfaces"] }
+      ],
+      "limitations": ["Official Capybara pages, repository, gem metadata and generated API documentation were reviewed; ToolCompare did not run a Ruby suite, test RackTest or Selenium, measure wait behavior, validate database isolation, inspect third-party drivers, reproduce concurrency caveats or assess flake rates."]
+    }
   },
   {
     "slug": "bootstrap-studio",
     "name": "Bootstrap Studio",
     "category": "Design",
-    "shortDescription": "Proprietary web design and development application.",
+    "shortDescription": "Commercial offline desktop builder that exports Bootstrap-based static websites.",
     "websiteUrl": "https://bootstrapstudio.io",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 29,
+    "isFlat": true,
+    "fiyatModeli": "kullanici-basina",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Bootstrap Studio is a proprietary desktop visual builder for Windows, macOS and Linux that stores local .bsdesign projects and exports static HTML, CSS, JavaScript and assets based on supported Bootstrap versions. A perpetual per-user license covers up to three owned computers; Standard includes one year of upgrades while Lifetime includes ongoing upgrades. Included hosting and Smart Forms are separate service capabilities with license-dependent duration and limits.",
+    "pros": [
+      "Offline authoring: Core design work and project files remain on the user's computer.",
+      "Portable export: Projects can be exported as ordinary static files and hosted outside the vendor platform.",
+      "Visual and code workflows: Drag-and-drop components coexist with HTML, CSS, JavaScript and export scripting features.",
+      "One-time license model: Both editions are perpetual, with different upgrade and hosted-service entitlements."
+    ],
+    "cons": [
+      "Per-user proprietary license: One key is assigned to one person despite supporting three owned devices.",
+      "Standard update cutoff: After one year, the last eligible version keeps working but receives no new features or bug fixes without renewal.",
+      "Static-output boundary: Dynamic forms, blogs, ecommerce and publishing may depend on vendor services or external backends.",
+      "Generated output needs QA: Claims of clean semantic HTML do not replace manual accessibility, performance, SEO and security review."
+    ],
+    "keyFeatures": [
+      { "title": "Visual Bootstrap builder", "description": "Composes responsive pages from components across supported Bootstrap 3, 4 and 5 lines." },
+      { "title": "Static export", "description": "Writes HTML, CSS, JavaScript, images and fonts with configurable minification and asset handling." },
+      { "title": "Realtime preview", "description": "Reflects design changes in connected browsers and devices during authoring." },
+      { "title": "Publishing options", "description": "Publishes to included site slots or an operator-controlled SFTP destination." }
+    ],
+    "targetAudience": "Individual designers and frontend developers who want a visual Bootstrap workflow and own their exported static files.",
+    "bestFor": [
+      "Marketing and brochure sites whose output is primarily static Bootstrap markup",
+      "Designers who need visual composition plus selective code editing",
+      "Projects that will export to independent hosting and pass normal web QA"
+    ],
+    "skipIf": [
+      "The product requires a framework-native component codebase rather than generated static assets",
+      "A team expects multiple people to share one license key",
+      "Ongoing security and bug-fix updates are required but Standard renewal is not budgeted"
+    ],
+    "verdict": "Choose Bootstrap Studio when static Bootstrap output and local project ownership fit the delivery model; budget per user and for update continuity, then audit exported pages for semantics, accessibility, performance and backend dependencies before launch.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Bootstrap Studio — Product and pricing", "url": "https://bootstrapstudio.io/", "checkedAt": "2026-08-24", "supports": ["desktop and offline application", "supported operating systems", "Bootstrap versions", "local project files", "static export", "hosting slots", "public edition prices", "upgrade periods", "refund period"] },
+        { "label": "Bootstrap Studio — License", "url": "https://bootstrapstudio.io/pages/license", "checkedAt": "2026-08-24", "supports": ["perpetual non-transferable license", "one individual per key", "three owned computers", "Standard and Lifetime upgrades", "hosting entitlement and limits", "educational restrictions"] },
+        { "label": "Bootstrap Studio Docs — Exporting", "url": "https://bootstrapstudio.io/docs/exporting.html", "checkedAt": "2026-08-24", "supports": ["static output files", "export settings", "local versus CDN assets", "SASS source option", "single-page export", "export scripts and their risk"] },
+        { "label": "Bootstrap Studio Docs — Publishing", "url": "https://bootstrapstudio.io/docs/publishing-your-site.html", "checkedAt": "2026-08-24", "supports": ["included Sites platform", "static export alternative", "SFTP support", "local credential storage", "OpenSSH key requirement", "full custom and changed-file publishing"] },
+        { "label": "Bootstrap Studio — Licensing FAQ", "url": "https://bootstrapstudio.io/contact-us", "checkedAt": "2026-08-24", "supports": ["Standard update cutoff", "Lifetime updates", "no trial", "refund policy", "three-device rule", "one user per license", "five hosted-site limit", "independent hosting"] },
+        { "label": "Bootstrap Studio — Releases", "url": "https://bootstrapstudio.io/pages/releases", "checkedAt": "2026-08-24", "supports": ["active release history", "2026 version 8 releases", "feature and fix cadence"] }
+      ],
+      "limitations": ["Official Bootstrap Studio product, license, documentation, FAQ and release pages were reviewed; ToolCompare did not purchase or activate the app, inspect generated code, test imports, previews, AI features, Smart Forms, ecommerce, SFTP or hosted Sites, validate backups, audit accessibility or compare output across operating systems. Prices and service entitlements can change after the review date."]
+    }
   },
   {
     "slug": "cloud-cms",
     "name": "Cloud CMS",
     "category": "Developer Tools",
-    "shortDescription": "Cloud CMS is an enterprise content management system offered under both a SaaS and an On-Premises model using Docker containers.",
-    "websiteUrl": "https://www.cloudcms.com/",
-    "incelendi": false,
+    "shortDescription": "Gitana's enterprise headless CMS for structured content, workflow, APIs and hosted or self-managed deployment.",
+    "websiteUrl": "https://gitana.io/",
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "Cloud CMS is now presented within the proprietary Gitana content platform. It models structured and relational content as a JSON-Schema-backed graph, supports branches, workflow, releases, search, REST and GraphQL delivery, and can be purchased as hosted service or commercially licensed self-managed Kubernetes containers. Plan limits, SSO, MFA, support, SLA and infrastructure responsibility vary substantially by edition.",
+    "pros": [
+      "Rich content model: JSON Schema types, aspects, binary attachments and graph associations support structured and relational domains.",
+      "Editorial lifecycle: Branches, changesets, workflow, releases and scheduled deployments separate work from live delivery.",
+      "API-first delivery: REST, GraphQL, queries, search, traversal and language drivers support headless applications.",
+      "Deployment choice: Hosted plans shift backups and maintenance to Gitana; self-managed containers run in a customer VPC or on-premises."
+    ],
+    "cons": [
+      "Commercial platform: The product is proprietary and self-managed use requires a commercial license.",
+      "Material plan differences: Users, projects, API throughput, storage, SLA, SSO, MFA and support change by hosted tier.",
+      "Self-managed operations: Kubernetes deployment transfers upgrades, backups, availability, secrets, databases and observability to the customer.",
+      "Modeling complexity: Graph relationships, branching, workflow and deployment mappings require governance and specialist implementation."
+    ],
+    "keyFeatures": [
+      { "title": "Content graph", "description": "Models JSON documents, binary attachments and typed relationships using JSON Schema-backed definitions." },
+      { "title": "Versioned collaboration", "description": "Uses branches, changesets, pull-style merges, releases and conflict handling for content work." },
+      { "title": "REST and GraphQL", "description": "Delivers structured content through APIs, queries, search, traversal and supported language drivers." },
+      { "title": "Enterprise identity", "description": "Supports plan-dependent SAML 2.0 or JWT SSO, group mapping and multifactor options." }
+    ],
+    "targetAudience": "Enterprises needing governed structured content and API delivery, with budget and engineering capacity for Gitana's hosted or self-managed model.",
+    "bestFor": [
+      "Complex content domains with typed relationships, workflow and multiple delivery environments",
+      "Headless applications needing REST, GraphQL, search and scheduled publishing",
+      "Organizations that can validate hosted limits or operate the full Kubernetes stack"
+    ],
+    "skipIf": [
+      "A simple website CMS would satisfy the content and publishing model",
+      "Required users, API volume, SSO or SLA do not fit an approved commercial tier",
+      "The team cannot govern graph schemas, workflow and self-managed infrastructure complexity"
+    ],
+    "verdict": "Shortlist Cloud CMS/Gitana only for content complexity that justifies an enterprise platform; prototype the real graph, editorial flow and API load, then compare hosted plan limits with the full operational cost of self-management.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Gitana — Platform home and Cloud CMS", "url": "https://gitana.io/", "checkedAt": "2026-08-24", "supports": ["Cloud CMS within Gitana brand", "structured content platform", "editorial workflow", "hosted and self-managed deployment", "REST GraphQL and drivers", "search and versioning", "roles MFA and SSO", "hosted operations boundary"] },
+        { "label": "Gitana Docs — Content models", "url": "https://gitana.io/documentation/gitana/4.0/engine/content-models", "checkedAt": "2026-08-24", "supports": ["JSON Schema modeling", "content types properties and aspects", "content graph", "nodes associations and attachments", "branch dictionaries", "validation behavior"] },
+        { "label": "Gitana Docs — GraphQL", "url": "https://gitana.io/documentation/gitana/4.0/engine/graphql", "checkedAt": "2026-08-24", "supports": ["GraphQL interface", "content graph queries", "schema and traversal behavior", "API delivery"] },
+        { "label": "Gitana Docs — Single Sign On", "url": "https://gitana.io/documentation/gitana/4.0/engine/sso", "checkedAt": "2026-08-24", "supports": ["enterprise SSO", "SAML 2.0", "JWT", "identity providers", "user and group synchronization", "configuration requirements", "default-disabled state"] },
+        { "label": "Gitana — Hosted pricing", "url": "https://gitana.io/pricing/hosted", "checkedAt": "2026-08-24", "supports": ["current hosted prices", "project and user limits", "API and storage limits", "support and SLA tiers", "SSO and MFA plan differences", "hosted backup and maintenance"] },
+        { "label": "Gitana — Self-managed pricing", "url": "https://gitana.io/pricing/self-managed", "checkedAt": "2026-08-24", "supports": ["Kubernetes in customer VPC", "on-premise and private-cloud scope", "commercial license", "trial availability", "cluster and worker scaling", "enterprise support"] },
+        { "label": "Cloud CMS — API Explorer", "url": "https://api.cloudcms.com/docs", "checkedAt": "2026-08-24", "supports": ["REST API surface", "interactive API documentation endpoint"] }
+      ],
+      "limitations": ["Official Gitana product, documentation, pricing and API pages were reviewed; ToolCompare did not obtain an enterprise quote, create a tenant, test the Developer Edition, model or migrate content, validate API completeness or rate limits, configure SSO/MFA, benchmark search or GraphQL, audit AI/RAG claims, inspect hosted controls, deploy Kubernetes containers or test backup and disaster recovery. Pricing and plan entitlements may change after the review date."]
+    }
   },
   {
     "slug": "pagecloud",
