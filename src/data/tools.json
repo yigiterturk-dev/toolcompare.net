@@ -13637,31 +13637,182 @@
     "slug": "browserstack",
     "name": "BrowserStack",
     "category": "Developer Tools",
-    "shortDescription": "Cloud platform for testing websites and apps on real browsers and devices.",
+    "shortDescription": "Cloud browser and device testing for manual and automated quality checks.",
     "websiteUrl": "https://www.browserstack.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    },
+    "longDescription": "BrowserStack provides cloud access to browser, operating-system and mobile-device combinations for manual and automated web or app testing. Local Testing connects the service to localhost, staging or private environments through an authenticated encrypted tunnel; automated capacity and the available device coverage depend on the selected product and plan.",
+    "pros": [
+      "Hosted test coverage: Runs supported tests across browser, operating-system and device combinations without maintaining the full lab internally.",
+      "Manual and automated products: Supports interactive sessions as well as documented Selenium, Playwright, Cypress, Puppeteer and mobile automation workflows.",
+      "Private-environment access: Local Testing can reach localhost, staging and services behind a firewall through an outbound tunnel.",
+      "Parallel execution: Qualifying Automate plans can run tests simultaneously across different environments."
+    ],
+    "cons": [
+      "Plan-shaped capacity: Parallel test count, product access and device coverage vary by subscription.",
+      "Queueing at the limit: Additional automated tests wait when all purchased parallel slots are occupied.",
+      "Tunnel operations: Private testing requires a Local binary or supported integration plus compatible proxy and firewall rules.",
+      "Coverage remains your job: Access to many environments does not supply test cases or prove application correctness."
+    ],
+    "keyFeatures": [
+      { "title": "Browser and device cloud", "description": "Provides supported desktop browsers and real mobile-device sessions for compatibility testing." },
+      { "title": "Automation integrations", "description": "Runs supported web and mobile frameworks against selected environments." },
+      { "title": "Local Testing", "description": "Creates an authenticated encrypted path from BrowserStack workers to private test targets." },
+      { "title": "Parallel tests", "description": "Executes multiple automated sessions at once up to the plan's concurrency allowance." }
+    ],
+    "targetAudience": "Web and mobile delivery teams that need broader browser or device coverage than their internal test hardware provides.",
+    "bestFor": [
+      "Teams validating releases across supported desktop and mobile configurations",
+      "Organizations that need cloud tests against localhost, staging or private services",
+      "Automation suites whose required concurrency can be mapped to a plan"
+    ],
+    "skipIf": [
+      "A required browser, device, operating system or framework is absent from current coverage",
+      "Security policy cannot permit or govern the Local Testing tunnel needed for private systems",
+      "The necessary parallel capacity is uneconomic and queued execution is unacceptable"
+    ],
+    "verdict": "Choose BrowserStack when external browser and device coverage is worth the subscription and tunnel governance; validate the exact matrix, framework support and parallel capacity against your release suite.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "BrowserStack Docs — Local Testing", "url": "https://www.browserstack.com/docs/local-testing", "checkedAt": "2026-08-24", "supports": ["localhost and private-network testing", "manual and automated modes", "supported framework families", "Local binary and integrations"] },
+        { "label": "BrowserStack Docs — How Local Testing works", "url": "https://www.browserstack.com/docs/local-testing/how-local-testing-works", "checkedAt": "2026-08-24", "supports": ["outbound encrypted tunnel", "authentication", "repeater assignment", "private test data path", "access controls"] },
+        { "label": "BrowserStack Docs — Automate capabilities", "url": "https://www.browserstack.com/docs/automate/capabilities", "checkedAt": "2026-08-24", "supports": ["browser selection", "operating-system selection", "real mobile devices", "browser versions", "session configuration"] },
+        { "label": "BrowserStack Docs — Automate API", "url": "https://www.browserstack.com/docs/automate/api-reference/selenium/introduction", "checkedAt": "2026-08-24", "supports": ["REST API", "plan and project information", "build and session information", "JSON responses", "API rate limits"] },
+        { "label": "BrowserStack — Pricing", "url": "https://www.browserstack.com/pricing", "checkedAt": "2026-08-24", "supports": ["product-specific plans", "parallel-test selection", "desktop and mobile coverage", "annual billing examples", "volume pricing"] },
+        { "label": "BrowserStack Support — Parallel testing", "url": "https://www.browserstack.com/support/faq/automate/basics-automate/what-is-parallel-testing-on-automate-and-how-does-it-help", "checkedAt": "2026-08-24", "supports": ["simultaneous automated tests", "plan parallel allowance", "browser and device combinations"] }
+      ],
+      "limitations": ["Vendor pages and documentation were reviewed; ToolCompare did not subscribe, inspect available hardware in an account, test tunnel security, measure queue time, run a compatibility suite or validate defect-detection outcomes."]
+    }
   },
   {
     "slug": "appveyor",
     "name": "AppVeyor",
     "category": "Developer Tools",
-    "shortDescription": "AppVeyor is a hosted, distributed continuous integration service used to build and test projects hosted on GitHub and other source code hosting services (including GitLab and Bitbucket) on a Microsoft Windows virtual machine, as well as Ubuntu Linux virtual machines.",
+    "shortDescription": "Hosted CI with configurable build jobs and self-hosted worker options.",
     "websiteUrl": "https://www.appveyor.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    },
+    "longDescription": "AppVeyor is a hosted continuous-integration service with YAML or UI build configuration, build matrices, hosted workers and bring-your-own-cloud workers. Its public free tier is scoped to open-source projects; private-project allowances, concurrent jobs and self-hosted job capacity vary by paid plan.",
+    "pros": [
+      "Repository configuration: Builds can be defined in appveyor.yml and carried with the source repository.",
+      "Build matrices: Creates jobs across selected operating systems, platforms, configurations and environment variables.",
+      "Hosted and self-hosted execution: Pricing documents Windows, Linux and macOS options plus BYOC workers.",
+      "Secret variables: Account-specific encryption supports protected values in visible YAML files."
+    ],
+    "cons": [
+      "Narrow free scope: The listed free plan is for unlimited public open-source projects, not private repositories.",
+      "Concurrency queue: Jobs beyond the plan's concurrent-job allowance wait for capacity.",
+      "Plan limits: Private projects, concurrent hosted jobs and simultaneous self-hosted jobs differ by tier.",
+      "Script error handling: AppVeyor warns that PowerShell non-terminating errors can leave a build reported as successful unless configured to stop."
+    ],
+    "keyFeatures": [
+      { "title": "YAML or UI configuration", "description": "Defines the pipeline in appveyor.yml or through project settings, with documented precedence rules." },
+      { "title": "Build matrix", "description": "Expands selected environment dimensions into separate build jobs." },
+      { "title": "Build workers", "description": "Runs jobs on hosted environments or qualifying self-hosted and BYOC capacity." },
+      { "title": "Secure variables", "description": "Encrypts secret values for YAML and restricts their default use in pull-request builds." }
+    ],
+    "targetAudience": "Software teams that want hosted CI or managed BYOC workers and can fit repository, concurrency and platform needs to an AppVeyor plan.",
+    "bestFor": [
+      "Open-source projects that fit the public-project free tier and one hosted concurrent job",
+      "Teams expressing multi-environment builds through a repository YAML file",
+      "Organizations combining hosted CI control with their own worker infrastructure"
+    ],
+    "skipIf": [
+      "A private project must remain on a free hosted plan",
+      "Required concurrent or self-hosted capacity exceeds the acceptable subscription cost",
+      "Your scripts cannot be hardened to fail reliably and keep secrets out of logs"
+    ],
+    "verdict": "Choose AppVeyor when its hosted or BYOC worker model matches your build matrix; test failure semantics, pull-request secret behavior and queueing before making it a required release gate.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "AppVeyor — Pricing", "url": "https://www.appveyor.com/pricing/", "checkedAt": "2026-08-24", "supports": ["open-source free tier", "private-project tiers", "concurrent-job limits", "queued jobs", "self-hosted capacity", "BYOC platforms", "trial period"] },
+        { "label": "AppVeyor Docs — Build configuration", "url": "https://www.appveyor.com/docs/build-configuration/", "checkedAt": "2026-08-24", "supports": ["YAML and UI configuration", "configuration precedence", "build matrix", "secure variables", "pull-request secret behavior", "PowerShell error handling"] },
+        { "label": "AppVeyor Docs — appveyor.yml reference", "url": "https://www.appveyor.com/docs/appveyor-yml/", "checkedAt": "2026-08-24", "supports": ["worker image", "build scripts", "environment variables", "encrypted values", "job configuration"] },
+        { "label": "AppVeyor Docs — Environment variables", "url": "https://www.appveyor.com/docs/environment-variables/", "checkedAt": "2026-08-24", "supports": ["hosted and on-premise service URLs", "worker image variable", "timeouts", "cache controls", "CI metadata"] },
+        { "label": "AppVeyor Docs — REST API", "url": "https://www.appveyor.com/docs/api/", "checkedAt": "2026-08-24", "supports": ["REST API", "teams and projects interfaces", "build and deployment interfaces", "bearer-token authentication", "JSON responses"] }
+      ],
+      "limitations": ["Vendor pricing and documentation were reviewed; ToolCompare did not create an account, run hosted or BYOC workers, measure queue or build performance, test repository integrations, inspect support quality or audit isolation and secret handling."]
+    }
   },
   {
     "slug": "travis-ci",
     "name": "Travis CI",
     "category": "Developer Tools",
-    "shortDescription": "Service to build and test software projects.",
+    "shortDescription": "Hosted CI/CD with usage-credit and fixed-concurrency plan models.",
     "websiteUrl": "https://travis-ci.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    },
+    "longDescription": "Travis CI runs repository-defined build, test and deployment jobs from a .travis.yml configuration. Current purchasing options include usage-based credits, fixed-concurrency subscriptions and Travis CI Enterprise Server; job cost, available virtual machines and queue behavior depend on the selected plan and execution environment.",
+    "pros": [
+      "Repository-owned configuration: Uses .travis.yml as the primary build configuration language.",
+      "Plan choice: Offers usage-credit and fixed-concurrency approaches for different workload shapes.",
+      "Ephemeral jobs: Hosted build environments are removed after a job completes.",
+      "Pull-request controls: Documents how encrypted variables and SSH keys behave for fork-originated builds."
+    ],
+    "cons": [
+      "Cost forecasting: Usage plans consume credits according to job duration and virtual-machine type.",
+      "Queueing: Jobs wait when the account reaches its selected concurrency limit.",
+      "Secret-dependent fork tests: External pull requests may not receive encrypted variables, depending on repository security settings.",
+      "Configuration ownership: Teams must maintain YAML, conditions, credentials and deployment behavior as the project changes."
+    ],
+    "keyFeatures": [
+      { "title": ".travis.yml pipelines", "description": "Stores primary build configuration with the repository in YAML." },
+      { "title": "Hosted build jobs", "description": "Runs selected jobs in temporary environments under plan and virtual-machine rules." },
+      { "title": "Usage or concurrency billing", "description": "Supports credit consumption or fixed concurrency with excess jobs queued." },
+      { "title": "Pull-request security settings", "description": "Controls whether selected encrypted variables or SSH keys reach fork-originated builds." }
+    ],
+    "targetAudience": "Repository-based software teams willing to manage YAML pipelines and choose between variable usage cost and fixed concurrent capacity.",
+    "bestFor": [
+      "Projects that want build configuration versioned in .travis.yml",
+      "Teams able to forecast credit consumption or required concurrent jobs",
+      "Maintainers prepared to separate trusted deployment jobs from untrusted pull-request checks"
+    ],
+    "skipIf": [
+      "Neither current credit pricing nor fixed-concurrency pricing fits the workload",
+      "Forked pull requests require secrets that security policy should not expose",
+      "The required operating system, architecture or virtual-machine capacity is unavailable on the selected plan"
+    ],
+    "verdict": "Choose Travis CI only after replaying representative jobs against its credit or concurrency model; verify queueing, virtual-machine availability and fork-secret policy before relying on it for releases.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Travis CI — Pricing", "url": "https://www.travis-ci.com/pricing/", "checkedAt": "2026-08-24", "supports": ["usage-based plan", "fixed-concurrency plan", "starting prices", "included credits", "concurrent jobs", "Enterprise Server offering"] },
+        { "label": "Travis CI Docs — Billing overview", "url": "https://docs.travis-ci.com/user/billing-overview/", "checkedAt": "2026-08-24", "supports": ["usage and concurrency plan types", "credit calculation", "virtual-machine multipliers", "queueing", "ephemeral job environments"] },
+        { "label": "Travis CI Docs — Build configuration YAML", "url": "https://docs.travis-ci.com/user/build-config-yaml", "checkedAt": "2026-08-24", "supports": [".travis.yml primary configuration", "YAML configuration", "configuration imports"] },
+        { "label": "Travis CI Docs — Pull requests", "url": "https://docs.travis-ci.com/user/pull-requests/", "checkedAt": "2026-08-24", "supports": ["pull-request builds", "merge-result testing", "encrypted-variable restrictions", "fork security settings", "SSH-key handling"] },
+        { "label": "Travis CI Docs — Security practices", "url": "https://docs.travis-ci.com/user/best-practices-security/", "checkedAt": "2026-08-24", "supports": ["secret masking limits", "token revocation", "log exposure response", "credential handling recommendations"] },
+        { "label": "Travis CI Developer — API v3", "url": "https://developer.travis-ci.com/", "checkedAt": "2026-08-24", "supports": ["API v3", "build and organization information", "build triggers", "job controls", "environment-variable editing", "YAML validation"] }
+      ],
+      "limitations": ["Vendor pages and documentation were reviewed; ToolCompare did not purchase a plan, run builds, measure credit use or queue time, test operating-system coverage, inspect Enterprise Server, validate repository-provider behavior or audit worker isolation."]
+    }
   },
   {
     "slug": "semaphore",
