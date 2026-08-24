@@ -1,0 +1,869 @@
+[
+  {
+    "slug": "podia",
+    "name": "Podia",
+    "kaynak": "https://www.podia.com/pricing",
+    "ipucu": 42.0,
+    "sayfada_gorulen": [
+      42.0,
+      84.0,
+      150.0,
+      504.0
+    ]
+  },
+  {
+    "slug": "vanta",
+    "name": "Vanta",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "sketch",
+    "name": "Sketch",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "procreate",
+    "name": "Procreate",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "affinity-designer",
+    "name": "Affinity Designer",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "hootsuite",
+    "name": "Hootsuite",
+    "kaynak": "https://www.hootsuite.com/plans",
+    "ipucu": 99.0,
+    "sayfada_gorulen": [
+      99.0,
+      199.0,
+      399.0
+    ]
+  },
+  {
+    "slug": "sprout-social",
+    "name": "Sprout Social",
+    "kaynak": "https://sproutsocial.com/pricing/",
+    "ipucu": 79.0,
+    "sayfada_gorulen": [
+      79.0,
+      99.0,
+      199.0,
+      299.0,
+      399.0
+    ]
+  },
+  {
+    "slug": "moz",
+    "name": "Moz",
+    "kaynak": "https://moz.com/products/pro/pricing",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      49.0,
+      50.0
+    ]
+  },
+  {
+    "slug": "customer-io",
+    "name": "Customer.io",
+    "kaynak": "https://customer.io/pricing",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      100.0
+    ]
+  },
+  {
+    "slug": "optinmonster",
+    "name": "OptinMonster",
+    "kaynak": "https://optinmonster.com/pricing/",
+    "ipucu": 126.0,
+    "sayfada_gorulen": [
+      126.0,
+      210.0,
+      342.0,
+      522.0,
+      570.0,
+      870.0
+    ]
+  },
+  {
+    "slug": "unbounce",
+    "name": "Unbounce",
+    "kaynak": "https://unbounce.com/pricing/",
+    "ipucu": 22.0,
+    "sayfada_gorulen": [
+      22.0,
+      29.0,
+      74.0,
+      99.0,
+      112.0,
+      149.0
+    ]
+  },
+  {
+    "slug": "instapage",
+    "name": "Instapage",
+    "kaynak": "https://instapage.com/plans",
+    "ipucu": 99.0,
+    "sayfada_gorulen": [
+      99.0,
+      199.0
+    ]
+  },
+  {
+    "slug": "crazy-egg",
+    "name": "Crazy Egg",
+    "kaynak": "https://www.crazyegg.com/pricing",
+    "ipucu": 29.0,
+    "sayfada_gorulen": [
+      29.0,
+      99.0,
+      249.0,
+      599.0
+    ]
+  },
+  {
+    "slug": "plausible",
+    "name": "Plausible",
+    "kaynak": "https://plausible.io",
+    "ipucu": 9.0,
+    "sayfada_gorulen": [
+      9.0,
+      14.0,
+      19.0
+    ]
+  },
+  {
+    "slug": "fathom-analytics",
+    "name": "Fathom Analytics",
+    "kaynak": "https://usefathom.com/pricing",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      45.0,
+      100.0
+    ]
+  },
+  {
+    "slug": "things",
+    "name": "Things",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "omnifocus",
+    "name": "OmniFocus",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "motion",
+    "name": "Motion",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "superhuman",
+    "name": "Superhuman",
+    "kaynak": "https://superhuman.com/plans",
+    "ipucu": 12.0,
+    "sayfada_gorulen": [
+      12.0,
+      15.0,
+      33.0,
+      40.0
+    ]
+  },
+  {
+    "slug": "readwise",
+    "name": "Readwise",
+    "kaynak": "https://readwise.io/pricing",
+    "ipucu": 5.59,
+    "sayfada_gorulen": [
+      5.59,
+      9.99,
+      12.99
+    ]
+  },
+  {
+    "slug": "obsidian-publish",
+    "name": "Obsidian Publish",
+    "kaynak": "https://obsidian.md/pricing",
+    "ipucu": 4.0,
+    "sayfada_gorulen": [
+      4.0,
+      5.0,
+      8.0,
+      10.0,
+      25.0,
+      50.0
+    ]
+  },
+  {
+    "slug": "basecamp",
+    "name": "Basecamp",
+    "kaynak": "https://basecamp.com/pricing",
+    "ipucu": 25.0,
+    "sayfada_gorulen": [
+      25.0,
+      59.0,
+      99.0,
+      100.0,
+      299.0,
+      300.0
+    ]
+  },
+  {
+    "slug": "smartsheet",
+    "name": "Smartsheet",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "squarespace-commerce",
+    "name": "Squarespace Commerce",
+    "kaynak": "https://www.squarespace.com",
+    "ipucu": 14.0,
+    "sayfada_gorulen": [
+      14.0,
+      19.0,
+      36.0
+    ]
+  },
+  {
+    "slug": "recurly",
+    "name": "Recurly",
+    "kaynak": "https://recurly.com/pricing/",
+    "ipucu": 249.0,
+    "sayfada_gorulen": [
+      249.0,
+      850.0
+    ]
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "kaynak": "https://www.synthesia.io/pricing",
+    "ipucu": 1000.0,
+    "sayfada_gorulen": [
+      1000.0
+    ]
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "kaynak": "https://github.com/pricing",
+    "ipucu": 4.0,
+    "sayfada_gorulen": [
+      4.0,
+      5.0,
+      21.0
+    ]
+  },
+  {
+    "slug": "help-scout",
+    "name": "Help Scout",
+    "kaynak": "https://www.helpscout.com/pricing/",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      20.0,
+      25.0,
+      45.0,
+      75.0
+    ]
+  },
+  {
+    "slug": "front",
+    "name": "Front",
+    "kaynak": "https://front.com/pricing",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      20.0,
+      25.0,
+      65.0,
+      105.0,
+      200.0
+    ]
+  },
+  {
+    "slug": "xero",
+    "name": "Xero",
+    "kaynak": "https://www.xero.com/pricing-plans/",
+    "ipucu": 4.0,
+    "sayfada_gorulen": [
+      4.0,
+      7.0,
+      29.0,
+      50.0,
+      75.0
+    ]
+  },
+  {
+    "slug": "freshbooks",
+    "name": "FreshBooks",
+    "kaynak": "https://www.freshbooks.com/pricing",
+    "ipucu": 6.0,
+    "sayfada_gorulen": [
+      6.0,
+      11.0,
+      20.0,
+      23.0,
+      40.0,
+      43.0
+    ]
+  },
+  {
+    "slug": "deel",
+    "name": "Deel",
+    "kaynak": "https://www.deel.com/pricing/",
+    "ipucu": 14.0,
+    "sayfada_gorulen": [
+      14.0,
+      49.0,
+      125.0,
+      325.0,
+      599.0
+    ]
+  },
+  {
+    "slug": "remote-com",
+    "name": "Remote",
+    "kaynak": "https://remote.com/pricing",
+    "ipucu": 29.0,
+    "sayfada_gorulen": [
+      29.0,
+      39.0,
+      99.0,
+      325.0,
+      699.0
+    ]
+  },
+  {
+    "slug": "rippling",
+    "name": "Rippling",
+    "kaynak": "https://www.rippling.com/pricing",
+    "ipucu": 250.0,
+    "sayfada_gorulen": [
+      250.0
+    ]
+  },
+  {
+    "slug": "bamboohr",
+    "name": "BambooHR",
+    "kaynak": "https://www.bamboohr.com/pricing/",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      17.0,
+      25.0,
+      250.0
+    ]
+  },
+  {
+    "slug": "docusign",
+    "name": "DocuSign",
+    "kaynak": "https://ecom.docusign.com/plans-and-pricing/esignature",
+    "ipucu": 2.4,
+    "sayfada_gorulen": [
+      2.4,
+      11.0,
+      30.0,
+      45.0
+    ]
+  },
+  {
+    "slug": "pipedrive",
+    "name": "Pipedrive",
+    "kaynak": "https://www.pipedrive.com/tr/pricing",
+    "ipucu": 16.0,
+    "sayfada_gorulen": [
+      16.0,
+      41.0,
+      168.0,
+      468.0,
+      708.0,
+      948.0
+    ]
+  },
+  {
+    "slug": "salesforce",
+    "name": "Salesforce",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "close",
+    "name": "Close",
+    "kaynak": "https://close.com/pricing",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0,
+      5.0,
+      9.0,
+      19.0,
+      35.0,
+      49.0
+    ]
+  },
+  {
+    "slug": "folk",
+    "name": "folk",
+    "kaynak": "https://www.folk.app/pricing",
+    "ipucu": 24.0,
+    "sayfada_gorulen": [
+      24.0,
+      30.0,
+      48.0,
+      60.0,
+      80.0,
+      100.0
+    ]
+  },
+  {
+    "slug": "jetbrains",
+    "name": "JetBrains",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "sublime-text",
+    "name": "Sublime Text",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "launchdarkly",
+    "name": "LaunchDarkly",
+    "kaynak": "https://launchdarkly.com/pricing/",
+    "ipucu": 5.0,
+    "sayfada_gorulen": [
+      5.0,
+      8.33,
+      10.0
+    ]
+  },
+  {
+    "slug": "gohighlevel",
+    "name": "GoHighLevel",
+    "kaynak": "https://www.gohighlevel.com/pricing",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      29.0,
+      30.0,
+      49.0,
+      50.0,
+      59.0
+    ]
+  },
+  {
+    "slug": "clickfunnels",
+    "name": "ClickFunnels",
+    "kaynak": "https://www.clickfunnels.com/plans",
+    "ipucu": 127.0,
+    "sayfada_gorulen": [
+      127.0,
+      147.0,
+      157.0,
+      197.0,
+      200.0,
+      208.0
+    ]
+  },
+  {
+    "slug": "leadpages",
+    "name": "Leadpages",
+    "kaynak": "https://leadpages.com/pricing",
+    "ipucu": 2.5,
+    "sayfada_gorulen": [
+      2.5,
+      6.0,
+      10.0,
+      17.0,
+      28.0,
+      57.0
+    ]
+  },
+  {
+    "slug": "carrot",
+    "name": "Carrot",
+    "kaynak": "https://carrot.com/pricing/",
+    "ipucu": 3.0,
+    "sayfada_gorulen": [
+      3.0,
+      29.0,
+      39.0,
+      69.0,
+      99.0,
+      119.0
+    ]
+  },
+  {
+    "slug": "spyfu",
+    "name": "SpyFu",
+    "kaynak": "https://www.spyfu.com/mainpurchase/?page=default",
+    "ipucu": 15.0,
+    "sayfada_gorulen": [
+      15.0,
+      29.0,
+      30.0,
+      40.0,
+      100.0,
+      119.0
+    ]
+  },
+  {
+    "slug": "buzzsumo",
+    "name": "BuzzSumo",
+    "kaynak": "https://buzzsumo.com/pricing/",
+    "ipucu": 478.0,
+    "sayfada_gorulen": [
+      478.0,
+      718.0,
+      1198.0
+    ]
+  },
+  {
+    "slug": "frase",
+    "name": "Frase",
+    "kaynak": "https://www.frase.io/pricing",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0,
+      5.0,
+      19.0,
+      29.0,
+      39.0,
+      49.0
+    ]
+  },
+  {
+    "slug": "clearscope",
+    "name": "Clearscope",
+    "kaynak": "https://www.clearscope.io/pricing",
+    "ipucu": 15.0,
+    "sayfada_gorulen": [
+      15.0,
+      20.0,
+      25.0,
+      50.0,
+      129.0,
+      399.0
+    ]
+  },
+  {
+    "slug": "hypefury",
+    "name": "Hypefury",
+    "kaynak": "https://hypefury.com/features-pricing",
+    "ipucu": 6.0,
+    "sayfada_gorulen": [
+      6.0,
+      19.0
+    ]
+  },
+  {
+    "slug": "google-workspace",
+    "name": "Google Workspace",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "microsoft-365",
+    "name": "Microsoft 365",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "1password-teams",
+    "name": "1Password Teams",
+    "kaynak": "https://1password.com",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0
+    ]
+  },
+  {
+    "slug": "keeper",
+    "name": "Keeper",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "todoist-pro",
+    "name": "Todoist Pro",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "sunsama",
+    "name": "Sunsama",
+    "kaynak": "https://www.sunsama.com/pricing",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0,
+      20.0,
+      22.0,
+      24.99,
+      25.0
+    ]
+  },
+  {
+    "slug": "akiflow",
+    "name": "Akiflow",
+    "kaynak": "https://akiflow.com/pricing",
+    "ipucu": 19.0,
+    "sayfada_gorulen": [
+      19.0,
+      20.0,
+      34.0,
+      981.0
+    ]
+  },
+  {
+    "slug": "linear-insights",
+    "name": "Linear Insights",
+    "kaynak": "https://linear.app/pricing",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      16.0
+    ]
+  },
+  {
+    "slug": "productboard",
+    "name": "Productboard",
+    "kaynak": "https://www.productboard.com/pricing/",
+    "ipucu": 5.0,
+    "sayfada_gorulen": [
+      5.0,
+      19.0,
+      25.0,
+      59.0,
+      60.0,
+      75.0
+    ]
+  },
+  {
+    "slug": "aha",
+    "name": "Aha!",
+    "kaynak": "https://www.aha.io/pricing",
+    "ipucu": 20.0,
+    "sayfada_gorulen": [
+      20.0,
+      25.0
+    ]
+  },
+  {
+    "slug": "zoom-phone",
+    "name": "Zoom Phone",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "dialpad",
+    "name": "Dialpad",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "ringcentral",
+    "name": "RingCentral",
+    "kaynak": "https://www.ringcentral.com/office/plansandpricing.html",
+    "ipucu": 25.0,
+    "sayfada_gorulen": [
+      25.0,
+      35.0,
+      39.0,
+      60.0,
+      75.0
+    ]
+  },
+  {
+    "slug": "aircall",
+    "name": "Aircall",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "kinsta",
+    "name": "Kinsta",
+    "kaynak": "https://kinsta.com/pricing/",
+    "ipucu": 30.0,
+    "sayfada_gorulen": [
+      30.0,
+      35.0,
+      42.0,
+      50.0,
+      59.0,
+      70.0
+    ]
+  },
+  {
+    "slug": "wpengine",
+    "name": "WP Engine",
+    "kaynak": "https://wpengine.com/plans",
+    "ipucu": 3.0,
+    "sayfada_gorulen": [
+      3.0,
+      20.0,
+      30.0,
+      400.0
+    ]
+  },
+  {
+    "slug": "siteground",
+    "name": "SiteGround",
+    "kaynak": "https://world.siteground.com/",
+    "ipucu": 11.99,
+    "sayfada_gorulen": [
+      11.99
+    ]
+  },
+  {
+    "slug": "shopify-plus",
+    "name": "Shopify Plus",
+    "kaynak": "https://www.shopify.com/pricing",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0,
+      19.0,
+      27.0,
+      54.0,
+      72.0,
+      89.0
+    ]
+  },
+  {
+    "slug": "sellfy",
+    "name": "Sellfy",
+    "kaynak": "https://sellfy.com/pricing/",
+    "ipucu": 29.0,
+    "sayfada_gorulen": [
+      29.0,
+      39.0,
+      59.0,
+      79.0,
+      119.0,
+      159.0
+    ]
+  },
+  {
+    "slug": "gorgias",
+    "name": "Gorgias",
+    "kaynak": "https://www.gorgias.com/pricing",
+    "ipucu": 1.5,
+    "sayfada_gorulen": [
+      1.5,
+      10.0,
+      27.0,
+      30.0,
+      40.0,
+      50.0
+    ]
+  },
+  {
+    "slug": "gladly",
+    "name": "Gladly",
+    "kaynak": "https://www.gladly.ai/",
+    "ipucu": 34.0,
+    "sayfada_gorulen": [
+      34.0
+    ]
+  },
+  {
+    "slug": "bill-com",
+    "name": "BILL",
+    "kaynak": "https://www.bill.com/product/pricing",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0,
+      1.49,
+      1.99,
+      2.99,
+      3.0,
+      9.99
+    ]
+  },
+  {
+    "slug": "workday",
+    "name": "Workday",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "lever",
+    "name": "Lever",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "greenhouse",
+    "name": "Greenhouse",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "ironclad",
+    "name": "Ironclad",
+    "kaynak": "https://ironcladapp.com/pricing",
+    "ipucu": 200.0,
+    "sayfada_gorulen": [
+      200.0
+    ]
+  },
+  {
+    "slug": "copper",
+    "name": "Copper",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "keap",
+    "name": "Keap",
+    "kaynak": "https://keap.com/pricing",
+    "ipucu": 6.0,
+    "sayfada_gorulen": [
+      6.0,
+      10.0,
+      24.0,
+      39.0,
+      79.0,
+      139.0
+    ]
+  }
+]

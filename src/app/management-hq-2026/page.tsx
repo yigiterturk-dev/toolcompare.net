@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { fiyatDurumu } from "@/lib/fiyat";
+import fiyatOnerileri from "@/data/fiyat_onerileri.json";
 
 const ICON_OPTIONS = ["Zap", "Cloud", "BarChart3", "Database", "Activity", "CheckCircle", "Layout", "Mail", "Shield"];
 
@@ -279,6 +280,50 @@ export default function AdminDashboard() {
           >
             {loading ? <Loader2 className="animate-spin" /> : <><Plus size={20}/> Generate Article</>}
           </button>
+        </div>
+      </section>
+
+      {/* Fiyat onerileri -- makinenin bulduklari, INSAN ONAYI bekliyor */}
+      <section style={{ marginBottom: '2.5rem', background: '#0f0f0f', border: '1px solid #222', borderRadius: '24px', padding: '2rem' }}>
+        <h2 style={{ fontSize: '1.4rem', marginBottom: '0.8rem' }}>Price suggestions (need your confirmation)</h2>
+        <p style={{ color: '#888', fontSize: '0.9rem', marginTop: 0, lineHeight: 1.6 }}>
+          <code style={{ color: 'var(--brand-primary)' }}>tools/fiyat_cek.py</code> visited each vendor&apos;s own
+          pricing page and pulled the lowest plausible figure. <strong style={{ color: 'white' }}>These are hints,
+          not facts.</strong> A pricing page shows annual-billed rates, regional currencies and per-seat prices
+          side by side, so the lowest number is often not the monthly starting price — OptinMonster&apos;s $126 and
+          Unbounce&apos;s $22 below are almost certainly annual figures. Nothing here is written to the site until
+          you confirm it. Open the source page, check, then set <code>basePrice</code> and{' '}
+          <code>fiyatModeli: &quot;aylik&quot;</code> on that tool in tools.json.
+        </p>
+        <div style={{ overflowX: 'auto', marginTop: '1.2rem' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+            <thead>
+              <tr style={{ textAlign: 'left', color: '#666', fontSize: '0.75rem', textTransform: 'uppercase' }}>
+                <th style={{ padding: '0.6rem 0.5rem' }}>Tool</th>
+                <th style={{ padding: '0.6rem 0.5rem' }}>Lowest found</th>
+                <th style={{ padding: '0.6rem 0.5rem' }}>All prices on page</th>
+                <th style={{ padding: '0.6rem 0.5rem' }}>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(fiyatOnerileri as any[]).map((r) => (
+                <tr key={r.slug} style={{ borderTop: '1px solid #1e1e1e' }}>
+                  <td style={{ padding: '0.7rem 0.5rem', fontWeight: 600 }}>{r.name}</td>
+                  <td style={{ padding: '0.7rem 0.5rem', color: r.ipucu ? 'var(--brand-primary)' : '#666', fontWeight: 700 }}>
+                    {r.ipucu ? `$${r.ipucu}` : 'not found'}
+                  </td>
+                  <td style={{ padding: '0.7rem 0.5rem', color: '#888' }}>
+                    {r.sayfada_gorulen?.length ? r.sayfada_gorulen.map((n: number) => `$${n}`).join(' · ') : '—'}
+                  </td>
+                  <td style={{ padding: '0.7rem 0.5rem' }}>
+                    {r.kaynak
+                      ? <a href={r.kaynak} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--brand-primary)' }}>open</a>
+                      : <span style={{ color: '#666' }}>no pricing page found</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
