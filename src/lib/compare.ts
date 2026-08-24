@@ -45,9 +45,35 @@ function kategoriAnahtari(k?: string): string {
   return (k || "diger").trim().toLowerCase();
 }
 
-/** Elimizdeki tek nesnel siralama olcutu. */
-function kalitePuani(t: Arac): number {
-  return (t.ease ?? 0) + (t.featuresScore ?? 0);
+/**
+ * SIRALAMA OLCUTU: FIYAT.
+ *
+ * Onceden `ease + featuresScore` kullaniliyordu. O iki sayi 121 aracin
+ * hepsinde 80-100 (ozellik) ve 40-99 (kolaylik) araligindaydi: ayrim
+ * yapamiyorlardi, ama sitenin butun iskeletini onlar kuruyordu --
+ * kategori sirasi, alternatif sirasi, hangi araclarin akran sayilacagi
+ * ve hangi 418 karsilastirma sayfasinin var olacagi.
+ *
+ * Uydurulmus bir kalite puanini siralama olcutu yapmak yerine
+ * DOGRULANABILIR tek sayiyi kullaniyoruz: baslangic fiyati.
+ *
+ * Fiyati karsilastirilabilir olmayan arac (kullanima gore, ucretsiz
+ * katman, dogrulanmamis) sona gider ve kendi arasinda ada gore siralanir
+ * -- ve sayfa bunu neden yaptigini yazar. Uydurma bir yere koymak yerine
+ * "bunlar siralanamiyor" demek dogru olan.
+ */
+function siraAnahtari(t: Arac): [number, number, string] {
+  const d = fiyatDurumu(t as any);
+  if (d.karsilastirilabilir && d.aylik !== null) return [0, d.aylik, t.name];
+  return [1, 0, t.name];
+}
+
+function siralamaKarsilastir(a: Arac, b: Arac): number {
+  const [ga, fa, na] = siraAnahtari(a);
+  const [gb, fb, nb] = siraAnahtari(b);
+  if (ga !== gb) return ga - gb;
+  if (fa !== fb) return fa - fb;
+  return na.localeCompare(nb);
 }
 
 /**
@@ -70,7 +96,7 @@ export function akranlar(slug: string, adet: number = AKRAN_ADEDI): Arac[] {
   if (!arac) return [];
   return araclar
     .filter((t) => t.slug !== slug && kategoriAnahtari(t.category) === kategoriAnahtari(arac.category))
-    .sort((a, b) => kalitePuani(b) - kalitePuani(a))
+    .sort(siralamaKarsilastir)
     .slice(0, adet);
 }
 
@@ -149,13 +175,7 @@ export function farkCumlesi(asil: Arac, alt: Arac): string {
     parcalar.push(`priced differently (${db.kisa} vs ${da.kisa})`);
   }
 
-  const ka = asil.ease ?? 0;
-  const kb = alt.ease ?? 0;
-  if (Math.abs(kb - ka) >= 5) parcalar.push(kb > ka ? "easier to pick up" : "harder to pick up");
-
-  const oa = asil.featuresScore ?? 0;
-  const ob = alt.featuresScore ?? 0;
-  if (Math.abs(ob - oa) >= 5) parcalar.push(ob > oa ? "deeper on features" : "lighter on features");
-
+  // "easier to pick up" / "deeper on features" kalemleri KALDIRILDI:
+  // dayandiklari puanlar uydurmaydi ve ayrim yapamiyordu.
   return parcalar.join(", ");
 }

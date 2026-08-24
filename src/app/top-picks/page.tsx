@@ -5,17 +5,17 @@ import { Award, Star, ArrowRight } from "lucide-react";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 
 export const metadata = {
-  title: "Top Software Picks 2026 | ToolCompare",
-  description: "Our hand-picked selection of the best SaaS tools for 2026 based on performance and features.",
+  title: "The Cheapest Tools We Track (2026) | ToolCompare",
+  description: "The lowest starting prices across our whole directory. Price is not quality — this is a price list, not a recommendation.",
 };
 
 export default function TopPicksPage() {
   // Sort tools by combined score and take top 5
   const topPicks = [...toolsData]
-    .sort((a: any, b: any) => (b.ease + b.featuresScore) - (a.ease + a.featuresScore))
+    .sort((a: any, b: any) => (a.basePrice ?? 0) - (b.basePrice ?? 0))
     .slice(0, 5);
 
-  const sema = listeSemasi("Top Software Picks 2026", "/top-picks", topPicks);
+  const sema = listeSemasi("The Cheapest Tools We Track (2026)", "/top-picks", topPicks);
 
   return (
     <>
@@ -27,16 +27,16 @@ export default function TopPicksPage() {
       
       <main style={{ paddingTop: '10rem', maxWidth: '1000px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <span style={{ background: 'rgba(236, 72, 153, 0.1)', color: 'var(--brand-tertiary)', padding: '0.5rem 1.2rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>Ranked by score</span>
-          <h1 style={{ fontSize: '4rem', marginTop: '1rem', marginBottom: '1.5rem' }}>Top Picks <span style={{ color: 'var(--brand-tertiary)' }}>2026</span></h1>
+          <span style={{ background: 'rgba(236, 72, 153, 0.1)', color: 'var(--brand-tertiary)', padding: '0.5rem 1.2rem', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px' }}>Ranked by price</span>
+          <h1 style={{ fontSize: '4rem', marginTop: '1rem', marginBottom: '1.5rem' }}>Cheapest Tools <span style={{ color: 'var(--brand-tertiary)' }}>2026</span></h1>
           {/* ONCEKI METIN: "We've analyzed over 500+ data points" -- boyle bir
               olcum YOK. Sayfa araclari kolaylik + ozellik puanina gore
               siraliyor, o kadar. Uydurma rakam kaldirildi ve yontem
               oldugu gibi yazildi. */}
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto' }}>
-            These are the {topPicks.length} highest-scoring tools across our whole directory of {toolsData.length},
-            ranked by ease of use plus feature depth. No one paid to be here, and this is a score — not a
-            claim that these are right for your team.{' '}
+            These are the {topPicks.length} lowest starting prices across our whole directory of {toolsData.length}.
+            No one paid to be here. Cheapest is not best: this is a price list, not a recommendation, and it
+            says nothing about whether any of these fit your team.{' '}
             <Link href="/methodology" style={{ color: 'var(--brand-tertiary)' }}>How we score tools</Link>.
           </p>
         </div>

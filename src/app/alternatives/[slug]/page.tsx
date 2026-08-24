@@ -86,9 +86,10 @@ export default async function AlternativesPage({ params }: any) {
         </h1>
 
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: 1.7, maxWidth: '70ch' }}>
-          These are the {alts.length} closest tools to {tool.name} that we track, ordered by our combined
-          score. Each entry says what it does differently — cheaper, easier, or deeper on features — based
-          on the numbers we hold, not on who pays us.
+          These are the {alts.length} closest tools to {tool.name} that we track, ordered by what they cost
+          to start. Each entry says how its pricing differs from {tool.name}&apos;s — based on the numbers we
+          hold, not on who pays us. We do not publish a quality score, because we do not have one we can
+          stand behind.
           {enUcuz && (
             <> The cheapest verified option is <strong style={{ color: 'white' }}>{enUcuz.name}</strong> at {fiyatDurumu(enUcuz as any).kisa}.</>
           )}

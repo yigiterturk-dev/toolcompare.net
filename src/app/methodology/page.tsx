@@ -41,12 +41,6 @@ export default function MethodologyPage() {
   const dogrulanmamis = dogrulanmamisSayisi(araclar);
   const dogrulanmis = toplam - dogrulanmamis;
 
-  const ozellikPuanlari = araclar.map((t) => t.featuresScore).filter((n) => typeof n === "number");
-  const ozellikAlt = Math.min(...ozellikPuanlari);
-  const ozellikUst = Math.max(...ozellikPuanlari);
-  const kolaylikPuanlari = araclar.map((t) => t.ease).filter((n) => typeof n === "number");
-  const kolaylikAlt = Math.min(...kolaylikPuanlari);
-  const kolaylikUst = Math.max(...kolaylikPuanlari);
 
   const B = ({ children }: { children: React.ReactNode }) => (
     <section style={{ marginBottom: '3.5rem' }}>{children}</section>
@@ -66,24 +60,26 @@ export default function MethodologyPage() {
         </p>
 
         <B>
-          <h2 style={{ fontSize: '1.6rem', margin: '3rem 0 1rem' }}>The two scores</h2>
+          <h2 style={{ fontSize: '1.6rem', margin: '3rem 0 1rem' }}>Why there is no quality score</h2>
           <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            Each tool carries two numbers: <strong style={{ color: 'white' }}>ease of use</strong> and{' '}
-            <strong style={{ color: 'white' }}>feature depth</strong>. Their sum is what orders every category
-            page, every alternatives list, and which tools we treat as each other&apos;s closest peers.
+            Until recently every tool here carried two numbers — &quot;ease of use&quot; and &quot;feature depth&quot; —
+            and their sum decided the order of every category page, every alternatives list, and which tools
+            we treated as each other&apos;s closest peers.
           </p>
           <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-            These are <strong style={{ color: 'white' }}>our own editorial scores</strong>. They are not supplied
-            by vendors, not bought, and not independently audited.
+            We removed them. Across all {toplam} tools those scores sat in a band so narrow that they could not
+            actually separate anything, and we could not show you where a single one of them came from. A
+            precise-looking number with no method behind it is worse than no number: it looks like evidence.
           </p>
-          <div style={{ background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '20px', padding: '1.8rem', marginTop: '1.5rem' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.8rem' }}>Where this is weak</h3>
+          <div style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.3)', borderRadius: '20px', padding: '1.8rem', marginTop: '1.5rem' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '0.8rem' }}>What orders the lists now</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75, margin: 0 }}>
-              Across all {toplam} tools, feature depth only spans {ozellikAlt}–{ozellikUst} and ease of use
-              spans {kolaylikAlt}–{kolaylikUst}. A range that narrow separates tools far less than the
-              precise-looking numbers suggest. Treat a gap of a few points as noise, not as a verdict — we do
-              the same: on comparison pages, any difference under 5 points is reported as
-              &quot;effectively tied&quot; rather than as a winner.
+              Starting price, cheapest first — the one number on this site that can be checked against the
+              vendor&apos;s own page. Tools that cannot go on that scale (usage-based pricing, a free tier, or a
+              price we could not verify) are listed after them and say which case they are.
+              <br /><br />
+              <strong style={{ color: 'white' }}>Cheapest is not best.</strong> Price ordering is not a quality
+              ranking and we do not present it as one. It is simply the only ordering we can justify today.
             </p>
           </div>
         </B>

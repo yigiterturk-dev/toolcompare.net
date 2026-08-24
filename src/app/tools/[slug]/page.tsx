@@ -214,8 +214,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <aside>
               <div style={{ position: 'sticky', top: '8rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem', textAlign: 'center' }}>
-                   <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>Ease of Use</span>
-                   <div style={{ fontSize: '3.5rem', fontWeight: 800, color: 'var(--brand-primary)', fontFamily: 'var(--font-outfit)' }}>{tool.ease}%</div>
+                   <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>How to start</span>
+                   <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--brand-primary)', fontFamily: 'var(--font-outfit)' }}>{fiyatDurumu(tool).metin}</div>
                 </div>
 
                 <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem' }}>

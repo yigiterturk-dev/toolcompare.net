@@ -16,6 +16,7 @@
  */
 
 import toolsData from "@/data/tools.json";
+import { fiyatDurumu } from "@/lib/fiyat";
 
 export type Arac = {
   slug: string;
@@ -49,8 +50,15 @@ function baslikYap(ad: string): string {
     .join(" ");
 }
 
-function kalitePuani(t: Arac): number {
-  return (t.ease ?? 0) + (t.featuresScore ?? 0);
+/** Siralama fiyata gore; karsilastirilamayanlar sona, ada gore. */
+function siralamaKarsilastir(a: Arac, b: Arac): number {
+  const da = fiyatDurumu(a as any);
+  const db = fiyatDurumu(b as any);
+  const ga = da.karsilastirilabilir && da.aylik !== null ? 0 : 1;
+  const gb = db.karsilastirilabilir && db.aylik !== null ? 0 : 1;
+  if (ga !== gb) return ga - gb;
+  if (ga === 0 && da.aylik !== db.aylik) return (da.aylik as number) - (db.aylik as number);
+  return a.name.localeCompare(b.name);
 }
 
 /** Kategoriler, arac sayisina gore coktan aza. */
@@ -68,7 +76,7 @@ export function kategoriler(): Kategori[] {
     .map(([slug, g]) => ({
       slug,
       ad: g.ad,
-      araclar: [...g.araclar].sort((a, b) => kalitePuani(b) - kalitePuani(a)),
+      araclar: [...g.araclar].sort(siralamaKarsilastir),
     }))
     .sort((a, b) => b.araclar.length - a.araclar.length);
 }

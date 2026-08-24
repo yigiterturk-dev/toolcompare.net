@@ -38,7 +38,6 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [userVotes, setUserVotes] = useState<Record<string, number>>({});
 
   const pageSize = 12;
 
@@ -230,8 +229,13 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                     {(() => {
                       const badges = [];
                       if (tool.basePrice <= 15 && tool.basePrice > 0) badges.push({ text: 'Budget Pick', color: '#10b981' });
-                      if (tool.featuresScore >= 95) badges.push({ text: "Editor's Choice", color: '#6366f1' });
-                      if (tool.ease >= 96) badges.push({ text: 'Top Rated', color: '#f59e0b' });
+                      // "Editor's Choice" ve "Top Rated" rozetleri uydurma
+                      // puanlardan uretiliyordu; kaldirildi. Yerine
+                      // DOGRULANABILIR bilgi: nasil baslanabiliyor.
+                      const fd = fiyatDurumu(tool);
+                      if (tool.fiyatModeli === 'bedava') badges.push({ text: 'Free', color: '#22c55e' });
+                      else if (tool.fiyatModeli === 'ucretsiz-katman') badges.push({ text: 'Free tier', color: '#22c55e' });
+                      else if (tool.fiyatModeli === 'kullanima-gore') badges.push({ text: 'Usage-based', color: '#f59e0b' });
                       
                       return badges.map((b, i) => (
                         <div key={i} style={{ 
@@ -308,51 +312,30 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                         </h3>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
                           <span style={{ fontSize: '0.75rem', color: 'var(--brand-primary)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px' }}>{tool.category}</span>
-                          <div style={{ display: 'flex', gap: '2px' }}>
-                            {[1, 2, 3, 4, 5].map((star) => {
-                              const baseScore = (tool.ease + tool.featuresScore) / 40;
-                              const userRating = userVotes[tool.slug] || 4.1;
-                              const finalRating = (baseScore * 0.6) + (userRating * 0.4);
-                              return <Star key={star} size={10} fill={star <= Math.round(finalRating) ? "#fbbf24" : "transparent"} color={star <= Math.round(finalRating) ? "#fbbf24" : "#333"} />;
-                            })}
-                          </div>
+                          {/* YILDIZLAR KALDIRILDI: uydurma ease/featuresScore
+                              puanindan hesaplaniyordu, ustune oy yoksa
+                              `|| 4.1` diye sabit bir "kullanici puani"
+                              uyduruluyordu. Ikisi de gercek degildi. */}
                         </div>
                       </div>
                     </div>
-
+                    {/* Ease of Use / Features kutulari kaldirildi: iki puan da
+                        uydurmaydi ve ayrim yapamiyordu. Yerine DOGRULANABILIR
+                        bilgi: bu araca nasil baslanabiliyor. */}
                     <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
                        <div style={{ flex: 1, padding: '0.8rem', borderRadius: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-                         <div style={{ fontSize: '0.6rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>Ease of Use</div>
-                         <div style={{ fontSize: '1.1rem', fontWeight: 900, color: 'white' }}>{tool.ease}%</div>
-                       </div>
-                       <div style={{ flex: 1, padding: '0.8rem', borderRadius: '16px', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-                         <div style={{ fontSize: '0.6rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>Features</div>
-                         <div style={{ fontSize: '1.1rem', fontWeight: 900, color: 'white' }}>{tool.featuresScore}%</div>
+                         <div style={{ fontSize: '0.6rem', color: '#666', fontWeight: 800, textTransform: 'uppercase', marginBottom: '0.2rem' }}>How to start</div>
+                         <div style={{ fontSize: '1rem', fontWeight: 900, color: 'white' }}>{fiyatDurumu(tool).kisa}</div>
                        </div>
                     </div>
-
-                    {/* Community Rating - Interactive */}
-                    <div style={{ background: 'rgba(99, 102, 241, 0.05)', borderRadius: '16px', padding: '1rem', marginBottom: '2rem', textAlign: 'center', border: '1px dashed rgba(99, 102, 241, 0.2)' }}>
-                      <div style={{ fontSize: '0.65rem', fontWeight: 800, color: 'var(--brand-primary)', textTransform: 'uppercase', marginBottom: '0.5rem', letterSpacing: '1px' }}>
-                        {userVotes[tool.slug] ? "Thanks for your vote!" : "Rate this Tool"}
-                      </div>
-                      <div style={{ display: 'flex', justifyContent: 'center', gap: '6px' }}>
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <Star 
-                            key={star} 
-                            size={18} 
-                            style={{ cursor: 'pointer', transition: 'transform 0.2s' }}
-                            className="star-hover"
-                            fill={star <= (userVotes[tool.slug] || 0) ? "#fbbf24" : "transparent"}
-                            color={star <= (userVotes[tool.slug] || 0) ? "#fbbf24" : "rgba(255,255,255,0.2)"}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setUserVotes(prev => ({ ...prev, [tool.slug]: star }));
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
+                    {/* TOPLULUK PUANLAMASI KALDIRILDI. Oy useState'te
+                        tutuluyordu: hicbir yere gonderilmiyor, sayfa
+                        yenilenince kayboluyor, baska kimse gormuyor -- ama
+                        ekranda "Thanks for your vote!" yaziyordu. Olmayan bir
+                        puanlama sistemi ima ediyordu.
+                        Gercek oylama isteniyorsa tik olcumu gibi bir depo
+                        gerekir (bkz. src/lib/clicks.ts); o zamana kadar
+                        gostermemek dogru. */}
 
                     <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginBottom: '1.5rem', minHeight: '3rem', lineHeight: 1.5 }}>{tool.shortDescription}</p>
 

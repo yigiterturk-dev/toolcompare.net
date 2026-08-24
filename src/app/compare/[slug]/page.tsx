@@ -75,10 +75,6 @@ export default async function ComparisonPage({ params }: any) {
   const pahali = ucuz ? (ucuz === tool1 ? tool2 : tool1) : null;
   const ucuzF = ucuz ? fiyatDurumu(ucuz) : null;
   const pahaliF = pahali ? fiyatDurumu(pahali) : null;
-  const kolay = tool1.ease >= tool2.ease ? tool1 : tool2;
-  const zor = kolay === tool1 ? tool2 : tool1;
-  const zengin = tool1.featuresScore >= tool2.featuresScore ? tool1 : tool2;
-  const sade = zengin === tool1 ? tool2 : tool1;
 
   // Yalnizca akranlar: sitemap disi bir sayfaya link verilmemeli.
   const ilgili = akranlar(tool1.slug).filter((t: any) => t.slug !== tool2.slug);
@@ -135,20 +131,14 @@ export default async function ComparisonPage({ params }: any) {
                     : `${ucuz!.name} is cheaper — ${ucuzF!.kisa} vs ${pahaliF!.kisa}.`)}
             </li>
             <li>
-              <strong style={{ color: 'white' }}>Ease of use:</strong>{' '}
-              {Math.abs(tool1.ease - tool2.ease) < 5
-                ? 'effectively tied in our scoring.'
-                : `${kolay.name} scores higher (${kolay.ease} vs ${zor.ease}).`}
-            </li>
-            <li>
-              <strong style={{ color: 'white' }}>Feature depth:</strong>{' '}
-              {Math.abs(tool1.featuresScore - tool2.featuresScore) < 5
-                ? 'effectively tied in our scoring.'
-                : `${zengin.name} scores higher (${zengin.featuresScore} vs ${sade.featuresScore}).`}
+              <strong style={{ color: 'white' }}>How to start:</strong>{' '}
+              {f1.metin.toLowerCase() === f2.metin.toLowerCase()
+                ? `both are ${f1.metin.toLowerCase()}.`
+                : `${tool1.name} is ${f1.metin.toLowerCase()}, ${tool2.name} is ${f2.metin.toLowerCase()}.`}
             </li>
           </ul>
           <p style={{ color: '#666', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
-            These lines are generated from the scores and prices we track, not from a paid placement. They cannot tell you which tool fits <em>your</em> workflow — the sections below are there for that.{' '}
+            These lines are generated from the pricing we track, not from a paid placement. We do not publish a quality score, because we do not have one we can stand behind. They cannot tell you which tool fits <em>your</em> workflow — the sections below are there for that.{' '}
             <Link href="/methodology" style={{ color: 'var(--brand-primary)' }}>How we score tools</Link>.
           </p>
         </div>
@@ -175,8 +165,6 @@ export default async function ComparisonPage({ params }: any) {
         {/* Detailed Comparison Table */}
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '40px', padding: '4rem' }}>
           <ComparisonRow label="Category" val1={tool1.category} val2={tool2.category} />
-          <ComparisonRow label="Ease of Use" val1={tool1.ease} val2={tool2.ease} type="score" />
-          <ComparisonRow label="Features" val1={tool1.featuresScore} val2={tool2.featuresScore} type="score" />
           <ComparisonRow label="Base Price" val1={f1.kisa} val2={f2.kisa} />
           
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '3rem 0 0' }}>

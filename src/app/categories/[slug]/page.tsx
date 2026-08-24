@@ -29,8 +29,11 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   const kategori = kategoriBul(slug);
   if (!kategori) return { title: "Category Not Found" };
 
-  const title = `Best ${kategori.ad} Tools in 2026: ${kategori.araclar.length} Compared | ToolCompare`;
-  const description = `We compared ${kategori.araclar.length} ${kategori.ad.toLowerCase()} tools on ease of use, feature depth and starting price. See the full ranking, pricing and who each one is for.`;
+  // "Best" DEMIYORUZ: sayfa fiyata gore siraliyor, kalite puanina gore
+  // degil. Uydurma puan kaldirildi; basligin da onu yansitmasi gerekiyor.
+  const cekirdek = `${kategori.ad} Tools in 2026: ${kategori.araclar.length} Compared by Price`;
+  const title = cekirdek.length <= 51 ? `${cekirdek} | ToolCompare` : cekirdek;
+  const description = `${kategori.araclar.length} ${kategori.ad.toLowerCase()} tools compared on what they cost to start: monthly price, free tiers and usage-based plans. See the full list and who each one is for.`;
   const url = `/categories/${kategori.slug}`;
 
   // Uc aractan azi olan kategori sayfasi sitemap'e girmiyor (ince).
@@ -63,7 +66,7 @@ export default async function CategoryPage({ params }: any) {
   const [birinci, ikinci] = kategori.araclar;
 
   const semalar = [
-    listeSemasi(`Best ${kategori.ad} Tools in 2026`, `/categories/${kategori.slug}`, kategori.araclar),
+    listeSemasi(`${kategori.ad} Tools in 2026, Compared by Price`, `/categories/${kategori.slug}`, kategori.araclar),
     kirintiSemasi([
       { ad: "Categories", yol: "/categories" },
       { ad: kategori.ad, yol: `/categories/${kategori.slug}` },
@@ -80,19 +83,21 @@ export default async function CategoryPage({ params }: any) {
         </Link>
 
         <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 900, letterSpacing: '-0.03em', margin: '1.5rem 0 1.5rem' }}>
-          Best {kategori.ad} Tools in 2026
+          {kategori.ad} Tools in 2026, Compared by Price
         </h1>
 
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: 1.7, maxWidth: '70ch' }}>
           We track {kategori.araclar.length} {kategori.ad.toLowerCase()} {kategori.araclar.length === 1 ? 'tool' : 'tools'}.
-          The ranking below is ordered by our combined score — ease of use plus feature depth — and every
-          entry shows what it costs to start.{' '}
+          The list below is ordered by <strong style={{ color: 'white' }}>what it costs to start</strong>, cheapest first.
+          Tools that cannot be put on that scale — usage-based pricing, a free tier, or a price we could not
+          verify — come last, and each one says which case it is.{' '}
           {enUcuz ? <>The cheapest verified entry point is <strong style={{ color: 'white' }}>{enUcuz.name}</strong> at {fiyatDurumu(enUcuz as any).kisa}.</> : null}
         </p>
 
         <p style={{ color: '#666', fontSize: '0.9rem', maxWidth: '70ch', marginTop: '1rem' }}>
-          No vendor has paid for a position on this page. The order comes from the scores we track, and
-          those scores cannot tell you which tool fits your team — read the individual reviews for that.{' '}
+          No vendor has paid for a position on this page. Price is not quality: the cheapest tool here is
+          not the best one for your team, it is only the cheapest. We do not publish a quality score
+          because we do not have one we can stand behind.{' '}
           <Link href="/methodology" style={{ color: 'var(--brand-primary)' }}>How we score tools</Link>.
         </p>
 
@@ -115,7 +120,7 @@ export default async function CategoryPage({ params }: any) {
                   </p>
                 )}
                 <p style={{ color: '#666', fontSize: '0.85rem', margin: '0.7rem 0 0' }}>
-                  {fiyatDurumu(t as any).metin} · Ease {t.ease} · Features {t.featuresScore}
+                  {fiyatDurumu(t as any).metin}
                 </p>
               </div>
             </li>
@@ -126,7 +131,7 @@ export default async function CategoryPage({ params }: any) {
           <div style={{ marginTop: '4rem', background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: '28px', padding: '2.5rem' }}>
             <h2 style={{ fontSize: '1.3rem', marginBottom: '1rem' }}>Still deciding?</h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: 1.7 }}>
-              The two highest-scoring tools in this category are {birinci.name} and {ikinci.name}. Put them side by side:
+              The two cheapest tools in this category are {birinci.name} and {ikinci.name}. Put them side by side:
             </p>
             <Link
               href={`/compare/${kanonikSlug(birinci.slug, ikinci.slug)}`}
