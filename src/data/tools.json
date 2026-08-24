@@ -6779,7 +6779,7 @@
     "category": "Developer Tools",
     "shortDescription": "DevOps platform with built-in CI/CD and issue tracking.",
     "websiteUrl": "https://about.gitlab.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6788,7 +6788,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "GitLab bundles source hosting, CI/CD, package registry and issue tracking into one application, and it can be self-hosted on your own servers. That single-application approach is the whole pitch: fewer integrations to maintain, one permission model, one place to look.",
+    "pros": [
+      "CI/CD is built in rather than bolted on",
+      "Can be self-hosted, which matters for regulated teams",
+      "Generous free tier including private repositories"
+    ],
+    "cons": [
+      "The interface is heavy compared with focused tools",
+      "Self-hosting is real operational work",
+      "Feature breadth means a steeper learning curve"
+    ],
+    "targetAudience": "Teams that want their repository, pipelines and issues in one system, especially where self-hosting is a requirement.",
+    "verdict": "A reasonable default when you want one vendor for the whole software lifecycle. If you only need Git hosting and your CI already lives elsewhere, it is more than you need."
   },
   {
     "slug": "bitbucket",
@@ -6796,7 +6809,7 @@
     "category": "Developer Tools",
     "shortDescription": "Git hosting from Atlassian, tightly tied to Jira.",
     "websiteUrl": "https://bitbucket.org",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6805,7 +6818,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Bitbucket is Atlassian's Git hosting service, and its main argument is how tightly it connects to Jira. Commits, branches and pull requests link to issues automatically, which is worth a lot if your team already plans work in Jira.",
+    "pros": [
+      "Deep Jira integration that competitors cannot match",
+      "Built-in Pipelines for CI",
+      "Free tier for small teams"
+    ],
+    "cons": [
+      "Smaller ecosystem and community than GitHub",
+      "Less appealing if you do not use Jira",
+      "Pipelines minutes run out quickly on the free plan"
+    ],
+    "targetAudience": "Teams already invested in Atlassian tools, particularly Jira.",
+    "verdict": "Choose it for the Jira link, not on its own merits. Outside the Atlassian stack the case is much weaker."
   },
   {
     "slug": "circleci",
@@ -6813,7 +6839,7 @@
     "category": "Developer Tools",
     "shortDescription": "Continuous integration and delivery pipelines.",
     "websiteUrl": "https://circleci.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6822,7 +6848,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "CircleCI runs build, test and deployment pipelines defined in a YAML file in your repository. It is a focused CI product rather than part of a wider suite, and it shows in configuration flexibility and speed.",
+    "pros": [
+      "Fast builds with good caching and parallelism",
+      "Docker-first, so local and CI environments match",
+      "Works across GitHub, Bitbucket and GitLab"
+    ],
+    "cons": [
+      "Pricing by credits is hard to predict",
+      "Configuration gets complex on large monorepos",
+      "Debugging failed builds can be slow"
+    ],
+    "targetAudience": "Engineering teams that want a dedicated CI service rather than whatever ships with their Git host.",
+    "verdict": "Strong if CI is a bottleneck for you. If your pipelines are simple, the CI built into your Git host is probably enough."
   },
   {
     "slug": "jenkins",
@@ -6830,7 +6869,7 @@
     "category": "Developer Tools",
     "shortDescription": "Open-source automation server for build pipelines.",
     "websiteUrl": "https://www.jenkins.io",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "bedava",
     "basePrice": 0,
     "isFlat": true,
@@ -6839,7 +6878,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Jenkins is the long-standing open-source automation server. It runs anywhere, does almost anything through plugins, and costs nothing in licence fees; what it costs is maintenance.",
+    "pros": [
+      "Free and open source with no usage limits",
+      "Enormous plugin ecosystem",
+      "Runs entirely on your own infrastructure"
+    ],
+    "cons": [
+      "You maintain the server, the agents and the plugins",
+      "Interface and defaults feel dated",
+      "Plugin quality varies and updates can break builds"
+    ],
+    "targetAudience": "Teams with infrastructure skills who need full control or cannot send code to a hosted service.",
+    "verdict": "Still the right answer when control matters more than convenience. For most small teams a hosted CI is less work."
   },
   {
     "slug": "kubernetes",
@@ -6847,7 +6899,7 @@
     "category": "Developer Tools",
     "shortDescription": "Open-source container orchestration.",
     "websiteUrl": "https://kubernetes.io",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "bedava",
     "basePrice": 0,
     "isFlat": true,
@@ -6856,7 +6908,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Kubernetes schedules containers across a cluster and keeps them running as declared. It is the industry standard for container orchestration, and also a large amount of complexity to take on.",
+    "pros": [
+      "The standard, with the largest ecosystem and hiring pool",
+      "Portable across every major cloud",
+      "Handles scaling, rollout and self-healing declaratively"
+    ],
+    "cons": [
+      "Steep learning curve and significant operational burden",
+      "Overkill for a handful of services",
+      "Cost of a managed control plane adds up"
+    ],
+    "targetAudience": "Teams running many services at scale, or needing cloud portability.",
+    "verdict": "Right when you genuinely have the scale for it. Many teams adopt it far earlier than their problems justify."
   },
   {
     "slug": "ansible",
@@ -6881,7 +6946,7 @@
     "category": "Developer Tools",
     "shortDescription": "Dashboards and visualisation for metrics and logs.",
     "websiteUrl": "https://grafana.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6890,7 +6955,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Grafana turns metrics, logs and traces into dashboards, and connects to almost any data source. The open-source version is fully capable; the cloud version removes the operational work.",
+    "pros": [
+      "Connects to dozens of data sources out of the box",
+      "Open source and self-hostable",
+      "Alerting built into the same tool as the dashboards"
+    ],
+    "cons": [
+      "Dashboard design takes real effort to get right",
+      "Cloud pricing scales with data volume",
+      "Configuration sprawl on large teams"
+    ],
+    "targetAudience": "Any team that needs to see what its systems are doing, from one server to a large fleet.",
+    "verdict": "The default choice for dashboards, and rightly so. Budget time for building the dashboards, not just installing it."
   },
   {
     "slug": "prometheus",
@@ -6915,7 +6993,7 @@
     "category": "Developer Tools",
     "shortDescription": "Application performance monitoring and observability.",
     "websiteUrl": "https://newrelic.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6924,7 +7002,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "New Relic is a full observability platform covering application performance, infrastructure, logs and browser monitoring. The pricing model charges per user and per gigabyte of data ingested.",
+    "pros": [
+      "Broad coverage in one product",
+      "Generous free data allowance",
+      "Strong application tracing"
+    ],
+    "cons": [
+      "Data-volume pricing can escalate without warning",
+      "Interface is dense and takes learning",
+      "Per-user pricing discourages wide access"
+    ],
+    "targetAudience": "Teams that want application, infrastructure and log monitoring from a single vendor.",
+    "verdict": "Capable and complete. Watch the ingest bill: teams are far more often surprised by cost here than by capability."
   },
   {
     "slug": "bugsnag",
@@ -6949,7 +7040,7 @@
     "category": "Developer Tools",
     "shortDescription": "Serverless MySQL platform with branching.",
     "websiteUrl": "https://planetscale.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6958,7 +7049,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "PlanetScale is a managed MySQL platform whose distinguishing feature is database branching: you branch a schema like code, open a deploy request, and merge it without locking tables.",
+    "pros": [
+      "Schema changes without downtime",
+      "Branching workflow that mirrors Git",
+      "Managed, with no server maintenance"
+    ],
+    "cons": [
+      "No foreign key constraints in the traditional sense",
+      "Costs rise quickly beyond small workloads",
+      "Ties you to their platform and workflow"
+    ],
+    "targetAudience": "Teams shipping frequent schema changes who want to avoid migration downtime.",
+    "verdict": "The branching model genuinely solves a painful problem. Check the pricing tiers against your read volume before committing."
   },
   {
     "slug": "neon",
@@ -6966,7 +7070,7 @@
     "category": "Developer Tools",
     "shortDescription": "Serverless Postgres with database branching.",
     "websiteUrl": "https://neon.tech",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6975,7 +7079,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Neon is serverless Postgres that separates storage from compute, which lets it scale to zero when idle and create instant database branches for previews and tests.",
+    "pros": [
+      "Real Postgres, not a lookalike",
+      "Branching for preview environments",
+      "Scales to zero, so idle projects cost little"
+    ],
+    "cons": [
+      "Cold starts on idle databases",
+      "Newer platform than the incumbents",
+      "Advanced tuning is limited compared with self-managed Postgres"
+    ],
+    "targetAudience": "Teams building on Postgres who want per-branch databases and low idle cost.",
+    "verdict": "An easy recommendation for preview-heavy workflows. For a steady high-traffic production database, compare cost against a traditional managed instance."
   },
   {
     "slug": "railway",
@@ -6983,7 +7100,7 @@
     "category": "Developer Tools",
     "shortDescription": "Deploy apps and databases from a repo.",
     "websiteUrl": "https://railway.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -6992,7 +7109,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Railway deploys applications and databases straight from a repository with very little configuration. It targets the gap between a platform that hides everything and a cloud that hides nothing.",
+    "pros": [
+      "Deploys with almost no configuration",
+      "Databases provisioned in a click",
+      "Clear usage-based pricing"
+    ],
+    "cons": [
+      "Costs more than raw infrastructure at scale",
+      "Fewer regions than the large clouds",
+      "Less control over the underlying environment"
+    ],
+    "targetAudience": "Small teams and side projects that want to ship without managing infrastructure.",
+    "verdict": "Excellent for getting something live quickly. At sustained scale, price it against a plain virtual server."
   },
   {
     "slug": "render",
@@ -7000,7 +7130,7 @@
     "category": "Developer Tools",
     "shortDescription": "Managed hosting for services, static sites and databases.",
     "websiteUrl": "https://render.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -7009,7 +7139,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Render hosts web services, static sites, cron jobs and managed databases with automatic deploys from Git. It positions itself as a simpler alternative to the large clouds.",
+    "pros": [
+      "Handles services, static sites and databases in one place",
+      "Automatic deploys and free TLS",
+      "Predictable per-service pricing"
+    ],
+    "cons": [
+      "Cold starts on free instances",
+      "Fewer regions than AWS or GCP",
+      "Limited fine-grained networking control"
+    ],
+    "targetAudience": "Teams that want managed hosting without assembling cloud primitives themselves.",
+    "verdict": "A solid middle ground. If you need VPC-level control or exotic services, you will outgrow it."
   },
   {
     "slug": "fly-io",
@@ -7017,7 +7160,7 @@
     "category": "Developer Tools",
     "shortDescription": "Run application containers close to users.",
     "websiteUrl": "https://fly.io",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -7026,7 +7169,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Fly.io runs application containers in multiple regions close to users, with a networking layer that makes a multi-region deployment feel like one app.",
+    "pros": [
+      "Genuinely easy multi-region deployment",
+      "Runs full containers, not a restricted runtime",
+      "Good fit for latency-sensitive workloads"
+    ],
+    "cons": [
+      "Multi-region data is still your problem to solve",
+      "Operational rough edges reported by users",
+      "Pricing needs attention once you add regions"
+    ],
+    "targetAudience": "Teams with users spread across continents who care about latency.",
+    "verdict": "Compelling when latency actually matters. Single-region apps get little benefit from the added complexity."
   },
   {
     "slug": "insomnia",
@@ -7431,7 +7587,7 @@
     "category": "Marketing",
     "shortDescription": "Privacy-focused, self-hostable web analytics.",
     "websiteUrl": "https://matomo.org",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -7440,7 +7596,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Matomo is web analytics you can self-host, giving you the data without sending it to a third party. It covers most of what mainstream analytics does, with full data ownership.",
+    "pros": [
+      "You keep the raw data on your own servers",
+      "Cookie-free tracking option eases consent requirements",
+      "Open source with a cloud option if you prefer"
+    ],
+    "cons": [
+      "Self-hosting requires database maintenance",
+      "Reporting is slower on large datasets",
+      "Cloud pricing scales with pageviews"
+    ],
+    "targetAudience": "Organisations with privacy or regulatory reasons not to use hosted analytics.",
+    "verdict": "The strongest option when data ownership is a requirement. Otherwise the operational load is real."
   },
   {
     "slug": "plausible",
@@ -7448,7 +7617,7 @@
     "category": "Marketing",
     "shortDescription": "Lightweight, cookie-free web analytics.",
     "websiteUrl": "https://plausible.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -7456,7 +7625,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Plausible is a lightweight analytics script that reports the numbers most sites actually use, without cookies and without collecting personal data.",
+    "pros": [
+      "Script is tiny, so it barely affects page speed",
+      "No cookies, which simplifies consent",
+      "Simple dashboard that non-analysts can read"
+    ],
+    "cons": [
+      "Deliberately fewer features than full analytics suites",
+      "No user-level tracking by design",
+      "Paid only, with no free tier"
+    ],
+    "targetAudience": "Site owners who want honest traffic numbers without a consent banner or a heavy script.",
+    "verdict": "Refreshingly focused. If you need funnels, cohorts and user paths, it is intentionally not that tool."
   },
   {
     "slug": "fathom-analytics",
@@ -7580,7 +7762,7 @@
     "category": "Productivity",
     "shortDescription": "Keyboard launcher and command palette for macOS.",
     "websiteUrl": "https://www.raycast.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -7589,7 +7771,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Raycast is a macOS launcher that replaces Spotlight and runs extensions, snippets, clipboard history and scripts from one keyboard shortcut.",
+    "pros": [
+      "Fast and keyboard-driven",
+      "Large extension store",
+      "Free tier covers most personal use"
+    ],
+    "cons": [
+      "macOS only",
+      "AI and team features require the paid plan",
+      "Extensions vary in quality"
+    ],
+    "targetAudience": "Mac users who want to reach everything without touching the mouse.",
+    "verdict": "One of the highest-value free apps on macOS. The paid tier is optional for most people."
   },
   {
     "slug": "alfred",
@@ -7695,7 +7890,7 @@
     "category": "Productivity",
     "shortDescription": "Open-source password manager.",
     "websiteUrl": "https://bitwarden.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -7704,7 +7899,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Bitwarden is an open-source password manager that can be used as a hosted service or run entirely on your own server, with clients on every major platform.",
+    "pros": [
+      "Open source and independently audited",
+      "Self-hosting is genuinely supported",
+      "Free tier is usable for individuals"
+    ],
+    "cons": [
+      "Interface is plainer than commercial rivals",
+      "Self-hosting means you own recovery and backups",
+      "Some polish gaps in the desktop apps"
+    ],
+    "targetAudience": "Individuals and teams who want a password manager they can inspect or host themselves.",
+    "verdict": "The best value in password management, particularly if open source matters to you."
   },
   {
     "slug": "dashlane",
@@ -7729,7 +7937,7 @@
     "category": "Productivity",
     "shortDescription": "Encrypted email from Switzerland.",
     "websiteUrl": "https://proton.me/mail",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -7738,7 +7946,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Proton Mail is an encrypted email service based in Switzerland, built so that the provider cannot read message contents.",
+    "pros": [
+      "End-to-end encryption by default between Proton users",
+      "Swiss jurisdiction and a clear privacy stance",
+      "Free tier available"
+    ],
+    "cons": [
+      "Encryption breaks the usual IMAP workflow",
+      "Search inside encrypted mail is limited",
+      "Costs more than mainstream mail providers"
+    ],
+    "targetAudience": "People and teams for whom mail confidentiality is a requirement rather than a preference.",
+    "verdict": "Buy it for the threat model, not the features. If privacy is not your reason, a mainstream provider is more convenient."
   },
   {
     "slug": "basecamp",
@@ -7746,7 +7967,7 @@
     "category": "Project Management",
     "shortDescription": "Projects, messages and to-dos in one place.",
     "websiteUrl": "https://basecamp.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -7754,7 +7975,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Basecamp organises projects around message boards, to-dos, schedules and chat, with a flat-fee pricing option instead of per-seat billing.",
+    "pros": [
+      "Flat pricing regardless of headcount",
+      "Deliberately simple and calm",
+      "Good for client-facing project work"
+    ],
+    "cons": [
+      "Too simple for complex dependencies",
+      "No native Gantt or resource planning",
+      "Opinionated structure resists customisation"
+    ],
+    "targetAudience": "Small teams and agencies that want less process, not more.",
+    "verdict": "Refreshing if your team drowns in tooling. Engineering teams with dependencies will find it thin."
   },
   {
     "slug": "wrike",
@@ -7846,7 +8080,7 @@
     "category": "Communication",
     "shortDescription": "Self-hostable team messaging.",
     "websiteUrl": "https://mattermost.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -7855,7 +8089,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Mattermost is team messaging you can run on your own infrastructure, with a Slack-like interface and strong compliance features.",
+    "pros": [
+      "Fully self-hostable, including in air-gapped environments",
+      "Familiar channel-based interface",
+      "Open source core"
+    ],
+    "cons": [
+      "Ecosystem of integrations is smaller than Slack's",
+      "You carry the upgrade and backup burden",
+      "Mobile apps lag behind commercial rivals"
+    ],
+    "targetAudience": "Organisations that cannot put internal conversations on a third-party service.",
+    "verdict": "The right call when self-hosting is non-negotiable. Otherwise the convenience gap with hosted chat is wide."
   },
   {
     "slug": "rocket-chat",
@@ -8099,7 +8346,7 @@
     "category": "AI Tools",
     "shortDescription": "Google's assistant and multimodal model.",
     "websiteUrl": "https://gemini.google.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -8108,7 +8355,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Google Gemini is a multimodal assistant that handles text, images and long documents, and connects to Google's own products.",
+    "pros": [
+      "Very large context window for long documents",
+      "Handles images and audio natively",
+      "Integrates with Workspace"
+    ],
+    "cons": [
+      "Quality varies noticeably across tasks",
+      "Free tier limits are tight",
+      "Behaviour changes between model versions"
+    ],
+    "targetAudience": "People already working inside Google's tools who want an assistant nearby.",
+    "verdict": "Strong on long documents. Compare against alternatives on your own tasks before committing a workflow to it."
   },
   {
     "slug": "mistral",
@@ -8251,7 +8511,7 @@
     "category": "AI Tools",
     "shortDescription": "AI-native code editor.",
     "websiteUrl": "https://cursor.com",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -8260,7 +8520,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Cursor is a fork of VS Code with AI woven through it: multi-file edits, codebase-aware chat and inline completion that reads the surrounding project rather than one file.",
+    "pros": [
+      "Understands the whole repository, not just open files",
+      "Familiar VS Code extensions and keybindings",
+      "Multi-file edits from one instruction"
+    ],
+    "cons": [
+      "Subscription on top of any model costs",
+      "Large codebases still exceed context limits",
+      "Suggestions need review; confident and wrong is common"
+    ],
+    "targetAudience": "Developers who want AI assistance inside a familiar editor.",
+    "verdict": "The most convincing AI editor today. Treat its output as a draft from a fast junior, not as reviewed code."
   },
   {
     "slug": "github-copilot",
@@ -8268,7 +8541,7 @@
     "category": "AI Tools",
     "shortDescription": "AI code completion inside your editor.",
     "websiteUrl": "https://github.com/features/copilot",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8276,7 +8549,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "GitHub Copilot suggests code as you type and answers questions about a repository, working inside most popular editors.",
+    "pros": [
+      "Works in the editor you already use",
+      "Strong at boilerplate and repetitive patterns",
+      "Enterprise controls for code exclusion"
+    ],
+    "cons": [
+      "Suggestions can be subtly wrong",
+      "Weaker on unusual or domain-specific code",
+      "Per-seat cost across a whole team adds up"
+    ],
+    "targetAudience": "Teams that want AI completion without changing editors.",
+    "verdict": "A steady productivity gain on routine code. It does not replace understanding what you are shipping."
   },
   {
     "slug": "writesonic",
@@ -8301,7 +8587,7 @@
     "category": "Customer Service",
     "shortDescription": "Help desk and ticketing.",
     "websiteUrl": "https://www.freshworks.com/freshdesk/",
-    "incelendi": false,
+    "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
     "isFlat": true,
@@ -8310,7 +8596,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Freshdesk is a helpdesk with ticketing, automations and a knowledge base, positioned as a more affordable alternative to Zendesk.",
+    "pros": [
+      "Usable free tier for very small teams",
+      "Automation rules without heavy configuration",
+      "Multi-channel support included"
+    ],
+    "cons": [
+      "Interface feels cluttered in places",
+      "Advanced reporting sits on higher tiers",
+      "Upsell prompts throughout"
+    ],
+    "targetAudience": "Small and mid-size support teams wanting structure without enterprise pricing.",
+    "verdict": "Good value for the money. Larger operations tend to outgrow the reporting."
   },
   {
     "slug": "help-scout",
@@ -8318,7 +8617,7 @@
     "category": "Customer Service",
     "shortDescription": "Shared inbox and help centre.",
     "websiteUrl": "https://www.helpscout.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8326,7 +8625,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Help Scout is a shared inbox that keeps customer conversations looking like plain email rather than ticket threads.",
+    "pros": [
+      "Customers never see ticket numbers",
+      "Clean, quick interface for agents",
+      "Knowledge base included"
+    ],
+    "cons": [
+      "Fewer automation options than heavier helpdesks",
+      "Per-user pricing only",
+      "Limited for complex routing"
+    ],
+    "targetAudience": "Small teams that want support to feel personal.",
+    "verdict": "Excellent for human-feeling support. If you need queues, SLAs and routing rules, look heavier."
   },
   {
     "slug": "crisp",
@@ -8384,7 +8696,7 @@
     "category": "Finance Tools",
     "shortDescription": "Cloud accounting for small business.",
     "websiteUrl": "https://www.xero.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8392,7 +8704,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Xero is cloud accounting for small business, covering bank reconciliation, invoicing, payroll in some regions and reporting for your accountant.",
+    "pros": [
+      "Bank feeds and reconciliation are strong",
+      "Large ecosystem of add-ons",
+      "Accountants generally know it"
+    ],
+    "cons": [
+      "Pricing tiers limit invoice and bill counts",
+      "Payroll availability varies by country",
+      "Reporting customisation is limited"
+    ],
+    "targetAudience": "Small businesses that want their accountant working in the same system.",
+    "verdict": "A solid choice where it is well supported locally. Check regional payroll coverage before committing."
   },
   {
     "slug": "wave",
@@ -8467,7 +8792,7 @@
     "category": "HR Software",
     "shortDescription": "Global payroll and contractor compliance.",
     "websiteUrl": "https://www.deel.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8475,7 +8800,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Deel handles global hiring: contractor agreements, compliance and payroll across many countries, including employer-of-record arrangements.",
+    "pros": [
+      "Covers a large number of countries",
+      "Handles compliance paperwork you would otherwise research",
+      "Contractor and EOR options in one place"
+    ],
+    "cons": [
+      "EOR pricing per employee is significant",
+      "Support quality varies by region",
+      "You still own the employment relationship risks"
+    ],
+    "targetAudience": "Companies hiring people in countries where they have no legal entity.",
+    "verdict": "Solves a genuinely hard problem. Compare EOR fees against setting up an entity if a country becomes core to you."
   },
   {
     "slug": "remote-com",
@@ -8531,7 +8869,7 @@
     "category": "Legal Tools",
     "shortDescription": "Electronic signatures and agreements.",
     "websiteUrl": "https://www.docusign.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8539,7 +8877,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "DocuSign handles electronic signatures and agreement workflows, with audit trails accepted in most jurisdictions.",
+    "pros": [
+      "Recognised and trusted by counterparties",
+      "Audit trail and identity options",
+      "Integrates with most CRMs"
+    ],
+    "cons": [
+      "Envelope-based pricing frustrates light users",
+      "Interface is dated in places",
+      "Cheaper alternatives cover common cases"
+    ],
+    "targetAudience": "Businesses signing contracts regularly with external parties.",
+    "verdict": "The name recognition is worth something in negotiations. For occasional signing, cheaper tools do the job."
   },
   {
     "slug": "pipedrive",
@@ -8547,7 +8898,7 @@
     "category": "CRM",
     "shortDescription": "Sales pipeline CRM for small teams.",
     "websiteUrl": "https://www.pipedrive.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8555,7 +8906,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Pipedrive is a sales CRM organised around a visual pipeline, aimed at small sales teams rather than enterprises.",
+    "pros": [
+      "Pipeline view is immediately understandable",
+      "Quick to set up",
+      "Reasonable pricing for small teams"
+    ],
+    "cons": [
+      "Marketing features are thin",
+      "Reporting limited on lower tiers",
+      "Add-ons increase the real price"
+    ],
+    "targetAudience": "Small sales teams tracking deals through stages.",
+    "verdict": "Good at the one thing it does. If you need marketing automation too, you will end up buying a second tool."
   },
   {
     "slug": "salesforce",
@@ -8563,7 +8927,7 @@
     "category": "CRM",
     "shortDescription": "Enterprise CRM platform.",
     "websiteUrl": "https://www.salesforce.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8571,7 +8935,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Salesforce is the enterprise CRM standard, extensible to almost anything through configuration, its own platform and a large partner ecosystem.",
+    "pros": [
+      "Can model almost any sales process",
+      "Vast ecosystem of apps and consultants",
+      "Reporting depth others cannot match"
+    ],
+    "cons": [
+      "Expensive once you add the tiers you actually need",
+      "Implementation usually requires outside help",
+      "Complexity slows small teams down"
+    ],
+    "targetAudience": "Larger sales organisations with dedicated operations staff.",
+    "verdict": "Powerful and heavy. Below roughly twenty salespeople, lighter tools usually win on total cost."
   },
   {
     "slug": "zoho-crm",
@@ -8645,7 +9022,7 @@
     "category": "Developer Tools",
     "shortDescription": "Free, extensible code editor from Microsoft.",
     "websiteUrl": "https://code.visualstudio.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "bedava",
@@ -8654,7 +9031,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Visual Studio Code is a free editor that became the default for a large share of developers. Its power comes from extensions: language servers, debuggers and linters that turn a light editor into whatever environment you need.",
+    "pros": [
+      "Free with no paid tier to upsell you",
+      "Extension for practically every language and tool",
+      "Remote and container development built in"
+    ],
+    "cons": [
+      "Heavy on memory once extensions pile up",
+      "Extension quality is inconsistent",
+      "Telemetry in the Microsoft build concerns some teams"
+    ],
+    "targetAudience": "Almost any developer, from first project to large codebase.",
+    "verdict": "The safe default. If it feels slow, the cause is usually your extensions rather than the editor."
   },
   {
     "slug": "jetbrains",
@@ -8662,7 +9052,7 @@
     "category": "Developer Tools",
     "shortDescription": "IDEs for most major languages.",
     "websiteUrl": "https://www.jetbrains.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -8670,7 +9060,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "JetBrains sells language-specific IDEs that understand your code deeply — refactoring, navigation and inspections that generic editors approximate at best.",
+    "pros": [
+      "Refactoring and code intelligence remain best in class",
+      "Consistent experience across languages",
+      "Built-in database, VCS and test tooling"
+    ],
+    "cons": [
+      "Paid subscription per developer",
+      "Noticeably heavier than a plain editor",
+      "Overkill for small scripts"
+    ],
+    "targetAudience": "Developers working daily in one language on a substantial codebase.",
+    "verdict": "Worth the money if you live in the IDE. Occasional users get less from it than the price suggests."
   },
   {
     "slug": "sublime-text",
@@ -8694,7 +9097,7 @@
     "category": "Developer Tools",
     "shortDescription": "Extensible terminal-based editor.",
     "websiteUrl": "https://neovim.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "bedava",
@@ -8703,7 +9106,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Neovim is a modernised Vim: same modal editing, but with an embedded Lua runtime, an async plugin model and a language-server client built in.",
+    "pros": [
+      "Extremely fast, works over SSH",
+      "Configurable to an unusual degree",
+      "Skills transfer to any server you touch"
+    ],
+    "cons": [
+      "Steep learning curve before you are productive",
+      "Configuration is a project of its own",
+      "Plugin churn breaks setups periodically"
+    ],
+    "targetAudience": "Developers who spend time in terminals and want the editor to disappear.",
+    "verdict": "Superb once configured, and configuring it is the cost. Do not adopt it during a deadline."
   },
   {
     "slug": "warp",
@@ -8711,7 +9127,7 @@
     "category": "Developer Tools",
     "shortDescription": "Modern terminal with editor-like input.",
     "websiteUrl": "https://www.warp.dev",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8720,7 +9136,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Warp is a terminal that behaves more like an editor: block-based output, a real text input, and AI assistance for commands.",
+    "pros": [
+      "Command editing that does not fight you",
+      "Output grouped into blocks you can copy",
+      "AI help for forgotten flags"
+    ],
+    "cons": [
+      "Account requirement bothers some users",
+      "Heavier than a traditional terminal",
+      "AI features sit behind paid tiers"
+    ],
+    "targetAudience": "Developers who spend hours in a terminal and want modern editing.",
+    "verdict": "A real improvement on the default terminal. The account requirement is the main objection people raise."
   },
   {
     "slug": "iterm2",
@@ -8745,7 +9174,7 @@
     "category": "Developer Tools",
     "shortDescription": "Universal database client.",
     "websiteUrl": "https://dbeaver.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8754,7 +9183,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "DBeaver is a database client that connects to practically every engine, with a free community edition and a paid enterprise version.",
+    "pros": [
+      "Connects to almost any database",
+      "Free community edition is genuinely capable",
+      "Runs on all major platforms"
+    ],
+    "cons": [
+      "Java-based interface feels heavy",
+      "Dense UI with a learning curve",
+      "Some drivers need manual setup"
+    ],
+    "targetAudience": "Anyone who works across more than one kind of database.",
+    "verdict": "The tool that covers everything. Single-database users often prefer a lighter native client."
   },
   {
     "slug": "tableplus",
@@ -8762,7 +9204,7 @@
     "category": "Developer Tools",
     "shortDescription": "Native database GUI.",
     "websiteUrl": "https://tableplus.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8771,7 +9213,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": false
-    }
+    },
+    "longDescription": "TablePlus is a native database GUI focused on speed and a clean interface, covering the common engines.",
+    "pros": [
+      "Fast and genuinely native",
+      "Clean interface that stays out of the way",
+      "Handles most common databases"
+    ],
+    "cons": [
+      "Free version limits open tabs",
+      "One-off licence covers only a major version",
+      "Fewer advanced features than heavier clients"
+    ],
+    "targetAudience": "Developers who want a quick, pleasant database client for daily work.",
+    "verdict": "Worth paying for if you open a database client every day."
   },
   {
     "slug": "prisma",
@@ -8779,7 +9234,7 @@
     "category": "Developer Tools",
     "shortDescription": "Type-safe ORM and data toolkit.",
     "websiteUrl": "https://www.prisma.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8788,7 +9243,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Prisma generates a fully typed client from your schema, so database queries are checked at compile time rather than failing at runtime.",
+    "pros": [
+      "Types match your schema without hand-written definitions",
+      "Migrations are versioned and readable",
+      "Good editor autocomplete"
+    ],
+    "cons": [
+      "Generated client adds build weight",
+      "Complex SQL sometimes needs raw escape hatches",
+      "Extra abstraction layer to learn"
+    ],
+    "targetAudience": "TypeScript teams that want database access checked by the compiler.",
+    "verdict": "The typing genuinely prevents bugs. If your queries are unusual, expect to drop to raw SQL more than you would like."
   },
   {
     "slug": "drizzle",
@@ -8830,7 +9298,7 @@
     "category": "Developer Tools",
     "shortDescription": "Serverless Redis and Kafka.",
     "websiteUrl": "https://upstash.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8839,7 +9307,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Upstash offers Redis and Kafka billed per request rather than per hour, so idle projects cost close to nothing.",
+    "pros": [
+      "Per-request pricing suits spiky workloads",
+      "Works well from serverless functions",
+      "No servers to run"
+    ],
+    "cons": [
+      "Cost per request beats hourly only up to a point",
+      "Latency depends on region choice",
+      "Less control than self-managed Redis"
+    ],
+    "targetAudience": "Serverless applications that need caching or queues without a permanent instance.",
+    "verdict": "Excellent for intermittent workloads. Constant high throughput is cheaper on a dedicated instance."
   },
   {
     "slug": "clerk",
@@ -8847,7 +9328,7 @@
     "category": "Developer Tools",
     "shortDescription": "Drop-in authentication and user management.",
     "websiteUrl": "https://clerk.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8856,7 +9337,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Clerk provides authentication, user management and session handling as drop-in components, aiming to remove weeks of auth work from a project.",
+    "pros": [
+      "Prebuilt UI components that look decent by default",
+      "Handles sessions, MFA and organisations",
+      "Strong React and Next.js support"
+    ],
+    "cons": [
+      "Pricing per monthly active user adds up",
+      "Deep customisation fights the defaults",
+      "Auth becomes a vendor dependency"
+    ],
+    "targetAudience": "Product teams who would rather ship features than build authentication.",
+    "verdict": "A big time-saver early on. Understand the per-user pricing curve before your user count grows."
   },
   {
     "slug": "auth0",
@@ -8864,7 +9358,7 @@
     "category": "Developer Tools",
     "shortDescription": "Identity platform for applications.",
     "websiteUrl": "https://auth0.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8873,7 +9367,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Auth0 is a mature identity platform covering login, social providers, enterprise SSO and fine-grained authorisation, now part of Okta.",
+    "pros": [
+      "Handles enterprise SSO requirements that block deals",
+      "Extensive protocol and standards support",
+      "Well documented and widely known"
+    ],
+    "cons": [
+      "Expensive as active users grow",
+      "Configuration surface is large",
+      "Migration away is difficult once embedded"
+    ],
+    "targetAudience": "Companies that need enterprise identity features and compliance, not just a login form.",
+    "verdict": "The safe answer for enterprise identity. For a consumer app with simple needs it is more platform than you need."
   },
   {
     "slug": "keycloak",
@@ -8881,7 +9388,7 @@
     "category": "Developer Tools",
     "shortDescription": "Open-source identity and access management.",
     "websiteUrl": "https://www.keycloak.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "bedava",
@@ -8890,7 +9397,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Keycloak is open-source identity and access management supporting OIDC and SAML, run on your own infrastructure.",
+    "pros": [
+      "Full identity server at no licence cost",
+      "Standards support including SAML and OIDC",
+      "Complete control over user data"
+    ],
+    "cons": [
+      "Operating it is a real responsibility",
+      "Administration console is dense",
+      "Upgrades need care"
+    ],
+    "targetAudience": "Organisations that need enterprise identity without a per-user bill.",
+    "verdict": "The serious open-source answer to Auth0. Budget for the operations, because the licence saving is not free."
   },
   {
     "slug": "nginx",
@@ -8915,7 +9435,7 @@
     "category": "Developer Tools",
     "shortDescription": "Web server with automatic HTTPS.",
     "websiteUrl": "https://caddyserver.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "bedava",
@@ -8924,7 +9444,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Caddy is a web server that obtains and renews TLS certificates automatically, with a configuration file most people can read.",
+    "pros": [
+      "HTTPS configured correctly by default",
+      "Configuration is short and legible",
+      "Single binary, easy to deploy"
+    ],
+    "cons": [
+      "Smaller community than nginx",
+      "Fewer third-party guides",
+      "Some advanced setups need plugins"
+    ],
+    "targetAudience": "Anyone who wants a correctly configured HTTPS server without ceremony.",
+    "verdict": "The easiest path to good TLS defaults. nginx still wins on ecosystem and examples."
   },
   {
     "slug": "pulumi",
@@ -8966,7 +9499,7 @@
     "category": "Developer Tools",
     "shortDescription": "Uptime monitoring, logs and incident management.",
     "websiteUrl": "https://betterstack.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8975,7 +9508,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Better Stack combines uptime monitoring, log management, on-call scheduling and status pages in one product.",
+    "pros": [
+      "Monitoring, logs and on-call together",
+      "Clean interface and quick setup",
+      "Status pages included"
+    ],
+    "cons": [
+      "Log retention costs rise with volume",
+      "Fewer integrations than specialist tools",
+      "Alert tuning needed to avoid noise"
+    ],
+    "targetAudience": "Small teams that want monitoring and on-call without assembling three vendors.",
+    "verdict": "Good consolidation for small teams. Large log volumes need a cost check first."
   },
   {
     "slug": "statuspage",
@@ -9000,7 +9546,7 @@
     "category": "Developer Tools",
     "shortDescription": "Feature flags and progressive delivery.",
     "websiteUrl": "https://launchdarkly.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -9008,7 +9554,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "LaunchDarkly manages feature flags so code can ship dark and be turned on progressively for chosen segments.",
+    "pros": [
+      "Mature flag management with targeting rules",
+      "Progressive rollout and instant kill switch",
+      "Audit trail for who changed what"
+    ],
+    "cons": [
+      "Priced well above simple flag solutions",
+      "Adds a runtime dependency",
+      "Flag debt accumulates without discipline"
+    ],
+    "targetAudience": "Teams deploying continuously that need to separate deploy from release.",
+    "verdict": "Genuinely reduces release risk. Small teams can get most of the benefit from a much simpler solution."
   },
   {
     "slug": "codecov",
@@ -9033,7 +9592,7 @@
     "category": "Developer Tools",
     "shortDescription": "Finds vulnerabilities in code and dependencies.",
     "websiteUrl": "https://snyk.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -9042,7 +9601,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Snyk scans code, dependencies, containers and infrastructure definitions for known vulnerabilities, and integrates into pull requests so problems surface before merge.",
+    "pros": [
+      "Catches vulnerable dependencies early in the workflow",
+      "Covers code, containers and IaC in one tool",
+      "Fix suggestions rather than only warnings"
+    ],
+    "cons": [
+      "False positives need triage time",
+      "Pricing scales quickly with contributors",
+      "Some fixes require major version upgrades"
+    ],
+    "targetAudience": "Teams that need dependency and container security checks inside their existing pipeline.",
+    "verdict": "Worth it if nobody currently owns dependency security. Budget time for tuning, or the alerts become noise people ignore."
   },
   {
     "slug": "sonarqube",
@@ -9050,7 +9622,7 @@
     "category": "Developer Tools",
     "shortDescription": "Static analysis and code quality gates.",
     "websiteUrl": "https://www.sonarsource.com/products/sonarqube/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -9059,7 +9631,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "SonarQube analyses code for bugs, vulnerabilities and maintainability problems, and can block merges that fail a quality gate.",
+    "pros": [
+      "Quality gates enforce standards automatically",
+      "Covers many languages",
+      "Self-hostable community edition"
+    ],
+    "cons": [
+      "Noisy defaults require tuning",
+      "Some rules are debatable",
+      "Self-hosting is real maintenance"
+    ],
+    "targetAudience": "Teams that want consistent code standards enforced rather than argued.",
+    "verdict": "Effective once tuned. Left at defaults it produces warnings people learn to ignore."
   },
   {
     "slug": "dribbble",
@@ -9364,7 +9949,7 @@
     "category": "Marketing",
     "shortDescription": "Transactional email API for developers.",
     "websiteUrl": "https://resend.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -9373,7 +9958,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Resend is a transactional email API aimed at developers, with a clean SDK and React-based email templates.",
+    "pros": [
+      "Simple API and good developer experience",
+      "React Email templates keep markup maintainable",
+      "Generous free tier"
+    ],
+    "cons": [
+      "Newer than established providers",
+      "Fewer deliverability controls than enterprise tools",
+      "Marketing email features are limited"
+    ],
+    "targetAudience": "Developers sending transactional email from an application.",
+    "verdict": "A pleasure to integrate. For high-volume marketing sends, an established ESP still has the edge."
   },
   {
     "slug": "postmark",
@@ -9381,7 +9979,7 @@
     "category": "Marketing",
     "shortDescription": "Reliable transactional email delivery.",
     "websiteUrl": "https://postmarkapp.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "kullanima-gore",
@@ -9390,7 +9988,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Postmark focuses narrowly on transactional email and is known for delivery speed and inbox placement, keeping marketing mail on separate infrastructure.",
+    "pros": [
+      "Reputation for reliable inbox delivery",
+      "Separate streams for transactional and broadcast",
+      "Detailed delivery diagnostics"
+    ],
+    "cons": [
+      "Strict about what counts as transactional",
+      "Costs more per message than bulk providers",
+      "Not intended for marketing campaigns"
+    ],
+    "targetAudience": "Teams where receipts, resets and alerts must arrive.",
+    "verdict": "If delivery reliability matters more than price per message, this is the one to beat."
   },
   {
     "slug": "sendgrid",
@@ -9415,7 +10026,7 @@
     "category": "Productivity",
     "shortDescription": "Gmail, Docs, Drive and Meet for business.",
     "websiteUrl": "https://workspace.google.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -9423,7 +10034,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Google Workspace bundles Gmail, Drive, Docs, Sheets and Meet with admin controls and a custom domain.",
+    "pros": [
+      "Real-time collaboration remains the benchmark",
+      "Admin controls and audit logs for teams",
+      "Storage and video included"
+    ],
+    "cons": [
+      "Offline use is weaker than desktop suites",
+      "Advanced spreadsheet work still favours Excel",
+      "Per-user cost adds up"
+    ],
+    "targetAudience": "Teams that write and edit together and want mail on their own domain.",
+    "verdict": "The default for collaborative work. Heavy spreadsheet or document formatting still argues for Microsoft."
   },
   {
     "slug": "microsoft-365",
@@ -9431,7 +10055,7 @@
     "category": "Productivity",
     "shortDescription": "Office apps and cloud services.",
     "websiteUrl": "https://www.microsoft.com/microsoft-365",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -9439,7 +10063,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Microsoft 365 provides Office desktop applications, Exchange mail, Teams and OneDrive under one subscription.",
+    "pros": [
+      "Desktop Word and Excel remain the most capable",
+      "Enterprise identity and compliance tooling",
+      "Teams included at no extra cost"
+    ],
+    "cons": [
+      "Licensing tiers are hard to compare",
+      "Teams is heavy on resources",
+      "Web versions lag the desktop apps"
+    ],
+    "targetAudience": "Organisations with document-heavy work or existing Windows infrastructure.",
+    "verdict": "Unmatched for serious documents and spreadsheets. The licensing maze is the main cost you do not see coming."
   },
   {
     "slug": "dropbox",
@@ -9447,7 +10084,7 @@
     "category": "Productivity",
     "shortDescription": "File sync and sharing.",
     "websiteUrl": "https://www.dropbox.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -9456,7 +10093,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Dropbox syncs files across devices and shares them with others. Its sync engine remains its strongest feature after nearly two decades.",
+    "pros": [
+      "Sync is fast and dependable",
+      "Works identically across platforms",
+      "Sharing links are simple for non-technical recipients"
+    ],
+    "cons": [
+      "Storage costs more than bundled alternatives",
+      "Collaboration features trail Google and Microsoft",
+      "Desktop client is heavy"
+    ],
+    "targetAudience": "People and teams whose main need is dependable file sync.",
+    "verdict": "Still the best pure sync. If you already pay for Workspace or 365, storage is included there."
   },
   {
     "slug": "box",
@@ -9663,7 +10313,7 @@
     "category": "Productivity",
     "shortDescription": "Local-first, encrypted workspace.",
     "websiteUrl": "https://anytype.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -9672,7 +10322,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Anytype is a local-first, encrypted workspace for notes and objects, syncing peer-to-peer rather than through a central server.",
+    "pros": [
+      "Local-first and end-to-end encrypted",
+      "No central server holding your data",
+      "Flexible object model"
+    ],
+    "cons": [
+      "Concepts take time to learn",
+      "Younger and less mature than rivals",
+      "Collaboration features still developing"
+    ],
+    "targetAudience": "Privacy-minded people who want a Notion-like workspace without the cloud.",
+    "verdict": "Promising and genuinely different. Judge it on where it is today, not the roadmap."
   },
   {
     "slug": "logseq",
@@ -9680,7 +10343,7 @@
     "category": "Productivity",
     "shortDescription": "Open-source outliner and knowledge base.",
     "websiteUrl": "https://logseq.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "bedava",
@@ -9689,7 +10352,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "Logseq is an open-source outliner that stores notes as plain Markdown files on your own disk, with bidirectional links and daily notes.",
+    "pros": [
+      "Your notes stay as local Markdown files",
+      "Open source, no vendor to depend on",
+      "Linked references and graph view"
+    ],
+    "cons": [
+      "Outliner structure does not suit everyone",
+      "Sync requires setup or a paid add-on",
+      "Performance drops on very large graphs"
+    ],
+    "targetAudience": "People who want linked notes without handing their data to a service.",
+    "verdict": "The strongest option if file ownership matters. Expect to solve sync yourself."
   },
   {
     "slug": "linear-insights",
@@ -10009,7 +10685,7 @@
     "category": "E-commerce",
     "shortDescription": "Print on demand and fulfilment.",
     "websiteUrl": "https://www.printful.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "kullanima-gore",
@@ -10018,7 +10694,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": false
-    }
+    },
+    "longDescription": "Printful prints and ships products on demand under your brand, integrating with major store platforms.",
+    "pros": [
+      "No inventory or upfront stock cost",
+      "Integrates with most store platforms",
+      "Handles fulfilment and returns logistics"
+    ],
+    "cons": [
+      "Per-item cost leaves thin margins",
+      "Shipping times vary by region",
+      "Quality control is out of your hands"
+    ],
+    "targetAudience": "Creators and small brands selling merchandise without holding stock.",
+    "verdict": "The standard way to start without capital. Margins are the trade-off you accept."
   },
   {
     "slug": "printify",
@@ -10076,7 +10765,7 @@
     "category": "AI Tools",
     "shortDescription": "Open-weight models and a chat assistant.",
     "websiteUrl": "https://www.deepseek.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "kullanima-gore",
@@ -10085,7 +10774,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": false
-    }
+    },
+    "longDescription": "DeepSeek publishes open-weight models and runs a hosted chat and API, priced well below most Western providers.",
+    "pros": [
+      "Very low API pricing",
+      "Open weights you can run yourself",
+      "Strong performance on reasoning and code tasks"
+    ],
+    "cons": [
+      "Data handling and jurisdiction concerns for some organisations",
+      "Documentation is thinner in English",
+      "Availability has been inconsistent"
+    ],
+    "targetAudience": "Developers who need capable models at low cost, or who want to self-host weights.",
+    "verdict": "Hard to beat on price per token. Check whether your data policy allows the hosted API before you build on it."
   },
   {
     "slug": "groq",
@@ -10093,7 +10795,7 @@
     "category": "AI Tools",
     "shortDescription": "Very fast inference for open models.",
     "websiteUrl": "https://groq.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "kullanima-gore",
@@ -10102,7 +10804,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": false
-    }
+    },
+    "longDescription": "Groq runs open models on custom hardware and is notable for how fast it returns tokens, which changes what feels possible in interactive applications.",
+    "pros": [
+      "Response speed well beyond typical providers",
+      "Straightforward, OpenAI-compatible API",
+      "Pay per token with no minimum"
+    ],
+    "cons": [
+      "Model selection limited to what they host",
+      "Capacity constraints at peak",
+      "No proprietary frontier models"
+    ],
+    "targetAudience": "Applications where response latency is the user experience.",
+    "verdict": "Genuinely fast enough to change product decisions. Pick it for latency, not for model choice."
   },
   {
     "slug": "together-ai",
@@ -10127,7 +10842,7 @@
     "category": "AI Tools",
     "shortDescription": "Run and deploy open models via API.",
     "websiteUrl": "https://replicate.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "kullanima-gore",
@@ -10136,7 +10851,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": false
-    }
+    },
+    "longDescription": "Replicate runs open machine-learning models behind an API, billed per second of compute, covering image, video, audio and language models.",
+    "pros": [
+      "Thousands of community models, one API",
+      "Per-second billing with no idle cost",
+      "Can deploy your own models"
+    ],
+    "cons": [
+      "Cold starts on infrequently used models",
+      "Costs climb with heavy image or video work",
+      "Model quality varies widely"
+    ],
+    "targetAudience": "Developers who want to use open models without managing GPUs.",
+    "verdict": "The easiest way to try many models quickly. Sustained heavy usage is cheaper on dedicated hardware."
   },
   {
     "slug": "openrouter",
@@ -10144,7 +10872,7 @@
     "category": "AI Tools",
     "shortDescription": "One API across many model providers.",
     "websiteUrl": "https://openrouter.ai",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "kullanima-gore",
@@ -10153,7 +10881,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": false
-    }
+    },
+    "longDescription": "OpenRouter puts one API in front of many model providers, so you can switch models or fail over without rewriting integration code.",
+    "pros": [
+      "One integration for many providers",
+      "Easy price and quality comparison",
+      "Fallback routing when a provider fails"
+    ],
+    "cons": [
+      "A small margin on top of provider pricing",
+      "Adds a dependency between you and the model",
+      "Provider-specific features may not pass through"
+    ],
+    "targetAudience": "Teams that want to avoid locking their product to one model vendor.",
+    "verdict": "Sensible insurance against vendor lock-in, and the margin is usually worth it."
   },
   {
     "slug": "langchain",
@@ -10161,7 +10902,7 @@
     "category": "AI Tools",
     "shortDescription": "Framework for building LLM applications.",
     "websiteUrl": "https://www.langchain.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -10170,7 +10911,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "LangChain is a framework for building applications on language models: chains, agents, tool calling and retrieval, with a large integration surface.",
+    "pros": [
+      "Integrations for most model and data providers",
+      "Common patterns already implemented",
+      "Large community and examples"
+    ],
+    "cons": [
+      "Abstractions can obscure what is actually sent to the model",
+      "Breaking changes between versions",
+      "Often more framework than a simple task needs"
+    ],
+    "targetAudience": "Teams building multi-step LLM applications who want existing building blocks.",
+    "verdict": "Useful for complex flows. For a single prompt-and-response, calling the API directly is clearer and easier to debug."
   },
   {
     "slug": "llamaindex",
@@ -10195,7 +10949,7 @@
     "category": "AI Tools",
     "shortDescription": "Managed vector database.",
     "websiteUrl": "https://www.pinecone.io",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -10204,7 +10958,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Pinecone is a managed vector database for similarity search, commonly used for retrieval in AI applications.",
+    "pros": [
+      "Fully managed, scales without tuning",
+      "Fast similarity search at large scale",
+      "Mature tooling and documentation"
+    ],
+    "cons": [
+      "Costs more than self-hosted alternatives",
+      "Vendor lock-in for your index",
+      "Overkill for small datasets"
+    ],
+    "targetAudience": "Teams running retrieval at scale who do not want to operate a database.",
+    "verdict": "Reliable and boring in the good sense. Under a few hundred thousand vectors, cheaper options do the job."
   },
   {
     "slug": "weaviate",
@@ -10229,7 +10996,7 @@
     "category": "AI Tools",
     "shortDescription": "Open-source vector search engine.",
     "websiteUrl": "https://qdrant.tech",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -10238,7 +11005,20 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Qdrant is an open-source vector database with filtering, written in Rust, available self-hosted or as a managed cloud.",
+    "pros": [
+      "Open source, self-hostable at no licence cost",
+      "Filtering alongside vector search",
+      "Good performance per unit of hardware"
+    ],
+    "cons": [
+      "You operate it unless you buy the cloud",
+      "Smaller ecosystem than the incumbents",
+      "Tuning takes some learning"
+    ],
+    "targetAudience": "Teams that want vector search without a permanent per-query bill.",
+    "verdict": "The pragmatic choice when you can run infrastructure. Managed cloud is there when you cannot."
   },
   {
     "slug": "chroma",
@@ -10263,7 +11043,7 @@
     "category": "AI Tools",
     "shortDescription": "Generates UI code from prompts.",
     "websiteUrl": "https://v0.app",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -10272,7 +11052,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "v0 generates user interface code from a text description or an image, producing React components you can paste into a project.",
+    "pros": [
+      "Turns a description into working components quickly",
+      "Output is real code, not a locked design file",
+      "Good for exploring layouts fast"
+    ],
+    "cons": [
+      "Generated code needs cleanup before production",
+      "Opinionated about styling stack",
+      "Complex interactions still need hand-written work"
+    ],
+    "targetAudience": "Developers who want a starting point for interface code rather than a blank file.",
+    "verdict": "A good accelerator for first drafts. Do not ship the output without reading it."
   },
   {
     "slug": "bolt-new",
@@ -10297,7 +11090,7 @@
     "category": "Customer Service",
     "shortDescription": "Helpdesk built for ecommerce.",
     "websiteUrl": "https://www.gorgias.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -10305,7 +11098,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Gorgias is a helpdesk built for online stores, pulling order data into the ticket so agents can refund or reorder without leaving the conversation.",
+    "pros": [
+      "Order context inside every ticket",
+      "Deep Shopify integration",
+      "Automations for common store questions"
+    ],
+    "cons": [
+      "Priced per ticket, which punishes busy periods",
+      "Value drops outside ecommerce",
+      "Setup takes configuration work"
+    ],
+    "targetAudience": "Online stores handling order-related support at volume.",
+    "verdict": "Clearly the right category choice for ecommerce. The ticket-based pricing needs modelling against your seasonality."
   },
   {
     "slug": "gladly",
@@ -10329,7 +11135,7 @@
     "category": "Customer Service",
     "shortDescription": "Open-source customer engagement suite.",
     "websiteUrl": "https://www.chatwoot.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -10338,7 +11144,20 @@
       "mobil": true,
       "acikKaynak": true,
       "sso": true
-    }
+    },
+    "longDescription": "Chatwoot is an open-source customer engagement suite covering live chat, shared inbox and social channels, self-hostable or cloud.",
+    "pros": [
+      "Open source with a real self-hosting path",
+      "Multiple channels in one inbox",
+      "Costs far less than commercial equivalents"
+    ],
+    "cons": [
+      "Fewer integrations than Intercom or Zendesk",
+      "Self-hosting requires maintenance",
+      "Reporting is basic"
+    ],
+    "targetAudience": "Teams that want a support inbox without per-seat commercial pricing.",
+    "verdict": "Strong value, particularly self-hosted. Expect to trade polish for control."
   },
   {
     "slug": "mercury",
@@ -10346,7 +11165,7 @@
     "category": "Finance Tools",
     "shortDescription": "Banking built for startups.",
     "websiteUrl": "https://mercury.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "bedava",
@@ -10355,7 +11174,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": false
-    }
+    },
+    "longDescription": "Mercury provides business banking aimed at startups, with no monthly fee and an interface built for software companies.",
+    "pros": [
+      "No monthly account fee",
+      "Clean interface and solid API",
+      "Designed around startup needs"
+    ],
+    "cons": [
+      "US-focused; availability varies",
+      "Not a lender for most customers",
+      "Support is online only"
+    ],
+    "targetAudience": "Startups and remote companies that need a US business account.",
+    "verdict": "A good default for startup banking. Keep expectations realistic about credit and lending."
   },
   {
     "slug": "wise",
@@ -10363,7 +11195,7 @@
     "category": "Finance Tools",
     "shortDescription": "International transfers and multi-currency accounts.",
     "websiteUrl": "https://wise.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "fiyatModeli": "kullanima-gore",
@@ -10372,7 +11204,20 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": false
-    }
+    },
+    "longDescription": "Wise moves money between currencies at the mid-market rate with an explicit fee, and provides multi-currency accounts with local details.",
+    "pros": [
+      "Transparent fees and real exchange rate",
+      "Local account details in several currencies",
+      "Much cheaper than bank transfers"
+    ],
+    "cons": [
+      "Not a full bank in most jurisdictions",
+      "Verification can be slow",
+      "Fees on some corridors are higher than others"
+    ],
+    "targetAudience": "Freelancers and businesses invoicing across borders.",
+    "verdict": "The default for cross-border payments. Keep a real bank relationship alongside it."
   },
   {
     "slug": "bill-com",
@@ -10428,7 +11273,7 @@
     "category": "HR Software",
     "shortDescription": "Structured hiring and applicant tracking.",
     "websiteUrl": "https://www.greenhouse.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -10436,7 +11281,20 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "longDescription": "Greenhouse is applicant tracking built around structured hiring: defined scorecards, interview kits and consistent evaluation.",
+    "pros": [
+      "Structured interviews reduce ad-hoc decisions",
+      "Strong reporting on hiring funnel",
+      "Wide integration ecosystem"
+    ],
+    "cons": [
+      "Priced for funded companies, not small teams",
+      "Setup effort before value appears",
+      "Requires discipline to use as intended"
+    ],
+    "targetAudience": "Companies hiring at volume that want a repeatable process.",
+    "verdict": "Worth it if you will actually follow the structure. Used casually it is an expensive inbox."
   },
   {
     "slug": "ironclad",
