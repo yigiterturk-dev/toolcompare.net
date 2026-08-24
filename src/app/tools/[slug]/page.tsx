@@ -4,6 +4,7 @@ import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
@@ -294,6 +295,30 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               </div>
             </aside>
           </div>
+
+          <section style={{ marginTop: '4rem' }}>
+            <h2 style={{ fontSize: '1.4rem', marginBottom: '1.2rem' }}>What we checked</h2>
+            <div style={{ display: 'grid', gap: '0.8rem', maxWidth: '640px' }}>
+              {KRITER_SIRA.map((k) => {
+                const v = (tool as any).kriterler?.[k];
+                const renk = v === true ? 'var(--success)' : v === false ? '#ef4444' : '#666';
+                const yazi = v === true ? 'Yes' : v === false ? 'No' : 'Not checked';
+                return (
+                  <div key={k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', padding: '0.9rem 1.1rem', borderRadius: '14px', background: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
+                    <div>
+                      <div style={{ fontWeight: 700 }}>{KRITER_ETIKET[k]}</div>
+                      <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{KRITER_ACIKLAMA[k]}</div>
+                    </div>
+                    <span style={{ color: renk, fontWeight: 800, whiteSpace: 'nowrap' }}>{yazi}</span>
+                  </div>
+                );
+              })}
+            </div>
+            <p style={{ color: '#666', fontSize: '0.85rem', marginTop: '1rem' }}>
+              These are facts that can be checked, not opinions. Where we have not checked, it says so — we do
+              not fill the gap with a guess.
+            </p>
+          </section>
 
           {/* Karsilastirma sayfalarina ic link. Bu sayfalar en yuksek
               ticari niyetli sayfa turumuz ama siteden hic link almiyorlardi;

@@ -5,6 +5,7 @@ import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi } from "@/lib/compare";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
@@ -170,6 +171,21 @@ export default async function ComparisonPage({ params }: any) {
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '40px', padding: '4rem' }}>
           <ComparisonRow label="Category" val1={tool1.category} val2={tool2.category} />
           <ComparisonRow label="Base Price" val1={f1.kisa} val2={f2.kisa} />
+
+          {/* Objektif ozellikler. Uydurma kalite puanlarinin yerine konan
+              sey: her satir nesnel olarak dogru ya da yanlis olabilir.
+              UCUNCU DURUM VAR -- bakilmadiysa "not checked" yazar; onu
+              "yok" diye gostermek uydurma puanlarin hatasinin tekrari
+              olurdu. */}
+          {KRITER_SIRA.map((k) => {
+            const isaret = (t: any) => {
+              const v = t.kriterler?.[k];
+              if (v === true) return <span style={{ color: 'var(--success)', fontWeight: 800 }}>Yes</span>;
+              if (v === false) return <span style={{ color: '#ef4444' }}>No</span>;
+              return <span style={{ color: '#666', fontSize: '0.85rem' }}>not checked</span>;
+            };
+            return <ComparisonRow key={k} label={KRITER_ETIKET[k]} val1={isaret(tool1)} val2={isaret(tool2)} />;
+          })}
           
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '3rem 0 0' }}>
             <div></div>

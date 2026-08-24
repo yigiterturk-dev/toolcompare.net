@@ -51,7 +51,13 @@
     "websiteUrl": "https://www.hubspot.com",
     "color": "#ff7a59",
     "fiyatModeli": "ucretsiz-katman",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "slack",
@@ -104,7 +110,13 @@
     "verdict": "An indispensable tool for moving team communication away from email and into a faster era.",
     "websiteUrl": "https://slack.com",
     "color": "#4a154b",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "notion",
@@ -157,7 +169,13 @@
     "verdict": "The ultimate solution for centralizing scattered notes and projects into one smart hub.",
     "websiteUrl": "https://www.notion.so",
     "color": "#000000",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "chatgpt",
@@ -210,7 +228,13 @@
     "verdict": "The undisputed king of the AI era, capable of handling almost any digital task.",
     "websiteUrl": "https://chatgpt.com",
     "color": "#10a37f",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "stripe",
@@ -264,7 +288,13 @@
     "websiteUrl": "https://stripe.com",
     "color": "#635bff",
     "fiyatModeli": "kullanima-gore",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "figma",
@@ -317,7 +347,13 @@
     "verdict": "The undisputed world leader in modern UI/UX design and team collaboration.",
     "websiteUrl": "https://www.figma.com",
     "color": "#f24e1e",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "webflow",
@@ -370,7 +406,13 @@
     "verdict": "The most powerful tool for designers to build high-end, custom professional websites.",
     "websiteUrl": "https://webflow.com",
     "color": "#4353ff",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "asana",
@@ -423,7 +465,13 @@
     "verdict": "A balanced and disciplined tool for managing complex team projects with transparency.",
     "websiteUrl": "https://asana.com",
     "color": "#f06a6a",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "semrush",
@@ -476,7 +524,13 @@
     "verdict": "An indispensable suite for serious marketers aiming for data-driven organic growth.",
     "websiteUrl": "https://www.semrush.com",
     "color": "#ff642d",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "ahrefs",
@@ -529,7 +583,13 @@
     "verdict": "The most reliable tool in the market for backlink research and organic growth strategy.",
     "websiteUrl": "https://ahrefs.com",
     "color": "#0047ff",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "canva",
@@ -582,7 +642,13 @@
     "verdict": "The world's best platform for fast, high-quality, and practical visual content creation.",
     "websiteUrl": "https://www.canva.com",
     "color": "#00c4cc",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "premiere-pro",
@@ -635,7 +701,13 @@
     "verdict": "The most powerful video kurgu software for anyone seeking professional production quality.",
     "color": "#2d005f",
     "websiteUrl": "https://www.adobe.com/products/premiere.html",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "capcut",
@@ -689,7 +761,13 @@
     "websiteUrl": "https://www.capcut.com",
     "color": "#000000",
     "fiyatModeli": "ucretsiz-katman",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "discord",
@@ -743,7 +821,13 @@
     "websiteUrl": "https://discord.com",
     "color": "#5865f2",
     "fiyatModeli": "ucretsiz-katman",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "ms-teams",
@@ -796,7 +880,13 @@
     "verdict": "The most secure and integrated collaboration platform for teams using Microsoft 365.",
     "color": "#6264a7",
     "websiteUrl": "https://www.microsoft.com/microsoft-teams/group-chat-software",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "zoom",
@@ -849,7 +939,13 @@
     "verdict": "Still the best option for those prioritizing video quality and reliability above all else.",
     "color": "#2d8cff",
     "websiteUrl": "https://zoom.us",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "elevenlabs",
@@ -902,7 +998,13 @@
     "verdict": "The highest quality way to produce professional-grade AI narration on the planet.",
     "color": "#6366f1",
     "websiteUrl": "https://elevenlabs.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "midjourney",
@@ -955,7 +1057,13 @@
     "verdict": "The undisputed best tool for generating elite AI visuals and pushing creative limits.",
     "color": "#000000",
     "websiteUrl": "https://www.midjourney.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "claude",
@@ -1008,7 +1116,13 @@
     "verdict": "The best AI assistant in the market for deep thinking, technical analysis, and coding.",
     "color": "#d97757",
     "websiteUrl": "https://claude.ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "perplexity",
@@ -1062,7 +1176,13 @@
     "color": "#22c55e",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.perplexity.ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "1password",
@@ -1115,7 +1235,13 @@
     "verdict": "If you don't want to leave your digital security to chance, this is the best solution on the market.",
     "color": "#0072ce",
     "websiteUrl": "https://1password.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "hotjar",
@@ -1168,7 +1294,13 @@
     "verdict": "The best 'magnifying glass' you can attach to your site to understand human behavior.",
     "color": "#ff1c5c",
     "websiteUrl": "https://www.hotjar.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "todoist",
@@ -1221,7 +1353,13 @@
     "verdict": "The best-balanced app for recording and managing your daily tasks at lightning speed.",
     "color": "#e44332",
     "websiteUrl": "https://todoist.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "buffer",
@@ -1274,7 +1412,13 @@
     "verdict": "The best tool for those seeking a simple, reliable, and affordable social media solution.",
     "color": "#2c3338",
     "websiteUrl": "https://buffer.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "gusto",
@@ -1327,7 +1471,13 @@
     "verdict": "A platform that transforms 'boring' HR and payroll into a pleasant, modern experience.",
     "color": "#f48c71",
     "websiteUrl": "https://gusto.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "quickbooks",
@@ -1380,7 +1530,13 @@
     "verdict": "The most trusted accounting tool in the world for keeping your business finances under control.",
     "color": "#2ca01c",
     "websiteUrl": "https://quickbooks.intuit.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "mailchimp",
@@ -1433,7 +1589,13 @@
     "verdict": "The go-to choice for those seeking a reliable, stylish, and popular email marketing solution.",
     "color": "#ffe01b",
     "websiteUrl": "https://mailchimp.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "github",
@@ -1487,7 +1649,13 @@
     "color": "#24292e",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://github.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "vercel",
@@ -1541,7 +1709,13 @@
     "color": "#000000",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://vercel.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "jasper",
@@ -1594,7 +1768,13 @@
     "verdict": "The most professional AI choice for consistent, high-volume enterprise content production.",
     "color": "#6366f1",
     "websiteUrl": "https://www.jasper.ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "copy-ai",
@@ -1647,7 +1827,13 @@
     "verdict": "The best 'workflow' tool for automating marketing operations and rapid content creation.",
     "color": "#22c55e",
     "websiteUrl": "https://www.copy.ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "descript",
@@ -1700,7 +1886,13 @@
     "verdict": "A revolutionary tool that turns video kurgu from a technical chore into a writing process.",
     "color": "#000000",
     "websiteUrl": "https://www.descript.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "loom",
@@ -1753,7 +1945,13 @@
     "verdict": "The most practical tool for killing meetings and speeding up team communication.",
     "color": "#625df5",
     "websiteUrl": "https://www.loom.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "calendly",
@@ -1806,7 +2004,13 @@
     "verdict": "The easiest way to take control of your calendar and look professional to clients.",
     "color": "#006bff",
     "websiteUrl": "https://calendly.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "miro",
@@ -1859,7 +2063,13 @@
     "verdict": "The world's best digital canvas for visual thinking and aligning teams on a common vision.",
     "color": "#ffd02f",
     "websiteUrl": "https://miro.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "zapier",
@@ -1912,7 +2122,13 @@
     "verdict": "The undisputed market leader for making different apps talk to each other without code.",
     "color": "#ff4f00",
     "websiteUrl": "https://zapier.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "make",
@@ -1965,7 +2181,13 @@
     "verdict": "The best tool for technical users seeking total control and cost efficiency in automations.",
     "color": "#7214ff",
     "websiteUrl": "https://www.make.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "airtable",
@@ -2018,7 +2240,13 @@
     "verdict": "The best hybrid solution for teams seeking a professional database with Excel ease.",
     "color": "#18bfff",
     "websiteUrl": "https://www.airtable.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "clickup",
@@ -2071,7 +2299,13 @@
     "verdict": "The most powerful and feature-rich option if you want everything in one single place.",
     "color": "#7b68ee",
     "websiteUrl": "https://clickup.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "monday",
@@ -2124,7 +2358,13 @@
     "verdict": "The most pleasant and fastest-to-adopt project management tool on the market.",
     "color": "#ff3d57",
     "websiteUrl": "https://monday.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "trello",
@@ -2177,7 +2417,13 @@
     "verdict": "The best 'card-based' task manager for those seeking simplicity and visual speed.",
     "color": "#0079bf",
     "websiteUrl": "https://trello.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "jira",
@@ -2230,7 +2476,13 @@
     "verdict": "The world's most powerful tool for managing professional software development processes.",
     "color": "#0052cc",
     "websiteUrl": "https://www.atlassian.com/software/jira",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "zendesk",
@@ -2283,7 +2535,13 @@
     "verdict": "The global standard for professional, scalable, and omnichannel customer support.",
     "color": "#03363d",
     "websiteUrl": "https://www.zendesk.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "intercom",
@@ -2336,7 +2594,13 @@
     "verdict": "The best tool for transforming customer communication into a modern, AI-powered conversation.",
     "color": "#286efa",
     "websiteUrl": "https://www.intercom.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "shopify",
@@ -2389,7 +2653,13 @@
     "verdict": "The world's best platform for starting, growing, and scaling an e-commerce empire.",
     "color": "#96bf48",
     "websiteUrl": "https://www.shopify.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "magento",
@@ -2443,7 +2713,13 @@
     "color": "#f46f25",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://business.adobe.com/products/magento/magento-commerce.html",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "bigcommerce",
@@ -2496,7 +2772,13 @@
     "verdict": "The smartest choice for brands seeking corporate features without paying extra commissions.",
     "color": "#383131",
     "websiteUrl": "https://www.bigcommerce.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "framer",
@@ -2549,7 +2831,13 @@
     "verdict": "The home of the most stylish sites made by designers 'without a developer.'",
     "color": "#0055ff",
     "websiteUrl": "https://www.framer.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "spline",
@@ -2603,7 +2891,13 @@
     "color": "#ff4d8d",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://spline.design",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "aws",
@@ -2657,7 +2951,13 @@
     "color": "#232f3e",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://aws.amazon.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "google-cloud",
@@ -2711,7 +3011,13 @@
     "color": "#4285f4",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://cloud.google.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "digitalocean",
@@ -2764,7 +3070,13 @@
     "verdict": "The best way to use the power of the cloud without the complexity and at a fair price.",
     "color": "#008bcf",
     "websiteUrl": "https://www.digitalocean.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "mongodb",
@@ -2818,7 +3130,13 @@
     "color": "#4db33d",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.mongodb.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "supabase",
@@ -2872,7 +3190,13 @@
     "color": "#3ecf8e",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://supabase.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "ghost",
@@ -2925,7 +3249,13 @@
     "verdict": "The most elite publishing platform for those looking to earn from their writing.",
     "color": "#15171a",
     "websiteUrl": "https://ghost.org",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "beehiiv",
@@ -2979,7 +3309,13 @@
     "color": "#fef08a",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.beehiiv.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "strapi",
@@ -3033,7 +3369,13 @@
     "color": "#4945ff",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://strapi.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "strava",
@@ -3087,7 +3429,13 @@
     "color": "#fc4c02",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.strava.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "substack",
@@ -3141,7 +3489,13 @@
     "color": "#ff6719",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://substack.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "postman",
@@ -3195,7 +3549,13 @@
     "color": "#ef5b25",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.postman.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "sentry",
@@ -3249,7 +3609,13 @@
     "color": "#362d59",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://sentry.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "firebase",
@@ -3303,7 +3669,13 @@
     "color": "#ffca28",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://firebase.google.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "contentful",
@@ -3357,7 +3729,13 @@
     "color": "#24292e",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.contentful.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "wix",
@@ -3410,7 +3788,13 @@
     "verdict": "The standard choice for those wanting to build the fastest and most visual site with zero tech skills.",
     "color": "#000000",
     "websiteUrl": "https://www.wix.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "squarespace",
@@ -3463,7 +3847,13 @@
     "verdict": "The best tool for building an elegant, minimalist, and high-end website.",
     "color": "#000000",
     "websiteUrl": "https://www.squarespace.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "carrd",
@@ -3516,7 +3906,13 @@
     "verdict": "The cheapest and most practical one-page site builder on the internet today.",
     "color": "#3b82f6",
     "websiteUrl": "https://carrd.co",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "klaviyo",
@@ -3570,7 +3966,13 @@
     "color": "#000000",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.klaviyo.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "twilio",
@@ -3624,7 +4026,13 @@
     "color": "#f22f46",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://www.twilio.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "gumroad",
@@ -3678,7 +4086,13 @@
     "color": "#ff90e8",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://gumroad.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "kajabi",
@@ -3731,7 +4145,13 @@
     "verdict": "The best tool money can buy if you want to grow an education business under one roof.",
     "color": "#0040fb",
     "websiteUrl": "https://kajabi.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "skool",
@@ -3784,7 +4204,13 @@
     "verdict": "The best app for building a vibrant community where members actually learn and stay active.",
     "color": "#22c55e",
     "websiteUrl": "https://www.skool.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "azure",
@@ -3838,7 +4264,13 @@
     "color": "#0078d4",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://azure.microsoft.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "cloudflare",
@@ -3892,7 +4324,13 @@
     "color": "#f38020",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.cloudflare.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "postgresql",
@@ -3946,7 +4384,13 @@
     "color": "#336791",
     "fiyatModeli": "bedava",
     "websiteUrl": "https://www.postgresql.org",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "redis",
@@ -4000,7 +4444,13 @@
     "color": "#d82c20",
     "fiyatModeli": "bedava",
     "websiteUrl": "https://redis.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "docker",
@@ -4054,7 +4504,13 @@
     "color": "#2496ed",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.docker.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "netlify",
@@ -4108,7 +4564,13 @@
     "color": "#00ad9f",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.netlify.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "terraform",
@@ -4162,7 +4624,13 @@
     "color": "#623ce4",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.terraform.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "datadog",
@@ -4215,7 +4683,13 @@
     "verdict": "The most powerful and comprehensive monitoring tool for modern cloud-native enterprises.",
     "color": "#632ca6",
     "websiteUrl": "https://www.datadoghq.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "appwrite",
@@ -4269,7 +4743,13 @@
     "color": "#f02e65",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://appwrite.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "wix-studio",
@@ -4322,7 +4802,13 @@
     "verdict": "The ultimate platform for agencies looking to build high-end, custom websites at scale.",
     "color": "#000000",
     "websiteUrl": "https://www.wix.com/studio",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "podia",
@@ -4375,7 +4861,13 @@
     "verdict": "The best balance of simplicity and features for individual creators looking to monetize.",
     "color": "#4b2ad3",
     "websiteUrl": "https://www.podia.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "teachable",
@@ -4428,7 +4920,13 @@
     "verdict": "A solid, dependable platform with a primary focus on high-quality course delivery.",
     "color": "#2d3436",
     "websiteUrl": "https://teachable.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "convertkit",
@@ -4481,7 +4979,13 @@
     "verdict": "The best email platform for those looking for powerful automation without the corporate headache.",
     "color": "#f16567",
     "websiteUrl": "https://kit.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "activecampaign",
@@ -4534,7 +5038,13 @@
     "verdict": "The most powerful automation platform for those who have outgrown basic email tools.",
     "color": "#004cff",
     "websiteUrl": "https://www.activecampaign.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "plaid",
@@ -4588,7 +5098,13 @@
     "color": "#000000",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://plaid.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "paddle",
@@ -4642,7 +5158,13 @@
     "color": "#000000",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://www.paddle.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "lemonsqueezy",
@@ -4696,7 +5218,13 @@
     "color": "#f5d300",
     "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://www.lemonsqueezy.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "obsidian",
@@ -4750,7 +5278,13 @@
     "color": "#7c3aed",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://obsidian.md",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "linear",
@@ -4803,7 +5337,13 @@
     "verdict": "The fastest and most elegant project management tool for modern software teams.",
     "color": "#5e6ad2",
     "websiteUrl": "https://linear.app",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "typeform",
@@ -4856,7 +5396,13 @@
     "verdict": "The best tool for creating forms that people actually enjoy filling out.",
     "color": "#262627",
     "websiteUrl": "https://www.typeform.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "replit",
@@ -4910,7 +5456,13 @@
     "color": "#f26b1d",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://replit.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "loom-ai",
@@ -4963,7 +5515,13 @@
     "verdict": "The ultimate way to make async video communication truly professional and efficient.",
     "color": "#625df5",
     "websiteUrl": "https://www.loom.com/ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "obsidian-sync",
@@ -5016,7 +5574,13 @@
     "verdict": "The best and most secure way to keep your local knowledge base updated on all devices.",
     "color": "#7c3aed",
     "websiteUrl": "https://obsidian.md/sync",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "surfer-seo",
@@ -5069,7 +5633,13 @@
     "verdict": "The most practical and effective tool for writing content that actually ranks on Google.",
     "color": "#ff4d4d",
     "websiteUrl": "https://surferseo.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "vanta",
@@ -5122,7 +5692,13 @@
     "verdict": "The most effective way to turn complex security compliance into a competitive advantage.",
     "color": "#000000",
     "websiteUrl": "https://www.vanta.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "posthog",
@@ -5176,7 +5752,13 @@
     "color": "#000000",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://posthog.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "mixpanel",
@@ -5230,7 +5812,13 @@
     "color": "#7856ff",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://mixpanel.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "logrocket",
@@ -5284,7 +5872,13 @@
     "color": "#764abc",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://logrocket.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "segment",
@@ -5338,7 +5932,13 @@
     "color": "#52bd94",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://segment.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "zapier-interfaces",
@@ -5392,7 +5992,13 @@
     "color": "#ff4f00",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://zapier.com/interfaces",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "clarity",
@@ -5446,7 +6052,13 @@
     "color": "#0078d4",
     "fiyatModeli": "bedava",
     "websiteUrl": "https://clarity.microsoft.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "amplitude",
@@ -5500,7 +6112,13 @@
     "color": "#231f20",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://amplitude.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "bubble",
@@ -5553,7 +6171,13 @@
     "verdict": "The undisputed king of no-code for building real, functional web applications.",
     "color": "#00a1ff",
     "websiteUrl": "https://bubble.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "sanity",
@@ -5607,7 +6231,13 @@
     "color": "#f03e2f",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.sanity.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "xano",
@@ -5660,7 +6290,13 @@
     "verdict": "The best 'backend-as-a-service' for those who want no-code ease with professional power.",
     "color": "#001a4d",
     "websiteUrl": "https://www.xano.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "flutterflow",
@@ -5713,7 +6349,13 @@
     "verdict": "The most professional way to build native mobile apps without (or with) coding.",
     "color": "#4b39ef",
     "websiteUrl": "https://flutterflow.io",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "grammarly",
@@ -5767,7 +6409,13 @@
     "color": "#05a67e",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.grammarly.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "notion-ai",
@@ -5820,7 +6468,13 @@
     "verdict": "The best AI implementation for those who want to work smarter inside their existing docs.",
     "color": "#000000",
     "websiteUrl": "https://www.notion.so/product/ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "adobe-firefly",
@@ -5873,7 +6527,13 @@
     "verdict": "The only generative AI tool built from the ground up for professional, legal, and creative work.",
     "color": "#ff0000",
     "websiteUrl": "https://www.adobe.com/products/firefly.html",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "copy-ai-workflows",
@@ -5926,7 +6586,13 @@
     "verdict": "The best tool for companies that want to automate their entire content production at scale.",
     "color": "#22c55e",
     "websiteUrl": "https://www.copy.ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "perplexity-pages",
@@ -5980,7 +6646,13 @@
     "color": "#22c55e",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.perplexity.ai",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "notion-calendar",
@@ -6034,7 +6706,13 @@
     "color": "#000000",
     "fiyatModeli": "bedava",
     "websiteUrl": "https://www.notion.so/product/calendar",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "hey-email",
@@ -6087,7 +6765,13 @@
     "verdict": "The most innovative and peaceful way to handle email in the 21st century.",
     "color": "#4b2ad3",
     "websiteUrl": "https://www.hey.com",
-    "incelendi": true
+    "incelendi": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "gitlab",
@@ -6098,7 +6782,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "bitbucket",
@@ -6109,7 +6799,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "circleci",
@@ -6120,7 +6816,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "jenkins",
@@ -6131,7 +6833,13 @@
     "incelendi": false,
     "fiyatModeli": "bedava",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "kubernetes",
@@ -6142,7 +6850,13 @@
     "incelendi": false,
     "fiyatModeli": "bedava",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "ansible",
@@ -6153,7 +6867,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "grafana",
@@ -6164,7 +6884,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "prometheus",
@@ -6175,7 +6901,13 @@
     "incelendi": false,
     "fiyatModeli": "bedava",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "new-relic",
@@ -6186,7 +6918,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "bugsnag",
@@ -6197,7 +6935,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "planetscale",
@@ -6208,7 +6952,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "neon",
@@ -6219,7 +6969,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "railway",
@@ -6230,7 +6986,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "render",
@@ -6241,7 +7003,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "fly-io",
@@ -6252,7 +7020,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "insomnia",
@@ -6263,7 +7037,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "swagger",
@@ -6274,7 +7054,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "sourcegraph",
@@ -6285,7 +7071,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "elastic",
@@ -6296,7 +7088,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "hasura",
@@ -6307,7 +7105,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "sketch",
@@ -6317,7 +7121,13 @@
     "websiteUrl": "https://www.sketch.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "penpot",
@@ -6328,7 +7138,13 @@
     "incelendi": false,
     "fiyatModeli": "bedava",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "blender",
@@ -6339,7 +7155,13 @@
     "incelendi": false,
     "fiyatModeli": "bedava",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "procreate",
@@ -6349,7 +7171,13 @@
     "websiteUrl": "https://procreate.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "affinity-designer",
@@ -6359,7 +7187,13 @@
     "websiteUrl": "https://affinity.serif.com/designer/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "removebg",
@@ -6370,7 +7204,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "photopea",
@@ -6381,7 +7221,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "hootsuite",
@@ -6391,7 +7237,13 @@
     "websiteUrl": "https://www.hootsuite.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "later",
@@ -6402,7 +7254,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "sprout-social",
@@ -6412,7 +7270,13 @@
     "websiteUrl": "https://sproutsocial.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "moz",
@@ -6422,7 +7286,13 @@
     "websiteUrl": "https://moz.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "screaming-frog",
@@ -6433,7 +7303,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "brevo",
@@ -6444,7 +7320,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "mailerlite",
@@ -6455,7 +7337,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "customer-io",
@@ -6465,7 +7353,13 @@
     "websiteUrl": "https://customer.io",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "optinmonster",
@@ -6475,7 +7369,13 @@
     "websiteUrl": "https://optinmonster.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "unbounce",
@@ -6485,7 +7385,13 @@
     "websiteUrl": "https://unbounce.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "instapage",
@@ -6495,7 +7401,13 @@
     "websiteUrl": "https://instapage.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "crazy-egg",
@@ -6505,7 +7417,13 @@
     "websiteUrl": "https://www.crazyegg.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "matomo",
@@ -6516,7 +7434,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "plausible",
@@ -6526,7 +7450,13 @@
     "websiteUrl": "https://plausible.io",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "fathom-analytics",
@@ -6536,7 +7466,13 @@
     "websiteUrl": "https://usefathom.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "evernote",
@@ -6547,7 +7483,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "bear",
@@ -6558,7 +7500,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "craft",
@@ -6569,7 +7517,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "things",
@@ -6579,7 +7533,13 @@
     "websiteUrl": "https://culturedcode.com/things/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "omnifocus",
@@ -6589,7 +7549,13 @@
     "websiteUrl": "https://www.omnigroup.com/omnifocus/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "ticktick",
@@ -6600,7 +7566,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "raycast",
@@ -6611,7 +7583,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "alfred",
@@ -6622,7 +7600,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "motion",
@@ -6632,7 +7616,13 @@
     "websiteUrl": "https://www.usemotion.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "reclaim",
@@ -6643,7 +7633,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "superhuman",
@@ -6653,7 +7649,13 @@
     "websiteUrl": "https://superhuman.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "readwise",
@@ -6663,7 +7665,13 @@
     "websiteUrl": "https://readwise.io",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "obsidian-publish",
@@ -6673,7 +7681,13 @@
     "websiteUrl": "https://obsidian.md/publish",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "bitwarden",
@@ -6684,7 +7698,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "dashlane",
@@ -6695,7 +7715,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "proton-mail",
@@ -6706,7 +7732,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "basecamp",
@@ -6716,7 +7748,13 @@
     "websiteUrl": "https://basecamp.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "wrike",
@@ -6727,7 +7765,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "smartsheet",
@@ -6737,7 +7781,13 @@
     "websiteUrl": "https://www.smartsheet.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "shortcut",
@@ -6748,7 +7798,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "teamwork",
@@ -6759,7 +7815,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "google-meet",
@@ -6770,7 +7832,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "mattermost",
@@ -6781,7 +7849,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "rocket-chat",
@@ -6792,7 +7866,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "twist",
@@ -6803,7 +7883,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "hetzner",
@@ -6814,7 +7900,13 @@
     "incelendi": false,
     "fiyatModeli": "kullanima-gore",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "render-hosting",
@@ -6825,7 +7917,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "railway-hosting",
@@ -6836,7 +7934,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "fastly",
@@ -6847,7 +7951,13 @@
     "incelendi": false,
     "fiyatModeli": "kullanima-gore",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "bunny-net",
@@ -6858,7 +7968,13 @@
     "incelendi": false,
     "fiyatModeli": "kullanima-gore",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "woocommerce",
@@ -6869,7 +7985,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "squarespace-commerce",
@@ -6879,7 +8001,13 @@
     "websiteUrl": "https://www.squarespace.com/ecommerce-website",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "ecwid",
@@ -6890,7 +8018,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "shopware",
@@ -6901,7 +8035,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "snipcart",
@@ -6912,7 +8052,13 @@
     "incelendi": false,
     "fiyatModeli": "kullanima-gore",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "chargebee",
@@ -6923,7 +8069,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "recurly",
@@ -6933,7 +8085,13 @@
     "websiteUrl": "https://recurly.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "gemini",
@@ -6944,7 +8102,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "mistral",
@@ -6955,7 +8119,13 @@
     "incelendi": false,
     "fiyatModeli": "kullanima-gore",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
   },
   {
     "slug": "hugging-face",
@@ -6966,7 +8136,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
   },
   {
     "slug": "runway",
@@ -6977,7 +8153,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "suno",
@@ -6988,7 +8170,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "synthesia",
@@ -6998,7 +8186,13 @@
     "websiteUrl": "https://www.synthesia.io",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "heygen",
@@ -7009,7 +8203,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "otter-ai",
@@ -7020,7 +8220,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "fireflies",
@@ -7031,7 +8237,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "cursor",
@@ -7042,7 +8254,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "github-copilot",
@@ -7052,7 +8270,13 @@
     "websiteUrl": "https://github.com/features/copilot",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "writesonic",
@@ -7063,7 +8287,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "freshdesk",
@@ -7074,7 +8304,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "help-scout",
@@ -7084,7 +8320,13 @@
     "websiteUrl": "https://www.helpscout.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "crisp",
@@ -7095,7 +8337,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "tidio",
@@ -7106,7 +8354,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "front",
@@ -7116,7 +8370,13 @@
     "websiteUrl": "https://front.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "xero",
@@ -7126,7 +8386,13 @@
     "websiteUrl": "https://www.xero.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "wave",
@@ -7137,7 +8403,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "freshbooks",
@@ -7147,7 +8419,13 @@
     "websiteUrl": "https://www.freshbooks.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
   },
   {
     "slug": "ramp",
@@ -7158,7 +8436,13 @@
     "incelendi": false,
     "fiyatModeli": "bedava",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "brex",
@@ -7169,7 +8453,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "deel",
@@ -7179,7 +8469,13 @@
     "websiteUrl": "https://www.deel.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "remote-com",
@@ -7189,7 +8485,13 @@
     "websiteUrl": "https://remote.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "rippling",
@@ -7199,7 +8501,13 @@
     "websiteUrl": "https://www.rippling.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "bamboohr",
@@ -7209,7 +8517,13 @@
     "websiteUrl": "https://www.bamboohr.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "docusign",
@@ -7219,7 +8533,13 @@
     "websiteUrl": "https://www.docusign.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "pipedrive",
@@ -7229,7 +8549,13 @@
     "websiteUrl": "https://www.pipedrive.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "salesforce",
@@ -7239,7 +8565,13 @@
     "websiteUrl": "https://www.salesforce.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "zoho-crm",
@@ -7250,7 +8582,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "close",
@@ -7260,7 +8598,13 @@
     "websiteUrl": "https://www.close.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "attio",
@@ -7271,7 +8615,13 @@
     "incelendi": false,
     "fiyatModeli": "ucretsiz-katman",
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
   },
   {
     "slug": "folk",
@@ -7281,6 +8631,12 @@
     "websiteUrl": "https://www.folk.app",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
   }
 ]
