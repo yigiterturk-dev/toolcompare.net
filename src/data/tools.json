@@ -13463,7 +13463,7 @@
     "slug": "ironclad",
     "name": "Ironclad",
     "category": "Legal Tools",
-    "shortDescription": "Contract lifecycle management.",
+    "shortDescription": "Contract workflows, repository, eSignature and optional AI tools.",
     "websiteUrl": "https://ironcladapp.com",
     "incelendi": true,
     "basePrice": 0,
@@ -13474,54 +13474,113 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Ironclad manages the contract lifecycle: intake, approval, negotiation and a searchable repository.",
+    "longDescription": "Ironclad CLM manages contract requests, workflows, approvals, negotiation, signature and completed records in a central repository. Products, deployment assistance, integrations, API access, additional instances and AI or eSignature options are selected through a quote rather than one public fixed price.",
     "pros": [
-      "Structured intake removes contract chaos",
-      "Repository makes obligations findable",
-      "Good approval workflows"
+      "No-code workflows: Configure intake fields, conditional clauses, approvers and signers.",
+      "Contract repository: Stores signed agreements and structured metadata after workflow completion.",
+      "Lifecycle coverage: Supports creation, review, approval, execution and post-signature analysis.",
+      "Integration interfaces: Public APIs, webhooks and supported connectors can exchange workflow and record data."
     ],
     "cons": [
-      "Priced for legal teams with budget",
-      "Implementation requires process design",
-      "Overkill for occasional contracts"
+      "Quote-based scope: Public pricing does not state one universal subscription amount.",
+      "Add-on boundaries: API access, some integrations, extra instances and success options may cost extra.",
+      "Workflow design work: Templates, fields, permissions, approvals and integrations must reflect the organization's legal process.",
+      "Product separation: Ironclad CLM and Ironclad Clickwrap are distinct standalone products."
     ],
-    "targetAudience": "Legal teams handling contracts at volume.",
-    "verdict": "Strong where contract volume is a real workload. Occasional signing needs an e-signature tool, not this."
+    "keyFeatures": [
+      { "title": "Workflow Designer", "description": "Builds contract request and approval processes with templates and conditional logic." },
+      { "title": "Contract repository", "description": "Stores executed contracts and searchable workflow-generated metadata." },
+      { "title": "Native eSignature", "description": "Supports signature inside the CLM lifecycle with approval history and captured context." },
+      { "title": "Public API and webhooks", "description": "Launches workflows and exchanges workflow or record data when API access is enabled." }
+    ],
+    "targetAudience": "Legal operations and cross-functional contracting teams that need governed workflows and a repository beyond standalone document signing.",
+    "bestFor": [
+      "Organizations standardizing repeatable contract intake and approval paths",
+      "Teams centralizing executed agreements and structured contract metadata",
+      "Businesses prepared to design permissions, templates, integrations and change ownership"
+    ],
+    "skipIf": [
+      "Your requirement is limited to occasional electronic signatures",
+      "You need public fixed pricing before a scoped quote and deployment decision",
+      "No legal-operations owner can govern workflow, repository and integration design"
+    ],
+    "verdict": "Choose Ironclad when governed contract workflows and repository data justify a CLM program; price the selected products, API, integrations and deployment support as one scoped system.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Ironclad Support — Product overview", "url": "https://support.ironcladapp.com/hc/en-us/articles/12615001356567-Ironclad-Products-Overview", "checkedAt": "2026-08-24", "supports": ["CLM scope", "workflow and approvals", "contract repository", "CLM and Clickwrap separation", "public workflows"] },
+        { "label": "Ironclad — CLM platform", "url": "https://ironcladapp.com/product/ai-based-contract-management", "checkedAt": "2026-08-24", "supports": ["no-code workflow automation", "repository", "eSignature", "contract review", "integrations", "AI product positioning"] },
+        { "label": "Ironclad — Pricing", "url": "https://ironcladapp.com/pricing", "checkedAt": "2026-08-24", "supports": ["quote-based purchase", "product selection", "deployment partners", "API and integration add-ons", "additional instances", "success plan"] },
+        { "label": "Ironclad Support — Public API", "url": "https://support.ironcladapp.com/hc/en-us/articles/12278082472855-Ironclad-s-Public-API-Overview", "checkedAt": "2026-08-24", "supports": ["API availability process", "workflow endpoints", "record endpoints", "webhooks", "bulk export and integration use"] }
+      ],
+      "limitations": ["Vendor pages were reviewed; ToolCompare did not obtain a quote, inspect a contract, test workflow configuration, audit legal compliance or independently evaluate AI extraction, risk analysis and ROI."]
+    }
   },
   {
     "slug": "copper",
     "name": "Copper",
     "category": "CRM",
-    "shortDescription": "CRM that lives inside Google Workspace.",
+    "shortDescription": "Per-seat CRM with native Google Workspace synchronization.",
     "websiteUrl": "https://www.copper.com",
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
+    "fiyatModeli": "kullanici-basina",
     "kriterler": {
       "api": true,
       "mobil": true,
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Copper is a CRM that lives inside Google Workspace, capturing contacts and threads from Gmail automatically.",
+    "longDescription": "Copper is a per-seat CRM built around Google Workspace synchronization, pipelines, tasks and relationship history. Gmail, Calendar, Contacts and Drive integrations are included across plans, while contact capacity, workflow automation, reporting, developer API and embedded integrations vary by tier.",
     "pros": [
-      "Works where Google Workspace users already are",
-      "Automatic capture from Gmail",
-      "Quick to adopt"
+      "Google Workspace integration: Connects Gmail, Calendar, Contacts and Drive across current plans.",
+      "Relationship context: Synchronizes supported emails, contacts, files and calendar activity into CRM records.",
+      "Flexible pipelines: Tracks opportunities, projects and other configured processes.",
+      "Mobile access: Current plans document iOS and Android applications."
     ],
     "cons": [
-      "Only makes sense with Google Workspace",
-      "Reporting is limited",
-      "Costs add up per seat"
+      "Per-seat cost: Subscription cost grows with the number of licensed users.",
+      "Contact ceilings: Basic and Professional plans have documented contact limits.",
+      "Tier gates: Workflow automation, reporting, Developer API and embedded SDK access require higher plans.",
+      "API throughput: Developer calls are limited to 180 per minute, with a separate bulk limit."
     ],
-    "targetAudience": "Small teams running entirely on Google Workspace.",
-    "verdict": "Very low adoption friction for Google teams. Outside that world there is no reason to pick it."
+    "keyFeatures": [
+      { "title": "Gmail and Calendar sync", "description": "Adds supported messages, contacts, files and events to CRM relationship history." },
+      { "title": "Pipelines", "description": "Manages sales opportunities, projects and configured customer processes." },
+      { "title": "Automation and reporting", "description": "Adds task automation at Basic and broader workflows or reports at higher tiers." },
+      { "title": "Developer API", "description": "Provides authenticated HTTPS access on qualifying plans with documented rate limits." }
+    ],
+    "targetAudience": "Google Workspace-centered teams that want CRM records and pipelines close to Gmail and Calendar.",
+    "bestFor": [
+      "Teams whose customer communication already runs through Google Workspace",
+      "Organizations that fit the selected plan's contact, automation and reporting limits",
+      "Projects whose integration workload fits Copper's API tier and quotas"
+    ],
+    "skipIf": [
+      "Google Workspace is not central to your team's daily workflow",
+      "Your contact count or reporting needs force a plan whose per-seat cost is unjustified",
+      "You require Developer API or embedded integration features on a lower tier"
+    ],
+    "verdict": "Choose Copper for its Google Workspace operating model, then select the plan from actual contact count, automation, reporting and API needs rather than the Gmail integration alone.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Copper — Pricing", "url": "https://www.copper.com/pricing", "checkedAt": "2026-08-24", "supports": ["per-seat pricing", "contact limits", "automation tiers", "reporting tiers", "Google Workspace integrations", "Developer API and embedded SDK"] },
+        { "label": "Copper Help — Plan comparison", "url": "https://support.copper.com/en/articles/9623758-copper-plans-feature-comparison", "checkedAt": "2026-08-24", "supports": ["plan feature gates", "contact capacities", "SAML SSO", "workflow automation", "native integrations", "API availability"] },
+        { "label": "Copper — Integrations", "url": "https://www.copper.com/integrations", "checkedAt": "2026-08-24", "supports": ["Gmail", "Google Calendar", "Google Contacts", "Google Drive", "all-plan Google coverage", "custom applications"] },
+        { "label": "Copper Developer — Requests", "url": "https://developer.copper.com/introduction/requests.html", "checkedAt": "2026-08-24", "supports": ["TLS requirement", "API headers", "API-key ownership", "180 requests per minute", "bulk rate limit", "429 response"] }
+      ],
+      "limitations": ["Vendor pricing and developer documentation were reviewed; ToolCompare did not test synchronization accuracy, mobile apps, automation reliability, API behavior, reporting quality or total seat cost."]
+    }
   },
   {
     "slug": "keap",
     "name": "Keap",
     "category": "CRM",
-    "shortDescription": "CRM and marketing automation for small business.",
+    "shortDescription": "CRM, sales and marketing automation with required implementation services.",
     "websiteUrl": "https://keap.com",
     "incelendi": true,
     "basePrice": 0,
@@ -13532,19 +13591,47 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Keap combines CRM, email marketing and simple automation for small businesses that want one system rather than three.",
+    "longDescription": "Keap combines contact management, sales pipelines, email and text marketing, automation, invoicing and payment connections. The current subscription starts with included users and contacts, requires implementation services, and can add costs for extra users, contact tiers, messaging and payment processing.",
     "pros": [
-      "CRM and marketing automation together",
-      "Built for small service businesses",
-      "Includes payments and quotes"
+      "Unified contact history: Stores customer details, communications, invoices, payments and activity.",
+      "Sales and marketing workflows: Combines pipelines, email campaigns, forms and automation.",
+      "Commerce tools: Supports invoices, checkout forms, recurring payments and connected processors.",
+      "Open API endpoints: Custom integrations can access supported CRM and automation resources."
     ],
     "cons": [
-      "Interface feels dated",
-      "Onboarding fee on some plans",
-      "Automation builder is limited compared with specialists"
+      "Required implementation: New subscriptions include a separate implementation-service scope.",
+      "Layered expansion cost: Additional users and contact tiers increase the subscription.",
+      "Regional feature limits: Native payments, phone, texting and the mobile app have documented country constraints.",
+      "Usage and processor fees: Messaging overages and payment processors add charges beyond software access."
     ],
-    "targetAudience": "Small service businesses that want sales and marketing in one place.",
-    "verdict": "Convenient consolidation. Each individual part is beaten by a specialist tool."
+    "keyFeatures": [
+      { "title": "CRM and pipelines", "description": "Manages contacts, companies, activities and sales opportunities." },
+      { "title": "Automation", "description": "Triggers follow-up, tasks, campaigns and other supported actions from customer events." },
+      { "title": "Email and text marketing", "description": "Runs campaigns with plan, consent, geography and usage conditions." },
+      { "title": "Invoices and payments", "description": "Creates invoices and checkout flows using Keap Pay or supported external processors." }
+    ],
+    "targetAudience": "Service-oriented small businesses that want CRM, follow-up and payment workflows together and will use the required implementation program.",
+    "bestFor": [
+      "Businesses consolidating contact, pipeline, campaign and invoice workflows",
+      "Teams willing to map processes and migrate data through implementation services",
+      "Organizations able to forecast contacts, users, messages and processor fees"
+    ],
+    "skipIf": [
+      "You want a low-cost self-serve CRM without required implementation",
+      "Required texting, phone, payments or mobile features are unavailable in your country",
+      "Your integration cannot handle Keap's token and tenant API quotas"
+    ],
+    "verdict": "Evaluate Keap as a bundled operating system plus implementation, not a base subscription alone; calculate users, contacts, messages, processing and migration before committing.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Keap — Pricing", "url": "https://keap.com/pricing", "checkedAt": "2026-08-24", "supports": ["starting subscription", "included users", "contact tiers", "required implementation", "CRM and automation features", "regional limitations", "messaging charges", "processor fees"] },
+        { "label": "Keap Developer — API quotas", "url": "https://developer.keap.com/api-token-quota-and-usage-measurements/", "checkedAt": "2026-08-24", "supports": ["OAuth quota", "personal token quota", "tenant limit", "per-second policy", "rate-limit headers", "quota response handling"] },
+        { "label": "Keap Help — Merchant accounts", "url": "https://help.keap.com/help/pdfexport/id/5e84b84ead121c39367105bf", "checkedAt": "2026-08-24", "supports": ["external processors", "merchant fees", "Stripe", "PayPal", "Eway", "Authorize.Net"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not purchase implementation, test automation, deliver campaigns, process payments, validate regional availability or calculate total cost for a specific contact database."]
+    }
   },
   {
     "slug": "browserstack",
