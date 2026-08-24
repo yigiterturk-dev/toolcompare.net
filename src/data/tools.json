@@ -12904,7 +12904,7 @@
     "slug": "bolt-new",
     "name": "Bolt",
     "category": "AI Tools",
-    "shortDescription": "In-browser AI app builder.",
+    "shortDescription": "Browser-based AI builder with editable code and integrated hosting.",
     "websiteUrl": "https://bolt.new",
     "incelendi": true,
     "basePrice": 0,
@@ -12913,51 +12913,110 @@
     "kriterler": {
       "api": false,
       "mobil": false,
-      "acikKaynak": true,
+      "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Bolt builds and runs full-stack applications in the browser from a prompt, including install and preview.",
+    "longDescription": "Bolt generates and runs web applications from prompts in a browser-based environment, exposes the project code, connects external tools and publishes through Bolt hosting or supported alternatives. AI work consumes plan tokens, while hosting has separate account-wide traffic limits.",
     "pros": [
-      "Working app from a prompt in minutes",
-      "Runs entirely in the browser",
-      "Good for quick prototypes"
+      "Browser runtime: Builds and previews supported web applications without a local installation.",
+      "Editable project code: Users can inspect and continue working with the generated files.",
+      "Integrated publishing: Free and paid accounts can publish to a bolt.host address.",
+      "External context: Connectors can provide authenticated access to supported tools and remote MCP servers."
     ],
     "cons": [
-      "Generated code needs review before production",
-      "Token usage burns quickly on iteration",
-      "Struggles with larger codebases"
+      "Token-sensitive iteration: Reading, reasoning over and changing larger projects consumes more tokens.",
+      "Conversation limit: Each conversation has a bounded amount of input and output context.",
+      "Hosting caps: Free sites stop serving when the account-wide bandwidth or request allowance is reached.",
+      "Generated-code responsibility: Production security, correctness and dependency review remain with the project owner."
     ],
-    "targetAudience": "Developers and founders prototyping ideas fast.",
-    "verdict": "Impressive for a first version. Treat the output as a prototype, not a foundation."
+    "keyFeatures": [
+      { "title": "Prompt-driven building", "description": "Creates and edits supported application files through conversational instructions." },
+      { "title": "In-browser execution", "description": "Uses a browser-based Node.js runtime for installation, development and preview." },
+      { "title": "Connectors", "description": "Reads or acts on supported external services through built-in and custom MCP connections." },
+      { "title": "Bolt hosting", "description": "Publishes public or restricted projects with plan-specific domains and traffic limits." }
+    ],
+    "targetAudience": "Founders, designers and developers who want an editable web-app starting point and can review the generated implementation before release.",
+    "bestFor": [
+      "Producing and testing an initial web application without local setup",
+      "Projects that benefit from direct context from supported work tools",
+      "Teams prepared to monitor both AI-token consumption and hosting usage"
+    ],
+    "skipIf": [
+      "You require the app-building platform itself to be open source or self-hosted",
+      "No engineer can review generated code, dependencies, authorization and data handling",
+      "Your traffic cannot tolerate plan limits or account-wide hosting allowances"
+    ],
+    "verdict": "Use Bolt to accelerate an editable first implementation, then apply normal engineering review and capacity planning; generated code and one-click hosting are not production-readiness guarantees.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Bolt Support — QuickStart", "url": "https://support.bolt.new/building/quickstart", "checkedAt": "2026-08-24", "supports": ["browser requirements", "prompt-based app building", "Bolt Cloud", "token-based usage", "integrated publishing"] },
+        { "label": "Bolt Support — Tokens", "url": "https://support.bolt.new/faqs/account-and-subscription/tokens", "checkedAt": "2026-08-24", "supports": ["conversation token limits", "project-size token impact", "plan resets", "daily free-plan limit", "rollover rules"] },
+        { "label": "Bolt Support — Hosting plans", "url": "https://support.bolt.new/cloud/hosting/plans", "checkedAt": "2026-08-24", "supports": ["free and paid hosting", "account-wide bandwidth", "request limits", "traffic suspension", "paid overage controls"] },
+        { "label": "Bolt — Connectors", "url": "https://bolt.new/blog/introducing-connectors", "checkedAt": "2026-08-24", "supports": ["built-in connectors", "remote MCP support", "external read and write actions", "browser runtime", "code access"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently test generated-code quality, security, browser compatibility, connector permissions, token consumption or hosting reliability."]
+    }
   },
   {
     "slug": "gorgias",
     "name": "Gorgias",
     "category": "Customer Service",
-    "shortDescription": "Helpdesk built for ecommerce.",
+    "shortDescription": "Ecommerce helpdesk with order actions and usage-based ticket billing.",
     "websiteUrl": "https://www.gorgias.com",
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
     "kriterler": {
       "api": true,
       "mobil": true,
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Gorgias is a helpdesk built for online stores, pulling order data into the ticket so agents can refund or reorder without leaving the conversation.",
+    "longDescription": "Gorgias is an ecommerce-focused helpdesk that brings connected store and order data into support tickets. Shopify accounts can expose order history and selected refund, cancellation, edit and duplication actions; billing is based on replied-to tickets, with separate automation and add-on events in applicable subscriptions.",
     "pros": [
-      "Order context inside every ticket",
-      "Deep Shopify integration",
-      "Automations for common store questions"
+      "Shopify context: Customer profiles and order history appear alongside supported tickets.",
+      "Order actions: Authorized agents can perform selected Shopify changes without leaving Gorgias.",
+      "Usage rather than seats: Core helpdesk pricing scales by billable ticket allowance, not agent count.",
+      "Rules and macros: Store variables and supported actions can automate repeat workflows."
     ],
     "cons": [
-      "Priced per ticket, which punishes busy periods",
-      "Value drops outside ecommerce",
-      "Setup takes configuration work"
+      "Overage exposure: Replies beyond the included ticket allowance produce additional charges.",
+      "Multiple billable events: One conversation can incur helpdesk, automation, voice and SMS charges.",
+      "Shopify action limits: Some refunds, old orders, currencies and multi-store profiles restrict actions.",
+      "Store dependency: The documented AI Agent workflow requires a connected Shopify store."
     ],
-    "targetAudience": "Online stores handling order-related support at volume.",
-    "verdict": "Clearly the right category choice for ecommerce. The ticket-based pricing needs modelling against your seasonality."
+    "keyFeatures": [
+      { "title": "Unified ecommerce inbox", "description": "Handles supported customer channels with connected shopper and order context." },
+      { "title": "Shopify order actions", "description": "Supports selected refund, cancel, edit, create and duplicate operations from tickets." },
+      { "title": "Macros and rules", "description": "Reuses response templates, store variables and supported workflow actions." },
+      { "title": "Usage monitoring", "description": "Tracks billable tickets, automated interactions and add-on consumption." }
+    ],
+    "targetAudience": "Ecommerce support teams, particularly Shopify merchants, that want store actions inside the helpdesk and can forecast usage-based billing.",
+    "bestFor": [
+      "Shopify support teams that frequently inspect or modify customer orders",
+      "Organizations whose support volume maps predictably to ticket allowances",
+      "Teams prepared to configure and audit automated ecommerce actions"
+    ],
+    "skipIf": [
+      "Your business is not centered on supported ecommerce workflows",
+      "Seasonal ticket volume and overage charges cannot be forecast or capped",
+      "Your order scenarios rely on Shopify operations that Gorgias does not support"
+    ],
+    "verdict": "Choose Gorgias when its store-side actions reduce real ecommerce support work; model every applicable ticket, automation, voice and SMS event against seasonal volume.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Gorgias Docs — Billing", "url": "https://docs.gorgias.com/en-US/how-youre-billed-for-using-gorgias-199385", "checkedAt": "2026-08-24", "supports": ["billable ticket definition", "AI automation fee", "voice and SMS events", "overages", "multiple charges per ticket", "usage monitoring"] },
+        { "label": "Gorgias Docs — Connect Shopify", "url": "https://docs.gorgias.com/en-US/connect-shopify-to-gorgias-81814", "checkedAt": "2026-08-24", "supports": ["customer profiles", "order history", "Shopify permissions", "order actions", "macros", "AI Agent store requirement"] },
+        { "label": "Gorgias Docs — Shopify actions", "url": "https://docs.gorgias.com/en-US/shopify-actions-461552", "checkedAt": "2026-08-24", "supports": ["create and duplicate order", "cancellation", "refund", "edit order", "payment and age limitations"] },
+        { "label": "Gorgias — Pricing", "url": "https://www.gorgias.com/pricing", "checkedAt": "2026-08-24", "supports": ["ticket-volume tiers", "not priced per agent", "outcome-priced AI Agent", "voice and SMS add-ons"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently measure support productivity, automation success, Shopify action reliability, revenue attribution or total seasonal cost."]
+    }
   },
   {
     "slug": "gladly",
@@ -12992,7 +13051,7 @@
     "slug": "chatwoot",
     "name": "Chatwoot",
     "category": "Customer Service",
-    "shortDescription": "Open-source customer engagement suite.",
+    "shortDescription": "Open-source multi-channel support inbox with cloud and self-hosted plans.",
     "websiteUrl": "https://www.chatwoot.com",
     "incelendi": true,
     "basePrice": 0,
@@ -13004,19 +13063,49 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Chatwoot is an open-source customer engagement suite covering live chat, shared inbox and social channels, self-hostable or cloud.",
+    "longDescription": "Chatwoot centralizes supported website, email, messaging, social and API channels in shared inboxes. It is available as Chatwoot Cloud or a self-hosted codebase, but enterprise features and the operational burden differ across editions.",
     "pros": [
-      "Open source with a real self-hosting path",
-      "Multiple channels in one inbox",
-      "Costs far less than commercial equivalents"
+      "Self-hosting path: Community code outside the enterprise directory is MIT-licensed.",
+      "Channel coverage: Supports live chat, email and multiple messaging or social providers.",
+      "Custom channel API: Connects unsupported applications through an API inbox.",
+      "Deployment choice: Use the managed cloud or operate Chatwoot on your infrastructure."
     ],
     "cons": [
-      "Fewer integrations than Intercom or Zendesk",
-      "Self-hosting requires maintenance",
-      "Reporting is basic"
+      "Self-hosting stack: Production requires web and worker processes, PostgreSQL, Redis, email and object storage.",
+      "Edition boundaries: Community Edition excludes SSO, SLA policies and several enterprise controls.",
+      "Cloud tier limits: Channels, automation, retention and conversation quotas vary by plan.",
+      "Provider setup: External messaging channels require their own credentials, permissions and sometimes provider charges."
     ],
-    "targetAudience": "Teams that want a support inbox without per-seat commercial pricing.",
-    "verdict": "Strong value, particularly self-hosted. Expect to trade polish for control."
+    "keyFeatures": [
+      { "title": "Shared inboxes", "description": "Routes conversations from supported channels to assigned agents and teams." },
+      { "title": "Website and messaging channels", "description": "Connects live chat, email, WhatsApp, SMS, social and other documented providers." },
+      { "title": "API channel", "description": "Allows a custom application or unsupported messaging source to create an inbox." },
+      { "title": "Cloud or self-hosted", "description": "Offers managed subscriptions and multiple infrastructure deployment methods." }
+    ],
+    "targetAudience": "Support teams that want a multi-channel shared inbox and are choosing between managed cloud convenience and self-hosted control.",
+    "bestFor": [
+      "Teams consolidating supported chat, email and messaging channels",
+      "Organizations with infrastructure staff and a requirement to host conversation data",
+      "Custom support channels that can integrate through Chatwoot's API inbox"
+    ],
+    "skipIf": [
+      "You expect Community Edition to include enterprise SSO, SLA and advanced controls",
+      "Your team cannot operate and update the required self-hosted services",
+      "A required external channel or retention period is absent from your selected cloud plan"
+    ],
+    "verdict": "Choose Chatwoot after comparing cloud-plan limits with the real cost of operating its full self-hosted stack; open source does not make every enterprise feature free.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Chatwoot — Official repository license", "url": "https://github.com/chatwoot/chatwoot/blob/develop/LICENSE", "checkedAt": "2026-08-24", "supports": ["MIT-licensed community code", "enterprise directory exception", "license warranty limits"] },
+        { "label": "Chatwoot Guide — Channels and inboxes", "url": "https://www.chatwoot.com/hc/user-guide/articles/1677492191-adding-inboxes", "checkedAt": "2026-08-24", "supports": ["inbox model", "website and email", "messaging providers", "API channel", "routing", "irreversible inbox deletion"] },
+        { "label": "Chatwoot Docs — Production architecture", "url": "https://developers.chatwoot.com/self-hosted/deployment/architecture", "checkedAt": "2026-08-24", "supports": ["web servers", "workers", "PostgreSQL", "Redis", "email service", "object storage", "update cadence"] },
+        { "label": "Chatwoot — Self-hosted pricing", "url": "https://www.chatwoot.com/pricing/self-hosted-plans", "checkedAt": "2026-08-24", "supports": ["Community Edition", "Premium Support", "Enterprise Edition", "SSO and SLA boundaries", "minimum infrastructure"] },
+        { "label": "Chatwoot — Cloud pricing", "url": "https://www.chatwoot.com/pricing", "checkedAt": "2026-08-24", "supports": ["per-agent cloud tiers", "conversation limits", "channel availability", "data retention", "SSO tier", "cloud region"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not independently test channel reliability, migration, reporting, self-hosted security, cloud uptime or total infrastructure cost."]
+    }
   },
   {
     "slug": "mercury",
