@@ -17336,31 +17336,130 @@
     "slug": "cloud-foundry",
     "name": "Cloud Foundry",
     "category": "Hosting",
-    "shortDescription": "Open source, multi-cloud application platform as a service.",
+    "shortDescription": "Open-source application platform for deploying and operating code across private and public infrastructure.",
     "websiteUrl": "https://www.cloudfoundry.org/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": true },
+    "longDescription": "Cloud Foundry is an Apache-licensed, openly governed application-platform ecosystem. Developers push supported application code through the cf CLI and platform API; operators provide routing, buildpacks, container scheduling, identity, logs, quotas and service integrations. The software has no license fee, but a production foundation still requires infrastructure, load balancers, DNS/TLS, databases, blob stores, monitoring, backups, updates and skilled operations—or a separately priced commercial distribution or managed provider. Certification verifies required core components for a specific program year; it is not the same as generic API compatibility or an uptime guarantee.",
+    "pros": [
+      "Developer abstraction: A consistent cf push workflow hides much of the infrastructure configuration from application teams.",
+      "Open governance and source: Foundation projects use open contribution, design and governance processes.",
+      "Infrastructure choice: Cloud Foundry can be deployed on multiple IaaS environments or consumed through commercial offerings.",
+      "Platform controls: UAA identity, RBAC, orgs, spaces, quotas, routing, logs and service brokers provide multi-team governance."
+    ],
+    "cons": [
+      "Free software has real operating cost: Production topology, infrastructure, upgrades, security and recovery need a platform team.",
+      "Provider experience varies: Buildpacks, services, extensions, support, certification and pricing differ among distributions.",
+      "State remains external: Databases and bound services need their own durability, credential and restore strategy.",
+      "Not general compute: The opinionated application model is a poor fit for workloads needing unrestricted hosts or unusual system dependencies."
+    ],
+    "keyFeatures": [
+      { "title": "cf push workflow", "description": "Stages supported source or artifacts with buildpacks and schedules application instances." },
+      { "title": "Organizations and spaces", "description": "Scopes applications, routes, services, quotas and role-based access for multiple teams." },
+      { "title": "Service broker model", "description": "Provisions and binds managed services through the Open Service Broker API." },
+      { "title": "UAA identity", "description": "Provides OAuth-based platform identity with configurable LDAP and SAML federation." }
+    ],
+    "targetAudience": "Enterprises and public-sector platform teams that want a standardized developer PaaS and can operate it or select a supported provider.",
+    "bestFor": [
+      "Large application portfolios that conform to buildpack or supported container workflows",
+      "Organizations prioritizing consistent developer experience across infrastructure choices",
+      "Internal platforms with dedicated owners for upgrades, security, observability and disaster recovery"
+    ],
+    "skipIf": [
+      "The organization has only a few simple services and no platform-operations capacity",
+      "Applications require privileged hosts, unusual kernels or infrastructure-level control",
+      "The selected distribution has no verified lifecycle, support, certification or backup responsibility"
+    ],
+    "verdict": "Cloud Foundry remains a capable open application-platform abstraction, but its business case depends on portfolio scale; price the whole foundation and operators, validate the chosen distribution, and restore-test platform state plus every external service before standardizing on cf push.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Cloud Foundry — Project home", "url": "https://www.cloudfoundry.org/", "checkedAt": "2026-08-24", "supports": ["open-source application platform", "cf push workflow", "supported language examples", "community project quality control", "infrastructure-flexibility positioning"] },
+        { "label": "Cloud Foundry — Governance", "url": "https://www.cloudfoundry.org/governance/", "checkedAt": "2026-08-24", "supports": ["open license design development and contribution model", "open governance", "Foundation role", "Governing Board and Technical Oversight Committee responsibilities"] },
+        { "label": "Cloud Foundry Docs — Documentation index", "url": "https://docs.cloudfoundry.org/", "checkedAt": "2026-08-24", "supports": ["PaaS definition", "deployment and administration scope", "BOSH backup and restore", "API CLI buildpacks routing logging services and UAA", "operator responsibility breadth"] },
+        { "label": "Cloud Foundry Docs — Concepts", "url": "https://docs.cloudfoundry.org/concepts/", "checkedAt": "2026-08-24", "supports": ["open-source app platform", "private distribution and public-instance models", "cloud framework and service choice", "application deployment and scaling scope"] },
+        { "label": "Cloud Foundry Docs — Security", "url": "https://docs.cloudfoundry.org/concepts/security.html", "checkedAt": "2026-08-24", "supports": ["UAA OAuth identity", "RBAC", "LDAP and SAML federation", "container isolation", "release and stemcell patching", "encrypted configuration", "operator hardening recommendations"] },
+        { "label": "Cloud Foundry — Provider FAQ", "url": "https://www.cloudfoundry.org/provider-faq/", "checkedAt": "2026-08-24", "supports": ["Apache 2 licensing", "annual certification", "required core components", "formal verification distinction", "provider extensions", "certification not equal to all-source inclusion", "delivery-model variety"] }
+      ],
+      "limitations": ["Official Cloud Foundry Foundation and documentation sources were reviewed; ToolCompare did not deploy a foundation, select or purchase a distribution, calculate infrastructure or staffing cost, test cf push/APIs/UAA/SAML/buildpacks/service brokers, inspect a current certification submission, patch stemcells, induce component failures, benchmark applications, or restore BOSH and external-service state. Provider features, certification and lifecycle support vary."]
+    }
   },
   {
     "slug": "idrive-inc",
     "name": "IDrive Inc.",
     "category": "Hosting",
-    "shortDescription": "American data backup company.",
+    "shortDescription": "Cloud backup provider for personal devices, teams, servers, NAS and business applications, with separate sync and object-storage products.",
     "websiteUrl": "https://www.idrive.com",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 11.99,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": false, "mobil": true, "acikKaynak": false, "sso": false },
+    "longDescription": "IDrive is a proprietary backup service for computers, mobile devices, external drives, NAS and business systems. Its current Personal monthly plan is $11.99 for 5 TB, while Basic provides 10 GB without a credit card; annual and two-year discounts apply only to the first year before standard pricing. Backup, Cloud Drive synchronization and IDrive e2 object storage are distinct services. IDrive retains up to 30 prior file versions and offers an optional user-defined encryption key, but losing that private key makes restoration impossible. Storage overages are separately chargeable.",
+    "pros": ["Multi-device coverage: One account can protect supported desktop, mobile, external-drive and NAS data.", "Historical recovery: Snapshots and up to 30 prior file versions provide point-in-time options against mistakes or ransomware.", "Optional private key: Client-selected encryption can keep the decryption key off IDrive servers.", "Physical transfer option: IDrive Express can seed or retrieve large backups without consuming normal internet bandwidth."],
+    "cons": ["Discounts expire: Annual and two-year promotional rates revert to standard pricing after the first year.", "Overage can be expensive: Personal and business-family plans publish per-GB monthly charges above quota.", "Private-key loss is terminal: IDrive cannot decrypt private-key backups if the customer loses the key.", "Product names can confuse: Backup, Cloud Drive sync, application backup and e2 object storage have different activation and billing."],
+    "keyFeatures": [
+      { "title": "Device backup", "description": "Protects supported PCs, Macs, Linux systems, phones, tablets, external drives and NAS devices by plan." },
+      { "title": "Snapshots and versions", "description": "Maintains historical views and up to 30 previous versions of backed-up files." },
+      { "title": "Private-key encryption", "description": "Offers AES-256 client-side protection with a user-defined key not stored by IDrive." },
+      { "title": "IDrive Express", "description": "Uses shipped physical storage for eligible bulk backup seeding and retrieval workflows." }
+    ],
+    "targetAudience": "Individuals and small-to-medium organizations needing centralized backup across heterogeneous devices and willing to test restores and quota behavior.",
+    "bestFor": ["Households or professionals backing up several computers and mobile devices under one account", "Small teams protecting endpoints, selected servers or NAS appliances within a known capacity", "Users who can securely escrow a private encryption key and regularly test representative restores"],
+    "skipIf": ["The requirement is primary application hosting or S3-compatible object storage rather than endpoint backup", "Data growth cannot be constrained and per-GB overage has not been budgeted", "No process exists to preserve the private key, backup configuration and independent recovery evidence"],
+    "verdict": "IDrive offers broad device coverage and useful version history at competitive capacity tiers, but choose the correct product, budget after introductory discounts, prevent quota overage, and prove both ordinary and disaster restores before treating the backup as dependable.",
+    "evidence": {
+      "status": "vendor-sourced", "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "IDrive — Plans and pricing", "url": "https://www.idrive.com/pricing", "checkedAt": "2026-08-24", "supports": ["10 GB Basic tier", "no-card requirement", "$11.99 monthly Personal 5 TB plan", "Personal Team and Business scopes", "first-year discount boundary", "standard renewal pricing", "overage rates", "Cloud Drive separate activation", "USD pricing"] },
+        { "label": "IDrive — Online backup features", "url": "https://www.idrive.com/online-backup-features", "checkedAt": "2026-08-24", "supports": ["multi-device and external-drive backup", "Cloud Drive distinction", "IDrive Express", "snapshots", "up-to-30 versions", "NAS add-on", "incremental transfer", "mobile apps", "manual deletion and Archive Cleanup behavior"] },
+        { "label": "IDrive — Backup security", "url": "https://www.idrive.com/online-backup-security", "checkedAt": "2026-08-24", "supports": ["AES-256 transfer and storage encryption", "optional private key", "key not stored on IDrive servers", "irrecoverability without private key", "US data-center statement", "third-party network reviews"] },
+        { "label": "IDrive — Security FAQ", "url": "https://www.idrive.com/online-backup-security-faq", "checkedAt": "2026-08-24", "supports": ["default versus private key", "local decryption", "stored one-way validation sample", "account reset deletion consequence", "two-factor authentication documentation"] },
+        { "label": "IDrive e2 — Object-storage pricing", "url": "https://www.idrive.com/s3-storage-e2/pricing", "checkedAt": "2026-08-24", "supports": ["separate S3-compatible product", "usage and annual billing", "minimum storage charge", "egress-policy boundary", "first-year discount distinction"] }
+      ],
+      "limitations": ["Official IDrive pricing, feature, security and e2 pages were reviewed; ToolCompare did not create an account, install clients, measure backup speed, verify every supported OS or NAS, fill a quota, incur overage, test version retention, ship an Express drive, inspect data-center controls, lose or escrow a private key, back up SaaS or servers, or perform file, image or disaster restoration. Promotions, quotas, retention and product terms can change."]
+    }
   },
   {
     "slug": "ultahost",
     "name": "Ultahost",
     "category": "Hosting",
-    "shortDescription": "Web hosting provider offering shared, VPS and dedicated servers.",
+    "shortDescription": "Managed hosting provider offering VPS, shared hosting, VDS and dedicated servers across multiple locations.",
     "websiteUrl": "https://ultahost.com/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 7.99,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Ultahost is a proprietary managed-hosting provider; this record focuses on its Linux VPS offer. The VPS Basic page currently shows $4.80 per month when billed for 24 months against a displayed $7.99 reference price, with one CPU core, 1 GB RAM, 30 GB NVMe, dedicated IPs, managed service, SSL and a 30-day refund claim. Plans renew automatically and saved-card auto-payments are enabled by default. Higher tiers advertise unlimited bandwidth, DDoS protection, monitoring, backups and root access. Management reduces routine work but does not eliminate application security, data ownership or independent recovery duties.",
+    "pros": ["Low VPS entry point: The Basic tier bundles a small KVM server, IP addresses, NVMe storage and management.", "Managed operations: Published scope includes installation, configuration, server updates and monitoring.", "Security bundle: Plans advertise SSL, DDoS protection, BitNinja, firewalling, login controls and malware scanning.", "Migration support: The provider documents free assisted migration with a staged verification process."],
+    "cons": ["Headline rate requires commitment: The $4.80 monthly equivalent is tied to 24-month billing.", "Auto-payment is default: A saved default card triggers recurring charges unless removed or otherwise managed.", "Management has boundaries: Application correctness, credentials, custom software and recoverable business data still need a customer owner.", "Marketing claims need testing: Uptime, unlimited bandwidth, backup cadence and support quality were not independently measured."],
+    "keyFeatures": [
+      { "title": "Managed VPS", "description": "Provides KVM virtual servers with plan-specific CPU, RAM, NVMe storage, IPs and operating-system setup." },
+      { "title": "Root and panel access", "description": "Supports SSH/SFTP and optional or included control-panel workflows depending on configuration." },
+      { "title": "Security controls", "description": "Advertises DDoS filtering, SSL, malware scanning, firewalling, 2FA and IP allowlisting." },
+      { "title": "Backups and migration", "description": "Includes regular or automated backup claims and assisted site migration, while recommending an offsite copy." }
+    ],
+    "targetAudience": "Small businesses and developers wanting an inexpensive managed VPS with more control than shared hosting.",
+    "bestFor": ["Several conventional web applications that fit the chosen CPU, RAM and storage allocation", "Teams needing root access but wanting help with base installation, patches and monitoring", "Migrations that retain the old host and a local full backup until DNS and application checks pass"],
+    "skipIf": ["The purchase only works at a long-term promotional monthly equivalent", "The application needs a precisely contracted backup RPO/RTO, bandwidth policy or support response SLA", "The team assumes managed hosting transfers application security, secret management and restore accountability"],
+    "verdict": "Ultahost's managed VPS bundles substantial features at a low advertised rate, but buy on the full-term invoice and verified renewal behavior; document management boundaries, export encrypted offsite backups, and load- plus restore-test the exact location before production.",
+    "evidence": {
+      "status": "vendor-sourced", "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Ultahost — Managed VPS", "url": "https://ultahost.com/vps-hosting/free-vps", "checkedAt": "2026-08-24", "supports": ["$4.80 promotional and $7.99 reference prices", "24-month billing", "Basic resource allocation", "managed server", "SSL and refund positioning", "higher-tier unlimited bandwidth and DDoS", "automatic renewal", "management scope", "support add-ons", "location choice"] },
+        { "label": "Ultahost Knowledge Base — Migration guide", "url": "https://ultahost.com/knowledge-base/general-guides/other/migrating-a-hosting-service-from-another-provider/", "checkedAt": "2026-08-24", "supports": ["assisted migration", "local full-backup recommendation", "old-host overlap", "pre-cancellation verification", "DNS propagation", "customer account and DNS access", "cPanel restore workflow"] },
+        { "label": "Ultahost Knowledge Base — Auto-payments", "url": "https://ultahost.com/knowledge-base/account-management/billing/enable-disable-auto-payments/", "checkedAt": "2026-08-24", "supports": ["recurring hosting auto-payments", "saved default-card behavior", "default enablement for card users", "disablement by removing default method", "credit-balance processing"] },
+        { "label": "Ultahost Knowledge Base — WHM backup transfer", "url": "https://ultahost.com/knowledge-base/transfer-whm-backup-using-ftp/", "checkedAt": "2026-08-24", "supports": ["customer-configured backup schedule and retention", "offsite transfer", "integrity and restore testing", "multiple-copy recommendation", "encryption recommendation", "WHM-specific scope"] },
+        { "label": "Ultahost Knowledge Base — Domain renewal", "url": "https://ultahost.com/knowledge-base/domains/domain-management/how-to-renew-my-domain-name/", "checkedAt": "2026-08-24", "supports": ["account-based domain renewal", "extension-dependent term", "live renewal-rate display", "checkout-total verification"] },
+        { "label": "Ultahost Knowledge Base — Domain auto-renewal", "url": "https://ultahost.com/knowledge-base/domains/domain-management/enable-disable-domain-auto-renewal/", "checkedAt": "2026-08-24", "supports": ["per-domain auto-renew control", "client-area workflow", "domain and hosting renewal distinction"] }
+      ],
+      "limitations": ["Official Ultahost VPS and knowledge-base pages were reviewed; ToolCompare did not create an account, inspect a final invoice or renewal charge, deploy or benchmark a VPS, confirm virtualization or every location, test root/panel access, management response, DDoS filtering, uptime, unlimited bandwidth, malware scanning, auto-healing, backup cadence, migration, cancellation or refund, or perform a restore. Marketing pages contain inconsistent uptime wording and prices and plan terms can change."]
+    }
   },
   {
     "slug": "glowhost",
