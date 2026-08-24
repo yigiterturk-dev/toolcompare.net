@@ -17004,31 +17004,166 @@
     "slug": "epik",
     "name": "Epik",
     "category": "Hosting",
-    "shortDescription": "American web services company.",
+    "shortDescription": "Domain registrar and aftermarket platform currently operated through ICANN-accredited Epik LLC.",
     "websiteUrl": "https://www.epik.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "degisken",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Epik is a domain-registration and aftermarket platform. The current ICANN registrar list identifies Epik LLC under IANA ID 617, while ICANN's 2023 notice concerned complaints against the predecessor Epik Inc. and a proposed change of control. Current Epik pages expose domain purchases, payment plans, parking and a production RDAP service; an official API document covers registration and domain-lock operations. Registration, renewal, premium-domain and financing prices vary, so ToolCompare does not infer a universal base price from an isolated cart. Buyers should verify the contracting entity and all lifecycle controls for each TLD.",
+    "pros": [
+      "Current registrar accreditation: ICANN's live directory lists Epik LLC as an accredited registrar with IANA ID 617.",
+      "Domain lifecycle tooling: Published API operations include availability, registration and client transfer/update/delete locks.",
+      "Aftermarket options: Listed domains can be purchased outright or, where offered, through rental/purchase financing.",
+      "Operational RDAP: Epik publishes a production registration-data lookup endpoint."
+    ],
+    "cons": [
+      "Corporate-history risk: The brand underwent ownership and accreditation scrutiny after complaints involving predecessor Epik Inc.",
+      "No single price: Registration, renewal, premium names and payment plans vary by extension and listing.",
+      "Financed domains stay constrained: Published rental/purchase terms keep the domain at Epik and block transfer-out while the contract is active.",
+      "Critical controls need proof: Registry lock, auth code, renewal, payment, support and transfer behavior should be tested before consolidation."
+    ],
+    "keyFeatures": [
+      { "title": "Domain registration", "description": "Registers and renews supported TLDs through an ICANN-accredited registrar relationship." },
+      { "title": "Domain marketplace", "description": "Lists third-party domains for fixed-price purchase, offers or eligible payment plans." },
+      { "title": "Registrar API", "description": "Documents programmatic availability, creation, renewal and status-lock operations." },
+      { "title": "RDAP service", "description": "Provides standards-based public registration-data responses for supported domains." }
+    ],
+    "targetAudience": "Domain investors and registrants prepared to validate current Epik LLC terms, TLD pricing and transfer controls before moving important assets.",
+    "bestFor": [
+      "A specific aftermarket listing available on Epik after independent ownership and escrow review",
+      "Domain portfolios that can test API and transfer workflows with a noncritical name first",
+      "Registrants who record renewal prices, registry deadlines and emergency recovery contacts"
+    ],
+    "skipIf": [
+      "The organization cannot separate current Epik LLC terms from predecessor-company history",
+      "A financed domain must be freely transferable before its purchase plan ends",
+      "No test has proven auth-code export, unlock, renewal and account-recovery behavior"
+    ],
+    "verdict": "Epik LLC is currently listed as an ICANN-accredited registrar, but the brand's transition history warrants stronger-than-normal diligence; verify the exact contract and renewal price, trial transfers with a low-value domain, and avoid financing constraints that conflict with the exit plan.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "ICANN — Accredited registrar list", "url": "https://www.icann.org/en/contracted-parties/accredited-registrars/list-of-accredited-registrars", "checkedAt": "2026-08-24", "supports": ["current registrar-directory purpose", "Epik LLC name", "IANA ID 617", "ICANN accreditation context", "daily-updated contact-data boundary"] },
+        { "label": "ICANN — Support for registrants impacted by Epik Inc.", "url": "https://www.icann.org/en/blogs/details/icann-support-for-registrants-impacted-by-epik-inc-09-06-2023-en", "checkedAt": "2026-08-24", "supports": ["2023 predecessor-company complaints", "breach-notice context", "registrant-protection monitoring", "sale and change-of-control review", "Epik Inc. versus current-entity distinction"] },
+        { "label": "Epik — Domain listing and purchase-plan terms", "url": "https://www.epik.com/buy/missdramaqueen.com", "checkedAt": "2026-08-24", "supports": ["Epik LLC contracting name and contact", "fixed-price aftermarket listing", "payment-plan example", "buyer-protection positioning", "WHOIS privacy forwarding and support positioning", "listing-specific price boundary"] },
+        { "label": "Epik — Registrar API", "url": "https://registrar.epik.com/docs/epik-API.pdf", "checkedAt": "2026-08-24", "supports": ["user API endpoint", "domain availability and creation", "renewal methods", "client transfer update and delete locks", "authentication-signature model", "API-document age boundary"] },
+        { "label": "Epik — RDAP service", "url": "https://rdap-whois.epik.com/", "checkedAt": "2026-08-24", "supports": ["production RDAP status", "domain-query format", "live registration-data service"] }
+      ],
+      "limitations": ["Current ICANN records and Epik-operated listing, API and RDAP pages were reviewed; Epik's main pages returned access restrictions to the research client, so ToolCompare did not validate a complete live price table or all current legal documents. No account was created; no domain was registered, renewed, financed, unlocked, transferred or recovered; and support, payment custody, parking revenue, WHOIS privacy and API behavior were not tested. TLD and marketplace terms vary."]
+    }
   },
   {
     "slug": "nearlyfreespeech",
     "name": "NearlyFreeSpeech",
     "category": "Hosting",
-    "shortDescription": "Web hosting provider and domain name registrar.",
+    "shortDescription": "Prepaid, usage-metered do-it-yourself web hosting with optional domains, DNS, databases and email forwarding.",
     "websiteUrl": "https://www.nearlyfreespeech.net/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 0.25,
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "NearlyFreeSpeech.NET is a do-it-yourself prepaid host that debits an account balance as services consume storage, bandwidth, CPU and RAM. A customer can begin with a deposit as small as $0.25; sites also carry daily charges by Non-Production, Production or Critical classification, and databases, DNS, domains and forwarding have separate fees. No card is retained for automatic top-ups. When funds run out, hosting suspends and can be restored by funding within 30 days. Provider snapshots are disaster-recovery infrastructure, not a customer backup substitute, and closed memberships are permanently unrecoverable.",
+    "pros": [
+      "Granular spend: Customers pay for measured resources and selected services instead of a large fixed bundle.",
+      "Very low entry deposit: The published minimum funding amount is $0.25 with no fixed-term contract.",
+      "No surprise auto-charge: The provider says it does not retain payment details or replenish balances automatically.",
+      "Detailed operational candor: Pricing, suspension, backup, support and uptime uncertainty are explained directly in the FAQ."
+    ],
+    "cons": [
+      "Requires self-service skill: The product is explicitly designed for experienced or strongly self-motivated webmasters.",
+      "Cost is workload-dependent: CPU/RAM, bandwidth, storage and daily site classification must all be estimated.",
+      "Balance exhaustion causes downtime: Hosting suspends automatically when prepaid funds reach zero.",
+      "No conventional uptime promise: The provider declines to state a predictable universal uptime figure, and support differs by membership."
+    ],
+    "keyFeatures": [
+      { "title": "Prepaid resource billing", "description": "Debits measured website and database usage plus small per-service fixed charges from a funded balance." },
+      { "title": "Site classifications", "description": "Uses Non-Production, Production and Critical daily-price levels with policy definitions." },
+      { "title": "Hosting primitives", "description": "Offers websites, MariaDB processes, DNS, domain registration and email forwarding separately." },
+      { "title": "Provider snapshots", "description": "Uses mirrored live data and periodic local/offsite copies for catastrophe recovery while recommending customer backups." }
+    ],
+    "targetAudience": "Technically self-sufficient site owners who value fine-grained prepaid billing and can monitor balance, resources and backups.",
+    "bestFor": [
+      "Low-traffic static or dynamic sites whose usage can be measured and forecast",
+      "Developers comfortable with a do-it-yourself control surface and documentation-led support",
+      "Projects that can alert on account balance and maintain independent automated backups"
+    ],
+    "skipIf": [
+      "The owner expects managed onboarding, telephone sales or a bundled fixed monthly bill",
+      "Automatic suspension from a depleted balance is unacceptable",
+      "The project requires a contractual uptime SLA or recovery after membership closure"
+    ],
+    "verdict": "NearlyFreeSpeech.NET can be exceptionally economical for small, well-understood workloads, but it trades bundled convenience for metering and self-reliance; model real resources, fund with alerts and headroom, and keep restorable off-provider copies before relying on it.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "NearlyFreeSpeech.NET — Pricing summary", "url": "https://www.nearlyfreespeech.net/services/pricing", "checkedAt": "2026-08-24", "supports": ["$0.25 minimum deposit", "prepaid usage deductions", "no fixed contracts", "no retained payment details or automatic charge", "low-balance notification", "automatic suspension", "30-day funding window", "daily site charges", "separate DNS database domain and forwarding fees", "resource-based costs"] },
+        { "label": "NearlyFreeSpeech.NET — Public FAQ", "url": "https://www.nearlyfreespeech.net/help/faq", "checkedAt": "2026-08-24", "supports": ["do-it-yourself audience", "usage-estimation responsibility", "uptime uncertainty", "membership-tier support distinction", "permanent closure deletion", "no post-closure recovery"] },
+        { "label": "NearlyFreeSpeech.NET FAQ — Backup strategy", "url": "https://faq.nearlyfreespeech.net/section/ourservice/ourbackups", "checkedAt": "2026-08-24", "supports": ["three-way site mirroring", "twice-daily site snapshots", "daily MySQL backups", "local and offsite copies", "average catastrophe data-loss goals", "potentially long mass restore", "customer-backup recommendation"] },
+        { "label": "NearlyFreeSpeech.NET FAQ — Disabled-site billing", "url": "https://faq.nearlyfreespeech.net/section/ourservice/disabledbilling", "checkedAt": "2026-08-24", "supports": ["continued storage charges while disabled", "continued daily charge by plan", "Non-Production conversion option", "backup-and-remove cost-avoidance guidance"] },
+        { "label": "NearlyFreeSpeech.NET FAQ — Production classification", "url": "https://faq.nearlyfreespeech.net/section/ourservice/production", "checkedAt": "2026-08-24", "supports": ["production-site examples", "critical-site examples", "revenue-dependent classification guidance", "customer classification responsibility"] }
+      ],
+      "limitations": ["Official NearlyFreeSpeech.NET pricing and FAQ pages were reviewed; ToolCompare did not fund an account, deploy or benchmark a site, validate the estimator, measure CPU/RAM or bandwidth charges, exhaust a balance, test TLS/DNS/domain transfer/databases/support, trigger catastrophe recovery, restore a snapshot or close a membership. Actual cost depends on workload and service classification, and prices and policies can change."]
+    }
   },
   {
     "slug": "aruba-s-p-a",
     "name": "Aruba S.p.A.",
     "category": "Hosting",
-    "shortDescription": "Italian domain registrar and Web hosting company.",
+    "shortDescription": "Italian provider of domain, email and Linux/Windows shared hosting, alongside cloud and trust services.",
     "websiteUrl": "https://www.aruba.it/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 34.99,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Aruba S.p.A. is an Italian domains, hosting, cloud and trust-services provider; this record focuses on Linux shared hosting. The Italian page advertises Basic from €9.90 plus VAT for the first year and renewal from €34.99 plus VAT per year. Basic combines one domain, DV SSL, five 1 GB mailboxes, Apache hosting, best-effort 2 Gbit/s bandwidth and unlimited-labelled web space and traffic; database and backup details vary by tier and option. Extension choice changes the annual total, and customers should export content before expiry or transfer because recovery after non-renewal is not guaranteed.",
+    "pros": [
+      "Transparent renewal floor: The Italian product page shows both first-year promotion and standard annual renewal.",
+      "Integrated starter package: Domain, SSL, email, DNS and Linux web space cover a conventional small-site launch.",
+      "Linux plan range: Basic, Easy, Advanced and Hyper tiers provide different database, mailbox and performance profiles.",
+      "Published extension pricing: The price list exposes how domain choice changes the hosting-package total."
+    ],
+    "cons": [
+      "Promotion-to-renewal jump: The Basic first-year price is materially below its ongoing annual amount.",
+      "Unlimited is not dedicated capacity: Bandwidth is labelled best effort and shared-hosting resources are not isolated.",
+      "Features differ by tier: MySQL databases and their backups can be optional or capacity-limited on lower plans.",
+      "Expiry recovery is not assured: Official conditions tell customers to copy content before transfer or non-renewal."
+    ],
+    "keyFeatures": [
+      { "title": "Linux shared hosting", "description": "Runs sites on Apache with current HTTP support, caching and plan-specific databases." },
+      { "title": "Domain bundle", "description": "Includes one eligible domain at purchase and renewal, with pricing dependent on extension group." },
+      { "title": "SSL and mail", "description": "Includes a preinstalled DV certificate, webmail, antivirus/antispam and tiered mailboxes." },
+      { "title": "Application installer", "description": "Uses Softaculous to deploy supported CMS and web applications from the control panel." }
+    ],
+    "targetAudience": "European individuals and small organizations seeking an Italian provider for bundled domains, email and conventional shared hosting.",
+    "bestFor": [
+      "Small PHP or CMS sites that fit shared best-effort infrastructure",
+      "Customers wanting domain, SSL and email bundled with an annual hosting plan",
+      "Buyers who validate the domain-extension group and budget at renewal price"
+    ],
+    "skipIf": [
+      "The workload requires dedicated CPU/RAM, root access or a guaranteed bandwidth rate",
+      "The database and backup needed by the application are not included in the selected tier",
+      "The team has no independent export before transfer, cancellation or non-renewal"
+    ],
+    "verdict": "Aruba's Linux hosting is a competitively bundled European small-site option, but compare on the €34.99-plus-VAT renewal floor rather than the first-year promotion; verify the extension and database tier, treat bandwidth as best effort, and maintain an independent restore copy.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Aruba Hosting — Linux plans", "url": "https://hosting.aruba.it/web-hosting/linux/", "checkedAt": "2026-08-24", "supports": ["first-year and renewal prices", "VAT exclusion", "Basic Easy and Advanced tiers", "included domain and DV SSL", "mailbox allowances", "MySQL and backup differences", "best-effort bandwidth", "unlimited-labelled space and traffic", "Softaculous"] },
+        { "label": "Aruba — English Linux Hosting", "url": "https://hosting.aruba.it/en/web-hosting/linux", "checkedAt": "2026-08-24", "supports": ["international annual starting prices", "domain-at-renewal inclusion", "Apache HTTP and cache features", "email and database tier comparison", "Hyper Hosting distinction"] },
+        { "label": "Aruba — Hosting price list", "url": "https://www.aruba.it/en/hosting-price-list.aspx/en/hosting-price-list.aspx", "checkedAt": "2026-08-24", "supports": ["€34.99 Basic renewal floor", "domain-extension price groups", "VAT exclusion", "Basic Linux package contents", "Linux Windows and Hyper alternatives", "two-year AI-domain boundary"] },
+        { "label": "Aruba — Hosting offers", "url": "https://hosting.aruba.it/offerte-domini-hosting-aruba/", "checkedAt": "2026-08-24", "supports": ["current promotional prices", "renewal-price contrast", "separate domain hosting WordPress WooCommerce and drive offers", "offer variability"] },
+        { "label": "Aruba — Hosting general conditions", "url": "https://hosting.aruba.it/documents/tc-files/en/1_termsandconditionsprovisionarubahosting.pdf", "checkedAt": "2026-08-24", "supports": ["hosting contract conditions", "optional-service duration coupling", "customer backup before transfer or expiry", "no guaranteed post-non-renewal data recovery"] }
+      ],
+      "limitations": ["Official Aruba product, price, promotion and contract pages were reviewed; ToolCompare did not create an account, verify a Turkey-specific checkout or VAT treatment, register a domain, deploy or benchmark a site, test the control panel, Softaculous, mail, SSL, database, bandwidth, support or renewal, inspect backup retention, or restore data. Prices depend on domain extension and country-facing offer, and plan terms can change."]
+    }
   },
   {
     "slug": "advania",
