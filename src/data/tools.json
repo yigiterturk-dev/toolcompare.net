@@ -13111,37 +13111,66 @@
     "slug": "mercury",
     "name": "Mercury",
     "category": "Finance Tools",
-    "shortDescription": "Banking built for startups.",
+    "shortDescription": "US business account software backed by partner-bank services.",
     "websiteUrl": "https://mercury.com",
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "fiyatModeli": "bedava",
+    "fiyatModeli": "ucretsiz-katman",
     "kriterler": {
       "api": true,
       "mobil": true,
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Mercury provides business banking aimed at startups, with no monthly fee and an interface built for software companies.",
+    "longDescription": "Mercury is a financial-technology company, not a bank. It provides software access to business checking and savings services from FDIC-member partner banks, plus payments, cards and optional paid workflows. Eligibility, deposit coverage and fees depend on the business, bank placement and selected services.",
     "pros": [
-      "No monthly account fee",
-      "Clean interface and solid API",
-      "Designed around startup needs"
+      "Core account pricing: Business accounts have no required monthly fee, minimum balance or overdraft fee.",
+      "Domestic payments: Standard ACH, domestic wires and mailed checks are documented at no Mercury fee.",
+      "Operational tools: Includes bill pay, invoicing, cards and accounting connections.",
+      "Automation access: Mercury documents APIs, CLI and MCP access for supported workflows and plans."
     ],
     "cons": [
-      "US-focused; availability varies",
-      "Not a lender for most customers",
-      "Support is online only"
+      "Eligibility boundary: The company must be formed in the US or a US territory and pass review.",
+      "Not a bank: Banking services and deposit accounts are supplied by partner banks.",
+      "Conditional insurance: Sweep coverage depends on pass-through requirements, bank placement and other deposits at the same banks.",
+      "Paid exceptions: FX, non-USD card use, premium wire handling, subscriptions and selected services can incur fees."
     ],
-    "targetAudience": "Startups and remote companies that need a US business account.",
-    "verdict": "A good default for startup banking. Keep expectations realistic about credit and lending."
+    "keyFeatures": [
+      { "title": "Partner-bank accounts", "description": "Accesses checking and savings accounts provided by named FDIC-member banks." },
+      { "title": "Business payments", "description": "Supports ACH, wires, checks, bill pay and scheduled or recurring transfers." },
+      { "title": "Team controls", "description": "Provides cards, permissions and payment approval rules for business users." },
+      { "title": "Accounting automation", "description": "Connects transaction and bill data with supported accounting systems." }
+    ],
+    "targetAudience": "Eligible US-registered businesses that want online financial operations and understand the partner-bank, sweep and fee structure.",
+    "bestFor": [
+      "US-registered startups and small businesses that pass Mercury's eligibility review",
+      "Teams using domestic ACH, wires, cards and accounting workflows in one interface",
+      "Businesses willing to monitor where deposits are held and how sweep coverage applies"
+    ],
+    "skipIf": [
+      "Your company is not formed in the US or a US territory",
+      "Your industry, ownership or founder location falls outside Mercury's eligibility rules",
+      "You require Mercury itself to be the chartered bank holding the account"
+    ],
+    "verdict": "Evaluate Mercury as a fintech interface over partner-bank services, not as the bank itself; verify eligibility, deposit placement, insurance conditions and fee-bearing features before moving funds.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Mercury Support — Eligibility", "url": "https://support.mercury.com/hc/en-us/articles/28770467511060-Eligibility", "checkedAt": "2026-08-24", "supports": ["US formation requirement", "international founders", "unsupported business types", "beneficial-owner disclosure", "application review", "partner banks"] },
+        { "label": "Mercury Support — Pricing plans", "url": "https://support.mercury.com/hc/en-us/articles/28769703794580-Mercury-pricing-plans", "checkedAt": "2026-08-24", "supports": ["no required monthly fee", "no minimum balance", "domestic ACH and wire pricing", "paid plans", "overages", "fintech and partner-bank distinction"] },
+        { "label": "Mercury — Business disclosures", "url": "https://mercury.com/legal/disclosures/business-banking", "checkedAt": "2026-08-24", "supports": ["not-a-bank disclosure", "partner banks", "FDIC-member status", "card FX fee", "product conditions"] },
+        { "label": "Mercury Support — FDIC insurance", "url": "https://support.mercury.com/hc/en-us/articles/28776140568212-Understanding-FDIC-insurance", "checkedAt": "2026-08-24", "supports": ["partner-bank deposits", "sweep networks", "conditional pass-through coverage", "coverage dashboard", "Treasury distinction"] }
+      ],
+      "limitations": ["Vendor documentation and disclosures were reviewed; ToolCompare did not verify account approval, bank placement, insurance eligibility, payment timing, service availability or the user's legal and tax position."]
+    }
   },
   {
     "slug": "wise",
     "name": "Wise",
     "category": "Finance Tools",
-    "shortDescription": "International transfers and multi-currency accounts.",
+    "shortDescription": "Cross-border payments and multi-currency business account services.",
     "websiteUrl": "https://wise.com",
     "incelendi": true,
     "basePrice": 0,
@@ -13153,48 +13182,106 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Wise moves money between currencies at the mid-market rate with an explicit fee, and provides multi-currency accounts with local details.",
+    "longDescription": "Wise Business supports holding, receiving, converting and sending supported currencies, with fees determined by business location, currencies, amount and payment method. Wise is not a bank in the cited UK service; customer funds are safeguarded under the rules of the serving Wise entity rather than treated as ordinary bank deposits.",
     "pros": [
-      "Transparent fees and real exchange rate",
-      "Local account details in several currencies",
-      "Much cheaper than bank transfers"
+      "Quoted conversion: Wise states that it uses the mid-market rate and shows the applicable fee.",
+      "Multi-currency operations: Supports account balances and international business payments in documented markets.",
+      "Business automation: Personal API tokens expose a limited endpoint set, while partners receive broader onboarding.",
+      "Multi-user controls: Business accounts support additional users with permission levels."
     ],
     "cons": [
-      "Not a full bank in most jurisdictions",
-      "Verification can be slow",
-      "Fees on some corridors are higher than others"
+      "Not a bank: Safeguarding rules and compensation or deposit-insurance treatment differ by entity and product.",
+      "Location-dependent access: Supported businesses, features, account details and fees vary by registration country.",
+      "Verification requirements: Wise may request business, ownership and registry documentation before use.",
+      "API boundary: Business personal tokens cover only selected endpoints and are not partner credentials."
     ],
-    "targetAudience": "Freelancers and businesses invoicing across borders.",
-    "verdict": "The default for cross-border payments. Keep a real bank relationship alongside it."
+    "keyFeatures": [
+      { "title": "Currency conversion", "description": "Converts supported currencies using a displayed exchange rate and transaction fee." },
+      { "title": "Receiving details", "description": "Offers local-style account details where available for the business and region." },
+      { "title": "International payouts", "description": "Sends supported business payments across countries and currencies." },
+      { "title": "Wise API", "description": "Provides limited business automation tokens and separately onboarded partner integrations." }
+    ],
+    "targetAudience": "Businesses and freelancers making cross-border payments who can verify regional availability, fees and safeguarding rules for their serving entity.",
+    "bestFor": [
+      "Businesses receiving or paying in multiple supported currencies",
+      "Teams that compare the displayed conversion fee before each transfer",
+      "Organizations using supported accounting connections or limited payout automation"
+    ],
+    "skipIf": [
+      "Your business type, country or intended activity is unsupported",
+      "You require a conventional bank deposit product with the same local insurance scheme",
+      "Your integration needs partner API endpoints without completing Wise onboarding"
+    ],
+    "verdict": "Choose Wise Business for supported cross-border workflows after checking the exact regional fee and entity terms; do not treat availability, protection or price as globally uniform.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Wise Help — Open a business account", "url": "https://wise.com/help/articles/2961337/how-do-i-open-a-wise-account-for-my-business", "checkedAt": "2026-08-24", "supports": ["multi-currency account", "business payments", "regional opening fees", "not-a-bank statement", "mid-market rate", "multi-user access", "API availability"] },
+        { "label": "Wise Help — Business fees", "url": "https://wise.com/help/articles/2977969/fees-for-using-wise-business", "checkedAt": "2026-08-24", "supports": ["country-dependent registration fee", "account-details fee", "regional pricing", "verification-cost variation"] },
+        { "label": "Wise Help — Safeguarding", "url": "https://wise.com/help/articles/2949821/how-wise-keeps-your-money-safe", "checkedAt": "2026-08-24", "supports": ["safeguarding model", "fund segregation", "not lending funds", "entity-specific handling", "banking distinction"] },
+        { "label": "Wise Platform — API guide", "url": "https://docs.wise.com/guides/developer", "checkedAt": "2026-08-24", "supports": ["partner onboarding", "personal token limitations", "OAuth", "sandbox", "rate limits", "idempotency"] }
+      ],
+      "limitations": ["Vendor help and developer documentation were reviewed; ToolCompare did not quote a universal price, execute transfers, verify a specific entity's protections, test FX execution or assess regulatory and tax suitability."]
+    }
   },
   {
     "slug": "bill-com",
     "name": "BILL",
     "category": "Finance Tools",
-    "shortDescription": "Accounts payable and receivable automation.",
+    "shortDescription": "Accounts payable, receivable and spend workflow products.",
     "websiteUrl": "https://www.bill.com",
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
+    "fiyatModeli": "kullanici-basina",
     "kriterler": {
       "api": true,
       "mobil": true,
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "BILL automates accounts payable and receivable: approval routing, payments and syncing to your accounting system.",
+    "longDescription": "BILL sells Accounts Payable and Accounts Receivable subscriptions for invoice intake, approvals, payments, collections and accounting synchronization, alongside a separately structured Spend & Expense product. AP/AR software is generally priced per user and some payment methods add transaction fees.",
     "pros": [
-      "Approval workflows replace email chains",
-      "Syncs with major accounting platforms",
-      "Handles both payables and receivables"
+      "Payables workflow: Centralizes bills, approval policies and supported payment methods.",
+      "Receivables workflow: Creates invoices, reminders and supported ACH or card collection flows.",
+      "Accounting connections: Plan-specific synchronization supports named accounting systems.",
+      "Product range: AP, AR, procurement and Spend & Expense can cover adjacent finance processes."
     ],
     "cons": [
-      "Per-user and per-transaction costs",
-      "Setup takes finance process decisions",
-      "More than a very small business needs"
+      "Layered pricing: AP/AR seats, payment methods and add-ons can each affect total cost.",
+      "Plan-gated integrations: Advanced accounting sync, API access, SSO and controls require higher tiers.",
+      "Credit qualification: Spend & Expense credit lines are subject to application and approval.",
+      "Process configuration: Approval roles, vendor data and accounting mappings require governance."
     ],
-    "targetAudience": "Finance teams processing enough invoices that approvals are a bottleneck.",
-    "verdict": "Pays off at invoice volume. A handful of bills a month does not justify it."
+    "keyFeatures": [
+      { "title": "Accounts payable", "description": "Captures bills, routes approvals and sends supported electronic or check payments." },
+      { "title": "Accounts receivable", "description": "Creates invoices, tracks status, sends reminders and accepts supported payments." },
+      { "title": "Accounting synchronization", "description": "Connects supported accounting platforms with depth determined by plan." },
+      { "title": "Developer API", "description": "Integrates eligible AP, AR and Spend & Expense workflows with external applications." }
+    ],
+    "targetAudience": "US finance and accounting teams whose payable, receivable or spend volume justifies configured approval workflows and layered software and payment fees.",
+    "bestFor": [
+      "Teams centralizing invoice intake, approvals and vendor payments",
+      "Businesses that need supported accounting-system synchronization",
+      "Organizations able to assign finance roles and reconcile transaction-level charges"
+    ],
+    "skipIf": [
+      "Your required integration, API or SSO capability is absent from the selected tier",
+      "Per-user subscriptions plus transaction fees exceed the value of workflow automation",
+      "Your team cannot establish approval, vendor and reconciliation controls before rollout"
+    ],
+    "verdict": "Evaluate BILL as a group of finance products rather than one flat-price app; model user roles, plan gates, payment mix and transaction volume together.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "BILL — Pricing and plans", "url": "https://www.bill.com/product/pricing", "checkedAt": "2026-08-24", "supports": ["AP and AR per-user plans", "payment fees", "Spend and Expense pricing", "credit approval", "accounting integrations", "SSO and API tier"] },
+        { "label": "BILL — Accounts Payable", "url": "https://www.bill.com/product/accounts-payable", "checkedAt": "2026-08-24", "supports": ["bill intake", "approval workflow", "payment methods", "vendor network", "accounting connections"] },
+        { "label": "BILL — API", "url": "https://www.bill.com/product/api", "checkedAt": "2026-08-24", "supports": ["AP API", "AR API", "Spend and Expense API", "automation and payment integration", "product scope"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not process payments, test accounting synchronization, validate credit eligibility, assess control effectiveness or calculate total cost for a specific finance team."]
+    }
   },
   {
     "slug": "workday",
