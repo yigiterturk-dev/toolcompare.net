@@ -15671,59 +15671,170 @@
   },
   {
     "slug": "october",
-    "name": "October",
+    "name": "October CMS",
     "category": "Developer Tools",
-    "shortDescription": "Tenth month in the Julian and Gregorian calendars.",
+    "shortDescription": "Self-hosted Laravel-based CMS with public source code and per-website production licensing.",
     "websiteUrl": "https://octobercms.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "October CMS is a self-hosted PHP CMS and application platform built on Laravel. Its source is public, but the platform is licensed under October's EULA rather than a standard permissive open-source license: each production website needs a project license, with development and staging environments for that same website covered. New accounts receive one complimentary license with one year of updates; an expired perpetual license keeps running but loses Update Gateway access. Hosting, database, deployment, backups and plugin governance remain the operator's responsibility.",
+    "pros": [
+      "Developer-oriented stack: Laravel, Composer, Artisan, Twig themes and plugins support code-first customization.",
+      "Self-hosted ownership: Application code, configuration, content database and deployment environment stay under the operator's control.",
+      "Editorial controls: Backend users, roles, permissions and multisite content support governed authoring workflows.",
+      "Flexible deployment: Composer/SSH and an official no-shell Deploy plugin cover different hosting environments."
+    ],
+    "cons": [
+      "Production licensing: Public source does not remove the per-website license and EULA requirements.",
+      "Updates depend on renewal: The site keeps running after expiry, but gateway updates and Marketplace access require an active license.",
+      "Self-hosted operations: PHP, database, web server, secrets, patches, backups and recovery are the customer's responsibility.",
+      "Extension risk: Marketplace or custom plugins add separate maintenance, compatibility, security and license surfaces."
+    ],
+    "keyFeatures": [
+      { "title": "Laravel foundation", "description": "Uses Laravel 12, Composer dependencies and Artisan commands for development and operations." },
+      { "title": "Themes and plugins", "description": "Separates presentation and extensible application behavior into project-controlled packages." },
+      { "title": "Roles and permissions", "description": "Controls backend access with users, custom roles, permission inheritance and super-user boundaries." },
+      { "title": "Multisite management", "description": "Manages domain, locale, theme and content variations from one installation." }
+    ],
+    "targetAudience": "PHP/Laravel teams wanting a customizable self-hosted CMS and willing to manage infrastructure and per-website licensing.",
+    "bestFor": [
+      "Custom content sites where Laravel-native development is an advantage",
+      "Agencies that can standardize deployment, updates and plugin review across projects",
+      "Multisite or multilingual builds after validating shared-installation and license boundaries"
+    ],
+    "skipIf": [
+      "A fully managed SaaS CMS with vendor-operated backups and upgrades is required",
+      "The organization requires an OSI-style permissive license without per-site production terms",
+      "The team cannot maintain PHP, Composer dependencies, plugins, database migrations and recovery"
+    ],
+    "verdict": "Choose October CMS for Laravel-aligned teams that value self-hosted customization; approve the EULA and one-license-per-website model, inventory plugins, and prove staged update, rollback and backup restoration before launch.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "October CMS — Pricing and licensing FAQ", "url": "https://octobercms.com/pricing", "checkedAt": "2026-08-24", "supports": ["complimentary first license", "commercial use", "single-license price", "annual update term", "unlimited subscription", "production license requirement", "perpetual use after expiry", "one website per license", "development and staging coverage"] },
+        { "label": "October CMS — Platform EULA", "url": "https://octobercms.com/help/license/eula", "checkedAt": "2026-08-24", "supports": ["licensed-software status", "single-website scope", "update entitlement", "perpetual expired-license use", "renewal and tax terms", "operator responsibility"] },
+        { "label": "October CMS Docs — Installation", "url": "https://docs.octobercms.com/4.x/setup/installation.html", "checkedAt": "2026-08-24", "supports": ["PHP and Composer requirements", "supported databases and web servers", "license-key requirement", "Composer installation", "database migration", "production configuration boundary"] },
+        { "label": "October CMS Docs — Deployment", "url": "https://docs.octobercms.com/4.x/setup/deployment.html", "checkedAt": "2026-08-24", "supports": ["Composer and SSH deployment", "auth.json license secret", "Deploy plugin alternative", "one-click updater", "repair path"] },
+        { "label": "October CMS Docs — Permissions", "url": "https://docs.octobercms.com/4.x/extend/backend/permissions.html", "checkedAt": "2026-08-24", "supports": ["backend permissions", "roles", "per-user overrides", "super-user boundary", "plugin permission registration"] },
+        { "label": "October CMS — Official repository", "url": "https://github.com/octobercms/october", "checkedAt": "2026-08-24", "supports": ["public source repository", "self-hosted CMS", "Laravel foundation", "licensed-software notice", "active v4 releases"] }
+      ],
+      "limitations": ["Official October CMS pricing, EULA, documentation and repository were reviewed; ToolCompare did not install the platform, obtain legal advice, activate or renew a license, inspect all source-license dependencies, create content, test multisite, audit Marketplace plugins, benchmark hosting, perform an upgrade, or restore a database and file backup. Localized prices and entitlements may change after the review date."]
+    }
   },
   {
     "slug": "backblaze",
     "name": "Backblaze",
     "category": "Hosting",
-    "shortDescription": "Backup and cloud hosting company.",
+    "shortDescription": "Cloud provider offering B2 object storage and a separate endpoint-focused Computer Backup service.",
     "websiteUrl": "https://www.backblaze.com",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Backblaze provides very cheap object storage and computer backup, with S3-compatible APIs.",
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Backblaze sells distinct products, most notably B2 Cloud Storage and Computer Backup. B2 is usage-billed always-hot object storage with Native and S3-compatible APIs, browser access and command-line tooling. Current public pricing starts with 10 GB free, then meters byte-hour storage, egress beyond an allowance and selected Class D transactions. Encryption, Object Lock, version history and replication are capabilities to configure—not substitutes for independent access controls and tested recovery.",
     "pros": [
-      "Storage price well below the large clouds",
-      "S3-compatible, so tooling works",
-      "No egress fee to several CDN partners"
+      "Low-friction object storage: Native and S3-compatible APIs work with many existing backup and application tools.",
+      "Published usage model: Storage, egress allowance, overage and transaction classes are documented publicly.",
+      "Data-protection controls: Optional server-side encryption, Object Lock, version history and bucket replication support resilient designs.",
+      "Egress options: Downloads are free up to three times average monthly storage and through named CDN/compute partners."
     ],
     "cons": [
-      "Fewer regions than AWS",
-      "Fewer surrounding services",
-      "Support is lighter"
+      "Not all S3 behavior is identical: Compatibility must be checked against the exact SDK, operation and application workflow.",
+      "Encryption is a configuration decision: Official documentation says B2 data is not encrypted by default and offers optional SSE.",
+      "Recovery cost can vary: Large restores may exceed free egress and generate transaction, network and operational costs.",
+      "Product confusion risk: Computer Backup retention and device rules do not describe generic B2 object storage."
     ],
-    "targetAudience": "Anyone storing large volumes of data or backups.",
-    "verdict": "The obvious choice when storage cost dominates. Pair it with a CDN to avoid egress charges."
+    "keyFeatures": [
+      { "title": "S3-compatible API", "description": "Supports common S3 operations alongside Backblaze's Native API." },
+      { "title": "Usage-based storage", "description": "Bills stored bytes over time with separate egress and selected transaction rules." },
+      { "title": "Object immutability", "description": "Object Lock and Legal Hold can prevent deletion or change for governed retention periods." },
+      { "title": "Encryption and replication", "description": "Offers managed-key or customer-key SSE and configurable bucket replication." }
+    ],
+    "targetAudience": "Teams needing economical object storage for backup, media, archive or application data with explicit security and restore procedures.",
+    "bestFor": [
+      "Backup repositories whose software has verified B2 or S3-compatible support",
+      "Media and application objects with modeled storage, download and transaction patterns",
+      "Immutable off-site copies configured with restricted keys, Object Lock and restore drills"
+    ],
+    "skipIf": [
+      "The workload depends on an untested Amazon S3 feature or exact behavioral parity",
+      "Required data residency, region pairing or recovery throughput is not available and verified",
+      "No owner exists for key rotation, retention, lifecycle, replication and restore testing"
+    ],
+    "verdict": "Backblaze B2 can be cost-effective object storage, but compare the exact workload rather than headline TB pricing; test API compatibility, calculate full restore cost and time, enable appropriate encryption/immutability, and regularly restore independent copies.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Backblaze — B2 pricing", "url": "https://www.backblaze.com/cloud-storage/pricing", "checkedAt": "2026-08-24", "supports": ["current storage starting price", "first 10 GB free", "byte-hour billing", "three-times-storage egress allowance", "egress overage", "partner egress", "pay-as-you-go and Reserve distinction"] },
+        { "label": "Backblaze — Transaction pricing", "url": "https://www.backblaze.com/cloud-storage/transaction-pricing", "checkedAt": "2026-08-24", "supports": ["Native and S3 operation mapping", "free upload", "Class A B and C pricing", "Class D allowance and charge", "egress rule"] },
+        { "label": "Backblaze Docs — B2 overview", "url": "https://www.backblaze.com/docs/cloud-storage-about-backblaze-b2-cloud-storage", "checkedAt": "2026-08-24", "supports": ["B2 and Computer Backup distinction", "Native and S3-compatible APIs", "application keys", "browser API and CLI access", "generic object storage use", "optional encryption boundary"] },
+        { "label": "Backblaze — B2 security", "url": "https://www.backblaze.com/cloud-storage/security", "checkedAt": "2026-08-24", "supports": ["SSE-B2 and SSE-C", "AES-256 at rest", "Object Lock and Legal Hold", "bucket replication", "CORS"] },
+        { "label": "Backblaze Docs — Server-side encryption", "url": "https://www.backblaze.com/docs/cloud-storage-server-side-encryption", "checkedAt": "2026-08-24", "supports": ["optional SSE", "Native and S3 API access", "no separate encryption fee", "application-key requirement", "normal storage charges"] }
+      ],
+      "limitations": ["Official Backblaze product, pricing, transaction, security and documentation pages were reviewed; ToolCompare did not create an account, upload or restore data, benchmark throughput, inspect all S3 differences, verify regional availability or residency, test key compromise, Object Lock, replication, lifecycle and versioning, calculate taxes, or obtain Reserve and support quotes. Prices and partner arrangements may change after the review date."]
+    }
   },
   {
     "slug": "dreamhost",
     "name": "DreamHost",
     "category": "Hosting",
-    "shortDescription": "Web hosting provider and domain name registrar.",
+    "shortDescription": "Shared web hosting provider with tiered site, storage, visit, database, email and inode limits.",
     "websiteUrl": "https://www.dreamhost.com/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "DreamHost offers shared, VPS and managed WordPress hosting with a long track record and clear pricing.",
+    "basePrice": 1.99,
+    "isFlat": false,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "DreamHost offers several hosting families; this record focuses on current shared Web Hosting Launch, Growth and Scale plans. They combine managed shared infrastructure, NVMe storage, SSL, MySQL, mailboxes, backups and a proprietary control panel. Headline monthly equivalents require prepayment and renew at different rates, while sites, visits, storage, inodes, mailboxes and databases are tier-limited. “Unmetered” bandwidth remains subject to acceptable-use and shared-resource policies.",
     "pros": [
-      "Honest pricing without aggressive renewal jumps",
-      "Unlimited traffic on many plans",
-      "Long-standing reputation"
+      "Bundled site basics: Shared plans include SSL, storage, MySQL, traffic tools and automated backups.",
+      "Published renewal rates: Current plan cards show both promotional term prices and auto-renewal prices.",
+      "Term flexibility: Monthly, annual and longer prepaid terms are available, with different effective rates.",
+      "Defined tier capacity: Site, visit, storage, inode, subdomain, mailbox and database ceilings aid initial sizing."
     ],
     "cons": [
-      "Performance trails premium managed hosts",
-      "Control panel is proprietary",
-      "Support can be slow at peak"
+      "Large renewal delta: The cheapest advertised monthly equivalent requires a four-year term and renews at a higher rate.",
+      "Shared-resource constraints: CPU, RAM, disk I/O and high-impact scripts remain governed despite unmetered bandwidth.",
+      "Backups are not a guarantee: DreamHost says file snapshots are generally kept about two weeks and recommends independent copies; database restore is separate.",
+      "Email and domain promotions expire: Included mailboxes and domain registration are time-limited offers with later charges."
     ],
-    "targetAudience": "Small sites that want dependable hosting without renewal surprises.",
-    "verdict": "A safe, unexciting choice, which is what most small sites need."
+    "keyFeatures": [
+      { "title": "Shared hosting tiers", "description": "Launch, Growth and Scale allocate increasing sites, visits, storage, inodes and databases." },
+      { "title": "Managed essentials", "description": "Provides SSL, panel-based administration, automated backups and traffic visibility." },
+      { "title": "Web and email hosting", "description": "Combines website hosting with plan-limited mailboxes and MySQL databases." },
+      { "title": "Promotional term pricing", "description": "Discounts the initial prepaid term and publishes a separate renewal rate." }
+    ],
+    "targetAudience": "Individuals and small organizations whose conventional websites fit shared-hosting resource and policy limits.",
+    "bestFor": [
+      "Small brochure, blog and business sites with predictable PHP/MySQL needs",
+      "Multi-site portfolios that fit the chosen tier's explicit site and inode limits",
+      "Buyers willing to price the full initial term, renewal, domain and email together"
+    ],
+    "skipIf": [
+      "The application needs dedicated compute, custom daemons, guaranteed resource isolation or root access",
+      "The account would primarily store backups, archives or distributed files",
+      "Independent file and database backups plus a tested migration path are not maintained"
+    ],
+    "verdict": "DreamHost shared hosting is reasonable for conventional small sites, but buy against the renewal rate and real limits—not the teaser price or 'unmetered' label; keep independent file/database backups and move to VPS or managed hosting before shared-resource contention becomes critical.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "DreamHost — Web Hosting plans", "url": "https://www.dreamhost.com/hosting/web-hosting/", "checkedAt": "2026-08-24", "supports": ["current promotional and renewal prices", "one-year and four-year terms", "site visit storage and mailbox limits", "unmetered bandwidth", "backups SSL and domain inclusions", "money-back period", "uptime-credit positioning"] },
+        { "label": "DreamHost KB — Web Hosting overview", "url": "https://help.dreamhost.com/hc/en-us/articles/41728738370068-Web-Hosting-overview", "checkedAt": "2026-08-24", "supports": ["shared-server model", "Launch Growth and Scale tiers", "storage and inode limits", "subdomain mailbox and database limits", "billing-term options"] },
+        { "label": "DreamHost KB — Website restore", "url": "https://help.dreamhost.com/hc/en-us/articles/215768257-How-do-I-restore-my-website", "checkedAt": "2026-08-24", "supports": ["panel file restore", "approximately two-week non-guaranteed retention", "files-only limitation", "database exclusion", "independent local-backup recommendation", "dedicated-server boundary"] },
+        { "label": "DreamHost — Acceptable Use Policy", "url": "https://www.dreamhost.com/legal/acceptable-use-policy/", "checkedAt": "2026-08-24", "supports": ["website-hosting purpose", "backup and archive prohibition", "shared-resource limits", "CPU-intensive script restriction", "traffic-capacity boundary", "suspension and termination risk"] },
+        { "label": "DreamHost — Unlimited Policy", "url": "https://www.dreamhost.com/legal/unlimited-policy/", "checkedAt": "2026-08-24", "supports": ["unmetered-policy meaning", "CPU RAM and disk-I/O constraints", "VPS migration possibility", "database and email boundaries", "prohibited storage and distribution uses"] },
+        { "label": "DreamHost — Pricing", "url": "https://www.dreamhost.com/pricing/", "checkedAt": "2026-08-24", "supports": ["current plan catalog", "first-term prices", "renewal disclosure", "included feature summaries", "domain and email promotional periods"] }
+      ],
+      "limitations": ["Official DreamHost plan, knowledge-base and policy pages were reviewed; ToolCompare did not purchase hosting, inspect checkout tax or every billing term, deploy or migrate a site, benchmark shared performance, contact support, measure uptime, validate credits, restore files or databases, test email, scan malware, or compare VPS and DreamPress. Prices, limits and promotions may change after the review date."]
+    }
   },
   {
     "slug": "heroku",
