@@ -28,7 +28,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '2rem' }}>
           <div style={{ background: '#0a0a0a', border: '1px solid #1a1a1a', padding: '3rem', borderRadius: '24px' }}>
             <Mail size={32} style={{ color: 'white', marginBottom: '1.5rem' }} />
             <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Email Us</h2>

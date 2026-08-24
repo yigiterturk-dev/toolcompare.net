@@ -45,7 +45,7 @@ export default function AIWizard({ tools }: { tools: any[] }) {
     return (
       <div style={{ background: 'rgba(99, 102, 241, 0.05)', border: '1px solid var(--brand-primary)', borderRadius: '40px', padding: '4rem', textAlign: 'center', animation: 'fadeIn 0.5s ease' }}>
         <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '2rem' }}>Our AI Recommendations <Sparkles color="var(--brand-primary)" style={{ display: 'inline' }} /></h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '2rem' }}>
           {results.map((t, i) => (
             <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2rem', borderRadius: '32px', border: '1px solid var(--border-color)', position: 'relative', overflow: 'hidden' }}>
               {i === 0 && <div style={{ position: 'absolute', top: '10px', right: '10px', background: 'var(--brand-primary)', color: 'white', padding: '4px 12px', borderRadius: '20px', fontSize: '0.7rem', fontWeight: 900 }}>BEST MATCH</div>}

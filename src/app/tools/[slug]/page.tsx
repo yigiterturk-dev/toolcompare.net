@@ -203,7 +203,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 <h2 style={{ fontSize: '2rem', marginBottom: '2rem', letterSpacing: '-1px' }}>
                   Best Alternatives to <span style={{ color: 'var(--brand-primary)' }}>{tool.name}</span>
                 </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(250px, 100%), 1fr))', gap: '1.5rem' }}>
                   {(toolsData as any[])
                     .filter(t => t.category === tool.category && t.slug !== tool.slug)
                     .sort(() => 0.5 - Math.random())

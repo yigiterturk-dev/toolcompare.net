@@ -57,7 +57,7 @@ export default function CategoriesPage() {
           Software <span style={{ color: '#444' }}>Categories</span>
         </h1>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))', gap: '2rem', marginBottom: '5rem' }}>
           {kategoriListesi.map((kat) => {
             const cat = kat.ad;
             const IconComponent = categoryIcons[cat] || Globe;

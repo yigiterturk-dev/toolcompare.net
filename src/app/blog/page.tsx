@@ -25,7 +25,7 @@ export default function BlogPage() {
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>Expert guides, trends, and strategies for the modern software era.</p>
         </header>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(350px, 100%), 1fr))', gap: '3rem' }}>
           {posts.map(post => (
             <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }} className="hover-scale">
               <article style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', overflow: 'hidden' }}>

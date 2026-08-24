@@ -195,7 +195,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
            <AIWizard tools={tools} />
         </section>
 
-        <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+        <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(350px, 100%), 1fr))', gap: '2rem', marginBottom: '3rem' }}>
           {loading ? (
             <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '5rem' }}>
               <Loader2 className="animate-spin" size={48} style={{ color: 'var(--brand-primary)', margin: '0 auto' }} />
@@ -293,10 +293,11 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                       COMPARE
                     </div>
                     
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', marginBottom: '2rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(0.75rem, 4vw, 1.5rem)', marginBottom: '2rem' }}>
                       <div style={{ 
-                        width: '72px', 
-                        height: '72px', 
+                        width: 'clamp(52px, 16vw, 72px)', 
+                        height: 'clamp(52px, 16vw, 72px)', 
+                        flex: 'none', 
                         borderRadius: '20px', 
                         display: 'flex', 
                         justifyContent: 'center', 
@@ -306,8 +307,8 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                       }}>
                         <Icon size={36} color="#fff" />
                       </div>
-                      <div>
-                        <h3 style={{ fontSize: '1.6rem', fontWeight: 900, marginBottom: '0.4rem', paddingRight: '7rem', letterSpacing: '-0.5px' }}>
+                      <div style={{ minWidth: 0, flex: '1 1 0' }}>
+                        <h3 style={{ fontSize: 'clamp(1.25rem, 5.5vw, 1.6rem)', fontWeight: 900, marginBottom: '0.4rem', paddingRight: 'clamp(3.5rem, 20vw, 7rem)', letterSpacing: '-0.5px', overflowWrap: 'break-word' }}>
                           <Link href={`/tools/${tool.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>{tool.name}</Link>
                         </h3>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
@@ -460,9 +461,9 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                 type="email" 
                 aria-label="Work email" placeholder="Enter your work email" 
                 required
-                style={{ flexGrow: 1, background: 'transparent', border: 'none', color: 'white', padding: '0 1.5rem', outline: 'none', fontSize: '1rem' }}
+                style={{ flexGrow: 1, minWidth: 0, background: 'transparent', border: 'none', color: 'white', padding: '0 clamp(0.9rem, 4vw, 1.5rem)', outline: 'none', fontSize: '1rem' }}
               />
-              <button type="submit" style={{ background: 'white', color: 'black', border: 'none', padding: '1rem 2rem', borderRadius: '100px', fontWeight: 800, cursor: 'pointer', transition: 'transform 0.2s' }} className="hover-scale">
+              <button type="submit" style={{ background: 'white', color: 'black', border: 'none', padding: '1rem clamp(1.1rem, 5vw, 2rem)', borderRadius: '100px', fontWeight: 800, cursor: 'pointer', transition: 'transform 0.2s', flexShrink: 0, whiteSpace: 'nowrap' }} className="hover-scale">
                 Subscribe
               </button>
             </form>

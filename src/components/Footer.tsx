@@ -21,7 +21,7 @@ export default function Footer() {
 
   return (
     <footer style={{ background: '#0a0a0a', borderTop: '1px solid #1a1a1a', padding: '5rem 5% 2rem', marginTop: '5rem' }}>
-      <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', marginBottom: '4rem' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(250px, 100%), 1fr))', gap: '4rem', marginBottom: '4rem' }}>
         
         <div>
           <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'white', display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
@@ -65,7 +65,7 @@ export default function Footer() {
               aria-label="Email address for newsletter" placeholder="Email address" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ flex: 1, background: '#111', border: '1px solid #222', padding: '0.8rem', borderRadius: '10px', color: 'white', outline: 'none' }} 
+              style={{ flex: '1 1 0', minWidth: 0, background: '#111', border: '1px solid #222', padding: '0.8rem', borderRadius: '10px', color: 'white', outline: 'none' }} 
             />
             <button 
               onClick={handleSubscribe}
