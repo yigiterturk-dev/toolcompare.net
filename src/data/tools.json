@@ -14671,31 +14671,170 @@
     "slug": "movable-type",
     "name": "Movable Type",
     "category": "Developer Tools",
-    "shortDescription": "Blogging software.",
+    "shortDescription": "Licensed, self-hosted publishing CMS with static and dynamic publishing workflows.",
     "websiteUrl": "https://movabletype.org/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Movable Type is Six Apart's licensed, self-hosted content-management and publishing system. The official release history shows an active version 9 line in 2026, while the former GPL-based Movable Type Open Source program ended with the move to version 6. Deployments depend on a supported product license, server-side Perl and database components, publishing configuration, plugins and disciplined lifecycle upgrades.",
+    "pros": [
+      "Active release line: Official release notes list multiple Movable Type 9 releases during 2026.",
+      "Defined lifecycle: Six Apart publishes maintenance, support and end-of-life milestones for version planning.",
+      "Publishing controls: The product supports managed entries, pages, assets, templates and multiple publishing approaches.",
+      "Established upgrade guidance: Official documentation covers backups, parallel upgrade strategies and plugin compatibility checks."
+    ],
+    "cons": [
+      "Commercial licensing: Current Movable Type is licensed software; the historical GPL MTOS program is not the current product model.",
+      "Self-hosting complexity: Operators manage the web server, Perl modules, database, CGI or application runtime and filesystem permissions.",
+      "Plugin upgrade risk: Critical plugins must be reinstalled and compatibility-tested against each target version.",
+      "Regional product differences: Cloud and some release options are described as Japan-only, so availability and commercial terms need direct confirmation."
+    ],
+    "keyFeatures": [
+      { "title": "Structured publishing", "description": "Manages sites, entries, pages, assets and reusable templates from a central application." },
+      { "title": "Static and dynamic output", "description": "Supports publishing configurations that generate files or render selected content dynamically." },
+      { "title": "Plugin system", "description": "Extends publishing and administration, with compatibility owned by the operator and plugin vendor." },
+      { "title": "Product lifecycle", "description": "Uses documented release, maintenance, support and end-of-life phases." }
+    ],
+    "targetAudience": "Organizations already invested in Movable Type or evaluating a licensed, self-hosted publishing system with an operations team.",
+    "bestFor": [
+      "Existing supported Movable Type estates that need controlled upgrades",
+      "Publishing teams whose templates and static-output model fit the platform",
+      "Organizations able to verify licensing, regional availability and server prerequisites"
+    ],
+    "skipIf": [
+      "You require a current GPL or otherwise open-source edition",
+      "You need vendor-operated global SaaS availability without confirming regional terms",
+      "Your critical plugins cannot be verified on a supported release"
+    ],
+    "verdict": "Consider Movable Type primarily where its publishing model or an existing estate justifies the licensed, self-hosted stack; confirm commercial terms and region, then test templates, plugins, upgrades and rollback on the exact supported release.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Movable Type — Release history", "url": "https://movabletype.org/documentation/appendices/release-notes/", "checkedAt": "2026-08-24", "supports": ["active version 9 line", "2026 release dates", "historical version record"] },
+        { "label": "Movable Type — Product lifecycle policy", "url": "https://movabletype.org/product-life-cycle-policy.html", "checkedAt": "2026-08-24", "supports": ["version 9 lifecycle", "maintenance and security periods", "EOL definition", "license requirement", "Japan-only cloud release note", "upgrade recommendation"] },
+        { "label": "Movable Type — License change on version 6", "url": "https://movabletype.org/news/2013/07/license_change_on_movable_type_6.html", "checkedAt": "2026-08-24", "supports": ["end of new MTOS GPL registration", "historical GPL validity", "current open-source boundary"] },
+        { "label": "Movable Type Docs — Documentation index", "url": "https://movabletype.org/documentation/", "checkedAt": "2026-08-24", "supports": ["administration", "authoring", "templates", "plugins", "publishing options", "installation and upgrade guidance"] },
+        { "label": "Movable Type Docs — Installation", "url": "https://movabletype.org/documentation/installation/", "checkedAt": "2026-08-24", "supports": ["self-hosting", "server access", "database requirement", "CGI and filesystem layout", "multiple instances"] },
+        { "label": "Movable Type Docs — Upgrade guide", "url": "https://movabletype.org/documentation/installation/upgrade-movable-type.html", "checkedAt": "2026-08-24", "supports": ["pre-upgrade backup", "parallel rollback option", "database schema update", "Perl module checks", "plugin reinstall and compatibility risk"] }
+      ],
+      "limitations": ["Official Six Apart product pages and documentation were reviewed; ToolCompare did not obtain a commercial quote, confirm availability outside Japan, install Movable Type 9, validate current system requirements, test publishing modes or plugins, perform an upgrade, audit security controls or restore a backup. The zero numeric base price is not a claim that a current license is free."]
+    }
   },
   {
     "slug": "mediawiki",
     "name": "MediaWiki",
     "category": "Developer Tools",
-    "shortDescription": "Free and open-source wiki software.",
+    "shortDescription": "Open-source, database-backed wiki platform with revision history, permissions, extensions and APIs.",
     "websiteUrl": "https://www.mediawiki.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "MediaWiki is GPL-licensed wiki software built for collaborative, revisioned content and backed by PHP, a web server and a supported database. Its API and extension ecosystem make it highly adaptable, but each self-hosted installation needs lifecycle-aware upgrades, extension and skin compatibility checks, access-policy design, security monitoring and backups covering both the database and filesystem.",
+    "pros": [
+      "Collaborative history: Wiki pages retain revisions and support linked, continuously edited knowledge.",
+      "Automation interfaces: MediaWiki exposes action and REST-style APIs for reading and changing supported resources.",
+      "Extension ecosystem: Administrators can add features and skins beyond the core platform.",
+      "Published lifecycle guidance: Production operators can choose supported stable, legacy or long-term-support lines."
+    ],
+    "cons": [
+      "Operations required: PHP, the database, web server, job processing, uploads, caching and upgrades remain local responsibilities.",
+      "Extension risk: Third-party extensions can be unmaintained, vulnerable, mutually incompatible or tied to a MediaWiki version.",
+      "Multi-part backups: Recoverable copies must include database content plus configuration, extensions, skins and uploaded files.",
+      "Governance effort: Permissions, namespaces, templates and editing conventions need deliberate design as a wiki grows."
+    ],
+    "keyFeatures": [
+      { "title": "Revisioned wiki pages", "description": "Supports collaborative editing with page history, links, namespaces and discussion-oriented workflows." },
+      { "title": "APIs", "description": "Provides programmatic interfaces whose available modules and permissions depend on the installation." },
+      { "title": "Extensions and skins", "description": "Adds functionality and presentation through version-sensitive packages." },
+      { "title": "Database-backed content", "description": "Stores pages, users, metadata and search-related records in a supported database." }
+    ],
+    "targetAudience": "Communities and organizations that need a configurable wiki and can operate a PHP/database application over its full lifecycle.",
+    "bestFor": [
+      "Large, linked knowledge collections with transparent revision history",
+      "Community or organizational wikis requiring extensibility and API access",
+      "Teams able to govern templates, permissions, extensions, upgrades and backups"
+    ],
+    "skipIf": [
+      "You need a managed knowledge-base SaaS with no platform operations",
+      "Your required extension is unmaintained or incompatible with a supported release",
+      "You cannot back up and restore both the database and instance-specific files"
+    ],
+    "verdict": "Choose MediaWiki when wiki-scale collaboration and extensibility outweigh operational complexity; standardize on a supported release and prove permissions, extensions, upgrades and full recovery before production use.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "MediaWiki Manual — Installation requirements", "url": "https://www.mediawiki.org/wiki/Manual:Installation_requirements/en", "checkedAt": "2026-08-24", "supports": ["web server PHP and database requirements", "supported databases", "command-line maintenance", "optional caching and image dependencies", "baseline hardware caveat"] },
+        { "label": "MediaWiki Manual — Installing MediaWiki", "url": "https://www.mediawiki.org/wiki/Manual:Installing_MediaWiki/en", "checkedAt": "2026-08-24", "supports": ["production lifecycle guidance", "supported release requirement", "old-version security and data risk", "installation process", "file permissions"] },
+        { "label": "MediaWiki Manual — Extensions", "url": "https://www.mediawiki.org/wiki/Manual:Extensions", "checkedAt": "2026-08-24", "supports": ["extension architecture", "third-party maintenance risk", "security and compatibility risk", "upgrade process", "database backup guidance"] },
+        { "label": "MediaWiki Manual — Backing up a wiki", "url": "https://www.mediawiki.org/wiki/Manual:Backing_up_a_wiki/en", "checkedAt": "2026-08-24", "supports": ["database and filesystem backup scope", "read-only consistency option", "database dump", "uploads configuration extensions and skins"] },
+        { "label": "MediaWiki — API portal", "url": "https://www.mediawiki.org/wiki/API:Main_page", "checkedAt": "2026-08-24", "supports": ["Action API", "REST API", "authentication and authorization", "read and write operations"] },
+        { "label": "MediaWiki — Security", "url": "https://www.mediawiki.org/wiki/Security", "checkedAt": "2026-08-24", "supports": ["security release notifications", "administrator hardening guidance", "vulnerability reporting"] },
+        { "label": "MediaWiki source — COPYING", "url": "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/HEAD/COPYING", "checkedAt": "2026-08-24", "supports": ["GPL license", "open-source status"] }
+      ],
+      "limitations": ["Official MediaWiki project documentation and source licensing were reviewed; ToolCompare did not install MediaWiki, test an API or authentication flow, audit permissions, extensions or skins, benchmark scale or search, perform an upgrade, penetration-test an instance or restore a backup."]
+    }
   },
   {
     "slug": "netlify-cms",
     "name": "Netlify CMS",
     "category": "Developer Tools",
-    "shortDescription": "Open-source content management interface for static sites, now Decap CMS.",
-    "websiteUrl": "https://www.netlifycms.org",
-    "incelendi": false,
+    "shortDescription": "Former name of Decap CMS, an open-source Git-based editing interface for static sites.",
+    "websiteUrl": "https://decapcms.org/",
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Netlify CMS was renamed Decap CMS in February 2023. The maintained project is an MIT-licensed React single-page application placed in a site's admin path; it presents an editing UI over content stored in Git and communicates with supported Git hosts through their APIs. Authentication, repository permissions, content schema, media handling, previews and build/deploy behavior still have to be configured and secured as one delivery chain.",
+    "pros": [
+      "Git-native content: Editorial changes are stored alongside site content with repository history and review options.",
+      "Static-generator flexibility: The project is designed to work across static-site generators rather than require Netlify hosting.",
+      "Editorial workflow: Drafts can map to branches and pull or merge requests before publication.",
+      "Extensible editor: Teams can define collections and fields and add custom previews, widgets and editor plugins."
+    ],
+    "cons": [
+      "Renamed product: Current documentation, packages and support use Decap CMS, so the Netlify CMS name is legacy.",
+      "Authentication setup: Direct Git backends can require an OAuth proxy, while Git Gateway introduces an additional identity and gateway dependency.",
+      "Repository coupling: Content editing depends on Git-host APIs, permissions, branches and rate or service availability.",
+      "No full delivery platform: Site builds, hosting, backups, asset strategy and deployment controls come from separate services and configuration."
+    ],
+    "keyFeatures": [
+      { "title": "Git-backed editor", "description": "Reads and writes configured content files through a supported repository backend." },
+      { "title": "Content collections", "description": "Defines file or folder content models and editor fields in YAML configuration." },
+      { "title": "Editorial workflow", "description": "Represents drafts and approvals using branches plus pull or merge requests." },
+      { "title": "Custom UI extensions", "description": "Supports custom previews, widgets and editor plugins for project-specific authoring." }
+    ],
+    "targetAudience": "Static-site teams that want a browser editor while retaining Git as the content source of truth.",
+    "bestFor": [
+      "Markdown or structured-file sites already built and deployed from Git",
+      "Small editorial teams whose review process maps cleanly to branches and pull requests",
+      "Projects able to operate OAuth or Git Gateway and protect repository permissions"
+    ],
+    "skipIf": [
+      "You need a database-first CMS or complex relational content operations",
+      "Editors must be independent of Git-host and build-pipeline availability",
+      "You cannot securely operate the selected authentication and repository-access path"
+    ],
+    "verdict": "Evaluate this product under its current Decap CMS identity. Choose it when Git-backed content is intentional, then test authentication, least-privilege repository access, editorial branches, media, previews and deployment failure recovery end to end.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Decap CMS Docs — Overview", "url": "https://decapcms.org/docs/intro/", "checkedAt": "2026-08-24", "supports": ["Netlify CMS rename", "open-source React application", "Git workflow", "static-site-generator support", "GitHub GitLab and Bitbucket APIs", "content storage", "custom extensions"] },
+        { "label": "Decap CMS — Introducing Decap", "url": "https://decapcms.org/blog/introducing-decap/", "checkedAt": "2026-08-24", "supports": ["February 2023 rebrand", "maintainer transition", "continued support intent", "Git-based CMS identity"] },
+        { "label": "Decap CMS Docs — Backend overview", "url": "https://decapcms.org/docs/backends-overview/", "checkedAt": "2026-08-24", "supports": ["Git-host API dependency", "repository and branch configuration", "OAuth proxy requirement", "backend API stability caveat"] },
+        { "label": "Decap CMS Docs — Git Gateway", "url": "https://decapcms.org/docs/git-gateway-backend/", "checkedAt": "2026-08-24", "supports": ["Git Gateway behavior", "Netlify Identity option", "self-hosted gateway option", "JWT and PKCE configuration", "repository permission reconnection"] },
+        { "label": "Decap CMS Docs — Editorial workflows", "url": "https://decapcms.org/docs/editorial-workflows/", "checkedAt": "2026-08-24", "supports": ["default direct commit", "draft review and approval mode", "branch and pull-request mapping", "GitHub GitLab and Bitbucket support", "squash merge option"] },
+        { "label": "Decap CMS — Source repository", "url": "https://github.com/decaporg/decap-cms", "checkedAt": "2026-08-24", "supports": ["maintained repository", "single-page admin application", "YAML content model", "release history", "MIT license", "open-source status"] }
+      ],
+      "limitations": ["Official Decap CMS documentation, project announcement and source repository were reviewed; ToolCompare did not install the CMS, test a Git host or OAuth proxy, audit Git Gateway, validate repository permissions, run an editorial workflow, test media or previews, inspect accessibility, or exercise build and deployment recovery."]
+    }
   },
   {
     "slug": "bluefish",
