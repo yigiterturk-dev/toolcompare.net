@@ -8821,7 +8821,7 @@
     "slug": "mistral",
     "name": "Mistral AI",
     "category": "AI Tools",
-    "shortDescription": "Open-weight and hosted language models.",
+    "shortDescription": "Mistral's agent, developer platform and hosted model API.",
     "websiteUrl": "https://mistral.ai",
     "incelendi": true,
     "fiyatModeli": "kullanima-gore",
@@ -8833,25 +8833,80 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Mistral AI publishes open-weight models and runs a hosted API, with European hosting and competitive pricing.",
+    "longDescription": "Mistral AI offers Vibe for productivity and coding, Studio for API development, and Admin for organization controls. Studio exposes text, audio, OCR, agent and document workflows through its console, SDKs and API. The model catalog mixes open-license and commercial models, so deployment rights and pricing must be checked model by model.",
     "pros": [
-      "Open weights you can run yourself",
-      "European hosting for data residency",
-      "Good performance for the price"
+      "Multiple product surfaces: Vibe, Studio and Admin cover end users, developers and organization owners.",
+      "API breadth: Studio documents text, audio, OCR, agents, document intelligence and RAG capabilities.",
+      "Free API starting mode: Studio can be activated in Free mode without a credit card.",
+      "Mixed model options: The catalog includes models under open licenses alongside commercial offerings."
     ],
     "cons": [
-      "Smaller ecosystem than the largest providers",
-      "Frontier capability trails the leaders",
-      "Documentation is lighter"
+      "License variation: Not every Mistral-hosted model is open weight or covered by the same license.",
+      "Metered API cost: Hosted inference is priced by model and token or task unit.",
+      "Product complexity: Vibe, Studio and Admin serve different workflows and are not interchangeable.",
+      "Verification required: Vendor documentation does not establish comparative model quality."
     ],
-    "targetAudience": "Teams that want capable models with European data handling or self-hosting.",
-    "verdict": "A strong choice when data residency or open weights matter."
+    "keyFeatures": [
+      {
+        "title": "Vibe",
+        "description": "A unified agent with chat, productivity and coding modes across web, mobile, terminal and editor experiences."
+      },
+      {
+        "title": "Studio and API",
+        "description": "A developer console, Playground, API keys, SDKs and APIs for building AI applications."
+      },
+      {
+        "title": "Document and media APIs",
+        "description": "Studio documents OCR, audio, document intelligence, embeddings and RAG capabilities."
+      },
+      {
+        "title": "Admin controls",
+        "description": "Organization management for billing, SSO, workspaces, roles and access policies."
+      }
+    ],
+    "targetAudience": "Developers and organizations evaluating Mistral's hosted models, APIs or agent products with model-specific licensing and pricing review.",
+    "bestFor": [
+      "Teams that want one vendor surface for text, audio, OCR and agent APIs",
+      "Developers who want to prototype in a Playground before using an SDK",
+      "Organizations willing to evaluate licensing and price per selected model"
+    ],
+    "skipIf": [
+      "You assume every model in the catalog has open weights or the same license",
+      "You need a fixed subscription instead of model- and usage-dependent API billing",
+      "You need independently benchmarked proof that a Mistral model wins your workload"
+    ],
+    "verdict": "Choose Mistral when its API breadth, agent surfaces or specific model licenses fit the workload; verify the exact model's terms, region and metered price before building around it.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "Mistral Docs — Platform overview",
+          "url": "https://docs.mistral.ai/getting-started/platform-overview",
+          "checkedAt": "2026-08-24",
+          "supports": ["Vibe", "Studio", "Admin", "web and mobile", "coding workflows", "organization controls"]
+        },
+        {
+          "label": "Mistral Docs — Studio",
+          "url": "https://docs.mistral.ai/studio",
+          "checkedAt": "2026-08-24",
+          "supports": ["API", "Playground", "agents", "document intelligence", "audio", "RAG", "usage monitoring"]
+        },
+        {
+          "label": "Mistral Docs — Pricing",
+          "url": "https://docs.mistral.ai/inference/pricing",
+          "checkedAt": "2026-08-24",
+          "supports": ["model-specific pricing", "token pricing", "specialized model units", "batch and priority pricing"]
+        }
+      ],
+      "limitations": ["Vendor documentation was reviewed; model performance, hosting region and license suitability must be validated for the selected model and workload."]
+    }
   },
   {
     "slug": "hugging-face",
     "name": "Hugging Face",
     "category": "AI Tools",
-    "shortDescription": "Hosting and community for open models.",
+    "shortDescription": "Hub for models, datasets, Spaces and managed inference services.",
     "websiteUrl": "https://huggingface.co",
     "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -8863,19 +8918,74 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Hugging Face hosts open models and datasets, with inference endpoints and libraries that most of the ML world uses.",
+    "longDescription": "Hugging Face Hub hosts versioned repositories for models, datasets and Spaces, with public and private collaboration options. Developers can use serverless Inference Providers, dedicated Inference Endpoints or local inference integrations. Repository licenses, model cards and quality vary by publisher, while hosted compute and private storage can create usage-based charges beyond a subscription.",
     "pros": [
-      "The centre of the open model ecosystem",
-      "Datasets and models in one place",
-      "Libraries are the de facto standard"
+      "Shared artifacts: Models, datasets and Spaces use versioned Hub repositories.",
+      "Multiple inference paths: Inference Providers, dedicated Endpoints and local servers are supported.",
+      "Free starting surfaces: Public repositories and some inference services include free access or credits.",
+      "Organization features: Team and Enterprise plans add access, security and billing controls."
     ],
     "cons": [
-      "Model quality on the hub varies enormously",
-      "Inference pricing needs watching",
-      "Licences differ per model and need checking"
+      "Artifact responsibility: Model quality, limitations and maintenance depend on each repository owner.",
+      "License variation: Every model and dataset can carry different usage terms.",
+      "Compute billing: Inference, Endpoints, Jobs and upgraded Spaces can be billed separately from subscriptions.",
+      "Deployment choice: Serverless, dedicated and local inference have different cost and operational trade-offs."
     ],
-    "targetAudience": "Anyone working with open machine-learning models.",
-    "verdict": "Effectively unavoidable if you use open models. Read each model's licence before shipping it."
+    "keyFeatures": [
+      {
+        "title": "Hub repositories",
+        "description": "Versioned Git-based repositories optimized for models, datasets and Spaces."
+      },
+      {
+        "title": "Inference Providers",
+        "description": "Unified serverless access to supported models through multiple inference providers."
+      },
+      {
+        "title": "Inference Endpoints",
+        "description": "Dedicated managed deployments billed according to selected infrastructure and runtime."
+      },
+      {
+        "title": "Spaces",
+        "description": "Git-backed hosted applications for demonstrating and deploying ML experiences."
+      }
+    ],
+    "targetAudience": "ML practitioners and organizations that need to discover, version, collaborate on or deploy models and datasets.",
+    "bestFor": [
+      "Discovering and versioning community or private models and datasets",
+      "Teams that want serverless, dedicated or local inference options behind related tooling",
+      "Publishing model demos and documentation alongside artifacts"
+    ],
+    "skipIf": [
+      "You need one vendor-guaranteed quality or license standard across every repository",
+      "You cannot monitor pay-as-you-go compute and storage separately from subscriptions",
+      "You need a turnkey application rather than an ML collaboration and infrastructure platform"
+    ],
+    "verdict": "Choose Hugging Face when artifact discovery, collaboration and flexible inference matter; audit each repository's license and model card, then budget compute separately.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "Hugging Face Docs — Hub",
+          "url": "https://huggingface.co/docs/hub/index",
+          "checkedAt": "2026-08-24",
+          "supports": ["models", "datasets", "Spaces", "public and private collaboration", "repository features", "model cards"]
+        },
+        {
+          "label": "Hugging Face Docs — Run inference",
+          "url": "https://huggingface.co/docs/huggingface_hub/guides/inference",
+          "checkedAt": "2026-08-24",
+          "supports": ["Inference Providers", "Inference Endpoints", "local inference", "monthly credits", "provider billing"]
+        },
+        {
+          "label": "Hugging Face Docs — Billing",
+          "url": "https://huggingface.co/docs/hub/billing",
+          "checkedAt": "2026-08-24",
+          "supports": ["PRO features", "Team and Enterprise plans", "compute billing", "private storage", "monthly credits"]
+        }
+      ],
+      "limitations": ["Vendor platform documentation was reviewed; individual repository quality, licensing and security were not independently audited."]
+    }
   },
   {
     "slug": "runway",
@@ -9060,7 +9170,7 @@
     "slug": "cursor",
     "name": "Cursor",
     "category": "AI Tools",
-    "shortDescription": "AI-native code editor.",
+    "shortDescription": "AI-assisted code editor with completion, agents and codebase tools.",
     "websiteUrl": "https://cursor.com",
     "incelendi": true,
     "fiyatModeli": "ucretsiz-katman",
@@ -9072,19 +9182,74 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Cursor is a fork of VS Code with AI woven through it: multi-file edits, codebase-aware chat and inline completion that reads the surrounding project rather than one file.",
+    "longDescription": "Cursor is an AI-assisted code editor with tab completion and agents that can search a codebase, edit files and run terminal commands. Paid individual plans expand agent usage and model access; team plans add administration and privacy controls. Usage depends on the selected model and plan, and generated changes still require review and testing.",
     "pros": [
-      "Understands the whole repository, not just open files",
-      "Familiar VS Code extensions and keybindings",
-      "Multi-file edits from one instruction"
+      "Agent tools: Cursor documents file editing, codebase search and terminal execution.",
+      "Tab completion: Paid plans include unlimited tab completions.",
+      "Model choice: Paid plans provide access to Cursor and supported third-party models.",
+      "Team controls: Team plans add centralized administration and privacy-mode enforcement."
     ],
     "cons": [
-      "Subscription on top of any model costs",
-      "Large codebases still exceed context limits",
-      "Suggestions need review; confident and wrong is common"
+      "Usage-based limits: Model choice affects how quickly included usage is consumed.",
+      "Additional cost: On-demand usage can continue after included monthly usage is exhausted.",
+      "Review required: Agent edits and terminal actions are unreviewed changes until a developer verifies them.",
+      "Data handling: Requests pass through Cursor's backend, including when using a personal API key."
     ],
-    "targetAudience": "Developers who want AI assistance inside a familiar editor.",
-    "verdict": "The most convincing AI editor today. Treat its output as a draft from a fast junior, not as reviewed code."
+    "keyFeatures": [
+      {
+        "title": "Cursor Agent",
+        "description": "Searches the codebase, edits files and can run terminal commands for a requested coding task."
+      },
+      {
+        "title": "Tab completion",
+        "description": "Provides inline code suggestions, with unlimited tab completions documented on paid plans."
+      },
+      {
+        "title": "Model selection",
+        "description": "Supports Cursor models and models from multiple third-party providers, subject to plan usage pools."
+      },
+      {
+        "title": "Privacy modes",
+        "description": "Offers configurable data-handling modes; codebase indexing still uses Cursor infrastructure to compute embeddings."
+      }
+    ],
+    "targetAudience": "Developers who want completion and code-editing agents inside one editor and will review generated changes.",
+    "bestFor": [
+      "Multi-file coding tasks where an agent can search and edit the repository",
+      "Developers who want model choice and tab completion in one editor",
+      "Teams that need centralized billing, administration and privacy-mode controls"
+    ],
+    "skipIf": [
+      "Your code policy does not allow requests to pass through Cursor's backend",
+      "You need predictable unlimited agent usage at a fixed low price",
+      "You cannot review agent edits and terminal actions before accepting them"
+    ],
+    "verdict": "Choose Cursor when codebase-aware editing and agents justify an editor change; review its data settings, usage model and every generated change before adoption.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        {
+          "label": "Cursor Docs — Models and pricing",
+          "url": "https://cursor.com/docs/models-and-pricing",
+          "checkedAt": "2026-08-24",
+          "supports": ["individual plan prices", "usage pools", "tab completions", "agent limits", "team plans", "on-demand usage"]
+        },
+        {
+          "label": "Cursor Docs — Agent overview",
+          "url": "https://cursor.com/docs/agent/overview",
+          "checkedAt": "2026-08-24",
+          "supports": ["file editing", "codebase search", "terminal execution", "agent model selection"]
+        },
+        {
+          "label": "Cursor Docs — Privacy and security",
+          "url": "https://docs.cursor.com/account/privacy",
+          "checkedAt": "2026-08-24",
+          "supports": ["privacy modes", "backend routing", "codebase indexing", "embedding storage"]
+        }
+      ],
+      "limitations": ["Vendor documentation was reviewed; coding quality, productivity and security outcomes were not independently benchmarked."]
+    }
   },
   {
     "slug": "github-copilot",
