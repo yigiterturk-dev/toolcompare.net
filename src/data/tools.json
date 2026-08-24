@@ -16838,31 +16838,167 @@
     "slug": "bytemark",
     "name": "Bytemark",
     "category": "Hosting",
-    "shortDescription": "British internet hosting services company.",
+    "shortDescription": "UK cloud, dedicated and managed-hosting brand within iomart, with legacy Bytemark platforms in transition.",
     "websiteUrl": "https://www.bytemark.co.uk/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 10,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Bytemark is a UK hosting brand acquired by iomart. Its still-published service and documentation pages describe cloud servers from £10 per month, dedicated and managed hosting, UK facilities, an API and the open-source Symbiosis server stack. However, the original BigV cloud platform stopped receiving support on 30 April 2023 and customers were directed toward iomart's OnApp platform. The legacy website and price list remain reachable, so a new buyer should confirm current ordering, contract, platform and support status directly rather than treating every historical claim as a current offer.",
+    "pros": [
+      "Developer-oriented heritage: Published documentation covers API and command-line server management.",
+      "UK infrastructure focus: Bytemark materials describe facilities and network presence in several UK locations.",
+      "Transparent legacy documentation: Pricing, support processes, network design and migration notices remain publicly accessible.",
+      "Open hosting stack: Symbiosis is a Bytemark-developed Debian-based environment with automated hosting administration."
+    ],
+    "cons": [
+      "Platform transition risk: BigV became unsupported in 2023 and the recommended destination is an iomart platform.",
+      "Current-sales ambiguity: Reachable marketing and pricing pages contain legacy claims that may not represent a new order today.",
+      "Self-managed responsibility: Cloud-server users still own application, operating-system and restore readiness unless management is contracted.",
+      "Migration can change behavior: Platform, networking, backup and billing details must be revalidated on the destination service."
+    ],
+    "keyFeatures": [
+      { "title": "UK hosting infrastructure", "description": "Published services span cloud servers, dedicated systems, racks and managed hosting." },
+      { "title": "API and CLI", "description": "Legacy cloud documentation supports programmatic account, image and server operations." },
+      { "title": "Symbiosis", "description": "Provides an open-source Debian-based stack for websites, mail, databases, firewalling and updates." },
+      { "title": "iomart migration path", "description": "Official documentation directs unsupported BigV workloads toward iomart's OnApp platform." }
+    ],
+    "targetAudience": "Existing Bytemark customers planning a controlled iomart migration, or UK organizations willing to confirm the currently orderable platform and contract directly.",
+    "bestFor": [
+      "Existing dedicated, rack or managed-hosting customers validating their continuing service",
+      "Legacy BigV owners who need the official migration constraints and destination context",
+      "Teams interested in maintaining the open-source Symbiosis stack independently"
+    ],
+    "skipIf": [
+      "A new production deployment would rely on the unsupported BigV platform",
+      "The purchase requires fully self-service current prices and terms without sales confirmation",
+      "The team cannot test application, network, backup and billing behavior after migration"
+    ],
+    "verdict": "Bytemark should now be evaluated as an iomart transition and legacy-customer context, not assumed to be the unchanged cloud of its older marketing pages; confirm what is currently sold, avoid new BigV dependence, and restore-test every workload before migration cutover.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Bytemark Docs — BigV migration FAQ", "url": "https://docs.bytemark.co.uk/article/bigv-migration-faq/", "checkedAt": "2026-08-24", "supports": ["iomart ownership", "BigV support sunset on 30 April 2023", "service continuation without normal support", "OnApp migration recommendation", "snapshot-style backup comparison", "dedicated and rack service distinction"] },
+        { "label": "Bytemark — Legacy service page", "url": "https://www-service.bytemark.co.uk/", "checkedAt": "2026-08-24", "supports": ["historical cloud starting price", "dedicated and managed-hosting scope", "UK facility claims", "automatic-backup positioning", "support and SLA marketing", "legacy-page boundary"] },
+        { "label": "Bytemark — Legacy price list", "url": "https://www-service.bytemark.co.uk/prices/", "checkedAt": "2026-08-24", "supports": ["published list-price structure", "bandwidth extras", "software-license charges", "IPv4 allocation boundary", "free IPv6 and Let's Encrypt entries"] },
+        { "label": "Bytemark Docs — Documentation index", "url": "https://docs.bytemark.co.uk/", "checkedAt": "2026-08-24", "supports": ["cloud and dedicated documentation", "legacy virtual-machine labeling", "account and server operations", "published £10 cloud-server statement", "support documentation availability"] },
+        { "label": "Bytemark Docs — What is Symbiosis", "url": "https://docs.bytemark.co.uk/article/what-is-symbiosis/", "checkedAt": "2026-08-24", "supports": ["Bytemark-developed Debian hosting stack", "website email database and chat scope", "daily backups", "firewall", "automatic security updates"] },
+        { "label": "Bytemark — FAQ", "url": "https://www-service.bytemark.co.uk/faqs/", "checkedAt": "2026-08-24", "supports": ["command-line client", "cloud-server management", "API availability", "Symbiosis open-source status"] }
+      ],
+      "limitations": ["Official Bytemark and iomart-owned Bytemark documentation was reviewed, but several service pages are visibly legacy and do not establish that a new customer can order every listed product or price in 2026. ToolCompare did not contact sales, access an account, migrate BigV, verify OnApp pricing, deploy or benchmark a server, test API/support/SLA, inspect a contract or invoice, or restore a backup. Current availability must be confirmed directly."]
+    }
   },
   {
     "slug": "easily-ltd",
     "name": "Easily Ltd",
     "category": "Hosting",
-    "shortDescription": "Easily Ltd was once one of the UK’s largest domain name and webhosting companies.",
+    "shortDescription": "UK-facing domain registration and shared-hosting brand operated under NetNames Limited.",
     "websiteUrl": "https://easily.uk/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": false,
+    "fiyatModeli": "teklif",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Easily is an active UK-facing domains and hosting brand whose terms identify NetNames Limited trading as Easily. It sells domain registration, DNS-related management and shared website-hosting subscriptions. The live hosting page renders product prices dynamically, so ToolCompare does not publish an unverified starting amount. Domain renewal is manual by default unless the customer opts into auto-renew; registry rules, renewal windows and fees vary by extension. Shared hosting is a bounded multi-tenant service, and the terms require customers to maintain routine backups of websites and email.",
+    "pros": [
+      "Combined domain workflow: Registration, renewal, nameserver routing and shared hosting can be managed under one account.",
+      "Manual renewal default: Domain registrations start in manual-renew mode unless the customer explicitly enables automatic renewal.",
+      "Published policy detail: Domain lifecycle, proxy registration, shared-hosting use and backup duties are documented together.",
+      "Refund protection outside domains: The terms describe a 30-day price promise for eligible non-domain services."
+    ],
+    "cons": [
+      "Prices are not statically auditable: Current plan values require live product selection and checkout confirmation.",
+      "Domain rules vary: Registry policy, renewal periods, contact roles and expiry behavior differ by extension.",
+      "No uninterrupted-service guarantee: Shared-hosting terms expressly avoid guaranteeing uninterrupted availability.",
+      "Customer backup duty: Website content and email require routine independent copies; shared capacity can be restricted if it affects others."
+    ],
+    "keyFeatures": [
+      { "title": "Domain management", "description": "Covers registration, renewal, transfer, nameserver routing and optional proxy-contact handling." },
+      { "title": "Shared hosting", "description": "Provides plan-based web space and bandwidth in a multi-tenant hosting environment." },
+      { "title": "Renewal controls", "description": "Uses manual domain renewal by default with an account option for automatic renewal." },
+      { "title": "Account support", "description": "Provides customer support under the published service and general terms." }
+    ],
+    "targetAudience": "UK customers seeking basic domain and shared-hosting administration who are comfortable validating live checkout and registry-specific terms.",
+    "bestFor": [
+      "Simple public sites paired with domains managed in the same account",
+      "Domain owners who prefer manual renewal as the initial default",
+      "Customers who export routine website, database and mailbox backups independently"
+    ],
+    "skipIf": [
+      "The project needs root access, isolated resources, a documented API or contractual uptime",
+      "The buyer cannot verify the exact initial and renewal charge at checkout",
+      "Domain expiry, contact or proxy rules have not been checked for the required extension"
+    ],
+    "verdict": "Easily remains a basic domains-and-shared-hosting option, but compare it using a live basket rather than an inferred price; verify each extension's renewal rules, understand proxy ownership presentation, and keep portable backups outside the account.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Easily — Website Hosting", "url": "https://easily.uk/node/69", "checkedAt": "2026-08-24", "supports": ["active hosting offer", "monthly-term presentation", "plan-selection workflow", "dynamic product-price boundary", "domain connection and transfer workflow"] },
+        { "label": "Easily — Terms", "url": "https://easily.uk/node/85", "checkedAt": "2026-08-24", "supports": ["NetNames Limited trading identity", "domain registration and management scope", "manual-renewal default", "optional automatic renewal", "registry-policy dependence", "30-day price-promise boundary", "shared-hosting subscription", "capacity enforcement", "no uninterrupted guarantee", "customer website and email backups"] },
+        { "label": "Easily — About", "url": "https://easily.uk/node/87", "checkedAt": "2026-08-24", "supports": ["current UK domains and hosting positioning", "feature-bundle positioning", "price-stability claim", "money-back exclusions for upgrades renewals offers and bundles"] },
+        { "label": "Easily — Policies", "url": "https://easily.uk/policies", "checkedAt": "2026-08-24", "supports": ["ICANN registrant rights reference", "UDRP and URS adherence", "Nominet dispute-policy reference", "registry-specific dispute-policy boundary"] }
+      ],
+      "limitations": ["Official Easily product, terms, about and policy pages were reviewed; ToolCompare did not create an account, resolve dynamically rendered plan prices, inspect checkout or renewal quotes, register or transfer a domain, test hosting, DNS, email, support, proxy service, cancellation, refund or restoration, or verify every registry rule. The main terms page is longstanding and prices and operational details can change."]
+    }
   },
   {
     "slug": "123-reg",
     "name": "123 Reg",
     "category": "Hosting",
-    "shortDescription": "British domain registrar and web hosting company.",
+    "shortDescription": "UK domain registrar and hosting provider offering cPanel web hosting, email, site builders, WordPress and servers.",
     "websiteUrl": "https://www.123-reg.co.uk/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 6.99,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "123 Reg is a UK domain and hosting provider; this record focuses on its shared cPanel Web Hosting. The Economy plan currently advertises £1.99 per month on a three-year term paid upfront, then renews at £251.64 for three years, equivalent to the displayed £6.99 monthly standard rate, excluding VAT. It includes one site, 25 GB storage, shared CPU/RAM, databases, email, a first-year domain, SSL and automated backups. Renewal occurs at then-current rates unless disabled. Backup services end with hosting, and customers must export content before cancellation because remaining server data is deleted.",
+    "pros": [
+      "Detailed plan resources: Site, storage, database, CPU, RAM, FTP and mailbox allowances are published by tier.",
+      "Useful managed bundle: cPanel, daily backups, DDoS defence, SSL and one-click apps cover conventional small-site operations.",
+      "Explicit renewal totals: The product page displays upfront commitment and subsequent three-year charge together.",
+      "Short refund window: Eligible initial purchases can use the documented 14-day money-back guarantee."
+    ],
+    "cons": [
+      "Large commitment discount: The headline monthly figure requires three years paid upfront and renewal is materially higher.",
+      "Some inclusions expire: The domain is first-year only and Economy's included SSL is shown as one year.",
+      "Unmetered is policy-bound: Heavy shared-resource use can require an upgrade or restriction.",
+      "Cancellation deletes data: Included backup service is cancelled too, so independent archives and a pre-exit export are essential."
+    ],
+    "keyFeatures": [
+      { "title": "cPanel hosting", "description": "Manages websites, files, databases, domains, email and supported applications from one control panel." },
+      { "title": "Tiered resources", "description": "Publishes per-plan site, NVMe storage, database, CPU, RAM and FTP-user allocations." },
+      { "title": "Automated backups", "description": "Hosting terms describe weekly website-content and daily database backups, subject to plan storage and cancellation." },
+      { "title": "Bundled launch services", "description": "Selected plans include a first-year domain, professional mailbox and SSL under stated conditions." }
+    ],
+    "targetAudience": "UK small businesses and site owners wanting managed shared hosting and willing to commit long term for the lowest advertised rate.",
+    "bestFor": [
+      "Small sites that fit a published shared CPU, RAM, storage and database envelope",
+      "Customers preferring cPanel plus domains and email in one provider account",
+      "Buyers who compare the full three-year renewal total and retain independent backups"
+    ],
+    "skipIf": [
+      "The business case depends only on the discounted first-term monthly equivalent",
+      "The application needs root access, PCI or HIPAA hosting suitability, or isolated compute",
+      "The exit plan does not export site, database, mailbox and domain settings before cancellation"
+    ],
+    "verdict": "123 Reg offers a feature-complete UK shared-hosting bundle with unusually visible resource limits, but the meaningful price is the full renewal total; check expiring inclusions, treat unmetered use as fair-use constrained, and keep a portable backup before any cancellation.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "123 Reg — Web Hosting", "url": "https://www.123-reg.co.uk/web-hosting/", "checkedAt": "2026-08-24", "supports": ["current three-year promotional and renewal prices", "VAT exclusion", "Economy resource allowances", "domain email and SSL conditions", "daily backup positioning", "unmetered bandwidth", "cPanel", "14-day guarantee", "yearly contract and payment options"] },
+        { "label": "123 Reg — Web Hosting terms", "url": "https://www.123-reg.co.uk/terms/web-hosting-terms/", "checkedAt": "2026-08-24", "supports": ["shared-server model", "weekly content and daily database backup schedule", "backup plan storage boundary", "backup cancellation coupling", "independent archive duty", "post-cancellation deletion", "PCI and HIPAA exclusion", "unlimited-resource fair-use boundary", "migration limitations"] },
+        { "label": "123 Reg — General terms", "url": "https://www.123-reg.co.uk/terms/general-terms/", "checkedAt": "2026-08-24", "supports": ["automatic renewal", "then-current renewal rates", "alternate payment attempts", "shorter-term renewal fallback", "renewal opt-out", "customer backup duty", "domain and license refund boundaries"] },
+        { "label": "123 Reg — Money-back guarantee", "url": "https://www.123-reg.co.uk/terms/123-reg-money-back-guarantee/", "checkedAt": "2026-08-24", "supports": ["14-day general-product window", "domain add-on upgrade and downgrade exclusions", "qualification requirements", "attached-service cancellation risk", "one-use-per-product boundary"] },
+        { "label": "123 Reg — Free domain with hosting terms", "url": "https://www.123-reg.co.uk/terms/free-domain-terms/", "checkedAt": "2026-08-24", "supports": ["selected-plan eligibility", "new-purchase requirement", "one-year domain term", "default domain renewal", "domain ownership consequence during hosting refund"] },
+        { "label": "123 Reg — Acceptable Use Policy", "url": "https://www.123-reg.co.uk/terms/aup/", "checkedAt": "2026-08-24", "supports": ["no archive backup torrent or private-media storage", "customer security and backup responsibility", "suspension and deletion risk", "content and resource-use restrictions"] }
+      ],
+      "limitations": ["Official 123 Reg product, hosting, general, refund, domain-offer and acceptable-use pages were reviewed; ToolCompare did not purchase the three-year plan, verify checkout or VAT, test cPanel/SSO, deploy or benchmark a site, measure support or uptime, exercise high resource use, inspect backup retention, perform a restore, cancel services, claim a refund, or verify migration quality. Promotions, renewal rates, plan resources and terms can change."]
+    }
   },
   {
     "slug": "epik",
