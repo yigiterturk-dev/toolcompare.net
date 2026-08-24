@@ -14840,31 +14840,164 @@
     "slug": "bluefish",
     "name": "Bluefish",
     "category": "Developer Tools",
-    "shortDescription": "Open-source editor for web developers, aimed at markup and code.",
+    "shortDescription": "GPL-licensed desktop editor for markup, scripts and programming code.",
     "websiteUrl": "https://bluefish.openoffice.nl",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Bluefish is a volunteer-maintained, GPL-licensed graphical editor for web developers and programmers. It provides syntax-aware editing, projects, regex search, snippets, external-tool integration and optional remote-file access across desktop operating systems. It is an editor rather than a complete IDE or hosted collaboration service, and some features depend on optional libraries or have reduced availability in native Windows and macOS packages.",
+    "pros": [
+      "Lightweight editing: The project emphasizes fast startup and handling many open files.",
+      "Broad syntax coverage: Included definitions cover more than 30 markup and programming languages.",
+      "Power-user tools: Regex replacement, snippets, external commands, filters, folding and completion support repetitive editing work.",
+      "Current maintenance: The official site lists Bluefish 2.4.2 released in July 2026."
+    ],
+    "cons": [
+      "Not a full IDE: Integrated debugging, language servers, dependency management and application-specific tooling are not its core scope.",
+      "Platform differences: Remote files, site transfer and Emmet support can be unavailable or limited in native Windows and macOS packages.",
+      "Optional dependencies: Spell checking, character maps and Emmet require additional build or runtime components.",
+      "Volunteer support model: Adoption should account for community support capacity and the project's release cadence."
+    ],
+    "keyFeatures": [
+      { "title": "Syntax-aware editor", "description": "Provides highlighting, folding, matching markers and completion for many markup and programming languages." },
+      { "title": "Projects and many files", "description": "Restores project settings and supports large multi-document editing sessions." },
+      { "title": "Search and automation", "description": "Combines PCRE search-and-replace, snippets, external commands and text filters." },
+      { "title": "Remote files", "description": "Uses GVfs for protocols such as SFTP and WebDAV where the platform package supports it." }
+    ],
+    "targetAudience": "Developers who want a fast desktop text editor with web-authoring conveniences and direct control over source files.",
+    "bestFor": [
+      "Editing HTML, CSS, scripts and mixed-language web files",
+      "Large batches of text files needing regex operations and snippets",
+      "Desktop workflows that prefer external build, lint and deployment tools"
+    ],
+    "skipIf": [
+      "You require an integrated debugger, language server or full project toolchain",
+      "Your workflow depends on identical remote-file features across every operating system",
+      "You need managed collaboration, cloud workspaces or organizational identity controls"
+    ],
+    "verdict": "Choose Bluefish as a focused source editor when its supported package and optional dependencies match the workstation; evaluate it alongside—not as a replacement for—required debugging, build, version-control and collaboration tools.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Bluefish — Project home", "url": "https://bluefish.openoffice.nl/index.html", "checkedAt": "2026-08-24", "supports": ["editor scope", "desktop operating systems", "open-source status", "GPL license", "volunteer maintenance", "2.4.2 release date", "language and file-count claims"] },
+        { "label": "Bluefish — Features", "url": "https://bluefish.openoffice.nl/features.html", "checkedAt": "2026-08-24", "supports": ["projects", "remote protocols", "regex search", "snippets", "external programs and filters", "recovery", "language support", "completion and folding", "optional dependencies", "platform limitations"] }
+      ],
+      "limitations": ["The official Bluefish project and feature pages were reviewed; ToolCompare did not install platform packages, benchmark startup or file counts, test remote protocols, validate optional dependencies, inspect accessibility, audit source or release artifacts, or compare editing accuracy across languages."]
+    }
   },
   {
     "slug": "netbeans",
     "name": "NetBeans",
     "category": "Developer Tools",
-    "shortDescription": "Integrated development environment software for software development.",
+    "shortDescription": "Apache-licensed IDE and modular desktop-application platform centered on Java development.",
     "websiteUrl": "https://netbeans.apache.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Apache NetBeans is an Apache-2.0-licensed desktop IDE and modular Swing application platform. The IDE is strongest around Java and also documents support for PHP, JavaScript, HTML and related frameworks, with features extended through modules and plugins. Teams must match each release to a supported runtime JDK, distinguish official Apache artifacts from community installers and validate project-language, build-system and plugin compatibility.",
+    "pros": [
+      "Java-focused tooling: Editing, refactoring and project support integrate with common Java build systems and runtimes.",
+      "Modular platform: NetBeans modules and platform APIs can also underpin extensible Swing desktop applications.",
+      "Free commercial use: Apache states that the IDE and Platform are free for commercial and non-commercial use under Apache License 2.0.",
+      "Predictable releases: The project publishes four releases per year and identifies unsupported older versions."
+    ],
+    "cons": [
+      "Runtime JDK constraint: The IDE itself must run on a JDK supported by the selected NetBeans release.",
+      "Installer provenance: Convenience installers are not Apache Software Foundation releases and can include extra components and licenses.",
+      "Plugin compatibility: Third-party modules can lag IDE releases or add separate maintenance and trust requirements.",
+      "Language depth varies: Support outside the core Java workflow should be tested against the exact language and framework version."
+    ],
+    "keyFeatures": [
+      { "title": "Java IDE", "description": "Combines code editing, navigation, refactoring, debugging and build-tool-aware project support." },
+      { "title": "Multi-language editing", "description": "Official project material includes PHP, JavaScript, HTML, JavaFX and additional language support." },
+      { "title": "Plugin modules", "description": "Extends the IDE through modules distributed separately or bundled with releases." },
+      { "title": "NetBeans Platform", "description": "Provides reusable windowing, actions, persistence and modular architecture for Swing applications." }
+    ],
+    "targetAudience": "Java developers and teams that want a free desktop IDE or a modular foundation for Swing applications.",
+    "bestFor": [
+      "Java projects using supported JDK and build-tool combinations",
+      "Teams wanting an integrated, open-source desktop IDE",
+      "Developers building modular Swing applications on the NetBeans Platform"
+    ],
+    "skipIf": [
+      "Your required runtime JDK or operating system is unsupported by the chosen release",
+      "A critical language or framework workflow has not been validated in the current IDE",
+      "Required plugins or convenience installers cannot meet your provenance policy"
+    ],
+    "verdict": "Choose Apache NetBeans when its Java-centric workflow and modular platform fit the project; standardize the official release, runtime JDK and approved plugins, then test real builds, debugging and upgrades before team rollout.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Apache NetBeans — About", "url": "https://netbeans.apache.org/front/main/about/index.html", "checkedAt": "2026-08-24", "supports": ["IDE and Platform scope", "Java and other language support", "module architecture", "commercial and non-commercial use", "Apache license", "source availability"] },
+        { "label": "Apache NetBeans — Releases", "url": "https://netbeans.apache.org/front/main/download/index.html", "checkedAt": "2026-08-24", "supports": ["quarterly release cadence", "latest release identity and date", "older releases unsupported", "source availability"] },
+        { "label": "Apache NetBeans 31 — Download", "url": "https://netbeans.apache.org/front/main/download/nb31/", "checkedAt": "2026-08-24", "supports": ["official binary and source artifacts", "hash and signature verification", "supported runtime JDKs", "community installer boundary", "Windows ARM limitation", "known issues"] },
+        { "label": "Apache NetBeans — Plugin portal", "url": "https://plugins.netbeans.apache.org/", "checkedAt": "2026-08-24", "supports": ["plugin distribution", "release-specific plugin catalog", "third-party extension surface"] },
+        { "label": "Apache NetBeans Platform — Tutorials", "url": "https://netbeans.apache.org/tutorial/main/kb/docs/platform/", "checkedAt": "2026-08-24", "supports": ["NetBeans Platform APIs", "module development", "window system", "application architecture"] }
+      ],
+      "limitations": ["Official Apache NetBeans pages were reviewed; ToolCompare did not install NetBeans 31, verify downloaded signatures, build or debug a project, test every documented language or build system, audit plugins or convenience installers, benchmark performance, inspect accessibility or develop a Platform application."]
+    }
   },
   {
     "slug": "xojo",
     "name": "Xojo",
     "category": "Developer Tools",
-    "shortDescription": "Programming environment and programming language.",
+    "shortDescription": "Commercial cross-platform language and IDE for desktop, web, mobile, console and Raspberry Pi apps.",
     "websiteUrl": "https://www.xojo.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Xojo is a proprietary programming language, framework and visual IDE for building desktop, web, mobile, console and Raspberry Pi applications. The IDE can be used free for learning and development, but a single-developer license is required to build distributable applications and to save projects in text or XML formats. Platform targets, store accounts, server deployment and optional Xojo Cloud introduce additional requirements and costs.",
+    "pros": [
+      "Broad target set: Paid editions can build across desktop, web, mobile, console and Raspberry Pi targets depending on license tier.",
+      "Shared development environment: A visual IDE and Xojo language cover multiple application categories.",
+      "Free evaluation path: The license permits free learning and development before purchasing build rights.",
+      "Deployment choice: Web apps can run standalone on supported servers or use the separately purchased Xojo Cloud service."
+    ],
+    "cons": [
+      "License required for builds: Free IDE use does not grant application build or text/XML project-saving rights.",
+      "Per-developer licensing: Official licenses are single-developer and target coverage varies by product tier.",
+      "Platform prerequisites: iOS needs a Mac, current Xcode and Apple developer access; Android needs a supported Android Studio setup.",
+      "Self-hosted web operations: Xojo does not support configuring standalone web servers, and shared hosting is discouraged."
+    ],
+    "keyFeatures": [
+      { "title": "Visual IDE and language", "description": "Combines UI design, code and the Xojo framework within one proprietary toolchain." },
+      { "title": "Cross-platform targets", "description": "License-dependent builds cover desktop, web, mobile, console and Raspberry Pi applications." },
+      { "title": "Database access", "description": "Paid products document SQLite plus connections to MySQL, PostgreSQL and other systems through supported interfaces." },
+      { "title": "Xojo Cloud option", "description": "Offers separate managed hosting for Xojo web applications with one-click deployment." }
+    ],
+    "targetAudience": "Solo developers and teams willing to adopt Xojo's proprietary language and per-developer licenses for cross-platform application delivery.",
+    "bestFor": [
+      "Rapid desktop or internal application development where Xojo supports every required target",
+      "Developers preferring one visual toolchain over separate platform-native stacks",
+      "Xojo web apps whose hosting and operational model has been validated"
+    ],
+    "skipIf": [
+      "You require an open-source compiler, IDE and framework stack",
+      "Per-developer build licenses or platform-store prerequisites do not fit the budget",
+      "Native platform APIs or third-party libraries needed by the product are unavailable in Xojo"
+    ],
+    "verdict": "Use the free IDE to prototype, but choose Xojo only after confirming the paid target licenses, native API coverage, project-format needs and deployment model; build and ship a representative pilot on every required platform before committing.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Xojo — Products", "url": "https://www.xojo.com/products/", "checkedAt": "2026-08-24", "supports": ["desktop mobile web and Raspberry Pi targets", "cross-platform positioning", "Xojo Cloud option"] },
+        { "label": "Xojo Store — Licenses", "url": "https://store.xojo.com/product-category/xojo-licenses/", "checkedAt": "2026-08-24", "supports": ["current public prices", "single-developer licenses", "target-specific tiers", "release-access period", "activations", "database support", "technical support"] },
+        { "label": "Xojo — License summary", "url": "https://www.xojo.com/download/eula.php", "checkedAt": "2026-08-24", "supports": ["free learning and development", "license required to build", "license required for text or XML project formats", "activation counts", "single-user restriction"] },
+        { "label": "Xojo Docs — System requirements", "url": "https://documentation.xojo.com/resources/system_requirements_for_current_release.html", "checkedAt": "2026-08-24", "supports": ["IDE operating systems", "application target requirements", "Android Studio requirement", "iOS Xcode and developer account requirements", "web server requirements", "Linux libraries", "Wayland caveat"] },
+        { "label": "Xojo Docs — Web deployment overview", "url": "https://documentation.xojo.com/topics/application_deployment/web/deployment_overview.html", "checkedAt": "2026-08-24", "supports": ["standalone and Xojo Cloud deployment", "shared-hosting warning", "server configuration support boundary", "CGI removal", "supported server platforms"] },
+        { "label": "Xojo Store — Xojo Cloud", "url": "https://store.xojo.com/product/xojo-cloud/", "checkedAt": "2026-08-24", "supports": ["separate cloud charge", "required Xojo license", "starting monthly price", "automatic backups", "database options", "bandwidth charges"] }
+      ],
+      "limitations": ["Official Xojo product, licensing, system-requirement, deployment and store pages were reviewed; ToolCompare did not install the IDE, compile or distribute an application, test native API coverage, inspect generated binaries, evaluate plugins, validate app-store submission, benchmark performance, deploy a web app or audit Xojo Cloud. Prices and supported platforms can change after the review date."]
+    }
   },
   {
     "slug": "uno-platform",
