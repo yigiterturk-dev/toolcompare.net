@@ -13818,31 +13818,182 @@
     "slug": "semaphore",
     "name": "Semaphore",
     "category": "Developer Tools",
-    "shortDescription": "Hosted continuous integration and delivery service for software teams.",
-    "websiteUrl": "https://semaphoreui.com",
-    "incelendi": false,
+    "shortDescription": "Usage-priced CI/CD with cloud, self-hosted and open-source editions.",
+    "websiteUrl": "https://semaphore.io",
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    },
+    "longDescription": "Semaphore is a CI/CD platform offered as a managed cloud service, a free open-source Community Edition and a commercial self-hosted Enterprise Edition. Cloud pipelines are stored as YAML under .semaphore, can use hosted or self-hosted agents, and are billed from compute, storage, transfer and optional support usage rather than one flat subscription.",
+    "pros": [
+      "Deployment choice: Offers managed cloud, open-source Community Edition and commercial self-hosted editions.",
+      "Repository pipelines: Defines connected blocks, dependencies, jobs and promotions in versioned YAML files.",
+      "Execution options: Cloud supports Linux, Docker and macOS agents, while self-hosted agents add customer-controlled machines.",
+      "Usage visibility: Current pricing publishes per-minute compute and separate artifact allowances and overages."
+    ],
+    "cons": [
+      "Variable monthly cost: Machine minutes, artifact transfer, storage and optional services can all affect spend.",
+      "Platform boundary: Hosted Windows jobs are not listed; Windows is documented through self-hosted agents.",
+      "Operational burden shifts: Community or self-hosted deployment requires the customer to operate its own CI infrastructure.",
+      "Support tiers are separate: Advanced troubleshooting, response commitments and engineering assistance are paid additions."
+    ],
+    "keyFeatures": [
+      { "title": "YAML pipelines", "description": "Connects dependency-aware blocks and jobs from files in the .semaphore directory." },
+      { "title": "Hosted and self-hosted agents", "description": "Runs jobs on listed cloud machines or customer-managed agent capacity." },
+      { "title": "Secrets", "description": "Injects governed environment variables or files into selected jobs and pipelines." },
+      { "title": "Promotions", "description": "Chains pipelines into release and deployment workflows with configurable conditions." }
+    ],
+    "targetAudience": "Software teams seeking usage-priced cloud CI/CD or a Semaphore-compatible self-hosted path and willing to own pipeline and cost governance.",
+    "bestFor": [
+      "Teams versioning multi-stage build, test and deployment workflows in YAML",
+      "Workloads that benefit from mixing hosted compute with customer-managed agents",
+      "Organizations able to forecast compute minutes, artifact usage and support needs"
+    ],
+    "skipIf": [
+      "Hosted Windows workers are required and self-hosting is not acceptable",
+      "Your procurement process requires a single fixed all-inclusive price",
+      "No owner can maintain pipeline YAML, secrets, agents and usage controls"
+    ],
+    "verdict": "Choose Semaphore after pricing representative jobs and deciding who operates each agent; treat compute, artifacts and support as separate cost lines and verify edition-specific features before migration.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Semaphore — Pricing", "url": "https://semaphore.io/pricing", "checkedAt": "2026-08-24", "supports": ["per-minute cloud compute", "self-hosted usage price", "included concurrency", "free credits", "artifact allowances and overages", "support add-ons"] },
+        { "label": "Semaphore Docs — About Semaphore", "url": "https://docs.semaphore.io/EE/getting-started/about-semaphore", "checkedAt": "2026-08-24", "supports": ["Cloud edition", "open-source Community Edition", "commercial Enterprise Edition", "self-hosting responsibility", "API reference availability"] },
+        { "label": "Semaphore Docs — Pipelines", "url": "https://docs.semaphore.io/using-semaphore/pipelines", "checkedAt": "2026-08-24", "supports": ["pipeline YAML", "block dependencies", "parallel blocks", "promotions", "cloud agent platforms", "self-hosted agents", "rerun behavior"] },
+        { "label": "Semaphore Docs — Secrets", "url": "https://docs.semaphore.io/using-semaphore/secrets", "checkedAt": "2026-08-24", "supports": ["environment-variable secrets", "file secrets", "job access", "organization access", "secret updates"] },
+        { "label": "Semaphore Docs — Self-hosted agents", "url": "https://docs.semaphore.io/using-semaphore/self-hosted", "checkedAt": "2026-08-24", "supports": ["customer-managed machines", "agent setup", "supported plans", "agent requirements", "job execution"] }
+      ],
+      "limitations": ["Vendor pages and documentation were reviewed; ToolCompare did not open an account, run cloud or self-hosted jobs, install Community or Enterprise Edition, measure performance, inspect isolation, calculate a production bill or test support response times."]
+    }
   },
   {
     "slug": "cloudbees",
     "name": "CloudBees",
-    "category": "Hosting",
-    "shortDescription": "Enterprise continuous integration and delivery platform built on Jenkins.",
+    "category": "Developer Tools",
+    "shortDescription": "Licensed Jenkins-based CI for centrally governed enterprise installations.",
     "websiteUrl": "https://www.cloudbees.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    },
+    "longDescription": "CloudBees CI is licensed enterprise CI software built on a Jenkins-core runtime for customer-managed traditional platforms or Kubernetes-based modern cloud platforms. Operations center can govern multiple controllers, agents, credentials, role-based access and Configuration as Code bundles; deployment, plugins, upgrades and underlying infrastructure remain material operating responsibilities.",
+    "pros": [
+      "Central Jenkins governance: Operations center manages connected controllers and shared resources.",
+      "Configuration as Code: Versioned bundles can define controller configuration, plugins, items and role-based access.",
+      "Agent flexibility: Supports shared, Kubernetes and purpose-built static agents for different build requirements.",
+      "Enterprise controls: Documents SSO, RBAC, credential management and a curated plugin support program."
+    ],
+    "cons": [
+      "Quote and license dependency: Public documentation directs purchases through CloudBees sales or an account representative.",
+      "Infrastructure ownership: Customers must plan, secure, scale, back up and upgrade the deployed platform.",
+      "Jenkins complexity remains: Controllers, agents, plugins, credentials and pipeline compatibility require specialist administration.",
+      "Support boundary: CloudBees states that only CloudBees-certified plugins are supported on its Jenkins-based services."
+    ],
+    "keyFeatures": [
+      { "title": "Operations center", "description": "Coordinates connected controllers, shared agents, security and administrative policy." },
+      { "title": "Configuration as Code", "description": "Applies versioned bundles containing platform, plugin, item and RBAC configuration." },
+      { "title": "Managed agent models", "description": "Schedules work on Kubernetes, shared or dedicated platform-specific build agents." },
+      { "title": "SSO and RBAC", "description": "Centralizes authentication and can enforce role-based authorization across controllers." }
+    ],
+    "targetAudience": "Enterprises operating Jenkins at organizational scale that need centralized governance and have dedicated platform-engineering capacity.",
+    "bestFor": [
+      "Organizations consolidating governance across multiple Jenkins controllers and teams",
+      "Platform teams managing controller, plugin and access configuration as reviewed code",
+      "Enterprises prepared to operate licensed CI infrastructure with vendor support"
+    ],
+    "skipIf": [
+      "You want a low-operations hosted CI service rather than a customer-managed platform",
+      "The team lacks Jenkins, Kubernetes or infrastructure administration capacity required by the chosen edition",
+      "Critical pipelines depend on plugins outside the supported CloudBees plugin boundary"
+    ],
+    "verdict": "Choose CloudBees CI for governed Jenkins at scale, not as a shortcut around Jenkins operations; validate topology, plugin support, licensing, upgrade ownership and recovery procedures before rollout.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "CloudBees Docs — CloudBees CI", "url": "https://docs.cloudbees.com/docs/cloudbees-ci/latest/", "checkedAt": "2026-08-24", "supports": ["customer-hosted CI", "modern cloud platforms", "traditional platforms", "Jenkins at scale", "policy and governance scope"] },
+        { "label": "CloudBees Docs — Administration architecture", "url": "https://docs.cloudbees.com/docs/cloudbees-ci/latest/cloud-admin-guide/", "checkedAt": "2026-08-24", "supports": ["operations center", "controllers", "shared agents", "credentials", "RBAC", "license requirement", "Kubernetes architecture"] },
+        { "label": "CloudBees Docs — Feature comparison", "url": "https://docs.cloudbees.com/docs/cloudbees-ci/latest/feature-definition", "checkedAt": "2026-08-24", "supports": ["Jenkins LTS comparison", "traditional and modern editions", "Configuration as Code", "RBAC", "controller and operations-center features", "sales contact for additions"] },
+        { "label": "CloudBees Docs — Manage agents", "url": "https://docs.cloudbees.com/docs/cloudbees-ci/latest/cloud-admin-guide/agents", "checkedAt": "2026-08-24", "supports": ["shared agents", "static agents", "Kubernetes agents", "pod templates", "platform-specific requirements"] },
+        { "label": "CloudBees Docs — SSO", "url": "https://docs.cloudbees.com/docs/cloudbees-ci/latest/secure/using-sso", "checkedAt": "2026-08-24", "supports": ["operations-center SSO", "controller inheritance", "authentication and authorization modes", "RBAC integration", "administrator requirement"] },
+        { "label": "CloudBees — CI support policy", "url": "https://docs.cloudbees.com/docs/cloudbees-common/latest/support-policies/cloudbees-ci", "checkedAt": "2026-08-24", "supports": ["certified-plugin support boundary", "support bundle requirement", "monthly Jenkins-based packages", "support request process"] }
+      ],
+      "limitations": ["Vendor documentation was reviewed; ToolCompare did not obtain a quote or license, install either platform edition, migrate Jenkins workloads, validate plugins, operate upgrades, test recovery, audit security configuration or measure controller and agent capacity."]
+    }
   },
   {
     "slug": "selenium",
     "name": "Selenium",
     "category": "Developer Tools",
-    "shortDescription": "Browser automation framework used for testing web applications.",
+    "shortDescription": "Open-source browser automation through WebDriver, IDE and Grid.",
     "websiteUrl": "https://selenium.dev/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    },
+    "longDescription": "Selenium is an Apache-2.0-licensed open-source browser-automation project comprising WebDriver language bindings, Selenium IDE and Selenium Grid. It controls supported browsers locally or remotely, but it does not itself provide hosted browsers, application-specific test cases, assertions or a complete test runner; teams assemble and operate those surrounding parts.",
+    "pros": [
+      "Standards-based control: WebDriver is a W3C Recommendation implemented with browser-specific drivers.",
+      "Language options: Official downloads list bindings for Java, Python, C#, Ruby, JavaScript and Kotlin.",
+      "Distributed execution: Grid routes WebDriver commands to remote browser instances and supports parallel, cross-platform testing.",
+      "Record and playback: Selenium IDE records browser actions through Chrome, Firefox and Edge extensions."
+    ],
+    "cons": [
+      "Infrastructure not included: Local browsers, remote Grid machines or a separate hosted provider must supply execution capacity.",
+      "Test framework required: Selenium documentation states that assertions and broader test structure come from assertion libraries and test runners.",
+      "Environment maintenance: Browser, driver, language binding and Grid compatibility must be managed across updates.",
+      "UI-change sensitivity: Application locators, timing and workflows still require deliberate test design and maintenance."
+    ],
+    "keyFeatures": [
+      { "title": "WebDriver", "description": "Controls supported browsers through native browser automation interfaces and language bindings." },
+      { "title": "Selenium Grid", "description": "Routes sessions to remote browser instances for parallel and cross-platform execution." },
+      { "title": "Selenium IDE", "description": "Records and replays browser actions through supported browser extensions." },
+      { "title": "WebDriver BiDi", "description": "Adds bidirectional browser events such as network, console and JavaScript error streams." }
+    ],
+    "targetAudience": "Engineering and QA teams that need programmable browser automation and can own test architecture, execution infrastructure and maintenance.",
+    "bestFor": [
+      "Cross-browser web tests that need supported language bindings and direct browser control",
+      "Teams building their own local or distributed browser-testing infrastructure",
+      "Projects willing to combine Selenium with an assertion library and test runner"
+    ],
+    "skipIf": [
+      "You expect a hosted browser and device cloud to be included",
+      "The team cannot maintain browser drivers, Grid capacity, selectors and synchronization logic",
+      "The primary requirement is native mobile-app automation rather than browser or mobile-web automation"
+    ],
+    "verdict": "Choose Selenium for portable browser control and ecosystem flexibility when your team can supply the test framework and infrastructure; compare hosted services if device access and operations matter more than control.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Selenium — Project overview", "url": "https://www.selenium.dev/documentation/overview/", "checkedAt": "2026-08-24", "supports": ["WebDriver", "Selenium IDE", "Selenium Grid", "browser automation scope", "remote execution"] },
+        { "label": "Selenium — WebDriver", "url": "https://www.selenium.dev/documentation/webdriver/", "checkedAt": "2026-08-24", "supports": ["native browser control", "local and remote execution", "W3C Recommendation", "WebDriver BiDi", "browser events"] },
+        { "label": "Selenium — Getting started", "url": "https://www.selenium.dev/documentation/webdriver/getting_started/", "checkedAt": "2026-08-24", "supports": ["major-browser support", "browser-specific drivers", "language-binding setup", "local prerequisites", "Grid scaling path"] },
+        { "label": "Selenium — Grid", "url": "https://www.selenium.dev/documentation/grid/", "checkedAt": "2026-08-24", "supports": ["remote machines", "parallel execution", "browser versions", "cross-platform testing", "customer setup"] },
+        { "label": "Selenium — Organizing tests", "url": "https://www.selenium.dev/documentation/webdriver/getting_started/using_selenium/", "checkedAt": "2026-08-24", "supports": ["assertion-library requirement", "test-runner requirement", "browser automation uses", "test organization", "terms-of-service caution for scraping"] },
+        { "label": "SeleniumHQ — Source and license", "url": "https://github.com/SeleniumHQ/selenium", "checkedAt": "2026-08-24", "supports": ["open-source repository", "Apache-2.0 license", "project source", "language implementations"] }
+      ],
+      "limitations": ["Official project documentation and repository metadata were reviewed; ToolCompare did not run a browser suite, operate Grid, compare language bindings, measure reliability or performance, validate browser-version compatibility or assess third-party hosted providers."]
+    }
   },
   {
     "slug": "drupal",
