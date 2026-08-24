@@ -39,8 +39,15 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   // Baslik 65 karakteri asarsa arama sonucunda kesilir; marka adi
   // uzun ciftlerde dusuruluyor ki asil ifade ("X vs Y") gorunur kalsin.
+  // Uc kademeli kisaltma: cok uzun isimlerde CEKIRDEK basligin kendisi de
+  // 65'i asiyordu (ornek: "ActiveCampaign vs Ahrefs Webmaster Tools").
   const cekirdek = `${tool1.name} vs ${tool2.name}: Which Is Better in 2026?`;
-  const title = cekirdek.length <= 46 ? `${cekirdek} | ToolCompare` : cekirdek;
+  const kisa = `${tool1.name} vs ${tool2.name} (2026)`;
+  const title =
+    cekirdek.length <= 46 ? `${cekirdek} | ToolCompare`
+    : cekirdek.length <= 65 ? cekirdek
+    : kisa.length <= 65 ? kisa
+    : `${tool1.name} vs ${tool2.name}`;
   const description = `Compare ${tool1.name} and ${tool2.name} side-by-side: pricing, ease of use, features, pros, cons and who each one is for.`;
 
   // "a-vs-b" ve "b-vs-a" ayni sayfa. Kanonik olan alfabetik sirali olan;

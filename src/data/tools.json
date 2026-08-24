@@ -8638,5 +8638,1869 @@
       "acikKaynak": false,
       "sso": false
     }
+  },
+  {
+    "slug": "vscode",
+    "name": "Visual Studio Code",
+    "category": "Developer Tools",
+    "shortDescription": "Free, extensible code editor from Microsoft.",
+    "websiteUrl": "https://code.visualstudio.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "jetbrains",
+    "name": "JetBrains",
+    "category": "Developer Tools",
+    "shortDescription": "IDEs for most major languages.",
+    "websiteUrl": "https://www.jetbrains.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "sublime-text",
+    "name": "Sublime Text",
+    "category": "Developer Tools",
+    "shortDescription": "Fast native text editor.",
+    "websiteUrl": "https://www.sublimetext.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "neovim",
+    "name": "Neovim",
+    "category": "Developer Tools",
+    "shortDescription": "Extensible terminal-based editor.",
+    "websiteUrl": "https://neovim.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "warp",
+    "name": "Warp",
+    "category": "Developer Tools",
+    "shortDescription": "Modern terminal with editor-like input.",
+    "websiteUrl": "https://www.warp.dev",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "iterm2",
+    "name": "iTerm2",
+    "category": "Developer Tools",
+    "shortDescription": "Terminal replacement for macOS.",
+    "websiteUrl": "https://iterm2.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "dbeaver",
+    "name": "DBeaver",
+    "category": "Developer Tools",
+    "shortDescription": "Universal database client.",
+    "websiteUrl": "https://dbeaver.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "tableplus",
+    "name": "TablePlus",
+    "category": "Developer Tools",
+    "shortDescription": "Native database GUI.",
+    "websiteUrl": "https://tableplus.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "prisma",
+    "name": "Prisma",
+    "category": "Developer Tools",
+    "shortDescription": "Type-safe ORM and data toolkit.",
+    "websiteUrl": "https://www.prisma.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "drizzle",
+    "name": "Drizzle ORM",
+    "category": "Developer Tools",
+    "shortDescription": "Lightweight TypeScript ORM.",
+    "websiteUrl": "https://orm.drizzle.team",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "turso",
+    "name": "Turso",
+    "category": "Developer Tools",
+    "shortDescription": "Edge-hosted SQLite databases.",
+    "websiteUrl": "https://turso.tech",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "upstash",
+    "name": "Upstash",
+    "category": "Developer Tools",
+    "shortDescription": "Serverless Redis and Kafka.",
+    "websiteUrl": "https://upstash.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "clerk",
+    "name": "Clerk",
+    "category": "Developer Tools",
+    "shortDescription": "Drop-in authentication and user management.",
+    "websiteUrl": "https://clerk.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "auth0",
+    "name": "Auth0",
+    "category": "Developer Tools",
+    "shortDescription": "Identity platform for applications.",
+    "websiteUrl": "https://auth0.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "keycloak",
+    "name": "Keycloak",
+    "category": "Developer Tools",
+    "shortDescription": "Open-source identity and access management.",
+    "websiteUrl": "https://www.keycloak.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "nginx",
+    "name": "NGINX",
+    "category": "Developer Tools",
+    "shortDescription": "Web server and reverse proxy.",
+    "websiteUrl": "https://nginx.org",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "caddy",
+    "name": "Caddy",
+    "category": "Developer Tools",
+    "shortDescription": "Web server with automatic HTTPS.",
+    "websiteUrl": "https://caddyserver.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "pulumi",
+    "name": "Pulumi",
+    "category": "Developer Tools",
+    "shortDescription": "Infrastructure as code in real languages.",
+    "websiteUrl": "https://www.pulumi.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "datadog-synthetics",
+    "name": "Datadog Synthetics",
+    "category": "Developer Tools",
+    "shortDescription": "Synthetic monitoring for endpoints.",
+    "websiteUrl": "https://www.datadoghq.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "betterstack",
+    "name": "Better Stack",
+    "category": "Developer Tools",
+    "shortDescription": "Uptime monitoring, logs and incident management.",
+    "websiteUrl": "https://betterstack.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "statuspage",
+    "name": "Atlassian Statuspage",
+    "category": "Developer Tools",
+    "shortDescription": "Public status pages for incidents.",
+    "websiteUrl": "https://www.atlassian.com/software/statuspage",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "launchdarkly",
+    "name": "LaunchDarkly",
+    "category": "Developer Tools",
+    "shortDescription": "Feature flags and progressive delivery.",
+    "websiteUrl": "https://launchdarkly.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "codecov",
+    "name": "Codecov",
+    "category": "Developer Tools",
+    "shortDescription": "Test coverage reporting for pull requests.",
+    "websiteUrl": "https://about.codecov.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "snyk",
+    "name": "Snyk",
+    "category": "Developer Tools",
+    "shortDescription": "Finds vulnerabilities in code and dependencies.",
+    "websiteUrl": "https://snyk.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "sonarqube",
+    "name": "SonarQube",
+    "category": "Developer Tools",
+    "shortDescription": "Static analysis and code quality gates.",
+    "websiteUrl": "https://www.sonarsource.com/products/sonarqube/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "dribbble",
+    "name": "Dribbble",
+    "category": "Design",
+    "shortDescription": "Portfolio community for designers.",
+    "websiteUrl": "https://dribbble.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "behance",
+    "name": "Behance",
+    "category": "Design",
+    "shortDescription": "Adobe's portfolio network.",
+    "websiteUrl": "https://www.behance.net",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "fontawesome",
+    "name": "Font Awesome",
+    "category": "Design",
+    "shortDescription": "Widely used icon library.",
+    "websiteUrl": "https://fontawesome.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "coolors",
+    "name": "Coolors",
+    "category": "Design",
+    "shortDescription": "Colour palette generator.",
+    "websiteUrl": "https://coolors.co",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "beehiiv-ads",
+    "name": "beehiiv Ad Network",
+    "category": "Marketing",
+    "shortDescription": "Newsletter ad marketplace.",
+    "websiteUrl": "https://www.beehiiv.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "gohighlevel",
+    "name": "GoHighLevel",
+    "category": "Marketing",
+    "shortDescription": "All-in-one marketing platform for agencies.",
+    "websiteUrl": "https://www.gohighlevel.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "clickfunnels",
+    "name": "ClickFunnels",
+    "category": "Marketing",
+    "shortDescription": "Sales funnel builder.",
+    "websiteUrl": "https://www.clickfunnels.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "leadpages",
+    "name": "Leadpages",
+    "category": "Marketing",
+    "shortDescription": "Landing pages and lead capture.",
+    "websiteUrl": "https://www.leadpages.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "carrot",
+    "name": "Carrot",
+    "category": "Marketing",
+    "shortDescription": "Websites and lead gen for real estate investors.",
+    "websiteUrl": "https://carrot.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "ahrefs-webmaster",
+    "name": "Ahrefs Webmaster Tools",
+    "category": "Marketing",
+    "shortDescription": "Free site audit and backlink data for your own site.",
+    "websiteUrl": "https://ahrefs.com/webmaster-tools",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "similarweb",
+    "name": "Similarweb",
+    "category": "Marketing",
+    "shortDescription": "Traffic and market intelligence.",
+    "websiteUrl": "https://www.similarweb.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "spyfu",
+    "name": "SpyFu",
+    "category": "Marketing",
+    "shortDescription": "Competitor keyword and ad research.",
+    "websiteUrl": "https://www.spyfu.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "buzzsumo",
+    "name": "BuzzSumo",
+    "category": "Marketing",
+    "shortDescription": "Content and influencer research.",
+    "websiteUrl": "https://buzzsumo.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "frase",
+    "name": "Frase",
+    "category": "Marketing",
+    "shortDescription": "SEO content briefs and optimisation.",
+    "websiteUrl": "https://www.frase.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "clearscope",
+    "name": "Clearscope",
+    "category": "Marketing",
+    "shortDescription": "Content optimisation for search.",
+    "websiteUrl": "https://www.clearscope.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "hypefury",
+    "name": "Hypefury",
+    "category": "Marketing",
+    "shortDescription": "Schedules and grows social posts.",
+    "websiteUrl": "https://hypefury.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "typefully",
+    "name": "Typefully",
+    "category": "Marketing",
+    "shortDescription": "Write and schedule threads.",
+    "websiteUrl": "https://typefully.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "loops",
+    "name": "Loops",
+    "category": "Marketing",
+    "shortDescription": "Email for software companies.",
+    "websiteUrl": "https://loops.so",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "resend",
+    "name": "Resend",
+    "category": "Marketing",
+    "shortDescription": "Transactional email API for developers.",
+    "websiteUrl": "https://resend.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "postmark",
+    "name": "Postmark",
+    "category": "Marketing",
+    "shortDescription": "Reliable transactional email delivery.",
+    "websiteUrl": "https://postmarkapp.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "sendgrid",
+    "name": "SendGrid",
+    "category": "Marketing",
+    "shortDescription": "Email delivery at scale.",
+    "websiteUrl": "https://sendgrid.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "google-workspace",
+    "name": "Google Workspace",
+    "category": "Productivity",
+    "shortDescription": "Gmail, Docs, Drive and Meet for business.",
+    "websiteUrl": "https://workspace.google.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "microsoft-365",
+    "name": "Microsoft 365",
+    "category": "Productivity",
+    "shortDescription": "Office apps and cloud services.",
+    "websiteUrl": "https://www.microsoft.com/microsoft-365",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "dropbox",
+    "name": "Dropbox",
+    "category": "Productivity",
+    "shortDescription": "File sync and sharing.",
+    "websiteUrl": "https://www.dropbox.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "box",
+    "name": "Box",
+    "category": "Productivity",
+    "shortDescription": "Content management for enterprises.",
+    "websiteUrl": "https://www.box.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "sync-com",
+    "name": "Sync.com",
+    "category": "Productivity",
+    "shortDescription": "End-to-end encrypted cloud storage.",
+    "websiteUrl": "https://www.sync.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "1password-teams",
+    "name": "1Password Teams",
+    "category": "Productivity",
+    "shortDescription": "Password management for teams.",
+    "websiteUrl": "https://1password.com/business",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "keeper",
+    "name": "Keeper",
+    "category": "Productivity",
+    "shortDescription": "Password and secrets management.",
+    "websiteUrl": "https://www.keepersecurity.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "todoist-pro",
+    "name": "Todoist Pro",
+    "category": "Productivity",
+    "shortDescription": "Paid tier of the Todoist task manager.",
+    "websiteUrl": "https://todoist.com/pricing",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "sunsama",
+    "name": "Sunsama",
+    "category": "Productivity",
+    "shortDescription": "Daily planner that pulls tasks from your tools.",
+    "websiteUrl": "https://www.sunsama.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "akiflow",
+    "name": "Akiflow",
+    "category": "Productivity",
+    "shortDescription": "Consolidates tasks and calendar into a day plan.",
+    "websiteUrl": "https://akiflow.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "fantastical",
+    "name": "Fantastical",
+    "category": "Productivity",
+    "shortDescription": "Calendar app for Apple devices.",
+    "websiteUrl": "https://flexibits.com/fantastical",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "spark-mail",
+    "name": "Spark Mail",
+    "category": "Productivity",
+    "shortDescription": "Email client with team features.",
+    "websiteUrl": "https://sparkmailapp.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "shortwave",
+    "name": "Shortwave",
+    "category": "Productivity",
+    "shortDescription": "AI email client built on Gmail.",
+    "websiteUrl": "https://www.shortwave.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "mem",
+    "name": "Mem",
+    "category": "Productivity",
+    "shortDescription": "AI-organised notes.",
+    "websiteUrl": "https://get.mem.ai",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "capacities",
+    "name": "Capacities",
+    "category": "Productivity",
+    "shortDescription": "Object-based note taking.",
+    "websiteUrl": "https://capacities.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "anytype",
+    "name": "Anytype",
+    "category": "Productivity",
+    "shortDescription": "Local-first, encrypted workspace.",
+    "websiteUrl": "https://anytype.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "logseq",
+    "name": "Logseq",
+    "category": "Productivity",
+    "shortDescription": "Open-source outliner and knowledge base.",
+    "websiteUrl": "https://logseq.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "linear-insights",
+    "name": "Linear Insights",
+    "category": "Project Management",
+    "shortDescription": "Reporting layer inside Linear.",
+    "websiteUrl": "https://linear.app",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "productboard",
+    "name": "Productboard",
+    "category": "Project Management",
+    "shortDescription": "Product management and roadmapping.",
+    "websiteUrl": "https://www.productboard.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "aha",
+    "name": "Aha!",
+    "category": "Project Management",
+    "shortDescription": "Roadmaps and product strategy.",
+    "websiteUrl": "https://www.aha.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "notion-projects",
+    "name": "Notion Projects",
+    "category": "Project Management",
+    "shortDescription": "Project tracking inside Notion.",
+    "websiteUrl": "https://www.notion.so/product/projects",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "plane",
+    "name": "Plane",
+    "category": "Project Management",
+    "shortDescription": "Open-source project management.",
+    "websiteUrl": "https://plane.so",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "youtrack",
+    "name": "YouTrack",
+    "category": "Project Management",
+    "shortDescription": "Issue tracker and agile boards from JetBrains.",
+    "websiteUrl": "https://www.jetbrains.com/youtrack/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "zoom-phone",
+    "name": "Zoom Phone",
+    "category": "Communication",
+    "shortDescription": "Cloud phone system from Zoom.",
+    "websiteUrl": "https://www.zoom.com/en/products/voip-phone/",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "dialpad",
+    "name": "Dialpad",
+    "category": "Communication",
+    "shortDescription": "AI-powered business phone and meetings.",
+    "websiteUrl": "https://www.dialpad.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "ringcentral",
+    "name": "RingCentral",
+    "category": "Communication",
+    "shortDescription": "Business phone, message and video.",
+    "websiteUrl": "https://www.ringcentral.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "aircall",
+    "name": "Aircall",
+    "category": "Communication",
+    "shortDescription": "Cloud call centre for sales and support.",
+    "websiteUrl": "https://aircall.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "whereby",
+    "name": "Whereby",
+    "category": "Communication",
+    "shortDescription": "Browser-based video meetings.",
+    "websiteUrl": "https://whereby.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "around",
+    "name": "Loom Recordings",
+    "category": "Communication",
+    "shortDescription": "Async video messaging.",
+    "websiteUrl": "https://www.loom.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "kinsta",
+    "name": "Kinsta",
+    "category": "Hosting",
+    "shortDescription": "Managed WordPress and application hosting.",
+    "websiteUrl": "https://kinsta.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "wpengine",
+    "name": "WP Engine",
+    "category": "Hosting",
+    "shortDescription": "Managed WordPress hosting.",
+    "websiteUrl": "https://wpengine.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "siteground",
+    "name": "SiteGround",
+    "category": "Hosting",
+    "shortDescription": "Shared and managed WordPress hosting.",
+    "websiteUrl": "https://www.siteground.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "porkbun",
+    "name": "Porkbun",
+    "category": "Hosting",
+    "shortDescription": "Domain registrar with low renewal prices.",
+    "websiteUrl": "https://porkbun.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "supabase-hosting",
+    "name": "Supabase Platform",
+    "category": "Hosting",
+    "shortDescription": "Postgres, auth and storage as a platform.",
+    "websiteUrl": "https://supabase.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "lemonsqueezy-store",
+    "name": "Lemon Squeezy Store",
+    "category": "E-commerce",
+    "shortDescription": "Storefront and merchant of record.",
+    "websiteUrl": "https://www.lemonsqueezy.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "shopify-plus",
+    "name": "Shopify Plus",
+    "category": "E-commerce",
+    "shortDescription": "Shopify's enterprise tier.",
+    "websiteUrl": "https://www.shopify.com/plus",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "printful",
+    "name": "Printful",
+    "category": "E-commerce",
+    "shortDescription": "Print on demand and fulfilment.",
+    "websiteUrl": "https://www.printful.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "printify",
+    "name": "Printify",
+    "category": "E-commerce",
+    "shortDescription": "Print on demand marketplace.",
+    "websiteUrl": "https://printify.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "payhip",
+    "name": "Payhip",
+    "category": "E-commerce",
+    "shortDescription": "Sell digital products and memberships.",
+    "websiteUrl": "https://payhip.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "sellfy",
+    "name": "Sellfy",
+    "category": "E-commerce",
+    "shortDescription": "Simple storefront for creators.",
+    "websiteUrl": "https://sellfy.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "category": "AI Tools",
+    "shortDescription": "Open-weight models and a chat assistant.",
+    "websiteUrl": "https://www.deepseek.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "groq",
+    "name": "Groq",
+    "category": "AI Tools",
+    "shortDescription": "Very fast inference for open models.",
+    "websiteUrl": "https://groq.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "together-ai",
+    "name": "Together AI",
+    "category": "AI Tools",
+    "shortDescription": "Hosted open models and fine-tuning.",
+    "websiteUrl": "https://www.together.ai",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "replicate",
+    "name": "Replicate",
+    "category": "AI Tools",
+    "shortDescription": "Run and deploy open models via API.",
+    "websiteUrl": "https://replicate.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "openrouter",
+    "name": "OpenRouter",
+    "category": "AI Tools",
+    "shortDescription": "One API across many model providers.",
+    "websiteUrl": "https://openrouter.ai",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "langchain",
+    "name": "LangChain",
+    "category": "AI Tools",
+    "shortDescription": "Framework for building LLM applications.",
+    "websiteUrl": "https://www.langchain.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "llamaindex",
+    "name": "LlamaIndex",
+    "category": "AI Tools",
+    "shortDescription": "Data framework for LLM apps.",
+    "websiteUrl": "https://www.llamaindex.ai",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "pinecone",
+    "name": "Pinecone",
+    "category": "AI Tools",
+    "shortDescription": "Managed vector database.",
+    "websiteUrl": "https://www.pinecone.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "weaviate",
+    "name": "Weaviate",
+    "category": "AI Tools",
+    "shortDescription": "Open-source vector database.",
+    "websiteUrl": "https://weaviate.io",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "qdrant",
+    "name": "Qdrant",
+    "category": "AI Tools",
+    "shortDescription": "Open-source vector search engine.",
+    "websiteUrl": "https://qdrant.tech",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "chroma",
+    "name": "Chroma",
+    "category": "AI Tools",
+    "shortDescription": "Embedding database for AI apps.",
+    "websiteUrl": "https://www.trychroma.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "v0",
+    "name": "v0",
+    "category": "AI Tools",
+    "shortDescription": "Generates UI code from prompts.",
+    "websiteUrl": "https://v0.app",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "bolt-new",
+    "name": "Bolt",
+    "category": "AI Tools",
+    "shortDescription": "In-browser AI app builder.",
+    "websiteUrl": "https://bolt.new",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": false,
+      "mobil": false,
+      "acikKaynak": true,
+      "sso": false
+    }
+  },
+  {
+    "slug": "gorgias",
+    "name": "Gorgias",
+    "category": "Customer Service",
+    "shortDescription": "Helpdesk built for ecommerce.",
+    "websiteUrl": "https://www.gorgias.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "gladly",
+    "name": "Gladly",
+    "category": "Customer Service",
+    "shortDescription": "People-centred customer service platform.",
+    "websiteUrl": "https://www.gladly.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "chatwoot",
+    "name": "Chatwoot",
+    "category": "Customer Service",
+    "shortDescription": "Open-source customer engagement suite.",
+    "websiteUrl": "https://www.chatwoot.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    }
+  },
+  {
+    "slug": "mercury",
+    "name": "Mercury",
+    "category": "Finance Tools",
+    "shortDescription": "Banking built for startups.",
+    "websiteUrl": "https://mercury.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "wise",
+    "name": "Wise",
+    "category": "Finance Tools",
+    "shortDescription": "International transfers and multi-currency accounts.",
+    "websiteUrl": "https://wise.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "kullanima-gore",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": false
+    }
+  },
+  {
+    "slug": "bill-com",
+    "name": "BILL",
+    "category": "Finance Tools",
+    "shortDescription": "Accounts payable and receivable automation.",
+    "websiteUrl": "https://www.bill.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "workday",
+    "name": "Workday",
+    "category": "HR Software",
+    "shortDescription": "Enterprise HR and finance suite.",
+    "websiteUrl": "https://www.workday.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "lever",
+    "name": "Lever",
+    "category": "HR Software",
+    "shortDescription": "Applicant tracking and recruiting CRM.",
+    "websiteUrl": "https://www.lever.co",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "greenhouse",
+    "name": "Greenhouse",
+    "category": "HR Software",
+    "shortDescription": "Structured hiring and applicant tracking.",
+    "websiteUrl": "https://www.greenhouse.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "ironclad",
+    "name": "Ironclad",
+    "category": "Legal Tools",
+    "shortDescription": "Contract lifecycle management.",
+    "websiteUrl": "https://ironcladapp.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": false,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "hubspot-sales",
+    "name": "HubSpot Sales Hub",
+    "category": "CRM",
+    "shortDescription": "Sales CRM and automation from HubSpot.",
+    "websiteUrl": "https://www.hubspot.com/products/sales",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "copper",
+    "name": "Copper",
+    "category": "CRM",
+    "shortDescription": "CRM that lives inside Google Workspace.",
+    "websiteUrl": "https://www.copper.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
+  },
+  {
+    "slug": "keap",
+    "name": "Keap",
+    "category": "CRM",
+    "shortDescription": "CRM and marketing automation for small business.",
+    "websiteUrl": "https://keap.com",
+    "incelendi": false,
+    "basePrice": 0,
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": false,
+      "sso": true
+    }
   }
 ]
