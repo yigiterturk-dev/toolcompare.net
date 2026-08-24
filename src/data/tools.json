@@ -15840,57 +15840,167 @@
     "slug": "heroku",
     "name": "Heroku",
     "category": "Hosting",
-    "shortDescription": "Cloud Platform as a service.",
+    "shortDescription": "Managed application platform built around deployable dynos, data services, pipelines and add-ons.",
     "websiteUrl": "https://www.heroku.com/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Heroku popularised git-push deployment and still runs applications with add-on services and no server management.",
+    "basePrice": 5,
+    "isFlat": false,
+    "fiyatModeli": "kullanim-bazli",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": true },
+    "longDescription": "Heroku is a proprietary platform as a service that builds and runs applications in managed dyno containers, with pipelines, logs, data products and marketplace add-ons. Eco provides 1,000 shared personal-account dyno hours for $5 monthly and sleeps inactive web apps; Basic and larger dynos are usage-prorated up to published monthly caps. Dyno filesystems are ephemeral, so durable state belongs in databases or object storage. Compute, data services, add-ons, CI, support and private networking must be costed together.",
     "pros": [
-      "Deploying is genuinely one command",
-      "Large add-on marketplace",
-      "Mature and predictable"
+      "Managed runtime: Heroku handles container placement, restarts and underlying operating-system administration.",
+      "Simple release model: Source or container deployments, configuration variables and one-off commands support repeatable application delivery.",
+      "Integrated ecosystem: Pipelines, review apps, Postgres, Key-Value Store and marketplace add-ons reduce integration work.",
+      "Granular billing: Most dynos and data add-ons are prorated to the second up to a monthly maximum."
     ],
     "cons": [
-      "Expensive relative to raw infrastructure",
-      "Free tier was removed",
-      "Innovation has slowed under Salesforce"
+      "No general free compute tier: Eco costs $5 monthly, is personal-app only and can exhaust its shared hour pool.",
+      "Eco cold starts: Inactive web dynos sleep after 30 minutes and wake with a delay.",
+      "Ephemeral local disk: Files written at runtime disappear across restarts, deploys or dyno replacement.",
+      "Stacked cost: Production dynos, databases, add-ons, CI, teams and support can materially exceed the headline compute price."
     ],
-    "targetAudience": "Teams that value deployment simplicity over hosting cost.",
-    "verdict": "Still pleasant to use, but newer platforms offer similar simplicity for less money."
+    "keyFeatures": [
+      { "title": "Managed dynos", "description": "Runs isolated application processes with platform-managed cycling and replacement." },
+      { "title": "Release workflow", "description": "Builds deployable releases and supports pipelines, review apps and one-off administrative processes." },
+      { "title": "Data and add-ons", "description": "Attaches Heroku data products and third-party marketplace services to applications." },
+      { "title": "Runtime tiers", "description": "Offers sleeping personal Eco dynos through always-on production and isolated Private/Shield options." }
+    ],
+    "targetAudience": "Application teams willing to pay for managed delivery and operations instead of controlling raw servers.",
+    "bestFor": [
+      "Conventional stateless web and worker applications needing fast deployment and managed runtime operations",
+      "Small experiments on Eco where sleep and the shared 1,000-hour pool are acceptable",
+      "Production services after sizing dynos, databases, add-ons, regions and support as one bill"
+    ],
+    "skipIf": [
+      "The application needs persistent local disk, privileged host access or unusual infrastructure control",
+      "Cold starts, a single Eco dyno per process type or hour exhaustion are unacceptable",
+      "Data residency is assumed from the app region without reviewing control-plane and add-on behavior"
+    ],
+    "verdict": "Heroku remains useful when reduced platform work is worth the premium; validate build/runtime compatibility, externalize every durable file, load-test the chosen dynos and database, and model the complete monthly stack before production.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Heroku — Dynos", "url": "https://www.heroku.com/dynos/", "checkedAt": "2026-08-24", "supports": ["managed application containers", "current Eco Basic Standard and Performance prices", "sleep behavior", "production positioning", "Private and Shield availability"] },
+        { "label": "Heroku Dev Center — Eco hours", "url": "https://devcenter.heroku.com/articles/eco-dyno-hours", "checkedAt": "2026-08-24", "supports": ["$5 monthly plan", "1,000 shared hours", "personal-app restriction", "30-minute inactivity sleep", "worker behavior", "hour exhaustion", "no extra-hour purchase", "review-app and CI consumption"] },
+        { "label": "Heroku Dev Center — How Heroku works", "url": "https://devcenter.heroku.com/articles/how-heroku-works", "checkedAt": "2026-08-24", "supports": ["dyno manager", "container cycling", "one-off dynos", "ephemeral filesystem", "stateless architecture", "shared durable services"] },
+        { "label": "Heroku Dev Center — Usage and billing", "url": "https://devcenter.heroku.com/articles/usage-and-billing", "checkedAt": "2026-08-24", "supports": ["per-second proration", "monthly price caps", "current dyno prices", "data add-on billing", "review-app usage", "resource deletion risk"] },
+        { "label": "Heroku Dev Center — Platform limits", "url": "https://devcenter.heroku.com/articles/limits", "checkedAt": "2026-08-24", "supports": ["dyno scaling limits", "Eco concurrency", "API limits", "log-history boundary", "memory enforcement"] },
+        { "label": "Heroku Dev Center — Regions", "url": "https://devcenter.heroku.com/articles/regions", "checkedAt": "2026-08-24", "supports": ["Common Runtime and Private Space regions", "single-region app placement", "add-on region dependency", "control-plane residency caveat"] }
+      ],
+      "limitations": ["Official Heroku product and Dev Center pages were reviewed; ToolCompare did not create an account, deploy an app, benchmark cold starts or dynos, inspect every buildpack and stack, run a database, test backups or failover, calculate add-on/support/Enterprise quotes, validate SSO configuration, or audit compliance and residency. Prices and limits may change after the review date."]
+    }
   },
   {
     "slug": "hostinger",
     "name": "Hostinger",
     "category": "Hosting",
-    "shortDescription": "Lithuanian web hosting company.",
+    "shortDescription": "Managed web hosting with hPanel, WordPress and code deployment, email, backups and long-term promotional plans.",
     "websiteUrl": "https://www.hostinger.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Hostinger sells low-cost shared, cloud and WordPress hosting with heavy first-term discounts.",
+    "basePrice": 2.99,
+    "isFlat": false,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": false, "sso": false },
+    "longDescription": "Hostinger's managed web-hosting plans combine hPanel, WordPress/PHP/Node.js support, SSL, email trials, backups, migration and AI tools. The lowest displayed monthly equivalents require 48 months paid upfront: current Premium, Unlimited and Cloud Startup offers renew at substantially higher monthly rates. “Unlimited” websites and mailboxes remain subject to storage, CPU, RAM, database and fair-use limits, and included email is free only for the stated first year.",
     "pros": [
-      "Very low entry pricing",
-      "Own control panel is simple",
-      "Global data centre choice"
+      "Low initial effective price: Multi-year prepayment substantially discounts the first hosting term.",
+      "Managed toolkit: hPanel, SSL, malware controls, backups, migration and application installers reduce routine administration.",
+      "Multiple build paths: Plans support WordPress, website builder, PHP/HTML, Node.js and related developer tools.",
+      "Downloadable backups: Standard hosted sites can export file and database backups for independent storage."
     ],
     "cons": [
-      "Renewal prices are much higher than the first term",
-      "Resource limits on cheap plans",
-      "Upsells throughout the interface"
+      "Long prepayment: The advertised $2.99 rate represents $143.52 paid for 48 months, not monthly billing at that rate.",
+      "Higher renewal: Current Premium renews at $10.99/month; other tiers have similarly material increases.",
+      "Unlimited is qualified: Storage, database, CPU, RAM and fair-use limits still apply, and the Unlimited plan cannot be downgraded.",
+      "Portability differs by product: Website Builder and Horizons backups cannot be downloaded like conventional hosted files/databases."
     ],
-    "targetAudience": "Personal sites and small projects on a tight budget.",
-    "verdict": "Cheap to start and considerably less cheap to keep. Budget for the renewal from day one."
+    "keyFeatures": [
+      { "title": "Managed hPanel hosting", "description": "Centralizes websites, domains, databases, mail, files, resource usage and application setup." },
+      { "title": "Tiered backups", "description": "Premium has weekly backups; higher current tiers add daily or on-demand recovery options." },
+      { "title": "Migration assistance", "description": "Offers automated or assisted incoming website migration after purchasing a plan." },
+      { "title": "Developer access", "description": "Provides SSH, WP-CLI, PHP control, Git integration and current Node.js hosting options." }
+    ],
+    "targetAudience": "Individuals, small businesses and agencies that accept long prepaid terms in exchange for bundled managed hosting.",
+    "bestFor": [
+      "Small WordPress and conventional code-based sites fitting the exact plan's resource limits",
+      "Buyers able to commit for multiple years and budget the published renewal rate",
+      "Teams that will periodically download independent file, database and email backups"
+    ],
+    "skipIf": [
+      "A short commitment or stable initial-to-renewal price is required",
+      "The workload needs root access, dedicated resources or exceeds shared/cloud plan CPU and memory limits",
+      "A proprietary Builder/Horizons project requires complete portable source and downloadable backups"
+    ],
+    "verdict": "Hostinger can deliver good first-term value, but compare total prepaid and renewal cost, not the monthly badge; verify resource limits and product portability, then maintain independent website, database and email backups before relying on it.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Hostinger — Web Hosting", "url": "https://www.hostinger.com/web-hosting", "checkedAt": "2026-08-24", "supports": ["current Premium Unlimited and Cloud Startup prices", "48-month upfront totals", "renewal rates", "site storage and mailbox limits", "backup tiers", "domain and email promotional periods", "Node.js and WordPress support", "fair-use qualification", "migration and hPanel"] },
+        { "label": "Hostinger Support — Current hosting limits", "url": "https://www.hostinger.com/support/10717644-new-web-and-cloud-hosting-limits-at-hostinger/", "checkedAt": "2026-08-24", "supports": ["plan-version dates", "website storage database memory and mailbox limits", "Unlimited replacement of Business", "one-year email boundary", "no Unlimited downgrade", "CPU and RAM limits"] },
+        { "label": "Hostinger Support — Download backups", "url": "https://www.hostinger.com/support/5981435-how-to-download-backups-at-hostinger/", "checkedAt": "2026-08-24", "supports": ["weekly and daily backup eligibility", "six-week and seven-day retention", "file and database downloads", "separate backup storage", "Website Builder and Horizons exclusion"] },
+        { "label": "Hostinger Support — Restore backups", "url": "https://support.hostinger.com/en/articles/4283700-how-to-restore-backups-at-hostinger", "checkedAt": "2026-08-24", "supports": ["file and database restoration", "WordPress one-click restore", "partial restore", "current-data overwrite warning", "same-account scope"] },
+        { "label": "Hostinger Support — Moving services", "url": "https://support.hostinger.com/en/articles/1583284-how-to-move-services-from-one-hostinger-account-to-another", "checkedAt": "2026-08-24", "supports": ["non-transferable hosting service", "domain exception", "manual file and database migration", "separate email export"] },
+        { "label": "Hostinger Support — Expired-plan recovery", "url": "https://www.hostinger.com/support/new-hosting-instead-renewal-hostinger/", "checkedAt": "2026-08-24", "supports": ["manual migration requirements", "Builder ecommerce migration exclusion", "mail and configuration recreation", "30-day expired-plan window", "Builder and Horizons backup exclusion"] }
+      ],
+      "limitations": ["Official Hostinger plan and support pages were reviewed; ToolCompare did not purchase a plan, inspect region-specific VAT or every term length, migrate or host a site, benchmark shared/cloud resources, test hPanel/API/AI tools, contact support, restore email, audit malware controls, or validate every fair-use limit. Prices, plan names, limits and promotions may change after the review date."]
+    }
   },
   {
     "slug": "ionos",
-    "name": "Ionos",
+    "name": "IONOS",
     "category": "Hosting",
-    "shortDescription": "German web hoster and cloud service provider.",
+    "shortDescription": "Shared web hosting with domain, SSL, email, databases, SSH access, backups and tiered resources.",
     "websiteUrl": "https://www.ionos.com/",
-    "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true
+    "incelendi": true,
+    "basePrice": 1,
+    "isFlat": false,
+    "fiyatModeli": "abonelik",
+    "kriterler": { "api": true, "mobil": true, "acikKaynak": false, "sso": false },
+    "longDescription": "IONOS sells domains, shared web hosting, WordPress, VPS, cloud and dedicated products; this record focuses on US Linux shared Web Hosting. Current tiers bundle a domain, SSL, professional email, SSH/SFTP/WP-CLI, databases, one-click apps, daily backup/restore and 24/7 support. Promotional one-year prices rise to disclosed monthly renewal rates, taxes apply, and apparently unlimited sites, storage or databases remain bounded by shared compute, file-count and acceptable-use constraints.",
+    "pros": [
+      "Broad bundle: Domain, SSL, email, databases, SSH tools, app installation, backups and support are packaged together.",
+      "Published renewal figures: Plan cards show first-year discounts and the subsequent monthly price.",
+      "Developer access: SSH, SFTP and WP-CLI support conventional PHP and WordPress workflows.",
+      "Product ladder: Shared, WordPress, Deploy Now, VPS, cloud and dedicated services cover different control requirements."
+    ],
+    "cons": [
+      "Promotional discontinuity: The $1 Plus offer requires a one-year term and then rises to $14/month at the reviewed date.",
+      "Shared-hosting limits: CPU, memory and a 262,144-file ceiling constrain even plans marketed with unlimited resources.",
+      "Bundle complexity: Domains, email, hosting and optional products can renew on separate terms and require cancellation planning.",
+      "Backup scope needs verification: Included daily restore does not remove the need for off-provider file and database copies."
+    ],
+    "keyFeatures": [
+      { "title": "Shared hosting tiers", "description": "Allocates websites, geo-redundant storage, databases and compute levels by plan." },
+      { "title": "Developer tools", "description": "Includes SSH, SFTP, WP-CLI and database access for supported web projects." },
+      { "title": "Bundled operations", "description": "Provides SSL, DDoS protection, daily backup/restore and 24/7 support." },
+      { "title": "Account mobile app", "description": "Offers iOS and Android account functions such as notifications and payment-detail management." }
+    ],
+    "targetAudience": "Individuals and small organizations wanting a bundled shared-hosting service with phone-supported operations and clear tier choices.",
+    "bestFor": [
+      "Conventional PHP, database and WordPress sites that fit shared resource and file limits",
+      "Buyers who value domain, email, SSL and hosting in one provider account",
+      "Projects whose full first-year and renewal costs have been documented before purchase"
+    ],
+    "skipIf": [
+      "The application needs root access, persistent custom daemons or guaranteed compute isolation",
+      "The website is expected to exceed file, database, CPU or memory limits despite an unlimited label",
+      "No independent export, backup, domain-transfer and cancellation procedure is maintained"
+    ],
+    "verdict": "IONOS shared hosting fits standard small sites, but select it using the post-promotion price and concrete resource limits; separate domain/email obligations, export independent backups, and move to VPS or cloud when shared hosting no longer matches the workload.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "IONOS — Web Hosting", "url": "https://www.ionos.com/web-hosting", "checkedAt": "2026-08-24", "supports": ["shared-hosting model", "current US promotional and renewal prices", "one-year term", "website storage and database limits", "domain SSL and email", "SSH SFTP and WP-CLI", "daily backup and restore", "24/7 support", "tax caveat"] },
+        { "label": "IONOS — Hosting solutions", "url": "https://www.ionos.com/hosting/web-hosting-solutions", "checkedAt": "2026-08-24", "supports": ["web WordPress Windows Deploy Now VPS and cloud product separation", "included SSL domain DDoS protection and backups", "root-access VPS distinction"] },
+        { "label": "IONOS Help — Hosting", "url": "https://www.ionos.com/help/hosting/", "checkedAt": "2026-08-24", "supports": ["webspace FTP SSH and PHP management", "database administration", "file and database backup guidance", "restore support", "performance levels", "mobile application availability", "Deploy Now support boundary"] },
+        { "label": "IONOS Help — Maximum file count", "url": "https://www.ionos.com/help/hosting/managing-disk-space/maximum-number-of-files-in-ionos-hosting/", "checkedAt": "2026-08-24", "supports": ["262144 shared-hosting file limit", "per-contract scope", "performance and security rationale", "backup cache and media cleanup guidance"] }
+      ],
+      "limitations": ["Official IONOS US product and help pages were reviewed; ToolCompare did not buy hosting, inspect checkout or every contract term, verify all regional offers, deploy or migrate a site, benchmark compute, restore a backup, test support, use the mobile app or APIs, transfer a domain, configure email, or compare WordPress/VPS/cloud products. Prices, limits, taxes and promotions may change after the review date."]
+    }
   },
   {
     "slug": "ovhcloud",
