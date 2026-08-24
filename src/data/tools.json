@@ -14506,31 +14506,166 @@
     "slug": "hudson",
     "name": "Hudson",
     "category": "Developer Tools",
-    "shortDescription": "Topics referred to by the same term.",
+    "shortDescription": "Archived Java continuous-integration server whose last listed Eclipse release is from 2016.",
     "websiteUrl": "https://projects.eclipse.org/projects/technology.hudson",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Eclipse Hudson is an EPL-licensed Java continuous-integration server designed to run in a servlet container and execute builds from several source-control systems. The Eclipse Foundation now marks the project Archived and lists 3.4.0 from September 2016 as its latest release, so it should be treated as legacy infrastructure to inventory, isolate and migrate—not as a current CI choice.",
+    "pros": [
+      "Legacy recognition: The official page identifies the runtime, supported build styles and historical SCM integrations for existing installations.",
+      "Open-source history: Eclipse lists the project under the Eclipse Public License 1.0.",
+      "Migration context: Its documented Java servlet-container architecture helps teams locate dependencies around an inherited instance."
+    ],
+    "cons": [
+      "Archived project: Eclipse explicitly marks Hudson archived, so ongoing fixes and current platform compatibility should not be assumed.",
+      "Old release line: The latest release shown by Eclipse is 3.4.0 from 2016.",
+      "Security exposure: An internet-facing or privileged build system without current maintenance creates material dependency, plugin and credential risk.",
+      "Migration work: Jobs, plugins, credentials, agents and artifact flows must be inventoried and tested on a maintained replacement."
+    ],
+    "keyFeatures": [
+      { "title": "Java CI server", "description": "Historically ran as a Java application in servlet containers such as Tomcat or GlassFish." },
+      { "title": "SCM integrations", "description": "The archived project page lists CVS, Subversion, Git and ClearCase support." },
+      { "title": "Build execution", "description": "Historically executed Ant, Maven, shell-script and Windows batch workloads." },
+      { "title": "Archived lifecycle", "description": "The authoritative project record now identifies Hudson as archived." }
+    ],
+    "targetAudience": "Operators who have inherited a Hudson installation and need an evidence-based inventory and migration plan.",
+    "bestFor": [
+      "Identifying an existing Hudson server and its historical role",
+      "Planning retirement or migration of legacy Hudson jobs",
+      "Preserving read-only historical context during a controlled transition"
+    ],
+    "skipIf": [
+      "You are selecting a CI platform for a new project",
+      "You require current security fixes, platform support or maintained plugins",
+      "The build system will hold production credentials or run untrusted code"
+    ],
+    "verdict": "Do not choose Hudson for a new deployment. If it already exists, restrict access, inventory every job and secret, preserve required history, and migrate to a maintained CI platform with tested rollback.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Eclipse Projects — Hudson", "url": "https://projects.eclipse.org/projects/technology.hudson", "checkedAt": "2026-08-24", "supports": ["archived project state", "Java servlet-container architecture", "historical SCM support", "Ant Maven and script execution", "latest listed 3.4.0 release date", "EPL-1.0 license"] }
+      ],
+      "limitations": ["The archived Eclipse project record was reviewed; ToolCompare did not run Hudson, audit a legacy installation or its plugins, test a migration, inspect vulnerabilities, or validate compatibility with current Java, servlet containers, SCM systems or build tools."]
+    }
   },
   {
     "slug": "bookstack",
     "name": "BookStack",
     "category": "Developer Tools",
-    "shortDescription": "Open-source wiki software.",
+    "shortDescription": "Self-hosted documentation platform organized into shelves, books, chapters and pages.",
     "websiteUrl": "https://www.bookstackapp.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": true, "mobil": false, "acikKaynak": true, "sso": true },
+    "longDescription": "BookStack is an MIT-licensed, self-hosted documentation application built around shelves, books, optional chapters and pages. It provides role and content-level permissions, multiple enterprise authentication options and a permission-aware REST API, but the operator remains responsible for the PHP and database stack, upgrades, filesystem permissions, security configuration and complete database-plus-file backups.",
+    "pros": [
+      "Predictable structure: Shelves, books, chapters and pages give teams a constrained documentation hierarchy.",
+      "Granular access: Roles can be combined and overridden at shelf, book, chapter or page level.",
+      "Authentication choices: Official administration docs cover OpenID Connect, SAML 2.0 and LDAP.",
+      "Automation surface: The REST API covers content and administrative resources while enforcing the API user's roles and permissions."
+    ],
+    "cons": [
+      "Self-hosting burden: PHP, MySQL or MariaDB, web-server configuration, updates and monitoring are operator responsibilities.",
+      "Manual recovery design: There is no built-in full backup and restore; both database records and instance files must be protected.",
+      "Key dependency: Restores need the original APP_KEY for encrypted features such as multi-factor credentials.",
+      "Hierarchy trade-off: The book metaphor is approachable but may constrain teams needing free-form graphs or complex publishing workflows."
+    ],
+    "keyFeatures": [
+      { "title": "Book hierarchy", "description": "Organizes page content within optional chapters, books and reusable bookshelves." },
+      { "title": "Roles and permissions", "description": "Combines system roles with content-level overrides and inherited controls." },
+      { "title": "Federated authentication", "description": "Documents OIDC, SAML 2.0 and LDAP configuration for self-hosted instances." },
+      { "title": "REST API", "description": "Provides token-authenticated JSON endpoints governed by the API user's permissions." }
+    ],
+    "targetAudience": "Teams that want structured internal documentation and can securely operate a PHP and MySQL-compatible application.",
+    "bestFor": [
+      "Internal handbooks, runbooks and technical knowledge bases with a clear hierarchy",
+      "Organizations needing self-hosting, role controls and supported identity integrations",
+      "Teams that can automate upgrades, database and file backups, and restore drills"
+    ],
+    "skipIf": [
+      "You need a vendor-operated SaaS with no infrastructure responsibility",
+      "Your information model cannot fit shelves, books, chapters and pages",
+      "You cannot preserve the database, uploads, configuration and original APP_KEY together"
+    ],
+    "verdict": "Choose BookStack when its constrained hierarchy matches the knowledge model and self-hosting is deliberate; validate identity mapping, permission inheritance, upgrades and a full database-plus-files restore before broad adoption.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "BookStack Docs — Installation", "url": "https://www.bookstackapp.com/docs/admin/installation/", "checkedAt": "2026-08-24", "supports": ["self-hosted deployment", "PHP and database requirements", "Composer and Git requirements", "filesystem permissions", "shared-hosting limitation", "high-availability caveats"] },
+        { "label": "BookStack Docs — Content overview", "url": "https://www.bookstackapp.com/docs/user/content-overview/", "checkedAt": "2026-08-24", "supports": ["shelves books chapters and pages", "optional chapters", "multi-shelf books", "content organization"] },
+        { "label": "BookStack Docs — Roles and permissions", "url": "https://www.bookstackapp.com/docs/user/roles-and-permissions/", "checkedAt": "2026-08-24", "supports": ["multiple roles", "system permissions", "content-level overrides", "inheritance behavior", "SAML and LDAP group synchronization"] },
+        { "label": "BookStack Docs — Authentication index", "url": "https://www.bookstackapp.com/docs/", "checkedAt": "2026-08-24", "supports": ["OpenID Connect documentation", "SAML 2.0 documentation", "LDAP documentation", "security and maintenance documentation"] },
+        { "label": "BookStack Demo — REST API documentation", "url": "https://demo.bookstackapp.com/api/docs", "checkedAt": "2026-08-24", "supports": ["REST API", "token authentication", "role permission enforcement", "JSON interface", "rate limits", "content security caveat", "documented resources"] },
+        { "label": "BookStack Docs — Backup and restore", "url": "https://www.bookstackapp.com/docs/admin/backup-restore/", "checkedAt": "2026-08-24", "supports": ["no built-in full backup", "database backup", "file backup", "off-device copy guidance", "APP_KEY restore dependency", "URL migration steps"] },
+        { "label": "BookStack Docs — Updates", "url": "https://www.bookstackapp.com/docs/admin/updates/", "checkedAt": "2026-08-24", "supports": ["regular releases", "pre-update backup", "Git Composer and migration update process"] },
+        { "label": "BookStack source — License", "url": "https://codeberg.org/bookstack/bookstack/src/branch/development/LICENSE", "checkedAt": "2026-08-24", "supports": ["MIT license", "open-source status"] }
+      ],
+      "limitations": ["Official project documentation and the project-hosted demo API reference were reviewed; ToolCompare did not install BookStack, test authentication or permission edge cases, inspect API completeness, assess custom themes, execute an upgrade, penetration-test the service, benchmark scale or perform a backup restore."]
+    }
   },
   {
     "slug": "grav",
     "name": "Grav",
     "category": "Developer Tools",
-    "shortDescription": "Topics referred to by the same term.",
+    "shortDescription": "Open-source flat-file CMS using Markdown, YAML, Twig and PHP without a content database.",
     "websiteUrl": "https://getgrav.org/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Grav is an MIT-licensed, self-hosted flat-file CMS that stores content in plain files rather than a database and renders sites through PHP, Markdown, YAML and Twig. A graphical administration panel is optional and depends on additional plugins; operators still own server configuration, filesystem permissions, core and plugin updates, security settings, backups and compatibility testing.",
+    "pros": [
+      "No content database: Pages and configuration live in files, simplifying version-controlled content workflows.",
+      "Small core footprint: Official requirements center on a compatible web server, PHP and required extensions.",
+      "Flexible development model: Themes use Twig while plugins extend behavior beyond the core.",
+      "Optional administration: Teams may edit files directly or install the separate Admin panel and its dependencies."
+    ],
+    "cons": [
+      "Self-hosting responsibility: PHP, web-server rules, permissions, TLS, updates, logging and recovery remain operational work.",
+      "Plugin dependency risk: Admin and many site capabilities depend on plugins whose support and version compatibility must be checked.",
+      "Flat-file fit limits: Transactional, highly relational or write-heavy applications may need a database-backed platform.",
+      "Admin is not core: The graphical panel requires the login, forms and email plugins in addition to the Admin plugin."
+    ],
+    "keyFeatures": [
+      { "title": "Flat-file content", "description": "Stores content in plain files and does not require a content database." },
+      { "title": "Markdown and Twig", "description": "Uses Markdown for authoring and Twig templates for presentation." },
+      { "title": "Plugin and theme ecosystem", "description": "Adds functions and designs through separately maintained packages." },
+      { "title": "Optional Admin panel", "description": "Provides browser-based content and maintenance tools when its required plugins are installed." }
+    ],
+    "targetAudience": "Developers and small teams seeking a file-based PHP CMS and willing to operate its hosting, updates and extensions.",
+    "bestFor": [
+      "Content sites whose structure and update rate suit files rather than relational records",
+      "Developer-led workflows using Markdown, YAML, Twig and version control",
+      "Projects that value a lightweight core and selectively chosen plugins"
+    ],
+    "skipIf": [
+      "The product requires transactional or heavily relational application data",
+      "You need a fully managed CMS with vendor-operated infrastructure and recovery",
+      "Critical features depend on plugins whose maintenance and compatibility cannot be verified"
+    ],
+    "verdict": "Choose Grav when flat files genuinely simplify the content workflow; prove production PHP configuration, plugin compatibility, least-privilege permissions, updates and restore procedures on the exact site before launch.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Grav Docs — Requirements", "url": "https://learn.getgrav.org/17/basics/requirements", "checkedAt": "2026-08-24", "supports": ["web-server and PHP requirements", "required extensions", "plain-file content", "no database", "cache recommendation", "filesystem permissions", "built-in PHP server production limitation"] },
+        { "label": "Grav Docs — Installation", "url": "https://learn.getgrav.org/17/basics/installation", "checkedAt": "2026-08-24", "supports": ["ZIP and CLI installation", "Admin bundle option", "server configuration", "Docker persistence caution", "hidden-file requirement"] },
+        { "label": "Grav Docs — Admin introduction", "url": "https://learn.getgrav.org/17/admin-panel/introduction", "checkedAt": "2026-08-24", "supports": ["optional Admin plugin", "login forms and email dependencies", "user management", "core updates", "backup interface", "password handling"] },
+        { "label": "Grav Docs — Plugins", "url": "https://learn.getgrav.org/17/plugins", "checkedAt": "2026-08-24", "supports": ["plugin architecture", "installation methods", "third-party functionality", "version compatibility declaration"] },
+        { "label": "Grav Docs — Configuration", "url": "https://learn.getgrav.org/17/basics/grav-configuration", "checkedAt": "2026-08-24", "supports": ["YAML configuration", "session controls", "security defaults", "XSS checks", "upload restrictions"] },
+        { "label": "Grav Docs — Command line", "url": "https://learn.getgrav.org/17/cli-console/command-line-intro", "checkedAt": "2026-08-24", "supports": ["backup command", "security scan command", "cache controls", "package management", "user creation"] },
+        { "label": "Grav source — Repository and license", "url": "https://github.com/getgrav/grav", "checkedAt": "2026-08-24", "supports": ["flat-file CMS scope", "PHP Markdown Twig and Symfony stack", "MIT license", "open-source status"] }
+      ],
+      "limitations": ["Official Grav documentation and its source repository were reviewed; ToolCompare did not install Grav, test the Admin panel, audit plugins or themes, benchmark file scale, validate web-server hardening, perform upgrades, penetration-test the site or restore a backup."]
+    }
   },
   {
     "slug": "movable-type",
