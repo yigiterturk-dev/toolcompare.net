@@ -14060,21 +14060,112 @@
     "slug": "joomla",
     "name": "Joomla",
     "category": "Developer Tools",
-    "shortDescription": "Free and open-source web content management system.",
+    "shortDescription": "Open-source PHP CMS with extensions, templates and multilingual tooling.",
     "websiteUrl": "https://www.joomla.org",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "Joomla is GPL-licensed open-source content-management software built on PHP and a supported relational database. Core includes publishing, users, access controls and multilingual capabilities, while components, modules, plugins, templates and language packages extend the site; administrators remain responsible for compatible hosting and timely core and extension updates.",
+    "pros": [
+      "Core publishing system: Manages articles, navigation, users and administrative configuration.",
+      "Extension architecture: Components, modules, plugins, templates and language packages cover different customization roles.",
+      "Multilingual foundation: Distinguishes installed interface languages from content languages.",
+      "Update discovery: Administrator tools can query configured update servers for compatible extension releases."
+    ],
+    "cons": [
+      "Hosting requirements: Supported PHP, database, web-server modules and memory must match the installed Joomla branch.",
+      "Extension trust: Third-party functionality has its own maintainer, compatibility, update and vulnerability lifecycle.",
+      "Maintenance ownership: A zero-cost core license does not include hosting, backups, upgrades or operational support.",
+      "Update-source dependency: Extension update availability and metadata depend on servers operated by extension developers."
+    ],
+    "keyFeatures": [
+      { "title": "Content publishing", "description": "Organizes articles, menus, users and site configuration through the administration interface." },
+      { "title": "Extension types", "description": "Adds functions through components, modules, plugins, templates, packages and languages." },
+      { "title": "Multilingual content", "description": "Supports translated interfaces and separately modeled content languages." },
+      { "title": "Extension updates", "description": "Checks registered update servers and declared Joomla, PHP and database constraints." }
+    ],
+    "targetAudience": "Site owners and agencies wanting a self-hosted extensible CMS and prepared to govern PHP infrastructure and third-party extensions.",
+    "bestFor": [
+      "Content sites needing Joomla's built-in administration and multilingual model",
+      "Projects whose required extensions actively support a current Joomla branch",
+      "Teams able to stage and test core, template and extension upgrades"
+    ],
+    "skipIf": [
+      "You require a vendor-managed service with hosting and maintenance included",
+      "A business-critical extension lacks a current update channel or supported release",
+      "No one owns backups, patch monitoring, compatibility testing and incident response"
+    ],
+    "verdict": "Choose Joomla after validating the complete extension and template stack against a supported environment; the core license is free, but safe operation is an ongoing maintenance commitment.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "Joomla Manual — Technical requirements", "url": "https://manual.joomla.org/docs/next/get-started/technical-requirements/", "checkedAt": "2026-08-24", "supports": ["PHP matrix", "database matrix", "web-server matrix", "required PHP modules", "memory recommendation", "supported versus minimum distinction"] },
+        { "label": "Joomla Manual — Extension architecture", "url": "https://manual.joomla.org/docs/next/building-extensions/", "checkedAt": "2026-08-24", "supports": ["CMS scope", "components", "modules", "plugins", "templates", "language packages", "extension responsibilities"] },
+        { "label": "Joomla Manual — Multilingual", "url": "https://manual.joomla.org/docs/next/general-concepts/multilingual/", "checkedAt": "2026-08-24", "supports": ["installed languages", "content languages", "language files", "translation structure", "extension localization"] },
+        { "label": "Joomla Manual — Update servers", "url": "https://manual.joomla.org/docs/next/building-extensions/install-update/update-server/", "checkedAt": "2026-08-24", "supports": ["extension update discovery", "developer-operated update URLs", "platform restrictions", "PHP and database checks", "optional checksums"] },
+        { "label": "Joomla Manual — Security fundamentals", "url": "https://manual.joomla.org/docs/next/security/fundamentals/", "checkedAt": "2026-08-24", "supports": ["extension attack surface", "core security coverage", "access checks", "disclosure guidance", "maintenance responsibility"] },
+        { "label": "Joomla CMS — Official source", "url": "https://github.com/joomla/joomla-cms", "checkedAt": "2026-08-24", "supports": ["official source repository", "GPL-2.0-or-later license", "PHP and database requirement", "open-source project", "CMS scope"] }
+      ],
+      "limitations": ["Official project documentation and repository metadata were reviewed; ToolCompare did not install Joomla, audit extensions or update servers, test upgrades, benchmark hosting, assess editor experience, validate security or calculate implementation cost."]
+    }
   },
   {
     "slug": "typo3",
     "name": "TYPO3",
     "category": "Developer Tools",
-    "shortDescription": "Web content management framework.",
+    "shortDescription": "Open-source PHP CMS with LTS releases and extension-based customization.",
     "websiteUrl": "https://typo3.org/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "kriterler": { "api": false, "mobil": false, "acikKaynak": true, "sso": false },
+    "longDescription": "TYPO3 CMS is GPL-licensed open-source content-management software for self-managed PHP infrastructure. It supports Composer-based projects, relational databases, extensions and Long Term Support releases; free security support follows the current and preceding LTS lines, while older branches require migration or a paid Extended Long Term Support arrangement when offered.",
+    "pros": [
+      "LTS lifecycle: Current documentation defines regular LTS releases with bug and security support windows.",
+      "Configuration flexibility: Composer projects can version core and extension dependencies.",
+      "Database options: Current requirements document MySQL, MariaDB, PostgreSQL and SQLite support.",
+      "Extension architecture: Core functionality can be expanded through system and third-party extensions."
+    ],
+    "cons": [
+      "Infrastructure ownership: Web server, PHP, database, file permissions, deployment and backups remain customer responsibilities.",
+      "Upgrade work: LTS transitions may change database structure, backend behavior, templates, CSS and system requirements.",
+      "Extension lifecycle: Core support does not automatically guarantee maintenance or compatibility for every extension.",
+      "Old-version cost: Branches outside free support require migration or eligible paid ELTS coverage."
+    ],
+    "keyFeatures": [
+      { "title": "LTS releases", "description": "Provides defined support windows for current and preceding Long Term Support branches." },
+      { "title": "Composer projects", "description": "Manages core and extension dependencies in modern installation workflows." },
+      { "title": "Extension framework", "description": "Adds site and editorial functionality through system or third-party packages." },
+      { "title": "TypoScript configuration", "description": "Controls site rendering and behavior alongside PHP, templates and site configuration." }
+    ],
+    "targetAudience": "Organizations and agencies that need a configurable self-hosted CMS and have dedicated TYPO3, PHP and infrastructure expertise.",
+    "bestFor": [
+      "Long-lived managed web platforms with explicit LTS and upgrade planning",
+      "Teams versioning TYPO3 core and extensions through Composer",
+      "Organizations able to own infrastructure, editorial training and extension governance"
+    ],
+    "skipIf": [
+      "You want an all-inclusive hosted website builder without platform administration",
+      "A required extension does not support a currently maintained LTS branch",
+      "The organization cannot budget recurring upgrade projects or eligible ELTS coverage"
+    ],
+    "verdict": "Choose TYPO3 when its configurable architecture and LTS model fit a professionally operated web platform; verify every extension and budget migrations before the selected branch leaves free support.",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-08-24",
+      "sources": [
+        { "label": "TYPO3 Docs — System requirements", "url": "https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/Administration/Installation/SystemRequirements/Index.html", "checkedAt": "2026-08-24", "supports": ["PHP and extension requirements", "web servers", "database systems", "Composer usage", "DDEV guidance", "database privileges"] },
+        { "label": "TYPO3 Docs — Version support and security", "url": "https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/Security/Versions/Index.html", "checkedAt": "2026-08-24", "supports": ["Sprint and LTS releases", "current and preceding LTS support", "three-year LTS support", "outdated branches", "ELTS option", "upgrade impacts"] },
+        { "label": "TYPO3 Docs — Extension composer.json", "url": "https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/FileStructure/ComposerJson.html", "checkedAt": "2026-08-24", "supports": ["extension package type", "GPL license values", "core-version dependencies", "Composer loading order", "third-party extensions"] },
+        { "label": "TYPO3 — Open-source licenses", "url": "https://typo3.com/typo3-cms/what-is-typo3/open-source/licenses", "checkedAt": "2026-08-24", "supports": ["GPL-2.0-or-later CMS license", "open-source distribution", "extension licensing", "trademark distinction"] },
+        { "label": "TYPO3 — Extended support", "url": "https://typo3.com/products-services/extended-support-elts", "checkedAt": "2026-08-24", "supports": ["paid ELTS service", "post-LTS security updates", "eligible versions", "subscription scope"] }
+      ],
+      "limitations": ["Official project and vendor documentation was reviewed; ToolCompare did not install TYPO3, test TypoScript or editorial workflows, audit extensions, execute an LTS migration, benchmark infrastructure, purchase ELTS or independently verify security and support outcomes."]
+    }
   },
   {
     "slug": "prestashop",
