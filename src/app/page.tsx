@@ -95,23 +95,25 @@ export default async function Home() {
     ],
   };
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSemasi) }}
-      />
-      <ToolGridClient initialTools={tools} />
-
-      <nav
-        aria-label="All tools by category"
-        className="mx-auto max-w-7xl border-t border-line px-4 pt-12 pb-16 sm:px-6"
-      >
-        <h2 className="text-2xl font-semibold">Browse all {tools.length} tools</h2>
-        <p className="mt-2 text-sm text-ink-soft">
-          Every tool we have reviewed, grouped by category.
-        </p>
-
+  /*
+    `key` bilerek var: bu JSX sunucu bileseninden istemci bilesenine prop
+    olarak geciyor ve RSC sinirinda serilestiriliyor. Anahtarsiz birakinca
+    React "Each child in a list should have a unique key prop -- it was
+    passed a child from Home" uyarisi veriyor.
+  */
+  const dizin = (
+      <details key="tam-dizin" className="mx-auto max-w-7xl border-t border-line px-4 py-8 sm:px-6">
+        {/*
+          Katlanmis: acikken 512 linklik bir duvar oluyordu ve sayfanin
+          gorsel agirliginin cogunu kapliyordu. Kapaliyken de linkler
+          HTML'de duruyor -- tarayicilar goruyor, ziyaretci duvarla
+          karsilasmiyor. Bu liste 512 urun sayfasinin oksuz kalmamasini
+          saglayan tek ic link yolu, o yuzden silinmiyor.
+        */}
+        <summary className="cursor-pointer text-sm font-medium marker:text-ink-muted">
+          Browse all {tools.length} tools by category
+        </summary>
+        <div className="pt-6">
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {sirali.map(([kategori, liste]) => (
             <div key={kategori}>
@@ -137,7 +139,27 @@ export default async function Home() {
             </div>
           ))}
         </div>
-      </nav>
+        </div>
+      </details>
+  );
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSemasi) }}
+      />
+      {/*
+        Dizin ARTIK ToolGridClient'IN ICINDE, footer'dan once.
+
+        DENETIMDE BULUNAN (2026-08-25): burada <ToolGridClient /> zaten
+        kendi icinde Footer render ediyor; dizin ondan SONRA geliyordu.
+        Yani sayfa sirasi soyleydi: icerik -> footer -> telif -> ve altinda
+        512 linklik dev liste. Footer sayfanin ortasinda kaliyor, liste
+        ondan sarkiyordu.
+      */}
+      <ToolGridClient initialTools={tools} dizin={dizin} />
+
     </>
   );
 }

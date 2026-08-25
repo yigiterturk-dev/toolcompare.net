@@ -64,7 +64,7 @@ const KATEGORILER = [
   "E-commerce",
 ];
 
-function ToolGrid({ initialTools }: { initialTools: IzgaraArac[] }) {
+function ToolGrid({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?: React.ReactNode }) {
   const router = useRouter();
 
   // useSearchParams() statik uretimde BAILOUT_TO_CLIENT_SIDE_RENDERING'e yol
@@ -328,6 +328,9 @@ function ToolGrid({ initialTools }: { initialTools: IzgaraArac[] }) {
         <section aria-label="Help me choose" className="mx-auto max-w-7xl border-t border-line px-4 py-12 sm:px-6">
           <AIWizard tools={tools} />
         </section>
+
+        {/* Tam dizin: footer'dan ONCE. */}
+        {dizin}
       </main>
 
       {/* ---------- Karsilastirma seridi ---------- */}
@@ -376,6 +379,6 @@ function ToolGrid({ initialTools }: { initialTools: IzgaraArac[] }) {
   );
 }
 
-export default function ToolGridClient({ initialTools }: { initialTools: IzgaraArac[] }) {
-  return <ToolGrid initialTools={initialTools} />;
+export default function ToolGridClient({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?: React.ReactNode }) {
+  return <ToolGrid initialTools={initialTools} dizin={dizin} />;
 }
