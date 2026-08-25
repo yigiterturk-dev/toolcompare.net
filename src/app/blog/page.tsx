@@ -7,7 +7,10 @@ import path from 'path';
 
 export default function BlogPage() {
   const postsPath = path.join(process.cwd(), 'src/data/posts.json');
-  let posts = [];
+  /* `let posts = []` tipi `never[]` cikariyordu; JSON okunduktan sonra
+     her kullanim implicit any oluyordu. Sekil burada tanimli. */
+  type Yazi = { slug: string; title: string; image?: string; excerpt?: string; date?: string; readTime?: string; category?: string; author?: string };
+  let posts: Yazi[] = [];
   if (fs.existsSync(postsPath)) {
     posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
   }

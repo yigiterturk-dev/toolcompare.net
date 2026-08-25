@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ToolGridClient from "@/components/ToolGridClient";
+import ToolGridClient, { type IzgaraArac } from "@/components/ToolGridClient";
 import { getTools } from "@/lib/tools";
 
 // Sunucu bileseni: veriyi burada yukluyoruz ki urun linkleri HTML'e girsin.
@@ -14,16 +14,36 @@ export default async function Home() {
   // (longDescription, pros, cons, keyFeatures, targetAudience, verdict...)
   // hepsi HTML'e seri hale geliyor ve dokuman 518 KB'a cikiyordu. Bu alanlar
   // yalnizca urun detay sayfasinda lazim; orada zaten dogrudan okunuyor.
+  /*
+    DENETIMDE BULUNAN (2026-08-25): bu liste ELLE yazilmisti ve
+    `fiyatModeli` icinde yoktu. fiyatDurumu() o alan olmayinca basePrice'a
+    dusuyor; basePrice 0 olan her arac icin "Pricing not verified" diyordu.
+    Olculdu: 266 arac anasayfada "not verified" gorunurken KENDI URUN
+    SAYFASINDA dogru etiketi gosteriyordu (HubSpot anasayfada
+    "not verified", kendi sayfasinda "Free tier available"). Site kendi
+    kendisiyle celisiyordu -- hem de tam sattigi konuda.
+
+    Elle tutulan alan listesi, bir alan eklendiginde sessizce eskiyen bir
+    liste demek. scripts/check-izgara-alanlari.mjs bu celiskiyi olcuyor.
+
+    `ease`, `featuresScore`, `iconName`, `color*` cikarildi: uydurma
+    puanlar sokulmustu ve ikon/renk yerine artik gercek logo kullaniliyor.
+  */
   const IZGARA_ALANLARI = [
     "slug", "name", "category", "shortDescription",
-    "iconName", "color", "color1", "color2",
-    "ease", "featuresScore", "basePrice", "isFlat", "features",
+    "basePrice", "isFlat", "fiyatModeli", "features", "keyFeatures",
   ] as const;
 
-  const tools = tumArac.map((t: any) => {
+  /*
+    Kirpma ciktisi TIPLI. Onceden `Record<string, unknown>` donuyordu ve
+    o yuzden asagidaki `t.slug` / `t.name` kullanimlari derleyicide hata
+    veriyordu (5 adet, aylardir duruyordu). Tip verilince hem o hatalar
+    kapandi hem de bir alan kirpildiginda derleyici uyariyor.
+  */
+  const tools: IzgaraArac[] = tumArac.map((t: Record<string, unknown>) => {
     const kucuk: Record<string, unknown> = {};
     for (const alan of IZGARA_ALANLARI) if (t?.[alan] !== undefined) kucuk[alan] = t[alan];
-    return kucuk;
+    return kucuk as unknown as IzgaraArac;
   });
 
   // Izgara sayfalama yaptigi icin HTML'e yalnizca ilk sayfanin linkleri

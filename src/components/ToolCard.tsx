@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { fiyatDurumu, type FiyatModeli } from "@/lib/fiyat";
+import ToolLogo from "@/components/ToolLogo";
 
 /*
   Arac karti.
@@ -16,8 +17,9 @@ import { fiyatDurumu, type FiyatModeli } from "@/lib/fiyat";
 
   3. Ikon kutusu tool.iconName + color1/color2 istiyordu; 512 kaydin yalnizca
      108'inde (%21) bu alanlar var. Kalan %79'da kutu bos bir gradient
-     olarak ciziliyordu. Yerine harf rozeti: her kayitta calisir, tutarli
-     gorunur, ve dekoratif oldugu icin aria-hidden.
+     olarak ciziliyordu. Artik GERCEK LOGO kullaniliyor (501/512 kayitta
+     var, derleme zamaninda indirilip yerele konuyor); logosu olmayan 11
+     arac harf rozetine dusuyor.
 
   Kartin one cikardigi sey artik fiyatin KENDISI degil, fiyatin DURUMU --
   sitenin rakiplerinden ayristigi tek nokta o.
@@ -59,12 +61,7 @@ export default function ToolCard({
   return (
     <article className="group relative flex flex-col rounded-[--radius-card] border border-line bg-surface p-5 transition-colors duration-150 hover:border-line-strong">
       <div className="flex items-start gap-3">
-        <span
-          aria-hidden="true"
-          className="grid size-11 shrink-0 place-items-center rounded-[--radius-control] bg-surface-sunken font-serif text-lg font-semibold text-ink-soft"
-        >
-          {tool.name.charAt(0)}
-        </span>
+        <ToolLogo slug={tool.slug} name={tool.name} size={40} />
 
         <div className="min-w-0 flex-1">
           <h3 className="text-base font-semibold break-words">

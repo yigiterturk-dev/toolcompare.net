@@ -9,6 +9,9 @@ import Footer from "@/components/Footer";
 import AIAssistant from "@/components/AIAssistant";
 import AIWizard from "@/components/AIWizard";
 import ToolCard from "@/components/ToolCard";
+import ToolRow from "@/components/ToolRow";
+import ToolLogo from "@/components/ToolLogo";
+import { fiyatDurumu, type FiyatModeli } from "@/lib/fiyat";
 import { oneCikanCiftler } from "@/lib/compare";
 
 /*
@@ -34,6 +37,23 @@ import { oneCikanCiftler } from "@/lib/compare";
     soyluyor.
 */
 
+/*
+  Izgaranin gordugu kayit. src/app/page.tsx kayitlari IZGARA_ALANLARI'na
+  gore kirpiyor; bu tip o sozlesmenin karsiligi. `any` yerine bunu
+  kullanmak, alan kirpilinca derleyicinin uyarmasini sagliyor.
+*/
+export type IzgaraArac = {
+  slug: string;
+  name: string;
+  category?: string;
+  shortDescription?: string;
+  basePrice?: number;
+  isFlat?: boolean;
+  fiyatModeli?: FiyatModeli;
+  features?: unknown[];
+  keyFeatures?: unknown[];
+};
+
 const KATEGORILER = [
   "CRM",
   "Marketing",
@@ -44,7 +64,7 @@ const KATEGORILER = [
   "E-commerce",
 ];
 
-function ToolGrid({ initialTools }: { initialTools: any[] }) {
+function ToolGrid({ initialTools }: { initialTools: IzgaraArac[] }) {
   const router = useRouter();
 
   // useSearchParams() statik uretimde BAILOUT_TO_CLIENT_SIDE_RENDERING'e yol
@@ -58,7 +78,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
 
   // Veri artik sunucudan prop ile geliyor; tarayicidan fetch edilince urun
   // linkleri HTML'e hic girmiyordu (urun sayfalari orphan kaliyordu).
-  const [tools] = useState<any[]>(initialTools);
+  const [tools] = useState<IzgaraArac[]>(initialTools);
   const [loading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -72,8 +92,8 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
 
   const filteredTools = useMemo(() => {
     return tools
-      .filter((t: any) => !catFilter || t.category === catFilter)
-      .filter((t: any) => t.name.toLowerCase().includes(searchTerm.toLowerCase()));
+      .filter((t) => !catFilter || t.category === catFilter)
+      .filter((t) => t.name.toLowerCase().includes(searchTerm.toLowerCase()));
   }, [tools, catFilter, searchTerm]);
 
   const handleCompareChange = (toolName: string) => {
@@ -81,6 +101,33 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
       prev.includes(toolName) ? prev.filter((t) => t !== toolName) : [...prev, toolName],
     );
   };
+
+  /*
+    Kuratorlu bolumler. Hepsi VERIDEN uretiliyor -- elle secilmis liste yok,
+    "one cikan" diye para karsiligi bir sey yok. Basliklar da tam olarak
+    filtrenin ne yaptigini soyluyor.
+  */
+  const bolumler = useMemo(() => {
+    const durum = (t: IzgaraArac) => fiyatDurumu(t);
+    const enUcuz = tools
+      .filter((t) => { const d = durum(t); return d.karsilastirilabilir && (d.aylik ?? 0) > 0; })
+      .sort((a, b) => (durum(a).aylik ?? 0) - (durum(b).aylik ?? 0))
+      .slice(0, 12);
+    const bedava = tools
+      .filter((t) => { const k = durum(t).kisa; return k === "Free" || k === "Free tier"; })
+      .slice(0, 12);
+    const kullanim = tools
+      .filter((t) => { const k = durum(t).kisa; return k === "Usage-based" || k === "Quote only" || k === "Variable"; })
+      .slice(0, 12);
+    return [
+      { anahtar: "ucuz", baslik: "Cheapest verified starts", alt: "Lowest monthly price we could verify on a vendor page.", liste: enUcuz },
+      { anahtar: "bedava", baslik: "Free to start", alt: "A free plan or a free tier — not a trial we guessed at.", liste: bedava },
+      { anahtar: "kullanim", baslik: "Not a monthly price", alt: "Usage-based, quote-only or variable. We do not pretend these are $0.", liste: kullanim },
+    ].filter((b) => b.liste.length > 0);
+  }, [tools]);
+
+  // Logo seridi: kimlik icin, dekoratif. Yalnizca logosu olanlardan.
+  const seritAraclari = useMemo(() => tools.slice(0, 28), [tools]);
 
   const sayfaSayisi = Math.max(1, Math.ceil(filteredTools.length / pageSize));
   const gorunen = filteredTools.slice((currentPage - 1) * pageSize, currentPage * pageSize);
@@ -92,21 +139,43 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
       </a>
       <Header />
 
-      <main id="main" className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
-        {/* ---------- Hero ---------- */}
-        <section className="border-b border-line py-12 sm:py-16">
-          <p className="text-sm font-medium text-accent">
-            {filteredTools.length} tools · sources listed on every review
-          </p>
-          <h1 className="mt-3 max-w-3xl text-3xl leading-tight font-semibold sm:text-5xl">
+      <main id="main" className="pb-20">
+        {/* ---------- Kimlik blogu ---------- */}
+        {/*
+          Zemin tam genislikte, icerik kapsayicida. Onceden `-mx-4` ile
+          disari tasiriliyordu; o yalnizca kapsayicinin dolgusu kadar
+          genisletiyor, geniş ekranda blok sagda kesik duruyordu.
+        */}
+        <section className="bg-accent-soft py-8 sm:py-10">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          {/*
+            Logo seridi. Katalogda gercekten NE oldugunu tek bakista
+            gosteriyor -- 512 arac yazmaktan daha ikna edici. Dekoratif,
+            o yuzden aria-hidden ve kaydirma serisi odak tuzagi degil.
+          */}
+          <div
+            aria-hidden="true"
+            className="flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {seritAraclari.map((t) => (
+              <span
+                key={t.slug}
+                className="grid size-10 shrink-0 place-items-center rounded-[--radius-control] border border-line bg-surface"
+              >
+                <ToolLogo slug={t.slug} name={t.name} size={22} className="rounded-none bg-transparent" />
+              </span>
+            ))}
+          </div>
+
+          <h1 className="mt-8 max-w-3xl text-3xl leading-tight font-semibold sm:text-5xl">
             {catFilter ? `The best ${catFilter} tools` : "Software pricing you can check yourself"}
           </h1>
-          <p className="mt-4 max-w-2xl text-base text-ink-soft sm:text-lg">
-            Every price says whether it is verified, usage-based or a free tier — and we publish
-            no invented quality scores. Where a number comes from a vendor page, we link it.
+          <p className="mt-3 max-w-2xl text-base text-ink-soft sm:text-lg">
+            {filteredTools.length} tools. Every price says whether it is verified, usage-based or a
+            free tier — and we publish no invented quality scores.
           </p>
 
-          <div className="relative mt-8 max-w-xl">
+          <div className="relative mt-6 max-w-xl">
             <Search
               aria-hidden="true"
               className="pointer-events-none absolute top-1/2 left-3.5 size-5 -translate-y-1/2 text-ink-muted"
@@ -124,32 +193,30 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
             />
           </div>
 
-          <nav aria-label="Categories" className="mt-6">
+          <nav aria-label="Categories" className="mt-5">
             <ul className="flex flex-wrap gap-2">
-              {KATEGORILER.map((ad) => {
-                const aktif = catFilter === ad;
-                return (
-                  <li key={ad}>
-                    <Link
-                      href={`/categories/${ad.toLowerCase().replace(/\s+/g, "-")}`}
-                      data-tap
-                      aria-current={aktif ? "page" : undefined}
-                      className={`inline-flex items-center rounded-[--radius-pill] border px-3 py-1.5 text-sm no-underline transition-colors duration-150 ${
-                        aktif
-                          ? "border-brand bg-brand text-brand-ink"
-                          : "border-line bg-surface text-ink-soft hover:border-line-strong hover:text-ink"
-                      }`}
-                    >
-                      {ad}
-                    </Link>
-                  </li>
-                );
-              })}
+              {KATEGORILER.map((ad) => (
+                <li key={ad}>
+                  <Link
+                    href={`/categories/${ad.toLowerCase().replace(/\s+/g, "-")}`}
+                    data-tap
+                    className="inline-flex items-center rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
+                  >
+                    {ad}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 
-          <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-            <span className="text-ink-muted">Popular comparisons</span>
+          {/*
+            Karsilastirma sayfalarina ic link. Hero yeniden yazilirken
+            dusmustu; bu linkler 1.374 karsilastirma sayfasinin tarayiciya
+            acilan tek kapisi, dekorasyon degil.
+          */}
+          <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+            {/* Pembe zeminde ink-muted 4.43 olcuyordu (gereken 4.5); bir ton koyu. */}
+            <span className="text-ink-soft">Popular comparisons</span>
             {oneCikanCiftler().map((vs) => (
               <Link
                 key={vs.slug}
@@ -159,11 +226,33 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                 {vs.label}
               </Link>
             ))}
+          </p>
           </div>
         </section>
 
+        {/* ---------- Kuratorlu bolumler ---------- */}
+        {!searchTerm && !catFilter && (
+          <div className="mx-auto max-w-7xl space-y-8 px-4 py-10 sm:px-6">
+            {bolumler.map((b) => (
+              <section key={b.anahtar} aria-labelledby={`bolum-${b.anahtar}`}>
+                <h2 id={`bolum-${b.anahtar}`} className="text-xl font-semibold">
+                  {b.baslik}
+                </h2>
+                <p className="mt-1 text-sm text-ink-muted">{b.alt}</p>
+                <ul className="mt-3 flex list-none gap-2 overflow-x-auto p-0 pb-2 [scrollbar-width:thin]">
+                  {b.liste.map((t) => (
+                    <li key={t.slug}>
+                      <ToolRow tool={t} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        )}
+
         {/* ---------- Araclar ---------- */}
-        <section id="tools" aria-label="Tools" className="py-10">
+        <section id="tools" aria-label="Tools" className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
           {loading ? (
             <div className="flex items-center gap-3 py-16 text-ink-muted">
               <Loader2 className="size-5 animate-spin" aria-hidden="true" />
@@ -193,7 +282,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
             </div>
           ) : (
             <ul className="grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
-              {gorunen.map((tool: any) => (
+              {gorunen.map((tool) => (
                 <li key={tool.slug}>
                   <ToolCard
                     tool={tool}
@@ -236,7 +325,7 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
           Sihirbaz artik burada: ne aradigini bilen once araci gorur, ne
           aradigini bilmeyen asagida yardimi bulur. Eskiden tam tersiydi.
         */}
-        <section aria-label="Help me choose" className="border-t border-line py-12">
+        <section aria-label="Help me choose" className="mx-auto max-w-7xl border-t border-line px-4 py-12 sm:px-6">
           <AIWizard tools={tools} />
         </section>
       </main>
@@ -267,8 +356,8 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
                 disabled={selectedTools.length < 2}
                 onClick={() => {
                   const slugs = tools
-                    .filter((t: any) => selectedTools.includes(t.name))
-                    .map((t: any) => t.slug);
+                    .filter((t) => selectedTools.includes(t.name))
+                    .map((t) => t.slug);
                   if (slugs.length >= 2) router.push(`/compare/${slugs[0]}-vs-${slugs[1]}`);
                 }}
                 data-tap
@@ -287,6 +376,6 @@ function ToolGrid({ initialTools }: { initialTools: any[] }) {
   );
 }
 
-export default function ToolGridClient({ initialTools }: { initialTools: any[] }) {
+export default function ToolGridClient({ initialTools }: { initialTools: IzgaraArac[] }) {
   return <ToolGrid initialTools={initialTools} />;
 }
