@@ -14,6 +14,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import { hizFreni, istekKaynagi } from '@/lib/adminAuth';
+import { guvenliYaz } from '@/lib/dosya';
 
 const EPOSTA_SINIRI = 254; // RFC 5321'in pratik ust siniri
 const EPOSTA_BICIMI = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -36,7 +37,7 @@ export async function POST(request: Request) {
 
     const filePath = path.join(process.cwd(), 'src/data/subscribers.json');
     if (!fs.existsSync(filePath)) {
-      fs.writeFileSync(filePath, JSON.stringify([]));
+      guvenliYaz(filePath, JSON.stringify([]));
     }
 
     let subscribers: string[] = [];
@@ -53,7 +54,7 @@ export async function POST(request: Request) {
     }
 
     subscribers.push(email);
-    fs.writeFileSync(filePath, JSON.stringify(subscribers, null, 2));
+    guvenliYaz(filePath, JSON.stringify(subscribers, null, 2));
 
     return NextResponse.json({ success: true, message: 'Welcome to the inner circle!' });
   } catch (error: any) {

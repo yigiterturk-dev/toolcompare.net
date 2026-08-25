@@ -3,6 +3,7 @@ import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 import { yoneticiMi, hizFreni, istekKaynagi } from '@/lib/adminAuth';
+import { guvenliYaz } from '@/lib/dosya';
 
 /**
  * Istemci TEMBEL kuruluyor.
@@ -108,7 +109,7 @@ export async function POST(request: Request) {
       }
     });
 
-    fs.writeFileSync(filePath, JSON.stringify(existingTools, null, 2));
+    guvenliYaz(filePath, JSON.stringify(existingTools, null, 2));
 
     return NextResponse.json({ success: true, addedCount, totalFound: generatedTools.length });
   } catch (error: any) {

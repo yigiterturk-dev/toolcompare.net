@@ -3,6 +3,8 @@ import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 import { yoneticiMi, hizFreni, istekKaynagi } from '@/lib/adminAuth';
+import { guvenliYaz } from '@/lib/dosya';
+import sanitizeHtml from 'sanitize-html';
 
 /**
  * Istemci TEMBEL kuruluyor.
@@ -70,6 +72,38 @@ export async function POST(request: Request) {
     if (!content) throw new Error("No content from OpenAI");
 
     const newPost = JSON.parse(content);
+
+    /*
+      DENETIMDE BULUNAN (2026-08-25): modelin dondurdugu HTML dogrulamadan
+      posts.json'a yaziliyor ve sayfada ham olarak basiliyordu. Uc admin
+      korumali olsa da, model ciktisi guvenilir veri degil: bozuk/beklenmedik
+      ciktiya script enjeksiyonu eklenebilir. Izinli etiketlere indiriyoruz;
+      prompt'un istedigi h2/p/strong/a kalir, script/style/onclick gider.
+    */
+    const temizle = (ham: unknown): string =>
+      typeof ham === "string"
+        ? sanitizeHtml(ham, {
+            allowedTags: [...sanitizeHtml.defaults.allowedTags, "img", "h1", "h2"],
+            allowedAttributes: {
+              a: ["href", "style"],
+              img: ["src", "alt"],
+              div: ["style"],
+              p: ["style"],
+              span: ["style"],
+            },
+            allowedSchemes: ["http", "https", "mailto"],
+          })
+        : "";
+
+    newPost.title = String(newPost.title ?? "").slice(0, 200);
+    newPost.slug =
+      String(newPost.slug ?? "")
+        .toLowerCase()
+        .replace(/[^a-z0-9-]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .slice(0, 120) || `yazi-${Date.now()}`;
+    newPost.excerpt = temizle(newPost.excerpt).replace(/<[^>]*>/g, "").slice(0, 400);
+    newPost.content = temizle(newPost.content);
     
     // Save to posts.json (create if not exists)
     const postsPath = path.join(process.cwd(), 'src/data/posts.json');
@@ -79,7 +113,7 @@ export async function POST(request: Request) {
     }
     
     posts.unshift(newPost);
-    fs.writeFileSync(postsPath, JSON.stringify(posts, null, 2));
+    guvenliYaz(postsPath, JSON.stringify(posts, null, 2));
 
     return NextResponse.json({ success: true, post: newPost });
   } catch (error: any) {

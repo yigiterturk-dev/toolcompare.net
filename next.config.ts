@@ -20,9 +20,6 @@ const guvenlikBasliklari = [
 ];
 
 const nextConfig: NextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   async headers() {
     return [{ source: "/:path*", headers: guvenlikBasliklari }];
   },
