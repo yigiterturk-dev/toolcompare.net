@@ -101,46 +101,55 @@ export default async function Home() {
     React "Each child in a list should have a unique key prop -- it was
     passed a child from Home" uyarisi veriyor.
   */
+  /*
+    Kategori dizini.
+
+    ONCE 512 aracin TAMAMI listeleniyordu ve acildiginda 8.855 piksellik
+    bir duvar oluyordu (sayfa 12.246px'e cikiyordu). Bozulma sebebi
+    kategorilerin cok farkli buyuklukte olmasi: "Developer Tools" tek
+    basina 115 arac, dort kolonluk izgarada tek hucrede binlerce piksellik
+    bir sutun oluyor, yanindaki uc kolon bombos kaliyordu.
+
+    Uzun liste, 512 urun sayfasi oksuz kalmasin diye konmustu. OLCULDU:
+    o yol zaten var ve tam -- /categories 14 kategorinin hepsine link
+    veriyor, /categories/developer-tools kendi 115 aracinin hepsini
+    listeliyor. Yani her arac ana sayfadan uc tikla erisilebilir ve
+    taranabilir. Duvara gerek yok.
+
+    Geriye insana da yarayan sey kaldi: 14 kategori, arac sayilariyla.
+
+    `key` bilerek var: bu JSX sunucu bileseninden istemci bilesenine prop
+    olarak geciyor ve RSC sinirinda serilestiriliyor. Anahtarsiz birakinca
+    React "Each child in a list should have a unique key prop" uyariyor.
+  */
   const dizin = (
-      <details key="tam-dizin" className="mx-auto max-w-7xl border-t border-line px-4 py-8 sm:px-6">
-        {/*
-          Katlanmis: acikken 512 linklik bir duvar oluyordu ve sayfanin
-          gorsel agirliginin cogunu kapliyordu. Kapaliyken de linkler
-          HTML'de duruyor -- tarayicilar goruyor, ziyaretci duvarla
-          karsilasmiyor. Bu liste 512 urun sayfasinin oksuz kalmamasini
-          saglayan tek ic link yolu, o yuzden silinmiyor.
-        */}
-        <summary className="cursor-pointer text-sm font-medium marker:text-ink-muted">
-          Browse all {tools.length} tools by category
-        </summary>
-        <div className="pt-6">
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {sirali.map(([kategori, liste]) => (
-            <div key={kategori}>
-              {/*
-                Baslik rengi #9ca3af idi; beyaz zeminde olculen kontrast 2.43
-                (WCAG minimumu 4.5). Token'a baglandi.
-              */}
-              <h3 className="font-sans text-xs font-medium tracking-wide text-ink-muted uppercase">
-                {kategori}
-              </h3>
-              <ul className="mt-3 list-none space-y-1.5 p-0">
-                {liste.map((t) => (
-                  <li key={t.slug}>
-                    <Link
-                      href={`/tools/${t.slug}`}
-                      className="text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
-                    >
-                      {t.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        </div>
-      </details>
+    <details
+      key="kategori-dizini"
+      className="mx-auto max-w-7xl border-t border-line px-4 py-8 sm:px-6"
+    >
+      <summary className="inline-flex cursor-pointer list-none items-center gap-2 rounded-[--radius-control] border border-line bg-surface px-4 py-2.5 text-sm font-medium transition-colors duration-150 hover:border-line-strong [&::-webkit-details-marker]:hidden">
+        Browse all {tools.length} tools by category
+        <span aria-hidden="true" className="text-ink-muted">
+          ▾
+        </span>
+      </summary>
+
+      <ul className="mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
+        {sirali.map(([kategori, liste]) => (
+          <li key={kategori}>
+            <Link
+              href={`/categories/${kategori.toLowerCase().replace(/\s+/g, "-")}`}
+              className="flex items-baseline justify-between gap-3 rounded-[--radius-card] border border-line bg-surface px-4 py-3 no-underline transition-colors duration-150 hover:border-line-strong"
+            >
+              <span className="font-medium">{kategori}</span>
+              <span className="shrink-0 text-sm text-ink-muted">
+                {liste.length} {liste.length === 1 ? "tool" : "tools"}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 
   return (
