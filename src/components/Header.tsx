@@ -39,8 +39,13 @@ export default function Header() {
           telefondan gelen biri kategorilere ulasamiyordu. Artik kucuk
           ekranda da duruyor, yatay kayan bir serit olarak.
         */}
+        {/*
+          Mobilde sola yasli: serit yatay kaydigi icin saga yaslamak ILK
+          ogeyi gorunmez yapiyordu ("Categories" hic gorunmuyordu). Genis
+          ekranda kayma olmadigi icin saga yaslama geri geliyor.
+        */}
         <nav aria-label="Main" className="min-w-0 flex-1">
-          <ul className="flex items-center justify-end gap-1 overflow-x-auto text-sm [scrollbar-width:none] sm:gap-2 [&::-webkit-scrollbar]:hidden">
+          <ul className="flex items-center justify-start gap-1 overflow-x-auto text-sm [scrollbar-width:none] sm:justify-end sm:gap-2 [&::-webkit-scrollbar]:hidden">
             {NAV.map((item) => (
               <li key={item.href} className="shrink-0">
                 <Link

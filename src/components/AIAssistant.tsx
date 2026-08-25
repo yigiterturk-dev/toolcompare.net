@@ -1,105 +1,144 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { MessageSquare, Send, X, Bot, Loader2, Sparkles } from "lucide-react";
+import { Send, X, Sparkles, Loader2 } from "lucide-react";
+
+/*
+  Yardimci sohbet penceresi.
+
+  Gorsel olarak acik temaya tasindi; onceki surum koyu yuzeylere beyaz
+  metin yaziyordu ve acik zeminde okunmuyordu.
+
+  Iki davranis duzeltmesi de var:
+
+  - Pencere sabit 380x550 pikseldi. 390px genisliginde bir telefonda saga
+    2rem bosluk birakip 380px kutu cizmek ekrandan tasiyor demek. Artik
+    kucuk ekranda ekrani kapliyor, buyukte sabit genislige donuyor.
+
+  - Panel acikken Escape ile kapanmiyordu ve odak yonetimi yoktu. Escape
+    eklendi; acilinca odak metin kutusuna gidiyor.
+*/
+
+type Mesaj = { role: "user" | "assistant"; content: string };
 
 export default function AIAssistant({ tools }: { tools: any[] }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<{role: string, content: string}[]>([
-    { role: 'assistant', content: "Hi! I'm your ToolCompare AI. Tell me what you're looking for, and I'll find the perfect SaaS for you!" }
+  const [acik, setAcik] = useState(false);
+  const [mesajlar, setMesajlar] = useState<Mesaj[]>([
+    {
+      role: "assistant",
+      content:
+        "Tell me what you need the tool for. I answer from this catalogue only — if a price is not verified, I will say so rather than guess.",
+    },
   ]);
-  const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [girdi, setGirdi] = useState("");
+  const [yukleniyor, setYukleniyor] = useState(false);
+  const kaydirmaRef = useRef<HTMLDivElement>(null);
+  const girdiRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  }, [messages]);
+    if (kaydirmaRef.current) kaydirmaRef.current.scrollTop = kaydirmaRef.current.scrollHeight;
+  }, [mesajlar]);
 
-  const handleSend = async () => {
-    if (!input.trim() || loading) return;
+  useEffect(() => {
+    if (!acik) return;
+    girdiRef.current?.focus();
+    const kapat = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setAcik(false);
+    };
+    window.addEventListener("keydown", kapat);
+    return () => window.removeEventListener("keydown", kapat);
+  }, [acik]);
 
-    const userMsg = input;
-    setInput("");
-    setMessages(prev => [...prev, { role: 'user', content: userMsg }]);
-    setLoading(true);
-
+  const gonder = async () => {
+    if (!girdi.trim() || yukleniyor) return;
+    const soru = girdi;
+    setGirdi("");
+    setMesajlar((p) => [...p, { role: "user", content: soru }]);
+    setYukleniyor(true);
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMsg, tools: tools.slice(0, 50) }) // Send limited context
+        body: JSON.stringify({ message: soru, tools: tools.slice(0, 50) }),
       });
       const data = await res.json();
-      setMessages(prev => [...prev, { role: 'assistant', content: data.reply }]);
-    } catch (e) {
-      setMessages(prev => [...prev, { role: 'assistant', content: "Sorry, I'm having trouble connecting right now." }]);
+      setMesajlar((p) => [...p, { role: "assistant", content: data.reply }]);
+    } catch {
+      setMesajlar((p) => [
+        ...p,
+        { role: "assistant", content: "That request did not go through. Please try again." },
+      ]);
     }
-    setLoading(false);
+    setYukleniyor(false);
   };
 
   return (
     <>
-      {/* Floating Button */}
-      <button aria-label="Open AI assistant" 
-        onClick={() => setIsOpen(!isOpen)}
-        style={{
-          position: 'fixed', bottom: '2rem', right: '2rem', width: '64px', height: '64px',
-          borderRadius: '50%', background: 'var(--brand-primary)', color: 'white',
-          border: 'none', cursor: 'pointer', boxShadow: '0 10px 30px rgba(99, 102, 241, 0.4)',
-          display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000,
-          transition: 'transform 0.3s'
-        }}
-        className="hover-scale"
+      <button
+        type="button"
+        aria-label={acik ? "Close assistant" : "Open assistant"}
+        aria-expanded={acik}
+        onClick={() => setAcik((v) => !v)}
+        className="fixed right-4 bottom-4 z-50 grid size-14 place-items-center rounded-[--radius-pill] border border-line bg-brand text-brand-ink shadow-lg transition-opacity duration-150 hover:opacity-90 sm:right-6 sm:bottom-6"
       >
-        {isOpen ? <X size={28} /> : <Sparkles size={28} />}
+        {acik ? <X size={22} aria-hidden="true" /> : <Sparkles size={22} aria-hidden="true" />}
       </button>
 
-      {/* Chat Window */}
-      {isOpen && (
-        <div style={{
-          position: 'fixed', bottom: '6rem', right: '2rem', width: '380px', height: '550px',
-          background: '#111', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '24px',
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)', zIndex: 1000,
-          display: 'flex', flexDirection: 'column', overflow: 'hidden'
-        }}>
-          {/* Header */}
-          <div style={{ padding: '1.5rem', background: 'var(--brand-primary)', color: 'white', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-            <Bot size={24} />
-            <div>
-              <div style={{ fontWeight: 800, fontSize: '0.9rem' }}>ToolCompare AI</div>
-              <div style={{ fontSize: '0.7rem', opacity: 0.8 }}>Online & Ready to Help</div>
-            </div>
+      {acik && (
+        <div
+          role="dialog"
+          aria-label="Assistant"
+          className="fixed inset-x-3 bottom-20 z-50 flex max-h-[70vh] flex-col overflow-hidden rounded-[--radius-card] border border-line bg-surface shadow-xl sm:inset-x-auto sm:right-6 sm:bottom-24 sm:h-[32rem] sm:w-96"
+        >
+          <div className="border-b border-line px-4 py-3">
+            <p className="font-serif text-sm font-semibold">Ask about the catalogue</p>
+            <p className="text-xs text-ink-muted">Answers come from the 512 tools listed here.</p>
           </div>
 
-          {/* Messages */}
-          <div ref={scrollRef} style={{ flex: 1, padding: '1.5rem', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1rem' }} className="custom-scrollbar">
-            {messages.map((m, i) => (
-              <div key={i} style={{
-                alignSelf: m.role === 'user' ? 'flex-end' : 'flex-start',
-                background: m.role === 'user' ? 'rgba(99, 102, 241, 0.1)' : 'rgba(255,255,255,0.05)',
-                color: 'white', padding: '0.8rem 1.2rem', borderRadius: '18px',
-                maxWidth: '85%', fontSize: '0.9rem', lineHeight: 1.5,
-                border: m.role === 'user' ? '1px solid rgba(99,102,241,0.2)' : '1px solid rgba(255,255,255,0.05)'
-              }}>
+          <div ref={kaydirmaRef} className="flex flex-1 flex-col gap-3 overflow-y-auto p-4">
+            {mesajlar.map((m, i) => (
+              <p
+                key={i}
+                className={`max-w-[85%] rounded-[--radius-card] px-3 py-2 text-sm ${
+                  m.role === "user"
+                    ? "self-end bg-brand text-brand-ink"
+                    : "self-start bg-surface-sunken text-ink-soft"
+                }`}
+              >
                 {m.content}
-              </div>
+              </p>
             ))}
-            {loading && <div style={{ alignSelf: 'flex-start', padding: '0.8rem' }}><Loader2 className="animate-spin" color="#666" /></div>}
+            {yukleniyor && (
+              <p className="self-start text-ink-muted" aria-live="polite">
+                <Loader2 className="inline size-4 animate-spin" aria-hidden="true" />
+                <span className="sr-only">Thinking</span>
+              </p>
+            )}
           </div>
 
-          {/* Input */}
-          <div style={{ padding: '1.2rem', borderTop: '1px solid rgba(255,255,255,0.05)', display: 'flex', gap: '0.6rem' }}>
-            <input 
-              type="text" 
-              placeholder="Ask anything..." 
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-              style={{ flex: 1, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '0.8rem 1rem', color: 'white', outline: 'none' }}
+          <div className="flex gap-2 border-t border-line p-3">
+            <label htmlFor="assistant-input" className="sr-only">
+              Your question
+            </label>
+            <input
+              id="assistant-input"
+              ref={girdiRef}
+              type="text"
+              placeholder="What do you need it for?"
+              value={girdi}
+              onChange={(e) => setGirdi(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && gonder()}
+              className="min-w-0 flex-1 rounded-[--radius-control] border border-line bg-surface px-3 py-2 text-sm placeholder:text-ink-muted focus:border-line-strong focus:outline-none"
             />
-            <button onClick={handleSend} style={{ background: 'var(--brand-primary)', border: 'none', borderRadius: '12px', width: '45px', display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>
-              <Send size={18} color="white" />
+            <button
+              type="button"
+              onClick={gonder}
+              disabled={yukleniyor || !girdi.trim()}
+              aria-label="Send"
+              data-tap
+              className="grid w-11 shrink-0 place-items-center rounded-[--radius-control] bg-brand text-brand-ink transition-opacity duration-150 hover:opacity-90 disabled:opacity-40"
+            >
+              <Send size={16} aria-hidden="true" />
             </button>
           </div>
         </div>

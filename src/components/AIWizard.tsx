@@ -1,118 +1,213 @@
 "use client";
 
-import { useState } from "react";
-import { Sparkles, ArrowRight, Target, DollarSign, Zap, CheckCircle2 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import { fiyatDurumu, type FiyatModeli } from "@/lib/fiyat";
 
-export default function AIWizard({ tools }: { tools: any[] }) {
-  const [step, setStep] = useState(0);
-  const [selections, setSelections] = useState({ category: "", budget: "", focus: "" });
-  const [results, setResults] = useState<any[]>([]);
-  const router = useRouter();
+/*
+  "Bana uygun olani bul" secicisi.
 
-  const categories = Array.from(new Set(tools.map(t => t.category)));
+  DENETIMDE BULUNAN (2026-08-25): bu bilesen "Our AI Recommendations"
+  basligiyla siralama yapiyordu ve siralamayi UC alandan uretiyordu:
 
-  const handleNext = (key: string, value: string) => {
-    const newSelections = { ...selections, [key]: value };
-    setSelections(newSelections);
-    
-    if (step < 2) {
-      setStep(step + 1);
-    } else {
-      // Calculate Results
-      const filtered = tools.filter(t => t.category === newSelections.category);
-      
-      const scored = filtered.map(t => {
-        let score = 0;
-        // Budget match
-        if (newSelections.budget === "free" && t.trial) score += 20;
-        if (newSelections.budget === "low" && t.basePrice < 30) score += 20;
-        if (newSelections.budget === "pro" && t.basePrice >= 30) score += 20;
-        
-        // Focus match
-        if (newSelections.focus === "ease") score += t.ease;
-        if (newSelections.focus === "features") score += t.featuresScore;
-        
-        return { ...t, aiScore: score };
-      }).sort((a, b) => b.aiScore - a.aiScore);
+    t.ease           -> 512 kaydin 108'inde var (%21)
+    t.featuresScore  -> 512 kaydin 108'inde var (%21)
+    t.trial          -> 512 kaydin SIFIRINDA var
 
-      setResults(scored.slice(0, 3));
-      setStep(3);
-    }
-  };
+  Sonuclari:
+  - `t.trial` hicbir kayitta olmadigi icin "ucretsiz" dali hicbir zaman
+    puan eklemiyordu; olu koddu.
+  - `score += t.ease` 404 aracta `undefined` ekliyordu, yani skor NaN
+    oluyordu. NaN ile sort() sonucu tanimsizdir -- "AI onerisi" pratikte
+    rastgele bir siralamaydi.
+  - Daha onemlisi: `ease` ve `featuresScore` bu depoda UYDURMA PUAN olarak
+    tespit edilip sayfalardan sokulmustu. Site "uydurma kalite puani
+    yayinlamiyoruz" diye satarken, oneri motoru tam olarak onlari
+    kullaniyordu.
 
-  if (step === 3) {
-    return (
-      <div style={{ background: 'rgba(99, 102, 241, 0.05)', border: '1px solid var(--brand-primary)', borderRadius: '40px', padding: '4rem', textAlign: 'center', animation: 'fadeIn 0.5s ease' }}>
-        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '2rem' }}>Our AI Recommendations <Sparkles color="var(--brand-primary)" style={{ display: 'inline' }} /></h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '2rem' }}>
-          {results.map((t, i) => (
-            <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2rem', borderRadius: '32px', border: '1px solid var(--border-color)', position: 'relative', overflow: 'hidden' }}>
-              {i === 0 && <div style={{ position: 'absolute', top: '10px', right: '10px', background: 'var(--brand-primary)', color: 'white', padding: '4px 12px', borderRadius: '20px', fontSize: '0.7rem', fontWeight: 900 }}>BEST MATCH</div>}
-              <div style={{ width: '50px', height: '50px', borderRadius: '12px', background: `linear-gradient(135deg, ${t.color1}, ${t.color2})`, margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>{t.name.charAt(0)}</div>
-              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>{t.name}</h3>
-              <button onClick={() => router.push(`/tools/${t.slug}`)} style={{ width: '100%', padding: '0.8rem', borderRadius: '12px', background: 'white', color: 'black', border: 'none', fontWeight: 800, cursor: 'pointer' }}>View Details</button>
-            </div>
-          ))}
-        </div>
-        <button onClick={() => setStep(0)} style={{ marginTop: '3rem', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)', color: '#666', padding: '0.8rem 2rem', borderRadius: '12px', cursor: 'pointer' }}>Start Over</button>
-      </div>
-    );
+  Yeni surum yalnizca DOGRULANABILIR veriyle calisiyor: kategori, fiyat
+  modeli ve dogrulanmis aylik fiyat. Adi da artik yaptigi seyi soyluyor --
+  bu bir filtre, AI degil.
+*/
+
+type Arac = {
+  slug: string;
+  name: string;
+  category?: string;
+  shortDescription?: string;
+  basePrice?: number;
+  isFlat?: boolean;
+  fiyatModeli?: FiyatModeli;
+};
+
+type Butce = "free" | "under25" | "any";
+
+const BUTCELER: { deger: Butce; etiket: string; aciklama: string }[] = [
+  { deger: "free", etiket: "Free to start", aciklama: "Free plan or a free tier" },
+  { deger: "under25", etiket: "Under $25", aciklama: "Verified monthly price" },
+  { deger: "any", etiket: "Any price", aciklama: "Show everything" },
+];
+
+function butceyeUyar(t: Arac, butce: Butce): boolean {
+  const d = fiyatDurumu(t);
+  if (butce === "any") return true;
+  if (butce === "free") {
+    // "Bedava" ve "ucretsiz katman" veriden geliyor, tahmin degil.
+    return d.kisa === "Free" || d.kisa === "Free tier";
   }
+  // Fiyat dogrulanmamissa "25 dolarin altinda" DIYEMEYIZ; listeye almiyoruz.
+  return d.karsilastirilabilir && d.aylik !== null && d.aylik > 0 && d.aylik < 25;
+}
+
+export default function AIWizard({ tools }: { tools: Arac[] }) {
+  const [kategori, setKategori] = useState<string>("");
+  const [butce, setButce] = useState<Butce>("any");
+
+  const kategoriler = useMemo(
+    () =>
+      Array.from(new Set(tools.map((t) => t.category).filter(Boolean) as string[])).sort(
+        (a, b) => a.localeCompare(b),
+      ),
+    [tools],
+  );
+
+  const sonuclar = useMemo(() => {
+    if (!kategori) return [];
+    return tools
+      .filter((t) => t.category === kategori)
+      .filter((t) => butceyeUyar(t, butce))
+      .sort((a, b) => {
+        const da = fiyatDurumu(a);
+        const db = fiyatDurumu(b);
+        // Dogrulanmis fiyati olan once; sonra ucuzdan pahaliya; sonra ada gore.
+        const ga = da.karsilastirilabilir ? 0 : 1;
+        const gb = db.karsilastirilabilir ? 0 : 1;
+        if (ga !== gb) return ga - gb;
+        if (da.aylik !== null && db.aylik !== null && da.aylik !== db.aylik) {
+          return da.aylik - db.aylik;
+        }
+        return a.name.localeCompare(b.name);
+      })
+      .slice(0, 6);
+  }, [tools, kategori, butce]);
 
   return (
-    <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '40px', padding: '4rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', top: '2rem', right: '4rem', fontSize: '0.8rem', color: '#444', fontWeight: 800 }}>STEP {step + 1} OF 3</div>
-      
-      {step === 0 && (
-        <div style={{ animation: 'slideIn 0.4s ease' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>What are you <span style={{ color: 'var(--brand-primary)' }}>building?</span></h2>
-          <p style={{ color: '#666', marginBottom: '3rem' }}>Select the category you need help with.</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
-            {categories.map(cat => (
-              <button key={cat} onClick={() => handleNext("category", cat)} style={{ padding: '1rem 2rem', borderRadius: '16px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', cursor: 'pointer', fontWeight: 700, transition: 'all 0.2s' }} className="hover-scale">{cat}</button>
-            ))}
-          </div>
-        </div>
-      )}
+    <div>
+      <h2 className="text-2xl font-semibold sm:text-3xl">Not sure where to start?</h2>
+      <p className="mt-2 max-w-2xl text-ink-soft">
+        Pick a category and a budget. Results are ordered by verified monthly price — nothing here
+        is scored or ranked by us.
+      </p>
 
-      {step === 1 && (
-        <div style={{ animation: 'slideIn 0.4s ease' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>What's your <span style={{ color: 'var(--brand-primary)' }}>budget?</span></h2>
-          <p style={{ color: '#666', marginBottom: '3rem' }}>We'll find tools that fit your wallet.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
-            <button onClick={() => handleNext("budget", "free")} style={{ padding: '2rem', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', cursor: 'pointer', textAlign: 'center' }} className="hover-scale">
-               <div style={{ marginBottom: '1rem' }}><CheckCircle2 size={32} color="#10b981" style={{ margin: '0 auto' }}/></div>
-               <div style={{ fontWeight: 800, color: 'white' }}>Free / Trials</div>
-            </button>
-            <button onClick={() => handleNext("budget", "low")} style={{ padding: '2rem', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', cursor: 'pointer', textAlign: 'center' }} className="hover-scale">
-               <div style={{ marginBottom: '1rem' }}><DollarSign size={32} color="var(--brand-primary)" style={{ margin: '0 auto' }}/></div>
-               <div style={{ fontWeight: 800, color: 'white' }}>Startup ($1 - $30)</div>
-            </button>
-            <button onClick={() => handleNext("budget", "pro")} style={{ padding: '2rem', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', cursor: 'pointer', textAlign: 'center' }} className="hover-scale">
-               <div style={{ marginBottom: '1rem' }}><Zap size={32} color="#f59e0b" style={{ margin: '0 auto' }}/></div>
-               <div style={{ fontWeight: 800, color: 'white' }}>Enterprise (High-End)</div>
-            </button>
-          </div>
-        </div>
-      )}
+      <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+        <div className="space-y-6">
+          <fieldset>
+            <legend className="text-xs font-medium tracking-wide text-ink-muted uppercase">
+              Category
+            </legend>
+            {/*
+              Native <select> kullanilmiyor (proje kurali). Yerine gorunur
+              secenek listesi; klavyeyle gezilebiliyor ve secili olan
+              aria-pressed ile bildiriliyor.
+            */}
+            <div className="mt-3 flex max-h-64 flex-wrap gap-2 overflow-y-auto">
+              {kategoriler.map((k) => (
+                <button
+                  key={k}
+                  type="button"
+                  onClick={() => setKategori(k === kategori ? "" : k)}
+                  aria-pressed={k === kategori}
+                  data-tap
+                  className={`rounded-[--radius-pill] border px-3 py-1.5 text-sm transition-colors duration-150 ${
+                    k === kategori
+                      ? "border-brand bg-brand text-brand-ink"
+                      : "border-line bg-surface text-ink-soft hover:border-line-strong hover:text-ink"
+                  }`}
+                >
+                  {k}
+                </button>
+              ))}
+            </div>
+          </fieldset>
 
-      {step === 2 && (
-        <div style={{ animation: 'slideIn 0.4s ease' }}>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1rem' }}>Your primary <span style={{ color: 'var(--brand-primary)' }}>focus?</span></h2>
-          <p style={{ color: '#666', marginBottom: '3rem' }}>Do you want simplicity or raw power?</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem', maxWidth: '600px', margin: '0 auto' }}>
-            <button onClick={() => handleNext("focus", "ease")} style={{ padding: '2rem', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', cursor: 'pointer', textAlign: 'center' }} className="hover-scale">
-               <div style={{ fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>Simplicity First</div>
-               <div style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem' }}>Easy to learn, fast to deploy</div>
-            </button>
-            <button onClick={() => handleNext("focus", "features")} style={{ padding: '2rem', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', cursor: 'pointer', textAlign: 'center' }} className="hover-scale">
-               <div style={{ fontWeight: 800, color: 'white', fontSize: '1.2rem' }}>Feature Rich</div>
-               <div style={{ fontSize: '0.8rem', color: '#666', marginTop: '0.5rem' }}>Maximum tools and advanced options</div>
-            </button>
-          </div>
+          <fieldset>
+            <legend className="text-xs font-medium tracking-wide text-ink-muted uppercase">
+              Budget
+            </legend>
+            <div className="mt-3 flex flex-col gap-2">
+              {BUTCELER.map((b) => (
+                <button
+                  key={b.deger}
+                  type="button"
+                  onClick={() => setButce(b.deger)}
+                  aria-pressed={b.deger === butce}
+                  data-tap
+                  className={`rounded-[--radius-control] border px-3 py-2 text-left transition-colors duration-150 ${
+                    b.deger === butce
+                      ? "border-brand bg-surface"
+                      : "border-line bg-surface hover:border-line-strong"
+                  }`}
+                >
+                  <span className="block text-sm font-medium">{b.etiket}</span>
+                  <span className="block text-xs text-ink-muted">{b.aciklama}</span>
+                </button>
+              ))}
+            </div>
+          </fieldset>
         </div>
-      )}
+
+        <div>
+          {!kategori ? (
+            <p className="rounded-[--radius-card] border border-dashed border-line p-8 text-sm text-ink-muted">
+              Choose a category to see matching tools.
+            </p>
+          ) : sonuclar.length === 0 ? (
+            <div className="rounded-[--radius-card] border border-line bg-surface p-8">
+              <p className="font-serif text-lg font-semibold">
+                No {kategori} tool matches that budget.
+              </p>
+              <p className="mt-2 text-sm text-ink-soft">
+                {butce === "under25"
+                  ? "Only tools with a verified monthly price under $25 are listed here — a tool whose price we have not verified is never counted as cheap."
+                  : "Try a wider budget."}
+              </p>
+            </div>
+          ) : (
+            <ul className="grid list-none gap-3 p-0 sm:grid-cols-2">
+              {sonuclar.map((t) => {
+                const d = fiyatDurumu(t);
+                return (
+                  <li key={t.slug}>
+                    <Link
+                      href={`/tools/${t.slug}`}
+                      className="block h-full rounded-[--radius-card] border border-line bg-surface p-4 no-underline transition-colors duration-150 hover:border-line-strong"
+                    >
+                      <p className="font-serif text-base font-semibold">{t.name}</p>
+                      <p className="mt-1 flex flex-wrap items-baseline gap-2">
+                        <span className="text-sm font-medium">{d.kisa}</span>
+                        <span
+                          className={`rounded-[--radius-pill] px-1.5 py-0.5 text-[11px] ${
+                            d.karsilastirilabilir
+                              ? "bg-verified-soft text-verified"
+                              : "bg-unverified-soft text-unverified"
+                          }`}
+                        >
+                          {d.karsilastirilabilir ? "Verified" : "Not a monthly price"}
+                        </span>
+                      </p>
+                      {t.shortDescription ? (
+                        <p className="mt-2 line-clamp-2 text-sm text-ink-soft">
+                          {t.shortDescription}
+                        </p>
+                      ) : null}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

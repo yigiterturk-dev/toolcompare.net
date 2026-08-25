@@ -85,47 +85,29 @@ export default async function Home() {
 
       <nav
         aria-label="All tools by category"
-        style={{
-          borderTop: "1px solid #e5e7eb",
-          padding: "3rem 1.5rem 4rem",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
+        className="mx-auto max-w-7xl border-t border-line px-4 pt-12 pb-16 sm:px-6"
       >
-        <h2 style={{ fontSize: "1.5rem", fontWeight: 800, marginBottom: "0.5rem" }}>
-          Browse all {tools.length} tools
-        </h2>
-        <p style={{ color: "#6b7280", marginBottom: "2rem", fontSize: "0.95rem" }}>
+        <h2 className="text-2xl font-semibold">Browse all {tools.length} tools</h2>
+        <p className="mt-2 text-sm text-ink-soft">
           Every tool we have reviewed, grouped by category.
         </p>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(min(230px, 100%), 1fr))",
-            gap: "2rem",
-          }}
-        >
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {sirali.map(([kategori, liste]) => (
             <div key={kategori}>
-              <h3
-                style={{
-                  fontSize: "0.8rem",
-                  fontWeight: 700,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.06em",
-                  color: "#9ca3af",
-                  marginBottom: "0.75rem",
-                }}
-              >
+              {/*
+                Baslik rengi #9ca3af idi; beyaz zeminde olculen kontrast 2.43
+                (WCAG minimumu 4.5). Token'a baglandi.
+              */}
+              <h3 className="font-sans text-xs font-medium tracking-wide text-ink-muted uppercase">
                 {kategori}
               </h3>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              <ul className="mt-3 list-none space-y-1.5 p-0">
                 {liste.map((t) => (
-                  <li key={t.slug} style={{ marginBottom: "0.4rem" }}>
+                  <li key={t.slug}>
                     <Link
                       href={`/tools/${t.slug}`}
-                      style={{ color: "#374151", textDecoration: "none", fontSize: "0.9rem" }}
+                      className="text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
                     >
                       {t.name}
                     </Link>

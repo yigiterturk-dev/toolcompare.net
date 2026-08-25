@@ -35,8 +35,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${newsreader.variable} ${roboto.variable} antialiased`}>
+    /*
+      Font degiskenleri <html> uzerinde: next/font onlari className ile
+      birakiyor ve Tailwind'in @theme bloklari :root'ta cozuluyor. Degiskenler
+      <body>'de kalinca @theme icindeki var(--font-roboto) hicbir seye
+      cozulmuyordu ve Tailwind kendi varsayilan yiginina dusuyordu -- yani
+      fontlar yuklenip hic kullanilmiyordu.
+    */
+    <html lang="en" className={`${newsreader.variable} ${roboto.variable}`}>
+      <body className="antialiased">
         {children}
       </body>
     </html>

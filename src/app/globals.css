@@ -36,7 +36,9 @@
   /* Marka: editoryal siyah birincil, tek vurgu */
   --color-brand: #18181b;
   --color-brand-ink: #ffffff;
-  --color-accent: #db2777;
+  /* #ec4899 (skill onerisi) ve #db2777 acik zeminde 4.5 kontrasti tutturamadi;
+     olculen 4.40. Ayni renk ailesinin bir tonu koyusu 4.5 esigini geciyor. */
+  --color-accent: #be185d;
   --color-accent-soft: #fdf2f8;
 
   /*
@@ -55,80 +57,91 @@
   --radius-pill: 999px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  background-color: var(--color-canvas);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  /* Sayilar tabloda ve fiyatlarda kaymasin */
-  font-variant-numeric: tabular-nums;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-  margin: 0;
-}
-
-p {
-  text-wrap: pretty;
-}
-
-a {
-  color: inherit;
-}
-
 /*
-  Odak halkasi. Eski temada hic tanimli degildi; klavyeyle gezen biri
-  nerede oldugunu goremiyordu (WCAG 2.4.7).
+  Temel eleman stilleri @layer base icinde.
+
+  DENETIMDE BULUNAN (2026-08-25): bu blok once katmansiz yazilmisti ve
+  icindeki tek bir satir -- `a { color: inherit }` -- Tailwind'in butun
+  metin rengi yardimcilarini eziyordu. CSS katman kurallarinda KATMANSIZ
+  stiller katmanlilari her zaman yener; ozgullugun onemi yok. Sonuc:
+  header'daki "Submit a tool" butonu siyah zeminde siyah yaziyla
+  ciziliyordu, olculen kontrast 1.12 (WCAG minimumu 4.5).
+
+  Katmansiz birakilan tek sey .sr-only ve .skip-link: ikisi de kendi
+  siniflari, hicbir yardimciyla catismiyorlar.
 */
-:where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-  border-radius: var(--radius-control);
-}
-
-/* Dokunma hedefi: mobilde 44px alti tiklanabilir sey birakma */
-@media (pointer: coarse) {
-  :where(a, button)[data-tap] {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-
-/*
-  Hareket. Skill "asiri animasyon"i anti-pattern saydi; burada tek bir
-  gecis suresi var ve hepsi ondan besleniyor.
-*/
-:root {
-  --motion-fast: 150ms;
-  --motion: 220ms;
-  --ease: cubic-bezier(0.2, 0, 0, 1);
-}
-
-@media (prefers-reduced-motion: reduce) {
+@layer base {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    /* Sayilar tabloda ve fiyatlarda kaymasin */
+    font-variant-numeric: tabular-nums;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /*
+    Odak halkasi. Eski temada hic tanimli degildi; klavyeyle gezen biri
+    nerede oldugunu goremiyordu (WCAG 2.4.7).
+  */
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-control);
+  }
+
+  /* Dokunma hedefi: mobilde 44px alti tiklanabilir sey birakma */
+  @media (pointer: coarse) {
+    :where(a, button)[data-tap] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /*
+    Hareket. Skill "asiri animasyon"i anti-pattern saydi; burada tek bir
+    gecis suresi var ve hepsi ondan besleniyor.
+  */
+  :root {
+    --motion-fast: 150ms;
+    --motion: 220ms;
+    --ease: cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
