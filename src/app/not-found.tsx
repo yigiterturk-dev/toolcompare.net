@@ -1,54 +1,54 @@
-import Link from 'next/link';
-import { Home, Search } from 'lucide-react';
+import Link from "next/link";
+
+/*
+  404.
+
+  Onceki surum koyu temaya sabitlenmisti (#050505 zemin, beyaz metin) ve
+  acik temada okunmuyordu. Metni de dogru degildi: "moved to a new galaxy"
+  diyordu ama ziyaretcinin ihtiyaci bu degil -- nereye gidecegini bilmek.
+  Uc gercek cikis yolu veriliyor.
+
+  Not: bu sayfa statik uretiliyor, yani nonce alamiyor. Bu yuzden burada
+  hicbir script yok; eskiden CSP altinda hidrasyon calismiyordu ve sayfa
+  sessizce olu kaliyordu.
+*/
 
 export default function NotFound() {
   return (
-    <div style={{ 
-      backgroundColor: '#050505', 
-      color: '#fff', 
-      height: '100vh', 
-      display: 'flex', 
-      flexDirection: 'column', 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      textAlign: 'center',
-      padding: '20px'
-    }}>
-      <div style={{
-        position: 'absolute',
-        width: '300px',
-        height: '300px',
-        background: 'var(--brand-primary)',
-        filter: 'blur(150px)',
-        opacity: 0.1,
-        zIndex: 0
-      }}></div>
+    <main className="mx-auto flex min-h-dvh max-w-lg flex-col justify-center px-4 py-16 text-center">
+      <p className="font-serif text-5xl font-semibold text-ink-muted">404</p>
+      <h1 className="mt-4 text-2xl font-semibold">This page does not exist</h1>
+      <p className="mt-3 text-ink-soft">
+        The tool or comparison you are looking for is not here. It may have been renamed, or the
+        link may be wrong.
+      </p>
 
-      <h1 style={{ fontSize: '10rem', fontWeight: '900', margin: 0, lineHeight: 1, opacity: 0.1 }}>404</h1>
-      
-      <div style={{ zIndex: 1 }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Looks like you're lost.</h2>
-        <p style={{ color: '#888', marginBottom: '2rem', maxWidth: '500px' }}>
-          The tool or page you're looking for doesn't exist or has been moved to a new galaxy.
-        </p>
-        
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-          <Link href="/" style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            padding: '1rem 2rem',
-            backgroundColor: 'var(--brand-primary)',
-            color: 'white',
-            borderRadius: '12px',
-            textDecoration: 'none',
-            fontWeight: '600'
-          }}>
-            <Home size={20} />
-            Back to Home
+      <ul className="mt-8 flex list-none flex-wrap justify-center gap-2 p-0">
+        <li>
+          <Link
+            href="/"
+            className="inline-flex rounded-[--radius-control] bg-brand px-4 py-2.5 text-sm font-medium text-brand-ink no-underline transition-opacity duration-150 hover:opacity-90"
+          >
+            All tools
           </Link>
-        </div>
-      </div>
-    </div>
+        </li>
+        <li>
+          <Link
+            href="/categories"
+            className="inline-flex rounded-[--radius-control] border border-line bg-surface px-4 py-2.5 text-sm no-underline transition-colors duration-150 hover:border-line-strong"
+          >
+            Browse by category
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/top-picks"
+            className="inline-flex rounded-[--radius-control] border border-line bg-surface px-4 py-2.5 text-sm no-underline transition-colors duration-150 hover:border-line-strong"
+          >
+            Cheapest tools
+          </Link>
+        </li>
+      </ul>
+    </main>
   );
 }

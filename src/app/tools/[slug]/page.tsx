@@ -115,270 +115,312 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         dangerouslySetInnerHTML={{ __html: JSON.stringify(yapilandirilmis) }}
       />
       <Header />
-      <div className="ambient-bg">
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2" style={{ top: '60%', right: '-10%' }}></div>
-      </div>
-      
-      <main style={{ paddingTop: '8rem', paddingBottom: '8rem', maxWidth: '1100px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%' }}>
-        <Link href="/" style={{ color: 'var(--brand-primary)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '3rem', fontWeight: 600 }}>
-          <ArrowLeft size={18} /> Back to Software Directory
+
+      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
+        >
+          <ArrowLeft size={16} aria-hidden="true" /> All tools
         </Link>
 
-        <article>
-          <div style={{ marginBottom: '4rem' }}>
-            <div className="tool-review-hero" style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2rem' }}>
-              <div style={{ width: '100px', height: '100px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool.color1}, ${tool.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>
-                 <span aria-hidden="true" style={{ color: 'white', fontSize: '2.5rem', fontWeight: 800, lineHeight: 1 }}>{tool.name.charAt(0)}</span>
-              </div>
-              <div>
-                <span style={{ color: 'var(--brand-primary)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '2px' }}>{tool.category} Review</span>
-                <h1 className="tool-review-title" style={{ fontSize: '4rem', margin: 0, letterSpacing: '-2px', lineHeight: 1 }}>{tool.name}</h1>
-              </div>
+        <article className="mt-8">
+          <header className="flex flex-wrap items-start gap-4 border-b border-line pb-8">
+            <span
+              aria-hidden="true"
+              className="grid size-16 shrink-0 place-items-center rounded-[--radius-card] bg-surface-sunken font-serif text-2xl font-semibold text-ink-soft"
+            >
+              {tool.name.charAt(0)}
+            </span>
+            <div className="min-w-0 flex-1">
+              {tool.category ? (
+                <p className="text-xs font-medium tracking-wide text-ink-muted uppercase">
+                  {tool.category}
+                </p>
+              ) : null}
+              <h1 className="mt-1 text-3xl font-semibold break-words sm:text-4xl">{tool.name}</h1>
+              {tool.shortDescription ? (
+                <p className="mt-2 text-ink-soft">{tool.shortDescription}</p>
+              ) : null}
             </div>
-          </div>
+          </header>
 
-          <div className="tool-review-layout" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '4rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+          <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem]">
+            {/* ---------- Ana sutun ---------- */}
+            <div className="min-w-0 space-y-10">
               {!incelendi && (
-                <section style={{ background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.35)', borderRadius: '20px', padding: '1.8rem' }}>
-                  <h2 style={{ fontSize: '1.2rem', marginBottom: '0.6rem' }}>We have not reviewed {tool.name} yet</h2>
-                  <p style={{ color: 'var(--text-secondary)', margin: 0, lineHeight: 1.7 }}>
-                    It is in our directory so you can find it, see what it costs to start and compare it with
-                    the closest alternatives we track. But we have not written a verdict, pros or cons for it,
-                    so this page does not pretend to have one.
+                <section className="rounded-[--radius-card] border border-line bg-unverified-soft p-5">
+                  <h2 className="text-lg font-semibold">We have not reviewed {tool.name} yet</h2>
+                  <p className="mt-2 text-sm text-ink-soft">
+                    This page lists what it costs to start and the closest alternatives we track.
+                    There is no verdict here because we have not written one.
                   </p>
                 </section>
               )}
 
-              {longDesc && (
+              {longDesc ? (
                 <section>
-                  <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Deep Dive Analysis</h2>
-                  <div style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
-                    {longDesc}
-                  </div>
+                  <h2 className="text-xl font-semibold">What it is</h2>
+                  <p className="mt-3 whitespace-pre-line text-ink-soft">{longDesc}</p>
                 </section>
-              )}
+              ) : null}
 
               {features.length > 0 && (
-              <section style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2.5rem' }}>
-                <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                  <Award color="var(--brand-primary)" /> Key Features
-                </h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                  {features.map((f: any, i: number) => {
-                    const title = typeof f === 'string' ? f : (f.title || f.name || f.text || "");
-                    const description = typeof f === 'object' ? (f.description || f.text || "") : "";
-                    return (
-                      <div key={i}>
-                        <h3 style={{ fontSize: '1.1rem', color: 'white', marginBottom: '0.5rem' }}>{title}</h3>
-                        {description && <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{description}</p>}
-                      </div>
-                    );
-                  })}
-                </div>
-              </section>
-              )}
-
-              {targetAud && (
                 <section>
-                  <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                    <Target color="var(--brand-secondary)" /> Target Audience
-                  </h2>
-                  <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>{targetAud}</p>
+                  <h2 className="text-xl font-semibold">Key features</h2>
+                  <ul className="mt-4 grid list-none gap-4 p-0 sm:grid-cols-2">
+                    {features.map((f: any, i: number) => {
+                      const title = typeof f === "string" ? f : f?.title || "";
+                      const description = typeof f === "string" ? "" : f?.description || "";
+                      if (!title) return null;
+                      return (
+                        <li
+                          key={i}
+                          className="rounded-[--radius-card] border border-line bg-surface p-4"
+                        >
+                          <h3 className="font-sans text-sm font-semibold">{title}</h3>
+                          {description ? (
+                            <p className="mt-1.5 text-sm text-ink-soft">{description}</p>
+                          ) : null}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </section>
               )}
 
-              {verdictText && (
-                <section style={{ borderLeft: '4px solid var(--brand-tertiary)', paddingLeft: '2rem', margin: '2rem 0' }}>
-                  <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                    <MessageSquareQuote color="var(--brand-tertiary)" /> The Final Verdict
-                  </h2>
-                  <p style={{ fontSize: '1.3rem', color: 'white', fontWeight: 500, fontStyle: 'italic' }}>"{typeof verdictText === 'string' ? verdictText : (verdictText.text || "")}"</p>
+              {targetAud ? (
+                <section>
+                  <h2 className="text-xl font-semibold">Who it is for</h2>
+                  <p className="mt-3 text-ink-soft">{targetAud}</p>
+                </section>
+              ) : null}
+
+              {verdictText ? (
+                <section className="rounded-[--radius-card] border-l-2 border-accent bg-surface p-5">
+                  <h2 className="text-xl font-semibold">Our verdict</h2>
+                  <p className="mt-3 text-ink-soft">
+                    {typeof verdictText === "string" ? verdictText : verdictText.text || ""}
+                  </p>
+                </section>
+              ) : null}
+
+              {/*
+                DENETIMDE BULUNAN (2026-08-25): bu bolum "Best Alternatives to X"
+                basligini tasiyordu ama listeyi
+                `.sort(() => 0.5 - Math.random()).slice(0, 3)` ile seciyordu --
+                yani "en iyi alternatifler" rastgele uc kayitti. Depoda zaten
+                dogru fonksiyon vardi (`akranlar()`, fiyata gore siralar) ve
+                ayni sayfanin alt kisminda kullaniliyordu. Basligi da artik
+                yaptigi seyi soyluyor.
+              */}
+              {karsilastirmalar.length > 0 && (
+                <section>
+                  <h2 className="text-xl font-semibold">Closest alternatives we track</h2>
+                  <p className="mt-2 text-sm text-ink-muted">
+                    Same category, ordered by verified starting price.
+                  </p>
+                  <ul className="mt-4 grid list-none gap-3 p-0 sm:grid-cols-3">
+                    {karsilastirmalar.slice(0, 3).map((alt: any) => {
+                      const d = fiyatDurumu(alt);
+                      return (
+                        <li key={alt.slug}>
+                          <Link
+                            href={`/tools/${alt.slug}`}
+                            className="block h-full rounded-[--radius-card] border border-line bg-surface p-4 no-underline transition-colors duration-150 hover:border-line-strong"
+                          >
+                            <p className="font-serif text-base font-semibold">{alt.name}</p>
+                            <p className="mt-1 text-sm text-ink-soft">{d.kisa}</p>
+                            {alt.shortDescription ? (
+                              <p className="mt-2 line-clamp-2 text-sm text-ink-muted">
+                                {alt.shortDescription}
+                              </p>
+                            ) : null}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </section>
               )}
-
-              {/* Smart Alternatives Section */}
-              <section style={{ marginTop: '4rem', borderTop: '1px solid var(--border-color)', paddingTop: '4rem' }}>
-                <h2 style={{ fontSize: '2rem', marginBottom: '2rem', letterSpacing: '-1px' }}>
-                  Best Alternatives to <span style={{ color: 'var(--brand-primary)' }}>{tool.name}</span>
-                </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(250px, 100%), 1fr))', gap: '1.5rem' }}>
-                  {(toolsData as any[])
-                    .filter(t => t.category === tool.category && t.slug !== tool.slug)
-                    .sort(() => 0.5 - Math.random())
-                    .slice(0, 3)
-                    .map(alt => (
-                      <Link 
-                        key={alt.slug} 
-                        href={`/tools/${alt.slug}`}
-                        style={{ 
-                          background: 'rgba(255,255,255,0.03)', 
-                          border: '1px solid var(--border-color)', 
-                          borderRadius: '20px', 
-                          padding: '1.5rem', 
-                          textDecoration: 'none',
-                          transition: 'all 0.3s'
-                        }}
-                        className="hover-scale"
-                      >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                          <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: `linear-gradient(135deg, ${alt.color1}, ${alt.color2})`, display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', fontWeight: 800 }}>
-                            {alt.name.charAt(0)}
-                          </div>
-                          <div style={{ fontWeight: 700, color: 'white' }}>{alt.name}</div>
-                        </div>
-                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{alt.shortDescription}</p>
-                      </Link>
-                    ))
-                  }
-                </div>
-              </section>
             </div>
 
-            <aside>
-              <div style={{ position: 'sticky', top: '8rem', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem', textAlign: 'center' }}>
-                   <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px' }}>How to start</span>
-                   <div style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--brand-primary)', fontFamily: 'var(--font-outfit)' }}>{fiyatDurumu(tool).metin}</div>
-                </div>
+            {/* ---------- Yan sutun ---------- */}
+            <aside className="min-w-0 space-y-6 lg:sticky lg:top-24 lg:self-start">
+              <div className="rounded-[--radius-card] border border-line bg-surface p-5">
+                <p className="text-xs font-medium tracking-wide text-ink-muted uppercase">
+                  How to start
+                </p>
+                <p className="mt-2 font-serif text-2xl font-semibold">{fiyatDurumu(tool).metin}</p>
+                <p
+                  className={`mt-2 inline-block rounded-[--radius-pill] px-2 py-0.5 text-[11px] font-medium ${
+                    fiyatDurumu(tool).karsilastirilabilir
+                      ? "bg-verified-soft text-verified"
+                      : "bg-unverified-soft text-unverified"
+                  }`}
+                >
+                  {fiyatDurumu(tool).karsilastirilabilir
+                    ? "Verified price"
+                    : "Not a monthly price"}
+                </p>
 
-                {((tool.pros || []).length > 0 || (tool.cons || []).length > 0) && (
-                <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '24px', padding: '2rem' }}>
-                  <h3 style={{ marginBottom: '1.5rem', color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><CheckCircle2 size={18} /> Pros</h3>
-                  <ul style={{ listStyle: 'none', padding: 0, marginBottom: '2rem' }}>
-                    {(tool.pros || []).map((pro: string, i: number) => (
-                      <li key={i} style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>• {pro}</li>
-                    ))}
-                  </ul>
-                  <h3 style={{ marginBottom: '1.5rem', color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><XCircle size={18} /> Cons</h3>
-                  <ul style={{ listStyle: 'none', padding: 0 }}>
-                    {(tool.cons || []).map((con: string, i: number) => (
-                      <li key={i} style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.8rem' }}>• {con}</li>
-                    ))}
-                  </ul>
-                </div>
-                )}
-
-                <div style={{ background: 'linear-gradient(135deg, var(--brand-primary), var(--brand-secondary))', borderRadius: '24px', padding: '2rem', color: 'white' }}>
-                   <p style={{ fontSize: '0.9rem', opacity: 0.8, marginBottom: '0.5rem' }}>{typeof tool.basePrice === "number" && tool.basePrice > 0 && fiyatDurumu(tool).karsilastirilabilir ? 'Pricing starts at' : 'Pricing'}</p>
-                   <div style={{ fontSize: '2.5rem', fontWeight: 800, fontFamily: 'var(--font-outfit)', marginBottom: '1.5rem' }}>
-                     {/* Metni HER ZAMAN fiyatDurumu uretir. Onceden buradan
-                         dogrudan basePrice basiliyordu; gercekten bedava olan
-                         araclarda "$0/mo" cikiyor, oysa geri kalan her sayfa
-                         "Free" diyordu -- ayni arac iki farkli sey soyluyordu. */}
-                     {typeof tool.basePrice === "number" && tool.basePrice > 0 && fiyatDurumu(tool).karsilastirilabilir
-                       ? <>${tool.basePrice}<span style={{ fontSize: '1rem', fontWeight: 400, opacity: 0.8 }}>{tool.isFlat ? '/mo' : '/user/mo'}</span></>
-                       : <span style={{ fontSize: '1.6rem' }}>{fiyatDurumu(tool).metin}</span>}
-                   </div>
-                   <a 
-                    href={gitLinki(tool.slug)} 
-                    target="_blank" 
-                    rel="noopener noreferrer nofollow sponsored"
-                    style={{ 
-                      display: 'block',
-                      textAlign: 'center',
-                      width: '100%', 
-                      background: 'white', 
-                      color: 'black', 
-                      border: 'none', 
-                      padding: '1rem', 
-                      borderRadius: '12px', 
-                      fontWeight: 700, 
-                      cursor: 'pointer',
-                      textDecoration: 'none',
-                      transition: 'transform 0.2s'
-                    }}
-                    className="hover-scale"
-                   >
-                     Visit Official Website
-                   </a>
-                </div>
+                {tool.websiteUrl ? (
+                  <a
+                    href={gitLinki(tool.slug)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-tap
+                    className="mt-4 block rounded-[--radius-control] bg-brand px-4 py-2.5 text-center text-sm font-medium text-brand-ink no-underline transition-opacity duration-150 hover:opacity-90"
+                  >
+                    Visit {tool.name}
+                  </a>
+                ) : null}
               </div>
+
+              {(tool.pros?.length || tool.cons?.length) && (
+                <div className="rounded-[--radius-card] border border-line bg-surface p-5">
+                  {tool.pros?.length ? (
+                    <>
+                      <h2 className="flex items-center gap-1.5 font-sans text-sm font-semibold text-verified">
+                        <CheckCircle2 size={16} aria-hidden="true" /> Pros
+                      </h2>
+                      <ul className="mt-2 list-none space-y-1.5 p-0 text-sm text-ink-soft">
+                        {(tool.pros || []).map((pro: string, i: number) => (
+                          <li key={i}>{pro}</li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : null}
+                  {tool.cons?.length ? (
+                    <>
+                      <h2 className="mt-5 flex items-center gap-1.5 font-sans text-sm font-semibold text-danger">
+                        <XCircle size={16} aria-hidden="true" /> Cons
+                      </h2>
+                      <ul className="mt-2 list-none space-y-1.5 p-0 text-sm text-ink-soft">
+                        {(tool.cons || []).map((con: string, i: number) => (
+                          <li key={i}>{con}</li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : null}
+                </div>
+              )}
             </aside>
           </div>
 
-          <section style={{ marginTop: '4rem' }}>
-            <h2 style={{ fontSize: '1.4rem', marginBottom: '1.2rem' }}>What we checked</h2>
-            <div style={{ display: 'grid', gap: '0.8rem', maxWidth: '640px' }}>
+          {/* ---------- Ne kontrol edildi ---------- */}
+          <section className="mt-14 border-t border-line pt-10">
+            <h2 className="text-xl font-semibold">What we checked</h2>
+            <ul className="mt-4 grid list-none gap-2 p-0 sm:grid-cols-2">
               {KRITER_SIRA.map((k) => {
                 const v = (tool as any).kriterler?.[k];
-                const renk = v === true ? 'var(--success)' : v === false ? '#ef4444' : '#666';
-                const yazi = v === true ? 'Yes' : v === false ? 'No' : 'Not checked';
+                const yazi = v === true ? "Yes" : v === false ? "No" : "Not checked";
+                const renkSinifi =
+                  v === true
+                    ? "bg-verified-soft text-verified"
+                    : v === false
+                      ? "bg-surface-sunken text-ink-soft"
+                      : "bg-unverified-soft text-unverified";
                 return (
-                  <div key={k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', padding: '0.9rem 1.1rem', borderRadius: '14px', background: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
-                    <div>
-                      <div style={{ fontWeight: 700 }}>{KRITER_ETIKET[k]}</div>
-                      <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{KRITER_ACIKLAMA[k]}</div>
-                    </div>
-                    <span style={{ color: renk, fontWeight: 800, whiteSpace: 'nowrap' }}>{yazi}</span>
-                  </div>
+                  <li
+                    key={k}
+                    className="flex items-center justify-between gap-3 rounded-[--radius-card] border border-line bg-surface px-4 py-3"
+                  >
+                    <span className="min-w-0">
+                      <span className="block text-sm font-medium">{KRITER_ETIKET[k]}</span>
+                      <span className="block text-xs text-ink-muted">{KRITER_ACIKLAMA[k]}</span>
+                    </span>
+                    <span
+                      className={`shrink-0 rounded-[--radius-pill] px-2 py-0.5 text-xs font-medium ${renkSinifi}`}
+                    >
+                      {yazi}
+                    </span>
+                  </li>
                 );
               })}
-            </div>
-            <p style={{ color: '#666', fontSize: '0.85rem', marginTop: '1rem' }}>
-              These are facts that can be checked, not opinions. Where we have not checked, it says so — we do
-              not fill the gap with a guess.
+            </ul>
+            <p className="mt-3 text-xs text-ink-muted">
+              “Not checked” means exactly that — we have not verified it, and we do not guess.
             </p>
           </section>
 
+          {/*
+            ---------- Kanit ----------
+            `evidence` yalnizca 140 aracta var; digerlerinde toolEvidence()
+            null donuyor. Bu koruma ilk yazimimda dusmustu ve sayfa
+            "Cannot read properties of null" ile 500 veriyordu.
+          */}
           {evidence && (
-            <section style={{ marginTop: '4rem' }}>
-              <h2 style={{ fontSize: '1.4rem', marginBottom: '1.2rem' }}>Evidence and freshness</h2>
-              <div style={{ maxWidth: '760px', padding: '1.25rem', borderRadius: '16px', background: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem 1.5rem', marginBottom: '1rem' }}>
-                  <span><strong>Status:</strong> {evidenceLabel(evidence.status)}</span>
-                  <span><strong>Reviewed:</strong> {evidence.reviewedAt}</span>
-                </div>
-                <div style={{ display: 'grid', gap: '0.8rem' }}>
-                  {evidence.sources.map((source) => (
-                    <div key={source.url}>
-                      <a href={source.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--brand-primary)', fontWeight: 700 }}>
-                        {source.label} ↗
-                      </a>
-                      <div style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginTop: '0.2rem' }}>
-                        Checked {source.checkedAt} · Supports: {source.supports.join(', ')}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                {evidence.limitations && (
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', margin: '1rem 0 0' }}>
-                    <strong>Limit:</strong> {evidence.limitations.join(' ')}
-                  </p>
-                )}
-              </div>
-            </section>
+          <section className="mt-12 rounded-[--radius-card] border border-line bg-surface p-5">
+            <h2 className="text-xl font-semibold">Evidence and freshness</h2>
+            <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-ink-soft">
+              <span>
+                <strong className="font-medium text-ink">Status:</strong>{" "}
+                {evidenceLabel(evidence.status)}
+              </span>
+              <span>
+                <strong className="font-medium text-ink">Reviewed:</strong> {evidence.reviewedAt}
+              </span>
+            </p>
+
+            {evidence.sources.length > 0 && (
+              <ul className="mt-4 list-none space-y-3 p-0">
+                {evidence.sources.map((source) => (
+                  <li key={source.url}>
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="text-sm text-accent underline underline-offset-4"
+                    >
+                      {source.label} ↗
+                    </a>
+                    <p className="mt-0.5 text-xs text-ink-muted">
+                      Checked {source.checkedAt} · Supports: {source.supports.join(", ")}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {evidence.limitations && (
+              <p className="mt-4 border-t border-line pt-3 text-xs text-ink-muted">
+                <strong className="font-medium text-ink">Limit:</strong>{" "}
+                {evidence.limitations.join(" ")}
+              </p>
+            )}
+          </section>
           )}
 
-          {/* Karsilastirma sayfalarina ic link. Bu sayfalar en yuksek
-              ticari niyetli sayfa turumuz ama siteden hic link almiyorlardi;
-              sitemap'te olup oksuz kalmak Google'a "onemsiz" sinyali verir. */}
-          {karsilastirmalar.length > 0 && (
-            <section style={{ marginTop: '4rem' }}>
-              <h2 style={{ fontSize: '1.4rem', marginBottom: '1.5rem' }}>Compare {tool.name} with alternatives</h2>
-              {karsilastirmalar.length >= EN_AZ_ALTERNATIF && (
-                <p style={{ marginBottom: '1.5rem' }}>
-                  <Link href={`/alternatives/${tool.slug}`} style={{ color: 'var(--brand-primary)', textDecoration: 'none', fontWeight: 700 }}>
-                    See all {tool.name} alternatives ranked →
-                  </Link>
-                </p>
-              )}
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
+          {/* ---------- Karsilastirma ic linkleri ---------- */}
+          {karsilastirmalar.length >= EN_AZ_ALTERNATIF && (
+            <section className="mt-12 border-t border-line pt-10">
+              <h2 className="text-xl font-semibold">Compare {tool.name} with alternatives</h2>
+              <p className="mt-2 text-sm">
+                <Link
+                  href={`/alternatives/${tool.slug}`}
+                  className="text-accent underline underline-offset-4"
+                >
+                  See all {tool.name} alternatives ranked →
+                </Link>
+              </p>
+              <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
                 {karsilastirmalar.map((t: any) => (
-                  <Link
-                    key={t.slug}
-                    href={`/compare/${kanonikSlug(tool.slug, t.slug)}`}
-                    style={{ padding: '0.8rem 1.4rem', borderRadius: '14px', background: 'var(--surface-color)', border: '1px solid var(--border-color)', color: 'inherit', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}
-                  >
-                    {tool.name} vs {t.name}
-                  </Link>
+                  <li key={t.slug}>
+                    <Link
+                      href={`/compare/${kanonikSlug(tool.slug, t.slug)}`}
+                      className="inline-flex rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
+                    >
+                      {tool.name} vs {t.name}
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </section>
           )}
         </article>
       </main>
+
       <Footer />
     </>
   );

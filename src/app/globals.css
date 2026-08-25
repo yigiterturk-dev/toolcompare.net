@@ -172,3 +172,70 @@
 .skip-link:focus {
   left: 0;
 }
+
+/*
+  Metin agirlikli sayfalar (gizlilik, sartlar, metodoloji, iletisim,
+  gonderim). Bunlarin her biri kendi inline style'lariyla yaziliyordu ve
+  hepsi koyu temaya gore ayarliydi -- toplam ~130 inline style, hepsi ayni
+  seyi biraz farkli yapiyordu. Tek bir belge stiline baglandilar.
+*/
+@layer components {
+  .doc {
+    max-width: 44rem;
+    margin-inline: auto;
+    padding: 3rem 1rem 4rem;
+  }
+
+  .doc h1 {
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+  }
+
+  .doc h2 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .doc h3 {
+    font-size: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  .doc p,
+  .doc li {
+    color: var(--color-ink-soft);
+  }
+
+  .doc p {
+    margin-block: 0.85rem;
+  }
+
+  .doc ul,
+  .doc ol {
+    padding-left: 1.15rem;
+    margin-block: 0.85rem;
+  }
+
+  .doc li {
+    margin-block: 0.35rem;
+  }
+
+  .doc a {
+    color: var(--color-accent);
+    text-underline-offset: 4px;
+  }
+
+  .doc strong {
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+
+  .doc section {
+    margin-top: 2rem;
+  }
+
+  .doc header {
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}

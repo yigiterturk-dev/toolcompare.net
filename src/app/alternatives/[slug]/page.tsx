@@ -73,68 +73,101 @@ export default async function AlternativesPage({ params }: any) {
   ];
 
   return (
-    <div style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(semalar) }} />
       <Header />
-      <main style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 2rem 6rem' }}>
-        <Link href={`/tools/${tool.slug}`} style={{ color: '#666', textDecoration: 'none', fontSize: '0.9rem' }}>
+
+      <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+        <Link
+          href={`/tools/${tool.slug}`}
+          className="inline-flex items-center gap-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
+        >
           ← Back to the {tool.name} review
         </Link>
 
-        <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 900, letterSpacing: '-0.03em', margin: '1.5rem 0' }}>
-          Best {tool.name} Alternatives in 2026
+        <h1 className="mt-8 text-3xl font-semibold sm:text-4xl">
+          Best {tool.name} alternatives in 2026
         </h1>
 
-        <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', lineHeight: 1.7, maxWidth: '70ch' }}>
-          These are the {alts.length} closest tools to {tool.name} that we track, ordered by what they cost
-          to start. Each entry says how its pricing differs from {tool.name}&apos;s — based on the numbers we
-          hold, not on who pays us. We do not publish a quality score, because we do not have one we can
-          stand behind.
+        <p className="mt-4 text-ink-soft">
+          These are the {alts.length} closest tools to {tool.name} that we track, ordered by what
+          they cost to start. Each entry says how its pricing differs from {tool.name}&apos;s —
+          based on the numbers we hold, not on who pays us. We do not publish a quality score,
+          because we do not have one we can stand behind.
           {enUcuz && (
-            <> The cheapest verified option is <strong style={{ color: 'white' }}>{enUcuz.name}</strong> at {fiyatDurumu(enUcuz as any).kisa}.</>
+            <>
+              {" "}
+              The cheapest verified option is{" "}
+              <strong className="font-medium text-ink">{enUcuz.name}</strong> at{" "}
+              {fiyatDurumu(enUcuz as any).kisa}.
+            </>
           )}
         </p>
 
         {Array.isArray(tool.cons) && tool.cons.length > 0 && (
-          <div style={{ marginTop: '3rem', background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '28px', padding: '2.5rem' }}>
-            <h2 style={{ fontSize: '1.3rem', marginBottom: '1.2rem' }}>Why people leave {tool.name}</h2>
-            <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.8, paddingLeft: '1.2rem', margin: 0 }}>
-              {tool.cons.map((c: string, i: number) => <li key={i}>{c}</li>)}
+          <section className="mt-8 rounded-[--radius-card] border border-line bg-surface p-5">
+            <h2 className="text-lg font-semibold">Why people leave {tool.name}</h2>
+            <ul className="mt-3 list-none space-y-2 p-0 text-sm text-ink-soft">
+              {tool.cons.map((c: string, i: number) => (
+                <li key={i}>{c}</li>
+              ))}
             </ul>
-            <p style={{ color: '#666', fontSize: '0.85rem', marginTop: '1.2rem', marginBottom: 0 }}>
-              These are the drawbacks listed in our own {tool.name} review — not complaints we invented for this page.
+            <p className="mt-4 border-t border-line pt-3 text-xs text-ink-muted">
+              These are the drawbacks listed in our own {tool.name} review — not complaints we
+              invented for this page.
             </p>
-          </div>
+          </section>
         )}
 
-        <ol style={{ listStyle: 'none', padding: 0, margin: '3rem 0 0' }}>
+        <ol className="mt-8 list-none space-y-3 p-0">
           {alts.map((alt: any, i: number) => (
-            <li key={alt.slug} style={{ display: 'flex', gap: '1.5rem', padding: '2rem 0', borderTop: '1px solid #1a1a1a', alignItems: 'flex-start' }}>
-              <span style={{ color: 'var(--brand-primary)', fontWeight: 900, fontSize: '1.4rem', minWidth: '2.5rem' }}>{i + 1}</span>
-              <div style={{ flex: 1 }}>
-                <Link href={`/tools/${alt.slug}`} style={{ color: 'white', textDecoration: 'none', fontWeight: 800, fontSize: '1.2rem' }}>
+            <li
+              key={alt.slug}
+              className="flex gap-4 rounded-[--radius-card] border border-line bg-surface p-4 transition-colors duration-150 hover:border-line-strong"
+            >
+              <span
+                aria-hidden="true"
+                className="grid size-8 shrink-0 place-items-center rounded-[--radius-control] bg-surface-sunken font-serif text-sm font-semibold text-ink-soft"
+              >
+                {i + 1}
+              </span>
+              <div className="min-w-0 flex-1">
+                <Link
+                  href={`/tools/${alt.slug}`}
+                  className="font-serif text-base font-semibold no-underline transition-colors duration-150 hover:text-accent"
+                >
                   {alt.name}
                 </Link>
                 {alt.shortDescription && (
-                  <p style={{ color: 'var(--text-secondary)', margin: '0.5rem 0 0', lineHeight: 1.6 }}>{alt.shortDescription}</p>
+                  <p className="mt-1 text-sm text-ink-soft">{alt.shortDescription}</p>
                 )}
-                <p style={{ color: '#888', margin: '0.8rem 0 0', fontSize: '0.95rem' }}>
-                  <strong style={{ color: 'white' }}>vs {tool.name}:</strong> {farkCumlesi(tool, alt)}.
+                <p className="mt-2 text-sm text-ink-soft">
+                  <strong className="font-medium text-ink">vs {tool.name}:</strong>{" "}
+                  {farkCumlesi(tool, alt)}.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap' }}>
-                  <Link href={`/compare/${kanonikSlug(tool.slug, alt.slug)}`} style={{ color: 'var(--brand-primary)', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
+                <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  <Link
+                    href={`/compare/${kanonikSlug(tool.slug, alt.slug)}`}
+                    className="text-accent underline underline-offset-4"
+                  >
                     {tool.name} vs {alt.name} →
                   </Link>
-                  <a href={gitLinki(alt.slug)} target="_blank" rel="noopener noreferrer nofollow sponsored" style={{ color: '#666', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
+                  <a
+                    href={gitLinki(alt.slug)}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow sponsored"
+                    className="text-ink-soft underline decoration-line-strong underline-offset-4 transition-colors duration-150 hover:text-accent"
+                  >
                     Visit {alt.name} →
                   </a>
-                </div>
+                </p>
               </div>
             </li>
           ))}
         </ol>
       </main>
+
       <Footer />
-    </div>
+    </>
   );
 }

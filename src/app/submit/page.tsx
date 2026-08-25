@@ -22,50 +22,50 @@ export default function SubmitToolPage() {
         <div className="orb orb-1"></div>
       </div>
 
-      <main style={{ paddingTop: '8rem', paddingBottom: '8rem', maxWidth: '800px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%' }}>
-        <header style={{ textAlign: 'center', marginBottom: '5rem' }}>
-          <div style={{ display: 'inline-flex', padding: '1rem', background: 'rgba(99, 102, 241, 0.1)', borderRadius: '24px', marginBottom: '2rem' }}>
+      <main className="doc">
+        <header>
+          <div>
             <Rocket color="var(--brand-primary)" size={40} />
           </div>
-          <h1 style={{ fontSize: '3.5rem', fontWeight: 900, letterSpacing: '-2px', marginBottom: '1rem' }}>Submit Your <span style={{ color: 'var(--brand-primary)' }}>SaaS</span></h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
+          <h1>Submit Your <span>SaaS</span></h1>
+          <p>
             Get your tool featured in front of 50,000+ monthly decision-makers. Standard listings are free, verified reviews are priority.
           </p>
         </header>
 
-        <div style={{ background: 'var(--surface-color)', border: '1px solid var(--border-color)', borderRadius: '32px', padding: '3rem' }}>
-          <form style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+        <div>
+          <form>
+            <div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Tool Name</label>
-                <input type="text" placeholder="e.g. Notion" style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
+                <label>Tool Name</label>
+                <input type="text" placeholder="e.g. Notion" />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Website URL</label>
-                <input type="url" placeholder="https://..." style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
+                <label>Website URL</label>
+                <input type="url" placeholder="https://..." />
               </div>
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Your Email</label>
-              <input type="email" placeholder="you@company.com" style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }} />
+              <label>Your Email</label>
+              <input type="email" placeholder="you@company.com" />
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: '#666', marginBottom: '0.8rem', textTransform: 'uppercase' }}>Short Description</label>
-              <textarea placeholder="Tell us what makes your tool unique..." style={{ width: '100%', padding: '1rem', borderRadius: '14px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', minHeight: '120px' }}></textarea>
+              <label>Short Description</label>
+              <textarea placeholder="Tell us what makes your tool unique..."></textarea>
             </div>
 
-            <div style={{ background: 'rgba(99, 102, 241, 0.05)', border: '1px solid rgba(99, 102, 241, 0.2)', padding: '2rem', borderRadius: '24px' }}>
-               <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'white' }}><Shield size={18} color="var(--brand-primary)" /> Why list with us?</h2>
-               <ul style={{ listStyle: 'none', padding: 0, color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Zap size={14} color="var(--brand-primary)" /> High-authority backlink for your SEO.</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Zap size={14} color="var(--brand-primary)" /> Targeted traffic from software decision-makers.</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}><Zap size={14} color="var(--brand-primary)" /> Expert review badges for your own site.</li>
+            <div>
+               <h2><Shield size={18} color="var(--brand-primary)" /> Why list with us?</h2>
+               <ul>
+                  <li><Zap size={14} color="var(--brand-primary)" /> High-authority backlink for your SEO.</li>
+                  <li><Zap size={14} color="var(--brand-primary)" /> Targeted traffic from software decision-makers.</li>
+                  <li><Zap size={14} color="var(--brand-primary)" /> Expert review badges for your own site.</li>
                </ul>
             </div>
 
-            <button type="submit" style={{ width: '100%', padding: '1.2rem', borderRadius: '16px', background: 'var(--brand-primary)', color: 'white', fontWeight: 800, border: 'none', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.7rem', fontSize: '1.1rem', boxShadow: '0 15px 30px rgba(99, 102, 241, 0.3)' }}>
+            <button type="submit">
               <Send size={20} /> Submit for Review
             </button>
           </form>

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import Link from "next/link";
 import { kategoriler } from "@/lib/categories";
@@ -48,33 +49,43 @@ export default function CategoriesPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
       <Header />
-      <div className="ambient-bg">
-        <div className="orb orb-1"></div>
-      </div>
-      
-      <main style={{ paddingTop: '10rem', maxWidth: '1200px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%' }}>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '3rem', textAlign: 'center', letterSpacing: '-0.03em' }}>
-          Software <span style={{ color: '#444' }}>Categories</span>
-        </h1>
-        
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))', gap: '2rem', marginBottom: '5rem' }}>
+
+      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+        <h1 className="text-3xl font-semibold sm:text-4xl">Software categories</h1>
+        <p className="mt-3 max-w-2xl text-ink-soft">
+          Every category we track, with the number of tools reviewed in each. Inside a category the
+          list is ordered by what it costs to start.
+        </p>
+
+        <ul className="mt-8 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
           {kategoriListesi.map((kat) => {
-            const cat = kat.ad;
-            const IconComponent = categoryIcons[cat] || Globe;
+            const IconComponent = categoryIcons[kat.ad] || Globe;
             const count = kat.araclar.length;
             return (
-              <div key={kat.slug} style={{ background: '#0a0a0a', border: '1px solid #1a1a1a', borderRadius: '24px', padding: '2.5rem', transition: 'all 0.3s ease' }} className="category-card">
-                <IconComponent size={32} color="white" style={{ marginBottom: '1.5rem' }} />
-                <h2 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '0.5rem' }}>{cat}</h2>
-                <p style={{ color: '#666', marginBottom: '2rem', fontSize: '0.95rem' }}>{count} tools reviewed in this category.</p>
-                <Link href={`/categories/${kat.slug}`} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'white', textDecoration: 'none', fontWeight: 700, fontSize: '0.9rem' }}>
-                  Explore Category <ArrowRight size={18} />
+              <li key={kat.slug}>
+                <Link
+                  href={`/categories/${kat.slug}`}
+                  className="flex h-full items-start gap-3 rounded-[--radius-card] border border-line bg-surface p-4 no-underline transition-colors duration-150 hover:border-line-strong"
+                >
+                  <IconComponent
+                    size={20}
+                    aria-hidden="true"
+                    className="mt-0.5 shrink-0 text-ink-muted"
+                  />
+                  <span className="min-w-0">
+                    <span className="block font-serif text-base font-semibold">{kat.ad}</span>
+                    <span className="mt-0.5 block text-sm text-ink-soft">
+                      {count} {count === 1 ? "tool" : "tools"}
+                    </span>
+                  </span>
                 </Link>
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </main>
+
+      <Footer />
     </>
   );
 }

@@ -94,16 +94,21 @@ export default async function ComparisonPage({ params }: any) {
   // Yalnizca akranlar: sitemap disi bir sayfaya link verilmemeli.
   const ilgili = akranlar(tool1.slug).filter((t: any) => t.slug !== tool2.slug);
 
-  const ComparisonRow = ({ label, val1, val2, type = "text" }: any) => (
-    <div className="compare-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem 0', alignItems: 'center' }}>
-      <div style={{ color: '#666', fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase' }}>{label}</div>
-      <div style={{ textAlign: 'center', fontSize: '1.1rem', fontWeight: 600 }}>
-        {type === "score" ? <span style={{ color: 'white' }}>{val1}%</span> : val1}
-      </div>
-      <div style={{ textAlign: 'center', fontSize: '1.1rem', fontWeight: 600 }}>
-        {type === "score" ? <span style={{ color: 'white' }}>{val2}%</span> : val2}
-      </div>
-    </div>
+  /*
+    Karsilastirma satiri. Onceki surumde `type="score"` dali `{val1}%`
+    yaziyordu -- yuzde isareti sabit metindi ve yalnizca uydurma kalite
+    puanlari icin vardi. O puanlar sokuldugu icin dal da kaldirildi:
+    kullanilmayan bir bicimlendirme, bir gun yanlis veriye yeniden
+    baglanmayi bekleyen bir tuzaktir.
+  */
+  const ComparisonRow = ({ label, val1, val2 }: { label: string; val1: React.ReactNode; val2: React.ReactNode }) => (
+    <tr className="border-t border-line">
+      <th scope="row" className="py-3 pr-3 text-left align-top text-xs font-medium tracking-wide text-ink-muted uppercase">
+        {label}
+      </th>
+      <td className="py-3 pr-3 align-top text-sm">{val1}</td>
+      <td className="py-3 align-top text-sm">{val2}</td>
+    </tr>
   );
 
   const sema = listeSemasi(
@@ -113,235 +118,283 @@ export default async function ComparisonPage({ params }: any) {
   );
 
   return (
-    <div style={{ background: '#050505', minHeight: '100vh', color: 'white' }}>
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
       <Header />
-      
-      <main style={{ paddingTop: '12rem', maxWidth: '1200px', margin: '0 auto', paddingLeft: '5%', paddingRight: '5%', paddingBottom: '10rem' }}>
-        
-        <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: '#666', textDecoration: 'none', marginBottom: '2rem' }}>
-          <ArrowLeft size={16} /> Back to Directory
+
+      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
+        >
+          <ArrowLeft size={16} aria-hidden="true" /> All tools
         </Link>
 
-        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-          <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 900, marginBottom: '1.5rem', letterSpacing: '-2px' }}>
-            {tool1.name} <span style={{ color: 'var(--brand-primary)' }}>vs</span> {tool2.name}
+        <header className="mt-8 border-b border-line pb-8">
+          <h1 className="text-3xl font-semibold sm:text-4xl">
+            {tool1.name} <span className="text-ink-muted">vs</span> {tool2.name}
           </h1>
-          <p style={{ color: '#888', fontSize: '1.25rem' }}>A source-aware comparison of pricing, documented capabilities and workflow fit.</p>
-        </div>
+          <p className="mt-3 max-w-2xl text-ink-soft">
+            A source-aware comparison of pricing, documented capabilities and workflow fit.
+          </p>
+        </header>
 
-        {/* Kisa cevap. Ziyaretci "hangisi?" diye geliyor; cevabi sayfanin
-            dibinde degil basinda gormeli. Butun ifadeler ELDEKI VERIDEN
-            turetiliyor -- uydurma bir ustunluk iddiasi yok, ve verinin
-            karar veremedigi yerde bunu acikca soyluyoruz. */}
-        <div style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: '28px', padding: '2.5rem', marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '1.3rem', marginBottom: '1.2rem' }}>Short answer</h2>
-          <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.9, paddingLeft: '1.2rem', margin: 0 }}>
+        {/*
+          Kisa cevap. Ziyaretci "hangisi?" diye geliyor; cevabi sayfanin
+          basinda veriyoruz, tablonun altinda degil.
+        */}
+        <section className="mt-8 rounded-[--radius-card] border border-line bg-surface p-5">
+          <h2 className="text-lg font-semibold">Short answer</h2>
+          <ul className="mt-3 list-none space-y-2 p-0 text-sm text-ink-soft">
             <li>
-              <strong style={{ color: 'white' }}>Price:</strong>{' '}
+              <strong className="font-medium text-ink">Price:</strong>{" "}
               {!fiyatKiyaslanabilir
                 ? `not directly comparable — ${tool1.name} is ${f1.metin.toLowerCase()}, ${tool2.name} is ${f2.metin.toLowerCase()}.`
-                : (f1.aylik === f2.aylik
-                    ? `both start at ${f1.kisa}.`
-                    : `${ucuz!.name} is cheaper — ${ucuzF!.kisa} vs ${pahaliF!.kisa}.`)}
+                : f1.aylik === f2.aylik
+                  ? `both start at ${f1.kisa}.`
+                  : `${ucuz!.name} is cheaper — ${ucuzF!.kisa} vs ${pahaliF!.kisa}.`}
             </li>
             <li>
-              <strong style={{ color: 'white' }}>How to start:</strong>{' '}
+              <strong className="font-medium text-ink">How to start:</strong>{" "}
               {f1.metin.toLowerCase() === f2.metin.toLowerCase()
                 ? `both are ${f1.metin.toLowerCase()}.`
                 : `${tool1.name} is ${f1.metin.toLowerCase()}, ${tool2.name} is ${f2.metin.toLowerCase()}.`}
             </li>
           </ul>
-          <p style={{ color: '#666', fontSize: '0.85rem', marginTop: '1.5rem', marginBottom: 0 }}>
-            These lines are generated from the pricing we track, not from a paid placement. We do not publish a quality score, because we do not have one we can stand behind. They cannot tell you which tool fits <em>your</em> workflow — the sections below are there for that.{' '}
-            <Link href="/methodology" style={{ color: 'var(--brand-primary)' }}>How we score tools</Link>.
+          <p className="mt-4 border-t border-line pt-3 text-xs text-ink-muted">
+            These lines are generated from the pricing we track, not from a paid placement.{" "}
+            <Link href="/methodology" className="text-accent underline underline-offset-4">
+              How we score tools
+            </Link>
+            .
           </p>
-        </div>
+        </section>
 
-        {/* Head-to-Head Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', marginBottom: '4rem' }}>
-          <div></div>
-          
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ width: '80px', height: '80px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool1.color1}, ${tool1.color2})`, margin: '0 auto 1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: `0 20px 40px ${tool1.color1}44` }}>
-              <Zap size={40} color="white" />
-            </div>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: 900 }}>{tool1.name}</h2>
+        {/* ---------- Karsilastirma tablosu ---------- */}
+        <section className="mt-10">
+          <h2 className="sr-only">Side by side</h2>
+          {/* Dar ekranda tablo kendi icinde kayiyor; sayfa yatay kaymiyor. */}
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[32rem] border-collapse text-left">
+              <thead>
+                <tr>
+                  <td />
+                  <th scope="col" className="pb-3 font-serif text-lg font-semibold">
+                    <Link href={`/tools/${tool1.slug}`} className="no-underline hover:text-accent">
+                      {tool1.name}
+                    </Link>
+                  </th>
+                  <th scope="col" className="pb-3 font-serif text-lg font-semibold">
+                    <Link href={`/tools/${tool2.slug}`} className="no-underline hover:text-accent">
+                      {tool2.name}
+                    </Link>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <ComparisonRow label="Category" val1={tool1.category} val2={tool2.category} />
+                <ComparisonRow
+                  label="How to start"
+                  val1={
+                    <span className="flex flex-wrap items-baseline gap-1.5">
+                      <span className="font-medium">{f1.kisa}</span>
+                      <span className={`rounded-[--radius-pill] px-1.5 py-0.5 text-[11px] ${f1.karsilastirilabilir ? "bg-verified-soft text-verified" : "bg-unverified-soft text-unverified"}`}>
+                        {f1.karsilastirilabilir ? "verified" : "not a monthly price"}
+                      </span>
+                    </span>
+                  }
+                  val2={
+                    <span className="flex flex-wrap items-baseline gap-1.5">
+                      <span className="font-medium">{f2.kisa}</span>
+                      <span className={`rounded-[--radius-pill] px-1.5 py-0.5 text-[11px] ${f2.karsilastirilabilir ? "bg-verified-soft text-verified" : "bg-unverified-soft text-unverified"}`}>
+                        {f2.karsilastirilabilir ? "verified" : "not a monthly price"}
+                      </span>
+                    </span>
+                  }
+                />
+                {KRITER_SIRA.map((k) => {
+                  const isaret = (t: any) => {
+                    const v = t.kriterler?.[k];
+                    if (v === true) return <span className="text-verified">Yes</span>;
+                    if (v === false) return <span className="text-ink-muted">No</span>;
+                    return <span className="text-unverified">not checked</span>;
+                  };
+                  return (
+                    <ComparisonRow
+                      key={k}
+                      label={KRITER_ETIKET[k]}
+                      val1={isaret(tool1)}
+                      val2={isaret(tool2)}
+                    />
+                  );
+                })}
+                <ComparisonRow
+                  label="Visit"
+                  val1={
+                    tool1.websiteUrl ? (
+                      <a href={gitLinki(tool1.slug)} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">
+                        {tool1.name} ↗
+                      </a>
+                    ) : null
+                  }
+                  val2={
+                    tool2.websiteUrl ? (
+                      <a href={gitLinki(tool2.slug)} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">
+                        {tool2.name} ↗
+                      </a>
+                    ) : null
+                  }
+                />
+              </tbody>
+            </table>
           </div>
+        </section>
 
-          <div style={{ textAlign: 'center' }}>
-            <div style={{ width: '80px', height: '80px', borderRadius: '24px', background: `linear-gradient(135deg, ${tool2.color1}, ${tool2.color2})`, margin: '0 auto 1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: `0 20px 40px ${tool2.color1}44` }}>
-              <Zap size={40} color="white" />
-            </div>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: 900 }}>{tool2.name}</h2>
-          </div>
-        </div>
-
-        {/* Detailed Comparison Table */}
-        <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '40px', padding: '4rem' }}>
-          <ComparisonRow label="Category" val1={tool1.category} val2={tool2.category} />
-          <ComparisonRow label="Base Price" val1={f1.kisa} val2={f2.kisa} />
-
-          {/* Objektif ozellikler. Uydurma kalite puanlarinin yerine konan
-              sey: her satir nesnel olarak dogru ya da yanlis olabilir.
-              UCUNCU DURUM VAR -- bakilmadiysa "not checked" yazar; onu
-              "yok" diye gostermek uydurma puanlarin hatasinin tekrari
-              olurdu. */}
-          {KRITER_SIRA.map((k) => {
-            const isaret = (t: any) => {
-              const v = t.kriterler?.[k];
-              if (v === true) return <span style={{ color: 'var(--success)', fontWeight: 800 }}>Yes</span>;
-              if (v === false) return <span style={{ color: '#ef4444' }}>No</span>;
-              return <span style={{ color: '#666', fontSize: '0.85rem' }}>not checked</span>;
-            };
-            return <ComparisonRow key={k} label={KRITER_ETIKET[k]} val1={isaret(tool1)} val2={isaret(tool2)} />;
-          })}
-          
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', padding: '3rem 0 0' }}>
-            <div></div>
-            <div style={{ textAlign: 'center' }}>
-              <a 
-                href={gitLinki(tool1.slug)} 
-                target="_blank" 
-                rel="noopener noreferrer nofollow sponsored" 
-                style={{ background: 'var(--brand-primary)', color: 'white', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
-              >
-                Visit {tool1.name}
-              </a>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <a 
-                href={gitLinki(tool2.slug)} 
-                target="_blank" 
-                rel="noopener noreferrer nofollow sponsored" 
-                style={{ background: 'white', color: 'black', padding: '1rem 2rem', borderRadius: '14px', textDecoration: 'none', fontWeight: 800, fontSize: '0.9rem', display: 'inline-block' }}
-              >
-                Visit {tool2.name}
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Workflow fit. These are bounded use cases, not an overall winner. */}
-        <div className="compare-two-column" style={{ marginTop: '6rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-           <div style={{ background: 'var(--surface-color)', padding: '3rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
-              <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}><CheckCircle2 color="var(--success)" /> Choose {tool1.name} if:</h3>
-              <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.7, paddingLeft: '1.2rem', margin: 0 }}>
-                {(tool1.bestFor?.length ? tool1.bestFor : [tool1.targetAudience]).filter(Boolean).map((item: string) => <li key={item}>{item}</li>)}
-              </ul>
-           </div>
-           <div style={{ background: 'var(--surface-color)', padding: '3rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
-              <h3 style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.8rem' }}><CheckCircle2 color="var(--success)" /> Choose {tool2.name} if:</h3>
-              <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.7, paddingLeft: '1.2rem', margin: 0 }}>
-                {(tool2.bestFor?.length ? tool2.bestFor : [tool2.targetAudience]).filter(Boolean).map((item: string) => <li key={item}>{item}</li>)}
-              </ul>
-           </div>
-        </div>
-
-        {(tool1.skipIf?.length || tool2.skipIf?.length) && (
-          <div className="compare-two-column" style={{ marginTop: '2rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-            {[tool1, tool2].map((tool: any) => (
-              <div key={tool.slug} style={{ padding: '2rem', borderRadius: '24px', border: '1px solid rgba(245,158,11,0.3)', background: 'rgba(245,158,11,0.06)' }}>
-                <h3 style={{ marginBottom: '1rem' }}>Skip {tool.name} if:</h3>
-                <ul style={{ color: 'var(--text-secondary)', lineHeight: 1.7, paddingLeft: '1.2rem', margin: 0 }}>
-                  {(tool.skipIf || []).map((item: string) => <li key={item}>{item}</li>)}
+        {/* ---------- Is akisina uygunluk ---------- */}
+        <section className="mt-12 grid gap-6 sm:grid-cols-2">
+          {[tool1, tool2].map((t: any) => {
+            const uygun = (t.bestFor?.length ? t.bestFor : [t.targetAudience]).filter(Boolean);
+            if (!uygun.length) return null;
+            return (
+              <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
+                <h2 className="flex items-center gap-1.5 text-base font-semibold">
+                  <CheckCircle2 size={16} className="text-verified" aria-hidden="true" />
+                  Choose {t.name} if
+                </h2>
+                <ul className="mt-3 list-none space-y-2 p-0 text-sm text-ink-soft">
+                  {uygun.map((item: string) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
+                {t.skipIf?.length ? (
+                  <>
+                    <h3 className="mt-5 font-sans text-sm font-semibold text-ink-soft">
+                      Skip {t.name} if
+                    </h3>
+                    <ul className="mt-2 list-none space-y-2 p-0 text-sm text-ink-muted">
+                      {t.skipIf.map((item: string) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : null}
+              </div>
+            );
+          })}
+        </section>
+
+        {/* ---------- Kanit ---------- */}
+        <section className="mt-12 rounded-[--radius-card] border border-line bg-surface p-5">
+          <h2 className="text-lg font-semibold">Evidence and freshness</h2>
+          <p className="mt-2 text-sm text-ink-soft">
+            Where a claim on this page comes from a vendor page, it is linked here.
+          </p>
+          <div className="mt-4 grid gap-6 sm:grid-cols-2">
+            {[
+              [tool1, e1],
+              [tool2, e2],
+            ].map(([t, ev]: any) => (
+              <div key={t.slug}>
+                <h3 className="font-sans text-sm font-semibold">{t.name}</h3>
+                {ev ? (
+                  <>
+                    <p className="mt-1 text-xs text-ink-muted">
+                      {evidenceLabel(ev.status)} · reviewed {ev.reviewedAt}
+                    </p>
+                    <ul className="mt-2 list-none space-y-1.5 p-0 text-sm">
+                      {ev.sources.map((source: any) => (
+                        <li key={source.url}>
+                          <a
+                            href={source.url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="text-accent underline underline-offset-4"
+                          >
+                            {source.label} ↗
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <p className="mt-1 text-sm text-ink-muted">
+                    Sources have not been attached to this record yet.
+                  </p>
+                )}
               </div>
             ))}
           </div>
-        )}
+        </section>
 
-        {(e1 || e2) && (
-          <section className="compare-evidence" style={{ marginTop: '3rem', padding: '2.5rem', borderRadius: '28px', background: 'var(--surface-color)', border: '1px solid var(--border-color)' }}>
-            <h2 style={{ fontSize: '1.4rem', marginBottom: '0.7rem' }}>Evidence and freshness</h2>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginTop: 0 }}>
-              Vendor documentation supports plan and feature claims. It does not establish an overall quality winner.
-            </p>
-            <div className="compare-two-column" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', marginTop: '1.5rem' }}>
-              {[[tool1, e1], [tool2, e2]].map(([tool, evidence]: any) => (
-                <div key={tool.slug}>
-                  <h3 style={{ marginBottom: '0.5rem' }}>{tool.name}</h3>
-                  {evidence ? <>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{evidenceLabel(evidence.status)} · reviewed {evidence.reviewedAt}</p>
-                    <ul style={{ paddingLeft: '1.2rem', lineHeight: 1.8 }}>
-                      {evidence.sources.map((source: any) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--brand-primary)' }}>{source.label}</a> <span style={{ color: '#666' }}>({source.checkedAt})</span></li>)}
-                    </ul>
-                  </> : <p style={{ color: '#888' }}>Sources have not been attached to this record yet.</p>}
+        {/* ---------- Arti / eksi ---------- */}
+        {[tool1, tool2].some((t: any) => (t.pros || []).length || (t.cons || []).length) && (
+          <section className="mt-12 grid gap-6 sm:grid-cols-2">
+            {[tool1, tool2]
+              .filter((t: any) => (t.pros || []).length || (t.cons || []).length)
+              .map((t: any) => (
+                <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
+                  <h2 className="text-base font-semibold">{t.name}: pros &amp; cons</h2>
+                  <ul className="mt-3 list-none space-y-2 p-0 text-sm text-ink-soft">
+                    {(t.pros || []).map((pro: string, i: number) => (
+                      <li key={i} className="flex gap-2">
+                        <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-verified" aria-hidden="true" />
+                        <span>{pro}</span>
+                      </li>
+                    ))}
+                    {(t.cons || []).map((con: string, i: number) => (
+                      <li key={`c${i}`} className="flex gap-2">
+                        <X size={16} className="mt-0.5 shrink-0 text-danger" aria-hidden="true" />
+                        <span>{con}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
-            </div>
           </section>
         )}
 
-        {!tool1.verdict && !tool2.verdict && (
-          <div style={{ marginTop: '3rem', background: 'rgba(245,158,11,0.07)', border: '1px solid rgba(245,158,11,0.35)', borderRadius: '20px', padding: '1.8rem' }}>
-            <strong style={{ color: 'white' }}>Neither tool has a full review yet.</strong>
-            <p style={{ color: 'var(--text-secondary)', margin: '0.6rem 0 0', lineHeight: 1.7 }}>
-              Both are in our directory, so this page compares what we can state factually — what each one is
-              and what it costs to start. We have not written pros, cons or a verdict for either, and we are
-              not going to invent them to fill the page.
-            </p>
-          </div>
-        )}
-
-        {/* Arti / eksi. Onceki halde bu veri tools.json'da duruyordu ama
-            karsilastirma sayfasinda hic gosterilmiyordu -- sayfayi ince
-            birakan asil eksik buydu. */}
-        <div className="compare-two-column" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-          {[tool1, tool2].filter((t: any) => (t.pros || []).length || (t.cons || []).length).map((t: any) => (
-            <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2.5rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
-              <h3 style={{ marginBottom: '1.5rem' }}>{t.name}: pros &amp; cons</h3>
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem' }}>
-                {(t.pros || []).map((p: string, i: number) => (
-                  <li key={i} style={{ display: 'flex', gap: '0.7rem', marginBottom: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                    <CheckCircle2 size={18} color="var(--success)" style={{ flexShrink: 0, marginTop: '0.2rem' }} /> {p}
-                  </li>
-                ))}
-              </ul>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                {(t.cons || []).map((c: string, i: number) => (
-                  <li key={i} style={{ display: 'flex', gap: '0.7rem', marginBottom: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                    <X size={18} color="#ef4444" style={{ flexShrink: 0, marginTop: '0.2rem' }} /> {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Tam degerlendirme. Tabloda ortasindan kesilip "..." ile
-            biten metin hem kullaniciya hem arama motoruna degersizdi. */}
-        <div className="compare-two-column" style={{ marginTop: '3rem', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
-          {[tool1, tool2].filter((t: any) => t.verdict).map((t: any) => (
-            <div key={t.slug} style={{ background: 'var(--surface-color)', padding: '2.5rem', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
-              <h3 style={{ marginBottom: '1.2rem' }}>Our verdict on {t.name}</h3>
-              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>{t.verdict}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Ilgili karsilastirmalar: bu sayfalar aksi halde oksuz kalir --
-            sitemap'te olup siteden hic link almamak Google'a "onemsiz"
-            sinyali verir. */}
-        {ilgili.length > 0 && (
-          <div style={{ marginTop: '4rem' }}>
-            <h3 style={{ marginBottom: '1.5rem' }}>Other {tool1.name} comparisons</h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
-              {ilgili.map((t: any) => (
-                <Link
-                  key={t.slug}
-                  href={`/compare/${kanonikSlug(tool1.slug, t.slug)}`}
-                  style={{ padding: '0.8rem 1.4rem', borderRadius: '14px', background: 'var(--surface-color)', border: '1px solid var(--border-color)', color: 'white', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}
-                >
-                  {tool1.name} vs {t.name}
-                </Link>
+        {/* ---------- Tam degerlendirme ---------- */}
+        {[tool1, tool2].some((t: any) => t.verdict) ? (
+          <section className="mt-12 space-y-6">
+            {[tool1, tool2]
+              .filter((t: any) => t.verdict)
+              .map((t: any) => (
+                <div key={t.slug} className="rounded-[--radius-card] border-l-2 border-accent bg-surface p-5">
+                  <h2 className="text-base font-semibold">Our verdict on {t.name}</h2>
+                  <p className="mt-2 text-sm text-ink-soft">{t.verdict}</p>
+                </div>
               ))}
-            </div>
-          </div>
+          </section>
+        ) : (
+          <p className="mt-12 rounded-[--radius-card] border border-line bg-unverified-soft p-5 text-sm">
+            <strong className="font-medium">Neither tool has a full review yet.</strong>{" "}
+            <span className="text-ink-soft">
+              This page compares what we can verify — pricing and documented capabilities.
+            </span>
+          </p>
         )}
 
+        {/* ---------- Ilgili karsilastirmalar ---------- */}
+        {ilgili.length > 0 && (
+          <section className="mt-12 border-t border-line pt-10">
+            <h2 className="text-lg font-semibold">Other {tool1.name} comparisons</h2>
+            <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
+              {ilgili.map((t: any) => (
+                <li key={t.slug}>
+                  <Link
+                    href={`/compare/${kanonikSlug(tool1.slug, t.slug)}`}
+                    className="inline-flex rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
+                  >
+                    {tool1.name} vs {t.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </main>
+
       <Footer />
-    </div>
+    </>
   );
 }
