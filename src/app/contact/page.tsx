@@ -16,8 +16,16 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="doc">
+    /*
+      Header ve Footer <main> DISINDA. Icerde kalmislardi: hem semantik
+      olarak yanlisti (main sayfanin ana icerigi, site basligi degil) hem
+      de `.doc > *` kurali onlari 44rem'e sikistiriyordu -- olculdu,
+      /contact'ta header kapsayicisi 1280px yerine 704px genisligindeydi
+      ve butun sayfa diger sayfalara gore 24px kayik duruyordu.
+    */
+    <>
       <Header />
+      <main className="doc">
       <div>
         <div>
           <h1>
@@ -58,7 +66,8 @@ export default function ContactPage() {
           </form>
         </div>
       </div>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

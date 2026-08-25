@@ -79,6 +79,14 @@
 
   html {
     -webkit-text-size-adjust: 100%;
+    /*
+      Kisa sayfalarda (iletisim, gonderim) dikey kaydirma cubugu olmuyor,
+      viewport ~15px genisliyor ve ORTALANMIS kapsayici kayiyordu: olculdu,
+      /contact'ta her sey 120px'te baslarken diger sayfalarda 104px'teydi.
+      Sayfalar arasi gezerken icerik yana ziplayan bu fark, "carpik"
+      hissinin bir parcasi.
+    */
+    scrollbar-gutter: stable;
   }
 
   body {
@@ -180,10 +188,32 @@
   seyi biraz farkli yapiyordu. Tek bir belge stiline baglandilar.
 */
 @layer components {
+  /*
+    Kapsayici header/footer ile AYNI genislikte (80rem); okuma kolonu
+    icerde dar ve SOLA hizali kaliyor.
+
+    DENETIMDE BULUNAN (2026-08-25): once `max-width: 44rem` + otomatik
+    kenar bosluguyla ORTALANIYORDU. Header ve footer 80rem kapsayicida
+    oldugu icin sol kenarlar tutmuyordu: 1440px ekranda header 80px'te,
+    sayfa icerigi 232px'te basliyordu. Ayni sorun tum ic sayfalardaydi ve
+    goz bunu "carpik" diye goruyor.
+  */
   .doc {
-    max-width: 44rem;
+    max-width: 80rem;
     margin-inline: auto;
+    /* Diger sayfalar px-4 sm:px-6 kullaniyor; ayni degerler, yoksa
+       metin sayfalari 8px sola kayik duruyordu. */
     padding: 3rem 1rem 4rem;
+  }
+
+  @media (min-width: 40rem) {
+    .doc {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .doc > * {
+    max-width: 44rem;
   }
 
   .doc h1 {

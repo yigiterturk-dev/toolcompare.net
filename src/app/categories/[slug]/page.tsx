@@ -78,7 +78,7 @@ export default async function CategoryPage({ params }: any) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(semalar) }} />
       <Header />
 
-      <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <Link
           href="/categories"
           className="inline-flex items-center gap-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
@@ -115,7 +115,7 @@ export default async function CategoryPage({ params }: any) {
           .
         </p>
 
-        <ol className="mt-8 list-none space-y-3 p-0">
+        <ol className="mt-8 max-w-4xl list-none space-y-3 p-0">
           {kategori.araclar.map((t, i) => {
             const d = fiyatDurumu(t as any);
             return (
@@ -158,7 +158,7 @@ export default async function CategoryPage({ params }: any) {
         </ol>
 
         {birinci && ikinci && (
-          <section className="mt-12 rounded-[--radius-card] border border-line bg-surface p-5">
+          <section className="mt-12 max-w-4xl rounded-[--radius-card] border border-line bg-surface p-5">
             <h2 className="text-lg font-semibold">Still deciding?</h2>
             <p className="mt-2 text-sm text-ink-soft">
               The two cheapest tools in this category are {birinci.name} and {ikinci.name}. Put them

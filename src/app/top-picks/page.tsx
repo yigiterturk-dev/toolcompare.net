@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import Link from "next/link";
 import { Award, Star, ArrowRight } from "lucide-react";
@@ -71,6 +72,7 @@ export default function TopPicksPage() {
           ))}
         </div>
       </main>
+      <Footer />
     </>
   );
 }

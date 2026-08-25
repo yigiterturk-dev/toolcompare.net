@@ -77,7 +77,7 @@ export default async function AlternativesPage({ params }: any) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(semalar) }} />
       <Header />
 
-      <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <Link
           href={`/tools/${tool.slug}`}
           className="inline-flex items-center gap-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
@@ -105,7 +105,7 @@ export default async function AlternativesPage({ params }: any) {
         </p>
 
         {Array.isArray(tool.cons) && tool.cons.length > 0 && (
-          <section className="mt-8 rounded-[--radius-card] border border-line bg-surface p-5">
+          <section className="mt-8 max-w-4xl rounded-[--radius-card] border border-line bg-surface p-5">
             <h2 className="text-lg font-semibold">Why people leave {tool.name}</h2>
             <ul className="mt-3 list-none space-y-2 p-0 text-sm text-ink-soft">
               {tool.cons.map((c: string, i: number) => (
@@ -119,7 +119,7 @@ export default async function AlternativesPage({ params }: any) {
           </section>
         )}
 
-        <ol className="mt-8 list-none space-y-3 p-0">
+        <ol className="mt-8 max-w-4xl list-none space-y-3 p-0">
           {alts.map((alt: any, i: number) => (
             <li
               key={alt.slug}

@@ -50,7 +50,7 @@ export default function CategoriesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
       <Header />
 
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <h1 className="text-3xl font-semibold sm:text-4xl">Software categories</h1>
         <p className="mt-3 max-w-2xl text-ink-soft">
           Every category we track, with the number of tools reviewed in each. Inside a category the

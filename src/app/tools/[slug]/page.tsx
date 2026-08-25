@@ -116,7 +116,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       />
       <Header />
 
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:text-accent"
