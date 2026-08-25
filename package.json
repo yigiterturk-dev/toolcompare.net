@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "node app.js",
     "lint": "eslint",
+    "test": "node --test \"tests/*.test.ts\"",
     "verify:claims": "node scripts/verify-claims.mjs",
     "check:fiyat": "node scripts/check-fiyat-modelleri.mjs",
     "check:izgara": "node --experimental-strip-types --no-warnings scripts/check-izgara-alanlari.mjs",
-    "check": "npm run check:fiyat && npm run check:izgara"
+    "check": "npm run check:fiyat && npm run check:izgara && npm test"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
