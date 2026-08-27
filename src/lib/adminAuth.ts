@@ -61,6 +61,11 @@ export function hizFreni(anahtar: string, limit: number): boolean {
  * edilebilir -- bu yuzden hiz freni disinda hicbir yerde guvenilmez.
  */
 export function istekKaynagi(request: Request): string {
+  // 1. Proxy tarafindan dogrulanmis ve ezilemeyen gercek IP (Vercel, Nginx vs.)
+  const realIp = request.headers.get("x-real-ip");
+  if (realIp) return realIp.split(",")[0].trim();
+
+  // 2. Fallback olarak x-forwarded-for (taklit edilebilir)
   const xff = request.headers.get("x-forwarded-for");
   return xff ? xff.split(",")[0].trim() : "bilinmiyor";
 }
