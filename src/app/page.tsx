@@ -43,6 +43,27 @@ export default async function Home() {
   const tools: IzgaraArac[] = tumArac.map((t: Record<string, unknown>) => {
     const kucuk: Record<string, unknown> = {};
     for (const alan of IZGARA_ALANLARI) if (t?.[alan] !== undefined) kucuk[alan] = t[alan];
+    /*
+      keyFeatures BASLIGA indiriliyor.
+
+      OLCUM (2026-08-31): anasayfa 472 KB'ti; gorunur metin 5 KB, RSC
+      yuku 321 KB. Tek basina `keyFeatures` 124.7 KB tutuyordu ve RSC
+      sinirinda iki kez serilestiginden ~250 KB'a mal oluyordu. Oysa
+      ToolCard bu alandan YALNIZCA ilk uc maddenin `title`'ini okuyor
+      (ozellikBasliklari); her maddenin `description` metni istemciye
+      gidiyor ve hicbir yerde gorunmuyordu.
+
+      ToolCard zaten dizi elemaninin string olmasini destekliyor, o
+      yuzden basliklari duz string dizisi olarak geciriyoruz: 124.7 KB
+      -> ~12 KB.
+    */
+    const kf = kucuk.keyFeatures as { title?: string }[] | undefined;
+    if (kf) {
+      kucuk.keyFeatures = kf
+        .slice(0, 3)
+        .map((f) => (typeof f === "string" ? f : (f?.title ?? "")))
+        .filter(Boolean);
+    }
     return kucuk as unknown as IzgaraArac;
   });
 
@@ -83,8 +104,16 @@ export default async function Home() {
         "@type": "ItemList",
         name: `${tools.length} software tools reviewed`,
         numberOfItems: tools.length,
+        /*
+          Ilk 50 ile sinirli: 512 kalemlik liste tek basina 52 KB tutuyordu
+          ve anasayfanin %11'iydi. Katalogun TAMAMINI Google zaten
+          sitemap'ten (1.993 adres) goruyor; buradaki listenin isi kapsam
+          sinyali vermek, katalogu kopyalamak degil. `numberOfItems`
+          gercek sayiyi bildirmeye devam ediyor.
+        */
         itemListElement: tools
           .filter((t: any) => t?.slug && t?.name)
+          .slice(0, 50)
           .map((t: any, i: number) => ({
             "@type": "ListItem",
             position: i + 1,
