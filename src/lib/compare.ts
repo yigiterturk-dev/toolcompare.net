@@ -19,6 +19,9 @@
 
 import toolsData from "@/data/tools.json";
 import { fiyatDurumu } from "@/lib/fiyat";
+import type { KriterKumesi } from "@/lib/kriterler";
+
+export { kriterAyrimi, ayrimCumlesi } from "@/lib/kriter-ayrimi";
 
 export type Arac = {
   incelendi?: boolean;
@@ -33,6 +36,9 @@ export type Arac = {
   shortDescription?: string;
   pros?: string[];
   cons?: string[];
+  longDescription?: string;
+  keyFeatures?: { title: string; description: string }[];
+  kriterler?: KriterKumesi;
 };
 
 const araclar = toolsData as Arac[];
@@ -205,3 +211,4 @@ export function sitemapCiftleri(): string[] {
     return ciftIndekslenebilirMi(harita.get(a), harita.get(b));
   });
 }
+

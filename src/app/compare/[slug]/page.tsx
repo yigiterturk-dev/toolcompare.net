@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
-import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi } from "@/lib/compare";
+import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ayrimCumlesi } from "@/lib/compare";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
@@ -91,6 +91,13 @@ export default async function ComparisonPage({ params }: any) {
   const ucuzF = ucuz ? fiyatDurumu(ucuz) : null;
   const pahaliF = pahali ? fiyatDurumu(pahali) : null;
 
+  /*
+    Cifte ozgu ayrim cumlesi. Tabloda zaten duran Yes/No verisinden
+    turetiliyor; sayfa metninin cift degistikce degismesini saglayan tek
+    parca bu. Ayrim yoksa bos doner ve satir hic basilmaz.
+  */
+  const ayrim = ayrimCumlesi(tool1 as any, tool2 as any);
+
   // Yalnizca akranlar: sitemap disi bir sayfaya link verilmemeli.
   const ilgili = akranlar(tool1.slug).filter((t: any) => t.slug !== tool2.slug);
 
@@ -160,6 +167,11 @@ export default async function ComparisonPage({ params }: any) {
                 ? `both are ${f1.metin.toLowerCase()}.`
                 : `${tool1.name} is ${f1.metin.toLowerCase()}, ${tool2.name} is ${f2.metin.toLowerCase()}.`}
             </li>
+            {ayrim ? (
+              <li>
+                <strong className="font-medium text-ink">Where they differ:</strong> {ayrim}
+              </li>
+            ) : null}
           </ul>
           <p className="mt-4 border-t border-line pt-3 text-xs text-ink-muted">
             These lines are generated from the pricing we track, not from a paid placement.{" "}
@@ -169,6 +181,25 @@ export default async function ComparisonPage({ params }: any) {
             .
           </p>
         </section>
+
+        {/*
+          Elde duran longDescription hicbir karsilastirma sayfasinda
+          gosterilmiyordu (460/512 aracta dolu, ortalama 45 kelime).
+          Sayfa basina ~90 kelimelik, araca OZGU metin buydu; sablon
+          tekrarini seyreltmenin en ucuz yolu onu basmak.
+        */}
+        {[tool1, tool2].some((t: any) => t.longDescription) && (
+          <section className="mt-10 grid gap-6 sm:grid-cols-2">
+            {[tool1, tool2]
+              .filter((t: any) => t.longDescription)
+              .map((t: any) => (
+                <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
+                  <h2 className="text-base font-semibold">What {t.name} is</h2>
+                  <p className="mt-2 text-sm text-ink-soft">{t.longDescription}</p>
+                </div>
+              ))}
+          </section>
+        )}
 
         {/* ---------- Karsilastirma tablosu ---------- */}
         <section className="mt-10">
@@ -249,6 +280,31 @@ export default async function ComparisonPage({ params }: any) {
             </table>
           </div>
         </section>
+
+        {/*
+          keyFeatures 245 aracta dolu (baslik + bir cumle aciklama) ve
+          yine hicbir yerde gosterilmiyordu. Tablo yalnizca dort olcute
+          Yes/No diyor; aracin kendi one cikardigi is bunlarda.
+        */}
+        {[tool1, tool2].some((t: any) => t.keyFeatures?.length) && (
+          <section className="mt-12 grid gap-6 sm:grid-cols-2">
+            {[tool1, tool2]
+              .filter((t: any) => t.keyFeatures?.length)
+              .map((t: any) => (
+                <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
+                  <h2 className="text-base font-semibold">What {t.name} is built to do</h2>
+                  <dl className="mt-3 space-y-3 text-sm">
+                    {t.keyFeatures.map((f: any) => (
+                      <div key={f.title}>
+                        <dt className="font-medium text-ink">{f.title}</dt>
+                        <dd className="mt-0.5 ml-0 text-ink-soft">{f.description}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              ))}
+          </section>
+        )}
 
         {/* ---------- Is akisina uygunluk ---------- */}
         <section className="mt-12 grid gap-6 sm:grid-cols-2">
