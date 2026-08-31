@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
+import { kirintiSemasi } from "@/lib/yapilandirilmis";
+import { kategoriSlug } from "@/lib/categories";
 import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
@@ -117,11 +119,25 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const karsilastirmalar = akranlar(tool.slug);
 
 
+  /*
+    Kirinti (breadcrumb) semasi EKSIKTI: arama sonucunda ciplak URL
+    gorunuyordu, "ToolCompare > Category > Tool" yolu degil. Kirinti
+    yolu hem tiklama oranini yukseltir hem Google'a site hiyerarsisini
+    anlatir -- 512 arac sayfasinin hicbirinde yoktu.
+  */
+  const semalar = [
+    yapilandirilmis,
+    kirintiSemasi([
+      ...(tool.category ? [{ ad: tool.category, yol: `/categories/${kategoriSlug(tool.category)}` }] : []),
+      { ad: tool.name, yol: `/tools/${tool.slug}` },
+    ]),
+  ];
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(yapilandirilmis) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(semalar) }}
       />
       <Header />
 

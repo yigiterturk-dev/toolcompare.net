@@ -5,7 +5,7 @@ import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ayrimCumlesi } from "@/lib/compare";
-import { listeSemasi } from "@/lib/yapilandirilmis";
+import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
@@ -126,9 +126,18 @@ export default async function ComparisonPage({ params }: any) {
     [tool1, tool2]
   );
 
+  // Kirinti semasi bu sayfa turunde de yoktu.
+  const semalar = [
+    sema,
+    kirintiSemasi([
+      { ad: tool1.name, yol: `/tools/${tool1.slug}` },
+      { ad: `${tool1.name} vs ${tool2.name}`, yol: `/compare/${kanonikSlug(tool1.slug, tool2.slug)}` },
+    ]),
+  ];
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(semalar) }} />
       <Header />
 
       <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
