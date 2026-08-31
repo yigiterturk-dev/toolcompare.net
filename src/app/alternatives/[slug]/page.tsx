@@ -14,6 +14,7 @@
  */
 
 import Header from "@/components/Header";
+import { alternatifIndekslenir, NOINDEX } from "@/lib/indeks";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -48,6 +49,9 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: url },
+    // Fiyati dogrulanmamis aracin alternatif sayfasi indekslenmez; sayfa
+    // yine acik ve linkli kalir. Kural: src/lib/indeks.ts
+    robots: alternatifIndekslenir(tool as any) ? undefined : NOINDEX,
     openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
     twitter: { card: "summary_large_image", title, description },
   };

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
+import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki } from "@/lib/outbound";
 import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
@@ -39,6 +40,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // www) gelindiginde Google hangisini asil sayacagini kendi tahmin
     // ediyordu. Open Graph de yoktu; paylasilan link ciplak gorunuyordu.
     alternates: { canonical: url },
+    // Incelenmemis arac sayfasi erisilebilir kalir (ziyaretci fiyati ve
+    // alternatifleri gorur, link akitir) ama Google'a indekslenmesi
+    // soylenmez. Kural: src/lib/indeks.ts
+    robots: aracIndekslenir(tool as any) ? undefined : NOINDEX,
     openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
     twitter: { card: "summary_large_image", title, description },
   };

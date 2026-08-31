@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import toolsData from '@/data/tools.json'
 import { sitemapCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
 import { sitemapKategorileri } from '@/lib/categories'
+import { aracIndekslenir, alternatifIndekslenir } from '@/lib/indeks'
 import fs from 'fs';
 import path from 'path';
 
@@ -34,7 +35,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Dynamic tool pages
-  const toolRoutes = (toolsData as any[]).map((tool: any) => ({
+  // KAPI: yalnizca incelenmis araclar. Incelenmemis kayit sadece ad +
+  // fiyattan ibaret; Google bunlari "Discovered - currently not indexed"
+  // diye geri ceviriyordu ve tarama butcesini yiyordu.
+  const toolRoutes = (toolsData as any[]).filter((t) => aracIndekslenir(t)).map((tool: any) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
@@ -77,7 +81,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // "X alternatives" sayfalari. Ucuncu buyuk arama kalibi; bu niyetle
   // gelen ziyaretci zaten ayrilmaya karar vermis oluyor.
-  const alternativeRoutes = alternatifSayfasiOlanlar().map((t) => ({
+  // KAPI: bu sayfanin tek iddiasi "su fiyata su secenekler"; fiyat
+  // dogrulanmamissa sayfanin soyleyecek sozu yok.
+  const alternativeRoutes = alternatifSayfasiOlanlar().filter((t) => alternatifIndekslenir(t)).map((t) => ({
     url: `${baseUrl}/alternatives/${t.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
