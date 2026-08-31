@@ -11,7 +11,10 @@
     "verify:claims": "node scripts/verify-claims.mjs",
     "check:fiyat": "node scripts/check-fiyat-modelleri.mjs",
     "check:izgara": "node --experimental-strip-types --no-warnings scripts/check-izgara-alanlari.mjs",
-    "check": "npm run check:fiyat && npm run check:izgara && npm test"
+    "check": "npm run check:fiyat && npm run check:izgara && npm test",
+    "gsc:dene": "node --experimental-strip-types --no-warnings scripts/gsc-dene.ts",
+    "gsc:senkron": "node --experimental-strip-types --no-warnings scripts/gsc-senkron.ts",
+    "gsc:firsat": "node --experimental-strip-types --no-warnings scripts/gsc-firsat.ts"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
