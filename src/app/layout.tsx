@@ -11,9 +11,21 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"]
 export const metadata: Metadata = {
   title: "ToolCompare | The World's Best Software Tools, Compared",
   description: "Software tools compared on what they cost to start. Every price says whether it is verified, usage-based or a free tier — and we publish no invented quality scores.",
+  /*
+    TEK KIMLIK. Onceden UC AYRI simge vardi ve hangisinin gorunecegi
+    istemciye kaliyordu: `src/app/favicon.ico` Next'in varsayilan siyah
+    ucgeni, `public/favicon.svg` mor bir onay isareti, `public/logo.png` ise
+    asil marka. Ucu de birbirinden farkliydi. Hepsi `public/brand/`teki tek
+    kaynaktan yeniden uretildi.
+  */
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/brand/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "48x48" },
+    ],
+    apple: "/apple-icon.png",
   },
+  manifest: "/site.webmanifest",
   // metadataBase olmadan canonical ve OG url'leri goreli kaliyordu; Google'in
   // hangi adresi kanonik sayacagi belirsizdi.
   metadataBase: new URL("https://toolcompare.net"),
@@ -25,8 +37,17 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "ToolCompare",
     type: "website",
+    /*
+      Kart "summary_large_image" diyordu ama GORSEL TANIMLI DEGILDI --
+      paylasilan her link bos bir kart olarak cikiyordu. Dagitim tarafinda
+      bedava kaybedilen yer burasiydi.
+    */
+    images: [{ url: "/brand/og.png", width: 1200, height: 630, alt: "ToolCompare" }],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/brand/og.png"],
+  },
 };
 
 export default function RootLayout({

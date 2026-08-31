@@ -73,7 +73,7 @@ export default function Footer() {
           <div className="max-w-sm">
             <p className="flex items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="" aria-hidden="true" className="size-6 object-contain" />
+              <img src="/brand/mark.svg" alt="" aria-hidden="true" width="28" height="28" className="size-6" />
               <span className="font-serif text-base font-semibold">ToolCompare</span>
             </p>
             <p className="mt-2 text-sm text-ink-soft">
