@@ -55,6 +55,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const adsensePub = process.env.ADSENSE_PUBLISHER_ID?.trim();
+
   return (
     /*
       Font degiskenleri <html> uzerinde: next/font onlari className ile
@@ -64,6 +66,21 @@ export default function RootLayout({
       fontlar yuklenip hic kullanilmiyordu.
     */
     <html lang="en" className={`${newsreader.variable} ${roboto.variable}`}>
+      <head>
+        {/*
+          AdSense betigi yalnizca yayinci kimligi TANIMLIYSA basilir.
+          Kimliksiz betik hem ise yaramaz hem her ziyaretcide bosuna
+          ~90 KB indirtir; /ads.txt de ayni degiskene bakiyor, yani
+          "betik var ama ads.txt yok" celiskisi olusamaz.
+        */}
+        {adsensePub ? (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePub}`}
+            crossOrigin="anonymous"
+          />
+        ) : null}
+      </head>
       <body className="antialiased">
         {children}
       </body>

@@ -13,6 +13,7 @@
  */
 
 import Header from "@/components/Header";
+import { affiliateAktifMi, ACIKLAMA_METNI } from "@/lib/affiliate";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -115,18 +116,38 @@ export default function MethodologyPage() {
 
         <B>
           <h2>How we make money</h2>
-          <p>
-            At the moment: we do not. ToolCompare is in no affiliate programme and earns no commission from
-            any link on this site.
-          </p>
-          <p>
-            That is likely to change. If it does, this page and our{' '}
-            <Link href="/terms">terms</Link> will be updated before a
-            single paid link goes live, every compensated link will be marked as sponsored, and the ranking
-            rules above will not change to favour tools that pay us. Ranking by who pays is the failure mode
-            of this entire category of website; the whole point of the rules on this page is that they are
-            written down in advance.
-          </p>
+          {/* Metin src/data/affiliate.json'a bagli; elle guncellenmesi
+              gereken bir soz birakmiyoruz. */}
+          {affiliateAktifMi() ? (
+            <>
+              <p>
+                Through affiliate links. Some outbound links earn us a commission if you sign up through
+                them. {ACIKLAMA_METNI}
+              </p>
+              <p>
+                The ranking rules above did not change when the first paid link went live, and every
+                compensated link carries <code>rel=&quot;sponsored&quot;</code> in the page source, so you can
+                check that claim yourself rather than take our word for it. Ranking by who pays is the failure
+                mode of this entire category of website; the whole point of the rules on this page is that they
+                were written down in advance.
+              </p>
+            </>
+          ) : (
+            <>
+              <p>
+                At the moment: we do not. ToolCompare is in no affiliate programme and earns no commission from
+                any link on this site.
+              </p>
+              <p>
+                That is likely to change. If it does, this page and our{' '}
+                <Link href="/terms">terms</Link> will be updated before a
+                single paid link goes live, every compensated link will be marked as sponsored, and the ranking
+                rules above will not change to favour tools that pay us. Ranking by who pays is the failure mode
+                of this entire category of website; the whole point of the rules on this page is that they are
+                written down in advance.
+              </p>
+            </>
+          )}
         </B>
 
         <B>

@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki } from "@/lib/outbound";
+import { relDegeri } from "@/lib/affiliate";
+import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
@@ -319,13 +321,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <a
                     href={gitLinki(tool.slug)}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel={relDegeri(tool.slug)}
                     data-tap
                     className="mt-4 block rounded-[--radius-control] bg-brand px-4 py-2.5 text-center text-sm font-medium text-brand-ink no-underline transition-opacity duration-150 hover:opacity-90"
                   >
                     Visit {tool.name}
                   </a>
                 ) : null}
+                <AffiliateNotu />
               </div>
 
               {(tool.pros?.length || tool.cons?.length) && (

@@ -12,6 +12,7 @@
  */
 
 import toolsData from "@/data/tools.json";
+import { affiliateKaydi } from "@/lib/affiliate";
 
 export type OutboundTool = {
   slug: string;
@@ -30,11 +31,16 @@ export function araciBul(slug: string): OutboundTool | undefined {
 /**
  * Kullanicinin gercekten gidecegi adres.
  *
- * Sira: affiliateUrl > websiteUrl > Google aramasi.
+ * Sira: affiliate.json > affiliateUrl > websiteUrl > Google aramasi.
+ * affiliate.json one geciyor cunku aciklama serdi, rel="sponsored" ve
+ * /terms metni de ORAYA bakiyor; hedef baska yerden gelirse site parali
+ * bir linki paraliymis gibi isaretlemeden acar.
  * Son secenek bilerek duruyor: linki olmayan aracta kullaniciyi
  * cikmaza dusurmek yerine aramaya birakiyoruz (mevcut davranis).
  */
 export function hedefUrl(tool: OutboundTool): string {
+  const kayit = affiliateKaydi(tool.slug);
+  if (kayit) return kayit.url;
   if (tool.affiliateUrl) return tool.affiliateUrl;
   if (tool.websiteUrl) return tool.websiteUrl;
   return `https://www.google.com/search?q=${encodeURIComponent(tool.name + " official website")}`;

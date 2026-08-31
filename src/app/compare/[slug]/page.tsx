@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
 import { gitLinki } from "@/lib/outbound";
+import { relDegeri } from "@/lib/affiliate";
+import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ayrimCumlesi } from "@/lib/compare";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
@@ -263,14 +265,14 @@ export default async function ComparisonPage({ params }: any) {
                   label="Visit"
                   val1={
                     tool1.websiteUrl ? (
-                      <a href={gitLinki(tool1.slug)} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">
+                      <a href={gitLinki(tool1.slug)} target="_blank" rel={relDegeri(tool1.slug)} className="text-accent underline underline-offset-4">
                         {tool1.name} ↗
                       </a>
                     ) : null
                   }
                   val2={
                     tool2.websiteUrl ? (
-                      <a href={gitLinki(tool2.slug)} target="_blank" rel="noopener noreferrer" className="text-accent underline underline-offset-4">
+                      <a href={gitLinki(tool2.slug)} target="_blank" rel={relDegeri(tool2.slug)} className="text-accent underline underline-offset-4">
                         {tool2.name} ↗
                       </a>
                     ) : null
@@ -279,6 +281,7 @@ export default async function ComparisonPage({ params }: any) {
               </tbody>
             </table>
           </div>
+          <AffiliateNotu />
         </section>
 
         {/*

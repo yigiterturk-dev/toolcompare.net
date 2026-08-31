@@ -22,6 +22,8 @@ import type { Metadata } from "next";
 import toolsData from "@/data/tools.json";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { gitLinki } from "@/lib/outbound";
+import { relDegeri } from "@/lib/affiliate";
+import AffiliateNotu from "@/components/AffiliateNotu";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
@@ -201,7 +203,7 @@ export default async function AlternativesPage({ params }: any) {
                   <a
                     href={gitLinki(alt.slug)}
                     target="_blank"
-                    rel="noopener noreferrer nofollow sponsored"
+                    rel={relDegeri(alt.slug)}
                     className="text-ink-soft underline decoration-line-strong underline-offset-4 transition-colors duration-150 hover:text-accent"
                   >
                     Visit {alt.name} →
@@ -211,6 +213,7 @@ export default async function AlternativesPage({ params }: any) {
             </li>
           ))}
         </ol>
+        <AffiliateNotu />
       </main>
 
       <Footer />
