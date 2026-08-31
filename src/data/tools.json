@@ -33602,7 +33602,17 @@
     "websiteUrl": "https://www.linphone.org/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "dingtalk",
@@ -33683,7 +33693,17 @@
       "Smaller plugin ecosystem"
     ],
     "targetAudience": "Teams that want their own Git host without running GitLab.",
-    "verdict": "The pragmatic self-hosted choice. GitLab does more; Gitea does enough with far less overhead."
+    "verdict": "The pragmatic self-hosted choice. GitLab does more; Gitea does enough with far less overhead.",
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "forgejo",
@@ -33706,7 +33726,17 @@
       "Migration considerations if you switch back"
     ],
     "targetAudience": "Self-hosters who care about project governance as well as features.",
-    "verdict": "Choose it over Gitea if governance matters to you; the day-to-day experience is close to identical."
+    "verdict": "Choose it over Gitea if governance matters to you; the day-to-day experience is close to identical.",
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "gitee",
@@ -33716,7 +33746,17 @@
     "websiteUrl": "https://gitee.com/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "kallithea",
@@ -33726,7 +33766,17 @@
     "websiteUrl": "https://kallithea-scm.org/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "azure-devops-server",
@@ -33759,7 +33809,17 @@
       "Ruby stack needs someone to maintain it"
     ],
     "targetAudience": "Organisations that want issue tracking without licence costs.",
-    "verdict": "Unfashionable and still working. If the dated interface is acceptable, it costs nothing but hosting."
+    "verdict": "Unfashionable and still working. If the dated interface is acceptable, it costs nothing but hosting.",
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "openproject",
@@ -33799,6 +33859,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -33839,6 +33909,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -33879,6 +33959,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -33919,6 +34009,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -33959,6 +34059,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34036,6 +34146,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34073,6 +34193,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34110,7 +34240,17 @@
     "websiteUrl": "https://www.perforce.com/products/helix-alm",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "dotproject",
@@ -34120,7 +34260,17 @@
     "websiteUrl": "https://dotproject.net",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "planta-project",
@@ -34157,6 +34307,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34204,7 +34364,17 @@
     "websiteUrl": "https://www.collab.net/products/teamforge-alm",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "getresponse",
@@ -34244,6 +34414,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34284,6 +34464,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34324,6 +34514,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34387,6 +34587,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34397,7 +34607,17 @@
     "websiteUrl": "https://www.liveperson.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "yoast-seo",
@@ -34420,7 +34640,17 @@
       "Adds weight to the admin interface"
     ],
     "targetAudience": "Anyone running SEO on a WordPress site.",
-    "verdict": "The default for good reason. Treat its green lights as hygiene, not strategy."
+    "verdict": "The default for good reason. Treat its green lights as hygiene, not strategy.",
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "phplist",
@@ -34430,7 +34660,17 @@
     "websiteUrl": "https://www.phplist.org",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "open-web-analytics",
@@ -34450,7 +34690,17 @@
     "websiteUrl": "https://www.awstats.org",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "goaccess",
@@ -34460,7 +34710,17 @@
     "websiteUrl": "https://goaccess.io/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "lastpass",
@@ -34500,6 +34760,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34580,6 +34850,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34590,7 +34870,17 @@
     "websiteUrl": "https://keeweb.info/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "passwork",
@@ -34600,7 +34890,17 @@
     "websiteUrl": "https://passwork.pro/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "simplenote",
@@ -34623,7 +34923,17 @@
       "No collaboration to speak of"
     ],
     "targetAudience": "People who want notes to open instantly and stay out of the way.",
-    "verdict": "Does one thing perfectly. Anyone needing structure will outgrow it in a week."
+    "verdict": "Does one thing perfectly. Anyone needing structure will outgrow it in a week.",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "tiddlywiki",
@@ -34646,7 +34956,17 @@
       "Not built for collaboration"
     ],
     "targetAudience": "People who want a personal knowledge base with no dependencies at all.",
-    "verdict": "Remarkable engineering and genuinely yours forever. The learning curve is the price."
+    "verdict": "Remarkable engineering and genuinely yours forever. The learning curve is the price.",
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "prezi",
@@ -34679,7 +34999,17 @@
     "websiteUrl": "https://www.freeplane.org",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "qownnotes",
@@ -34689,7 +35019,17 @@
     "websiteUrl": "https://www.qownnotes.org/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "zim",
@@ -34709,7 +35049,17 @@
     "websiteUrl": "https://www.tagspaces.org/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "coreldraw",
@@ -34792,6 +35142,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34833,6 +35193,16 @@
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
         "The vendor's pricing URL redirects to apple.com."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34843,7 +35213,17 @@
     "websiteUrl": "https://www.kinemaster.com/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "vegas-pro",
@@ -34897,6 +35277,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34924,6 +35314,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -34984,7 +35384,17 @@
       "Small implementer community"
     ],
     "targetAudience": "Non-profits and membership organisations with technical support available.",
-    "verdict": "The standard open-source non-profit CRM. Budget for someone to run it."
+    "verdict": "The standard open-source non-profit CRM. Budget for someone to run it.",
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "sugarcrm",
@@ -35052,6 +35462,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -35079,6 +35499,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -35102,7 +35532,17 @@
       "Overkill for small teams"
     ],
     "targetAudience": "Enterprises already standardised on Microsoft.",
-    "verdict": "Natural for Microsoft shops. Getting the licensing right is half the work."
+    "verdict": "Natural for Microsoft shops. Getting the licensing right is half the work.",
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "nationbuilder",
@@ -35129,6 +35569,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -35139,7 +35589,17 @@
     "websiteUrl": "https://www.onlyoffice.com",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "servicetitan",
@@ -35159,7 +35619,17 @@
     "websiteUrl": "https://www.snapforce.com/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "dolibarr",
@@ -35169,7 +35639,17 @@
     "websiteUrl": "https://www.dolibarr.org",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "erpnext",
@@ -35210,6 +35690,16 @@
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
         "The vendor's pricing URL redirects to frappe.io."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -35283,7 +35773,17 @@
     "websiteUrl": "https://tallysolutions.com/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "tipalti",
@@ -35323,6 +35823,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -35360,7 +35870,17 @@
     "websiteUrl": "https://ledgersmb.org/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": true,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "7shifts",
@@ -35387,6 +35907,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -35410,7 +35940,17 @@
       "Less depth than enterprise suites"
     ],
     "targetAudience": "Growing companies where HR adoption by staff matters.",
-    "verdict": "The adoption advantage is real. Payroll coverage is the thing to check first."
+    "verdict": "The adoption advantage is real. Payroll coverage is the thing to check first.",
+    "kriterler": {
+      "api": null,
+      "mobil": true,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "icims",
@@ -35460,6 +36000,16 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
+    },
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
     }
   },
   {
@@ -35493,7 +36043,17 @@
     "websiteUrl": "https://beamery.com/",
     "incelendi": false,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "kriterler": {
+      "api": null,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": true
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   },
   {
     "slug": "otrs",
@@ -35539,6 +36099,16 @@
       "Public roadmaps invite expectations"
     ],
     "targetAudience": "Product teams drowning in feature requests from customers.",
-    "verdict": "Useful for structure. Voting is a signal, not a roadmap."
+    "verdict": "Useful for structure. Voting is a signal, not a roadmap.",
+    "kriterler": {
+      "api": true,
+      "mobil": null,
+      "acikKaynak": null,
+      "sso": null
+    },
+    "kriterKaynagi": {
+      "yontem": "site-scan",
+      "checkedAt": "2026-08-31"
+    }
   }
 ]

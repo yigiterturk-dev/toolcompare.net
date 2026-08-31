@@ -76,3 +76,30 @@ test("elle kuratorlu vendor-sourced kayit fiyat kaniti sayilir", () => {
   );
   assert.equal(alternatifIndekslenir(vendor([]) as never), false);
 });
+
+test("bakilmamis kriter (null) fark sayilmaz, dolu da saymaz", () => {
+  // null = BAKILMADI. false ile karistirilirsa uydurma fark uretir.
+  assert.equal(
+    gercekFarkVar(
+      tam({ kriterler: { api: true } }) as never,
+      tam({ kriterler: { api: null } }) as never,
+    ),
+    false,
+  );
+  // Iki tarafta da bakilmissa gercek fark.
+  assert.equal(
+    gercekFarkVar(
+      tam({ kriterler: { api: true } }) as never,
+      tam({ kriterler: { api: false } }) as never,
+    ),
+    true,
+  );
+  // Yalnizca null iceren kume kriterli sayilmaz.
+  assert.equal(
+    ciftIndekslenir(
+      tam({ kriterler: { api: null, sso: null } }) as never,
+      tam() as never,
+    ),
+    false,
+  );
+});

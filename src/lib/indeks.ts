@@ -73,9 +73,14 @@ export function fiyatiDogrulanmis(t?: Arac): boolean {
   return durum === "vendor-sourced" && fiyatDestekleyenKaynak(t);
 }
 
-/** Ozellik matrisi dolu: karsilastirma tablosu gercekten bir sey gosterir. */
+/**
+ * Ozellik matrisi dolu: karsilastirma tablosu gercekten bir sey gosterir.
+ *
+ * `null` = BAKILMADI (bkz. lib/kriterler.ts). Yalnizca null iceren bir
+ * kume "dolu" degildir -- tabloda dort satir "not checked" yazar.
+ */
 export function kriterliMi(t?: Arac): boolean {
-  return Boolean(t?.kriterler && Object.keys(t.kriterler).length > 0);
+  return Object.values(t?.kriterler || {}).some((v) => typeof v === "boolean");
 }
 
 /**
@@ -89,9 +94,15 @@ export function gercekFarkVar(a?: Arac, b?: Arac): boolean {
   const da = fiyatDurumu(a as never);
   const db = fiyatDurumu(b as never);
   if (da.karsilastirilabilir && db.karsilastirilabilir && da.aylik !== db.aylik) return true;
+  /* Bir kriter ancak IKI TARAFTA DA bakilmissa karsilastirilir. `null`
+     (bakilmadi) ile `false` (yok) ayni sey degil; null'i false saymak
+     "A'da API var, B'de yok" gibi BAKILMAMIS bir farki uydurur ve
+     sayfayi kapidan yanlislikla gecirirdi. */
   const ka = (a.kriterler || {}) as Record<string, unknown>;
   const kb = (b.kriterler || {}) as Record<string, unknown>;
-  return Object.keys({ ...ka, ...kb }).some((k) => Boolean(ka[k]) !== Boolean(kb[k]));
+  return Object.keys({ ...ka, ...kb }).some(
+    (k) => typeof ka[k] === "boolean" && typeof kb[k] === "boolean" && ka[k] !== kb[k],
+  );
 }
 
 /**
