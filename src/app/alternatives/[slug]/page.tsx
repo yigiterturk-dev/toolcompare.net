@@ -145,6 +145,48 @@ export default async function AlternativesPage({ params }: any) {
                   <strong className="font-medium text-ink">vs {tool.name}:</strong>{" "}
                   {farkCumlesi(tool, alt)}.
                 </p>
+                {/*
+                  OLCUMDE BULUNAN (2026-08-31): bu sayfa arac verisinden yalnizca
+                  adi, 3-5 kelimelik aciklamayi ve fiyat farkini gosteriyordu --
+                  alternatif basina ~15 kelime. Oysa 460 aracin hepsinde elle
+                  yazilmis pros/cons duruyor ve bu sayfa onlara hic dokunmuyordu.
+                  Alternatif ariyan kisinin sordugu iki soru "neden gecerim" ve
+                  "neyden vazgecerim"; ikisinin cevabi da zaten veride yaziliydi.
+                  Uydurma yok: gosterilen her cumle o aracin kendi incelemesinden.
+                */}
+                {(Array.isArray(alt.pros) && alt.pros.length > 0) || (Array.isArray(alt.cons) && alt.cons.length > 0) ? (
+                  <div className="mt-3 grid gap-2 border-t border-line pt-3 text-sm sm:grid-cols-2">
+                    {Array.isArray(alt.pros) && alt.pros.length > 0 && (
+                      <div>
+                        <h3 className="font-sans text-xs font-semibold uppercase tracking-wide text-verified">
+                          Why switch to {alt.name}
+                        </h3>
+                        <ul className="mt-1.5 list-none space-y-1 p-0 text-ink-soft">
+                          {alt.pros.slice(0, 2).map((item: string, j: number) => (
+                            <li key={j}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {Array.isArray(alt.cons) && alt.cons.length > 0 && (
+                      <div>
+                        <h3 className="font-sans text-xs font-semibold uppercase tracking-wide text-ink-muted">
+                          What you give up
+                        </h3>
+                        <ul className="mt-1.5 list-none space-y-1 p-0 text-ink-soft">
+                          {alt.cons.slice(0, 1).map((item: string, j: number) => (
+                            <li key={j}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ) : null}
+                {typeof alt.targetAudience === "string" && alt.targetAudience.trim() ? (
+                  <p className="mt-2 text-sm text-ink-muted">
+                    <strong className="font-medium text-ink-soft">Best for:</strong> {alt.targetAudience}
+                  </p>
+                ) : null}
                 <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   <Link
                     href={`/compare/${kanonikSlug(tool.slug, alt.slug)}`}
