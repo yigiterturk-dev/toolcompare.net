@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { cspOlustur } from "./src/lib/guvenlik";
 
 // Guvenlik basliklari CDN/sunucu katmaninda hic tanimli degildi. Denetimde
 // dordu birden eksik cikti; hem koruma hem de tarayici/arama motoru guven
@@ -21,19 +22,13 @@ const guvenlikBasliklari = [
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
 ];
 
-const csp = [
-  "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: https:",
-  "font-src 'self' data:",
-  "connect-src 'self' https://api.openai.com",
-  "object-src 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "frame-ancestors 'self'",
-  "upgrade-insecure-requests",
-].join("; ");
+// CSP artik src/lib/guvenlik.ts'te; ayni politika <meta> ile de basiliyor
+// cunku onde duran Hostinger/LiteSpeed katmani bu basligi eziyor (olcum
+// ve ayrinti o dosyada).
+const csp = cspOlustur({
+  gelistirme: process.env.NODE_ENV === "development",
+  adsense: Boolean(process.env.ADSENSE_PUBLISHER_ID?.trim()),
+});
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,

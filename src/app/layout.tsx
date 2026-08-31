@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cspOlustur } from "@/lib/guvenlik";
 import { Newsreader, Roboto } from "next/font/google";
 import "./globals.css";
 
@@ -67,6 +68,17 @@ export default function RootLayout({
     */
     <html lang="en" className={`${newsreader.variable} ${roboto.variable}`}>
       <head>
+        {/*
+          CSP'yi META ile de basiyoruz: canlida onde duran Hostinger/
+          LiteSpeed katmani Content-Security-Policy basligimizin uzerine
+          yaziyor ve geriye yalnizca "upgrade-insecure-requests" kaliyor
+          (olcum: src/lib/guvenlik.ts). Baslik da duruyor; barindirma
+          degisince ikisi ayni politikayi soyleyecek.
+        */}
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content={cspOlustur({ adsense: Boolean(adsensePub), meta: true })}
+        />
         {/*
           AdSense betigi yalnizca yayinci kimligi TANIMLIYSA basilir.
           Kimliksiz betik hem ise yaramaz hem her ziyaretcide bosuna
