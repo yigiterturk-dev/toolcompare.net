@@ -13,7 +13,12 @@ import { createSign } from "node:crypto";
  * cagiran taraf ne yapacagini kendi bilir.
  */
 
-const SCOPE = "https://www.googleapis.com/auth/webmasters.readonly";
+/**
+ * Yazma yetkisi de isteniyor: sitemap gondermek readonly kapsamda calismaz.
+ * Servis hesabinin yapabildigi tek yazma islemi sitemap bildirimi; sıralama
+ * veya icerik tarafinda hicbir sey degistiremez.
+ */
+const SCOPE = "https://www.googleapis.com/auth/webmasters";
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const API = "https://searchconsole.googleapis.com/webmasters/v3";
 
@@ -193,4 +198,64 @@ export function summarizeByPage(rows: SearchRow[], limit = 50): PageSummary[] {
     .map(({ queryKeys, ...rest }) => ({ ...rest, queries: queryKeys.size }))
     .sort((a, b) => b.impressions - a.impressions)
     .slice(0, limit);
+}
+
+export interface InspectionResult {
+  url: string;
+  verdict: string;
+  coverageState: string;
+  robotsTxtState?: string;
+  indexingState?: string;
+  lastCrawlTime?: string;
+}
+
+/**
+ * Tek bir adresin indeks durumunu sorar.
+ *
+ * Arama verisi mulk dogrulandiktan gunler sonra dolar; bu uc ise ANINDA
+ * cevap verir. "Sayfalarim Google'da var mi" sorusunun beklemeden alinabilen
+ * tek dogru cevabi budur — site: aramasi tahminidir, bu degil.
+ */
+export async function inspectUrl(url: string): Promise<InspectionResult> {
+  const token = await getAccessToken();
+  const res = await fetch("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect", {
+    method: "POST",
+    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({
+      inspectionUrl: url,
+      siteUrl: process.env.GSC_SITE_URL,
+    }),
+  });
+  if (!res.ok) throw new Error(`Inceleme basarisiz (${res.status}): ${await res.text()}`);
+  const data = await res.json() as {
+    inspectionResult?: { indexStatusResult?: Record<string, string> };
+  };
+  const durum = data.inspectionResult?.indexStatusResult ?? {};
+  return {
+    url,
+    verdict: durum.verdict ?? "BILINMIYOR",
+    coverageState: durum.coverageState ?? "-",
+    robotsTxtState: durum.robotsTxtState,
+    indexingState: durum.indexingState,
+    lastCrawlTime: durum.lastCrawlTime,
+  };
+}
+
+/** Sitemap bildirir. Zaten bildirilmisse Google yeniden okur, zarari yok. */
+export async function submitSitemap(sitemapUrl: string): Promise<void> {
+  const token = await getAccessToken();
+  const site = encodeURIComponent(process.env.GSC_SITE_URL!);
+  const res = await fetch(`${API}/sites/${site}/sitemaps/${encodeURIComponent(sitemapUrl)}`, {
+    method: "PUT",
+    headers: { authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) throw new Error(`Sitemap bildirilemedi (${res.status}): ${await res.text()}`);
+}
+
+export async function listSitemaps(): Promise<Array<{ path: string; lastSubmitted?: string; warnings?: string; errors?: string; isPending?: boolean }>> {
+  const token = await getAccessToken();
+  const site = encodeURIComponent(process.env.GSC_SITE_URL!);
+  const res = await fetch(`${API}/sites/${site}/sitemaps`, { headers: { authorization: `Bearer ${token}` } });
+  if (!res.ok) throw new Error(`Sitemap listesi alinamadi (${res.status})`);
+  return (await res.json() as { sitemap?: Array<{ path: string }> }).sitemap ?? [];
 }
