@@ -6,6 +6,10 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    // tests/ ve scripts/ dosyalari birbirini ".ts" uzantisiyla cagiriyor
+    // (node --experimental-strip-types boyle bekliyor). noEmit acikken bu
+    // bayrak guvenli; olmadan `next build` tip kontrolunde patliyor.
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",

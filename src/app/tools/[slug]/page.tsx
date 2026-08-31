@@ -61,6 +61,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const targetAud = typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || tool.target_audience?.description || tool.target_audience?.text || tool.target_audience?.small_businesses || "");
   const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
   const evidence = toolEvidence(tool);
+  const pros: string[] = Array.isArray(tool.pros) ? tool.pros.filter((x: unknown) => typeof x === "string" && x.trim()) : [];
+  const cons: string[] = Array.isArray(tool.cons) ? tool.cons.filter((x: unknown) => typeof x === "string" && x.trim()) : [];
 
   // Yapilandirilmis veri. DIKKAT: buraya YALNIZCA sayfada gercekten gorunen
   // ve elimizde olan bilgi konur. Genel bir yildiz puani BILEREK yok:
@@ -186,6 +188,50 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                       );
                     })}
                   </ul>
+                </section>
+              )}
+
+              {/*
+                OLCUMDE BULUNAN (2026-08-31): 460 aracin hepsinde elle yazilmis
+                pros/cons duruyordu ve bu sayfa onlari HIC gostermiyordu --
+                karsilastirma sayfasi gosteriyordu, arac sayfasi gostermiyordu.
+                Cumlelerin %99'u birbirinden farkli (1.610 benzersiz / 1.621),
+                yani sayfa basina ~70 kelimelik tamamen ozgun icerik kullanilmadan
+                duruyordu. Sitenin en buyuk sorunu sayfa basina ozgun madde
+                azligiyken (karsilastirma sayfalari birbirinin %53-59'u), elde
+                olani gostermemek en pahali eksikti.
+              */}
+              {(pros.length > 0 || cons.length > 0) && (
+                <section>
+                  <h2 className="text-xl font-semibold">Strengths and trade-offs</h2>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    {pros.length > 0 && (
+                      <div className="rounded-[--radius-card] border border-line bg-surface p-4">
+                        <h3 className="font-sans text-sm font-semibold text-verified">What works well</h3>
+                        <ul className="mt-2 grid list-none gap-2 p-0 text-sm text-ink-soft">
+                          {pros.map((item: string, i: number) => (
+                            <li key={i} className="flex gap-2">
+                              <span aria-hidden="true" className="text-verified">+</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {cons.length > 0 && (
+                      <div className="rounded-[--radius-card] border border-line bg-surface p-4">
+                        <h3 className="font-sans text-sm font-semibold">Where it falls short</h3>
+                        <ul className="mt-2 grid list-none gap-2 p-0 text-sm text-ink-soft">
+                          {cons.map((item: string, i: number) => (
+                            <li key={i} className="flex gap-2">
+                              <span aria-hidden="true" className="text-ink-soft">-</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </section>
               )}
 
