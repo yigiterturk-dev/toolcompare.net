@@ -31,6 +31,7 @@ export type Arac = {
   basePrice?: number;
   isFlat?: boolean;
   shortDescription?: string;
+  pros?: string[];
   cons?: string[];
 };
 

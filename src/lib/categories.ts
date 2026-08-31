@@ -27,6 +27,8 @@ export type Arac = {
   basePrice?: number;
   isFlat?: boolean;
   shortDescription?: string;
+  /** Incelemede elle yazilmis artilar; kategori listesinde ilki gosteriliyor. */
+  pros?: string[];
 };
 
 export type Kategori = {

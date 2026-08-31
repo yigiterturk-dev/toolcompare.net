@@ -139,6 +139,18 @@ export default async function CategoryPage({ params }: any) {
                   {t.shortDescription && (
                     <p className="mt-1 text-sm text-ink-soft">{t.shortDescription}</p>
                   )}
+                  {/*
+                    OLCUMDE BULUNAN (2026-08-31): bu sayfa arac verisinden yalnizca
+                    adi, 3-5 kelimelik aciklamayi ve fiyati gosteriyordu ("Secure
+                    password manager." gibi) -- ve URL Inspection ornekleminde
+                    kategori sayfalarinin indekslenme orani 0/1 idi. Her aracin
+                    incelemesinde 4 elle yazilmis arti duruyor; listede en guclu
+                    olani gostermek, uydurma tek kelime eklemeden kategori
+                    sayfasini gercek bir secim listesine cevirir.
+                  */}
+                  {Array.isArray(t.pros) && t.pros.length > 0 && (
+                    <p className="mt-1 text-sm text-ink-muted">{t.pros[0]}</p>
+                  )}
                   <p className="mt-2 flex flex-wrap items-baseline gap-2">
                     <span className="text-sm font-medium">{d.metin}</span>
                     <span
