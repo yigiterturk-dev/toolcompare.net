@@ -18,6 +18,7 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import toolsData from '@/data/tools.json';
 import { hizFreni, istekKaynagi } from '@/lib/adminAuth';
+import { baglamSec, butceAyir, GUNLUK_TAVAN, YANIT_JETON_TAVANI } from '@/lib/chat-butce';
 
 /**
  * Istemci TEMBEL kuruluyor.
@@ -36,9 +37,16 @@ function openaiAl(): OpenAI {
 /** Kullanici mesajinin ust siniri. Uzun govde = yuksek jeton maliyeti. */
 const MESAJ_SINIRI = 1000;
 
-/** Sistem istemine girecek baglam -- istemciden DEGIL, kendi verimizden. */
-function baglam() {
-  return (toolsData as any[]).map((t) => ({
+/**
+ * Sistem istemine girecek baglam -- istemciden DEGIL, kendi verimizden,
+ * ve ARTIK TAMAMI DEGIL.
+ *
+ * OLCULDU: 512 aracin hepsi ~14.741 jeton ediyordu ve bu HER isteke
+ * bindiriliyordu. Mesaja gore secilen ~40 arac ayni isi ~%93 daha ucuza
+ * yapiyor; uzun secenek listesi zaten daha iyi cevap uretmiyordu.
+ */
+function baglam(mesaj: string) {
+  return baglamSec(toolsData as any[], mesaj).map((t: any) => ({
     name: t.name,
     category: t.category,
     short: t.shortDescription,
@@ -66,10 +74,23 @@ export async function POST(request: Request) {
       );
     }
 
+    /*
+      GUNLUK TOPLAM tavan. IP freni tek kotu niyetliyi yavaslatir ama
+      X-Forwarded-For taklit edilebiliyorsa asilir; bu tavan kaynaktan
+      bagimsiz oldugu icin asilamaz. Fatura ustunde son soz bu.
+    */
+    if (!butceAyir()) {
+      console.warn(`chat: gunluk tavan doldu (${GUNLUK_TAVAN})`);
+      return NextResponse.json(
+        { error: 'The assistant has reached its daily limit. Please try again tomorrow.' },
+        { status: 429 }
+      );
+    }
+
     const systemPrompt = `You are the ToolCompare AI Expert. Your job is to help users find the best SaaS tools from our directory.
 
     Current Database Context:
-    ${JSON.stringify(baglam())}
+    ${JSON.stringify(baglam(message))}
 
     Instructions:
     1. Be professional, friendly, and expert.
@@ -84,6 +105,8 @@ export async function POST(request: Request) {
 
     const completion = await openaiAl().chat.completions.create({
       model: 'gpt-4o-mini',
+      // Cikti da sinirsizdi. Kisa cevap zaten isteniyor (talimat 4).
+      max_tokens: YANIT_JETON_TAVANI,
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: message },
