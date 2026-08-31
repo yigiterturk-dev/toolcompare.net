@@ -19,23 +19,58 @@
 
 import { fiyatDurumu } from "./fiyat.ts";
 
+type Kaynak = { label?: string; supports?: string[] };
+
 type Arac = {
   slug: string;
   incelendi?: boolean;
   verdict?: string;
   longDescription?: string;
-  evidence?: { status?: string };
+  evidence?: { status?: string; sources?: Kaynak[] };
   kriterler?: Record<string, unknown>;
 };
+
+/**
+ * Kaynak gercekten FIYAT iddiasini destekliyor mu?
+ *
+ * `vendor-sourced` kayitlar elle kuratorlu ve otomatik taramadan DAHA
+ * saglam (birden cok kaynak, her kaynagin neyi destekledigi yazili).
+ * Ama hepsi fiyat kaynagi degil: LangChain/Selenium/Drupal kayitlarinin
+ * kaynagi dokumantasyon -- o kayitla fiyat iddia edilemez.
+ *
+ * Kural: en az bir kaynagin basligi veya `supports` maddesi bir fiyat
+ * ifadesi icersin. Temkinli taraf dogru taraf; supheliyi disarida birakir.
+ */
+const FIYAT_IDDIASI =
+  /(\$\s?\d|€\s?\d|£\s?\d|\bpricing\b|\bprice[sd]?\b|per (user|month|seat)|\bmonthly\b|\bfree tier\b|\bfree plan\b)/i;
+
+function fiyatDestekleyenKaynak(t?: Arac): boolean {
+  return (t?.evidence?.sources || []).some((s) =>
+    FIYAT_IDDIASI.test([s.label || "", ...(s.supports || [])].join(" ")),
+  );
+}
 
 /** Insan elinden gecmis: kendi yorumu ve uzun anlatimi var. */
 export function incelenmis(t?: Arac): boolean {
   return t?.incelendi === true && Boolean(t?.verdict);
 }
 
-/** Fiyati saticinin kendi sayfasindan dogrulanmis. */
+/**
+ * Fiyat iddiasi bir kaynaga dayaniyor mu?
+ *
+ * OLCULEN HATA (2026-08-31): kural yalnizca `pricing-page-verified`
+ * kabul ediyordu. Sonuc tersine dondu -- otomatik taramayla dogrulanan
+ * arac kapidan geciyor, ELLE kuratorlu 140 `vendor-sourced` kayit
+ * (daha saglam kanit) eleniyordu. 199 arac "incelenmis + kriterli ama
+ * fiyat kaniti yok" diye disarida kaliyordu; kapiya uygun arac 225'ti.
+ *
+ * Iki yol da kabul edilir, ama `vendor-sourced` icin kaynagin fiyati
+ * gercekten destekledigi aranir.
+ */
 export function fiyatiDogrulanmis(t?: Arac): boolean {
-  return t?.evidence?.status === "pricing-page-verified";
+  const durum = t?.evidence?.status;
+  if (durum === "pricing-page-verified") return true;
+  return durum === "vendor-sourced" && fiyatDestekleyenKaynak(t);
 }
 
 /** Ozellik matrisi dolu: karsilastirma tablosu gercekten bir sey gosterir. */
@@ -84,7 +119,10 @@ export function alternatifIndekslenir(t?: Arac): boolean {
  *
  * Onceki kural "en az bir taraf incelenmis"ti ve 2.345 sayfayi geciriyordu;
  * arac verisinde `incelendi` alani neredeyse her kayitta dolu oldugu icin
- * kapi fiilen aciktir. Bu kural ~364 sayfa gecirir.
+ * kapi fiilen aciktir.
+ *
+ * Kapiya uygun arac 323/512 (fiyat kanitindaki hata duzeltilmeden once
+ * 225'ti). Uretilen sitemap: 600 /compare, 341 /alternatives, 460 /tools.
  */
 export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
   return (

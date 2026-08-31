@@ -10662,7 +10662,24 @@
       "Large webinars are not its strength"
     ],
     "targetAudience": "Teams already on Google Workspace.",
-    "verdict": "Perfectly adequate and already paid for. Only look elsewhere if you need webinars or advanced controls."
+    "verdict": "Perfectly adequate and already paid for. Only look elsewhere if you need webinars or advanced controls.",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-08-31",
+      "sources": [
+        {
+          "label": "Google Meet — Pricing",
+          "url": "https://meet.google.com/unsupported?meetingCode=price&ref=https://meet.google.com/price",
+          "checkedAt": "2026-08-31",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "mattermost",
@@ -14946,7 +14963,24 @@
       "Sync client has a mixed reputation"
     ],
     "targetAudience": "Regulated organisations that need content governance, not just storage.",
-    "verdict": "Buy it for compliance requirements. For plain file sync it is more than you need."
+    "verdict": "Buy it for compliance requirements. For plain file sync it is more than you need.",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-08-31",
+      "sources": [
+        {
+          "label": "Box — Pricing",
+          "url": "https://www.box.com/",
+          "checkedAt": "2026-08-31",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "sync-com",

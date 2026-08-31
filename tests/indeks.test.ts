@@ -48,3 +48,31 @@ test("fiyati ayni ama ozelligi farkli cift indekslenir", () => {
   const b = tam({ slug: "b", kriterler: { api: true, sso: true } });
   assert.equal(ciftIndekslenir(a as never, b as never), true);
 });
+
+test("elle kuratorlu vendor-sourced kayit fiyat kaniti sayilir", () => {
+  const vendor = (sources: unknown[]) =>
+    tam({ evidence: { status: "vendor-sourced", sources } });
+
+  // Kaynak fiyati destekliyor -> gecer.
+  assert.equal(
+    alternatifIndekslenir(
+      vendor([{ label: "OpenAI - Plus", supports: ["$20 monthly Plus price"] }]) as never,
+    ),
+    true,
+  );
+  assert.equal(
+    alternatifIndekslenir(
+      vendor([{ label: "Slack - Pricing", supports: ["plan limits"] }]) as never,
+    ),
+    true,
+  );
+
+  // Kaynak yalnizca dokumantasyon -> fiyat iddia edilemez, elenir.
+  assert.equal(
+    alternatifIndekslenir(
+      vendor([{ label: "Selenium - WebDriver", supports: ["browser automation"] }]) as never,
+    ),
+    false,
+  );
+  assert.equal(alternatifIndekslenir(vendor([]) as never), false);
+});
