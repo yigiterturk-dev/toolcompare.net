@@ -7,13 +7,29 @@
  */
 
 import { NextResponse } from "next/server";
-import { yoneticiMi, yoneticiParolasiTanimliMi, hizFreni, istekKaynagi } from "@/lib/adminAuth";
+import {
+  yoneticiMi,
+  yoneticiParolasiTanimliMi,
+  hizFreni,
+  istekKaynagi,
+  girisDenemesiKaldiMi,
+  basarisizGirisiSay,
+  girisSayaciniSifirla,
+} from "@/lib/adminAuth";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   if (!hizFreni(`giris:${istekKaynagi(request)}`, 10)) {
     return NextResponse.json({ ok: false, error: "Too many attempts" }, { status: 429 });
+  }
+
+  // IP freni sahte X-Forwarded-For ile asilabilir; bu tavan asilamaz.
+  if (!girisDenemesiKaldiMi()) {
+    return NextResponse.json(
+      { ok: false, error: "Too many failed attempts today" },
+      { status: 429 }
+    );
   }
 
   if (!yoneticiParolasiTanimliMi()) {
@@ -25,8 +41,11 @@ export async function POST(request: Request) {
 
   const body = await request.json().catch(() => ({}));
   if (!yoneticiMi(body?.password)) {
+    basarisizGirisiSay();
     return NextResponse.json({ ok: false, error: "Incorrect password" }, { status: 401 });
   }
 
+  // Gercek yonetici girdi: sayac sifirlanir, kendi tavanini yemez.
+  girisSayaciniSifirla();
   return NextResponse.json({ ok: true });
 }

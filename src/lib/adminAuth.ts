@@ -69,3 +69,50 @@ export function istekKaynagi(request: Request): string {
   const xff = request.headers.get("x-forwarded-for");
   return xff ? xff.split(",")[0].trim() : "bilinmiyor";
 }
+
+/*
+  KAYNAKTAN BAGIMSIZ GIRIS TAVANI.
+
+  OLCULDU (2026-08-31): `istekKaynagi` once `x-real-ip` bakiyor, yoksa
+  `x-forwarded-for`a dusuyor -- ve XFF ISTEMCI TARAFINDAN TAKLIT EDILEBILIR.
+  Canli sunucu LiteSpeed; `x-real-ip` gonderdigini disaridan dogrulayamadik.
+  Gondermiyorsa IP basina 10/dk freni hicbir sey yapmiyor: saldirgan her
+  istekte baska bir sahte IP yazip parolayi SINIRSIZ deneyebilir.
+
+  Cozum, /api/chat'te kurulan tavanin aynisi: kaynaktan BAGIMSIZ bir gunluk
+  toplam. Sahte IP bunu asamaz cunku sayac kimin denedigine bakmiyor.
+  Basarili girisde sifirlanir -- yani gercek yonetici kendi tavanini yemez.
+*/
+const GUNLUK_GIRIS_TAVANI = Number(process.env.ADMIN_LOGIN_DAILY_LIMIT ?? 100);
+let girisGunu = "";
+let basarisizGiris = 0;
+
+function bugunTarih(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+/** Bugun kac basarisiz giris denendi. */
+export function basarisizGirisSayisi(): number {
+  return bugunTarih() === girisGunu ? basarisizGiris : 0;
+}
+
+/** Gunluk toplam deneme hakki kaldi mi? */
+export function girisDenemesiKaldiMi(): boolean {
+  return basarisizGirisSayisi() < GUNLUK_GIRIS_TAVANI;
+}
+
+/** Basarisiz denemeyi say. */
+export function basarisizGirisiSay(): void {
+  const g = bugunTarih();
+  if (g !== girisGunu) {
+    girisGunu = g;
+    basarisizGiris = 0;
+  }
+  basarisizGiris += 1;
+}
+
+/** Dogru parola geldi: sayac sifirlanir. */
+export function girisSayaciniSifirla(): void {
+  girisGunu = bugunTarih();
+  basarisizGiris = 0;
+}
