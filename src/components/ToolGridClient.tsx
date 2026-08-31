@@ -150,22 +150,28 @@ function ToolGrid({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?:
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
           {/*
             Logo seridi. Katalogda gercekten NE oldugunu tek bakista
-            gosteriyor -- 512 arac yazmaktan daha ikna edici. Dekoratif,
-            o yuzden aria-hidden ve kaydirma serisi odak tuzagi degil.
+            gosteriyor -- 512 arac yazmaktan daha ikna edici.
+
+            ONCEDEN TIKLANMIYORDU: seride her logo <span> idi ve blok
+            aria-hidden'di, yani "dekoratif" ilan edilmisti. Ama insan
+            bir arac logosu gorunce ona tiklar; ustelik anasayfadan 24
+            arac sayfasina giden bu linkler Google icin de degerli.
+            Artik her logo kendi sayfasina giden bir link.
           */}
-          <div
-            aria-hidden="true"
-            className="flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          >
+          <ul className="flex list-none gap-2 overflow-x-auto p-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {seritAraclari.map((t) => (
-              <span
-                key={t.slug}
-                className="grid size-10 shrink-0 place-items-center rounded-[--radius-control] border border-line bg-surface"
-              >
-                <ToolLogo slug={t.slug} name={t.name} size={22} className="rounded-none bg-transparent" />
-              </span>
+              <li key={t.slug} className="shrink-0">
+                <Link
+                  href={`/tools/${t.slug}`}
+                  aria-label={t.name}
+                  title={t.name}
+                  className="grid size-10 place-items-center rounded-[--radius-control] border border-line bg-surface no-underline transition-colors duration-150 hover:border-line-strong hover:bg-surface-soft"
+                >
+                  <ToolLogo slug={t.slug} name={t.name} size={22} className="rounded-none bg-transparent" />
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
 
           <h1 className="mt-8 max-w-3xl text-3xl leading-tight font-semibold sm:text-5xl">
             {catFilter ? `The best ${catFilter} tools` : "Software pricing you can check yourself"}

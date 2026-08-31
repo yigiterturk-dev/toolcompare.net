@@ -71,10 +71,16 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
     [tools],
   );
 
+  /*
+    ONCEDEN: kategori secilene kadar `sonuclar` bostu ve sag sutunda
+    "Choose a category to see matching tools." yazan kocaman kesikli
+    bir kutu duruyordu -- ekranin yarisi bos, hicbir ise yaramayan bir
+    bosluk. Artik secim yokken TUM kategorilerden en ucuz dogrulanmis
+    araclar listeleniyor; bolum ilk bakista zaten calisir durumda.
+  */
   const sonuclar = useMemo(() => {
-    if (!kategori) return [];
     return tools
-      .filter((t) => t.category === kategori)
+      .filter((t) => !kategori || t.category === kategori)
       .filter((t) => butceyeUyar(t, butce))
       .sort((a, b) => {
         const da = fiyatDurumu(a);
@@ -88,7 +94,7 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
         }
         return a.name.localeCompare(b.name);
       })
-      .slice(0, 6);
+      .slice(0, 9);
   }, [tools, kategori, butce]);
 
   return (
@@ -99,8 +105,14 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
         is scored or ranked by us.
       </p>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
-        <div className="space-y-6">
+      {/*
+        DUZEN DEGISTI: filtreler dar bir sol sutunda dikey yigiliyordu;
+        butce kartlari gereksiz yer kapliyor, sag taraf bos kaliyordu.
+        Artik filtreler tam genislikte tek serit, sonuclar altinda uc
+        sutunlu izgara.
+      */}
+      <div className="mt-8">
+        <div className="flex flex-col gap-5 border-y border-line py-5">
           <fieldset>
             <legend className="text-xs font-medium tracking-wide text-ink-muted uppercase">
               Category
@@ -110,7 +122,20 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
               secenek listesi; klavyeyle gezilebiliyor ve secili olan
               aria-pressed ile bildiriliyor.
             */}
-            <div className="mt-3 flex max-h-64 flex-wrap gap-2 overflow-y-auto">
+            <div className="mt-2 flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={() => setKategori("")}
+                aria-pressed={kategori === ""}
+                data-tap
+                className={`rounded-[--radius-pill] border px-3 py-1.5 text-sm transition-colors duration-150 ${
+                  kategori === ""
+                    ? "border-brand bg-brand text-brand-ink"
+                    : "border-line bg-surface text-ink-soft hover:border-line-strong hover:text-ink"
+                }`}
+              >
+                All
+              </button>
               {kategoriler.map((k) => (
                 <button
                   key={k}
@@ -134,7 +159,7 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
             <legend className="text-xs font-medium tracking-wide text-ink-muted uppercase">
               Budget
             </legend>
-            <div className="mt-3 flex flex-col gap-2">
+            <div className="mt-2 flex flex-wrap gap-2">
               {BUTCELER.map((b) => (
                 <button
                   key={b.deger}
@@ -142,29 +167,25 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
                   onClick={() => setButce(b.deger)}
                   aria-pressed={b.deger === butce}
                   data-tap
-                  className={`rounded-[--radius-control] border px-3 py-2 text-left transition-colors duration-150 ${
+                  title={b.aciklama}
+                  className={`rounded-[--radius-pill] border px-3 py-1.5 text-sm transition-colors duration-150 ${
                     b.deger === butce
-                      ? "border-brand bg-surface"
-                      : "border-line bg-surface hover:border-line-strong"
+                      ? "border-brand bg-brand text-brand-ink"
+                      : "border-line bg-surface text-ink-soft hover:border-line-strong hover:text-ink"
                   }`}
                 >
-                  <span className="block text-sm font-medium">{b.etiket}</span>
-                  <span className="block text-xs text-ink-muted">{b.aciklama}</span>
+                  {b.etiket}
                 </button>
               ))}
             </div>
           </fieldset>
         </div>
 
-        <div>
-          {!kategori ? (
-            <p className="rounded-[--radius-card] border border-dashed border-line p-8 text-sm text-ink-muted">
-              Choose a category to see matching tools.
-            </p>
-          ) : sonuclar.length === 0 ? (
+        <div className="mt-6">
+          {sonuclar.length === 0 ? (
             <div className="rounded-[--radius-card] border border-line bg-surface p-8">
               <p className="font-serif text-lg font-semibold">
-                No {kategori} tool matches that budget.
+                No {kategori || "tool"} matches that budget.
               </p>
               <p className="mt-2 text-sm text-ink-soft">
                 {butce === "under25"
@@ -173,7 +194,7 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
               </p>
             </div>
           ) : (
-            <ul className="grid list-none gap-3 p-0 sm:grid-cols-2">
+            <ul className="grid list-none gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
               {sonuclar.map((t) => {
                 const d = fiyatDurumu(t);
                 return (

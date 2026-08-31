@@ -43,12 +43,29 @@ export function kategoriSlug(ad: string): string {
   return ad.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
-/** "video editing" -> "Video Editing" */
+/**
+ * "video editing" -> "Video Editing"
+ *
+ * KISALTMALAR: duz baslik-yapma "crm" -> "Crm", "ai tools" -> "Ai Tools",
+ * "hr software" -> "Hr Software" uretiyordu ve bunlar sayfada aynen
+ * goruluyordu. Kisaltma bir kelime degildir; buyuk yazilir.
+ */
+const KISALTMALAR: Record<string, string> = {
+  ai: "AI",
+  crm: "CRM",
+  hr: "HR",
+  seo: "SEO",
+  api: "API",
+  it: "IT",
+  ui: "UI",
+  ux: "UX",
+};
+
 function baslikYap(ad: string): string {
   return ad
     .trim()
     .split(/\s+/)
-    .map((k) => k.charAt(0).toUpperCase() + k.slice(1).toLowerCase())
+    .map((k) => KISALTMALAR[k.toLowerCase()] ?? k.charAt(0).toUpperCase() + k.slice(1).toLowerCase())
     .join(" ");
 }
 
