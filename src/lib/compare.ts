@@ -20,7 +20,7 @@
 import toolsData from "@/data/tools.json";
 import { fiyatDurumu } from "@/lib/fiyat";
 import type { KriterKumesi } from "@/lib/kriterler";
-import { ciftIndekslenir } from "@/lib/indeks";
+import { ciftIndekslenir, incelenmis, fiyatiDogrulanmis, kriterliMi } from "@/lib/indeks";
 
 export { kriterAyrimi, ayrimCumlesi } from "@/lib/kriter-ayrimi";
 
@@ -78,7 +78,34 @@ function siraAnahtari(t: Arac): [number, number, string] {
   return [1, 0, t.name];
 }
 
+/**
+ * Aracin kapidan gecebilecek kanit setine sahip olup olmadigi.
+ * (Cift kapisinin arac basina dusen on sarti: incelenmis + fiyati
+ * kaynakli + en az bir bakilmis kriter.)
+ */
+function kanitli(t: Arac): boolean {
+  return incelenmis(t as never) && fiyatiDogrulanmis(t as never) && kriterliMi(t as never);
+}
+
+/**
+ * SIRALAMA: once KANIT, sonra fiyat.
+ *
+ * NEDEN (olcum, 2026-08-31): akran secimi yalnizca fiyata bakiyordu ve
+ * kanit durumunu hic umursamiyordu. Sonuc: 3.138 karsilastirma sayfasi
+ * uretiliyor, yalnizca 623'u (%20) indekslenebiliyordu. Kalan 2.515 sayfa
+ * Google'in tarama butcesini yiyor -- her birini tarayip "noindex" oldugunu
+ * gormesi gerekiyor -- ve bunu sitenin asil sayfalarindan caliyor.
+ *
+ * AKRAN_ADEDI'ni dusurmek yanlis cozumdu: hem cop hem cevher birlikte
+ * azalirdi. Dogrusu ayni akran butcesini kanitli araclara harcamak --
+ * sayfa sayisi ve ic link yogunlugu aynen korunur, nitelikli sayfa orani
+ * artar. Kanitli arac ziyaretci icin de daha iyi bir akran: gercek
+ * verisi olan araci gosteriyoruz.
+ */
 function siralamaKarsilastir(a: Arac, b: Arac): number {
+  const ka = kanitli(a) ? 0 : 1;
+  const kb = kanitli(b) ? 0 : 1;
+  if (ka !== kb) return ka - kb;
   const [ga, fa, na] = siraAnahtari(a);
   const [gb, fb, nb] = siraAnahtari(b);
   if (ga !== gb) return ga - gb;
