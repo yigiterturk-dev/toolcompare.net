@@ -18,6 +18,7 @@
  */
 
 import { fiyatDurumu } from "./fiyat.ts";
+import { talepGormus } from "./talep.ts";
 
 type Kaynak = { label?: string; supports?: string[] };
 
@@ -135,8 +136,23 @@ export function icerikDerin(t?: Arac): boolean {
   return anlatim >= EN_AZ_ANLATIM && ozellik >= EN_AZ_OZELLIK;
 }
 
+/**
+ * Ince icerik kapisinin TEK MUAFIYETI: Google'in zaten gosterdigi sayfa.
+ *
+ * OLCUM (2026-09-02): `icerikDerin` 227 arac sayfasini noindex yapiyordu;
+ * bunlarin 82'si o sirada gosterim aliyordu -- sitenin 700 gosteriminin
+ * 414'u. `pinecone` "pinecone vector" sorgusunda 2. siradaydi ve gizlenmisti.
+ * Karakter sayan bir vekil olcut, Google'in fiilen siraladigi sayfayi
+ * susturamaz; dogru cevap sayfayi gizlemek degil zenginlestirmektir
+ * (`npm run gsc:borc`).
+ *
+ * Muafiyet tek yonludur: talep GORMEK kurtarir, talep GORMEMEK elemez.
+ * Adreslerin %36'si "URL is unknown to Google" -- gosterim yoklugu sayfa
+ * hakkinda bir sey soylemiyor.
+ */
 export function aracIndekslenir(t?: Arac): boolean {
-  return incelenmis(t) && icerikDerin(t);
+  if (!incelenmis(t)) return false;
+  return icerikDerin(t) || talepGormus(t?.slug);
 }
 
 /**

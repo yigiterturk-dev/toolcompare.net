@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   aracIndekslenir,
+  icerikDerin,
   alternatifIndekslenir,
   ciftIndekslenir,
   gercekFarkVar,
@@ -110,4 +111,32 @@ test("bakilmamis kriter (null) fark sayilmaz, dolu da saymaz", () => {
     ),
     false,
   );
+});
+
+/**
+ * Talep muafiyeti TEK YONLU olmali: gösterim almış sayfa kurtarılır,
+ * gösterim almamış sayfa bu yüzden elenmez. İlk tasarım bunu filtre olarak
+ * kurmuştu ve `notion` gibi tanınan ama henüz taranmamış araçları eliyordu.
+ */
+test("talep görmüş ince sayfa noindex'e düşmez", () => {
+  const ince = {
+    slug: "photopea", // ölçümde 42 gösterim, 106 karakter, 0 özellik
+    incelendi: true,
+    verdict: "Tarayıcıda çalışan Photoshop alternatifi.",
+    longDescription: "Kısa açıklama.",
+    keyFeatures: [],
+  };
+  assert.equal(icerikDerin(ince as never), false);
+  assert.equal(aracIndekslenir(ince as never), true);
+});
+
+test("talep görmemek tek başına sayfayı elemez", () => {
+  const derin = {
+    slug: "hic-gosterim-almamis-arac",
+    incelendi: true,
+    verdict: "Değerlendirme.",
+    longDescription: "x".repeat(320),
+    keyFeatures: [{ title: "a" }, { title: "b" }, { title: "c" }],
+  };
+  assert.equal(aracIndekslenir(derin as never), true);
 });
