@@ -8009,7 +8009,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "GitLab bundles source hosting, CI/CD, package registry and issue tracking into one application, and it can be self-hosted on your own servers. That single-application approach is the whole pitch: fewer integrations to maintain, one permission model, one place to look.",
+    "longDescription": "GitLab bundles source hosting, CI/CD, package registry and issue tracking into one application, and it can be self-hosted on your own servers. That single-application approach is the whole pitch: fewer integrations to maintain, one permission model, one place to look. Self-hosting also makes it the default answer where source code cannot leave the organisation. The cost of that breadth is weight — a self-managed instance is real infrastructure to run and upgrade.",
     "pros": [
       "CI/CD is built in rather than bolted on",
       "Can be self-hosted, which matters for regulated teams",
@@ -8038,7 +8038,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "One application",
+        "description": "Repositories, CI/CD, registry, issues and reviews share one permission model."
+      },
+      {
+        "title": "Self-hosting",
+        "description": "Runs on your own infrastructure when source code cannot leave the organisation."
+      },
+      {
+        "title": "Built-in CI/CD",
+        "description": "Pipelines live in the repository with no separate service to connect."
+      },
+      {
+        "title": "Container registry",
+        "description": "Images build and store alongside the code that produced them."
+      }
+    ]
   },
   {
     "slug": "bitbucket",
@@ -8104,7 +8122,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "CircleCI runs build, test and deployment pipelines defined in a YAML file in your repository. It is a focused CI product rather than part of a wider suite, and it shows in configuration flexibility and speed.",
+    "longDescription": "CircleCI runs build, test and deployment pipelines defined in a YAML file in your repository. It is a focused CI product rather than part of a wider suite, and it shows in configuration flexibility and speed. Orbs — reusable configuration packages — cut most standard pipelines down to a few lines, and jobs can be split across parallel containers to shorten long test suites. Billing is by compute credit rather than per user, so cost tracks how much you build rather than team size.",
     "pros": [
       "Fast builds with good caching and parallelism",
       "Docker-first, so local and CI environments match",
@@ -8133,7 +8151,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Orbs",
+        "description": "Reusable configuration packages that replace boilerplate for common deploy targets."
+      },
+      {
+        "title": "Test parallelism",
+        "description": "Splits a test suite across containers, cutting wall-clock time on long runs."
+      },
+      {
+        "title": "SSH into a failed build",
+        "description": "Reproduce a failure inside the actual build container instead of guessing."
+      },
+      {
+        "title": "Credit-based billing",
+        "description": "Cost follows build minutes and machine size rather than headcount."
+      }
+    ]
   },
   {
     "slug": "jenkins",
@@ -8318,7 +8354,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "New Relic is a full observability platform covering application performance, infrastructure, logs and browser monitoring. The pricing model charges per user and per gigabyte of data ingested.",
+    "longDescription": "New Relic is a full observability platform covering application performance, infrastructure, logs and browser monitoring. The pricing model charges per user and per gigabyte of data ingested. Having traces, logs and metrics in one query language is the argument for it: an alert can be followed from a slow endpoint down to the individual database call without switching products. The cost model rewards discipline about what you send, since ingest volume rather than host count drives the bill.",
     "pros": [
       "Broad coverage in one product",
       "Generous free data allowance",
@@ -8347,7 +8383,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Distributed tracing",
+        "description": "Follow one request across services to find where latency is actually spent."
+      },
+      {
+        "title": "Unified query language",
+        "description": "Metrics, logs, traces and events queried together instead of in separate tools."
+      },
+      {
+        "title": "Real user monitoring",
+        "description": "Browser and mobile timings from actual visitors, not synthetic checks."
+      },
+      {
+        "title": "Ingest-based pricing",
+        "description": "Cost follows data volume and seats rather than the number of hosts."
+      }
+    ]
   },
   {
     "slug": "bugsnag",
@@ -8695,7 +8749,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Swagger is the tooling around the OpenAPI specification: describe an API once, then generate documentation, clients and test consoles from it.",
+    "longDescription": "Swagger is the tooling around the OpenAPI specification: describe an API once, then generate documentation, clients and test consoles from it. The value is that the description becomes the single source of truth — documentation cannot drift from the contract, because both are produced from the same file. Swagger UI turns that file into a browsable console where a consumer can call an endpoint before writing any code, and generators produce client libraries in most common languages.",
     "pros": [
       "OpenAPI is the industry standard",
       "Interactive docs from the same spec",
@@ -8707,7 +8761,25 @@
       "Editor experience is dated"
     ],
     "targetAudience": "Teams publishing an API that other people have to consume.",
-    "verdict": "Worth adopting for any public API. The spec only helps if you keep it truthful."
+    "verdict": "Worth adopting for any public API. The spec only helps if you keep it truthful.",
+    "keyFeatures": [
+      {
+        "title": "Interactive documentation",
+        "description": "Swagger UI renders the spec as a console where endpoints can be called directly."
+      },
+      {
+        "title": "Client generation",
+        "description": "Generates client libraries in many languages from the same specification."
+      },
+      {
+        "title": "Design-first workflow",
+        "description": "Agree the contract before implementation, so consumers can build in parallel."
+      },
+      {
+        "title": "OpenAPI standard",
+        "description": "Built on an open specification rather than a proprietary format."
+      }
+    ]
   },
   {
     "slug": "sourcegraph",
@@ -8988,7 +9060,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Procreate is an illustration app for iPad with a one-off purchase price and no subscription, built around Apple Pencil input.",
+    "longDescription": "Procreate is an illustration app for iPad with a one-off purchase price and no subscription, built around Apple Pencil input. Pressure, tilt and the brush engine are the point: the stroke behaves closely enough to physical media that illustrators use it for finished commercial work, not only sketching. The single payment covers all future updates, which over a few years makes it dramatically cheaper than subscription alternatives. It is iPad-only, and there is no desktop version to continue on.",
     "pros": [
       "Bought once, no subscription",
       "Brush engine feels natural with the Pencil",
@@ -9000,7 +9072,25 @@
       "File handling is simpler than desktop apps"
     ],
     "targetAudience": "Illustrators and hobbyists drawing on an iPad.",
-    "verdict": "Exceptional value in a subscription world. If you need vectors or a desktop workflow, it is not the tool."
+    "verdict": "Exceptional value in a subscription world. If you need vectors or a desktop workflow, it is not the tool.",
+    "keyFeatures": [
+      {
+        "title": "Brush engine",
+        "description": "Pressure and tilt response tuned for Apple Pencil, with fully editable custom brushes."
+      },
+      {
+        "title": "One-off purchase",
+        "description": "A single payment including future updates, with no subscription."
+      },
+      {
+        "title": "Time-lapse recording",
+        "description": "Records every session automatically and exports it as a video."
+      },
+      {
+        "title": "Animation Assist",
+        "description": "Frame-by-frame animation with onion skinning built into the same canvas."
+      }
+    ]
   },
   {
     "slug": "affinity-designer",
@@ -9017,7 +9107,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Affinity Designer is vector and raster design software sold as a one-off purchase rather than a subscription.",
+    "longDescription": "Affinity Designer is vector and raster design software sold as a one-off purchase rather than a subscription. The distinguishing feature is switching between vector and pixel work on the same document without exporting: a logo can be drawn as vectors and textured with raster brushes in one file. It handles very large documents smoothly and reads Illustrator and Photoshop files, which makes it a realistic route out of a subscription for designers who own their tools rather than rent them.",
     "pros": [
       "One-off price instead of a monthly fee",
       "Vector and raster in one document",
@@ -9029,7 +9119,25 @@
       "Fewer tutorials and templates"
     ],
     "targetAudience": "Designers who resent subscriptions and do not need Adobe compatibility.",
-    "verdict": "The strongest case against Creative Cloud on price. Check what file formats your clients demand first."
+    "verdict": "The strongest case against Creative Cloud on price. Check what file formats your clients demand first.",
+    "keyFeatures": [
+      {
+        "title": "Vector and raster together",
+        "description": "Switch between vector drawing and pixel brushes in the same document."
+      },
+      {
+        "title": "One-off purchase",
+        "description": "Bought outright per major version instead of rented monthly."
+      },
+      {
+        "title": "Adobe file support",
+        "description": "Opens Illustrator and Photoshop files, easing a move away from a subscription."
+      },
+      {
+        "title": "Artboards",
+        "description": "Many canvases in one document for exporting a set of sizes at once."
+      }
+    ]
   },
   {
     "slug": "removebg",
@@ -9094,7 +9202,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Photopea is a browser-based image editor that opens PSD, XCF and Sketch files without installing anything.",
+    "longDescription": "Photopea is a browser-based image editor that opens PSD, XCF and Sketch files without installing anything. It reproduces a large part of the Photoshop interface — layers, masks, adjustment layers, blend modes and the familiar keyboard shortcuts — so anyone who has used a desktop editor can work immediately. Everything runs locally in the browser tab, which means files are not uploaded to a server, and the free version is funded by a sidebar advert rather than a trial limit.",
     "pros": [
       "Opens PSD files in a browser tab",
       "Free, funded by ads",
@@ -9106,7 +9214,25 @@
       "Not suited to very large files"
     ],
     "targetAudience": "Anyone who needs to open or tweak a layered file on a machine without Photoshop.",
-    "verdict": "Genuinely useful and free. Not a replacement for a desktop editor on daily professional work."
+    "verdict": "Genuinely useful and free. Not a replacement for a desktop editor on daily professional work.",
+    "keyFeatures": [
+      {
+        "title": "PSD and Sketch support",
+        "description": "Opens layered files from Photoshop, GIMP, Sketch and Figma, and exports back to PSD."
+      },
+      {
+        "title": "Runs in the browser",
+        "description": "Nothing is installed and nothing is uploaded — the editor works on the file locally in the tab."
+      },
+      {
+        "title": "Familiar shortcuts",
+        "description": "Layer, mask and selection shortcuts largely match Photoshop, so existing habits carry over."
+      },
+      {
+        "title": "Non-destructive editing",
+        "description": "Adjustment layers, smart objects and layer masks let you revise choices rather than repeat work."
+      }
+    ]
   },
   {
     "slug": "hootsuite",
@@ -10014,7 +10140,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Raycast is a macOS launcher that replaces Spotlight and runs extensions, snippets, clipboard history and scripts from one keyboard shortcut.",
+    "longDescription": "Raycast is a macOS launcher that replaces Spotlight and runs extensions, snippets, clipboard history and scripts from one keyboard shortcut. The extension store is what separates it from a plain launcher: issue trackers, cloud consoles and internal scripts all answer from the same prompt, so routine lookups never require opening the application that owns them. Extensions are written in React and TypeScript, which makes internal tooling straightforward for a development team to add.",
     "pros": [
       "Fast and keyboard-driven",
       "Large extension store",
@@ -10043,7 +10169,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Extension store",
+        "description": "Query issue trackers, cloud consoles and internal services from the same prompt."
+      },
+      {
+        "title": "Clipboard history",
+        "description": "Searchable history of what was copied, including images and links."
+      },
+      {
+        "title": "Snippets",
+        "description": "Expand stored text from short triggers anywhere in the system."
+      },
+      {
+        "title": "Scripts in TypeScript",
+        "description": "Internal commands written in React and TypeScript rather than a bespoke language."
+      }
+    ]
   },
   {
     "slug": "alfred",
@@ -10509,7 +10653,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Smartsheet manages work in a spreadsheet-like grid with automations, dependencies and reporting layered on.",
+    "longDescription": "Smartsheet manages work in a spreadsheet-like grid with automations, dependencies and reporting layered on. The grid is deliberate: teams that already run projects in spreadsheets can move across without learning a new mental model, then gain Gantt views, approval workflows and cross-sheet reporting they could not build in a spreadsheet. It suits operational and portfolio work more than software development, where board-based tools fit the rhythm better.",
     "pros": [
       "Familiar to anyone comfortable in spreadsheets",
       "Handles dependencies and resource views",
@@ -10538,7 +10682,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Grid, Gantt and card views",
+        "description": "The same data shown as a sheet, a timeline or a board without duplicating it."
+      },
+      {
+        "title": "Cross-sheet reporting",
+        "description": "Roll many project sheets into one portfolio view for reporting upward."
+      },
+      {
+        "title": "Automated workflows",
+        "description": "Approval chains, reminders and status updates triggered by field changes."
+      },
+      {
+        "title": "Forms",
+        "description": "Collect structured requests from people who never open the sheet itself."
+      }
+    ]
   },
   {
     "slug": "shortcut",
@@ -10650,7 +10812,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Google Meet runs video meetings in the browser, included with Google Workspace and tightly linked to Calendar.",
+    "longDescription": "Google Meet runs video meetings in the browser, included with Google Workspace and tightly linked to Calendar. There is nothing to install for participants — a link opens in a tab — which removes most of the friction when meeting people outside the organisation. The Calendar integration is the practical advantage: every event carries a join link automatically. Feature depth is modest next to dedicated conferencing products, but for organisations already on Workspace it costs nothing extra.",
     "pros": [
       "No install, joins from a calendar link",
       "Included with Workspace at no extra cost",
@@ -10679,7 +10841,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "No install required",
+        "description": "Participants join from a browser tab, including guests outside the organisation."
+      },
+      {
+        "title": "Calendar integration",
+        "description": "Every Google Calendar event carries a join link without any extra step."
+      },
+      {
+        "title": "Live captions",
+        "description": "Real-time captions and translated captions during the call."
+      },
+      {
+        "title": "Included with Workspace",
+        "description": "No separate licence for organisations already paying for Workspace."
+      }
+    ]
   },
   {
     "slug": "mattermost",
@@ -10697,7 +10877,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Mattermost is team messaging you can run on your own infrastructure, with a Slack-like interface and strong compliance features.",
+    "longDescription": "Mattermost is team messaging you can run on your own infrastructure, with a Slack-like interface and strong compliance features. Self-hosting is the entire point: message history stays on servers you control, which is what makes it viable for defence, healthcare and regulated finance where a hosted chat service is simply not permitted. The interface is close enough to Slack that migration costs little in training, and the source is open, so the deployment cannot be discontinued from outside.",
     "pros": [
       "Fully self-hostable, including in air-gapped environments",
       "Familiar channel-based interface",
@@ -10709,7 +10889,25 @@
       "Mobile apps lag behind commercial rivals"
     ],
     "targetAudience": "Organisations that cannot put internal conversations on a third-party service.",
-    "verdict": "The right call when self-hosting is non-negotiable. Otherwise the convenience gap with hosted chat is wide."
+    "verdict": "The right call when self-hosting is non-negotiable. Otherwise the convenience gap with hosted chat is wide.",
+    "keyFeatures": [
+      {
+        "title": "Self-hosted",
+        "description": "Runs on your own servers or private cloud, with message data never leaving them."
+      },
+      {
+        "title": "Open source",
+        "description": "The server is open source, so a deployment cannot be withdrawn by a vendor."
+      },
+      {
+        "title": "Compliance export",
+        "description": "Legal hold, audit logging and export formats built for regulated environments."
+      },
+      {
+        "title": "Familiar interface",
+        "description": "Channels, threads and integrations close enough to Slack to keep training short."
+      }
+    ]
   },
   {
     "slug": "rocket-chat",
@@ -11636,7 +11834,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Synthesia produces videos of AI presenters speaking a script, in many languages, without filming.",
+    "longDescription": "Synthesia produces videos of AI presenters speaking a script, in many languages, without filming. The practical use is internal material that would otherwise never be made — training modules, product updates, compliance briefings — where a studio shoot cannot be justified and a rewrite means re-recording. Changing a sentence means editing text and regenerating, not booking a camera again. It is weakest where a real presence matters: marketing that depends on a recognisable face.",
     "pros": [
       "No filming or studio needed",
       "Many languages and avatars",
@@ -11665,7 +11863,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Script-to-video",
+        "description": "Paste a script and generate a presenter reading it, with no camera or studio."
+      },
+      {
+        "title": "Multilingual output",
+        "description": "The same script rendered in many languages from one source."
+      },
+      {
+        "title": "Edit and regenerate",
+        "description": "Revising the text regenerates the video, so updates do not mean re-recording."
+      },
+      {
+        "title": "Custom avatars",
+        "description": "Paid tiers can build an avatar from footage of a real presenter."
+      }
+    ]
   },
   {
     "slug": "heygen",
@@ -12854,7 +13070,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Zoho CRM offers a capable sales system at a low price, and sits inside a very large suite of Zoho business apps.",
+    "longDescription": "Zoho CRM offers a capable sales system at a low price, and sits inside a very large suite of Zoho business apps. The suite is the real argument: mail, books, desk, projects and campaigns share one account and one customer record, so a small company can run most of its operations without buying integrations. The trade-off is depth — each individual app is competent rather than best in class, and the interface carries the density that comes with covering that much ground.",
     "pros": [
       "Considerably cheaper than the market leaders",
       "Deep customisation available",
@@ -12883,7 +13099,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Suite integration",
+        "description": "Shares one customer record with Zoho Books, Desk, Campaigns and Projects."
+      },
+      {
+        "title": "Workflow automation",
+        "description": "Rule-based assignment, follow-up and escalation without writing code."
+      },
+      {
+        "title": "Custom modules",
+        "description": "Add object types and fields that match how the business actually sells."
+      },
+      {
+        "title": "Low entry price",
+        "description": "Per-user pricing sits well below the enterprise CRMs it competes with."
+      }
+    ]
   },
   {
     "slug": "close",
@@ -13098,7 +13332,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Sublime Text is a fast native editor known for opening enormous files instantly and staying responsive.",
+    "longDescription": "Sublime Text is a fast native editor known for opening enormous files instantly and staying responsive. It is written in C++ rather than built on a browser runtime, and the difference is obvious on multi-gigabyte logs and very large repositories where Electron-based editors stall. Multiple cursors and the command palette originated here before becoming standard elsewhere. It is licensed as a one-off purchase per major version, with an evaluation that never expires.",
     "pros": [
       "Extremely fast, even on huge files",
       "Multiple cursors and powerful search",
@@ -13110,7 +13344,25 @@
       "Development pace is slow"
     ],
     "targetAudience": "Developers who value raw speed over an integrated environment.",
-    "verdict": "Still unmatched for opening a gigabyte log file. As a daily IDE, it has been overtaken."
+    "verdict": "Still unmatched for opening a gigabyte log file. As a daily IDE, it has been overtaken.",
+    "keyFeatures": [
+      {
+        "title": "Native performance",
+        "description": "Opens very large files and keeps typing responsive where browser-based editors stall."
+      },
+      {
+        "title": "Multiple cursors",
+        "description": "Edit many places at once with column and pattern-based selections."
+      },
+      {
+        "title": "Goto Anything",
+        "description": "Jump to any file, symbol or line from one fuzzy-matched prompt."
+      },
+      {
+        "title": "One-off licence",
+        "description": "Bought per major version rather than as a subscription."
+      }
+    ]
   },
   {
     "slug": "neovim",
@@ -13235,7 +13487,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "DBeaver is a database client that connects to practically every engine, with a free community edition and a paid enterprise version.",
+    "longDescription": "DBeaver is a database client that connects to practically every engine, with a free community edition and a paid enterprise version. One window handles PostgreSQL, MySQL, SQLite, Oracle, SQL Server and, in the paid tier, document and cloud stores — which matters when a single project spans several databases. Because it is a Java desktop application it runs identically on Windows, macOS and Linux, and the community edition is a genuine product rather than a limited trial.",
     "pros": [
       "Connects to almost any database",
       "Free community edition is genuinely capable",
@@ -13247,7 +13499,25 @@
       "Some drivers need manual setup"
     ],
     "targetAudience": "Anyone who works across more than one kind of database.",
-    "verdict": "The tool that covers everything. Single-database users often prefer a lighter native client."
+    "verdict": "The tool that covers everything. Single-database users often prefer a lighter native client.",
+    "keyFeatures": [
+      {
+        "title": "One client for every engine",
+        "description": "Relational, document and cloud databases open in the same interface with the same shortcuts."
+      },
+      {
+        "title": "Visual query builder",
+        "description": "Build and inspect joins graphically, then read the generated SQL."
+      },
+      {
+        "title": "ER diagrams",
+        "description": "Generates entity-relationship diagrams from a live schema, useful for inherited databases."
+      },
+      {
+        "title": "Data transfer",
+        "description": "Moves tables between engines and exports to CSV, JSON or SQL scripts."
+      }
+    ]
   },
   {
     "slug": "tableplus",
@@ -13483,7 +13753,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Clerk provides authentication, user management and session handling as drop-in components, aiming to remove weeks of auth work from a project.",
+    "longDescription": "Clerk provides authentication, user management and session handling as drop-in components, aiming to remove weeks of auth work from a project. What arrives is not only a login box but the parts teams postpone and then regret: organisation and role management, invitations, multi-factor enrolment, session revocation and an admin interface for support staff. The trade-off is the usual one for hosted identity — the user directory lives with the vendor, and per-user pricing scales with growth.",
     "pros": [
       "Prebuilt UI components that look decent by default",
       "Handles sessions, MFA and organisations",
@@ -13512,7 +13782,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Drop-in components",
+        "description": "Sign-in, sign-up and profile UI that ship styled and ready to mount."
+      },
+      {
+        "title": "Organisations and roles",
+        "description": "Multi-tenant membership, invitations and permissions without building them."
+      },
+      {
+        "title": "Session management",
+        "description": "Device list and revocation, so a compromised session can be ended immediately."
+      },
+      {
+        "title": "Multi-factor authentication",
+        "description": "TOTP, SMS and passkey enrolment handled by the service."
+      }
+    ]
   },
   {
     "slug": "auth0",
@@ -13637,7 +13925,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Caddy is a web server that obtains and renews TLS certificates automatically, with a configuration file most people can read.",
+    "longDescription": "Caddy is a web server that obtains and renews TLS certificates automatically, with a configuration file most people can read. Automatic HTTPS is not a module to enable but the default behaviour: point a domain at it and a valid certificate is issued and renewed without a cron job or a separate client. A Caddyfile for a reverse proxy with TLS is a few lines where the equivalent elsewhere runs to dozens, which is why it is a common choice for small deployments and internal services.",
     "pros": [
       "HTTPS configured correctly by default",
       "Configuration is short and legible",
@@ -13649,7 +13937,25 @@
       "Some advanced setups need plugins"
     ],
     "targetAudience": "Anyone who wants a correctly configured HTTPS server without ceremony.",
-    "verdict": "The easiest path to good TLS defaults. nginx still wins on ecosystem and examples."
+    "verdict": "The easiest path to good TLS defaults. nginx still wins on ecosystem and examples.",
+    "keyFeatures": [
+      {
+        "title": "Automatic HTTPS",
+        "description": "Certificates are issued and renewed by default, with no separate ACME client."
+      },
+      {
+        "title": "Readable configuration",
+        "description": "A Caddyfile for TLS and reverse proxy fits in a few lines."
+      },
+      {
+        "title": "Single binary",
+        "description": "Ships as one static binary with no runtime dependencies to install."
+      },
+      {
+        "title": "Admin API",
+        "description": "Configuration can be changed at runtime over an HTTP API without a restart."
+      }
+    ]
   },
   {
     "slug": "pulumi",
@@ -14379,7 +14685,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "SpyFu shows which keywords competitors bid on and rank for, with historical data going back years.",
+    "longDescription": "SpyFu shows which keywords competitors bid on and rank for, with historical data going back years. That archive is the reason to use it: rather than a snapshot of today's rankings, you can see how long a competitor has defended a term, which ad copy they kept running, and which campaigns they abandoned. Coverage is strongest for the US market and thinner elsewhere, and the data is modelled rather than taken from ad accounts, so treat the figures as direction rather than measurement.",
     "pros": [
       "Deep historical ad and keyword data",
       "Inexpensive relative to rivals",
@@ -14408,7 +14714,25 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Competitor keyword history",
+        "description": "Years of ranking and bidding history for a domain, not just the current position."
+      },
+      {
+        "title": "Ad copy archive",
+        "description": "Every paid advert a competitor has run, which shows the messages they kept and dropped."
+      },
+      {
+        "title": "Keyword gap analysis",
+        "description": "Terms competitors rank for and you do not, ranked by opportunity."
+      },
+      {
+        "title": "Unlimited searches",
+        "description": "Plans are not metered per lookup, which suits exploratory research."
+      }
+    ]
   },
   {
     "slug": "buzzsumo",
@@ -16731,7 +17055,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "LangChain is an open-source framework for building model applications and agents through standard model interfaces, tools and integrations. LangGraph provides lower-level orchestration, while the separate LangSmith service covers tracing, evaluation and deployment workflows.",
+    "longDescription": "LangChain is an open-source framework for building model applications and agents through standard model interfaces, tools and integrations. LangGraph provides lower-level orchestration, while the separate LangSmith service covers tracing, evaluation and deployment workflows. Because the abstractions sit above individual providers, swapping the underlying model is a configuration change rather than a rewrite.",
     "pros": [
       "Standard model interface: Switch among supported providers through common abstractions.",
       "Agent loop: create_agent runs model and tool calls until a documented stop condition.",
@@ -16948,7 +17272,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Pinecone is a managed search service for vector and document retrieval. Serverless indexes charge for read units, write units and storage; namespaces partition records and can isolate tenant workloads, while plan-specific quotas constrain indexes, storage, namespaces and backups.",
+    "longDescription": "Pinecone is a managed search service for vector and document retrieval. Serverless indexes charge for read units, write units and storage; namespaces partition records and can isolate tenant workloads, while plan-specific quotas constrain indexes, storage, namespaces and backups. Because the service is managed, there is no index infrastructure to size or operate, which is the main reason teams choose it over running a vector database themselves.",
     "pros": [
       "Managed serverless operation: Compute and storage provisioning is handled by the service.",
       "Namespace partitioning: Queries and writes target one namespace at a time.",
