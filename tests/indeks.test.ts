@@ -16,6 +16,8 @@ const tam = (over: Record<string, unknown> = {}) => ({
   isFlat: true,
   evidence: { status: "pricing-page-verified" },
   kriterler: { api: true, sso: false },
+  longDescription: "x".repeat(300),
+  keyFeatures: ["a", "b", "c"],
   ...over,
 });
 
@@ -23,6 +25,12 @@ test("incelenmemis arac sayfasi indekslenmez", () => {
   assert.equal(aracIndekslenir(tam() as never), true);
   assert.equal(aracIndekslenir(tam({ incelendi: false }) as never), false);
   assert.equal(aracIndekslenir(tam({ verdict: undefined }) as never), false);
+});
+
+test("ince icerikli arac sayfasi indekslenmez (GSC: crawled, not indexed)", () => {
+  assert.equal(aracIndekslenir(tam({ longDescription: "x".repeat(299) }) as never), false);
+  assert.equal(aracIndekslenir(tam({ keyFeatures: ["a", "b"] }) as never), false);
+  assert.equal(aracIndekslenir(tam({ keyFeatures: undefined }) as never), false);
 });
 
 test("alternatif sayfasi fiyat kaniti olmadan indekslenmez", () => {

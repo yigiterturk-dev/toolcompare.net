@@ -117,6 +117,41 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   const incelendi = Boolean(tool.incelendi ?? tool.verdict);
   const karsilastirmalar = akranlar(tool.slug);
+  const fiyat = fiyatDurumu(tool);
+  const ucretsizModel = ["bedava", "ucretsiz", "ucretsiz-katman"].includes(tool.fiyatModeli);
+  const sss: { soru: string; cevap: string }[] = [];
+  if (fiyat.karsilastirilabilir) {
+    sss.push({
+      soru: `How much does ${tool.name} cost?`,
+      cevap: `${tool.name} starts at ${fiyat.metin.replace(/^From /, "")}${tool.isFlat ? " as a flat monthly price" : " per user"}. We verified this against the vendor's pricing page; see "What we checked" below for the date.`,
+    });
+  }
+  if (tool.fiyatModeli) {
+    sss.push({
+      soru: `Does ${tool.name} have a free plan?`,
+      cevap: ucretsizModel
+        ? tool.fiyatModeli === "ucretsiz-katman"
+          ? `Yes. ${tool.name} offers a free tier with limits; paid plans unlock higher usage or team features.`
+          : `Yes. ${tool.name} is free to use at its base level.`
+        : `No free plan is listed on the vendor's pricing page. ${tool.name} is sold ${tool.fiyatModeli === "teklif" ? "on a quote basis" : tool.fiyatModeli === "kullanima-gore" || tool.fiyatModeli === "kullanim-bazli" ? "on usage-based pricing" : "as a paid subscription"}.`,
+    });
+  }
+  if (typeof targetAud === "string" && targetAud.trim()) {
+    sss.push({ soru: `Who is ${tool.name} best for?`, cevap: targetAud.trim() });
+  }
+  if (karsilastirmalar.length >= 2) {
+    const adlar = karsilastirmalar.slice(0, 3).map((a: any) => a.name);
+    sss.push({
+      soru: `What are the closest alternatives to ${tool.name}?`,
+      cevap: `In the same category we track ${adlar.slice(0, -1).join(", ")} and ${adlar[adlar.length - 1]}. Each has its own review page with verified pricing, and the comparison links above show them side by side.`,
+    });
+  }
+  if (Array.isArray(tool.cons) && tool.cons.length) {
+    sss.push({
+      soru: `What are the main drawbacks of ${tool.name}?`,
+      cevap: `The trade-offs we noted: ${tool.cons.slice(0, 3).join("; ")}.`,
+    });
+  }
 
 
   /*
@@ -310,6 +345,27 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                       );
                     })}
                   </ul>
+                </section>
+              )}
+
+              {/*
+                SSS (2026-09-02): GSC'de 42 arac sayfasi "Crawled - currently
+                not indexed" dondu; ortak nokta ince icerik. Bu bolum YALNIZCA
+                elimizdeki dogrulanmis veriden uretilir (fiyat durumu, hedef
+                kitle, ayni kategorideki akranlar). Verisi olmayan soru
+                gosterilmez; uydurma cumle yok.
+              */}
+              {sss.length > 0 && (
+                <section>
+                  <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+                  <dl className="mt-4 space-y-4">
+                    {sss.map((q) => (
+                      <div key={q.soru} className="rounded-[--radius-card] border border-line bg-surface p-4">
+                        <dt className="font-semibold">{q.soru}</dt>
+                        <dd className="mt-1 text-sm text-ink-soft">{q.cevap}</dd>
+                      </div>
+                    ))}
+                  </dl>
                 </section>
               )}
             </div>

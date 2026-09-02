@@ -20,7 +20,7 @@
 import toolsData from "@/data/tools.json";
 import { fiyatDurumu } from "@/lib/fiyat";
 import type { KriterKumesi } from "@/lib/kriterler";
-import { ciftIndekslenir, incelenmis, fiyatiDogrulanmis, kriterliMi } from "@/lib/indeks";
+import { ciftIndekslenir, aracIndekslenir, fiyatiDogrulanmis, kriterliMi } from "@/lib/indeks";
 
 export { kriterAyrimi, ayrimCumlesi } from "@/lib/kriter-ayrimi";
 
@@ -84,7 +84,7 @@ function siraAnahtari(t: Arac): [number, number, string] {
  * kaynakli + en az bir bakilmis kriter.)
  */
 function kanitli(t: Arac): boolean {
-  return incelenmis(t as never) && fiyatiDogrulanmis(t as never) && kriterliMi(t as never);
+  return aracIndekslenir(t as never) && fiyatiDogrulanmis(t as never) && kriterliMi(t as never);
 }
 
 /**

@@ -26,6 +26,7 @@ type Arac = {
   incelendi?: boolean;
   verdict?: string;
   longDescription?: string;
+  keyFeatures?: unknown[];
   evidence?: { status?: string; sources?: Kaynak[] };
   kriterler?: Record<string, unknown>;
 };
@@ -110,8 +111,32 @@ export function gercekFarkVar(a?: Arac, b?: Arac): boolean {
  * Kendi yorumu ve uzun anlatimi olan sayfa zaten benzersizdir; burada
  * fiyat kaniti aramak 217 gercek sayfayi bosuna disarida birakirdi.
  */
+/**
+ * Icerik yeterince DERIN mi?
+ *
+ * GSC OLCUMU (2026-09-02): kapiyi gecen 460 aracin 42'si "Crawled -
+ * currently not indexed" dondu (drizzle, clerk, turso, attio...).
+ * Ortak noktalari: longDescription 94-142 karakter, keyFeatures bos.
+ * Kapiyi gecen 460 aracin 196'sinda aciklama 150 karakterin altinda,
+ * 215'inde ozellik listesi 3'ten kisa. Google bunlara "sadece ad + fiyat"
+ * diyor ve haklı; G2/Capterra'nin yaninda iki cumlelik sayfa indekse
+ * giremiyor.
+ *
+ * Esik: en az 300 karakter anlatim + en az 3 ozellik. Bu esikle 233 arac
+ * kalir; gerisi sayfa olarak yasar (noindex, follow), icerigi
+ * buyutulunce kendiliginden sitemap'e doner.
+ */
+export const EN_AZ_ANLATIM = 300;
+export const EN_AZ_OZELLIK = 3;
+
+export function icerikDerin(t?: Arac): boolean {
+  const anlatim = (t?.longDescription || "").trim().length;
+  const ozellik = Array.isArray(t?.keyFeatures) ? t!.keyFeatures!.length : 0;
+  return anlatim >= EN_AZ_ANLATIM && ozellik >= EN_AZ_OZELLIK;
+}
+
 export function aracIndekslenir(t?: Arac): boolean {
-  return incelenmis(t);
+  return incelenmis(t) && icerikDerin(t);
 }
 
 /**
@@ -120,7 +145,7 @@ export function aracIndekslenir(t?: Arac): boolean {
  * fiyat dogrulanmamissa sayfanin soyleyecek sozu yok.
  */
 export function alternatifIndekslenir(t?: Arac): boolean {
-  return incelenmis(t) && fiyatiDogrulanmis(t);
+  return aracIndekslenir(t) && fiyatiDogrulanmis(t);
 }
 
 /**
