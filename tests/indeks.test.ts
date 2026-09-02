@@ -140,3 +140,25 @@ test("talep görmemek tek başına sayfayı elemez", () => {
   };
   assert.equal(aracIndekslenir(derin as never), true);
 });
+
+/**
+ * Kanıt kaynağı editoryal atıftır: takip edilir. Tek istisna, affiliate
+ * anlaşmamız olan aracın KENDİ alan adına giden kaynak — orası `sponsored`.
+ */
+test("kanıt kaynağı takip edilir", async () => {
+  const { kanitRelHesapla } = await import("../src/lib/kanit-rel.ts");
+  assert.equal(kanitRelHesapla(false, "https://photopea.com", "https://github.com/x/y"), "noopener noreferrer");
+  assert.equal(kanitRelHesapla(true, "https://photopea.com", "https://github.com/x/y"), "noopener noreferrer");
+});
+
+test("affiliate aracın kendi alan adına giden kanıt sponsored olur", async () => {
+  const { kanitRelHesapla } = await import("../src/lib/kanit-rel.ts");
+  assert.equal(
+    kanitRelHesapla(true, "https://photopea.com", "https://www.photopea.com/pricing"),
+    "noopener noreferrer sponsored",
+  );
+  assert.equal(
+    kanitRelHesapla(false, "https://photopea.com", "https://www.photopea.com/pricing"),
+    "noopener noreferrer",
+  );
+});

@@ -12,7 +12,8 @@
  */
 
 import toolsData from "@/data/tools.json";
-import { affiliateKaydi } from "@/lib/affiliate";
+import { affiliateKaydi, paraliMi } from "@/lib/affiliate";
+import { kanitRelHesapla } from "./kanit-rel.ts";
 
 export type OutboundTool = {
   slug: string;
@@ -49,4 +50,9 @@ export function hedefUrl(tool: OutboundTool): string {
 /** Sayfalarin kullandigi ic link. Tik burada olculur. */
 export function gitLinki(slug: string): string {
   return `/go/${slug}`;
+}
+
+/** Kanit kaynagi rel degeri; saf mantik `kanit-rel.ts` icinde. */
+export function kanitRel(slug: string, kaynakUrl: string): string {
+  return kanitRelHesapla(paraliMi(slug), araciBul(slug)?.websiteUrl, kaynakUrl);
 }

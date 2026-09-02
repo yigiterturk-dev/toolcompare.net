@@ -4,7 +4,7 @@ import toolsData from "@/data/tools.json";
 import { kirintiSemasi } from "@/lib/yapilandirilmis";
 import { kategoriSlug } from "@/lib/categories";
 import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
-import { gitLinki } from "@/lib/outbound";
+import { gitLinki, kanitRel } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
@@ -496,7 +496,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                     <a
                       href={source.url}
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
+                      rel={kanitRel(tool.slug, source.url)}
                       className="text-sm text-accent underline underline-offset-4"
                     >
                       {source.label} ↗
