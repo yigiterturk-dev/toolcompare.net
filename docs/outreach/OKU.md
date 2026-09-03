@@ -20,9 +20,14 @@ Bu klasördeki 3 dosya, o işin tamamı.
 Zoho CRM, Netlify…) zaten Google'da gösterim alan sayfalar. Onların linki iki
 kat değerli — hem otorite hem zaten kıpırdayan sayfaya gidiyor.
 
-**`iletisim_dene_*` ve `tahmini_mail` sütunları TAHMİN.** Önce satıcının
-sitesinde /press, /partners, /about, /contact'a bak; gerçek adresi bulunca
-CSV'ye yaz. Tahmini adrese körlemesine gönderme, bounce oranı hesabını yakar.
+**Sütunlar:**
+- `DOGRULANMIS_MAIL` / `DOGRULANMIS_ILETISIM_SAYFASI` — ilk 60 hedefin sitesi
+  tarandı, bunlar **gerçek** (42 satırda dolu). Doğrudan kullan.
+- `tahmini_mail` — sadece doğrulanmış veri yoksa dolu. **TAHMİN.** Körlemesine
+  gönderme; önce siteden teyit et, bounce oranı mail hesabını yakar.
+
+Çoğu SaaS mail değil **form** kullanıyor — `DOGRULANMIS_ILETISIM_SAYFASI`
+doluysa şablonu oraya yapıştır, aynı işi görüyor.
 
 ## Ölçüm — 6 hafta sonra tek kontrol
 
