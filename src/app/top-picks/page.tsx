@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { kumeIcindekiCiftler, alternatifSayfasiOlan } from "@/lib/compare";
 
 export const metadata = {
   title: "The Cheapest Tools We Track (2026) | ToolCompare",
@@ -53,6 +54,13 @@ export default function TopPicksPage() {
     .filter((x) => (x.durum.aylik as number) > 0)
     .sort((a, b) => (a.durum.aylik as number) - (b.durum.aylik as number))
     .slice(0, ADET);
+
+  // Listedeki araclarin GERCEKTEN VAR OLAN karsilastirma ve alternatif
+  // sayfalari. Bu sayfa daha once /tools disinda hicbir yere link
+  // vermiyordu; karsilastirma sayfalari sitede oksuz kaliyordu.
+  const listeSluglari = siralanabilir.map((x) => x.arac.slug);
+  const ciftler = kumeIcindekiCiftler(listeSluglari, 6);
+  const alternatifliler = alternatifSayfasiOlan(listeSluglari).slice(0, 6);
 
   const sema = listeSemasi(
     "The Cheapest Tools We Track (2026)",
@@ -133,6 +141,38 @@ export default function TopPicksPage() {
             </li>
           ))}
         </ol>
+
+        {(ciftler.length > 0 || alternatifliler.length > 0) && (
+          <section className="mt-10 rounded-[--radius-card] border border-line bg-surface p-5">
+            <h2 className="text-lg font-semibold">Cheap is not the whole answer</h2>
+            <p className="mt-2 text-sm text-ink-soft">
+              A low starting price only matters next to what you give up. These pages put the tools
+              above against the ones that do the same job.
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {ciftler.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/compare/${c.slug}`}
+                    className="inline-flex rounded-[--radius-control] border border-line px-3 py-1.5 text-sm no-underline transition-colors duration-150 hover:border-accent"
+                  >
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+              {alternatifliler.map((t) => (
+                <li key={t.slug}>
+                  <Link
+                    href={`/alternatives/${t.slug}`}
+                    className="inline-flex rounded-[--radius-control] border border-line px-3 py-1.5 text-sm no-underline transition-colors duration-150 hover:border-accent"
+                  >
+                    {t.name} alternatives
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <p className="mt-8 text-sm text-ink-soft">
           Looking for a specific kind of tool?{" "}

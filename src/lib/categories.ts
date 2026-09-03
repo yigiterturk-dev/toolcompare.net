@@ -15,8 +15,8 @@
  *    aramalarin inecegi hicbir adres yoktu.
  */
 
-import toolsData from "@/data/tools.json";
-import { fiyatDurumu } from "@/lib/fiyat";
+import toolsData from "../data/tools.json" with { type: "json" };
+import { fiyatDurumu } from "./fiyat.ts";
 
 export type Arac = {
   slug: string;

@@ -17,12 +17,13 @@
  * birlikte artar; ikisi ayrisamaz.
  */
 
-import toolsData from "@/data/tools.json";
-import { fiyatDurumu } from "@/lib/fiyat";
-import type { KriterKumesi } from "@/lib/kriterler";
-import { ciftIndekslenir, aracIndekslenir, fiyatiDogrulanmis, kriterliMi } from "@/lib/indeks";
+import toolsData from "../data/tools.json" with { type: "json" };
+import { fiyatDurumu } from "./fiyat.ts";
+import type { KriterKumesi } from "./kriterler.ts";
+import { ciftIndekslenir, aracIndekslenir, fiyatiDogrulanmis, kriterliMi } from "./indeks.ts";
+import { islevi, ayniIslev } from "./islev.ts";
 
-export { kriterAyrimi, ayrimCumlesi } from "@/lib/kriter-ayrimi";
+export { kriterAyrimi, ayrimCumlesi } from "./kriter-ayrimi.ts";
 
 export type Arac = {
   incelendi?: boolean;
@@ -49,11 +50,6 @@ export const AKRAN_ADEDI = 5;
 
 /** Alternatif sayfasi icin gereken en az akran sayisi. Altinda sayfa uretilmez. */
 export const EN_AZ_ALTERNATIF = 3;
-
-/** Kategori adlari veride tutarsiz yazilmis ("video editing" / "Design"). */
-function kategoriAnahtari(k?: string): string {
-  return (k || "diger").trim().toLowerCase();
-}
 
 /**
  * SIRALAMA OLCUTU: FIYAT.
@@ -131,8 +127,14 @@ export function kanonikSlug(a: string, b: string): string {
 export function akranlar(slug: string, adet: number = AKRAN_ADEDI): Arac[] {
   const arac = araclar.find((t) => t.slug === slug);
   if (!arac) return [];
+  // AKRANLIK OLCUTU: kategori DEGIL, islev. Kategori cok kaba (bkz.
+  // src/lib/islev.ts); "Developer Tools" Redis ile Sentry'yi akran
+  // sayiyordu. Islevi olmayan arac tekildir: akrani yoktur, dolayisiyla
+  // karsilastirma ya da alternatif sayfasi da uretmez.
+  const i = islevi(slug);
+  if (i === null) return [];
   return araclar
-    .filter((t) => t.slug !== slug && kategoriAnahtari(t.category) === kategoriAnahtari(arac.category))
+    .filter((t) => t.slug !== slug && islevi(t.slug) === i)
     .sort(siralamaKarsilastir)
     .slice(0, adet);
 }
@@ -156,8 +158,10 @@ export const alternatifler = akranlar;
  */
 const SECILMIS_CIFTLER: [string, string][] = [
   ["chatgpt", "claude"],
-  ["slack", "discord"],
-  ["notion", "trello"],
+  ["notion", "obsidian"],
+  ["semrush", "ahrefs"],
+  ["figma", "sketch"],
+  ["stripe", "paddle"],
 ];
 
 export function oneCikanCiftler(): { slug: string; label: string }[] {
@@ -166,6 +170,11 @@ export function oneCikanCiftler(): { slug: string; label: string }[] {
     const t1 = araclar.find((t) => t.slug === a);
     const t2 = araclar.find((t) => t.slug === b);
     if (!t1 || !t2) continue; // slug kirilmissa sessizce dus, 404 verme
+    // Elle secilmis cift de otomatik ciftlerle AYNI kapidan gecer: farkli
+    // islevden ya da kaniti eksik bir cifti anasayfadan one cikarmak,
+    // sitemap disinda kalan (ve indekslenmeyen) bir sayfaya link vermektir.
+    if (!ayniIslev(a, b)) continue;
+    if (!ciftIndekslenir(t1, t2)) continue;
     sonuc.push({ slug: kanonikSlug(a, b), label: `${t1.name} vs ${t2.name}` });
   }
   return sonuc;
@@ -231,10 +240,61 @@ export function ciftIndekslenebilirMi(a: Arac | undefined, b: Arac | undefined):
 }
 
 /** Sitemap'e girecek ciftler: iki tarafi da kanitli ve aralarinda gercek fark olanlar. */
+let _sitemapCiftleri: string[] | null = null;
 export function sitemapCiftleri(): string[] {
+  if (_sitemapCiftleri) return _sitemapCiftleri;
   const harita = new Map(araclar.map((t) => [t.slug, t]));
-  return karsilastirmaCiftleri().filter((c) => {
+  _sitemapCiftleri = karsilastirmaCiftleri().filter((c) => {
     const [a, b] = c.split("-vs-");
     return ciftIndekslenir(harita.get(a), harita.get(b));
   });
+  return _sitemapCiftleri;
+}
+
+/**
+ * Verilen arac kumesi ICINDEKI indekslenebilir karsilastirma sayfalari.
+ *
+ * NEDEN (link taramasi, 2026-09-03): kategori ve /top-picks sayfalari
+ * karsilastirma sayfalarina hic link vermiyordu (kategori sayfasi tek bir
+ * cifte veriyordu, o da elle hesaplandigi icin artik var olmayan bir
+ * sayfaya isaret edebiliyordu). 300'den fazla karsilastirma sayfasi
+ * neredeyse yalnizca sitemap'e asiliydi; Google onlari "URL is unknown"
+ * diye geri ceviriyordu. Link vermeyen sayfa "onemli" diyemez.
+ *
+ * Liste HER ZAMAN sitemapCiftleri()'nden suzuluyor -- yani linkledigimiz
+ * her sayfa sitemap'te de var, tersi de dogru.
+ */
+export function kumeIcindekiCiftler(sluglar: string[], adet = 8): { slug: string; label: string }[] {
+  const kume = new Set(sluglar);
+  const ad = new Map(araclar.map((t) => [t.slug, t.name]));
+  return sitemapCiftleri()
+    .filter((c) => {
+      const [a, b] = c.split("-vs-");
+      return kume.has(a) && kume.has(b);
+    })
+    .slice(0, adet)
+    .map((c) => {
+      const [a, b] = c.split("-vs-");
+      return { slug: c, label: `${ad.get(a)} vs ${ad.get(b)}` };
+    });
+}
+
+/**
+ * Bir aracin, KARSILASTIRMA SAYFASI GERCEKTEN INDEKSLENEBILEN akranlari.
+ *
+ * Arac sayfasi butun akranlara link veriyordu; bunlarin bir kisminin
+ * cift sayfasi kanit kapisindan gecmiyor ve noindex donuyor. Noindex bir
+ * sayfaya site ici link vermek Google'a onu tarattirip bos donduruyor --
+ * tarama butcesi bosa gidiyor. Link yalnizca indekslenebilir sayfaya.
+ */
+export function indekslenebilirAkranlar(slug: string, adet: number = AKRAN_ADEDI): Arac[] {
+  const arac = araclar.find((t) => t.slug === slug);
+  if (!arac) return [];
+  return akranlar(slug, adet).filter((t) => ciftIndekslenir(arac, t));
+}
+
+/** Verilen araclardan alternatif sayfasi OLANLAR (link vermek guvenli). */
+export function alternatifSayfasiOlan(sluglar: string[]): Arac[] {
+  const kume = new Set(sluglar);
+  return alternatifSayfasiOlanlar().filter((t) => kume.has(t.slug));
 }

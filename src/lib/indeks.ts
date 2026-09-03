@@ -19,6 +19,7 @@
 
 import { fiyatDurumu } from "./fiyat.ts";
 import { talepGormus } from "./talep.ts";
+import { ayniIslev } from "./islev.ts";
 
 type Kaynak = { label?: string; supports?: string[] };
 
@@ -177,6 +178,12 @@ export function alternatifIndekslenir(t?: Arac): boolean {
  * 225'ti). Uretilen sitemap: 600 /compare, 341 /alternatives, 460 /tools.
  */
 export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
+  // ISLEV KAPISI (bkz. src/lib/islev.ts): iki arac ayni isi gormuyorsa
+  // sayfanin karsilastiracak bir seyi yok. Bu kural sitemap'ten ONCE
+  // sayfanin kendi robots etiketine de uygulanir: eski adreslerden
+  // (ornegin /compare/redis-vs-sentry) gelen Googlebot noindex gormeli,
+  // yoksa sitemap disina cikardigimiz sayfa indekste kalir.
+  if (!a || !b || !ayniIslev(a.slug, b.slug)) return false;
   return (
     incelenmis(a) && incelenmis(b) &&
     fiyatiDogrulanmis(a) && fiyatiDogrulanmis(b) &&

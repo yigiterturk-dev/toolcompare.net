@@ -39,23 +39,34 @@ test("alternatif sayfasi fiyat kaniti olmadan indekslenmez", () => {
   assert.equal(alternatifIndekslenir(tam({ evidence: { status: "unverified" } }) as never), false);
 });
 
+// Cift testlerinde GERCEK slug kullaniliyor: ciftIndekslenir artik islev
+// kapisini de uyguluyor (src/lib/islev.ts) ve uydurma slug'in islevi yok.
+// redis + mongodb ikisi de "database".
 test("karsilastirmada tek tarafin kaniti yetmez", () => {
-  const a = tam({ slug: "a" });
-  const b = tam({ slug: "b", basePrice: 20, evidence: { status: "unverified" } });
+  const a = tam({ slug: "redis" });
+  const b = tam({ slug: "mongodb", basePrice: 20, evidence: { status: "unverified" } });
   assert.equal(ciftIndekslenir(a as never, b as never), false);
 });
 
 test("farki olmayan cift indekslenmez", () => {
-  const a = tam({ slug: "a" });
-  const b = tam({ slug: "b" }); // ayni fiyat, ayni kriterler
+  const a = tam({ slug: "redis" });
+  const b = tam({ slug: "mongodb" }); // ayni fiyat, ayni kriterler
   assert.equal(gercekFarkVar(a as never, b as never), false);
   assert.equal(ciftIndekslenir(a as never, b as never), false);
 });
 
 test("fiyati ayni ama ozelligi farkli cift indekslenir", () => {
-  const a = tam({ slug: "a" });
-  const b = tam({ slug: "b", kriterler: { api: true, sso: true } });
+  const a = tam({ slug: "redis" });
+  const b = tam({ slug: "mongodb", kriterler: { api: true, sso: true } });
   assert.equal(ciftIndekslenir(a as never, b as never), true);
+});
+
+test("farkli islevden cift, kaniti tam olsa bile indekslenmez", () => {
+  // Redis bir veri deposu, Sentry bir hata izleyici. Ikisinin de kaniti
+  // tam ve aralarinda "fark" var -- ama karsilastirilacak bir sey yok.
+  const a = tam({ slug: "redis" });
+  const b = tam({ slug: "sentry", kriterler: { api: true, sso: true } });
+  assert.equal(ciftIndekslenir(a as never, b as never), false);
 });
 
 test("elle kuratorlu vendor-sourced kayit fiyat kaniti sayilir", () => {

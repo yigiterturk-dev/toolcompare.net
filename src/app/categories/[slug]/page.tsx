@@ -16,7 +16,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { kategoriBul, kategoriler, EN_AZ_ARAC } from "@/lib/categories";
-import { kanonikSlug } from "@/lib/compare";
+import { kumeIcindekiCiftler, alternatifSayfasiOlan } from "@/lib/compare";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
@@ -63,7 +63,13 @@ export default async function CategoryPage({ params }: any) {
   const enUcuz = enUcuzArac(kategori.araclar as any);
 
   // Kategori icindeki en guclu iki arac: dogal "X vs Y" merakini karsilar.
-  const [birinci, ikinci] = kategori.araclar;
+  // Bu kategorideki araclar arasindaki GERCEKTEN VAR OLAN karsilastirma
+  // ve alternatif sayfalari. Onceden burada elle hesaplanmis tek bir cift
+  // vardi ("en ucuz iki arac") -- o cift kanit kapisindan gecmiyorsa
+  // sayfa yoktu ve link bosa dusuyordu.
+  const kategoriSluglari = kategori.araclar.map((t: { slug: string }) => t.slug);
+  const ciftler = kumeIcindekiCiftler(kategoriSluglari, 8);
+  const alternatifliler = alternatifSayfasiOlan(kategoriSluglari).slice(0, 8);
 
   const semalar = [
     listeSemasi(`${kategori.ad} Tools in 2026, Compared by Price`, `/categories/${kategori.slug}`, kategori.araclar),
@@ -169,19 +175,46 @@ export default async function CategoryPage({ params }: any) {
           })}
         </ol>
 
-        {birinci && ikinci && (
+        {ciftler.length > 0 && (
           <section className="mt-12 max-w-4xl rounded-[--radius-card] border border-line bg-surface p-5">
-            <h2 className="text-lg font-semibold">Still deciding?</h2>
+            <h2 className="text-lg font-semibold">Head-to-head comparisons</h2>
             <p className="mt-2 text-sm text-ink-soft">
-              The two cheapest tools in this category are {birinci.name} and {ikinci.name}. Put them
-              side by side:
+              Two {kategori.ad.toLowerCase()} tools side by side, on price and on the features we
+              actually checked.
             </p>
-            <Link
-              href={`/compare/${kanonikSlug(birinci.slug, ikinci.slug)}`}
-              className="mt-3 inline-flex rounded-[--radius-control] bg-brand px-4 py-2 text-sm font-medium text-brand-ink no-underline transition-opacity duration-150 hover:opacity-90"
-            >
-              {birinci.name} vs {ikinci.name} →
-            </Link>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {ciftler.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/compare/${c.slug}`}
+                    className="inline-flex rounded-[--radius-control] border border-line px-3 py-1.5 text-sm no-underline transition-colors duration-150 hover:border-accent"
+                  >
+                    {c.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {alternatifliler.length > 0 && (
+          <section className="mt-6 max-w-4xl rounded-[--radius-card] border border-line bg-surface p-5">
+            <h2 className="text-lg font-semibold">Looking to switch?</h2>
+            <p className="mt-2 text-sm text-ink-soft">
+              What each of these costs to replace, with the closest tools that do the same job.
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {alternatifliler.map((t) => (
+                <li key={t.slug}>
+                  <Link
+                    href={`/alternatives/${t.slug}`}
+                    className="inline-flex rounded-[--radius-control] border border-line px-3 py-1.5 text-sm no-underline transition-colors duration-150 hover:border-accent"
+                  >
+                    {t.name} alternatives
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </section>
         )}
       </main>

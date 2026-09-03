@@ -7,7 +7,7 @@ import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki, kanitRel } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
-import { kanonikSlug, akranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { kanonikSlug, indekslenebilirAkranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
@@ -116,7 +116,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   }
 
   const incelendi = Boolean(tool.incelendi ?? tool.verdict);
-  const karsilastirmalar = akranlar(tool.slug);
+  // Metin icinde akranlardan bahsedilebilir; ama LINK verilen liste
+  // yalnizca cift sayfasi indekslenebilenler (bkz. indekslenebilirAkranlar).
+  const karsilastirmalar = indekslenebilirAkranlar(tool.slug);
   const fiyat = fiyatDurumu(tool);
   const ucretsizModel = ["bedava", "ucretsiz", "ucretsiz-katman"].includes(tool.fiyatModeli);
   const sss: { soru: string; cevap: string }[] = [];
