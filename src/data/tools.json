@@ -8074,7 +8074,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Bitbucket is Atlassian's Git hosting service, and its main argument is how tightly it connects to Jira. Commits, branches and pull requests link to issues automatically, which is worth a lot if your team already plans work in Jira.",
+    "longDescription": "Bitbucket is Atlassian's Git hosting service, and its main argument is how tightly it connects to Jira. Commits, branches and pull requests link to issues automatically, which is worth a lot if your team already plans work in Jira. If your team does not live in Jira, that advantage disappears and you are comparing it against larger ecosystems on their own terms. Pipelines are built in, so small teams can host code and run CI without adding a second vendor.",
     "pros": [
       "Deep Jira integration that competitors cannot match",
       "Built-in Pipelines for CI",
@@ -8104,7 +8104,21 @@
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
         "The vendor's pricing URL redirects to atlassian.com."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Jira integration",
+        "description": "Links commits, branches and pull requests to Jira issues automatically."
+      },
+      {
+        "title": "Bitbucket Pipelines",
+        "description": "Runs CI/CD from a YAML file in the repository without a separate service."
+      },
+      {
+        "title": "Branch permissions",
+        "description": "Restricts merges and pushes per branch with required approvals."
+      }
+    ]
   },
   {
     "slug": "circleci",
@@ -8187,7 +8201,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Jenkins is the long-standing open-source automation server. It runs anywhere, does almost anything through plugins, and costs nothing in licence fees; what it costs is maintenance.",
+    "longDescription": "Jenkins is the long-standing open-source automation server. It runs anywhere, does almost anything through plugins, and costs nothing in licence fees; what it costs is maintenance. Choose it when you need to run builds on your own hardware, behind your own network rules, with no per-minute billing. Expect to own upgrades, plugin compatibility and the security of the controller yourself; that maintenance is the real price.",
     "pros": [
       "Free and open source with no usage limits",
       "Enormous plugin ecosystem",
@@ -8199,7 +8213,21 @@
       "Plugin quality varies and updates can break builds"
     ],
     "targetAudience": "Teams with infrastructure skills who need full control or cannot send code to a hosted service.",
-    "verdict": "Still the right answer when control matters more than convenience. For most small teams a hosted CI is less work."
+    "verdict": "Still the right answer when control matters more than convenience. For most small teams a hosted CI is less work.",
+    "keyFeatures": [
+      {
+        "title": "Plugin ecosystem",
+        "description": "Extends builds to almost any tool through a large plugin catalogue."
+      },
+      {
+        "title": "Self-hosted controller",
+        "description": "Runs entirely on your own infrastructure with no per-minute billing."
+      },
+      {
+        "title": "Pipeline as code",
+        "description": "Defines builds in a Jenkinsfile stored alongside the source."
+      }
+    ]
   },
   {
     "slug": "kubernetes",
@@ -8217,7 +8245,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Kubernetes schedules containers across a cluster and keeps them running as declared. It is the industry standard for container orchestration, and also a large amount of complexity to take on.",
+    "longDescription": "Kubernetes schedules containers across a cluster and keeps them running as declared. It is the industry standard for container orchestration, and also a large amount of complexity to take on. It earns its place when you genuinely need rolling deploys, self-healing and horizontal scaling across many services. Below that threshold the cluster itself becomes the work, which is why smaller teams often get further with a managed platform.",
     "pros": [
       "The standard, with the largest ecosystem and hiring pool",
       "Portable across every major cloud",
@@ -8229,7 +8257,21 @@
       "Cost of a managed control plane adds up"
     ],
     "targetAudience": "Teams running many services at scale, or needing cloud portability.",
-    "verdict": "Right when you genuinely have the scale for it. Many teams adopt it far earlier than their problems justify."
+    "verdict": "Right when you genuinely have the scale for it. Many teams adopt it far earlier than their problems justify.",
+    "keyFeatures": [
+      {
+        "title": "Declarative scheduling",
+        "description": "Runs workloads to match a declared desired state and restarts what drifts."
+      },
+      {
+        "title": "Service discovery and load balancing",
+        "description": "Gives workloads stable names and distributes traffic between replicas."
+      },
+      {
+        "title": "Horizontal autoscaling",
+        "description": "Adds or removes replicas based on observed resource metrics."
+      }
+    ]
   },
   {
     "slug": "ansible",
@@ -8277,7 +8319,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Grafana turns metrics, logs and traces into dashboards, and connects to almost any data source. The open-source version is fully capable; the cloud version removes the operational work.",
+    "longDescription": "Grafana turns metrics, logs and traces into dashboards, and connects to almost any data source. The open-source version is fully capable; the cloud version removes the operational work. Its strength is that it does not own your data: it queries Prometheus, Loki, SQL databases and cloud providers where they already live. That also means Grafana alone is not a monitoring system, and you still have to choose and run the stores behind it.",
     "pros": [
       "Connects to dozens of data sources out of the box",
       "Open source and self-hostable",
@@ -8306,7 +8348,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Data-source agnostic",
+        "description": "Queries Prometheus, Loki, SQL and cloud APIs without moving data into Grafana."
+      },
+      {
+        "title": "Alerting",
+        "description": "Evaluates rules against queries and routes notifications to external channels."
+      },
+      {
+        "title": "Dashboard as code",
+        "description": "Stores dashboards as JSON so they can be versioned and provisioned."
+      }
+    ]
   },
   {
     "slug": "prometheus",
@@ -8513,7 +8569,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Neon is serverless Postgres that separates storage from compute, which lets it scale to zero when idle and create instant database branches for previews and tests.",
+    "longDescription": "Neon is serverless Postgres that separates storage from compute, which lets it scale to zero when idle and create instant database branches for previews and tests. Branching is the feature that changes workflows: a pull request can get its own copy of production-shaped data without a restore. The trade-off is cold starts on an idle branch and a hosted-only model, so it is not the choice when the database must stay on your own hardware.",
     "pros": [
       "Real Postgres, not a lookalike",
       "Branching for preview environments",
@@ -8543,7 +8599,21 @@
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
         "The vendor's pricing URL redirects to neon.com."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Storage-compute separation",
+        "description": "Scales compute independently of stored data and suspends it when idle."
+      },
+      {
+        "title": "Database branching",
+        "description": "Creates an instant copy-on-write branch for previews and tests."
+      },
+      {
+        "title": "Postgres compatibility",
+        "description": "Speaks the Postgres wire protocol so existing drivers and tools work."
+      }
+    ]
   },
   {
     "slug": "railway",
@@ -8561,7 +8631,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Railway deploys applications and databases straight from a repository with very little configuration. It targets the gap between a platform that hides everything and a cloud that hides nothing.",
+    "longDescription": "Railway deploys applications and databases straight from a repository with very little configuration. It targets the gap between a platform that hides everything and a cloud that hides nothing. You connect a repository, it detects the stack and provisions the database, which removes most of the setup work of a raw cloud. The trade-off is less control over the underlying infrastructure and usage-based costs that need watching as traffic grows.",
     "pros": [
       "Deploys with almost no configuration",
       "Databases provisioned in a click",
@@ -8590,7 +8660,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Deploy from repository",
+        "description": "Builds and deploys directly from a connected Git repository."
+      },
+      {
+        "title": "Managed databases",
+        "description": "Provisions Postgres, MySQL, Redis and MongoDB alongside the application."
+      },
+      {
+        "title": "Environments",
+        "description": "Creates isolated environments for preview and production from the same project."
+      }
+    ]
   },
   {
     "slug": "render",
@@ -8844,7 +8928,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Elastic builds on Elasticsearch to provide search, log analytics and observability, available self-hosted or as a managed cloud.",
+    "longDescription": "Elastic builds on Elasticsearch to provide search, log analytics and observability, available self-hosted or as a managed cloud. The same engine backs product search, log analytics and security use cases, so one cluster can serve teams that would otherwise buy three tools. The trade-off is operational: index design, shard sizing and retention decide whether the cluster stays affordable.",
     "pros": [
       "Extremely capable search and aggregation",
       "One stack for logs, metrics and search",
@@ -8873,7 +8957,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Full-text search",
+        "description": "Indexes documents for relevance-ranked queries with analyzers and synonyms."
+      },
+      {
+        "title": "Log and metrics analytics",
+        "description": "Ingests operational data and queries it through Kibana dashboards."
+      },
+      {
+        "title": "Self-hosted or managed",
+        "description": "Runs on your own infrastructure or as a managed cloud deployment."
+      }
+    ]
   },
   {
     "slug": "hasura",
@@ -8937,7 +9035,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Sketch is a macOS-only interface design tool that defined the category before browser-based rivals arrived.",
+    "longDescription": "Sketch is a macOS-only interface design tool that defined the category before browser-based rivals arrived. Because it is native to macOS, it stays fast on large files and hooks into system typography and colour, but the whole team has to be on Macs and handoff to developers goes through exports or a plugin rather than a live browser link. That trade-off is the entire decision.",
     "pros": [
       "Fast native performance",
       "Mature plugin ecosystem",
@@ -8966,7 +9064,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "macOS-native editor",
+        "description": "Runs as a desktop app rather than in a browser, which keeps large documents responsive."
+      },
+      {
+        "title": "Symbols and libraries",
+        "description": "Shares components across documents so a change propagates to every place it is used."
+      },
+      {
+        "title": "Plugin ecosystem",
+        "description": "Extends handoff, content generation and export through third-party plugins."
+      }
+    ]
   },
   {
     "slug": "penpot",
@@ -8984,7 +9096,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Penpot is an open-source design and prototyping tool that runs in the browser and can be self-hosted.",
+    "longDescription": "Penpot is an open-source design and prototyping tool that runs in the browser and can be self-hosted. It uses open web standards for its files, so designs are not locked in a proprietary format, and self-hosting keeps client work inside your own network. The trade-off is a smaller plugin and community ecosystem than the commercial incumbents.",
     "pros": [
       "Open source with no seat licence",
       "Self-hostable, so files stay yours",
@@ -9013,7 +9125,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Browser-based editor",
+        "description": "Runs design and prototyping in the browser with no client install."
+      },
+      {
+        "title": "Self-hostable",
+        "description": "Deploys on your own infrastructure so files stay inside your network."
+      },
+      {
+        "title": "Open standards files",
+        "description": "Stores designs in open formats rather than a proprietary container."
+      }
+    ]
   },
   {
     "slug": "blender",
@@ -9031,7 +9157,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Blender does 3D modelling, sculpting, animation, simulation and rendering, and it is free and open source.",
+    "longDescription": "Blender does 3D modelling, sculpting, animation, simulation and rendering, and it is free and open source. Being free and open source means no seat cost and no licence audit, and the release pace is quick. The cost is the learning curve and the fact that studio pipelines built on commercial tools may need bridging work to accept Blender files.",
     "pros": [
       "Free with no licence tier at all",
       "Covers the whole 3D pipeline",
@@ -9043,7 +9169,21 @@
       "Studio pipelines may expect other formats"
     ],
     "targetAudience": "Anyone doing 3D work, from hobby to professional.",
-    "verdict": "Remarkable value: capability that used to cost thousands, at no price. The learning curve is the real cost."
+    "verdict": "Remarkable value: capability that used to cost thousands, at no price. The learning curve is the real cost.",
+    "keyFeatures": [
+      {
+        "title": "Full 3D pipeline",
+        "description": "Covers modelling, sculpting, UV, animation, simulation and rendering in one application."
+      },
+      {
+        "title": "Cycles and EEVEE renderers",
+        "description": "Offers a path tracer for final frames and a real-time engine for previews."
+      },
+      {
+        "title": "Python scripting",
+        "description": "Exposes the application to scripts and add-ons for pipeline automation."
+      }
+    ]
   },
   {
     "slug": "procreate",
@@ -9342,7 +9482,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Sprout Social handles publishing, engagement and reporting for social teams, with a strong emphasis on analytics.",
+    "longDescription": "Sprout Social handles publishing, engagement and reporting for social teams, with a strong emphasis on analytics. Reporting is where it earns the price: cross-network reports are presentable to a client or an executive without rebuilding them in a spreadsheet. For a solo operator who only needs scheduling, that reporting depth is paid-for weight.",
     "pros": [
       "Reporting is genuinely strong",
       "Unified inbox across networks",
@@ -9371,7 +9511,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Cross-network publishing",
+        "description": "Schedules and queues posts across the major social networks from one calendar."
+      },
+      {
+        "title": "Shared social inbox",
+        "description": "Collects mentions and messages from every profile into one queue."
+      },
+      {
+        "title": "Presentation-ready reports",
+        "description": "Builds cross-network performance reports for clients and stakeholders."
+      }
+    ]
   },
   {
     "slug": "moz",
@@ -9435,7 +9589,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Screaming Frog is a desktop crawler that walks your site like a search engine and reports technical problems.",
+    "longDescription": "Screaming Frog is a desktop crawler that walks your site like a search engine and reports technical problems. Running on your own machine means no crawl quota and full control over speed, headers and rendering, which matters on large or access-restricted sites. In exchange, crawl size is limited by your RAM and there is no scheduled monitoring unless you set it up yourself.",
     "pros": [
       "Finds technical issues nothing else catches",
       "One-off annual licence, no per-seat cloud fees",
@@ -9464,7 +9618,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Desktop site crawler",
+        "description": "Crawls a site locally and reports status codes, redirects, titles and canonicals."
+      },
+      {
+        "title": "JavaScript rendering",
+        "description": "Renders pages with a headless browser to crawl client-side content."
+      },
+      {
+        "title": "API integrations",
+        "description": "Pulls Search Console, Analytics and PageSpeed data onto crawled URLs."
+      }
+    ]
   },
   {
     "slug": "brevo",
@@ -9806,7 +9974,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Matomo is web analytics you can self-host, giving you the data without sending it to a third party. It covers most of what mainstream analytics does, with full data ownership.",
+    "longDescription": "Matomo is web analytics you can self-host, giving you the data without sending it to a third party. It covers most of what mainstream analytics does, with full data ownership. Self-hosting means the raw data never leaves your servers, which removes a whole class of consent and data-transfer questions. The price is that you now run and scale an analytics database, and reporting on high-traffic sites needs real hardware.",
     "pros": [
       "You keep the raw data on your own servers",
       "Cookie-free tracking option eases consent requirements",
@@ -9835,7 +10003,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Self-hosted or cloud",
+        "description": "Runs on your own servers or as a managed instance, with the same reporting."
+      },
+      {
+        "title": "Raw data ownership",
+        "description": "Keeps unsampled visit data in a database you control and can query directly."
+      },
+      {
+        "title": "Heatmaps and session recording",
+        "description": "Adds behaviour tools alongside standard traffic reporting."
+      }
+    ]
   },
   {
     "slug": "plausible",
@@ -9975,7 +10157,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Bear is a Markdown note app for Apple devices with tag-based organisation and a focus on writing.",
+    "longDescription": "Bear is a Markdown note app for Apple devices with tag-based organisation and a focus on writing. Tags replace folders, so structure emerges from writing rather than being decided up front, and export to Markdown, HTML or PDF is clean. It is Apple-only, which rules it out the moment part of your work happens on Windows or Android.",
     "pros": [
       "Beautiful, distraction-free writing",
       "Tag organisation instead of folders",
@@ -9987,7 +10169,21 @@
       "Limited collaboration"
     ],
     "targetAudience": "Apple users who write a lot and want the app to disappear.",
-    "verdict": "One of the nicest writing apps anywhere. Cross-platform teams cannot use it."
+    "verdict": "One of the nicest writing apps anywhere. Cross-platform teams cannot use it.",
+    "keyFeatures": [
+      {
+        "title": "Tag-based organisation",
+        "description": "Files notes by inline tags instead of a fixed folder tree."
+      },
+      {
+        "title": "Markdown editing",
+        "description": "Writes in Markdown with formatting rendered in place."
+      },
+      {
+        "title": "Apple-ecosystem sync",
+        "description": "Syncs notes across Mac, iPhone and iPad through iCloud."
+      }
+    ]
   },
   {
     "slug": "craft",
@@ -10005,7 +10201,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Craft is a document and note app with an unusually polished editor, strong exports and clean sharing links.",
+    "longDescription": "Craft is a document and note app with an unusually polished editor, strong exports and clean sharing links. It suits documents meant to be read by someone else: pages export and publish cleanly, and the typography holds up. It is weaker as a knowledge base, since linking and querying across a large collection is not where its design effort went.",
     "pros": [
       "Documents genuinely look good",
       "Excellent export and sharing",
@@ -10034,7 +10230,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Block-based editor",
+        "description": "Builds documents from blocks that can be nested, styled and reordered."
+      },
+      {
+        "title": "Shareable web pages",
+        "description": "Publishes a document as a formatted link without a separate site."
+      },
+      {
+        "title": "Offline-first sync",
+        "description": "Edits locally and syncs across devices when a connection returns."
+      }
+    ]
   },
   {
     "slug": "things",
@@ -10110,7 +10320,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "TickTick combines tasks, habits, a calendar and a Pomodoro timer in one app across every platform.",
+    "longDescription": "TickTick combines tasks, habits, a calendar and a Pomodoro timer in one app across every platform. Putting habits, tasks and a timer in the same app means the day is planned in one place rather than three. The cost is that none of those parts goes as deep as a dedicated tool, which shows if you need real project structure.",
     "pros": [
       "Tasks, habits and calendar together",
       "Works on every platform including web",
@@ -10122,7 +10332,21 @@
       "Calendar view requires premium"
     ],
     "targetAudience": "Individuals who want one app for tasks and habits.",
-    "verdict": "Excellent value for personal productivity. Not a team tool."
+    "verdict": "Excellent value for personal productivity. Not a team tool.",
+    "keyFeatures": [
+      {
+        "title": "Tasks with natural-language input",
+        "description": "Parses dates and repeats from typed text when creating a task."
+      },
+      {
+        "title": "Habit tracking",
+        "description": "Tracks recurring habits and streaks alongside one-off tasks."
+      },
+      {
+        "title": "Calendar view",
+        "description": "Shows tasks and events together, with two-way calendar sync."
+      }
+    ]
   },
   {
     "slug": "raycast",
@@ -10373,7 +10597,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Readwise collects highlights from books, articles and podcasts and resurfaces them daily, syncing to note apps.",
+    "longDescription": "Readwise collects highlights from books, articles and podcasts and resurfaces them daily, syncing to note apps. Its value is retention rather than capture: highlights come back on a schedule instead of sitting in a folder you never reopen. It is a layer on top of other tools, so it is only worth it if you already highlight a lot.",
     "pros": [
       "Brings highlights back instead of burying them",
       "Syncs to Notion, Obsidian and others",
@@ -10402,7 +10626,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Highlight syncing",
+        "description": "Imports highlights from Kindle, articles, podcasts and PDFs automatically."
+      },
+      {
+        "title": "Spaced review",
+        "description": "Resurfaces saved highlights on a schedule for review."
+      },
+      {
+        "title": "Note-app export",
+        "description": "Pushes highlights into Notion, Obsidian and other note tools."
+      }
+    ]
   },
   {
     "slug": "bitwarden",
@@ -10560,7 +10798,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Basecamp organises projects around message boards, to-dos, schedules and chat, with a flat-fee pricing option instead of per-seat billing.",
+    "longDescription": "Basecamp organises projects around message boards, to-dos, schedules and chat, with a flat-fee pricing option instead of per-seat billing. The flat fee is the point: cost stops tracking headcount, which changes the maths for larger teams. In return you accept its opinionated structure, since there are no custom workflows, boards or automation rules to bend it into another shape.",
     "pros": [
       "Flat pricing regardless of headcount",
       "Deliberately simple and calm",
@@ -10589,7 +10827,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Project-scoped tools",
+        "description": "Gives each project its own to-dos, message board, docs and schedule."
+      },
+      {
+        "title": "Flat-fee option",
+        "description": "Offers a plan priced per company rather than per seat."
+      },
+      {
+        "title": "Hill charts",
+        "description": "Reports progress by where work sits between unknown and done."
+      }
+    ]
   },
   {
     "slug": "wrike",
@@ -10607,7 +10859,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Wrike is work management for larger teams, with request forms, approvals, time tracking and resource planning.",
+    "longDescription": "Wrike is work management for larger teams, with request forms, approvals, time tracking and resource planning. It is built for the administrative side of larger teams: intake forms, approval chains and resource planning across departments. That machinery is overhead for a small team, which is the usual reason it loses to lighter tools.",
     "pros": [
       "Handles complex cross-team workflows",
       "Request forms structure incoming work",
@@ -10636,7 +10888,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Request forms",
+        "description": "Routes intake requests into structured tasks with the right fields and owners."
+      },
+      {
+        "title": "Approval workflows",
+        "description": "Requires named reviewers to sign off before work moves on."
+      },
+      {
+        "title": "Resource management",
+        "description": "Plans capacity and workload across people and projects."
+      }
+    ]
   },
   {
     "slug": "smartsheet",
@@ -11019,7 +11285,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Hetzner sells cloud instances and dedicated servers from European data centres at prices well below the large clouds.",
+    "longDescription": "Hetzner sells cloud instances and dedicated servers from European data centres at prices well below the large clouds. The economics are the reason to use it, especially for bandwidth-heavy or always-on workloads where hyperscaler egress dominates the bill. What you give up is breadth: far fewer managed services and regions, so anything beyond compute, storage and networking you build yourself.",
     "pros": [
       "Price per unit of compute is hard to beat",
       "European data residency",
@@ -11031,7 +11297,21 @@
       "Account verification can be strict"
     ],
     "targetAudience": "Teams comfortable managing their own infrastructure who care about cost.",
-    "verdict": "Excellent value if you can run your own stack. If you need managed everything, you will assemble it yourself here."
+    "verdict": "Excellent value if you can run your own stack. If you need managed everything, you will assemble it yourself here.",
+    "keyFeatures": [
+      {
+        "title": "Cloud and dedicated servers",
+        "description": "Offers virtual instances and bare-metal machines from the same account."
+      },
+      {
+        "title": "European data centres",
+        "description": "Hosts in German and Finnish sites, with a US region added later."
+      },
+      {
+        "title": "Generous included traffic",
+        "description": "Bundles substantial outbound traffic instead of billing every gigabyte."
+      }
+    ]
   },
   {
     "slug": "fastly",
@@ -11096,7 +11376,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Bunny.net is a CDN and edge storage service priced considerably below the large providers.",
+    "longDescription": "Bunny.net is a CDN and edge storage service priced considerably below the large providers. It covers the common case well: cache static assets, stream video, store origin files at the edge. It is not trying to be a full edge-compute platform, so if you need heavy programmable logic at the edge the comparison goes the other way.",
     "pros": [
       "Very low cost per gigabyte",
       "Simple pricing and dashboard",
@@ -11125,7 +11405,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Global CDN",
+        "description": "Caches and serves static assets from edge points of presence."
+      },
+      {
+        "title": "Edge storage",
+        "description": "Stores origin files in replicated regions close to the CDN."
+      },
+      {
+        "title": "Video streaming",
+        "description": "Transcodes and delivers video with a hosted player."
+      }
+    ]
   },
   {
     "slug": "woocommerce",
@@ -11190,7 +11484,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Ecwid adds a store to an existing website, working as a widget rather than replacing your site.",
+    "longDescription": "Ecwid adds a store to an existing website, working as a widget rather than replacing your site. It suits a business that already has a site it does not want to rebuild: the catalogue and checkout drop into the existing pages. The limit is that your storefront is only as good as the site hosting it, and deep commerce customisation is not on offer.",
     "pros": [
       "Adds commerce without rebuilding your site",
       "Free tier for a few products",
@@ -11219,7 +11513,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Embeddable storefront",
+        "description": "Adds catalogue and checkout to an existing site without replacing it."
+      },
+      {
+        "title": "Multi-channel selling",
+        "description": "Syncs the same catalogue to marketplaces and social channels."
+      },
+      {
+        "title": "Hosted checkout",
+        "description": "Handles payment, tax and shipping calculation in the embedded cart."
+      }
+    ]
   },
   {
     "slug": "shopware",
@@ -11237,7 +11545,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Shopware is an open-source commerce platform, popular in Europe, offering both self-hosted and cloud options.",
+    "longDescription": "Shopware is an open-source commerce platform, popular in Europe, offering both self-hosted and cloud options. The open-source core means the storefront and checkout can be changed rather than configured around, which suits merchants with unusual catalogue or B2B rules. The cost is that you need developers; there is no version of this that a marketing team runs alone.",
     "pros": [
       "Open source with full code access",
       "Strong B2B commerce features",
@@ -11266,7 +11574,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Open-source core",
+        "description": "Ships source code that can be extended rather than only configured."
+      },
+      {
+        "title": "B2B capabilities",
+        "description": "Supports customer-specific pricing, quotes and account hierarchies."
+      },
+      {
+        "title": "Self-hosted or cloud",
+        "description": "Runs on your own hosting or as a managed cloud plan."
+      }
+    ]
   },
   {
     "slug": "snipcart",
@@ -11284,7 +11606,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Snipcart adds a shopping cart to any website with a few lines of HTML, taking a percentage of sales.",
+    "longDescription": "Snipcart adds a shopping cart to any website with a few lines of HTML, taking a percentage of sales. It fits static and custom-built sites: you keep full control of the front end and add commerce with data attributes. Because it takes a share of sales, the maths turns against it as volume grows, which is when merchants move to a platform with a fixed fee.",
     "pros": [
       "Works with any stack or static site",
       "No platform to migrate onto",
@@ -11313,7 +11635,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "HTML-defined cart",
+        "description": "Turns existing markup into products using data attributes."
+      },
+      {
+        "title": "Framework agnostic",
+        "description": "Works on static sites and custom front ends without a platform migration."
+      },
+      {
+        "title": "Hosted checkout and webhooks",
+        "description": "Processes payment and posts order events to your backend."
+      }
+    ]
   },
   {
     "slug": "chargebee",
@@ -12375,7 +12711,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Crisp provides live chat, a shared inbox and a knowledge base with a low flat price rather than per-seat billing.",
+    "longDescription": "Crisp provides live chat, a shared inbox and a knowledge base with a low flat price rather than per-seat billing. Flat pricing changes who it suits: adding agents does not change the bill, so small support teams can put everyone in the inbox. It is lighter than the enterprise help desks on routing, SLAs and reporting, which is the trade you are making.",
     "pros": [
       "Flat pricing instead of per agent",
       "Chat, inbox and help centre together",
@@ -12404,7 +12740,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Shared inbox",
+        "description": "Collects chat, email and social messages into one team queue."
+      },
+      {
+        "title": "Website live chat",
+        "description": "Embeds a chat widget with triggers and canned replies."
+      },
+      {
+        "title": "Knowledge base",
+        "description": "Publishes help articles and surfaces them inside the chat widget."
+      }
+    ]
   },
   {
     "slug": "tidio",
@@ -12561,7 +12911,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Wave offers free accounting and invoicing for very small businesses, making money on payments and payroll instead.",
+    "longDescription": "Wave offers free accounting and invoicing for very small businesses, making money on payments and payroll instead. For a sole trader or a very small firm the free ledger and invoicing genuinely cover the job. It stops being enough once you need inventory, multi-currency or an accountant working in the file alongside you.",
     "pros": [
       "Accounting and invoicing at no cost",
       "Simple enough to use without training",
@@ -12590,7 +12940,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Double-entry accounting",
+        "description": "Keeps a real ledger with reconciliation rather than a spreadsheet."
+      },
+      {
+        "title": "Invoicing",
+        "description": "Sends invoices and recurring bills with online payment links."
+      },
+      {
+        "title": "Receipt capture",
+        "description": "Scans receipts and files them against expenses."
+      }
+    ]
   },
   {
     "slug": "freshbooks",
@@ -12607,7 +12971,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "FreshBooks handles invoicing, expenses and time tracking for freelancers and small service businesses.",
+    "longDescription": "FreshBooks handles invoicing, expenses and time tracking for freelancers and small service businesses. It is aimed at people who bill for time rather than sell products: tracking hours, turning them into an invoice and chasing payment is the main path through the product. Inventory and complex accounting are where it runs out, and that is when firms move to a full ledger.",
     "pros": [
       "Invoicing is quick and looks professional",
       "Time tracking built in",
@@ -12636,7 +13000,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Invoicing and reminders",
+        "description": "Sends invoices and chases unpaid ones on a schedule automatically."
+      },
+      {
+        "title": "Time tracking",
+        "description": "Records billable hours against a client or project and bills them."
+      },
+      {
+        "title": "Expense capture",
+        "description": "Imports bank transactions and attaches receipts to expenses."
+      }
+    ]
   },
   {
     "slug": "ramp",
@@ -12654,7 +13032,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Ramp issues corporate cards and manages spend, with no subscription fee, making money on interchange instead.",
+    "longDescription": "Ramp issues corporate cards and manages spend, with no subscription fee, making money on interchange instead. Because the revenue comes from interchange, the software has no subscription line, which makes it easy to justify internally. The condition is that spend actually runs through its cards; the value falls away if most of your payments happen elsewhere.",
     "pros": [
       "No software fee",
       "Automated receipt matching and policy controls",
@@ -12683,7 +13061,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Corporate cards with controls",
+        "description": "Issues virtual and physical cards with per-card limits and merchant rules."
+      },
+      {
+        "title": "Automated expense capture",
+        "description": "Matches receipts to transactions and codes them to the ledger."
+      },
+      {
+        "title": "Accounting sync",
+        "description": "Pushes coded transactions into the general ledger automatically."
+      }
+    ]
   },
   {
     "slug": "brex",
@@ -12747,7 +13139,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Deel handles global hiring: contractor agreements, compliance and payroll across many countries, including employer-of-record arrangements.",
+    "longDescription": "Deel handles global hiring: contractor agreements, compliance and payroll across many countries, including employer-of-record arrangements. The reason to use it is that it absorbs the legal entity problem: you can hire in a country where you have no company, and compliance, contracts and local payroll are handled for you. The trade-off is a per-person fee on top of salary and less direct control over the employment relationship.",
     "pros": [
       "Covers a large number of countries",
       "Handles compliance paperwork you would otherwise research",
@@ -12776,7 +13168,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Employer of record",
+        "description": "Employs staff through a local entity on your behalf where you have none."
+      },
+      {
+        "title": "Contractor compliance",
+        "description": "Generates locally compliant contracts and handles classification paperwork."
+      },
+      {
+        "title": "Multi-country payroll",
+        "description": "Runs payroll and payments across many currencies and jurisdictions."
+      }
+    ]
   },
   {
     "slug": "remote-com",
@@ -12839,7 +13245,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Rippling connects HR, payroll, IT device management and app provisioning to one employee record.",
+    "longDescription": "Rippling connects HR, payroll, IT device management and app provisioning to one employee record. The reason to buy it is the single record: hiring someone provisions payroll, accounts and a laptop from the same action, and offboarding revokes all of it. The trade-off is consolidation risk, since replacing one module means unpicking it from the rest.",
     "pros": [
       "One record drives payroll, apps and devices",
       "Onboarding and offboarding genuinely automated",
@@ -12868,7 +13274,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Unified employee record",
+        "description": "Drives payroll, benefits, accounts and devices from one source of truth."
+      },
+      {
+        "title": "App provisioning",
+        "description": "Grants and revokes SaaS accounts as part of onboarding and offboarding."
+      },
+      {
+        "title": "Device management",
+        "description": "Ships, enrols and locks company laptops from the same console."
+      }
+    ]
   },
   {
     "slug": "bamboohr",
@@ -12885,7 +13305,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "BambooHR handles core HR — records, time off, onboarding and reporting — for small and mid-size companies.",
+    "longDescription": "BambooHR handles core HR — records, time off, onboarding and reporting — for small and mid-size companies. It is deliberately core HR rather than a platform: records, time off, onboarding and reporting, done clearly enough that non-specialists can run them. Payroll and deeper functions come from add-ons or integrations, which is where the comparison usually turns.",
     "pros": [
       "Approachable interface non-HR staff can use",
       "Good onboarding workflows",
@@ -12914,7 +13334,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Employee records",
+        "description": "Keeps documents, compensation history and org structure in one profile."
+      },
+      {
+        "title": "Time-off management",
+        "description": "Handles leave policies, requests and approvals with balances."
+      },
+      {
+        "title": "Onboarding workflows",
+        "description": "Runs new-hire paperwork and task checklists before the start date."
+      }
+    ]
   },
   {
     "slug": "docusign",
@@ -12931,7 +13365,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "DocuSign handles electronic signatures and agreement workflows, with audit trails accepted in most jurisdictions.",
+    "longDescription": "DocuSign handles electronic signatures and agreement workflows, with audit trails accepted in most jurisdictions. Its real asset is acceptance: counterparties recognise it, and the audit trail holds up when an agreement is challenged. You pay for that ubiquity, and envelope-based limits mean high-volume senders need to check the plan maths carefully.",
     "pros": [
       "Recognised and trusted by counterparties",
       "Audit trail and identity options",
@@ -12960,7 +13394,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Electronic signatures",
+        "description": "Collects legally recognised signatures with identity and audit records."
+      },
+      {
+        "title": "Templates and routing",
+        "description": "Reuses documents with defined signer order and required fields."
+      },
+      {
+        "title": "Agreement audit trail",
+        "description": "Records every view, sign and change for evidentiary use."
+      }
+    ]
   },
   {
     "slug": "pipedrive",
@@ -12977,7 +13425,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Pipedrive is a sales CRM organised around a visual pipeline, aimed at small sales teams rather than enterprises.",
+    "longDescription": "Pipedrive is a sales CRM organised around a visual pipeline, aimed at small sales teams rather than enterprises. The pipeline view is the product: activities are pushed at reps until a deal moves, which suits teams selling a repeatable thing. It is not built for marketing automation or complex account structures, and stretching it there is the usual failure mode.",
     "pros": [
       "Pipeline view is immediately understandable",
       "Quick to set up",
@@ -13006,7 +13454,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Visual deal pipeline",
+        "description": "Moves deals through stages on a board with per-stage probability."
+      },
+      {
+        "title": "Activity reminders",
+        "description": "Prompts the next call or email so deals do not go quiet."
+      },
+      {
+        "title": "Email sync",
+        "description": "Threads two-way email against the deal and contact record."
+      }
+    ]
   },
   {
     "slug": "salesforce",
@@ -13227,7 +13689,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "folk is a lightweight CRM organised around relationships and contact groups rather than deal pipelines.",
+    "longDescription": "folk is a lightweight CRM organised around relationships and contact groups rather than deal pipelines. It fits agencies, investors and founders whose work is a network of people rather than a funnel of deals. If your team needs forecasting, quotas and stage-weighted pipelines, this is deliberately not that tool.",
     "pros": [
       "Feels like a contact book, not a sales system",
       "Good browser extension for capturing contacts",
@@ -13256,7 +13718,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Contact-centric model",
+        "description": "Organises records around people and groups rather than deal stages."
+      },
+      {
+        "title": "Inbox and LinkedIn capture",
+        "description": "Pulls contacts and conversation history in from mail and social profiles."
+      },
+      {
+        "title": "Shared contact groups",
+        "description": "Lets a team maintain one enriched list instead of separate address books."
+      }
+    ]
   },
   {
     "slug": "vscode",
@@ -13274,7 +13750,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Visual Studio Code is a free editor that became the default for a large share of developers. Its power comes from extensions: language servers, debuggers and linters that turn a light editor into whatever environment you need.",
+    "longDescription": "Visual Studio Code is a free editor that became the default for a large share of developers. Its power comes from extensions: language servers, debuggers and linters that turn a light editor into whatever environment you need. That extension model is also the catch: a heavily extended install slows down, and quality varies by publisher. Remote development containers and SSH sessions are first-class, which is a large part of why it displaced heavier IDEs.",
     "pros": [
       "Free with no paid tier to upsell you",
       "Extension for practically every language and tool",
@@ -13286,7 +13762,21 @@
       "Telemetry in the Microsoft build concerns some teams"
     ],
     "targetAudience": "Almost any developer, from first project to large codebase.",
-    "verdict": "The safe default. If it feels slow, the cause is usually your extensions rather than the editor."
+    "verdict": "The safe default. If it feels slow, the cause is usually your extensions rather than the editor.",
+    "keyFeatures": [
+      {
+        "title": "Extension marketplace",
+        "description": "Adds languages, debuggers and linters from a large extension catalogue."
+      },
+      {
+        "title": "Remote development",
+        "description": "Edits code over SSH, in containers or in WSL as if it were local."
+      },
+      {
+        "title": "Integrated debugging",
+        "description": "Runs and steps through code with breakpoints inside the editor."
+      }
+    ]
   },
   {
     "slug": "jetbrains",
@@ -13380,7 +13870,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Neovim is a modernised Vim: same modal editing, but with an embedded Lua runtime, an async plugin model and a language-server client built in.",
+    "longDescription": "Neovim is a modernised Vim: same modal editing, but with an embedded Lua runtime, an async plugin model and a language-server client built in. It runs in a terminal, starts instantly and is configured entirely in text, which is why it survives on remote servers where a graphical editor cannot go. The cost is that you assemble your own environment; nothing is set up for you.",
     "pros": [
       "Extremely fast, works over SSH",
       "Configurable to an unusual degree",
@@ -13392,7 +13882,21 @@
       "Plugin churn breaks setups periodically"
     ],
     "targetAudience": "Developers who spend time in terminals and want the editor to disappear.",
-    "verdict": "Superb once configured, and configuring it is the cost. Do not adopt it during a deadline."
+    "verdict": "Superb once configured, and configuring it is the cost. Do not adopt it during a deadline.",
+    "keyFeatures": [
+      {
+        "title": "Lua configuration",
+        "description": "Configures the editor and plugins in Lua rather than a bespoke script language."
+      },
+      {
+        "title": "Built-in LSP client",
+        "description": "Talks to language servers for completion, diagnostics and navigation."
+      },
+      {
+        "title": "Terminal-native",
+        "description": "Runs over SSH in any terminal with no graphical session required."
+      }
+    ]
   },
   {
     "slug": "warp",
@@ -13410,7 +13914,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Warp is a terminal that behaves more like an editor: block-based output, a real text input, and AI assistance for commands.",
+    "longDescription": "Warp is a terminal that behaves more like an editor: block-based output, a real text input, and AI assistance for commands. Grouping each command and its output into a block makes long sessions easier to read and share, and the input behaves like a normal text field. In exchange you are running a specific client rather than the shell-agnostic terminal you already know.",
     "pros": [
       "Command editing that does not fight you",
       "Output grouped into blocks you can copy",
@@ -13439,7 +13943,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Block-based output",
+        "description": "Groups each command with its output so results can be navigated and shared."
+      },
+      {
+        "title": "Modern text input",
+        "description": "Edits the command line like a text editor, with selection and cursor movement."
+      },
+      {
+        "title": "Command suggestions",
+        "description": "Suggests and explains commands from history and documentation."
+      }
+    ]
   },
   {
     "slug": "iterm2",
@@ -13457,7 +13975,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "iTerm2 replaces the macOS terminal with split panes, search, profiles and extensive configuration.",
+    "longDescription": "iTerm2 replaces the macOS terminal with split panes, search, profiles and extensive configuration. It is the pragmatic upgrade path on macOS: everything the built-in terminal does, plus panes, search across scrollback and per-project profiles. It is macOS only, so it cannot be the team-wide standard in a mixed fleet.",
     "pros": [
       "Free and mature",
       "Split panes and session restore",
@@ -13469,7 +13987,21 @@
       "Interface is functional rather than modern"
     ],
     "targetAudience": "Mac users who spend real time in a terminal.",
-    "verdict": "The long-standing default on macOS, and still free. Newer terminals win on polish, not capability."
+    "verdict": "The long-standing default on macOS, and still free. Newer terminals win on polish, not capability.",
+    "keyFeatures": [
+      {
+        "title": "Split panes",
+        "description": "Divides a window into independent terminal sessions."
+      },
+      {
+        "title": "Searchable scrollback",
+        "description": "Searches and annotates previous output within a session."
+      },
+      {
+        "title": "Profiles",
+        "description": "Stores per-project shells, colours and startup commands."
+      }
+    ]
   },
   {
     "slug": "dbeaver",
@@ -13629,7 +14161,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Drizzle is a TypeScript ORM that stays close to SQL: queries look like SQL, types come from your schema, and there is no heavy runtime.",
+    "longDescription": "Drizzle is a TypeScript ORM that stays close to SQL: queries look like SQL, types come from your schema, and there is no heavy runtime. The trade-off is deliberate: you keep SQL in your head and get type safety on top, rather than learning a query abstraction that hides the database. Teams that want an ORM to make schema decisions for them usually pick something heavier.",
     "pros": [
       "Very light runtime, good for edge functions",
       "SQL-like syntax with full type safety",
@@ -13641,7 +14173,21 @@
       "Smaller community and fewer examples"
     ],
     "targetAudience": "TypeScript teams that want types without hiding the database.",
-    "verdict": "The right choice if you like SQL and want the compiler to check it. Teams wanting abstraction prefer Prisma."
+    "verdict": "The right choice if you like SQL and want the compiler to check it. Teams wanting abstraction prefer Prisma.",
+    "keyFeatures": [
+      {
+        "title": "SQL-like query builder",
+        "description": "Writes queries that map closely onto the SQL they generate."
+      },
+      {
+        "title": "Typed schema",
+        "description": "Derives TypeScript types from the schema definition without code generation steps."
+      },
+      {
+        "title": "Lightweight runtime",
+        "description": "Adds little to bundle size, which suits serverless and edge runtimes."
+      }
+    ]
   },
   {
     "slug": "turso",
@@ -13659,7 +14205,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Turso runs SQLite at the edge, letting you place database replicas close to users and create a database per tenant cheaply.",
+    "longDescription": "Turso runs SQLite at the edge, letting you place database replicas close to users and create a database per tenant cheaply. A database per tenant becomes realistic here, because creating one is cheap rather than a provisioning project. The constraint is SQLite's model: writes go to a primary, so write-heavy or highly relational workloads are a poor fit.",
     "pros": [
       "Very low latency reads at the edge",
       "Database-per-tenant is affordable",
@@ -13688,7 +14234,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Edge replicas",
+        "description": "Places read replicas near users to cut query latency."
+      },
+      {
+        "title": "Database per tenant",
+        "description": "Creates many small isolated databases instead of one shared schema."
+      },
+      {
+        "title": "SQLite compatibility",
+        "description": "Uses libSQL so existing SQLite tooling and queries apply."
+      }
+    ]
   },
   {
     "slug": "upstash",
@@ -13818,7 +14378,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Auth0 is a mature identity platform covering login, social providers, enterprise SSO and fine-grained authorisation, now part of Okta.",
+    "longDescription": "Auth0 is a mature identity platform covering login, social providers, enterprise SSO and fine-grained authorisation, now part of Okta. It covers the awkward parts most teams underestimate: enterprise SSO connections, MFA policy and tenant-level rules. The cost profile is the usual objection, since monthly active users climb faster than expected once consumer signup is open.",
     "pros": [
       "Handles enterprise SSO requirements that block deals",
       "Extensive protocol and standards support",
@@ -13847,7 +14407,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Social and enterprise connections",
+        "description": "Federates logins from social providers and customer SAML or OIDC identity providers."
+      },
+      {
+        "title": "Rules and actions",
+        "description": "Runs custom logic during login to shape tokens and enforce policy."
+      },
+      {
+        "title": "MFA and anomaly detection",
+        "description": "Adds step-up factors and blocks credential-stuffing attempts."
+      }
+    ]
   },
   {
     "slug": "keycloak",
@@ -13865,7 +14439,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Keycloak is open-source identity and access management supporting OIDC and SAML, run on your own infrastructure.",
+    "longDescription": "Keycloak is open-source identity and access management supporting OIDC and SAML, run on your own infrastructure. Running it yourself means user data and session policy stay inside your infrastructure, which is often the deciding factor in regulated environments. The price is that authentication becomes something your team operates, upgrades and keeps available.",
     "pros": [
       "Full identity server at no licence cost",
       "Standards support including SAML and OIDC",
@@ -13877,7 +14451,21 @@
       "Upgrades need care"
     ],
     "targetAudience": "Organisations that need enterprise identity without a per-user bill.",
-    "verdict": "The serious open-source answer to Auth0. Budget for the operations, because the licence saving is not free."
+    "verdict": "The serious open-source answer to Auth0. Budget for the operations, because the licence saving is not free.",
+    "keyFeatures": [
+      {
+        "title": "OIDC and SAML",
+        "description": "Acts as an identity provider for both protocols and brokers external ones."
+      },
+      {
+        "title": "Realms and roles",
+        "description": "Separates tenants into realms with their own users, clients and role mappings."
+      },
+      {
+        "title": "Self-hosted",
+        "description": "Runs on your own infrastructure so credentials never leave it."
+      }
+    ]
   },
   {
     "slug": "nginx",
@@ -13895,7 +14483,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "NGINX serves web content, terminates TLS and proxies traffic, and has been the workhorse of the internet for years.",
+    "longDescription": "NGINX serves web content, terminates TLS and proxies traffic, and has been the workhorse of the internet for years. It is chosen for predictable behaviour under load and a configuration language that does exactly what it says, which is why it sits in front of so many applications. Configuration is a file you maintain, not a dashboard, and that is the trade.",
     "pros": [
       "Extremely well tested at scale",
       "Efficient with memory and connections",
@@ -13907,7 +14495,21 @@
       "Dynamic modules require care"
     ],
     "targetAudience": "Anyone running a web server or reverse proxy.",
-    "verdict": "Still the default for good reason. Newer servers beat it on convenience, not on track record."
+    "verdict": "Still the default for good reason. Newer servers beat it on convenience, not on track record.",
+    "keyFeatures": [
+      {
+        "title": "Reverse proxy",
+        "description": "Terminates connections and forwards traffic to application servers."
+      },
+      {
+        "title": "TLS termination",
+        "description": "Handles certificates and TLS so application servers do not have to."
+      },
+      {
+        "title": "Static file serving",
+        "description": "Serves files and caches upstream responses with low memory overhead."
+      }
+    ]
   },
   {
     "slug": "caddy",
@@ -13973,7 +14575,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Pulumi defines infrastructure in real programming languages, so you get loops, functions and type checking instead of a template dialect.",
+    "longDescription": "Pulumi defines infrastructure in real programming languages, so you get loops, functions and type checking instead of a template dialect. Real languages mean real abstractions: shared modules, unit tests and type checking against your cloud resources. The counter-argument is that infrastructure becomes a program, and a program can be over-engineered in ways a template cannot.",
     "pros": [
       "Real languages with real tooling",
       "Type checking catches mistakes before deploy",
@@ -14002,7 +14604,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "General-purpose languages",
+        "description": "Defines resources in TypeScript, Python, Go or C# instead of a template dialect."
+      },
+      {
+        "title": "Managed state",
+        "description": "Tracks resource state in a hosted or self-managed backend with locking."
+      },
+      {
+        "title": "Multi-cloud providers",
+        "description": "Uses one workflow across major cloud and SaaS providers."
+      }
+    ]
   },
   {
     "slug": "betterstack",
@@ -14113,7 +14729,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "LaunchDarkly manages feature flags so code can ship dark and be turned on progressively for chosen segments.",
+    "longDescription": "LaunchDarkly manages feature flags so code can ship dark and be turned on progressively for chosen segments. Separating deploy from release is the point: code ships to production off, then opens to a segment, and rolls back without a redeploy. The overhead is flag debt, since flags that are never cleaned up become permanent branches in the code.",
     "pros": [
       "Mature flag management with targeting rules",
       "Progressive rollout and instant kill switch",
@@ -14142,7 +14758,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Targeted rollouts",
+        "description": "Enables a flag for chosen users, segments or percentages."
+      },
+      {
+        "title": "Kill switches",
+        "description": "Turns a feature off in production without shipping a new build."
+      },
+      {
+        "title": "Experimentation",
+        "description": "Measures metrics between flag variations to compare outcomes."
+      }
+    ]
   },
   {
     "slug": "codecov",
@@ -14207,7 +14837,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Snyk scans code, dependencies, containers and infrastructure definitions for known vulnerabilities, and integrates into pull requests so problems surface before merge.",
+    "longDescription": "Snyk scans code, dependencies, containers and infrastructure definitions for known vulnerabilities, and integrates into pull requests so problems surface before merge. Catching a vulnerable dependency in the pull request is much cheaper than finding it in production, and the fix advice is usually a version bump it can open for you. The known cost is noise: without tuning, low-severity findings can drown the ones that matter.",
     "pros": [
       "Catches vulnerable dependencies early in the workflow",
       "Covers code, containers and IaC in one tool",
@@ -14236,7 +14866,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Dependency scanning",
+        "description": "Flags known vulnerabilities in direct and transitive dependencies."
+      },
+      {
+        "title": "Pull-request checks",
+        "description": "Blocks or comments on merges that introduce known issues."
+      },
+      {
+        "title": "Container and IaC scanning",
+        "description": "Checks images and infrastructure definitions for misconfiguration."
+      }
+    ]
   },
   {
     "slug": "sonarqube",
@@ -14284,7 +14928,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Dribbble is a portfolio community where designers post work and clients browse for talent.",
+    "longDescription": "Dribbble is a portfolio community where designers post work and clients browse for talent. It works as a shop window rather than a full portfolio: work is shown as small, polished shots, which favours visual craft over case studies and process. Hiring through it skews toward visual design roles for that reason.",
     "pros": [
       "Large audience of designers and hirers",
       "Good for discovering visual direction",
@@ -14296,7 +14940,21 @@
       "Paid tiers needed for real exposure"
     ],
     "targetAudience": "Designers building visibility and clients looking for a style.",
-    "verdict": "Useful for inspiration and hiring leads. A shot is not evidence that someone can ship product."
+    "verdict": "Useful for inspiration and hiring leads. A shot is not evidence that someone can ship product.",
+    "keyFeatures": [
+      {
+        "title": "Shot-based portfolios",
+        "description": "Presents work as small image posts rather than long case studies."
+      },
+      {
+        "title": "Designer search",
+        "description": "Lets clients filter designers by skill, location and availability."
+      },
+      {
+        "title": "Job board",
+        "description": "Posts design roles to the community audience."
+      }
+    ]
   },
   {
     "slug": "behance",
@@ -14500,7 +15158,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "ClickFunnels builds sales funnels — landing pages, upsells and checkout — as one connected flow.",
+    "longDescription": "ClickFunnels builds sales funnels — landing pages, upsells and checkout — as one connected flow. It is opinionated about the shape of a sale: pages, order bumps and upsells are one flow rather than parts you assemble. That makes it fast for a direct-response offer and a poor fit for a normal marketing site, where a website builder does more for less.",
     "pros": [
       "Funnel flow is the core concept, not an add-on",
       "Templates for common offers",
@@ -14529,7 +15187,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Funnel builder",
+        "description": "Chains landing pages, checkout and upsells into one measured flow."
+      },
+      {
+        "title": "Order bumps and upsells",
+        "description": "Adds one-click offers at and after checkout."
+      },
+      {
+        "title": "Built-in checkout",
+        "description": "Takes payment without wiring up a separate commerce platform."
+      }
+    ]
   },
   {
     "slug": "leadpages",
@@ -14639,7 +15311,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Similarweb estimates website traffic, referral sources and audience overlap for any domain.",
+    "longDescription": "Similarweb estimates website traffic, referral sources and audience overlap for any domain. It is one of the few ways to size a competitor you have no access to, which is why it is used in market research and pitch work. Everything it reports is an estimate from panel and clickstream modelling, so treat the direction and the ratios as the signal, not the absolute numbers.",
     "pros": [
       "Competitive traffic estimates in one place",
       "Channel breakdown and referrers",
@@ -14668,7 +15340,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Traffic estimates",
+        "description": "Models visits, engagement and growth for domains you do not own."
+      },
+      {
+        "title": "Traffic sources",
+        "description": "Splits estimated traffic across search, referral, social and direct."
+      },
+      {
+        "title": "Audience overlap",
+        "description": "Shows which other sites a domain's visitors also use."
+      }
+    ]
   },
   {
     "slug": "spyfu",
@@ -15011,7 +15697,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Resend is a transactional email API aimed at developers, with a clean SDK and React-based email templates.",
+    "longDescription": "Resend is a transactional email API aimed at developers, with a clean SDK and React-based email templates. It is built for the case where email is part of the product: sending is an API call, and templates are components rather than a drag-and-drop editor. That makes it a poor fit for marketing teams who need to compose campaigns without a developer.",
     "pros": [
       "Simple API and good developer experience",
       "React Email templates keep markup maintainable",
@@ -15040,7 +15726,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Developer-first API",
+        "description": "Sends mail through a small API with official SDKs for common runtimes."
+      },
+      {
+        "title": "React email templates",
+        "description": "Builds message templates as components instead of HTML tables."
+      },
+      {
+        "title": "Domain authentication",
+        "description": "Guides SPF, DKIM and DMARC setup for the sending domain."
+      }
+    ]
   },
   {
     "slug": "postmark",
@@ -15058,7 +15758,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Postmark focuses narrowly on transactional email and is known for delivery speed and inbox placement, keeping marketing mail on separate infrastructure.",
+    "longDescription": "Postmark focuses narrowly on transactional email and is known for delivery speed and inbox placement, keeping marketing mail on separate infrastructure. Keeping transactional and bulk mail on separate infrastructure is the reason deliverability holds up, and it is also the constraint: this is not where you send campaigns. Message streams make that separation explicit rather than optional.",
     "pros": [
       "Reputation for reliable inbox delivery",
       "Separate streams for transactional and broadcast",
@@ -15087,7 +15787,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Separate message streams",
+        "description": "Keeps transactional and broadcast mail on distinct sending reputations."
+      },
+      {
+        "title": "Delivery analytics",
+        "description": "Reports bounces, opens and time-to-inbox per message."
+      },
+      {
+        "title": "Inbound parsing",
+        "description": "Turns replies into structured webhooks for the application to process."
+      }
+    ]
   },
   {
     "slug": "sendgrid",
@@ -15322,7 +16036,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Sync.com stores files with end-to-end encryption, so the provider cannot read your content.",
+    "longDescription": "Sync.com stores files with end-to-end encryption, so the provider cannot read your content. End-to-end encryption means a subpoena to the provider does not produce your files, which is why it appears in regulated and legal workflows. The cost is convenience: no server-side search or preview, and losing your password can mean losing access.",
     "pros": [
       "Zero-knowledge encryption by default",
       "Canadian jurisdiction and privacy focus",
@@ -15351,7 +16065,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "End-to-end encryption",
+        "description": "Encrypts files client-side so the provider cannot read them."
+      },
+      {
+        "title": "Zero-knowledge sharing",
+        "description": "Shares links with passwords and expiry without exposing keys to the server."
+      },
+      {
+        "title": "Version history",
+        "description": "Restores previous file versions and deleted items."
+      }
+    ]
   },
   {
     "slug": "keeper",
@@ -15789,7 +16517,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Logseq is an open-source outliner that stores notes as plain Markdown files on your own disk, with bidirectional links and daily notes.",
+    "longDescription": "Logseq is an open-source outliner that stores notes as plain Markdown files on your own disk, with bidirectional links and daily notes. Files stay on disk as Markdown, so the notes outlive the app and can be versioned in Git. The trade-off is that sync and mobile polish lag behind hosted competitors, because nothing is stored on a vendor's server by default.",
     "pros": [
       "Your notes stay as local Markdown files",
       "Open source, no vendor to depend on",
@@ -15801,7 +16529,21 @@
       "Performance drops on very large graphs"
     ],
     "targetAudience": "People who want linked notes without handing their data to a service.",
-    "verdict": "The strongest option if file ownership matters. Expect to solve sync yourself."
+    "verdict": "The strongest option if file ownership matters. Expect to solve sync yourself.",
+    "keyFeatures": [
+      {
+        "title": "Local Markdown files",
+        "description": "Stores every page as a plain file you own on disk."
+      },
+      {
+        "title": "Outliner with block references",
+        "description": "Links and embeds individual blocks, not just pages."
+      },
+      {
+        "title": "Daily notes and queries",
+        "description": "Captures into a dated page and pulls items back with queries."
+      }
+    ]
   },
   {
     "slug": "productboard",
@@ -15911,7 +16653,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Plane is open-source project management with issues, cycles and modules, available self-hosted or cloud.",
+    "longDescription": "Plane is open-source project management with issues, cycles and modules, available self-hosted or cloud. Self-hosting puts issue history and roadmaps inside your own network, which is the deciding factor for teams that cannot use a hosted tracker. Being younger than the incumbents, it has fewer integrations, and that is the gap to weigh.",
     "pros": [
       "Open source and self-hostable",
       "Familiar issue and cycle model",
@@ -15940,7 +16682,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Issues, cycles and modules",
+        "description": "Organises work into sprints and larger delivery modules."
+      },
+      {
+        "title": "Self-hosted option",
+        "description": "Runs on your own infrastructure with the same feature set as cloud."
+      },
+      {
+        "title": "Open-source codebase",
+        "description": "Allows inspection and modification rather than only configuration."
+      }
+    ]
   },
   {
     "slug": "youtrack",
@@ -16016,7 +16772,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Dialpad provides business phone, messaging and meetings with live transcription and call coaching built in.",
+    "longDescription": "Dialpad provides business phone, messaging and meetings with live transcription and call coaching built in. Transcription is not an add-on here: calls are searchable afterwards and coaching notes attach to real moments in the conversation. If you only need dial tone and routing, that machinery is more than the job requires.",
     "pros": [
       "Real-time transcription and coaching",
       "Phone, chat and video in one",
@@ -16045,7 +16801,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Live transcription",
+        "description": "Transcribes calls in real time and keeps them searchable afterwards."
+      },
+      {
+        "title": "Unified voice and messaging",
+        "description": "Combines calls, SMS and meetings under one business number."
+      },
+      {
+        "title": "Coaching tools",
+        "description": "Surfaces call moments and sentiment for supervisor review."
+      }
+    ]
   },
   {
     "slug": "ringcentral",
@@ -16108,7 +16878,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Aircall is a cloud phone system for sales and support teams, built to sit inside a CRM.",
+    "longDescription": "Aircall is a cloud phone system for sales and support teams, built to sit inside a CRM. Calls, notes and recordings write back to the CRM record automatically, so reps do not keep a separate call log. The trade-off is that its value drops sharply if your CRM is not one of the supported integrations, since the product is built around that link.",
     "pros": [
       "Deep CRM integrations",
       "Quick to set up numbers and routing",
@@ -16137,7 +16907,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "CRM-linked calling",
+        "description": "Logs calls, notes and recordings against the matching CRM contact automatically."
+      },
+      {
+        "title": "Shared call inboxes",
+        "description": "Routes numbers to teams with queues, business hours and assignment rules."
+      },
+      {
+        "title": "Call monitoring",
+        "description": "Supports listening in, whispering and barging on live calls for coaching."
+      }
+    ]
   },
   {
     "slug": "whereby",
@@ -16276,7 +17060,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "SiteGround offers shared and managed WordPress hosting with a reputation for support and reasonable performance.",
+    "longDescription": "SiteGround offers shared and managed WordPress hosting with a reputation for support and reasonable performance. It is aimed at people who do not want to administer a server: managed updates, caching and support handle the parts that usually break. The trade is shared-hosting limits and renewal pricing, so it fits sites with predictable traffic rather than spiky ones.",
     "pros": [
       "Support is genuinely responsive",
       "Good performance for shared hosting",
@@ -16288,7 +17072,21 @@
       "Resource limits on the cheapest plans"
     ],
     "targetAudience": "Small sites that need reliable hosting without managed pricing.",
-    "verdict": "Good hosting at the introductory price. Budget for the renewal, which is where the real cost appears."
+    "verdict": "Good hosting at the introductory price. Budget for the renewal, which is where the real cost appears.",
+    "keyFeatures": [
+      {
+        "title": "Managed WordPress",
+        "description": "Handles core updates, caching and staging for WordPress sites."
+      },
+      {
+        "title": "Built-in caching and CDN",
+        "description": "Serves cached pages and static assets without extra configuration."
+      },
+      {
+        "title": "Support-led operations",
+        "description": "Provides support that covers site issues, not just server uptime."
+      }
+    ]
   },
   {
     "slug": "porkbun",
@@ -16336,7 +17134,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Printful prints and ships products on demand under your brand, integrating with major store platforms.",
+    "longDescription": "Printful prints and ships products on demand under your brand, integrating with major store platforms. There is no inventory and no minimum order, so a store can launch without capital tied up in stock. What you give up is unit margin and delivery speed, since every item is made after the order and shipped from the nearest fulfilment site.",
     "pros": [
       "No inventory or upfront stock cost",
       "Integrates with most store platforms",
@@ -16365,7 +17163,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Print on demand",
+        "description": "Produces items only after an order, with no minimum quantity."
+      },
+      {
+        "title": "Store integrations",
+        "description": "Syncs products and orders with major commerce platforms."
+      },
+      {
+        "title": "White-label fulfilment",
+        "description": "Ships under your branding with custom packing inserts."
+      }
+    ]
   },
   {
     "slug": "printify",
@@ -16430,7 +17242,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Payhip sells digital products, courses and memberships with the storefront, checkout and EU VAT handling included.",
+    "longDescription": "Payhip sells digital products, courses and memberships with the storefront, checkout and EU VAT handling included. It handles the part most creators get wrong on their own: EU VAT is calculated and remitted rather than left as a problem for later. It is a storefront rather than a marketing platform, so audience building still happens somewhere else.",
     "pros": [
       "Handles EU VAT for you",
       "No monthly fee on the free plan",
@@ -16459,7 +17271,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Digital product delivery",
+        "description": "Hosts files and delivers them securely after payment."
+      },
+      {
+        "title": "EU VAT handling",
+        "description": "Calculates and applies VAT rules on digital sales automatically."
+      },
+      {
+        "title": "Courses and memberships",
+        "description": "Sells recurring access alongside one-off downloads."
+      }
+    ]
   },
   {
     "slug": "sellfy",
@@ -16476,7 +17302,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Sellfy provides a simple storefront for creators selling digital products, subscriptions or print on demand.",
+    "longDescription": "Sellfy provides a simple storefront for creators selling digital products, subscriptions or print on demand. The pitch is speed: a storefront that works in an afternoon, with digital goods, subscriptions and print on demand in one place. Deeper commerce needs — complex catalogues, custom checkout logic — are where it hands over to a full platform.",
     "pros": [
       "Quick to set up",
       "Digital, subscription and print on demand together",
@@ -16505,7 +17331,21 @@
       "limitations": [
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Hosted storefront",
+        "description": "Provides a ready store page with no site build required."
+      },
+      {
+        "title": "Digital and subscription products",
+        "description": "Sells downloads and recurring access from the same catalogue."
+      },
+      {
+        "title": "Print on demand",
+        "description": "Adds physical merchandise fulfilled by a partner."
+      }
+    ]
   },
   {
     "slug": "deepseek",
@@ -16844,7 +17684,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Replicate exposes public, official and user-deployed machine-learning models through APIs. Billing depends on the model and deployment mode: public models generally bill active processing time, while private models and deployments can also bill setup and idle time.",
+    "longDescription": "Replicate exposes public, official and user-deployed machine-learning models through APIs. Billing depends on the model and deployment mode: public models generally bill active processing time, while private models and deployments can also bill setup and idle time. The practical consequence is that cost tracks how the model is served, not how many requests you make, so an idle private deployment still bills.",
     "pros": [
       "Public and official catalog: Use community models or vendor-maintained official models.",
       "Custom deployments: Package and expose your own model with chosen hardware and scaling.",
@@ -17502,7 +18342,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Qdrant is an open-source vector search engine available as self-hosted software, Managed Cloud, Hybrid Cloud or Private Cloud. It supports payload filtering and multi-stage or hybrid queries; operational responsibilities and platform features differ by deployment model.",
+    "longDescription": "Qdrant is an open-source vector search engine available as self-hosted software, Managed Cloud, Hybrid Cloud or Private Cloud. It supports payload filtering and multi-stage or hybrid queries; operational responsibilities and platform features differ by deployment model. The choice between them is mostly about who operates the cluster and where the vectors are allowed to live.",
     "pros": [
       "Deployment range: Choose open-source, managed, hybrid or private operation.",
       "Payload filtering: Combine nested logical conditions with vector retrieval.",
