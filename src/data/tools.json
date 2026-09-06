@@ -2541,9 +2541,9 @@
       "Integrations: Exchange data directly with Jira, Slack, and Figma."
     ],
     "cons": [
-      "UI Clutter: Navigating boards with thousands of objects can become difficult.",
-      "Performance: Extremely large and complex boards may slow down in certain browsers.",
-      "Free Sınırı: Only 3 editable boards are allowed on the free version."
+      "Boards with thousands of objects get hard to navigate",
+      "Very large boards can slow down in some browsers",
+      "The free plan keeps only 3 boards editable"
     ],
     "keyFeatures": [
       {
@@ -2575,22 +2575,37 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Miro — Pricing",
           "url": "https://miro.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with unlimited members but only the 3 most recent boards editable",
+            "Starter $8/member/mo billed annually",
+            "Business $20/member/mo billed annually",
+            "private boards, high-resolution export, timers and voting start at Starter",
+            "unlimited workspaces, prototypes and AI workflows start at Business"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Teams that need an unlimited number of members on a free plan — Miro does not cap free members",
+      "Occasional workshops where three live boards is enough",
+      "Starting cheap: Starter is $8/member/mo billed annually"
+    ],
+    "skipIf": [
+      "You need more than three editable boards — the free plan keeps only the three most recent ones editable",
+      "You need private boards, high-resolution export, timers or voting; those start at Starter",
+      "You need unlimited workspaces, prototypes or AI workflows, which start at Business, $20/member/mo billed annually"
+    ]
   },
   {
     "slug": "zapier",
@@ -3213,7 +3228,7 @@
       "Live chat",
       "Tours"
     ],
-    "basePrice": 39,
+    "basePrice": 29,
     "isFlat": false,
     "category": "Customer Service",
     "shortDescription": "AI customer service.",
@@ -3259,22 +3274,36 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Intercom — Pricing",
           "url": "https://www.intercom.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Essential $29/seat/mo, Advanced $85, Expert $132",
+            "14-day free trial, no permanent free tier",
+            "Fin AI agent $0.99 per outcome",
+            "inbound support included in all plans"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Support teams that want messenger, inbox and an AI agent from one vendor",
+      "Products where inbound email and in-app chat support is the bulk of the work — that is included in every seat",
+      "Trying the whole platform first: the 14-day trial covers all features and add-ons with no card"
+    ],
+    "skipIf": [
+      "You need a permanently free tier — Intercom has none, only a 14-day trial; seats start at $29/seat/mo",
+      "You cannot absorb usage charges on top of seats: the Fin AI agent is billed at $0.99 per resolution, and SMS, WhatsApp and phone are usage-priced",
+      "You want the cheapest seat to be the full product — Advanced is $85/seat/mo and Expert $132/seat/mo"
+    ]
   },
   {
     "slug": "shopify",
@@ -3402,7 +3431,7 @@
     "targetAudience": "Large Corporate Brands and Complex B2B Businesses.",
     "verdict": "The only choice for giant brands with complex enterprise needs seeking 'total freedom.'",
     "color": "#f46f25",
-    "fiyatModeli": "ucretsiz-katman",
+    "fiyatModeli": "teklif",
     "websiteUrl": "https://business.adobe.com/products/magento/magento-commerce.html",
     "incelendi": true,
     "kriterler": {
@@ -3410,6 +3439,41 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
+    },
+    "bestFor": [
+      "Stores that want a self-hosted, open-source platform they fully control — Magento Open Source is free to download",
+      "Businesses with an in-house or agency developer team already in place",
+      "Complex catalogues and B2B rules that hosted platforms cannot express"
+    ],
+    "skipIf": [
+      "You are reading 'free' as 'cheap' — the licence is free but hosting, security patching and developer time are not",
+      "You want a published price for the paid product: Adobe Commerce is quoted by sales, with no list price",
+      "You have no developer team; setup and maintenance both assume expert help"
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Adobe — Magento Open Source",
+          "url": "https://business.adobe.com/products/commerce/magento/open-source.html",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Magento Open Source is a free ecommerce platform supported by Adobe and available on GitHub"
+          ]
+        },
+        {
+          "label": "Adobe — Adobe Commerce",
+          "url": "https://business.adobe.com/products/magento/magento-commerce.html",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Adobe Commerce is the paid product; Adobe does not publish a list price and directs buyers to sales"
+          ]
+        }
+      ],
+      "limitations": [
+        "Adobe publishes no list price for Adobe Commerce; the quote-only status is what is verifiable."
+      ]
     }
   },
   {
@@ -4452,22 +4516,36 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Postman — Pricing",
           "url": "https://www.postman.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with 1 user, 50 AI credits/mo, 1,000 monitoring requests/mo, 5 integrations, 10,000 Postman API calls/mo",
+            "Solo $9/mo annual or $12 monthly",
+            "Team $19/user/mo annual or $25 monthly",
+            "Enterprise $49/user/mo annual or $65 monthly",
+            "free plan excludes webhooks, private NPM packages and team collaboration"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "One developer working alone — the free plan is a full API client with collections, environments and mock servers",
+      "Teams that want a shared API workspace and are ready to pay per user",
+      "Work where 1,000 monitoring requests a month is enough"
+    ],
+    "skipIf": [
+      "You need team collaboration — the free plan is a single user; Team is $19/user/mo billed annually ($25 monthly)",
+      "You rely on webhooks, private NPM packages or data-driven testing; those start at Solo, $9/mo annual ($12 monthly)",
+      "You cannot keep data on Postman's servers, which some collaboration features require"
+    ]
   },
   {
     "slug": "sentry",
@@ -5432,22 +5510,36 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Cloudflare — Pricing",
-          "url": "https://www.cloudflare.com/plans/",
-          "checkedAt": "2026-08-31",
+          "label": "Cloudflare — Network & CDN plans",
+          "url": "https://www.cloudflare.com/plans/network-cdn/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0, Pro $20/mo annual ($25 monthly), Business $200/mo annual ($250 monthly)",
+            "free plan includes DNS, CDN, universal SSL, unmetered DDoS and WAF",
+            "lossless image optimization starts at Pro",
+            "100% uptime SLA and PCI DSS 4.0 start at Business",
+            "free support is community forums only"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Sites that need CDN, DNS, universal SSL, unmetered DDoS protection and a WAF at no cost — all are on the free plan",
+      "Small sites where community-forum support is acceptable",
+      "Stepping up gradually: Pro is $20/mo billed annually, not an enterprise contract"
+    ],
+    "skipIf": [
+      "You need an uptime SLA — the 100% uptime SLA starts at Business, $200/mo billed annually",
+      "You want image optimization; lossless image optimization begins at Pro, not Free",
+      "You cannot move DNS management to Cloudflare, which the platform requires"
+    ]
   },
   {
     "slug": "postgresql",
@@ -6646,22 +6738,35 @@
       "sso": false
     },
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Obsidian — Pricing",
           "url": "https://obsidian.md/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free for personal use, no sign-up",
+            "Sync $4/user/mo annual or $5 monthly",
+            "Publish $8/site/mo annual or $10 monthly",
+            "commercial licence $50/user/year"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Personal note-taking that stays in local Markdown files — free, with no sign-up",
+      "People who want to own their notes rather than rent access to them",
+      "Users happy to sync with their own tooling instead of paying for the official service"
+    ],
+    "skipIf": [
+      "You want official cross-device sync included — Sync is a separate $4/user/mo billed annually ($5 monthly)",
+      "You need to publish notes as a website: Publish is $8/site/mo billed annually ($10 monthly)",
+      "You are using it inside a company — the commercial licence is $50/user/year"
+    ]
   },
   {
     "slug": "linear",
@@ -8571,20 +8676,24 @@
     "targetAudience": "Teams that want application, infrastructure and log monitoring from a single vendor.",
     "verdict": "Capable and complete. Watch the ingest bill: teams are far more often surprised by cost here than by capability.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "New Relic — Pricing",
           "url": "https://newrelic.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "100 GB free data ingest per month, unlimited basic users, one free full platform user",
+            "$0.40/GB ingest, $0.60/GB on Data Plus",
+            "Standard $10 first user then $99/additional user, max 5",
+            "Pro $349/user annual or $418.80 monthly pay-as-you-go",
+            "core users $49/user"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -8604,6 +8713,16 @@
         "title": "Ingest-based pricing",
         "description": "Cost follows data volume and seats rather than the number of hosts."
       }
+    ],
+    "bestFor": [
+      "Small teams that fit the free allowance — 100 GB of data ingest per month, unlimited basic users and one full-platform user",
+      "Consolidating monitoring into one platform rather than buying several",
+      "Usage that is steady enough to predict data volume"
+    ],
+    "skipIf": [
+      "Your data volume is spiky — past the free 100 GB you pay $0.40/GB ($0.60/GB on Data Plus), and the bill follows ingest",
+      "Many people need full-platform access: after the first user, Standard is $99/user/mo and Pro $349/user/mo on annual commitment",
+      "You want a simple interface; it is dense and takes learning"
     ]
   },
   {
@@ -9511,7 +9630,36 @@
         "title": "Animation Assist",
         "description": "Frame-by-frame animation with onion skinning built into the same canvas."
       }
-    ]
+    ],
+    "fiyatModeli": "tek-seferlik",
+    "bestFor": [
+      "iPad illustration where you want to own the app outright — the vendor states 'no subscriptions'",
+      "Artists who already have an iPad and Apple Pencil and do not want a monthly bill",
+      "Raster painting and sketching rather than layout or vector work"
+    ],
+    "skipIf": [
+      "You are not on an iPad — the main app is iPad-only; the iPhone version (Pocket) and the animation app (Dreams) are separate purchases",
+      "You need vector tools; Procreate has none",
+      "You need desktop-grade file handling for very large documents"
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Procreate — Product page",
+          "url": "https://procreate.com/procreate",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "one-time purchase, 'No subscriptions. Exclusively from the App Store'",
+            "Procreate is iPad-only; Procreate Pocket (iPhone) and Procreate Dreams are separate apps"
+          ]
+        }
+      ],
+      "limitations": [
+        "The vendor page states the purchase model but does not print the price; the App Store is the price of record."
+      ]
+    }
   },
   {
     "slug": "affinity-designer",
@@ -9558,7 +9706,37 @@
         "title": "Artboards",
         "description": "Many canvases in one document for exporting a set of sizes at once."
       }
-    ]
+    ],
+    "fiyatModeli": "bedava",
+    "bestFor": [
+      "Vector, pixel and layout work in one app at no cost — Canva made Affinity free for individuals with no restrictions",
+      "Anyone leaving a monthly creative subscription who still wants professional output and export control",
+      "Designers who do not need generative AI inside the app"
+    ],
+    "skipIf": [
+      "You want the built-in AI tools — generative fill, background removal and image or vector generation require a Canva premium plan",
+      "Your clients and collaborators expect native Adobe files as the working format",
+      "You depend on a large tutorial and template market; Adobe's is far bigger"
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Affinity — Official site",
+          "url": "https://www.affinity.studio/",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Affinity is free for individuals: every tool in the Pixel, Vector and Layout studios plus customization and export, with no restrictions or payment",
+            "Canva AI features (generative fill, background removal, image/vector generation) require a Canva premium plan",
+            "the older Affinity V2 apps remain available separately"
+          ]
+        }
+      ],
+      "limitations": [
+        "Canva does not print a price for its premium plan on this page; only the free/paid boundary is verifiable here."
+      ]
+    }
   },
   {
     "slug": "removebg",
@@ -9977,20 +10155,23 @@
     "targetAudience": "Anyone responsible for technical SEO on a site of real size.",
     "verdict": "Still the standard technical crawler. It reports; interpreting is your job.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Screaming Frog — Pricing",
+          "label": "Screaming Frog — SEO Spider pricing",
           "url": "https://www.screamingfrog.co.uk/seo-spider/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "licence £199 per year",
+            "free version crawl limit 500 URLs",
+            "JavaScript rendering, scheduling, custom extraction and Google Analytics/Search Console integration available in both free and paid",
+            "paid crawl limit depends on allocated memory and storage"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -10006,6 +10187,16 @@
         "title": "API integrations",
         "description": "Pulls Search Console, Analytics and PageSpeed data onto crawled URLs."
       }
+    ],
+    "bestFor": [
+      "Crawling small sites for free — the unlicensed version does up to 500 URLs",
+      "One-person technical SEO work where a desktop crawler beats a subscription platform",
+      "Anyone who needs JavaScript rendering, scheduling, custom extraction and GA/GSC integration — all of these are in the free version too"
+    ],
+    "skipIf": [
+      "Your site is bigger than 500 URLs; that is the only real wall, and lifting it costs £199/year",
+      "You need collaboration — it is a desktop tool with no shared workspace",
+      "You are crawling very large sites on a modest machine; the crawl ceiling depends on your memory and storage"
     ]
   },
   {
@@ -14851,7 +15042,7 @@
     "shortDescription": "Fast native text editor.",
     "websiteUrl": "https://www.sublimetext.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 99,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -14891,23 +15082,35 @@
       }
     ],
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Sublime Text — Pricing",
-          "url": "https://www.sublimehq.com/store/text",
-          "checkedAt": "2026-09-03",
+          "label": "Sublime HQ — Store",
+          "url": "https://sublimehq.com/store/text",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "personal licence $99 one-time with 3 years of updates",
+            "business licence $65/seat/year at 1-10 seats, falling to $50/seat/year at 50+",
+            "free evaluation with no stated time limit, licence required for continued use"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to sublimehq.com."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "tek-seferlik",
+    "bestFor": [
+      "Editing where startup speed and responsiveness matter more than a large extension market",
+      "People who prefer buying an editor once — $99 personal, one key across all your computers and operating systems",
+      "Evaluating before paying: the vendor lets you download and evaluate for free with no stated time limit"
+    ],
+    "skipIf": [
+      "You expect updates forever — a personal licence includes 3 years of updates, after which an upgrade is required",
+      "You are buying for a company: business use is a per-seat annual subscription from $65/seat/year",
+      "You want the breadth of the VS Code extension ecosystem, or language support that works without configuration"
+    ]
   },
   {
     "slug": "neovim",

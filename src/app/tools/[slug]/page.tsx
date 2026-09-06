@@ -98,7 +98,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       price: tool.basePrice,
       priceCurrency: "USD",
       // isFlat=false ise fiyat kullanici basina aylik; sayfada da boyle yaziyor.
-      description: tool.isFlat ? "Flat monthly price" : "Per user, per month",
+      description:
+        fiyatDurumu(tool).aylik === 0
+          ? "Free to use"
+          : tool.isFlat
+            ? "Flat monthly price"
+            : "Per user, per month",
     };
   }
   if (verdictText) {
@@ -125,9 +130,19 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const skipIf: string[] = Array.isArray(tool.skipIf) ? tool.skipIf.filter(Boolean) : [];
   const sss: { soru: string; cevap: string }[] = [];
   if (fiyat.karsilastirilabilir) {
+    /*
+      DENETIMDE BULUNAN (2026-09-07): cumle "starts at ${metin} as a flat
+      monthly price" olarak kuruluyordu. Bedava araclarda metin "Free"
+      oldugu icin sayfa "starts at Free as a flat monthly price" yaziyordu
+      -- bozuk cumle, ve SSS semasi araciligiyla Google'a da boyle
+      gidiyordu. Bedava, aylik ucret degildir: ayri cumle hak eder.
+    */
+    const bedavaMi = fiyat.aylik === 0;
     sss.push({
       soru: `How much does ${tool.name} cost?`,
-      cevap: `${tool.name} starts at ${fiyat.metin.replace(/^From /, "")}${tool.isFlat ? " as a flat monthly price" : " per user"}. We verified this against the vendor's pricing page; see "What we checked" below for the date.`,
+      cevap: bedavaMi
+        ? `${tool.name} is free to use. We verified this against the vendor's own page; see "What we checked" below for the date.`
+        : `${tool.name} starts at ${fiyat.metin.replace(/^From /, "")}${tool.isFlat ? " as a flat monthly price" : " per user"}. We verified this against the vendor's pricing page; see "What we checked" below for the date.`,
     });
   }
   if (tool.fiyatModeli) {

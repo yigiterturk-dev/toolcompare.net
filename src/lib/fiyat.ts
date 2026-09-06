@@ -38,7 +38,16 @@ export type FiyatModeli =
   | "teklif"
   | "ucretsiz-kredi"
   | "urun-bazli"
-  | "degisken";
+  | "degisken"
+  /*
+    DENETIMDE BULUNAN (2026-09-07): tek seferlik satin alinan araclar
+    (Sublime Text $99, Procreate) "abonelik" olarak isaretlenince sayfa
+    "From $99/mo" yaziyordu -- fiyat karsilastirma sitesinde bir lisansi
+    aylik ucret gibi gostermek en pahali yanlislardan biri. Tek seferlik
+    tutar aylik karsilastirmaya GIRMEZ: $99 bir kere ile $99/ay ayni
+    kefeye konamaz.
+  */
+  | "tek-seferlik";
 
 /*
   DENETIMDE BULUNAN (2026-08-25): veri bu sozlesmeden kaymisti.
@@ -68,7 +77,7 @@ function modeliCoz(ham: string | undefined): FiyatModeli | undefined {
 export const TANINAN_MODELLER: readonly string[] = [
   "bedava", "ucretsiz-katman", "kullanima-gore", "aylik",
   "kullanici-basina", "abonelik", "abonelik-arti-islem",
-  "teklif", "ucretsiz-kredi", "urun-bazli", "degisken",
+  "teklif", "ucretsiz-kredi", "urun-bazli", "degisken", "tek-seferlik",
   ...Object.keys(ESANLAMLI),
 ];
 
@@ -128,6 +137,11 @@ export function fiyatDurumu(t: Arac): FiyatDurumu {
   }
   if (model === "degisken") {
     return { karsilastirilabilir: false, aylik: null, metin: "Variable pricing", kisa: "Variable" };
+  }
+  if (model === "tek-seferlik") {
+    return fiyatVar
+      ? { karsilastirilabilir: false, aylik: null, metin: `$${t.basePrice} one-time purchase`, kisa: `$${t.basePrice} once` }
+      : { karsilastirilabilir: false, aylik: null, metin: "One-time purchase", kisa: "One-time" };
   }
   if (model === "abonelik" || model === "kullanici-basina") {
     return { karsilastirilabilir: false, aylik: null, metin: "Subscription — amount not verified", kisa: "Sub, amount TBC" };

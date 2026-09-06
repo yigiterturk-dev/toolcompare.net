@@ -45,3 +45,29 @@ test("arac sayfasi bestFor/skipIf blogunu ciziyor", () => {
   assert.match(s, /bestFor\.length > 0 \|\| skipIf\.length > 0/, "render kosulu yok");
   assert.match(s, /When should you not use/, "skipIf SSS sorusu yok");
 });
+
+/**
+ * Tek seferlik satin alinan arac aylik ucret gibi gosterilmemeli:
+ * Sublime Text $99 bir kere, $99/ay degil.
+ */
+test("tek-seferlik model aylik karsilastirmaya girmiyor", async () => {
+  const { fiyatDurumu } = await import("../src/lib/fiyat.ts");
+  const d = fiyatDurumu({ name: "Sublime Text", basePrice: 99, isFlat: true, fiyatModeli: "tek-seferlik" });
+  assert.equal(d.karsilastirilabilir, false, "tek seferlik tutar aylik karsilastirmaya girmemeli");
+  assert.equal(d.aylik, null);
+  assert.match(d.metin, /one-time/i);
+  assert.doesNotMatch(d.metin, /\/mo/, "aylik birim yazilmamali");
+
+  const rakamsiz = fiyatDurumu({ name: "Procreate", basePrice: 0, isFlat: true, fiyatModeli: "tek-seferlik" });
+  assert.equal(rakamsiz.metin, "One-time purchase");
+});
+
+/**
+ * Bedava arac "starts at Free as a flat monthly price" diyordu.
+ * Cumle SSS semasiyla Google'a da gidiyordu.
+ */
+test("bedava arac icin fiyat cumlesi bozuk degil", () => {
+  const s = readFileSync("src/app/tools/[slug]/page.tsx", "utf8");
+  assert.match(s, /const bedavaMi = fiyat\.aylik === 0/, "bedava dali yok");
+  assert.match(s, /is free to use\./, "bedava cumlesi yok");
+});
