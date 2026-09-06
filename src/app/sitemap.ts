@@ -7,6 +7,21 @@ import { aracTarihi, turetilmisTarih, tarihNesnesi, TABAN_TARIH } from '@/lib/de
 import fs from 'fs';
 import path from 'path';
 
+/*
+  DENETIMDE BULUNAN (2026-09-07): lastmod duzeltmesi yayina cikmadi.
+  Icerik degisiklikleri dakikalar icinde canliya girerken /sitemap.xml
+  30+ dakika eski kaldi ve `x-nextjs-cache: HIT` dondu -- yani sitemap
+  build aninda uretilip sunucudaki route onbelleginde suresiz duruyor.
+  Onde duran LiteSpeed katmani degil (onbellek basligi `must-revalidate`),
+  Next'in kendi tam-route onbellegi.
+
+  Gunluk yeniden dogrulama: sunucu yeni build'i alsa bile eski girdiyi
+  sonsuza kadar servis edemez. Cikti veriden uretildigi icin (bkz.
+  degisiklik.ts) yeniden dogrulama ayni veriyle ayni sonucu verir --
+  yani bu ayar sitemap'i dalgalandirmaz, sadece takilmasini engeller.
+*/
+export const revalidate = 86400
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://toolcompare.net'
 
