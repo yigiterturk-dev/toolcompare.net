@@ -3,11 +3,22 @@ import toolsData from '@/data/tools.json'
 import { sitemapCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
 import { sitemapKategorileri } from '@/lib/categories'
 import { aracIndekslenir, alternatifIndekslenir } from '@/lib/indeks'
+import { aracTarihi, turetilmisTarih, tarihNesnesi, TABAN_TARIH } from '@/lib/degisiklik'
 import fs from 'fs';
 import path from 'path';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://toolcompare.net'
+
+  /*
+    DENETIMDE BULUNAN (2026-09-07): asagidaki her adres lastModified
+    olarak `new Date()` yaziyordu -- her build'de 1.293 adresin TAMAMI
+    "bugun degisti" diyordu. Google boyle bir sitemap'te lastmod'u
+    tamamen yok sayar; gercekten degisen sayfalarin sinyali kayboluyordu.
+    Tarih artik veriden geliyor (bkz. src/lib/degisiklik.ts): ayni veri
+    ayni tarihi verir, build tekrari sitemap'i degistirmez.
+  */
+  const aracHaritasi = new Map((toolsData as any[]).map((t) => [t.slug, t]))
   
   // Base pages
   // /blog BILEREK yok: posts.json hic olusmadigi icin sayfa bos, ustelik
@@ -29,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/submit',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: tarihNesnesi(TABAN_TARIH),
     changeFrequency: 'daily' as const,
     priority: 1,
   }))
@@ -40,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // diye geri ceviriyordu ve tarama butcesini yiyordu.
   const toolRoutes = (toolsData as any[]).filter((t) => aracIndekslenir(t)).map((tool: any) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
-    lastModified: new Date(),
+    lastModified: tarihNesnesi(aracTarihi(tool)),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
@@ -54,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const blogRoutes = posts.map((post: any) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(),
+    lastModified: tarihNesnesi(post.date ?? TABAN_TARIH),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
@@ -65,7 +76,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Artik ciftler veriden uretiliyor; sinirlar src/lib/compare.ts'te.
   const comparisonRoutes = sitemapCiftleri().map((cift) => ({
     url: `${baseUrl}/compare/${cift}`,
-    lastModified: new Date(),
+    lastModified: tarihNesnesi(
+      turetilmisTarih(cift.split('-vs-').map((slug) => aracHaritasi.get(slug))),
+    ),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
@@ -74,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // once yalnizca /?category=X sorgu adresi vardi ve o indekslenmiyordu.
   const categoryRoutes = sitemapKategorileri().map((k) => ({
     url: `${baseUrl}/categories/${k.slug}`,
-    lastModified: new Date(),
+    lastModified: tarihNesnesi(turetilmisTarih(k.araclar)),
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }))
@@ -85,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // dogrulanmamissa sayfanin soyleyecek sozu yok.
   const alternativeRoutes = alternatifSayfasiOlanlar().filter((t) => alternatifIndekslenir(t)).map((t) => ({
     url: `${baseUrl}/alternatives/${t.slug}`,
-    lastModified: new Date(),
+    lastModified: tarihNesnesi(aracTarihi(t)),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
