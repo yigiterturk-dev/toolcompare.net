@@ -5985,7 +5985,7 @@
       "Dev Mode"
     ],
     "basePrice": 16,
-    "isFlat": false,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Pro agency platform.",
     "longDescription": "Wix Studio is the advanced evolution of Wix, specifically designed for agencies and high-end designers. It combines the ease of a visual editor with the power of modern coding. With a focus on high-fidelity, responsive design, Wix Studio allows you to create pixel-perfect websites that look stunning on any screen. It features innovative AI tools for responsive layouts, full custom CSS support, and a dedicated developer mode for building complex web applications. It is the premier tool for professionals who need speed without sacrificing design quality.",
@@ -6030,22 +6030,43 @@
       "sso": false
     },
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Wix Studio — Pricing",
-          "url": "https://www.wix.com/plans",
-          "checkedAt": "2026-08-31",
+          "label": "Wix — Studio plans",
+          "url": "https://www.wix.com/studio/plans",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Studio sites are upgraded with their own per-site plans"
+          ]
+        },
+        {
+          "label": "Wix Help Center — Choosing a Studio plan",
+          "url": "https://support.wix.com/en/article/wix-studio-upgrading-sites",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "building on Wix Studio is free until a site is upgraded",
+            "a Studio plan adds a custom domain and removes Wix branding",
+            "14-day full refund on a first Studio plan upgrade"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Wix does not publish a single Studio price table that a script can read; the plan table is rendered in the browser. The starting figure is the entry site plan, not a per-seat price."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Agencies building client sites: the Studio workspace itself is free, you pay per published site",
+      "Designers who want a visual editor alongside custom CSS and a developer mode",
+      "Trying a plan with low risk — Wix gives a 14-day full refund on a first Studio plan upgrade"
+    ],
+    "skipIf": [
+      "You may need to move the site off Wix later; Wix sites cannot be exported to another host",
+      "You want one flat platform fee — cost scales with the number of published client sites, not seats",
+      "You only need a simple site; Studio is markedly more complex than the standard Wix editor"
+    ]
   },
   {
     "slug": "podia",
@@ -9646,7 +9667,44 @@
         "title": "Non-destructive editing",
         "description": "Adjustment layers, smart objects and layer masks let you revise choices rather than repeat work."
       }
-    ]
+    ],
+    "bestFor": [
+      "Opening and editing PSD and other layered files in a browser with nothing installed",
+      "One-off image work where a Photoshop subscription is not worth it",
+      "Machines where you are not allowed to install software"
+    ],
+    "skipIf": [
+      "You expect the $5/month Premium to unlock features — the vendor's own Premium post says it currently gives no extra features and is a way to support development",
+      "You work with very large files; the editor runs in your browser and performance depends on it",
+      "Ads on the free version are a problem in your environment"
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Photopea — Premium",
+          "url": "https://blog.photopea.com/photopea-premium.html",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Premium costs 5 USD per month",
+            "the vendor states Premium currently gives no extra features"
+          ]
+        },
+        {
+          "label": "Photopea — Home",
+          "url": "https://www.photopea.com/",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "runs in the browser with no download",
+            "free to use"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pages were reviewed; this record is not a ToolCompare benchmark."
+      ]
+    }
   },
   {
     "slug": "hootsuite",
@@ -14450,20 +14508,22 @@
     "targetAudience": "Cost-conscious teams that want real CRM capability.",
     "verdict": "The value is genuine. The pull toward adopting the whole suite is the hidden cost.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Zoho CRM — Pricing",
           "url": "https://www.zoho.com/crm/zohocrm-pricing.html",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free edition for up to 3 users",
+            "free edition limited to 10 data exports and 5,000 API calls per day",
+            "AI agents, predictive intelligence, unlimited reports and CPQ start at Professional"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; regional list prices vary by billing country."
       ]
     },
     "keyFeatures": [
@@ -14483,6 +14543,16 @@
         "title": "Low entry price",
         "description": "Per-user pricing sits well below the enterprise CRMs it competes with."
       }
+    ],
+    "bestFor": [
+      "Small teams that can live inside the free edition — up to 3 users, with no time limit",
+      "Businesses already on other Zoho products that want everything in one suite",
+      "Starting cheaply before committing to a per-user CRM contract"
+    ],
+    "skipIf": [
+      "You have more than 3 users and want to stay free — the free edition caps at 3",
+      "You need AI agents, predictive intelligence, unlimited reports or CPQ; the vendor lists these from Professional up, not Standard",
+      "Exporting data matters day to day; the free edition allows only 10 data exports"
     ]
   },
   {
@@ -15054,23 +15124,45 @@
       }
     ],
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "DBeaver — Vendor page (free, open source)",
-          "url": "https://dbeaver.io/",
-          "checkedAt": "2026-09-03",
+          "label": "DBeaver — Download / Community edition",
+          "url": "https://dbeaver.io/download/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "Community edition is free and open source",
+            "support for SQL, NoSQL and cloud databases",
+            "AI SQL assistant, ERD edit mode and mock data listed as PRO features"
+          ]
+        },
+        {
+          "label": "DBeaver — Editions and pricing",
+          "url": "https://dbeaver.com/edition/",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Lite $113/year",
+            "Enterprise $255/year",
+            "Ultimate $510/year",
+            "advanced security and enterprise authentication in paid tiers"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Working across SQL, NoSQL and cloud databases from one desktop client without a licence",
+      "Teams that want a client they can install on every developer machine at no cost",
+      "Occasional database work where a heavy Java desktop app is an acceptable trade"
+    ],
+    "skipIf": [
+      "You want the AI SQL assistant, ERD edit mode or mock data generation — the vendor lists these as PRO features, and PRO starts at $113/year",
+      "You need SSO and enterprise authentication, which are not part of the free Community edition",
+      "You want a lightweight client; the Java-based interface is heavy and the UI is dense"
+    ]
   },
   {
     "slug": "tableplus",
@@ -16659,7 +16751,7 @@
     "shortDescription": "Competitor keyword and ad research.",
     "websiteUrl": "https://www.spyfu.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 39,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -16682,19 +16774,23 @@
     "verdict": "Good value for competitor research. Verify anything important against your own data.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "SpyFu — Pricing",
           "url": "https://www.spyfu.com/mainpurchase/?page=default",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "no free tier; 30-day money-back guarantee",
+            "Basic $39/mo monthly or $29/mo annual",
+            "Pro $119/mo monthly or $89/mo annual",
+            "Team $249/mo monthly or $187/mo annual",
+            "Basic limits: 10k search results, 10k export rows, 1 project, 5k tracked keywords"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; the page states no country-level coverage limits."
       ]
     },
     "keyFeatures": [
@@ -16714,6 +16810,17 @@
         "title": "Unlimited searches",
         "description": "Plans are not metered per lookup, which suits exploratory research."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Competitor keyword and ad research where the Pro tier's uncapped search results and exports matter",
+      "Trying a paid SEO tool with a 30-day money-back guarantee instead of a free trial",
+      "Agencies tracking many domains — the top tier allows unlimited projects and 50k tracked keywords"
+    ],
+    "skipIf": [
+      "You want a free tier — SpyFu has none; the entry plan is $39/month, or $29/month billed annually",
+      "The Basic caps are too tight for you: 10k search results, 10k export rows, 1 tracking project and 5k tracked keywords",
+      "Your market is outside the US, where data accuracy varies and coverage is weaker"
     ]
   },
   {
