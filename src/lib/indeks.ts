@@ -73,6 +73,13 @@ export function incelenmis(t?: Arac): boolean {
 export function fiyatiDogrulanmis(t?: Arac): boolean {
   const durum = t?.evidence?.status;
   if (durum === "pricing-page-verified") return true;
+  /* ACIK KAYNAK (olcum, 2026-09-03): kanitsiz kalan 110 aracin 36'si acik
+     kaynak. Onlarda /pricing sayfasi olmamasi eksiklik degil, fiyatin
+     kendisi -- ve bu araclar aramada gercekten karsilastiriliyor (dbeaver
+     36 gosterim, caddy 6). `open-source-verified` durumu saticinin kendi
+     sayfasindan "acik kaynak + ucretsiz" ifadesini dogrular
+     (scripts/kanit-acikkaynak.mjs); fiyat iddiasi sifirdir ve kaynaklidir. */
+  if (durum === "open-source-verified") return true;
   return durum === "vendor-sourced" && fiyatDestekleyenKaynak(t);
 }
 

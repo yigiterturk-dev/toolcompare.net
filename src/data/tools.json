@@ -4892,6 +4892,24 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": false
+    },
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Carrd — Pricing",
+          "url": "https://carrd.com/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
+        "The vendor's pricing URL redirects to carrd.com."
+      ]
     }
   },
   {
@@ -5489,6 +5507,24 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": false
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "PostgreSQL — Vendor page (free, open source)",
+          "url": "https://www.postgresql.org/about/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -7915,6 +7951,24 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": false
+    },
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Notion Calendar — Pricing",
+          "url": "https://www.notion.com/pricing",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
+        "The vendor's pricing URL redirects to notion.com."
+      ]
     }
   },
   {
@@ -8227,7 +8281,25 @@
         "title": "Pipeline as code",
         "description": "Defines builds in a Jenkinsfile stored alongside the source."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Jenkins — Vendor page (free, open source)",
+          "url": "https://www.jenkins.io/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "kubernetes",
@@ -8271,7 +8343,25 @@
         "title": "Horizontal autoscaling",
         "description": "Adds or removes replicas based on observed resource metrics."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Kubernetes — Vendor page (open source)",
+          "url": "https://kubernetes.io/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor describes the software as open source, so the self-hosted edition is free to use"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page describes the software as open source. It does not print a price; the free-to-self-host reading follows from the licence, not from a published price list.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "ansible",
@@ -8301,7 +8391,25 @@
       "Idempotency depends on the module doing it properly"
     ],
     "targetAudience": "Teams automating server configuration without adopting a full orchestration platform.",
-    "verdict": "The easiest configuration tool to start with. Once playbooks contain real logic, you are programming in YAML and it shows."
+    "verdict": "The easiest configuration tool to start with. Once playbooks contain real logic, you are programming in YAML and it shows.",
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Ansible — Vendor page (free, open source)",
+          "url": "https://www.redhat.com/en/ansible-collaborative?intcmp=7015Y000003t7aWQAQ",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "grafana",
@@ -8392,7 +8500,25 @@
       "Not built for logs or traces"
     ],
     "targetAudience": "Teams running services that need metrics and alerting they control.",
-    "verdict": "Pair it with Grafana and you have a complete metrics stack. Plan for long-term storage before you need it."
+    "verdict": "Pair it with Grafana and you have a complete metrics stack. Plan for long-term storage before you need it.",
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Prometheus — Vendor page (open source)",
+          "url": "https://prometheus.io/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "new-relic",
@@ -8933,7 +9059,25 @@
         "title": "OpenAPI standard",
         "description": "Built on an open specification rather than a proprietary format."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Swagger — Vendor page (free, open source)",
+          "url": "https://swagger.io/license/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "sourcegraph",
@@ -9281,7 +9425,25 @@
         "title": "Python scripting",
         "description": "Exposes the application to scripts and add-ons for pipeline automation."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Blender — Vendor page (free, open source)",
+          "url": "https://www.blender.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "procreate",
@@ -10298,7 +10460,25 @@
       "Paid only, with no free tier"
     ],
     "targetAudience": "Site owners who want honest traffic numbers without a consent banner or a heavy script.",
-    "verdict": "Refreshingly focused. If you need funnels, cohorts and user paths, it is intentionally not that tool."
+    "verdict": "Refreshingly focused. If you need funnels, cohorts and user paths, it is intentionally not that tool.",
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Plausible — Vendor page (free, open source)",
+          "url": "https://plausible.io/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "fathom-analytics",
@@ -10582,7 +10762,24 @@
       "Expensive relative to simpler apps"
     ],
     "targetAudience": "People running a serious GTD practice with many projects.",
-    "verdict": "The right tool if you already work this way. If you do not, it will feel like homework."
+    "verdict": "The right tool if you already work this way. If you do not, it will feel like homework.",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "OmniFocus — Pricing",
+          "url": "https://www.omnigroup.com/omnifocus/buy",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "ticktick",
@@ -11565,7 +11762,25 @@
         "title": "Familiar interface",
         "description": "Channels, threads and integrations close enough to Slack to keep training short."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Mattermost — Vendor page (open source)",
+          "url": "https://mattermost.com/about-us/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor describes the software as open source, so the self-hosted edition is free to use"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page describes the software as open source. It does not print a price; the free-to-self-host reading follows from the licence, not from a published price list.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "rocket-chat",
@@ -11731,7 +11946,24 @@
         "title": "Generous included traffic",
         "description": "Bundles substantial outbound traffic instead of billing every gigabyte."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Hetzner — Pricing",
+          "url": "https://www.hetzner.com/cloud/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "fastly",
@@ -14476,7 +14708,25 @@
         "title": "Integrated debugging",
         "description": "Runs and steps through code with breakpoints inside the editor."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Visual Studio Code — Vendor page (free, open source)",
+          "url": "https://code.visualstudio.com/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "jetbrains",
@@ -14505,7 +14755,24 @@
       "Overkill for small scripts"
     ],
     "targetAudience": "Developers working daily in one language on a substantial codebase.",
-    "verdict": "Worth the money if you live in the IDE. Occasional users get less from it than the price suggests."
+    "verdict": "Worth the money if you live in the IDE. Occasional users get less from it than the price suggests.",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "JetBrains — Pricing",
+          "url": "https://www.jetbrains.com/store/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "sublime-text",
@@ -14552,7 +14819,25 @@
         "title": "One-off licence",
         "description": "Bought per major version rather than as a subscription."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Sublime Text — Pricing",
+          "url": "https://www.sublimehq.com/store/text",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
+        "The vendor's pricing URL redirects to sublimehq.com."
+      ]
+    }
   },
   {
     "slug": "neovim",
@@ -14701,7 +14986,25 @@
         "title": "Profiles",
         "description": "Stores per-project shells, colours and startup commands."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "iTerm2 — Vendor page (open source)",
+          "url": "https://iterm2.com/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "dbeaver",
@@ -14749,7 +15052,25 @@
         "title": "Data transfer",
         "description": "Moves tables between engines and exports to CSV, JSON or SQL scripts."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "DBeaver — Vendor page (free, open source)",
+          "url": "https://dbeaver.io/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "tableplus",
@@ -14915,7 +15236,25 @@
         "title": "Lightweight runtime",
         "description": "Adds little to bundle size, which suits serverless and edge runtimes."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Drizzle ORM — Vendor page (free, open source)",
+          "url": "https://orm.drizzle.team/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "turso",
@@ -15207,7 +15546,25 @@
         "title": "Self-hosted",
         "description": "Runs on your own infrastructure so credentials never leave it."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Keycloak — Vendor page (open source)",
+          "url": "https://www.keycloak.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor describes the software as open source, so the self-hosted edition is free to use"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page describes the software as open source. It does not print a price; the free-to-self-host reading follows from the licence, not from a published price list.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "nginx",
@@ -15251,7 +15608,25 @@
         "title": "Static file serving",
         "description": "Serves files and caches upstream responses with low memory overhead."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "NGINX — Vendor page (open source)",
+          "url": "https://nginx.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "caddy",
@@ -15299,7 +15674,25 @@
         "title": "Admin API",
         "description": "Configuration can be changed at runtime over an HTTP API without a restart."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Caddy — Vendor page (free, open source)",
+          "url": "https://caddyserver.com/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "pulumi",
@@ -15694,7 +16087,25 @@
       "Self-hosting is real maintenance"
     ],
     "targetAudience": "Teams that want consistent code standards enforced rather than argued.",
-    "verdict": "Effective once tuned. Left at defaults it produces warnings people learn to ignore."
+    "verdict": "Effective once tuned. Left at defaults it produces warnings people learn to ignore.",
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "SonarQube — Vendor page (free, open source)",
+          "url": "https://www.sonarsource.com/products/sonarqube/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "dribbble",
@@ -15738,7 +16149,24 @@
         "title": "Job board",
         "description": "Posts design roles to the community audience."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Dribbble — Pricing",
+          "url": "https://dribbble.com/pro",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "behance",
@@ -16890,7 +17318,24 @@
       "Web versions lag the desktop apps"
     ],
     "targetAudience": "Organisations with document-heavy work or existing Windows infrastructure.",
-    "verdict": "Unmatched for serious documents and spreadsheets. The licensing maze is the main cost you do not see coming."
+    "verdict": "Unmatched for serious documents and spreadsheets. The licensing maze is the main cost you do not see coming.",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Microsoft 365 — Pricing",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "dropbox",
@@ -17279,11 +17724,11 @@
     ],
     "cons": [
       "Apple platforms only",
-      "Subscription for the best features",
+      "Subscription required for the advanced features",
       "Overkill for a light calendar user"
     ],
     "targetAudience": "Apple users who live in their calendar.",
-    "verdict": "The best calendar on Apple platforms. Nothing to offer anyone else.",
+    "verdict": "The strongest calendar app on Apple platforms. Nothing to offer anyone else.",
     "evidence": {
       "status": "pricing-page-verified",
       "reviewedAt": "2026-08-31",
@@ -17663,7 +18108,25 @@
         "title": "Daily notes and queries",
         "description": "Captures into a dated page and pulls items back with queries."
       }
-    ]
+    ],
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Logseq — Vendor page (open source)",
+          "url": "https://logseq.com/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor describes the software as open source, so the self-hosted edition is free to use"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page describes the software as open source. It does not print a price; the free-to-self-host reading follows from the licence, not from a published price list.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
+    }
   },
   {
     "slug": "productboard",
@@ -17874,7 +18337,24 @@
       "Less popular, so fewer integrations"
     ],
     "targetAudience": "Teams already using JetBrains tools that want a capable tracker.",
-    "verdict": "Underrated and capable. Its obscurity is the main practical drawback."
+    "verdict": "Underrated and capable. Its obscurity is the main practical drawback.",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "YouTrack — Pricing",
+          "url": "https://www.jetbrains.com/youtrack/buy/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
+    }
   },
   {
     "slug": "zoom-phone",
@@ -19188,10 +19668,19 @@
             "deployment uptime",
             "separate hosted-service usage"
           ]
+        },
+        {
+          "label": "LangChain — Pricing (automated check)",
+          "url": "https://www.langchain.com/pricing",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
         }
       ],
       "limitations": [
-        "Official documentation was reviewed; ToolCompare did not independently measure framework overhead, integration reliability or LangSmith operating cost for a production workload."
+        "Official documentation was reviewed; ToolCompare did not independently measure framework overhead, integration reliability or LangSmith operating cost for a production workload.",
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
     }
   },
@@ -19293,10 +19782,19 @@
             "prompt-injection boundary",
             "hosted-product separation"
           ]
+        },
+        {
+          "label": "LlamaIndex — Pricing (automated check)",
+          "url": "https://www.llamaindex.ai/pricing",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
         }
       ],
       "limitations": [
-        "Official repository documentation was reviewed; ToolCompare did not independently test retrieval quality, integration stability, framework overhead or hosted LlamaParse services."
+        "Official repository documentation was reviewed; ToolCompare did not independently test retrieval quality, integration stability, framework overhead or hosted LlamaParse services.",
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
     }
   },
@@ -19407,10 +19905,19 @@
             "namespace cost behavior",
             "multi-tenant design tradeoffs"
           ]
+        },
+        {
+          "label": "Pinecone — Pricing (automated check)",
+          "url": "https://www.pinecone.io/pricing/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; ToolCompare did not independently benchmark recall, latency, availability or total cost for a production dataset."
+        "Vendor documentation was reviewed; ToolCompare did not independently benchmark recall, latency, availability or total cost for a production dataset.",
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
     }
   },
@@ -19523,10 +20030,19 @@
             "restore version caveat",
             "multi-tenant limitations"
           ]
+        },
+        {
+          "label": "Weaviate — Pricing (automated check)",
+          "url": "https://weaviate.io/pricing",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; ToolCompare did not independently benchmark retrieval quality, memory use, scaling behavior or cloud cost."
+        "Vendor documentation was reviewed; ToolCompare did not independently benchmark retrieval quality, memory use, scaling behavior or cloud cost.",
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
     }
   },
@@ -19995,10 +20511,19 @@
             "browser runtime",
             "code access"
           ]
+        },
+        {
+          "label": "Bolt — Pricing (automated check)",
+          "url": "https://bolt.new/pricing",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; ToolCompare did not independently test generated-code quality, security, browser compatibility, connector permissions, token consumption or hosting reliability."
+        "Vendor documentation was reviewed; ToolCompare did not independently test generated-code quality, security, browser compatibility, connector permissions, token consumption or hosting reliability.",
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
     }
   },
@@ -23314,10 +23839,19 @@
             "copyright conditions",
             "warranty disclaimer"
           ]
+        },
+        {
+          "label": "Fossil — Pricing (automated check)",
+          "url": "https://fossil-scm.org/home/doc/trunk/www/index.wiki",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
         }
       ],
       "limitations": [
-        "Official project documentation was reviewed; ToolCompare did not operate a Fossil server, migrate a repository, test integrations, audit permissions, benchmark synchronization, validate security or exercise backup and disaster recovery."
+        "Official project documentation was reviewed; ToolCompare did not operate a Fossil server, migrate a repository, test integrations, audit permissions, benchmark synchronization, validate security or exercise backup and disaster recovery.",
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
     }
   },
@@ -24810,10 +25344,19 @@
             "open-source runtime",
             "issue and release history"
           ]
+        },
+        {
+          "label": "Uno Platform — Pricing (automated check)",
+          "url": "https://platform.uno/select-subscription/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
         }
       ],
       "limitations": [
-        "Official Uno Platform documentation and source repository were reviewed; ToolCompare did not create or migrate an application, activate Studio, test Hot Reload or Hot Design, validate native APIs, assess accessibility, benchmark rendering, audit NuGet dependencies or run the same UI across supported targets. Commercial Studio terms were not independently quoted."
+        "Official Uno Platform documentation and source repository were reviewed; ToolCompare did not create or migrate an application, activate Studio, test Hot Reload or Hot Design, validate native APIs, assess accessibility, benchmark rendering, audit NuGet dependencies or run the same UI across supported targets. Commercial Studio terms were not independently quoted.",
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
     }
   },
@@ -36085,6 +36628,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Gitea — Vendor page (free, open source)",
+          "url": "https://about.gitea.com/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -36201,6 +36762,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Redmine — Vendor page (free, open source)",
+          "url": "https://www.redmine.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -36722,6 +37301,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "DotProject — Vendor page (free, open source)",
+          "url": "https://www.dotproject.net/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -36826,6 +37423,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "TeamForge — Vendor page (open source)",
+          "url": "https://digital.ai/products/teamforge/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor describes the software as open source, so the self-hosted edition is free to use"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page describes the software as open source. It does not print a price; the free-to-self-host reading follows from the licence, not from a published price list.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37158,6 +37773,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Yoast SEO — Vendor page (free, open source)",
+          "url": "https://wordpress.org/plugins/wordpress-seo/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37178,6 +37811,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "PhpList — Vendor page (free, open source)",
+          "url": "https://www.phplist.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37208,6 +37859,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "AWStats — Vendor page (free, open source)",
+          "url": "https://www.awstats.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37228,6 +37897,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "GoAccess — Vendor page (open source)",
+          "url": "https://goaccess.io/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37416,6 +38103,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "KeeWeb — Vendor page (free, open source)",
+          "url": "https://keeweb.info/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37502,6 +38207,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "TiddlyWiki — Vendor page (free, open source)",
+          "url": "https://tiddlywiki.com/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37545,6 +38268,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Freeplane — Vendor page (free, open source)",
+          "url": "https://docs.freeplane.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37565,6 +38306,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "QOwnNotes — Vendor page (free, open source)",
+          "url": "https://www.qownnotes.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37595,6 +38354,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "TagSpaces — Vendor page (free, open source)",
+          "url": "https://www.tagspaces.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -37725,7 +38502,7 @@
       "Smaller plugin ecosystem"
     ],
     "targetAudience": "Mac users who need serious image editing without a subscription.",
-    "verdict": "The best value image editor on macOS.",
+    "verdict": "The cheapest one-time-purchase image editor on macOS.",
     "evidence": {
       "status": "pricing-page-verified",
       "reviewedAt": "2026-08-31",
@@ -38016,7 +38793,7 @@
       "sources": [
         {
           "label": "Kayako — Pricing",
-          "url": "http://kayako.com/pricing/",
+          "url": "https://kayako.com/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
             "the vendor's published pricing"
@@ -38213,6 +38990,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Dolibarr — Vendor page (free, open source)",
+          "url": "https://www.dolibarr.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {
@@ -38361,6 +39156,23 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "Tally Solutions — Pricing",
+          "url": "https://tallysolutions.com/buy-tally/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+      ]
     }
   },
   {
@@ -38472,6 +39284,24 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "evidence": {
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-03",
+      "sources": [
+        {
+          "label": "LedgerSMB — Vendor page (free, open source)",
+          "url": "https://ledgersmb.org/",
+          "checkedAt": "2026-09-03",
+          "supports": [
+            "the vendor's published pricing: the software is free and open source"
+          ]
+        }
+      ],
+      "limitations": [
+        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
+        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+      ]
     }
   },
   {

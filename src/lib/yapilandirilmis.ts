@@ -50,3 +50,30 @@ export function kirintiSemasi(basamaklar: { ad: string; yol: string }[]) {
     })),
   };
 }
+
+/**
+ * SSS semasi.
+ *
+ * DENETIMDE BULUNDU (2026-09-07): arac sayfasinda SSS bloğu GORUNUYORDU
+ * ama yapilandirilmis veriye HIC konmuyordu. GSC verisi bunun bedelini
+ * gosteriyor: /tools/wix-studio ciplak marka teriminde 24. sirada, ama
+ * "wix studio pricing" 82., "wix studio free" 44. sirada -- yani sayfanin
+ * cevabini verdigi sorularda en kotu durumda. Google sorunun cevabinin
+ * o sayfada oldugunu bilmiyor.
+ *
+ * KURAL (dosyanin geri kalaniyla ayni): buraya yalnizca sayfada GERCEKTEN
+ * gorunen soru-cevaplar konur. Sayfada olmayan bir soruyu semaya koymak
+ * Google'in "yapilandirilmis veri sayfa iceriginle eslesmeli" kuralini
+ * cigner ve zengin sonuc yaptirimi sebebidir.
+ */
+export function sssSemasi(sorular: { soru: string; cevap: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: sorular.map((s) => ({
+      "@type": "Question",
+      name: s.soru,
+      acceptedAnswer: { "@type": "Answer", text: s.cevap },
+    })),
+  };
+}

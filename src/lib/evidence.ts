@@ -13,11 +13,21 @@ export type ToolEvidence = {
       pricing-page-verified ... saticinin fiyat sayfasi OTOMATIK cekildi, o
                                 tarihte yasadigi ve fiyat icerdigi dogrulandi.
                                 Kimse satir satir okumadi.
+      open-source-verified .... saticinin KENDI sayfasi yazilimin acik kaynak
+                                ve ucretsiz oldugunu yaziyor (otomatik cekim).
+                                Acik kaynak surumu kapsar; ayni saticinin
+                                ucretli bulut katmani olabilir.
       observed / tested ....... ToolCompare'in kendi gozlemi / denemesi.
     Otomatik kontrolu "reviewed" diye yazmak, sitenin tek kozunu -- kanitin
     ne kadar kanit oldugunu -- degersizlestirirdi. Ayri durum bu yuzden var.
   */
-  status: "vendor-sourced" | "pricing-page-verified" | "observed" | "tested" | "unknown";
+  status:
+    | "vendor-sourced"
+    | "pricing-page-verified"
+    | "open-source-verified"
+    | "observed"
+    | "tested"
+    | "unknown";
   reviewedAt: string;
   sources: EvidenceSource[];
   limitations?: string[];
@@ -33,6 +43,7 @@ export function toolEvidence(tool: unknown): ToolEvidence | null {
 export function evidenceLabel(status: ToolEvidence["status"]): string {
   if (status === "vendor-sourced") return "Official sources reviewed";
   if (status === "pricing-page-verified") return "Vendor pricing page verified";
+  if (status === "open-source-verified") return "Open source, free — vendor page verified";
   if (status === "tested") return "Tested by ToolCompare";
   if (status === "observed") return "Observed by ToolCompare";
   return "Evidence not attached";

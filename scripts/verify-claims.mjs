@@ -9,7 +9,7 @@ for (const tool of tools) {
   if (!tool.evidence) continue;
   sourced += 1;
   const where = `tool:${tool.slug}`;
-  if (!['vendor-sourced', 'observed', 'tested', 'unknown'].includes(tool.evidence.status)) {
+  if (!['vendor-sourced', 'pricing-page-verified', 'open-source-verified', 'observed', 'tested', 'unknown'].includes(tool.evidence.status)) {
     failures.push(`${where} has an invalid evidence status`);
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(tool.evidence.reviewedAt || '')) {

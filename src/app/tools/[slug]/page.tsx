@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import toolsData from "@/data/tools.json";
-import { kirintiSemasi } from "@/lib/yapilandirilmis";
+import { kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { kategoriSlug } from "@/lib/categories";
 import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki, kanitRel } from "@/lib/outbound";
@@ -168,6 +168,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       ...(tool.category ? [{ ad: tool.category, yol: `/categories/${kategoriSlug(tool.category)}` }] : []),
       { ad: tool.name, yol: `/tools/${tool.slug}` },
     ]),
+    /*
+      SSS semasi yalnizca SSS bolumu sayfada GERCEKTEN cizildiginde
+      eklenir -- render kosulu (sss.length > 0) ile ayni kosul. Tek
+      soruluk bir SSS zengin sonuc almaz, o yuzden esik 2.
+    */
+    ...(sss.length >= 2 ? [sssSemasi(sss)] : []),
   ];
 
   return (
