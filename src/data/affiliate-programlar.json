@@ -1,0 +1,29 @@
+{
+  "_oku": "Satici affiliate programlari hakkinda DOGRULANMIS bilgi. durum: 'var' = program dogrulandi, 'yok' = satici program acmiyor (bedava/acik kaynak/App Store), 'kurumsal' = affiliate degil bayi/partner programi, 'bilinmiyor' = henuz bakilmadi. Buraya yalnizca kaynagi gorulmus bilgi girilir; tahmin 'bilinmiyor' kalir. Anlasma yapilinca ayrica src/data/affiliate.json'a link girilir -- para kazandiran link ORADAN gelir, bu dosya sadece basvuru sirasi icin.",
+  "programlar": {
+    "wix-studio":        { "durum": "var", "ag": "dogrudan", "url": "https://www.wix.com/about/affiliates", "kosul": "Premium abone basina odeme; odeme icin aylik en az $300 birikmeli", "checkedAt": "2026-09-07" },
+    "zoho-crm":          { "durum": "var", "ag": "dogrudan", "url": "https://www.zoho.com/affiliate/", "kosul": "Ilk 12 ayin gelirinin %15'i, tek islemde tavan $25.000; referansin 60 gun kalmasi sarti", "checkedAt": "2026-09-07" },
+    "spyfu":             { "durum": "var", "ag": "dogrudan", "url": "https://www.spyfu.com/affiliates", "kosul": "Program var; komisyon sartlari sayfadan okunamadi", "checkedAt": "2026-09-07" },
+
+    "dbeaver":           { "durum": "yok", "neden": "acik kaynak, ucretsiz Community surumu", "checkedAt": "2026-09-07" },
+    "photopea":          { "durum": "yok", "neden": "tek gelistirici, bedava; Premium $5/ay ve ekstra ozellik vermiyor", "checkedAt": "2026-09-07" },
+    "obsidian":          { "durum": "yok", "neden": "kisisel kullanim bedava, satis eklentileri kucuk", "checkedAt": "2026-09-07" },
+    "screaming-frog":    { "durum": "yok", "neden": "tek yillik lisans, program ilan etmiyor", "checkedAt": "2026-09-07" },
+    "sublime-text":      { "durum": "yok", "neden": "tek seferlik lisans satiyor", "checkedAt": "2026-09-07" },
+    "procreate":         { "durum": "yok", "neden": "yalnizca App Store uzerinden satiliyor", "checkedAt": "2026-09-07" },
+    "affinity-designer": { "durum": "yok", "neden": "Canva altinda tamamen bedava oldu", "checkedAt": "2026-09-07" },
+    "cdnjs":             { "durum": "yok", "neden": "bedava acik kaynak CDN", "checkedAt": "2026-09-07" },
+
+    "openshift":         { "durum": "kurumsal", "neden": "Red Hat; affiliate degil is ortakligi", "checkedAt": "2026-09-07" },
+    "ibm-cloud":         { "durum": "kurumsal", "neden": "IBM; affiliate degil is ortakligi", "checkedAt": "2026-09-07" },
+    "magento":           { "durum": "kurumsal", "neden": "Adobe Commerce teklife bagli satiliyor", "checkedAt": "2026-09-07" },
+    "new-relic":         { "durum": "kurumsal", "neden": "kullanim bazli kurumsal satis", "checkedAt": "2026-09-07" },
+    "qualtrics":         { "durum": "kurumsal", "neden": "kurumsal satis", "checkedAt": "2026-09-07" },
+    "filemaker":         { "durum": "kurumsal", "neden": "Claris; bayi kanali", "checkedAt": "2026-09-07" },
+    "intercom":          { "durum": "kurumsal", "neden": "is ortakligi programi, acik affiliate degil", "checkedAt": "2026-09-07" },
+
+    "cloudflare":        { "durum": "bilinmiyor", "checkedAt": "2026-09-07" },
+    "miro":              { "durum": "bilinmiyor", "checkedAt": "2026-09-07" },
+    "postman":           { "durum": "bilinmiyor", "checkedAt": "2026-09-07" }
+  }
+}

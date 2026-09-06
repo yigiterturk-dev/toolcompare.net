@@ -16,7 +16,8 @@
     "gsc:senkron": "node --experimental-strip-types --no-warnings scripts/gsc-senkron.ts",
     "gsc:indeks": "node --experimental-strip-types --no-warnings scripts/gsc-indeks.ts",
     "gsc:borc": "node --experimental-strip-types --no-warnings scripts/gsc-borc.ts",
-    "gsc:firsat": "node --experimental-strip-types --no-warnings scripts/gsc-firsat.ts"
+    "gsc:firsat": "node --experimental-strip-types --no-warnings scripts/gsc-firsat.ts",
+    "affiliate:sira": "tsx scripts/affiliate-sira.ts"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

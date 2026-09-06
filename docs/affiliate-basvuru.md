@@ -1,5 +1,21 @@
 # ToolCompare — affiliate başvuru sırası
 
+> **ÖLÇÜLDÜ (2026-09-07) — bu listeye tek başına güvenme.**
+> Aşağıdaki sıralama fiyat ve kategori *tahminiyle* yazıldı, gerçek trafikle
+> değil. Ölçüm: araç sayfası gösteriminin yalnızca **%8,5'i** bu listedeki
+> araçlara geliyor. Trafiğe göre gerçek başvuru sırası için:
+> `npx tsx scripts/affiliate-sira.ts`
+>
+> O betiğin bulduğu tablo (90 gün, 7.750 gösterim):
+> program **var** %9,9 · kurumsal satış %15,6 · program **yok** %20,5 ·
+> araştırılmadı %54,0.
+> Yani bugün gelen trafiğin en az beşte biri (bedava/açık kaynak araçlar)
+> hiçbir koşulda para kazandıramaz — DBeaver, Photopea, Obsidian,
+> Screaming Frog, Sublime Text, Procreate, Affinity, cdnjs.
+>
+> Trafiği olan ve programı doğrulanmış üç araç: **Wix Studio**, **Zoho CRM**,
+> **SpyFu**. İlk tıklar gelince başvuru sırası bunlar.
+
 Bu liste `src/data/tools.json`'daki gerçek fiyat ve kategori verisinden çıkarıldı.
 Sıralama aylık fiyata değil, o sektörün komisyon alışkanlığına göre: kurs,
 e-posta pazarlama ve e-ticaret yüksek ve **tekrar eden** komisyon öder;
