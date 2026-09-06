@@ -121,6 +121,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const karsilastirmalar = indekslenebilirAkranlar(tool.slug);
   const fiyat = fiyatDurumu(tool);
   const ucretsizModel = ["bedava", "ucretsiz", "ucretsiz-katman"].includes(tool.fiyatModeli);
+  const bestFor: string[] = Array.isArray(tool.bestFor) ? tool.bestFor.filter(Boolean) : [];
+  const skipIf: string[] = Array.isArray(tool.skipIf) ? tool.skipIf.filter(Boolean) : [];
   const sss: { soru: string; cevap: string }[] = [];
   if (fiyat.karsilastirilabilir) {
     sss.push({
@@ -152,6 +154,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     sss.push({
       soru: `What are the main drawbacks of ${tool.name}?`,
       cevap: `The trade-offs we noted: ${tool.cons.slice(0, 3).join("; ")}.`,
+    });
+  }
+  // "Bunu alma" maddesi sayfada ciziliyorsa SSS'ye de girer -- semaya
+  // yalnizca sayfada GERCEKTEN gorunen soru konur (bkz. sssSemasi).
+  if (skipIf.length) {
+    sss.push({
+      soru: `When should you not use ${tool.name}?`,
+      cevap: `Skip ${tool.name} if: ${skipIf.slice(0, 3).join("; ")}.`,
     });
   }
 
@@ -307,6 +317,51 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <p className="mt-3 text-ink-soft">{targetAud}</p>
                 </section>
               ) : null}
+
+              {/*
+                DENETIMDE BULUNDU (2026-09-07): bestFor/skipIf 140 aracta
+                DOLUYDU ama yalnizca karsilastirma sayfasinda ciziliyordu --
+                arac sayfasinda hic gorunmuyordu. Bu, saticinin kendi
+                sitesinde ASLA bulunmayan tek icerik: "bunu alma" diyen
+                madde. GSC (2026-09-07) en cok gosterim alan 20 sayfanin
+                16'sinda bu alan bos; dolu olan 4'unde de gosterilmiyordu.
+                Elde olani gostermemek yine en pahali eksikti.
+              */}
+              {(bestFor.length > 0 || skipIf.length > 0) && (
+                <section>
+                  <h2 className="text-xl font-semibold">Pick it or skip it</h2>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    {bestFor.length > 0 && (
+                      <div className="rounded-[--radius-card] border border-line bg-surface p-4">
+                        <h3 className="font-sans text-sm font-semibold text-verified">
+                          Pick {tool.name} if
+                        </h3>
+                        <ul className="mt-2 grid list-none gap-2 p-0 text-sm text-ink-soft">
+                          {bestFor.map((item: string, i: number) => (
+                            <li key={i} className="flex gap-2">
+                              <span aria-hidden="true" className="text-verified">+</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {skipIf.length > 0 && (
+                      <div className="rounded-[--radius-card] border border-line bg-surface p-4">
+                        <h3 className="font-sans text-sm font-semibold">Skip it if</h3>
+                        <ul className="mt-2 grid list-none gap-2 p-0 text-sm text-ink-soft">
+                          {skipIf.map((item: string, i: number) => (
+                            <li key={i} className="flex gap-2">
+                              <span aria-hidden="true" className="text-ink-soft">-</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </section>
+              )}
 
               {verdictText ? (
                 <section className="rounded-[--radius-card] border-l-2 border-accent bg-surface p-5">

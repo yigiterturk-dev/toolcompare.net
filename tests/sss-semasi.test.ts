@@ -33,3 +33,15 @@ test("bos soru listesi bos mainEntity verir, patlamaz", () => {
   const s: any = sssSemasi([]);
   assert.deepEqual(s.mainEntity, []);
 });
+
+/**
+ * bestFor/skipIf 140 aracta doluydu ama arac sayfasinda hic ciziliyordu.
+ * "Bunu alma" maddesi saticinin sitesinde bulunmayan tek icerik; sessizce
+ * kaybolmasin diye test.
+ */
+test("arac sayfasi bestFor/skipIf blogunu ciziyor", () => {
+  const s = readFileSync("src/app/tools/[slug]/page.tsx", "utf8");
+  assert.match(s, /Pick it or skip it/, "Pick it or skip it bolumu yok");
+  assert.match(s, /bestFor\.length > 0 \|\| skipIf\.length > 0/, "render kosulu yok");
+  assert.match(s, /When should you not use/, "skipIf SSS sorusu yok");
+});
