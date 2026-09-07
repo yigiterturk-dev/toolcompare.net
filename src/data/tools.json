@@ -2040,7 +2040,7 @@
       "Copilot"
     ],
     "basePrice": 0,
-    "isFlat": true,
+    "isFlat": false,
     "category": "Developer Tools",
     "shortDescription": "Home for developers.",
     "longDescription": "GitHub is the social network of the software world and the largest code-hosting platform on earth. It is a Git-based system that allows millions of developers to collaborate on open-source and private projects. Beyond version control, GitHub Actions manages CI/CD processes, while GitHub Copilot provides AI-driven coding support. Whether you're managing a solo project or a massive engineering team, GitHub is the heart of the modern software development lifecycle where code is stored and reviewed.",
@@ -2087,21 +2087,34 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "GitHub — Pricing",
           "url": "https://github.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with unlimited private repositories, 2,000 Actions minutes/month and 500MB package storage",
+            "Team $4/user/month with 3,000 Actions minutes and 2GB storage",
+            "Enterprise $21/user/month with 50,000 Actions minutes, 50GB storage, SAML SSO and audit log API",
+            "Actions minutes and package storage are free for public repositories"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Anyone who needs private repositories at no cost — the free plan gives unlimited ones",
+      "Open-source projects: Actions minutes and package storage are free for public repos",
+      "Small teams: Team is $4/user/month"
+    ],
+    "skipIf": [
+      "You run heavy CI — the free plan includes 2,000 Actions minutes a month on private repos",
+      "You need SAML SSO or an audit log API; those are Enterprise at $21/user/month",
+      "You store large packages: free gives 500MB, Team 2GB"
+    ]
   },
   {
     "slug": "vercel",
@@ -2283,7 +2296,7 @@
       "Chat",
       "SEO Tools"
     ],
-    "basePrice": 36,
+    "basePrice": 24,
     "isFlat": false,
     "category": "AI Tools",
     "shortDescription": "AI marketing OS.",
@@ -2330,21 +2343,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Copy.ai — Pricing",
           "url": "https://www.copy.ai/prices",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Chat $24/seat/month annual ($288/year), $29 monthly, 5 seats, unlimited words and chat projects",
+            "Growth $1,000/month ($12,000/year) with 75 seats and 20K workflow credits/month",
+            "Expansion $2,000/month with 150 seats and 45K credits",
+            "Scale $3,000/month with 200 seats and 75K credits",
+            "no free plan listed"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Small teams — the entry Chat plan includes 5 seats at $24/seat/mo billed annually",
+      "Marketing teams that want workflows rather than one-off prompts",
+      "Unlimited chat writing: word count is not the limit on any plan"
+    ],
+    "skipIf": [
+      "You want a free plan; Copy.ai lists none",
+      "You need workflow automation — that starts at Growth, which is $1,000/month",
+      "You are one person; the jump from Chat to the next tier is 40x the price"
+    ]
   },
   {
     "slug": "descript",
@@ -3637,7 +3665,7 @@
       "No transaction fees"
     ],
     "basePrice": 29,
-    "isFlat": false,
+    "isFlat": true,
     "category": "E-commerce",
     "shortDescription": "Modern headless commerce.",
     "longDescription": "BigCommerce is the balanced choice between Shopify's speed and Magento's depth. As a SaaS platform, it is exceptionally flexible, especially for 'Headless Commerce' setups. A major advantage is that it takes zero transaction fees, protecting your profit margins. With strong native B2B features and complex product variation support, it shines where standard e-commerce packages fall short for growing brands.",
@@ -3683,21 +3711,38 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "BigCommerce — Pricing",
-          "url": "https://www.bigcommerce.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.bigcommerce.com/essentials/pricing/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Core $29/month annual, $39 monthly",
+            "Growth $79/month annual, $105 monthly",
+            "Scale $299/month annual, $399 monthly",
+            "Performance from $1,499/month billed annually",
+            "zero fees with embedded payment providers; open providers cost 2% of GMV on Core, 1% Growth, 0.6% Scale",
+            "Core caps at $30K TTM GMV then auto-upgrades to Growth; Growth caps at $100K then Scale",
+            "15-day free trial, no credit card"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Stores that will use an embedded payment provider — those carry zero platform fee",
+      "Growing merchants: the plan upgrades itself as sales pass each cap",
+      "Trying it fully: 15-day trial with no card"
+    ],
+    "skipIf": [
+      "You use an open payment provider — Core adds 2% of sales on top of your processor",
+      "You are near a cap: Core auto-upgrades to Growth past $30K trailing-twelve-month sales, Growth to Scale past $100K",
+      "You want to stay on the cheapest plan as you grow; the caps make that impossible"
+    ]
   },
   {
     "slug": "framer",
@@ -5915,7 +5960,7 @@
     "targetAudience": "Backend Engineers and DevOps Professionals.",
     "verdict": "The indispensable speed layer for any modern, high-traffic web application.",
     "color": "#d82c20",
-    "fiyatModeli": "bedava",
+    "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://redis.io",
     "incelendi": true,
     "kriterler": {
@@ -5926,21 +5971,34 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Redis — Pricing",
           "url": "https://redis.io/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Redis open source is free",
+            "Redis Cloud free tier $0 with a 30 MB single database, best-effort SLA and community support",
+            "Essentials from $0.007/hour with a $5/month minimum, 250 MB to 100 GB",
+            "Pro from $0.014/hour with a $200/month minimum, dedicated deployment and up to 99.999% uptime"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Running it yourself — the open-source version costs nothing at any scale",
+      "Prototypes on the hosted service: the free Redis Cloud tier gives a 30 MB database",
+      "Small production caches: Essentials starts at $5/month"
+    ],
+    "skipIf": [
+      "You need real capacity on the hosted plan — the free tier is 30 MB, which is a demo not a cache",
+      "You need an SLA: the free tier is best-effort with community support only",
+      "You need dedicated infrastructure or multi-region: Pro starts at a $200/month minimum"
+    ]
   },
   {
     "slug": "docker",
@@ -5956,7 +6014,7 @@
       "Docker Compose"
     ],
     "basePrice": 0,
-    "isFlat": true,
+    "isFlat": false,
     "category": "Developer Tools",
     "shortDescription": "App containerization.",
     "longDescription": "Docker has fundamentally changed how software is built, shipped, and run. It allows developers to package applications and all their dependencies into standardized units called 'containers.' This ensures that your app runs exactly the same way on your laptop, a staging server, or a production cloud environment. It eliminates the 'it works on my machine' problem forever. By isolating applications from the underlying infrastructure, Docker makes it easy to scale services and manage complex microservices architectures.",
@@ -6003,21 +6061,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Docker — Pricing",
           "url": "https://www.docker.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Personal $0",
+            "Pro $9/user/month annual, $11 monthly",
+            "Team $15/user/month annual, $16 monthly",
+            "Business $24/user/month",
+            "Personal limits: 1 user, 1 private Docker Hub repo, 1 Docker Scout repo, 100 Docker Hub pulls per hour when logged in",
+            "unlimited public repos and storage under fair use"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Individual developers — the Personal plan is free and covers unlimited public repositories",
+      "Open-source work, where public repos carry no storage or count limit",
+      "Small teams comparing seats: Pro is $9/user/mo billed annually"
+    ],
+    "skipIf": [
+      "Your CI pulls images constantly — the free plan is capped at 100 Docker Hub pulls per hour when logged in",
+      "You need more than one private repository; the free plan includes exactly 1",
+      "You are more than one person: Personal is a single-user plan"
+    ]
   },
   {
     "slug": "netlify",
@@ -6146,7 +6219,7 @@
     "targetAudience": "DevOps Engineers and Cloud Architects.",
     "verdict": "The industry-standard tool for managing complex cloud infrastructure through code.",
     "color": "#623ce4",
-    "fiyatModeli": "ucretsiz-katman",
+    "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://www.terraform.io",
     "incelendi": true,
     "kriterler": {
@@ -6154,6 +6227,37 @@
       "mobil": false,
       "acikKaynak": true,
       "sso": true
+    },
+    "bestFor": [
+      "Teams that want infrastructure as code without buying a platform — the CLI itself is free to run",
+      "Trying the hosted version: a $500 HCP trial credit is offered",
+      "Small footprints, where per-resource billing stays cheap"
+    ],
+    "skipIf": [
+      "You are budgeting a flat monthly figure — HCP Terraform bills per managed resource, from $0.10/resource/month on Essentials",
+      "You need policy enforcement and run tasks: Standard starts at $0.47 per resource per month",
+      "You must self-host; that is Terraform Enterprise, quoted by sales"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "HashiCorp — Pricing",
+          "url": "https://www.hashicorp.com/en/pricing",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "HCP Terraform Essentials from $0.10 per month per resource ($0.00013 per hour)",
+            "Standard from $0.47 per month per resource ($0.00064 per hour)",
+            "Enterprise is custom priced",
+            "$500 HCP trial credit to start",
+            "self-managed Terraform Enterprise available for on-premises deployment"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
+      ]
     }
   },
   {
@@ -7328,8 +7432,8 @@
       "Keyword Research",
       "Audit"
     ],
-    "basePrice": 69,
-    "isFlat": false,
+    "basePrice": 49,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "AI content optimization.",
     "longDescription": "Surfer SEO is a modern tool that takes the guesswork out of content creation by using data to tell you exactly what to write. It analyzes the top-ranking pages for your target keyword and provides a real-time 'Content Score' based on keywords, headings, and image counts. Its 'Content Editor' acts like a live coach, suggesting which terms to include to outrank your competitors. It is the premier choice for content writers and SEO specialists who want to ensure every article they publish is perfectly optimized for Google's algorithms.",
@@ -7375,21 +7479,37 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Surfer SEO — Pricing",
           "url": "https://surferseo.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Discovery $49/month with 120 documents and 10 tracked pages",
+            "Standard $99/month with 360 documents, 50 pages and 25 AI prompts refreshed weekly",
+            "Pro $182/month with 200 pages and 50 AI prompts refreshed daily",
+            "Peace of Mind $299/month with unlimited documents and 500 pages",
+            "AI Search Analytics $158/month tracking 100 AI prompts",
+            "no free tier"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Writers optimising individual pages against what already ranks",
+      "Teams tracking AI prompt visibility, which is now part of the product",
+      "Buyers who need volume: unlimited documents start at the top tier"
+    ],
+    "skipIf": [
+      "You publish occasionally — Discovery is $49/month for 120 documents and 10 tracked pages",
+      "You want a free tier; Surfer has none",
+      "You need daily AI prompt refresh: Standard refreshes weekly, daily starts at Pro ($182/month)"
+    ]
   },
   {
     "slug": "vanta",
