@@ -9424,8 +9424,8 @@
     "shortDescription": "Vector interface design for macOS.",
     "websiteUrl": "https://www.sketch.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 12,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": false,
@@ -9447,19 +9447,24 @@
     "verdict": "Still a capable tool, but the industry moved. New teams have little reason to start here.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Sketch — Pricing",
           "url": "https://www.sketch.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Standard $12 per editor/month billed yearly",
+            "Professional $24, Enterprise $44 per editor/month yearly",
+            "Mac-only one-time licence $120 per seat including one year of updates",
+            "no free plan; 30-day trial with no card",
+            "unlimited free viewers in a workspace",
+            "native Mac app and web app; no Windows version listed"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -9475,6 +9480,17 @@
         "title": "Plugin ecosystem",
         "description": "Extends handoff, content generation and export through third-party plugins."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Mac-based design teams — there is a native Mac app plus a web app",
+      "Buying once instead of subscribing: a Mac-only licence is $120 per seat, yours to keep",
+      "Teams with many reviewers: viewers are unlimited and free inside a workspace"
+    ],
+    "skipIf": [
+      "You are on Windows — Sketch ships a Mac app and a web app, and no Windows version",
+      "You want a free tier; there is none, only a 30-day trial",
+      "You need the collaborative workspace on the one-time licence; that is the subscription"
     ]
   },
   {
@@ -11372,7 +11388,7 @@
     "shortDescription": "Collects and resurfaces your highlights.",
     "websiteUrl": "https://readwise.io",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 9.99,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -11395,19 +11411,23 @@
     "verdict": "Genuinely changes what you retain, if you keep the habit. Otherwise it is a subscription for nothing.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Readwise — Pricing",
           "url": "https://readwise.io/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Lite $5.59/month billed annually",
+            "Full $9.99/month billed annually, $12.99 billed monthly",
+            "Reader included with Full, not with Lite",
+            "free for the first 30 days, no permanent free tier",
+            "50% discount for students and academia"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -11423,6 +11443,17 @@
         "title": "Note-app export",
         "description": "Pushes highlights into Notion, Obsidian and other note tools."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Readers who highlight across Kindle, articles and podcasts and want it all in one place",
+      "Students and academics — there is a 50% discount",
+      "Trying it fully first: the first 30 days are free"
+    ],
+    "skipIf": [
+      "You want Reader, the read-it-later app — it comes only with the Full plan at $9.99/mo annual, not with Lite",
+      "You prefer month-to-month; that is $12.99/mo instead of $9.99",
+      "You want a permanent free tier; there is none, only a 30-day trial"
     ]
   },
   {
@@ -13996,7 +14027,7 @@
     "shortDescription": "Cloud accounting for small business.",
     "websiteUrl": "https://www.xero.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 25,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -14019,19 +14050,23 @@
     "verdict": "A solid choice where it is well supported locally. Check regional payroll coverage before committing.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Xero — Pricing",
-          "url": "https://www.xero.com/pricing-plans/",
-          "checkedAt": "2026-08-31",
+          "label": "Xero — Pricing plans",
+          "url": "https://www.xero.com/us/pricing-plans/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Early $25/month regular price, $2.50/month for the first 6 months",
+            "Growing $55/month regular, $5.50 promotional",
+            "Established $90/month regular, $9 promotional",
+            "promotion is 90% off for the first 6 months for new customers",
+            "no free tier"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The headline figures on the page are a limited-time promotion; the regular prices are recorded here as the real cost."
       ]
     },
     "keyFeatures": [
@@ -14047,6 +14082,17 @@
         "title": "App marketplace",
         "description": "Connects payroll, inventory and payment tools to the ledger."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Small businesses that want double-entry accounting without an accountant on staff",
+      "Trying it cheaply: new customers get 90% off for the first 6 months",
+      "Businesses that will grow into bank reconciliation and multi-currency later"
+    ],
+    "skipIf": [
+      "You are budgeting from the advertised figure — $2.50/mo is promotional for 6 months; the Early plan is $25/mo after that",
+      "You need a free tier; Xero has none",
+      "Your volume is low: the Early plan caps how many invoices and bills you can enter"
     ]
   },
   {
@@ -14117,7 +14163,7 @@
     "shortDescription": "Invoicing and accounting for freelancers.",
     "websiteUrl": "https://www.freshbooks.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 23,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -14140,19 +14186,24 @@
     "verdict": "Well suited to service billing. Product businesses need proper accounting instead.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "FreshBooks — Pricing",
           "url": "https://www.freshbooks.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Lite $23/mo regular, $2.30/mo promotional; 5 billable clients",
+            "Plus $43/mo regular, $4.30 promotional; 50 clients",
+            "Premium $70/mo regular, $7 promotional; unlimited clients",
+            "promotion is 90% off for 3 months",
+            "team members $11/mo per user on all plans",
+            "30-day money-back guarantee"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The advertised figures are a 3-month promotion; the regular prices are recorded here as the real cost."
       ]
     },
     "keyFeatures": [
@@ -14168,6 +14219,17 @@
         "title": "Expense capture",
         "description": "Imports bank transactions and attaches receipts to expenses."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Freelancers and small firms that invoice a handful of clients",
+      "Anyone who wants invoicing, expenses and time tracking in one place rather than three",
+      "Testing cheaply: new accounts get 90% off for the first three months"
+    ],
+    "skipIf": [
+      "You are budgeting from the advertised price — $2.30/mo is promotional for 3 months; Lite is $23/mo after that",
+      "You have a team: every extra member is $11/mo on top of the plan",
+      "You have more than 5 clients on Lite — that is the plan's cap, and Plus is $43/mo"
     ]
   },
   {
@@ -14495,8 +14557,8 @@
     "shortDescription": "HR software for small and mid-size companies.",
     "websiteUrl": "https://www.bamboohr.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 10,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": true,
@@ -14518,19 +14580,23 @@
     "verdict": "A comfortable fit for its size band. Larger organisations outgrow it, smaller ones do not need it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "BambooHR — Pricing",
           "url": "https://www.bamboohr.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Core $10 per employee/month, Pro $17, Elite $25",
+            "companies with 25 or fewer employees pay a flat $250/month",
+            "no free tier",
+            "15% bundle discount when combining Payroll and Benefits Administration",
+            "additional 15% nonprofit discount"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -14546,6 +14612,17 @@
         "title": "Onboarding workflows",
         "description": "Runs new-hire paperwork and task checklists before the start date."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Companies over 25 employees, where per-employee pricing kicks in and scales down with headcount",
+      "HR teams that want onboarding, time off and records in one system",
+      "Nonprofits — there is an additional 15% discount"
+    ],
+    "skipIf": [
+      "You have 25 or fewer employees — pricing there is a $250/month flat rate, not $10 per head",
+      "You want a free tier; BambooHR has none",
+      "You only need payroll; the bundle discount assumes you are buying more than one module"
     ]
   },
   {
@@ -14933,8 +15010,8 @@
     "shortDescription": "Lightweight relationship CRM.",
     "websiteUrl": "https://www.folk.app",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 24,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": false,
@@ -14956,19 +15033,23 @@
     "verdict": "A relief if traditional CRMs feel heavy. Sales teams needing forecasting should look elsewhere.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "folk — Pricing",
           "url": "https://www.folk.app/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Standard $30/member/month monthly, $24 billed annually",
+            "Premium $60/member/month monthly, $48 annually",
+            "Enterprise from $100/member/month, $80 annually",
+            "no free tier; two-week free trial without a card",
+            "Standard limits: 500 email lookups/month, 2,000 AI fields, 2,000 messages/member/month, 1 account sync"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -14984,6 +15065,17 @@
         "title": "Shared contact groups",
         "description": "Lets a team maintain one enriched list instead of separate address books."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Small teams that want a CRM built around relationships rather than a sales pipeline",
+      "Trying it properly first — a two-week trial unlocks premium features with no card",
+      "Teams that use contact enrichment; 500 email lookups a month are included on Standard"
+    ],
+    "skipIf": [
+      "You want a free tier — folk has none, only a two-week trial",
+      "You need volume enrichment: Standard caps email lookups at 500/month and messages at 2,000/member",
+      "You are one person and price-sensitive; $24/member/mo annual is not an entry-level CRM price"
     ]
   },
   {
@@ -16261,19 +16353,23 @@
     "verdict": "Genuinely reduces release risk. Small teams can get most of the benefit from a much simpler solution.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "LaunchDarkly — Pricing",
           "url": "https://launchdarkly.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Developer plan $0/mo forever with unlimited seats",
+            "free plan limits: 5 service connections, 1,000 client-side MAU/month, 5,000 AI runs/month",
+            "Foundation $10 per service connection/month billed yearly plus $8.33 per 1k client-side MAU/month",
+            "no platform or seat fees on Foundation",
+            "Enterprise adds workflows, approvals and SCIM, quoted by sales"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -16289,6 +16385,17 @@
         "title": "Experimentation",
         "description": "Measures metrics between flag variations to compare outcomes."
       }
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Feature flagging without a seat bill — the free Developer plan has unlimited seats",
+      "Small products that fit inside 1,000 client-side monthly active users",
+      "Teams that want usage-based billing instead of per-developer licences"
+    ],
+    "skipIf": [
+      "Your app has real user volume — past 1,000 client-side MAU/month you are on pay-as-you-go at $8.33 per 1k MAU",
+      "You need more than 5 service connections on the free plan",
+      "You need approvals, workflows or SCIM; those are Enterprise, quoted by sales"
     ]
   },
   {
@@ -18936,19 +19043,22 @@
     "verdict": "Well designed for its purpose. Larger contact centres need heavier tooling.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Aircall — Pricing",
           "url": "https://aircall.io/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Essentials and Professional plans require a 3-user minimum",
+            "Custom plan requires a 25-user minimum",
+            "per-licence prices are not displayed on the public pricing page",
+            "no free tier; 50 free AI Voice Agent minutes per account per month"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Aircall does not publish per-seat prices publicly, so no figure is claimed here."
       ]
     },
     "keyFeatures": [
@@ -18964,6 +19074,17 @@
         "title": "Call monitoring",
         "description": "Supports listening in, whispering and barging on live calls for coaching."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Sales and support teams that want a phone system wired into their CRM",
+      "Teams of at least three, which is where licensing starts",
+      "Companies that want call handling and analytics rather than a raw VoIP line"
+    ],
+    "skipIf": [
+      "You are one or two people — every plan carries a 3-user minimum",
+      "You want to compare on price before talking to anyone; Aircall does not publish per-seat figures on its pricing page",
+      "You need a free tier or open trial; neither is offered, only AI voice-agent minutes"
     ]
   },
   {
@@ -19003,7 +19124,7 @@
     "shortDescription": "Managed WordPress and application hosting.",
     "websiteUrl": "https://kinsta.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 35,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -19026,19 +19147,23 @@
     "verdict": "Worth it when downtime costs money. Personal sites do not need this tier.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Kinsta — Pricing",
-          "url": "https://kinsta.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "label": "Kinsta — Plans",
+          "url": "https://kinsta.com/plans/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "entry Single plan $35/month, $30/month billed annually",
+            "entry plan includes 1 WordPress installation and 125GB CDN bandwidth",
+            "multi-site plans from WP 2 at $70/month to WP 40 at $450/month",
+            "first month free on the lowest tiers",
+            "no free plan"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -19054,6 +19179,17 @@
         "title": "Included backups and CDN",
         "description": "Provides daily backups and content delivery without add-ons."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "WordPress sites that need managed hosting rather than a cheap shared plan",
+      "Trying it without risk — the entry plans include the first month free",
+      "Agencies: multi-site plans start at 2 installs and scale to 40"
+    ],
+    "skipIf": [
+      "You are price-shopping against shared hosting — the entry plan is $35/mo ($30 annual), not a few dollars",
+      "You need a free tier; there is none, only a first month free on the lowest plans",
+      "You host something other than WordPress"
     ]
   },
   {
@@ -19379,7 +19515,7 @@
     "shortDescription": "Simple storefront for creators.",
     "websiteUrl": "https://sellfy.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 22,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -19402,19 +19538,24 @@
     "verdict": "Fine for a simple catalogue. Growing brands outgrow the storefront limits.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Sellfy — Pricing",
           "url": "https://sellfy.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Starter $29/mo monthly, $22/mo annual, up to $10k annual sales",
+            "Business $79/mo monthly, $59/mo annual, up to $50k",
+            "Premium $159/mo monthly, $119/mo annual, up to $200k",
+            "Sellfy charges no transaction fee; payment processors charge 2.9% + 30c",
+            "2% overage fee above the plan's sales limit",
+            "14-day free trial, no free tier"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -19430,6 +19571,17 @@
         "title": "Print on demand",
         "description": "Adds physical merchandise fulfilled by a partner."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Creators who want a storefront without a transaction cut — Sellfy takes none",
+      "Sellers under $10k a year, which is what the entry plan covers",
+      "Trying it first: 14-day free trial"
+    ],
+    "skipIf": [
+      "You want a free tier; Sellfy has none, only a 14-day trial",
+      "You will pass your plan's sales cap — Starter covers $10k/year and overage is charged at 2%",
+      "You are comparing on the vendor cut alone; Stripe or PayPal still take 2.9% + 30¢"
     ]
   },
   {
@@ -37399,19 +37551,22 @@
     "verdict": "Beautifully simple if the outline model fits your head. If it does not, nothing will convince you.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Workflowy — Pricing",
           "url": "https://workflowy.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free plan with 100 nodes per month and 100MB file uploads, all features included",
+            "Pro $8.99/month monthly or $6.99/month billed annually",
+            "Pro removes node and upload limits",
+            "7-day free trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "kriterler": {
@@ -37437,6 +37592,17 @@
         "title": "Keyboard-driven editing",
         "description": "Restructures large outlines without leaving the keyboard."
       }
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Outlining and note-taking where an infinitely nested list is the whole point",
+      "Light users — the free plan includes every feature, only the volume is capped",
+      "Trying Pro properly: there is a 7-day trial"
+    ],
+    "skipIf": [
+      "You write a lot — the free plan allows 100 new nodes per month, which a heavy week uses up",
+      "You upload files often; free storage is capped at 100MB",
+      "You want a visual board or calendar; this is a text outliner"
     ]
   },
   {
