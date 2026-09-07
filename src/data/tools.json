@@ -5000,21 +5000,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Squarespace — Pricing",
           "url": "https://www.squarespace.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "four plans: Personal, Business, Commerce Basic, Commerce Advanced",
+            "14-day free trial with no credit card",
+            "up to 36% off with annual billing plus one year of free domain registration",
+            "store transaction fees: Personal 2%, Business and Commerce plans 0%",
+            "digital content and membership fees: Personal 7%, Business 5%, Commerce Basic 1%, Commerce Advanced 0%"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The plan table renders its prices in the browser; no monthly figure could be read, so none is claimed."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Design-led sites where the templates do most of the work",
+      "Annual billing — the vendor lists up to 36% off plus a free domain for the first year",
+      "Trying it properly: 14 days free with no card"
+    ],
+    "skipIf": [
+      "You sell on the cheapest plan — Personal takes a 2% cut on store sales and 7% on digital content",
+      "You sell memberships or digital products: the cut only reaches 0% on Commerce Advanced",
+      "You want to move the site elsewhere later; it is a hosted platform"
+    ]
   },
   {
     "slug": "carrd",
@@ -5337,8 +5352,8 @@
       "Funnels",
       "Communities"
     ],
-    "basePrice": 149,
-    "isFlat": false,
+    "basePrice": 143,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "Best for online courses.",
     "longDescription": "Kajabi is an 'all-in-one' platform for educators and coaches. It replaces the need for separate course hosts, email tools, and page builders. Its primary strength is its 'sales funnel' capability, automating the entire process from a user seeing an ad to buying a course. It offers a premium experience for both the educator and the student.",
@@ -5384,21 +5399,38 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Kajabi — Pricing",
-          "url": "https://www.kajabi.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://kajabi.com/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Basic $143/month annual, $179 monthly",
+            "Growth $199/month annual, $249 monthly",
+            "Pro $399/month annual, $499 monthly",
+            "processing fees 2.9% + $0.30 on Basic, 2.8% on Growth, 2.7% on Pro",
+            "third-party payment provider fee 2% Basic, 1% Growth, 0.5% Pro",
+            "Basic limits: 5 products, 2,500 contacts, 2 admin users",
+            "30-day free trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Education businesses already earning, where one platform replaces four subscriptions",
+      "Creators who want courses, email, payments and a site without stitching tools together",
+      "Trying it properly: a full month free"
+    ],
+    "skipIf": [
+      "You are starting out — Basic is $143/mo billed annually ($179 monthly), before you sell anything",
+      "You use an outside payment provider: Kajabi adds 2% on Basic on top of card fees",
+      "You have a wide catalogue: Basic caps at 5 products, 2,500 contacts and 2 admin users"
+    ]
   },
   {
     "slug": "skool",
@@ -5413,7 +5445,7 @@
       "Community",
       "Leaderboards"
     ],
-    "basePrice": 99,
+    "basePrice": 9,
     "isFlat": true,
     "category": "Productivity",
     "shortDescription": "Community with courses.",
@@ -5460,21 +5492,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Skool — Pricing",
           "url": "https://www.skool.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Hobby $9/month with a 10% transaction fee",
+            "Pro $99/month with a 2.9% transaction fee",
+            "unlimited members on both tiers",
+            "free trial available"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Community builders who want one flat price regardless of member count — both tiers allow unlimited members",
+      "Starting cheap: the Hobby tier is $9/month",
+      "Communities that charge members, where the Pro tier's lower cut pays for itself"
+    ],
+    "skipIf": [
+      "You charge your members on the Hobby tier — Skool takes 10% of every payment there",
+      "You want a free tier; there is none, only a trial",
+      "You need advanced admin tooling; that is the $99/month Pro tier"
+    ]
   },
   {
     "slug": "azure",
@@ -6367,8 +6413,8 @@
       "Coaching",
       "Bulk Import"
     ],
-    "basePrice": 39,
-    "isFlat": false,
+    "basePrice": 29,
+    "isFlat": true,
     "category": "E-commerce",
     "shortDescription": "Top course platform.",
     "longDescription": "Teachable is a leading online course platform that allows creators to build and sell professional-grade educational content. It focuses on providing a world-class student experience with its clean, structured course player and native payment processing. Teachable handles all the technical aspects like hosting and tax calculations, allowing you to focus on teaching. With powerful features for coaching and bulk user management, it is a trusted choice for both independent educators and large training organizations.",
@@ -6414,21 +6460,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Teachable — Pricing",
-          "url": "https://www.teachable.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://teachable.com/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Starter $29/month annual, $39 monthly, 7.5% transaction fee",
+            "Builder $69/month annual, $89 monthly, 0% transaction fee",
+            "Growth $139/month annual, $189 monthly, 0% transaction fee",
+            "processing fees still apply: 2.9% + 30c US, 3.9% + 30c international",
+            "no free plan; 7-day trial and 30-day money-back guarantee"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Course creators who want hosting, payments and a student experience in one place",
+      "Sellers with enough volume to justify skipping the transaction cut",
+      "Trying it first: 7-day trial plus a 30-day money-back guarantee"
+    ],
+    "skipIf": [
+      "You start on Starter and sell steadily — Teachable takes 7.5% of every sale on top of card fees",
+      "You want a free plan; there is none, only a trial",
+      "You are comparing on the sticker price: dropping the 7.5% cut means Builder at $69/mo annual"
+    ]
   },
   {
     "slug": "convertkit",
@@ -6443,8 +6504,8 @@
       "Landing Pages",
       "Commerce"
     ],
-    "basePrice": 9,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "Email for creators.",
     "longDescription": "ConvertKit (now Kit) is an email marketing platform specifically designed for professional creators—bloggers, YouTubers, and podcasters. It replaces the complexity of traditional corporate email tools with a clean, subscriber-centric approach. Its primary strength lies in its intuitive visual automation builder, allowing you to create complex marketing funnels with ease. With built-in landing pages and e-commerce capabilities, ConvertKit helps you build your audience and monetize your work without needing multiple tools.",
@@ -6490,21 +6551,34 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "ConvertKit — Pricing",
+          "label": "Kit (ConvertKit) — Pricing",
           "url": "https://kit.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0/month up to 10,000 subscribers",
+            "Creator $33/month, $390/year",
+            "Pro $66/month, $790/year"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Creators starting a list — the free plan runs to 10,000 subscribers, which is unusually generous",
+      "Newsletter writers who want automation without an enterprise marketing suite",
+      "Annual billing: Creator drops from $33/mo to $32.50 ($390/year)"
+    ],
+    "skipIf": [
+      "You need automation and integrations on the free plan; the free tier is about sending, not sequences",
+      "You are past 10,000 subscribers — that is where the free plan ends",
+      "You want a cheap entry above free; the first paid tier is $33/month"
+    ]
   },
   {
     "slug": "activecampaign",
@@ -6566,21 +6640,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "ActiveCampaign — Pricing",
           "url": "https://www.activecampaign.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Starter, Plus, Pro and Enterprise tiers",
+            "Starter and Plus include 1 user, Pro 3 users, Enterprise 5",
+            "pricing scales by contact band from under 500 to over 250,000",
+            "send limits are 10x the contact limit on Starter and Plus, 15x on Enterprise",
+            "14-day trial with no credit card; no permanent free plan"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The vendor's pricing calculator renders figures in the browser and returned no amounts; only the plan structure is claimed here."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Marketers who need real automation rather than a broadcast newsletter tool",
+      "Small lists — pricing starts in the under-500-contact band",
+      "Trying it first: 14-day trial with no card"
+    ],
+    "skipIf": [
+      "You want a permanent free plan; ActiveCampaign has none",
+      "You have a team: Starter and Plus include ONE user; three users start at Pro",
+      "You are budgeting a fixed figure — the price moves with your contact count, band by band"
+    ]
   },
   {
     "slug": "plaid",
