@@ -19,7 +19,23 @@ export const TABAN_TARIH = "2026-09-07";
 
 type Kaynak = { checkedAt?: string };
 type Kanit = { reviewedAt?: string; sources?: Kaynak[] };
-export type TarihliArac = { evidence?: Kanit; fiyatKontrolTarihi?: string };
+
+/*
+  Cagiranlar farkli `Arac` tiplerini tutuyor (compare.ts, categories.ts) ve
+  hicbiri `evidence` alanini beyan etmiyor. Yapisal tip esitligi aramak
+  yerine alan OKUNUYOR: tarih metadata'si istege bagli, olmayinca taban
+  tarihe dusuyoruz. Bu yuzden girdi genis, cikti dar.
+*/
+export type TarihliArac = unknown;
+
+function kanitOku(t: unknown): { kanit?: Kanit; fiyatTarihi?: string } {
+  if (!t || typeof t !== "object") return {};
+  const o = t as { evidence?: unknown; fiyatKontrolTarihi?: unknown };
+  return {
+    kanit: (o.evidence && typeof o.evidence === "object" ? o.evidence : undefined) as Kanit | undefined,
+    fiyatTarihi: typeof o.fiyatKontrolTarihi === "string" ? o.fiyatKontrolTarihi : undefined,
+  };
+}
 
 const GECERLI = /^\d{4}-\d{2}-\d{2}/;
 
@@ -32,10 +48,11 @@ export function enYeni(...tarihler: (string | undefined)[]): string {
 /** Bir aracin sayfasinin en son ne zaman gercekten degistigi. */
 export function aracTarihi(t: TarihliArac | undefined): string {
   if (!t) return TABAN_TARIH;
+  const { kanit, fiyatTarihi } = kanitOku(t);
   return enYeni(
-    t.fiyatKontrolTarihi,
-    t.evidence?.reviewedAt,
-    ...(t.evidence?.sources ?? []).map((k) => k.checkedAt),
+    fiyatTarihi,
+    kanit?.reviewedAt,
+    ...(kanit?.sources ?? []).map((k) => k.checkedAt),
   );
 }
 
@@ -43,7 +60,7 @@ export function aracTarihi(t: TarihliArac | undefined): string {
  * Turetilmis sayfa (karsilastirma, alternatifler, kategori) icerdigi
  * araclardan olusur; en yeni arac tarihi onun da tarihidir.
  */
-export function turetilmisTarih(araclar: (TarihliArac | undefined)[]): string {
+export function turetilmisTarih(araclar: readonly (TarihliArac | undefined)[]): string {
   return enYeni(...araclar.map(aracTarihi));
 }
 

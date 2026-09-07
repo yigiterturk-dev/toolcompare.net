@@ -43,3 +43,17 @@ test("ayni veri ayni tarihi verir (build tekrari sitemap'i degistirmez)", () => 
   const t = { evidence: { reviewedAt: "2026-09-07", sources: [{ checkedAt: "2026-09-07" }] } };
   assert.equal(aracTarihi(t), aracTarihi(t));
 });
+
+/**
+ * degisiklik.ts once dar bir arac tipi bekliyordu; cagiran dosyalarin
+ * kendi `Arac` tipleri `evidence` alanini beyan etmedigi icin build
+ * TS2345/TS2559 ile kiriliyordu (tsc calistirilmadan commit edildi).
+ * Girdi genis, cikti dar olmali.
+ */
+test("aracTarihi beyan edilmemis sekilleri de okuyabiliyor", () => {
+  const gevsek: unknown = { slug: "x", evidence: { reviewedAt: "2026-09-01" } };
+  assert.equal(aracTarihi(gevsek), "2026-09-01");
+  assert.equal(aracTarihi({ slug: "y" }), TABAN_TARIH);
+  assert.equal(aracTarihi("saçma"), TABAN_TARIH);
+  assert.equal(aracTarihi(null), TABAN_TARIH);
+});
