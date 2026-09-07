@@ -492,8 +492,8 @@
       "Hosting",
       "Interactions"
     ],
-    "basePrice": 14,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Build custom sites visually.",
     "longDescription": "Webflow empowers you to create high-quality, professional websites without writing code manually, while retaining the power of HTML, CSS, and JavaScript. Unlike traditional drag-and-drop tools, Webflow provides a visual canvas that mirrors professional code structures. With a powerful integrated CMS and high-performance hosting, you can build everything from corporate sites to complex e-commerce stores. Because it produces clean, semantic code, it is unbeatable for SEO and site performance.",
@@ -536,6 +536,38 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Designers who want production HTML/CSS without writing it",
+      "Trying a real site free — the Starter plan publishes on a webflow.io subdomain",
+      "Static sites: Basic is $15/month per site billed yearly"
+    ],
+    "skipIf": [
+      "You need your own domain or real traffic — Starter allows 1,000 monthly visits and 2 static pages",
+      "You need a blog or any dynamic content: Basic explicitly excludes CMS and ecommerce features",
+      "You are pricing per site, not per seat; workspace seats are billed separately on top"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Webflow — Plans and pricing",
+          "url": "https://webflow.com/pricing",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "free Starter site plan: 1,000 monthly visits, 50 CMS items, 2 static pages, published on a webflow.io subdomain",
+            "Basic site plan $15/month yearly, $25/month monthly, 300 static pages",
+            "Basic excludes CMS and ecommerce features",
+            "CMS and Business plans combined into a Premium site plan with 20,000 CMS items",
+            "prices are per site, per month, in USD, plus tax"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
+      ]
     }
   },
   {
@@ -1599,8 +1631,8 @@
       "Session Recordings",
       "Surveys"
     ],
-    "basePrice": 39,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "User behavior tracking.",
     "longDescription": "Hotjar is an analytics tool that visualizes user behavior, showing you how people truly experience your site. While Google Analytics tells you 'what' happened (number of visits), Hotjar explains 'why' (why they didn't click the button). Through heatmaps, you can see where users click most, and session recordings allow you to watch their journey like a video. It provides invaluable insights for product managers and UX designers aiming to increase conversion rates and improve user experience.",
@@ -1646,22 +1678,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Hotjar — Pricing",
-          "url": "https://contentsquare.com/pricing/?utm_source=hotjar-pricing",
-          "checkedAt": "2026-08-31",
+          "label": "Hotjar — Plans",
+          "url": "https://help.hotjar.com/hc/en-us/articles/36819964833169-Hotjar-Plans",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Hotjar Basic free plan captures 35 daily sessions",
+            "Plus $39/month, Business $99/month",
+            "Hotjar is migrating to the Contentsquare platform; Plus, Business and Scale merge into the Contentsquare Growth plan",
+            "the Contentsquare free plan offers 5,000 monthly sessions"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to contentsquare.com."
+        "hotjar.com/pricing now redirects to Contentsquare and does not show Hotjar's own figures; these come from Hotjar's documentation."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Seeing where visitors click and where they give up, without a paid analytics contract",
+      "Small sites that fit the free session allowance",
+      "Teams that want recordings and heatmaps rather than a full analytics platform"
+    ],
+    "skipIf": [
+      "You have real traffic — the free Hotjar Basic plan captures 35 sessions a DAY",
+      "You are planning long term: Hotjar is being folded into Contentsquare and the Plus, Business and Scale plans are being merged",
+      "You want funnel and revenue analytics; this is behavioural recording"
+    ]
   },
   {
     "slug": "todoist",
@@ -1828,7 +1873,7 @@
       "Health Benefits",
       "Compliance"
     ],
-    "basePrice": 40,
+    "basePrice": 49,
     "isFlat": false,
     "category": "HR Software",
     "shortDescription": "Modern HR and payroll.",
@@ -1872,6 +1917,37 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Small US teams that want full-service payroll with tax filing handled",
+      "Businesses that would rather pay a base fee plus per-person than a per-seat platform",
+      "Teams that need HR basics bundled with payroll"
+    ],
+    "skipIf": [
+      "You are comparing a single figure — Simple is $49/month PLUS $6 per person, so a 10-person team is $109/month",
+      "You want a free tier; Gusto has none",
+      "You are looking at Premium: the vendor will not bill it until you have spoken to their team"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Gusto — Pricing",
+          "url": "https://gusto.com/product/pricing",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Simple plan from $49/month plus $6/month per person",
+            "Simple includes full-service payroll, employee self-service and core HR",
+            "Plus and Premium add advanced HR, performance and compliance features",
+            "Premium pricing is discussed with the Gusto team before billing"
+          ]
+        }
+      ],
+      "limitations": [
+        "Gusto's pricing page blocked an automated read (HTTP 403); these figures come from the vendor's own published summaries. Plus and Premium base fees are not claimed."
+      ]
     }
   },
   {
@@ -5921,23 +5997,35 @@
       "sso": false
     },
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "PostgreSQL — Vendor page (free, open source)",
-          "url": "https://www.postgresql.org/about/",
-          "checkedAt": "2026-09-03",
+          "label": "PostgreSQL — Licence",
+          "url": "https://www.postgresql.org/about/licence/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "released under the PostgreSQL License, a liberal open source licence similar to BSD or MIT",
+            "permission to use, copy, modify and distribute for any purpose, without fee and without a written agreement",
+            "free for commercial use with no fees or restrictions",
+            "provided AS-IS with no obligation for maintenance, support, updates or modifications"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Any project, commercial included — the licence charges no fee and requires no agreement",
+      "Teams that refuse vendor lock-in: you can use, modify and redistribute it freely",
+      "Long-term bets: the development group has committed to keeping it open source"
+    ],
+    "skipIf": [
+      "You want a vendor to call when it breaks — the software is provided as-is with no support obligation",
+      "You need managed hosting; that is a separate paid service from a cloud provider, not from PostgreSQL",
+      "You need a licence warranty or indemnity; the licence explicitly disclaims liability"
+    ]
   },
   {
     "slug": "redis",
