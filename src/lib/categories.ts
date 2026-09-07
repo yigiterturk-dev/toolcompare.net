@@ -18,18 +18,13 @@
 import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
 
-export type Arac = {
-  slug: string;
-  name: string;
-  category?: string;
-  ease?: number;
-  featuresScore?: number;
-  basePrice?: number;
-  isFlat?: boolean;
-  shortDescription?: string;
-  /** Incelemede elle yazilmis artilar; kategori listesinde ilki gosteriliyor. */
-  pros?: string[];
-};
+/*
+  Arac tipi artik src/lib/arac.ts'te tek yerde duruyor. Once bu dosya
+  kendi kismi surumunu yaziyordu; dort dosyada dort farkli tanim vardi
+  ve aralarinda gecis yaparken `as any` gerekiyordu.
+*/
+import type { Arac } from "./arac";
+export type { Arac };
 
 export type Kategori = {
   slug: string;
@@ -71,8 +66,8 @@ function baslikYap(ad: string): string {
 
 /** Siralama fiyata gore; karsilastirilamayanlar sona, ada gore. */
 function siralamaKarsilastir(a: Arac, b: Arac): number {
-  const da = fiyatDurumu(a as any);
-  const db = fiyatDurumu(b as any);
+  const da = fiyatDurumu(a);
+  const db = fiyatDurumu(b);
   const ga = da.karsilastirilabilir && da.aylik !== null ? 0 : 1;
   const gb = db.karsilastirilabilir && db.aylik !== null ? 0 : 1;
   if (ga !== gb) return ga - gb;

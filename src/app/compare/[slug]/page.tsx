@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools.json"
+import type { Arac, Kanit, Kaynak, OneCikanOzellik } from "@/lib/arac";
 import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
@@ -30,13 +31,15 @@ export function generateStaticParams() {
   return karsilastirmaCiftleri().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: any): Promise<Metadata> {
+type SayfaParametresi = { params: Promise<{ slug: string }> }
+
+export async function generateMetadata({ params }: SayfaParametresi): Promise<Metadata> {
   const resolvedParams = await params;
   const parts = resolvedParams.slug.split("-vs-");
   if (parts.length !== 2) return { title: "Comparison" };
   
-  const tool1 = (toolsData as any[]).find((t) => t.slug === parts[0]);
-  const tool2 = (toolsData as any[]).find((t) => t.slug === parts[1]);
+  const tool1 = (toolsData as Arac[]).find((t) => t.slug === parts[0]);
+  const tool2 = (toolsData as Arac[]).find((t) => t.slug === parts[1]);
   
   if (!tool1 || !tool2) return { title: "Comparison" };
 
@@ -58,7 +61,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   const canonical = `/compare/${kanonikSlug(tool1.slug, tool2.slug)}`;
 
   // Iki tarafi da incelenmemis cift indekslenmez; sayfa yine calisir.
-  const indekslensin = ciftIndekslenebilirMi(tool1 as any, tool2 as any);
+  const indekslensin = ciftIndekslenebilirMi(tool1, tool2);
 
   return {
     title,
@@ -70,13 +73,13 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   };
 }
 
-export default async function ComparisonPage({ params }: any) {
+export default async function ComparisonPage({ params }: SayfaParametresi) {
   const resolvedParams = await params;
   const parts = resolvedParams.slug.split("-vs-");
   if (parts.length !== 2) notFound();
 
-  const tool1 = (toolsData as any[]).find((t) => t.slug === parts[0]);
-  const tool2 = (toolsData as any[]).find((t) => t.slug === parts[1]);
+  const tool1 = (toolsData as Arac[]).find((t) => t.slug === parts[0]);
+  const tool2 = (toolsData as Arac[]).find((t) => t.slug === parts[1]);
 
   if (!tool1 || !tool2) notFound();
 
@@ -98,10 +101,10 @@ export default async function ComparisonPage({ params }: any) {
     turetiliyor; sayfa metninin cift degistikce degismesini saglayan tek
     parca bu. Ayrim yoksa bos doner ve satir hic basilmaz.
   */
-  const ayrim = ayrimCumlesi(tool1 as any, tool2 as any);
+  const ayrim = ayrimCumlesi(tool1, tool2);
 
   // Yalnizca akranlar: sitemap disi bir sayfaya link verilmemeli.
-  const ilgili = akranlar(tool1.slug).filter((t: any) => t.slug !== tool2.slug);
+  const ilgili = akranlar(tool1.slug).filter((t: Arac) => t.slug !== tool2.slug);
 
   /*
     Karsilastirma satiri. Onceki surumde `type="score"` dali `{val1}%`
@@ -199,11 +202,11 @@ export default async function ComparisonPage({ params }: any) {
           Sayfa basina ~90 kelimelik, araca OZGU metin buydu; sablon
           tekrarini seyreltmenin en ucuz yolu onu basmak.
         */}
-        {[tool1, tool2].some((t: any) => t.longDescription) && (
+        {[tool1, tool2].some((t: Arac) => t.longDescription) && (
           <section className="mt-10 grid gap-6 sm:grid-cols-2">
             {[tool1, tool2]
-              .filter((t: any) => t.longDescription)
-              .map((t: any) => (
+              .filter((t: Arac) => t.longDescription)
+              .map((t: Arac) => (
                 <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
                   <h2 className="text-base font-semibold">What {t.name} is</h2>
                   <p className="mt-2 text-sm text-ink-soft">{t.longDescription}</p>
@@ -255,7 +258,7 @@ export default async function ComparisonPage({ params }: any) {
                   }
                 />
                 {KRITER_SIRA.map((k) => {
-                  const isaret = (t: any) => {
+                  const isaret = (t: Arac) => {
                     const v = t.kriterler?.[k];
                     if (v === true) return <span className="text-verified">Yes</span>;
                     if (v === false) return <span className="text-ink-muted">No</span>;
@@ -298,15 +301,15 @@ export default async function ComparisonPage({ params }: any) {
           yine hicbir yerde gosterilmiyordu. Tablo yalnizca dort olcute
           Yes/No diyor; aracin kendi one cikardigi is bunlarda.
         */}
-        {[tool1, tool2].some((t: any) => t.keyFeatures?.length) && (
+        {[tool1, tool2].some((t: Arac) => t.keyFeatures?.length) && (
           <section className="mt-12 grid gap-6 sm:grid-cols-2">
             {[tool1, tool2]
-              .filter((t: any) => t.keyFeatures?.length)
-              .map((t: any) => (
+              .filter((t: Arac) => t.keyFeatures?.length)
+              .map((t: Arac) => (
                 <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
                   <h2 className="text-base font-semibold">What {t.name} is built to do</h2>
                   <dl className="mt-3 space-y-3 text-sm">
-                    {t.keyFeatures.map((f: any) => (
+                    {(t.keyFeatures ?? []).map((f: OneCikanOzellik) => (
                       <div key={f.title}>
                         <dt className="font-medium text-ink">{f.title}</dt>
                         <dd className="mt-0.5 ml-0 text-ink-soft">{f.description}</dd>
@@ -320,8 +323,9 @@ export default async function ComparisonPage({ params }: any) {
 
         {/* ---------- Is akisina uygunluk ---------- */}
         <section className="mt-12 grid gap-6 sm:grid-cols-2">
-          {[tool1, tool2].map((t: any) => {
-            const uygun = (t.bestFor?.length ? t.bestFor : [t.targetAudience]).filter(Boolean);
+          {[tool1, tool2].map((t: Arac) => {
+            const uygun: string[] = (t.bestFor?.length ? t.bestFor : [t.targetAudience])
+              .filter((x): x is string => Boolean(x));
             if (!uygun.length) return null;
             return (
               <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
@@ -358,10 +362,10 @@ export default async function ComparisonPage({ params }: any) {
             Where a claim on this page comes from a vendor page, it is linked here.
           </p>
           <div className="mt-4 grid gap-6 sm:grid-cols-2">
-            {[
+            {([
               [tool1, e1],
               [tool2, e2],
-            ].map(([t, ev]: any) => (
+            ] as const).map(([t, ev]) => (
               <div key={t.slug}>
                 <h3 className="font-sans text-sm font-semibold">{t.name}</h3>
                 {ev ? (
@@ -370,7 +374,7 @@ export default async function ComparisonPage({ params }: any) {
                       {evidenceLabel(ev.status)} · reviewed {ev.reviewedAt}
                     </p>
                     <ul className="mt-2 list-none space-y-1.5 p-0 text-sm">
-                      {ev.sources.map((source: any) => (
+                      {ev.sources.map((source: Kaynak) => (
                         <li key={source.url}>
                           <a
                             href={source.url}
@@ -395,11 +399,11 @@ export default async function ComparisonPage({ params }: any) {
         </section>
 
         {/* ---------- Arti / eksi ---------- */}
-        {[tool1, tool2].some((t: any) => (t.pros || []).length || (t.cons || []).length) && (
+        {[tool1, tool2].some((t: Arac) => (t.pros || []).length || (t.cons || []).length) && (
           <section className="mt-12 grid gap-6 sm:grid-cols-2">
             {[tool1, tool2]
-              .filter((t: any) => (t.pros || []).length || (t.cons || []).length)
-              .map((t: any) => (
+              .filter((t: Arac) => (t.pros || []).length || (t.cons || []).length)
+              .map((t: Arac) => (
                 <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
                   <h2 className="text-base font-semibold">{t.name}: pros &amp; cons</h2>
                   <ul className="mt-3 list-none space-y-2 p-0 text-sm text-ink-soft">
@@ -422,11 +426,11 @@ export default async function ComparisonPage({ params }: any) {
         )}
 
         {/* ---------- Tam degerlendirme ---------- */}
-        {[tool1, tool2].some((t: any) => t.verdict) ? (
+        {[tool1, tool2].some((t: Arac) => t.verdict) ? (
           <section className="mt-12 space-y-6">
             {[tool1, tool2]
-              .filter((t: any) => t.verdict)
-              .map((t: any) => (
+              .filter((t: Arac) => t.verdict)
+              .map((t: Arac) => (
                 <div key={t.slug} className="rounded-[--radius-card] border-l-2 border-accent bg-surface p-5">
                   <h2 className="text-base font-semibold">Our verdict on {t.name}</h2>
                   <p className="mt-2 text-sm text-ink-soft">{t.verdict}</p>
@@ -447,7 +451,7 @@ export default async function ComparisonPage({ params }: any) {
           <section className="mt-12 border-t border-line pt-10">
             <h2 className="text-lg font-semibold">Other {tool1.name} comparisons</h2>
             <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
-              {ilgili.map((t: any) => (
+              {ilgili.map((t: Arac) => (
                 <li key={t.slug}>
                   <Link
                     href={`/compare/${kanonikSlug(tool1.slug, t.slug)}`}

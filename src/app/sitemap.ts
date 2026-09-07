@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import toolsData from '@/data/tools.json'
+import type { Arac } from '@/lib/arac'
 import { sitemapCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
 import { sitemapKategorileri } from '@/lib/categories'
 import { aracIndekslenir, alternatifIndekslenir } from '@/lib/indeks'
@@ -33,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     Tarih artik veriden geliyor (bkz. src/lib/degisiklik.ts): ayni veri
     ayni tarihi verir, build tekrari sitemap'i degistirmez.
   */
-  const aracHaritasi = new Map((toolsData as any[]).map((t) => [t.slug, t]))
+  const aracHaritasi = new Map((toolsData as Arac[]).map((t) => [t.slug, t]))
   
   // Base pages
   // /blog BILEREK yok: posts.json hic olusmadigi icin sayfa bos, ustelik
@@ -64,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // KAPI: yalnizca incelenmis araclar. Incelenmemis kayit sadece ad +
   // fiyattan ibaret; Google bunlari "Discovered - currently not indexed"
   // diye geri ceviriyordu ve tarama butcesini yiyordu.
-  const toolRoutes = (toolsData as any[]).filter((t) => aracIndekslenir(t)).map((tool: any) => ({
+  const toolRoutes = (toolsData as Arac[]).filter((t) => aracIndekslenir(t)).map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
     lastModified: tarihNesnesi(aracTarihi(tool)),
     changeFrequency: 'weekly' as const,
@@ -78,7 +79,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
   }
   
-  const blogRoutes = posts.map((post: any) => ({
+  type Yazi = { slug: string; date?: string }
+  const blogRoutes = (posts as Yazi[]).map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: tarihNesnesi(post.date ?? TABAN_TARIH),
     changeFrequency: 'monthly' as const,

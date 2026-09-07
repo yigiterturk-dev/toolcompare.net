@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import type { Arac } from "@/lib/arac";
 import Footer from "@/components/Footer";
 import ToolLogo from "@/components/ToolLogo";
 import toolsData from "@/data/tools.json";
@@ -36,7 +37,7 @@ export const metadata = {
 const ADET = 10;
 
 export default function TopPicksPage() {
-  const olculebilir = (toolsData as any[])
+  const olculebilir = (toolsData as Arac[])
     .map((t) => ({ arac: t, durum: fiyatDurumu(t) }))
     .filter((x) => x.durum.karsilastirilabilir && x.durum.aylik !== null);
 
@@ -79,7 +80,7 @@ export default function TopPicksPage() {
 
         <p className="mt-4 max-w-2xl text-ink-soft">
           The {siralanabilir.length} lowest <strong className="font-medium text-ink">verified</strong>{" "}
-          paid prices in our directory of {(toolsData as any[]).length}. No one paid to be here.
+          paid prices in our directory of {(toolsData as Arac[]).length}. No one paid to be here.
         </p>
         <p className="mt-3 max-w-2xl text-sm text-ink-soft">
           A further <strong className="font-medium text-ink">{ucretsizSayisi} tools start at $0</strong>{" "}

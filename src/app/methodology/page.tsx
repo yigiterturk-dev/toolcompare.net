@@ -17,7 +17,8 @@ import { affiliateAktifMi, ACIKLAMA_METNI } from "@/lib/affiliate";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools.json"
+import type { Arac } from "@/lib/arac";
 import { dogrulanmamisSayisi } from "@/lib/fiyat";
 import { kategoriler } from "@/lib/categories";
 
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 export default function MethodologyPage() {
-  const araclar = toolsData as any[];
+  const araclar = toolsData as Arac[];
   const toplam = araclar.length;
   const incelenen = araclar.filter((t) => t.incelendi ?? t.verdict).length;
   const dogrulanmamis = dogrulanmamisSayisi(araclar);

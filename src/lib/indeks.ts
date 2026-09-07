@@ -20,18 +20,12 @@
 import { fiyatDurumu } from "./fiyat.ts";
 import { talepGormus } from "./talep.ts";
 import { ayniIslev } from "./islev.ts";
+/* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
+import type { Arac } from "./arac";
 
 type Kaynak = { label?: string; supports?: string[] };
 
-type Arac = {
-  slug: string;
-  incelendi?: boolean;
-  verdict?: string;
-  longDescription?: string;
-  keyFeatures?: unknown[];
-  evidence?: { status?: string; sources?: Kaynak[] };
-  kriterler?: Record<string, unknown>;
-};
+
 
 /**
  * Kaynak gercekten FIYAT iddiasini destekliyor mu?

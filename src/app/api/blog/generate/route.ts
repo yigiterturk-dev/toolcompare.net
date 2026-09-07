@@ -116,8 +116,14 @@ export async function POST(request: Request) {
     guvenliYaz(postsPath, JSON.stringify(posts, null, 2));
 
     return NextResponse.json({ success: true, post: newPost });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Blog Gen Error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    /*
+      HAM HATA MESAJI ISTEMCIYE DONUYORDU: saglayici hatalari altyapi
+      ayrintisi (model adi, kota, anahtar durumu) sizdirir. Ayni bulgu
+      /api/chat icin daha once duzeltilmisti, bu iki rotada kalmis.
+      Ayrinti sunucu gunlugune, istemciye genel mesaj.
+    */
+    return NextResponse.json({ error: "Blog generation failed" }, { status: 500 });
   }
 }

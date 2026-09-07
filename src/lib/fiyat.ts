@@ -81,11 +81,19 @@ export const TANINAN_MODELLER: readonly string[] = [
   ...Object.keys(ESANLAMLI),
 ];
 
+/*
+  Bu dosyanin GIRDI tipi bilerek dar ve gevsek: fiyatDurumu'nu kismi
+  nesnelerle de cagirabilmek gerekiyor (testler, izgara kirpmasi).
+  `fiyatModeli` burada `string` -- cunku veride bu dosyanin tanimadigi
+  degerler VAR ve tanimamak bir hata degil, `modeliCoz` bunun icin var.
+  Union yazmak "veri hep sozlesmeye uyar" yalanini tipe kazimak olurdu;
+  denetimde tam bu kayma bulunmustu (13 deger, 4 taninan).
+*/
 export type Arac = {
   name: string;
   basePrice?: number;
   isFlat?: boolean;
-  fiyatModeli?: FiyatModeli;
+  fiyatModeli?: string;
   fiyatKontrolTarihi?: string;
 };
 

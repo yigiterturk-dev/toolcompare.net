@@ -15,6 +15,7 @@
  * Kullanim: npx tsx scripts/affiliate-sira.ts
  */
 import "./env.ts";
+import type { Arac } from "../src/lib/arac.ts";
 import araclar from "../src/data/tools.json" with { type: "json" };
 import gsc from "../src/data/gsc/latest.json" with { type: "json" };
 import programlar from "../src/data/affiliate-programlar.json" with { type: "json" };
@@ -22,8 +23,9 @@ import programlar from "../src/data/affiliate-programlar.json" with { type: "jso
 type Satir = { page: string; impressions: number; clicks: number };
 type Program = { durum: string; ag?: string; url?: string; kosul?: string; neden?: string };
 
-const P = (programlar as any).programlar as Record<string, Program>;
-const satirlar = ((gsc as any).rows ?? (gsc as any).data ?? gsc) as Satir[];
+const P = (programlar as { programlar: Record<string, Program> }).programlar;
+type GscDosyasi = { rows?: Satir[]; data?: Satir[] };
+const satirlar = ((gsc as GscDosyasi).rows ?? (gsc as GscDosyasi).data ?? []) as Satir[];
 
 const gosterim = new Map<string, number>();
 for (const r of satirlar) {
@@ -32,7 +34,7 @@ for (const r of satirlar) {
   gosterim.set(m[1], (gosterim.get(m[1]) ?? 0) + r.impressions);
 }
 
-const ad = new Map((araclar as any[]).map((t) => [t.slug, t.name as string]));
+const ad = new Map((araclar as Arac[]).map((t) => [t.slug, t.name]));
 const sirali = [...gosterim].sort((a, b) => b[1] - a[1]);
 const toplam = sirali.reduce((s, [, i]) => s + i, 0);
 

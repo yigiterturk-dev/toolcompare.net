@@ -112,8 +112,14 @@ export async function POST(request: Request) {
     guvenliYaz(filePath, JSON.stringify(existingTools, null, 2));
 
     return NextResponse.json({ success: true, addedCount, totalFound: generatedTools.length });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Generation Error:", error);
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    /*
+      HAM HATA MESAJI ISTEMCIYE DONUYORDU: saglayici hatalari altyapi
+      ayrintisi (model adi, kota, anahtar durumu) sizdirir. Ayni bulgu
+      /api/chat icin daha once duzeltilmisti, bu iki rotada kalmis.
+      Ayrinti sunucu gunlugune, istemciye genel mesaj.
+    */
+    return NextResponse.json({ error: "Tool generation failed" }, { status: 500 });
   }
 }

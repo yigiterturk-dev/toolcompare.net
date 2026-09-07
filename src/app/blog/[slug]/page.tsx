@@ -6,15 +6,32 @@ import { Calendar, Clock, User, ArrowLeft, Share2 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default async function BlogPost({ params }: any) {
-  const { slug } = params;
+type Yazi = {
+  slug: string;
+  title?: string;
+  date?: string;
+  content?: string;
+  excerpt?: string;
+  author?: string;
+  readTime?: string;
+  image?: string;
+};
+type SayfaParametresi = { params: Promise<{ slug: string }> };
+
+export default async function BlogPost({ params }: SayfaParametresi) {
+  /*
+    Next 16'da `params` bir Promise. Onceki hali `{ params }: any` idi ve
+    `const { slug } = params` diyordu -- yani slug her zaman undefined
+    olurdu ve sayfa yaziyi HIC bulamazdi. Tip yazilinca ortaya cikti.
+  */
+  const { slug } = await params;
   const postsPath = path.join(process.cwd(), 'src/data/posts.json');
   let posts = [];
   if (fs.existsSync(postsPath)) {
     posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
   }
 
-  const post = posts.find((p: any) => p.slug === slug);
+  const post = (posts as Yazi[]).find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -43,7 +60,7 @@ export default async function BlogPost({ params }: any) {
         <img src={post.image} alt={post.title} />
 
         <div
-          dangerouslySetInnerHTML={{ __html: post.content }} 
+          dangerouslySetInnerHTML={{ __html: post.content ?? "" }}
         />
 
         <footer>

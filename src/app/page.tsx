@@ -112,9 +112,9 @@ export default async function Home() {
           gercek sayiyi bildirmeye devam ediyor.
         */
         itemListElement: tools
-          .filter((t: any) => t?.slug && t?.name)
+          .filter((t) => t?.slug && t?.name)
           .slice(0, 50)
-          .map((t: any, i: number) => ({
+          .map((t, i) => ({
             "@type": "ListItem",
             position: i + 1,
             name: t.name,

@@ -114,9 +114,9 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ reply: completion.choices[0].message.content });
-  } catch (error: any) {
+  } catch (error: unknown) {
     // Ayrinti sunucu gunlugune, istemciye genel mesaj.
-    console.error('chat route error:', error?.message);
+    console.error('chat route error:', error instanceof Error ? error.message : error);
     return NextResponse.json({ error: 'The assistant is unavailable right now.' }, { status: 500 });
   }
 }

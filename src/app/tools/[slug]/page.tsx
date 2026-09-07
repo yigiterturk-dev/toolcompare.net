@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools.json"
+import type { Arac, OneCikanOzellik } from "@/lib/arac";
 import { kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { kategoriSlug } from "@/lib/categories";
 import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
@@ -18,7 +19,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params;
-  const tool = (toolsData as any[]).find((t) => t.slug === resolvedParams.slug);
+  const tool = (toolsData as Arac[]).find((t) => t.slug === resolvedParams.slug);
   
   if (!tool) return { title: "Tool Not Found" };
 
@@ -47,28 +48,37 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Incelenmemis arac sayfasi erisilebilir kalir (ziyaretci fiyati ve
     // alternatifleri gorur, link akitir) ama Google'a indekslenmesi
     // soylenmez. Kural: src/lib/indeks.ts
-    robots: aracIndekslenir(tool as any) ? undefined : NOINDEX,
+    robots: aracIndekslenir(tool) ? undefined : NOINDEX,
     openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
     twitter: { card: "summary_large_image", title, description },
   };
 }
 
 export function generateStaticParams() {
-  return toolsData.map((tool: any) => ({ slug: tool.slug }));
+  return (toolsData as Arac[]).map((tool) => ({ slug: tool.slug }));
 }
 
 export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const tool = (toolsData as any[]).find((t) => t.slug === resolvedParams.slug);
+  const tool = (toolsData as Arac[]).find((t) => t.slug === resolvedParams.slug);
 
   if (!tool) notFound();
 
 
-  // Smart Data Normalization (Handle camelCase, snake_case, and nested objects)
-  const longDesc = tool.longDescription || tool.description || (tool.review?.text || tool.review?.body || tool.review?.introduction || "");
-  const features = tool.keyFeatures || tool.key_features || tool.features || [];
-  const targetAud = typeof tool.targetAudience === 'string' ? tool.targetAudience : (tool.targetAudience?.description || tool.targetAudience?.text || tool.target_audience?.description || tool.target_audience?.text || tool.target_audience?.small_businesses || "");
-  const verdictText = typeof tool.verdict === 'string' ? tool.verdict : (tool.expertVerdict?.conclusion || tool.expertVerdict?.summary || tool.expert_verdict?.conclusion || tool.expert_verdict?.summary || tool.expertVerdict?.text || tool.expert_verdict || tool.verdict?.text || tool.verdict || "");
+  /*
+    Onceki hali "Smart Data Normalization" adiyla snake_case ve ic ice
+    nesne varyantlarini kolluyordu: tool.description, tool.review.text,
+    tool.key_features, tool.target_audience.small_businesses,
+    tool.expertVerdict.conclusion ve daha fazlasi. 512 kaydin TAMAMI
+    tarandi -- bu alanlarin HICBIRI veride yok, hicbir zaman da olmamis.
+    `any` oldugu icin derleyici de sessizdi. Olu dallar kaldirildi:
+    okunmayan bir yedek yol, bir gun yanlis alani okumayi bekleyen
+    bir tuzaktir.
+  */
+  const longDesc = tool.longDescription ?? "";
+  const features = tool.keyFeatures ?? tool.features ?? [];
+  const targetAud = tool.targetAudience ?? "";
+  const verdictText = tool.verdict ?? "";
   const evidence = toolEvidence(tool);
   const pros: string[] = Array.isArray(tool.pros) ? tool.pros.filter((x: unknown) => typeof x === "string" && x.trim()) : [];
   const cons: string[] = Array.isArray(tool.cons) ? tool.cons.filter((x: unknown) => typeof x === "string" && x.trim()) : [];
@@ -110,7 +120,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     yapilandirilmis.review = {
       "@type": "Review",
       author: { "@type": "Organization", name: "ToolCompare" },
-      reviewBody: typeof verdictText === "string" ? verdictText : verdictText.text,
+      reviewBody: verdictText,
       ...((tool.pros || []).length
         ? { positiveNotes: { "@type": "ItemList", itemListElement: (tool.pros || []).map((x: string, i: number) => ({ "@type": "ListItem", position: i + 1, name: x })) } }
         : {}),
@@ -125,7 +135,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   // yalnizca cift sayfasi indekslenebilenler (bkz. indekslenebilirAkranlar).
   const karsilastirmalar = indekslenebilirAkranlar(tool.slug);
   const fiyat = fiyatDurumu(tool);
-  const ucretsizModel = ["bedava", "ucretsiz", "ucretsiz-katman"].includes(tool.fiyatModeli);
+  const ucretsizModel = ["bedava", "ucretsiz", "ucretsiz-katman"].includes(tool.fiyatModeli ?? "");
   const bestFor: string[] = Array.isArray(tool.bestFor) ? tool.bestFor.filter(Boolean) : [];
   const skipIf: string[] = Array.isArray(tool.skipIf) ? tool.skipIf.filter(Boolean) : [];
   const sss: { soru: string; cevap: string }[] = [];
@@ -159,7 +169,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     sss.push({ soru: `Who is ${tool.name} best for?`, cevap: targetAud.trim() });
   }
   if (karsilastirmalar.length >= 2) {
-    const adlar = karsilastirmalar.slice(0, 3).map((a: any) => a.name);
+    const adlar = karsilastirmalar.slice(0, 3).map((a: Arac) => a.name);
     sss.push({
       soru: `What are the closest alternatives to ${tool.name}?`,
       cevap: `In the same category we track ${adlar.slice(0, -1).join(", ")} and ${adlar[adlar.length - 1]}. Each has its own review page with verified pricing, and the comparison links above show them side by side.`,
@@ -262,7 +272,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 <section>
                   <h2 className="text-xl font-semibold">Key features</h2>
                   <ul className="mt-4 grid list-none gap-4 p-0 sm:grid-cols-2">
-                    {features.map((f: any, i: number) => {
+                    {features.map((f: string | OneCikanOzellik, i: number) => {
                       const title = typeof f === "string" ? f : f?.title || "";
                       const description = typeof f === "string" ? "" : f?.description || "";
                       if (!title) return null;
@@ -382,7 +392,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 <section className="rounded-[--radius-card] border-l-2 border-accent bg-surface p-5">
                   <h2 className="text-xl font-semibold">Our verdict</h2>
                   <p className="mt-3 text-ink-soft">
-                    {typeof verdictText === "string" ? verdictText : verdictText.text || ""}
+                    {verdictText}
                   </p>
                 </section>
               ) : null}
@@ -403,7 +413,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                     Same category, ordered by verified starting price.
                   </p>
                   <ul className="mt-4 grid list-none gap-3 p-0 sm:grid-cols-3">
-                    {karsilastirmalar.slice(0, 3).map((alt: any) => {
+                    {karsilastirmalar.slice(0, 3).map((alt: Arac) => {
                       const d = fiyatDurumu(alt);
                       return (
                         <li key={alt.slug}>
@@ -517,7 +527,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <h2 className="text-xl font-semibold">What we checked</h2>
             <ul className="mt-4 grid list-none gap-2 p-0 sm:grid-cols-2">
               {KRITER_SIRA.map((k) => {
-                const v = (tool as any).kriterler?.[k];
+                const v = tool.kriterler?.[k as keyof typeof tool.kriterler];
                 const yazi = v === true ? "Yes" : v === false ? "No" : "Not checked";
                 const renkSinifi =
                   v === true
@@ -609,7 +619,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </Link>
               </p>
               <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
-                {karsilastirmalar.map((t: any) => (
+                {karsilastirmalar.map((t: Arac) => (
                   <li key={t.slug}>
                     <Link
                       href={`/compare/${kanonikSlug(tool.slug, t.slug)}`}

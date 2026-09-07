@@ -3,6 +3,11 @@ import fs from 'fs';
 import path from 'path';
 
 async function setup() {
+  /* Havuz yalnizca DB ortam degiskenleri varsa kuruluyor (bkz. db.ts). */
+  if (!pool) {
+    console.log("DB ortam degiskenleri yok; kurulum atlandi.");
+    return;
+  }
   try {
     console.log("Starting Database Setup...");
 

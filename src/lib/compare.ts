@@ -25,23 +25,9 @@ import { islevi, ayniIslev } from "./islev.ts";
 
 export { kriterAyrimi, ayrimCumlesi } from "./kriter-ayrimi.ts";
 
-export type Arac = {
-  incelendi?: boolean;
-  verdict?: string;
-  slug: string;
-  name: string;
-  category?: string;
-  ease?: number;
-  featuresScore?: number;
-  basePrice?: number;
-  isFlat?: boolean;
-  shortDescription?: string;
-  pros?: string[];
-  cons?: string[];
-  longDescription?: string;
-  keyFeatures?: { title: string; description: string }[];
-  kriterler?: KriterKumesi;
-};
+/* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
+import type { Arac } from "./arac";
+export type { Arac };
 
 const araclar = toolsData as Arac[];
 
@@ -69,7 +55,7 @@ export const EN_AZ_ALTERNATIF = 3;
  * "bunlar siralanamiyor" demek dogru olan.
  */
 function siraAnahtari(t: Arac): [number, number, string] {
-  const d = fiyatDurumu(t as any);
+  const d = fiyatDurumu(t);
   if (d.karsilastirilabilir && d.aylik !== null) return [0, d.aylik, t.name];
   return [1, 0, t.name];
 }

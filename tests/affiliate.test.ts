@@ -15,7 +15,7 @@ const kayitlar = JSON.parse(readFileSync("src/data/affiliate.json", "utf8"));
 test("affiliate.json gecerli bir sozluk", () => {
   assert.equal(typeof kayitlar, "object");
   assert.ok(!Array.isArray(kayitlar));
-  for (const [slug, k] of Object.entries<any>(kayitlar)) {
+  for (const [slug, k] of Object.entries<{ url?: string }>(kayitlar)) {
     assert.ok(k.url, `${slug}: url zorunlu`);
     assert.match(k.url, /^https:\/\//, `${slug}: url https olmali`);
   }

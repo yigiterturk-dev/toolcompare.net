@@ -24,7 +24,9 @@ export function generateStaticParams() {
   return kategoriler().map((k) => ({ slug: k.slug }));
 }
 
-export async function generateMetadata({ params }: any): Promise<Metadata> {
+type SayfaParametresi = { params: Promise<{ slug: string }> }
+
+export async function generateMetadata({ params }: SayfaParametresi): Promise<Metadata> {
   const { slug } = await params;
   const kategori = kategoriBul(slug);
   if (!kategori) return { title: "Category Not Found" };
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   };
 }
 
-export default async function CategoryPage({ params }: any) {
+export default async function CategoryPage({ params }: SayfaParametresi) {
   const { slug } = await params;
   const kategori = kategoriBul(slug);
   if (!kategori) notFound();
@@ -60,7 +62,7 @@ export default async function CategoryPage({ params }: any) {
   // "En ucuz" iddiasina yalnizca DOGRULANMIS fiyatlar girer; onceden
   // dogrulanmamis 0'lar en basa gecip "cheapest is AWS at $0/mo" gibi
   // yanlis cumleler uretiyordu.
-  const enUcuz = enUcuzArac(kategori.araclar as any);
+  const enUcuz = enUcuzArac(kategori.araclar);
 
   // Kategori icindeki en guclu iki arac: dogal "X vs Y" merakini karsilar.
   // Bu kategorideki araclar arasindaki GERCEKTEN VAR OLAN karsilastirma
@@ -106,7 +108,7 @@ export default async function CategoryPage({ params }: any) {
             <>
               The cheapest verified entry point is{" "}
               <strong className="font-medium text-ink">{enUcuz.name}</strong> at{" "}
-              {fiyatDurumu(enUcuz as any).kisa}.
+              {fiyatDurumu(enUcuz).kisa}.
             </>
           ) : null}
         </p>
@@ -123,7 +125,7 @@ export default async function CategoryPage({ params }: any) {
 
         <ol className="mt-8 max-w-4xl list-none space-y-3 p-0">
           {kategori.araclar.map((t, i) => {
-            const d = fiyatDurumu(t as any);
+            const d = fiyatDurumu(t);
             return (
               <li
                 key={t.slug}

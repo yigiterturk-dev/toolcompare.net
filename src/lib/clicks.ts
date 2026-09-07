@@ -14,6 +14,7 @@
  */
 
 import fs from "fs";
+type TiklamaSatiri = { slug: string; adet: number | string; son: string | Date | null };
 import path from "path";
 import { query } from "@/lib/db";
 
@@ -108,13 +109,14 @@ function disktenOku(): TikOzeti[] {
 export async function tikOzeti(): Promise<{ satirlar: TikOzeti[]; kaynak: string }> {
   const birlesik = new Map<string, TikOzeti>();
   const kaynaklar: string[] = [];
+  /* Sorgunun dondurdugu satir sekli; `any` yerine burada bir kez yazilir. */
 
   if (mysqlVarMi()) {
     try {
       const sonuc = (await query(
         `SELECT slug, COUNT(*) AS adet, MAX(clicked_at) AS son
            FROM outbound_clicks GROUP BY slug`
-      )) as any[] | null;
+      )) as TiklamaSatiri[] | null;
       if (sonuc) {
         kaynaklar.push("mysql");
         for (const r of sonuc) {

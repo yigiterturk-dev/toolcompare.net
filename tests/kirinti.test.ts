@@ -24,7 +24,7 @@ for (const p of SAYFALAR) {
 
 test("kirintiSemasi gecerli BreadcrumbList uretiyor", async () => {
   const { kirintiSemasi } = await import("../src/lib/yapilandirilmis.ts");
-  const s: any = kirintiSemasi([{ ad: "A", yol: "/a" }, { ad: "B", yol: "/a/b" }]);
+  const s = kirintiSemasi([{ ad: "A", yol: "/a" }, { ad: "B", yol: "/a/b" }]);
   assert.equal(s["@type"], "BreadcrumbList");
   assert.equal(s.itemListElement.length, 2);
   assert.equal(s.itemListElement[0].position, 1);

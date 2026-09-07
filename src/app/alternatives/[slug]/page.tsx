@@ -19,7 +19,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools.json"
+import type { Arac } from "@/lib/arac";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
@@ -27,15 +28,17 @@ import AffiliateNotu from "@/components/AffiliateNotu";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
-function aracBul(slug: string): any {
-  return (toolsData as any[]).find((t) => t.slug === slug);
+function aracBul(slug: string): Arac | undefined {
+  return (toolsData as Arac[]).find((t) => t.slug === slug);
 }
 
 export function generateStaticParams() {
   return alternatifSayfasiOlanlar().map((t) => ({ slug: t.slug }));
 }
 
-export async function generateMetadata({ params }: any): Promise<Metadata> {
+type SayfaParametresi = { params: Promise<{ slug: string }> }
+
+export async function generateMetadata({ params }: SayfaParametresi): Promise<Metadata> {
   const { slug } = await params;
   const tool = aracBul(slug);
   if (!tool) return { title: "Not Found" };
@@ -53,13 +56,13 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     alternates: { canonical: url },
     // Fiyati dogrulanmamis aracin alternatif sayfasi indekslenmez; sayfa
     // yine acik ve linkli kalir. Kural: src/lib/indeks.ts
-    robots: alternatifIndekslenir(tool as any) ? undefined : NOINDEX,
+    robots: alternatifIndekslenir(tool) ? undefined : NOINDEX,
     openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
     twitter: { card: "summary_large_image", title, description },
   };
 }
 
-export default async function AlternativesPage({ params }: any) {
+export default async function AlternativesPage({ params }: SayfaParametresi) {
   const { slug } = await params;
   const tool = aracBul(slug);
   if (!tool) notFound();
@@ -68,7 +71,7 @@ export default async function AlternativesPage({ params }: any) {
   // Sayfa yalnizca yeterli alternatif varsa anlamli.
   if (alts.length < EN_AZ_ALTERNATIF) notFound();
 
-  const enUcuz = enUcuzArac(alts as any);
+  const enUcuz = enUcuzArac(alts);
 
   const semalar = [
     listeSemasi(`Best ${tool.name} Alternatives in 2026`, `/alternatives/${tool.slug}`, alts),
@@ -105,7 +108,7 @@ export default async function AlternativesPage({ params }: any) {
               {" "}
               The cheapest verified option is{" "}
               <strong className="font-medium text-ink">{enUcuz.name}</strong> at{" "}
-              {fiyatDurumu(enUcuz as any).kisa}.
+              {fiyatDurumu(enUcuz).kisa}.
             </>
           )}
         </p>
@@ -126,7 +129,7 @@ export default async function AlternativesPage({ params }: any) {
         )}
 
         <ol className="mt-8 max-w-4xl list-none space-y-3 p-0">
-          {alts.map((alt: any, i: number) => (
+          {alts.map((alt: Arac, i: number) => (
             <li
               key={alt.slug}
               className="flex gap-4 rounded-[--radius-card] border border-line bg-surface p-4 transition-colors duration-150 hover:border-line-strong"

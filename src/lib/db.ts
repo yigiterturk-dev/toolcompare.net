@@ -2,7 +2,8 @@ import mysql from 'mysql2/promise';
 import fs from 'fs';
 import path from 'path';
 
-let pool: any = null;
+/* mysql2'nin kendi havuz tipi; elle taklit etmek yerine ondan aliniyor. */
+let pool: mysql.Pool | null = null;
 
 // Initialize connection only if env vars exist
 if (process.env.DB_NAME && process.env.DB_USER) {
@@ -17,7 +18,15 @@ if (process.env.DB_NAME && process.env.DB_USER) {
   });
 }
 
-export async function query(sql: string, params?: any[]) {
+/*
+  Parametre tipi mysql2'nin kendi tipinden aliniyor. Onceki hali `any[]`
+  idi; `unknown[]` de calismiyor cunku surucu kendi kabul ettigi degerleri
+  daraltiyor. Dogru cevap ucuncu bir tip uydurmak degil, surucununkini
+  kullanmak.
+*/
+type SorguDegerleri = Parameters<mysql.Pool["execute"]>[1];
+
+export async function query(sql: string, params?: SorguDegerleri) {
   if (!pool) return null;
   try {
     const [results] = await pool.execute(sql, params);
@@ -148,7 +157,9 @@ export async function ensureTables() {
     
     // Check if empty and migrate if needed
     const [rows] = await pool.query('SELECT count(*) as count FROM tools');
-    if (rows[0].count === 0) {
+    /* mysql2 QueryResult birlesik bir tip; SELECT dalinda satir dizisidir. */
+    const sayim = (rows as { count: number }[])[0]?.count ?? 0;
+    if (sayim === 0) {
       console.log("DB is empty, migrating from JSON...");
       const toolsPath = path.join(process.cwd(), 'src', 'data', 'tools.json');
       if (fs.existsSync(toolsPath)) {

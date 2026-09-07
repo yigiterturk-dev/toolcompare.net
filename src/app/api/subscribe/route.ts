@@ -57,8 +57,8 @@ export async function POST(request: Request) {
     guvenliYaz(filePath, JSON.stringify(subscribers, null, 2));
 
     return NextResponse.json({ success: true, message: 'Welcome to the inner circle!' });
-  } catch (error: any) {
-    console.error('subscribe route error:', error?.message);
+  } catch (error: unknown) {
+    console.error('subscribe route error:', error instanceof Error ? error.message : error);
     return NextResponse.json({ error: 'Subscription failed' }, { status: 500 });
   }
 }

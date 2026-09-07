@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools.json"
+import type { Arac } from "@/lib/arac";
+import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { kategoriler } from "@/lib/categories";
 import { kirintiSemasi } from "@/lib/yapilandirilmis";
@@ -39,7 +41,7 @@ import {
      kategorideki EN DUSUK DOGRULANMIS fiyati da gosteriyor -- sitenin
      tek gercek verisi ve secim yaparken bakilan sey.
 */
-const KATEGORI_IKONU: Record<string, any> = {
+const KATEGORI_IKONU: Record<string, LucideIcon> = {
   "Developer Tools": Code,
   "Marketing": Megaphone,
   "Productivity": CheckCircle,
@@ -64,7 +66,7 @@ export const metadata = {
 export default function CategoriesPage() {
   const kategoriListesi = kategoriler();
   const sema = kirintiSemasi([{ ad: "Categories", yol: "/categories" }]);
-  const toplam = (toolsData as any[]).length;
+  const toplam = (toolsData as Arac[]).length;
 
   return (
     <>
@@ -91,7 +93,7 @@ export default function CategoriesPage() {
               ucretli taraf kacdan acilir.
             */
             const olculebilir = kat.araclar
-              .map((t) => fiyatDurumu(t as any))
+              .map((t) => fiyatDurumu(t))
               .filter((d) => d.karsilastirilabilir && d.aylik !== null);
             const bedavaSayisi = olculebilir.filter((d) => d.aylik === 0).length;
             const enDusukUcretli = olculebilir

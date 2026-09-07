@@ -21,7 +21,14 @@ import { Send, X, Sparkles, Loader2 } from "lucide-react";
 
 type Mesaj = { role: "user" | "assistant"; content: string };
 
-export default function AIAssistant({ tools }: { tools: any[] }) {
+/*
+  Bilesen listeyi yalnizca API'ye gonderiyor; tam `Arac` sekli sart degil.
+  Once `any[]` idi -- cagiran taraf kirpilmis `IzgaraArac` gonderdigi icin
+  tam tip yazmak da yanlis olurdu. Gereken en dar sozlesme: adi olan kayit.
+*/
+type GonderilebilirArac = { slug: string; name: string };
+
+export default function AIAssistant({ tools }: { tools: GonderilebilirArac[] }) {
   const [acik, setAcik] = useState(false);
   const [mesajlar, setMesajlar] = useState<Mesaj[]>([
     {

@@ -1,4 +1,5 @@
 import fs from "fs";
+import type { Arac } from "./arac";
 import path from "path";
 import { query, ensureTables } from "@/lib/db";
 
@@ -12,13 +13,14 @@ const toolsPath = path.join(process.cwd(), "src", "data", "tools.json");
  * 121 urun sayfasinin tamami "orphan" (hicbir sayfadan linklenmiyor) idi.
  * Ayni yukleyiciyi sunucu bileseni de kullanabilsin diye buraya alindi.
  */
-export async function getTools(): Promise<any[]> {
+export async function getTools(): Promise<Arac[]> {
   try {
     await ensureTables();
     const dbTools = await query("SELECT * FROM tools ORDER BY created_at DESC");
     if (dbTools && Array.isArray(dbTools) && dbTools.length > 0) {
-      return dbTools.map((t: any) => ({
-        ...t,
+      /* DB satirlari; JSON alanlari metin olarak gelebiliyor. */
+      return (dbTools as Record<string, unknown>[]).map((t) => ({
+        ...(t as unknown as Arac),
         pros: typeof t.pros === "string" ? JSON.parse(t.pros) : t.pros,
         cons: typeof t.cons === "string" ? JSON.parse(t.cons) : t.cons,
         keyFeatures: typeof t.keyFeatures === "string" ? JSON.parse(t.keyFeatures) : t.keyFeatures,
