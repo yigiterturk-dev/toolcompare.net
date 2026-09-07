@@ -7145,6 +7145,37 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
+    },
+    "fiyatModeli": "teklif",
+    "bestFor": [
+      "Startups chasing SOC 2 or ISO 27001 for the first time, where evidence collection is the bottleneck",
+      "Teams that want continuous monitoring rather than a once-a-year scramble",
+      "Companies whose auditor will accept an automated evidence trail"
+    ],
+    "skipIf": [
+      "You need a price before a sales call — Vanta publishes none; all four tiers are quoted",
+      "You want a free tier or self-serve signup; neither exists",
+      "You only need one framework once; the model assumes ongoing monitoring"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Vanta — Pricing",
+          "url": "https://www.vanta.com/pricing",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "four tiers: Essentials, Plus, Professional, Enterprise",
+            "no dollar amounts published; pricing given after a demo",
+            "Essentials covers one compliance framework with automated evidence collection",
+            "no free tier"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vanta publishes no figures on its pricing page, so none are claimed here."
+      ]
     }
   },
   {
@@ -10043,8 +10074,8 @@
     "shortDescription": "Social management and reporting for teams.",
     "websiteUrl": "https://sproutsocial.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 79,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": true,
@@ -10066,19 +10097,23 @@
     "verdict": "Buy it for the reporting. If nobody reads the reports, you are paying for the wrong thing.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Sprout Social — Pricing",
           "url": "https://sproutsocial.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Essentials $79/seat/month annual, $99 monthly, 5 social profiles",
+            "Standard $199/seat/month annual, 5 profiles",
+            "Professional $299/seat/month annual, unlimited profiles",
+            "Advanced $399/seat/month annual",
+            "no free tier; 30-day trial without a card"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -10094,6 +10129,17 @@
         "title": "Presentation-ready reports",
         "description": "Builds cross-network performance reports for clients and stakeholders."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Social teams that need publishing, inbox and reporting in one seat",
+      "Agencies needing unlimited profiles — that starts at the Professional tier",
+      "Trying it fully: 30-day trial with no card"
+    ],
+    "skipIf": [
+      "You are a solo operator or small brand — $79/seat/mo annual ($99 monthly) is agency pricing",
+      "You have more than 5 social profiles: Essentials and Standard both cap at 5, unlimited starts at Professional ($299/seat/mo)",
+      "You need a free tier; there is none"
     ]
   },
   {
@@ -18923,19 +18969,21 @@
     "verdict": "The transcription and coaching are the differentiator. As a plain phone system, cheaper options exist.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Dialpad — Pricing",
           "url": "https://www.dialpad.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "conversation-based pricing; credits used when AI delivers value",
+            "no per-user prices displayed on the public pricing page",
+            "free trial signup available"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Dialpad does not publish per-seat figures on its pricing page, so none are claimed here."
       ]
     },
     "keyFeatures": [
@@ -18951,6 +18999,17 @@
         "title": "Coaching tools",
         "description": "Surfaces call moments and sentiment for supervisor review."
       }
+    ],
+    "fiyatModeli": "teklif",
+    "bestFor": [
+      "Teams that want an AI-first phone system rather than a plain VoIP line",
+      "Companies buying support and sales calling from one vendor",
+      "Trying before committing — the vendor offers a free trial signup"
+    ],
+    "skipIf": [
+      "You need a published per-seat price to compare — Dialpad's pricing page shows conversation-based pricing without figures",
+      "You want predictable per-seat billing; credits are consumed when AI features are used",
+      "You need the price today rather than after a sales call"
     ]
   },
   {
@@ -21782,75 +21841,35 @@
     ],
     "targetAudience": "Organizations evaluating a shared enterprise platform across HR, finance and operations with dedicated implementation and governance capacity.",
     "bestFor": [
-      "Enterprises seeking connected HR and finance product families",
-      "Organizations prepared to govern roles, processes, integrations and data migration",
-      "Teams that need supported APIs and tenant-native platform extensions"
+      "Large enterprises consolidating HR, payroll and finance on one platform",
+      "Organisations with a dedicated implementation budget and partner",
+      "Companies that need deep reporting across the whole workforce"
     ],
     "skipIf": [
-      "You need transparent self-serve pricing before a sales and scope process",
-      "Your requirement is a narrow standalone workflow with little cross-functional data",
-      "No internal owner or implementation partner can govern configuration and migration"
+      "You need a price to compare — Workday publishes none; everything is quoted after a sales process",
+      "You are a small or mid-size company; the platform and its implementation assume enterprise scale",
+      "You want to sign up and start today; there is no self-serve tier"
     ],
     "verdict": "Evaluate Workday as a configurable enterprise program, not a single HR app; prove module fit, integration scope, governance and total implementation obligations in the contract and rollout plan.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Workday — HCM Suite",
-          "url": "https://www.workday.com/en-us/products/human-capital-management/hcm-suite.html",
-          "checkedAt": "2026-08-24",
+          "label": "Workday — Products",
+          "url": "https://www.workday.com/en-us/products.html",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "HCM product scope",
-            "core HR",
-            "talent and workforce processes",
-            "integration ecosystem",
-            "AI feature positioning"
-          ]
-        },
-        {
-          "label": "Workday — Financial Management",
-          "url": "https://www.workday.com/en-us/products/financial-management/overview.html",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "finance product scope",
-            "accounting",
-            "reporting",
-            "expenses",
-            "revenue",
-            "risk and controls"
-          ]
-        },
-        {
-          "label": "Workday — ERP suite",
-          "url": "https://www.workday.com/en-us/products/suite.html/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "multi-tenant SaaS",
-            "shared data model",
-            "HR and finance",
-            "planning and procurement",
-            "third-party integration"
-          ]
-        },
-        {
-          "label": "Workday — Platform extensions",
-          "url": "https://www.workday.com/en-us/products/platform-product-extensions/overview.html",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "public APIs",
-            "connectors",
-            "Workday Orchestrate",
-            "Workday Extend",
-            "security inheritance",
-            "early-access AI boundary"
+            "Workday does not publish list prices; pricing is quoted through sales",
+            "no self-serve or free tier"
           ]
         }
       ],
       "limitations": [
-        "Vendor product pages were reviewed; ToolCompare did not obtain a customer-specific quote, inspect a contract, test a tenant, measure implementation duration or verify migration, compliance and ROI outcomes."
+        "Workday publishes no figures publicly; the quote-only status is what is verifiable."
       ]
-    }
+    },
+    "fiyatModeli": "teklif"
   },
   {
     "slug": "lever",
@@ -38098,19 +38117,22 @@
     "verdict": "A solid technical choice. Budget for a dedicated IP if volume matters.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Mailgun — Pricing",
           "url": "https://www.mailgun.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0/month with 100 emails per day",
+            "Basic $15/month with 10,000 emails, overage $1.80 per 1,000",
+            "Foundation $35/month with 50,000 emails, overage $1.30 per 1,000, first month free",
+            "Scale $90/month with 100,000 emails, overage $1.10 per 1,000, first month free"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "kriterler": {
@@ -38136,6 +38158,17 @@
         "title": "Detailed logs",
         "description": "Retains searchable delivery logs for debugging."
       }
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Developers who need transactional email over an API rather than a marketing tool",
+      "Small volume — the free plan covers 100 emails a day at no cost",
+      "Predictable senders: included volume is cheaper per email than overage"
+    ],
+    "skipIf": [
+      "You send in bursts — the free plan is capped per DAY (100), not per month",
+      "You are comparing on the plan price alone; going over the included volume costs $1.80 per 1,000 on Basic",
+      "You want marketing campaign tooling; this is a sending API"
     ]
   },
   {
@@ -38162,19 +38195,22 @@
     "verdict": "The EU hosting and template collaboration are the reasons to pick it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Mailjet — Pricing",
           "url": "https://www.mailjet.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0/month with 6,000 emails/month and a 200 emails per day cap, 1,000 contacts, Mailjet logo on emails",
+            "Starter $9/month with 8,000 emails and no daily limit",
+            "Essential $17/month with 15,000 emails, unlimited contacts and no Mailjet logo",
+            "Premium $27/month with 15,000 emails"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "kriterler": {
@@ -38200,6 +38236,17 @@
         "title": "Transactional and marketing sends",
         "description": "Runs both message types from one account and API."
       }
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Low-volume senders — the free plan carries 6,000 emails a month at no cost",
+      "Teams that want transactional and marketing email from one account",
+      "Anyone who can live with the vendor logo on the free tier"
+    ],
+    "skipIf": [
+      "You send in bursts — the free plan caps at 200 emails PER DAY on top of the monthly 6,000",
+      "You need your own branding: the Mailjet logo stays on free emails until the Essential plan",
+      "You hold a large list; the free plan allows 1,000 contacts"
     ]
   },
   {
@@ -38885,7 +38932,41 @@
       "Subscription required for most features"
     ],
     "targetAudience": "Presenters whose content has a spatial or hierarchical structure.",
-    "verdict": "Effective when the structure genuinely is spatial. Used as decoration it hurts more than helps."
+    "verdict": "Effective when the structure genuinely is spatial. Used as decoration it hurts more than helps.",
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Zooming, non-linear presentations that a slide deck cannot do",
+      "Students and teachers — the EDU Plus plan is $4/month against $19 for the same features",
+      "Trying paid features first: every paid plan has a 14-day trial"
+    ],
+    "skipIf": [
+      "Your deck is confidential — presentations made on the free plan are PUBLIC by default; privacy controls start at the paid tiers",
+      "You need offline use, PDF export or PowerPoint import; those start at Plus ($19/mo annual)",
+      "You want viewer analytics; that is Premium at $29/mo"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Prezi — Plans guide",
+          "url": "https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Basic licence is free; free-tier presentations are public by default",
+            "Standard $7/month annual adds privacy settings and unlimited projects",
+            "Plus $19/month annual adds PowerPoint import, PDF export, desktop app and offline access",
+            "Premium $29/month adds viewer analytics",
+            "Teams $39/month per user",
+            "EDU Plus $4/month and EDU Pro $8/month",
+            "14-day free trial on paid plans"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
+      ]
+    }
   },
   {
     "slug": "freeplane",
@@ -39125,7 +39206,7 @@
     "shortDescription": "Graphics editor for Mac developed by Apple.",
     "websiteUrl": "https://www.pixelmator.com/pro/",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 49.99,
     "isFlat": true,
     "longDescription": "Pixelmator Pro is a native macOS image editor with a one-off price and machine-learning editing tools. A one-off price and native macOS performance make it the pragmatic choice for people who resent subscription image editors. It is macOS-only and its ecosystem of plugins and tutorials is far smaller than the industry standard.",
     "pros": [
@@ -39142,20 +39223,24 @@
     "verdict": "The cheapest one-time-purchase image editor on macOS.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Pixelmator Pro — Pricing",
+          "label": "Apple — Pixelmator Pro",
           "url": "https://www.apple.com/pixelmator-pro/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "one-time purchase $49.99 for Mac",
+            "Apple Creator Studio subscription $12.99/month or $129/year",
+            "education rate $2.99/month or $29.99/year",
+            "iPad version only through the subscription",
+            "Warp Tool included in the subscription, not the one-time purchase",
+            "no free version; 30-day trial of Creator Studio"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to apple.com."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "kriterler": {
@@ -39181,6 +39266,17 @@
         "title": "ML-assisted editing",
         "description": "Applies machine-learning tools for selection, denoise and upscaling."
       }
+    ],
+    "fiyatModeli": "tek-seferlik",
+    "bestFor": [
+      "Mac users who want a capable image editor without a monthly bill — $49.99 once",
+      "Students and educators, who pay $2.99/mo or $29.99/year on the subscription route",
+      "People who need Photoshop-class editing occasionally rather than daily"
+    ],
+    "skipIf": [
+      "You are on iPad — the iPad version comes only through the Apple Creator Studio subscription",
+      "You want the Warp Tool; it is in the subscription version, not the one-time purchase",
+      "You want a free version; there is none, only a 30-day Creator Studio trial"
     ]
   },
   {
