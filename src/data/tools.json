@@ -2844,7 +2844,7 @@
       "Interfaces",
       "Sync"
     ],
-    "basePrice": 20,
+    "basePrice": 0,
     "isFlat": false,
     "category": "Productivity",
     "shortDescription": "Smart database.",
@@ -2891,21 +2891,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Airtable — Pricing",
-          "url": "https://airtable.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.airtable.com/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0/user/month for individuals and very small teams",
+            "Team $20/user/month billed annually",
+            "Business $45/user/month billed annually",
+            "Enterprise Scale is custom priced"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The pricing page does not publish the free plan's record, storage or editor limits, so none are claimed here."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Individuals and very small teams — that is who the free plan is aimed at",
+      "Teams that outgrew spreadsheets but do not want a database project",
+      "Buyers comparing per-seat cost: Team is $20/user/mo billed annually"
+    ],
+    "skipIf": [
+      "You are a team past the free tier — $20/user/mo adds up quickly across a department",
+      "You need governance and admin controls; those start at Business ($45/user/mo)",
+      "You want published free-plan limits before signing up; the pricing page does not state them"
+    ]
   },
   {
     "slug": "clickup",
@@ -3698,8 +3712,8 @@
       "AI generator",
       "Figma import"
     ],
-    "basePrice": 5,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Best designer site builder.",
     "longDescription": "Framer is the most exciting site builder for designers today, turning the Figma experience directly into a live website. Its 'Design and Publish' philosophy makes animations and effects more intuitive than they are in Webflow. It allows you to create sites that feel 'developer-made' without writing code. With 'Framer AI,' you can even design and deploy an entire site from a single text prompt before fine-tuning it to perfection.",
@@ -3745,21 +3759,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Framer — Pricing",
-          "url": "https://www.framer.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.framer.com/pricing/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "site plans: Free $0, Basic $10/month, Pro $30/month, Enterprise custom",
+            "free plan includes a Framer subdomain, 1 GB bandwidth and 500 AI credits, no custom domain",
+            "additional editors $20/month per seat, content editors $10/month per seat, viewers free",
+            "free workspaces support up to three editors"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Designers who want to publish a real site from a design tool",
+      "Free experimentation: a Framer subdomain, 1 GB bandwidth and 500 AI credits at no cost",
+      "Small sites — Basic is $10/month per site"
+    ],
+    "skipIf": [
+      "You need your own domain — that requires a paid site plan",
+      "You have a team: extra editors are $20/month per seat on top of the site plan",
+      "You expect traffic; the free plan includes 1 GB of bandwidth"
+    ]
   },
   {
     "slug": "spline",
@@ -4359,21 +4387,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Beehiiv — Pricing",
-          "url": "https://www.beehiiv.com/pricing",
-          "checkedAt": "2026-08-31",
+          "label": "beehiiv — Pricing",
+          "url": "https://beehiiv.com/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Launch $0/month up to 2,500 subscribers",
+            "Scale $43/month, $517/year, up to 100,000 subscribers",
+            "Max $96/month, $1,151/year, up to 100,000 subscribers",
+            "Enterprise custom for 100K+ subscribers",
+            "price is fixed within a tier regardless of subscriber growth"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "New newsletters — the free Launch plan runs to 2,500 subscribers",
+      "Writers who want a fixed monthly cost rather than per-subscriber billing",
+      "Lists growing inside a tier: the price does not move as you add subscribers up to the cap"
+    ],
+    "skipIf": [
+      "You are past 2,500 subscribers — that is where free ends and Scale is $43/month",
+      "You have over 100,000 subscribers; that is Enterprise, quoted by sales",
+      "You want per-subscriber billing; beehiiv sells fixed brackets instead"
+    ]
   },
   {
     "slug": "strapi",
@@ -7898,8 +7940,8 @@
       "Database",
       "Hosting"
     ],
-    "basePrice": 29,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Most powerful no-code.",
     "longDescription": "Bubble is the most powerful no-code platform in the world, allowing you to build complex, fully functional web applications like Airbnb or Twitter without writing a single line of code. Unlike simple site builders, Bubble features a full visual programming language and a built-in relational database. It handles hosting and deployment for you, making it the top choice for non-technical founders looking to build an MVP or a full-scale business on a budget.",
@@ -7945,21 +7987,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Bubble — Pricing",
           "url": "https://bubble.io/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with 50K workload units/month, no live site and no custom domain",
+            "Starter $59/month billed annually",
+            "Growth $209/month, Team $549/month billed annually",
+            "usage-based workload units with tiered add-ons or pay-as-you-go overages",
+            "Free and Agency plans cannot buy workload tiers or enable overages"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Learning and prototyping — the free plan includes 50K workload units a month",
+      "Founders building a real app without hiring developers",
+      "Apps whose usage is predictable enough to size a workload tier"
+    ],
+    "skipIf": [
+      "You want to launch — the free plan cannot go live or use a custom domain",
+      "You are budgeting a fixed monthly figure: workload units are usage-based and overages are billed on top",
+      "Your app is heavy; Starter is $59/mo annual and Growth $209/mo before overages"
+    ]
   },
   {
     "slug": "sanity",
