@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { 
   Settings, Plus, Trash2, Save, LogOut, 
   Database, Layout, Activity, CheckCircle, Mail, Zap, Cloud, BarChart3, Shield,
@@ -9,24 +9,34 @@ import {
 import Link from "next/link";
 import { fiyatDurumu } from "@/lib/fiyat";
 import fiyatOnerileri from "@/data/fiyat_onerileri.json";
+import type { Arac } from "@/lib/arac";
+import type { TikOzeti } from "@/lib/clicks";
+
+/* Panelin okudugu sekiller; onceki hali her birine `any` diyordu. */
+type FiyatOnerisi = { slug: string; name: string; kaynak?: string; ipucu?: number | null; sayfada_gorulen?: number[] };
+type TikSatiri = TikOzeti & { name: string; hedef: string | null; affiliate: boolean };
+type TikPaneli = { satirlar: TikSatiri[]; kaynak: string; toplam: number };
+type Yazi = { slug: string; title?: string; date?: string };
+/* Form, kaydin duzenlenebilir alt kumesi; kayit olusurken alanlar bos baslar. */
+type AracFormu = Partial<Arac> & { slug: string; name: string };
 
 const ICON_OPTIONS = ["Zap", "Cloud", "BarChart3", "Database", "Activity", "CheckCircle", "Layout", "Mail", "Shield"];
 
 export default function AdminDashboard() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [password, setPassword] = useState("");
-  const [tools, setTools] = useState<any[]>([]);
-  const [posts, setPosts] = useState<any[]>([]);
+  const [tools, setTools] = useState<Arac[]>([]);
+  const [posts, setPosts] = useState<Yazi[]>([]);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
   const [searchTerm, setSearchTerm] = useState("");
   // Dis link tiklari: /go/<slug> katmaninin urettigi olcum.
-  const [clicks, setClicks] = useState<any>(null);
+  const [clicks, setClicks] = useState<TikPaneli | null>(null);
   const [clicksLoading, setClicksLoading] = useState(false);
   
   // Form State
   const [editMode, setEditMode] = useState(false);
-  const [formData, setFormData] = useState<any>({
+  const [formData, setFormData] = useState<AracFormu>({
     slug: "", name: "", category: "", iconName: "Zap",
     color1: "#6366f1", color2: "#a855f7",
     ease: 90, featuresScore: 90, basePrice: 20, isFlat: false,
@@ -36,19 +46,34 @@ export default function AdminDashboard() {
     keyFeatures: [{title: "", description: ""}]
   });
 
-  useEffect(() => {
-    if (isLoggedIn) fetchTools();
-  }, [isLoggedIn]);
-
-  const fetchTools = async () => {
+  /*
+    Efekt, asagida `const` ile tanimlanan fetchTools'u YUKARIDAN cagiriyordu
+    (react-hooks/immutability: "cannot access variable before it is
+    declared"). Calisiyordu cunku efekt render'dan sonra kosuyor, ama
+    baglanti kirilgan: fonksiyon efektin ustune tasindi.
+  */
+  const fetchTools = useCallback(async () => {
     const res = await fetch("/api/tools");
     const data = await res.json();
     setTools(data);
     
-    // Also fetch posts
-    const pRes = await fetch("/api/blog/generate", { method: 'GET' }); // I need to create a GET route for this or just use a helper
-    // For now I'll just skip the fetch and assume I'll add a proper fetch later
-  };
+    /*
+      Burada bir de yazi listesi cekiliyordu ama sonucu HICBIR YERDE
+      kullanilmiyordu (`pRes` okunmadan atiliyordu) ve cagirdigi
+      /api/blog/generate rotasinin GET dali yok. Her panel acilisinda
+      bosuna bir istek atiyordu; kaldirildi.
+    */
+  }, []);
+
+  /*
+    Yonetici panelinin verisi girise bagli; oturum acilmadan cekilmemeli.
+    Kural fetchTools'un icindeki setState'i sync sayiyor, ama cagri
+    await'ten sonra donuyor. Desen bilincli.
+  */
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (isLoggedIn) fetchTools();
+  }, [isLoggedIn, fetchTools]);
 
   const loadClicks = async () => {
     setClicksLoading(true);
@@ -306,7 +331,7 @@ export default function AdminDashboard() {
               </tr>
             </thead>
             <tbody>
-              {(fiyatOnerileri as any[]).map((r) => (
+              {(fiyatOnerileri as FiyatOnerisi[]).map((r) => (
                 <tr key={r.slug} style={{ borderTop: '1px solid #1e1e1e' }}>
                   <td style={{ padding: '0.7rem 0.5rem', fontWeight: 600 }}>{r.name}</td>
                   <td style={{ padding: '0.7rem 0.5rem', color: r.ipucu ? 'var(--brand-primary)' : '#666', fontWeight: 700 }}>
@@ -340,7 +365,7 @@ export default function AdminDashboard() {
           monthly basePrice.
         </p>
         {(() => {
-          const eksik = tools.filter((t: any) => !fiyatDurumu(t).karsilastirilabilir);
+          const eksik = tools.filter((t) => !fiyatDurumu(t).karsilastirilabilir);
           if (!tools.length) return <p style={{ color: '#666', fontSize: '0.9rem' }}>Loading…</p>;
           if (!eksik.length) return <p style={{ color: '#22c55e', fontWeight: 700 }}>All {tools.length} tools have verified pricing.</p>;
           return (
@@ -349,7 +374,7 @@ export default function AdminDashboard() {
                 {eksik.length} of {tools.length} tools need a pricing model
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                {eksik.map((t: any) => (
+                {eksik.map((t) => (
                   <span key={t.slug} style={{ padding: '0.4rem 0.8rem', borderRadius: '10px', background: '#1a1a1a', border: '1px solid #333', fontSize: '0.85rem' }}>
                     {t.name}
                   </span>
@@ -396,7 +421,7 @@ export default function AdminDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {clicks.satirlar.map((r: any) => (
+                {clicks.satirlar.map((r) => (
                   <tr key={r.slug} style={{ borderTop: '1px solid #1e1e1e' }}>
                     <td style={{ padding: '0.7rem 0.5rem', fontWeight: 600 }}>{r.name}</td>
                     <td style={{ padding: '0.7rem 0.5rem', color: 'var(--brand-primary)', fontWeight: 700 }}>{r.adet}</td>

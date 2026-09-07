@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import type { Arac } from '@/lib/arac';
 import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
@@ -38,7 +39,7 @@ export async function POST(request: Request) {
     const toolsData = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
     
     // Provide tools with slugs for internal linking
-    const toolContext = toolsData.slice(0, 20).map((t: any) => `${t.name} (slug: ${t.slug})`).join(", ");
+    const toolContext = (toolsData as Arac[]).slice(0, 20).map((t) => `${t.name} (slug: ${t.slug})`).join(", ");
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolcompare.net";
 
     const prompt = `Write a high-end, expert-level blog post for a SaaS directory site.

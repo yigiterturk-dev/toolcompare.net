@@ -32,7 +32,7 @@ export default function ContactPage() {
             Get in <span>Touch</span>
           </h1>
           <p>
-            Have a tool you want us to review? Or just want to say hi? We'd love to hear from you.
+            Have a tool you want us to review? Or just want to say hi? We&rsquo;d love to hear from you.
           </p>
         </div>
 

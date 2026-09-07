@@ -72,7 +72,14 @@ function ToolGrid({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?:
   // tek bir link iceriyordu. Ayni bilgiyi hidrasyondan sonra okumak sayfayi
   // sunucuda render edilebilir birakiyor; ilk render filtresiz liste gosterir.
   const [catFilter, setCatFilter] = useState<string | null>(null);
+  /*
+    Kural burada bilerek susturuldu. Alternatifi useSearchParams() ve o,
+    yukaridaki notta yazdigi gibi statik uretimi bozup sunucudan gelen
+    HTML'i "Loading..."e dusuruyordu -- yani butun urun linklerini
+    kaybediyorduk. Bir kerelik, mount sonrasi okuma bilincli tercih.
+  */
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCatFilter(new URLSearchParams(window.location.search).get("category"));
   }, []);
 
@@ -86,9 +93,17 @@ function ToolGrid({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?:
 
   const pageSize = 12;
 
-  useEffect(() => {
+  /*
+    Once bu bir efektti ve `setCurrentPage(1)` cagiriyordu: filtre her
+    degistiginde fazladan bir render turu. React'in onerdigi yol, turetilen
+    durumu RENDER SIRASINDA duzeltmek -- efekt hic kosmadan sayfa sifirlanir.
+  */
+  const [oncekiFiltre, setOncekiFiltre] = useState(`${searchTerm}|${catFilter}`);
+  const suankiFiltre = `${searchTerm}|${catFilter}`;
+  if (oncekiFiltre !== suankiFiltre) {
+    setOncekiFiltre(suankiFiltre);
     setCurrentPage(1);
-  }, [searchTerm, catFilter]);
+  }
 
   const filteredTools = useMemo(() => {
     return tools

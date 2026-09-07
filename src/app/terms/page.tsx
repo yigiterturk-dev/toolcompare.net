@@ -57,7 +57,7 @@ export default function TermsPage() {
             <h2>
                3. Accuracy of Information
             </h2>
-            <p>While we strive to provide the most up-to-date pricing and feature information, software companies change their offerings frequently. ToolCompare.net does not warrant that any information on the site is accurate, complete, or current. Always verify pricing and terms on the provider's official website before purchasing.</p>
+            <p>While we strive to provide the most up-to-date pricing and feature information, software companies change their offerings frequently. ToolCompare.net does not warrant that any information on the site is accurate, complete, or current. Always verify pricing and terms on the provider&rsquo;s official website before purchasing.</p>
           </section>
 
           <section>

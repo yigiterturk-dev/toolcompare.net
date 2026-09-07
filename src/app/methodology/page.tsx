@@ -37,6 +37,13 @@ export const metadata: Metadata = {
   },
 };
 
+/*
+  Bilesen render icinde tanimliydi (react-hooks/static-components): her
+  render'da yeni bir bilesen tipi uretilir, React agaci gereksiz yere
+  sokulup yeniden takilir. Sabit oldugu icin modul kapsamina alindi.
+*/
+const B = ({ children }: { children: React.ReactNode }) => <section>{children}</section>;
+
 export default function MethodologyPage() {
   const araclar = toolsData as Arac[];
   const toplam = araclar.length;
@@ -44,10 +51,6 @@ export default function MethodologyPage() {
   const dogrulanmamis = dogrulanmamisSayisi(araclar);
   const dogrulanmis = toplam - dogrulanmamis;
 
-
-  const B = ({ children }: { children: React.ReactNode }) => (
-    <section>{children}</section>
-  );
 
   return (
     <div>

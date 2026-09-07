@@ -15,6 +15,7 @@
  */
 
 import { NextResponse } from 'next/server';
+import type { Arac } from '@/lib/arac';
 import OpenAI from 'openai';
 import toolsData from '@/data/tools.json';
 import { hizFreni, istekKaynagi } from '@/lib/adminAuth';
@@ -46,7 +47,7 @@ const MESAJ_SINIRI = 1000;
  * yapiyor; uzun secenek listesi zaten daha iyi cevap uretmiyordu.
  */
 function baglam(mesaj: string) {
-  return baglamSec(toolsData as any[], mesaj).map((t: any) => ({
+  return baglamSec(toolsData as Arac[], mesaj).map((t: Arac) => ({
     name: t.name,
     category: t.category,
     short: t.shortDescription,

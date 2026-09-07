@@ -33,6 +33,21 @@ export function generateStaticParams() {
 
 type SayfaParametresi = { params: Promise<{ slug: string }> }
 
+/*
+  Bilesen render icinde tanimliydi (react-hooks/static-components): her
+  render'da yeni bilesen tipi uretiliyordu. Props disinda kapanis
+  degiskeni kullanmadigi icin modul kapsamina alindi.
+*/
+const ComparisonRow = ({ label, val1, val2 }: { label: string; val1: React.ReactNode; val2: React.ReactNode }) => (
+  <tr className="border-t border-line">
+    <th scope="row" className="py-3 pr-3 text-left align-top text-xs font-medium tracking-wide text-ink-muted uppercase">
+      {label}
+    </th>
+    <td className="py-3 pr-3 align-top text-sm">{val1}</td>
+    <td className="py-3 align-top text-sm">{val2}</td>
+  </tr>
+);
+
 export async function generateMetadata({ params }: SayfaParametresi): Promise<Metadata> {
   const resolvedParams = await params;
   const parts = resolvedParams.slug.split("-vs-");
@@ -113,15 +128,7 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
     kullanilmayan bir bicimlendirme, bir gun yanlis veriye yeniden
     baglanmayi bekleyen bir tuzaktir.
   */
-  const ComparisonRow = ({ label, val1, val2 }: { label: string; val1: React.ReactNode; val2: React.ReactNode }) => (
-    <tr className="border-t border-line">
-      <th scope="row" className="py-3 pr-3 text-left align-top text-xs font-medium tracking-wide text-ink-muted uppercase">
-        {label}
-      </th>
-      <td className="py-3 pr-3 align-top text-sm">{val1}</td>
-      <td className="py-3 align-top text-sm">{val2}</td>
-    </tr>
-  );
+
 
   const sema = listeSemasi(
     `${tool1.name} vs ${tool2.name}`,

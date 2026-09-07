@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import type { Arac } from '@/lib/arac';
 import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
@@ -36,7 +37,7 @@ export async function POST(request: Request) {
     const filePath = path.join(process.cwd(), 'src/data/tools.json');
     const fileData = fs.readFileSync(filePath, 'utf8');
     const existingTools = JSON.parse(fileData);
-    const existingSlugs = new Set(existingTools.map((t: any) => t.slug));
+    const existingSlugs = new Set((existingTools as Arac[]).map((t) => t.slug));
 
     const prompt = `Generate ${count} highly professional, deep-dive reviews for unique SaaS tools in the "${category}" category. 
     DO NOT generate tools that are likely already in a standard directory (like Slack or Zoom) unless they are elite niche players.
@@ -85,7 +86,7 @@ export async function POST(request: Request) {
     const generatedTools = parsed.tools || [];
     let addedCount = 0;
 
-    generatedTools.forEach((newTool: any) => {
+    (generatedTools as Arac[]).forEach((newTool) => {
       newTool.slug = (newTool.name || "").toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
       
       // Duplicate Check

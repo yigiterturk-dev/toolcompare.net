@@ -6,6 +6,7 @@
  */
 
 import { NextResponse } from "next/server";
+import { paraliMi } from "@/lib/affiliate";
 import { yoneticiMi, hizFreni, istekKaynagi } from "@/lib/adminAuth";
 import { tikOzeti } from "@/lib/clicks";
 import { araciBul, hedefUrl } from "@/lib/outbound";
@@ -32,8 +33,14 @@ export async function POST(request: Request) {
       adet: s.adet,
       son: s.son,
       hedef: tool ? hedefUrl(tool) : null,
-      // Affiliate etiketi takili mi? Panelde "para kazaniyor mu" sinyali.
-      affiliate: Boolean(tool?.affiliateUrl),
+      /*
+        DENETIMDE BULUNAN (2026-09-07): burasi `tool?.affiliateUrl`
+        okuyordu -- tools.json'da boyle bir alan YOK (512 kayit tarandi,
+        sifir). Yani panel, anlasma yapilsa bile her satiri "free"
+        gosterirdi. Parali link tek kaynaktan gelir: affiliate.json
+        (bkz. src/lib/affiliate.ts bastaki not).
+      */
+      affiliate: paraliMi(s.slug),
     };
   });
 
