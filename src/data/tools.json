@@ -5419,21 +5419,33 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Klaviyo — Pricing",
-          "url": "https://www.klaviyo.com/uk/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.klaviyo.com/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free plan up to 250 profiles, 500 emails per month and $5 of mobile messages per month",
+            "the free plan continues indefinitely while under those limits",
+            "paid tier prices are not displayed; the page offers an estimate builder and sales contact"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Klaviyo does not publish paid tier figures on its pricing page, so none are claimed here."
       ]
-    }
+    },
+    "bestFor": [
+      "Ecommerce stores starting a list — the free plan covers 250 profiles and 500 emails a month",
+      "Teams that want email and SMS from the same profile data",
+      "Shops already on Shopify or WooCommerce, where the integration does the work"
+    ],
+    "skipIf": [
+      "Your list is real — 250 profiles is a starting allowance, and the price rises with contact count from there",
+      "You need a figure before signing up: Klaviyo does not publish its paid tiers on the pricing page, only an estimate builder",
+      "You send SMS heavily; mobile messages are metered separately"
+    ]
   },
   {
     "slug": "twilio",
@@ -9640,7 +9652,7 @@
     "shortDescription": "Deploy apps and databases from a repo.",
     "websiteUrl": "https://railway.com",
     "incelendi": true,
-    "fiyatModeli": "ucretsiz-katman",
+    "fiyatModeli": "kullanima-gore",
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -9664,19 +9676,24 @@
     "verdict": "Excellent for getting something live quickly. At sustained scale, price it against a plain virtual server.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Railway — Pricing",
           "url": "https://railway.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free trial $5 in credits for 30 days with no credit card",
+            "Free plan $0/month with $1 of monthly usage credit",
+            "Hobby $5/month including $5 of credit, Pro $20/month per workspace including $20 of credit",
+            "usage billed per second: memory $0.00000386 per GB/second (about $10/GB/month), CPU $0.00000772 per vCPU/second (about $20/vCPU/month)",
+            "disk volumes about $0.15/GB/month, egress $0.05 per GB, object storage $0.015 per GB-month",
+            "stopped services cost nothing"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -9692,6 +9709,16 @@
         "title": "Environments",
         "description": "Creates isolated environments for preview and production from the same project."
       }
+    ],
+    "bestFor": [
+      "Deploying a service in minutes without configuring infrastructure",
+      "Trying it free — $5 in credit for 30 days, no card",
+      "Intermittent workloads: billing is per second and stopped services cost nothing"
+    ],
+    "skipIf": [
+      "You want a flat monthly bill — the plan fee is separate from usage, which is metered per second",
+      "You run something always-on: memory is about $10/GB/month and CPU about $20/vCPU/month on top of the plan",
+      "You move a lot of data; egress is $0.05 per GB"
     ]
   },
   {
@@ -11874,19 +11901,24 @@
     "verdict": "One of the highest-value free apps on macOS. The paid tier is optional for most people.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Raycast — Pricing",
           "url": "https://www.raycast.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free for personal use with all built-in extensions",
+            "Pro $10/month, $8/month billed yearly, adds AI, cloud sync, dictation, custom themes and unlimited notes",
+            "free tier limited to 5 Raycast Notes",
+            "Teams Free $0/user/month capped at 30 snippets, 30 quicklinks and 5 commands",
+            "Teams Pro $15/user/month, $12 annually, no seat minimum or maximum",
+            "Advanced AI add-on $8/month"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -11906,6 +11938,16 @@
         "title": "Scripts in TypeScript",
         "description": "Internal commands written in React and TypeScript rather than a bespoke language."
       }
+    ],
+    "bestFor": [
+      "Personal use at no cost — every built-in extension is in the free tier",
+      "Teams that want shared snippets and quicklinks free: Teams Free has no seat minimum",
+      "Buyers comparing AI launchers: Pro is $8/month billed yearly"
+    ],
+    "skipIf": [
+      "You want AI, cloud sync or custom themes — those are Pro, not free",
+      "You take notes in it: the free tier caps at 5 Raycast Notes",
+      "You want the most advanced AI models; that is a further $8/month on top of Pro"
     ]
   },
   {
@@ -12787,7 +12829,7 @@
     "shortDescription": "Self-hostable team messaging.",
     "websiteUrl": "https://mattermost.com",
     "incelendi": true,
-    "fiyatModeli": "ucretsiz-katman",
+    "fiyatModeli": "teklif",
     "basePrice": 0,
     "isFlat": true,
     "kriterler": {
@@ -12828,23 +12870,35 @@
       }
     ],
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Mattermost — Vendor page (open source)",
-          "url": "https://mattermost.com/about-us/",
-          "checkedAt": "2026-09-03",
+          "label": "Mattermost — Pricing",
+          "url": "https://mattermost.com/pricing/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor describes the software as open source, so the self-hosted edition is free to use"
+            "Professional, Enterprise and Enterprise Advanced tiers are all quoted by sales",
+            "no per-user prices published",
+            "licences sold as prepaid annual subscriptions based on the number of seats",
+            "a limited-use edition of Enterprise Advanced is offered free for technical evaluation"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page describes the software as open source. It does not print a price; the free-to-self-host reading follows from the licence, not from a published price list.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Mattermost publishes no figures on its pricing page, so none are claimed here."
       ]
-    }
+    },
+    "bestFor": [
+      "Organisations that must self-host their team chat rather than use a SaaS",
+      "Technical evaluation first — a limited-use edition is offered free",
+      "Teams replacing Slack for security or sovereignty reasons"
+    ],
+    "skipIf": [
+      "You need a price to compare — Mattermost publishes no per-seat figures; all tiers are quoted",
+      "You want month-to-month billing: licences are sold as prepaid ANNUAL seat subscriptions",
+      "You want a hosted product with no infrastructure work"
+    ]
   },
   {
     "slug": "rocket-chat",
@@ -16454,23 +16508,34 @@
       }
     ],
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Drizzle ORM — Vendor page (free, open source)",
+          "label": "Drizzle ORM",
           "url": "https://orm.drizzle.team/",
-          "checkedAt": "2026-09-03",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "the ORM is free and open source; the vendor states there is no price",
+            "Drizzle Studio runs locally for free via drizzle-kit studio",
+            "Gateway is a paid hosted Docker product for connecting to multiple databases"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "TypeScript projects that want a type-safe ORM with no licence cost at any scale",
+      "Developers who prefer SQL-shaped queries over a heavy abstraction",
+      "Local development: Drizzle Studio runs free via the CLI"
+    ],
+    "skipIf": [
+      "You want a hosted database browser for a team — the Gateway product is the paid part",
+      "You need vendor support; this is a community open-source project",
+      "You want a batteries-included framework rather than a query layer"
+    ]
   },
   {
     "slug": "turso",
