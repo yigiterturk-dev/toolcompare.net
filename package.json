@@ -11,14 +11,15 @@
     "verify:claims": "node scripts/verify-claims.mjs",
     "check:fiyat": "node scripts/check-fiyat-modelleri.mjs",
     "check:izgara": "node --experimental-strip-types --no-warnings scripts/check-izgara-alanlari.mjs",
-    "check": "npm run check:fiyat && npm run check:izgara && npm test",
+    "check": "npm run lint && npm test && npm run denetim && npm run build",
     "gsc:dene": "node --experimental-strip-types --no-warnings scripts/gsc-dene.ts",
     "gsc:senkron": "node --experimental-strip-types --no-warnings scripts/gsc-senkron.ts",
     "gsc:indeks": "node --experimental-strip-types --no-warnings scripts/gsc-indeks.ts",
     "gsc:borc": "node --experimental-strip-types --no-warnings scripts/gsc-borc.ts",
     "gsc:firsat": "node --experimental-strip-types --no-warnings scripts/gsc-firsat.ts",
     "affiliate:sira": "tsx scripts/affiliate-sira.ts",
-    "gsc:verim": "tsx scripts/bolum-verim.ts"
+    "gsc:verim": "tsx scripts/bolum-verim.ts",
+    "denetim": "node scripts/verify-claims.mjs && node scripts/check-fiyat-modelleri.mjs && node scripts/check-izgara-alanlari.mjs"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

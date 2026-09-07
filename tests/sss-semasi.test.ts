@@ -17,7 +17,7 @@ test("arac sayfasi SSS semasini basiyor", () => {
 });
 
 test("sssSemasi gecerli FAQPage uretiyor", () => {
-  const s: any = sssSemasi([
+  const s = sssSemasi([
     { soru: "How much does Wix Studio cost?", cevap: "From $16/user/mo." },
     { soru: "What are the main drawbacks?", cevap: "Steep learning curve." },
   ]);
@@ -30,7 +30,7 @@ test("sssSemasi gecerli FAQPage uretiyor", () => {
 });
 
 test("bos soru listesi bos mainEntity verir, patlamaz", () => {
-  const s: any = sssSemasi([]);
+  const s = sssSemasi([]);
   assert.deepEqual(s.mainEntity, []);
 });
 

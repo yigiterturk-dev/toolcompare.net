@@ -16,7 +16,8 @@ const veri = JSON.parse(readFileSync("src/data/affiliate-programlar.json", "utf8
 const parali: Record<string, { url?: string }> = JSON.parse(
   readFileSync("src/data/affiliate.json", "utf8"),
 );
-const programlar: Record<string, { durum: string }> = veri.programlar;
+type Program = { durum: string; url?: string; checkedAt?: string; neden?: string; kosul?: string };
+const programlar: Record<string, Program> = veri.programlar;
 
 test("program listesi para kazandiran linki DEVREYE ALMIYOR", () => {
   const varOlanlar = Object.entries(programlar).filter(([, p]) => p.durum === "var");
@@ -35,7 +36,7 @@ test("her kayit gecerli bir durum tasiyor", () => {
 });
 
 test("'var' diyen her kayit kaynak URL'si veriyor", () => {
-  for (const [slug, p] of Object.entries(programlar) as [string, any][]) {
+  for (const [slug, p] of Object.entries(programlar)) {
     if (p.durum !== "var") continue;
     assert.match(p.url ?? "", /^https:\/\//, `${slug}: program var deniyor ama url yok`);
     assert.match(p.checkedAt ?? "", /^\d{4}-\d{2}-\d{2}$/, `${slug}: kontrol tarihi yok`);
