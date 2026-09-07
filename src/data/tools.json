@@ -4720,21 +4720,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Strava — Pricing",
-          "url": "https://www.strava.com/pricing",
-          "checkedAt": "2026-08-31",
+          "label": "Strava — Subscribe",
+          "url": "https://www.strava.com/subscribe",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "subscription $29.99/year, about $2.50/month billed annually",
+            "student rate $14.99/year with verification",
+            "Runna bundle $59.99/year",
+            "free version records activities, community features, safety features and suggested routes",
+            "subscription-only: offline routes, drawing your own routes, training history, workout analysis, custom goals, segment leaderboards and challenges"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Recording activities and following friends — that stays free",
+      "Students: the subscription drops to $14.99/year with verification",
+      "Anyone who wants the paid features cheaply: $29.99/year works out at $2.50/month"
+    ],
+    "skipIf": [
+      "You care about segment leaderboards — competing on them is subscription-only",
+      "You plan routes: drawing your own routes and saving them offline are behind the paywall",
+      "You analyse training; workout analysis, training history and custom goals are all paid"
+    ]
   },
   {
     "slug": "substack",
@@ -8834,8 +8848,8 @@
       "Screening",
       "Privacy"
     ],
-    "basePrice": 8,
-    "isFlat": false,
+    "basePrice": 8.25,
+    "isFlat": true,
     "category": "Communication",
     "shortDescription": "Rethink your email.",
     "longDescription": "HEY is an opinionated email service from the creators of Basecamp that aims to fix everything wrong with modern email. It replaces the traditional inbox with the 'Imbox'—a place for things that actually matter. With its unique 'Screening' feature, YOU decide who is allowed to email you. HEY blocks all spy trackers, protects your privacy, and offers innovative features like 'The Feed' for newsletters and 'The Paper Trail' for receipts. It's a premium, opinionated take on email for people who want to reclaim their focus and sanity.",
@@ -8881,21 +8895,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "HEY Email — Pricing",
+          "label": "HEY — Pricing",
           "url": "https://www.hey.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "HEY for You $99 per year for a @hey.com address",
+            "no free tier; 30-day trial with no credit card",
+            "HEY for Domains $12 per user per month, $10 for the first user, billed monthly only",
+            "HEY Calendar included with both plans",
+            "premium addresses: 2 characters $999/year, 3 characters $349/year"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "People who want email rebuilt around screening rather than folders",
+      "Trying it properly: 30-day trial with no credit card",
+      "Calendar users: HEY Calendar is included at no extra cost"
+    ],
+    "skipIf": [
+      "You want a free mailbox — HEY has no free tier at all, only a trial",
+      "You need your own domain: that is HEY for Domains at $12 per user per month, billed MONTHLY only",
+      "You want a short address; 2-character addresses are $999/year and 3-character $349/year"
+    ]
   },
   {
     "slug": "gitlab",
@@ -9055,19 +9084,23 @@
     "verdict": "Strong if CI is a bottleneck for you. If your pipelines are simple, the CI built into your Git host is probably enough.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "CircleCI — Pricing",
           "url": "https://circleci.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with 30,000 credits/month, up to 6,000 build minutes on the small Docker class, up to 5 active users and 30x concurrency",
+            "Performance from $15/month",
+            "each additional monthly active user costs 25,000 credits",
+            "network and storage beyond plan thresholds cost 420 credits per GB",
+            "example: 30,000 credits at 10 credits per minute on Linux Medium is 3,000 minutes"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -9087,6 +9120,16 @@
         "title": "Credit-based billing",
         "description": "Cost follows build minutes and machine size rather than headcount."
       }
+    ],
+    "bestFor": [
+      "Small teams — the free plan includes 30,000 credits and up to 5 active users a month",
+      "Projects that fit roughly 6,000 build minutes a month on the smallest Docker class",
+      "Teams that want 30x concurrency without paying for it"
+    ],
+    "skipIf": [
+      "You are budgeting in minutes — CircleCI bills in CREDITS, and the minute count depends on the machine size you pick",
+      "You add people: each additional active user costs 25,000 credits a month",
+      "You move large artifacts; network and storage past the threshold cost 420 credits per GB"
     ]
   },
   {
@@ -16957,23 +17000,35 @@
       }
     ],
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Caddy — Vendor page (free, open source)",
+          "label": "Caddy",
           "url": "https://caddyserver.com/",
-          "checkedAt": "2026-09-03",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "free and open source, hosted on GitHub",
+            "automatically obtains and renews TLS certificates for all sites by default",
+            "On-Demand TLS provisions certificates during the TLS handshake for custom domains",
+            "the project relies on sponsorships; no licence fee"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "The homepage does not name the licence or publish support pricing, so neither is claimed."
       ]
-    }
+    },
+    "bestFor": [
+      "Serving HTTPS without touching a certificate — Caddy obtains and renews TLS automatically by default",
+      "Small servers where a short config file beats an nginx block",
+      "Custom customer domains: On-Demand TLS provisions certificates during the handshake"
+    ],
+    "skipIf": [
+      "You need a vendor with an SLA — the project runs on sponsorships, not licences",
+      "Your team already knows nginx and its module ecosystem",
+      "You need a published support contract price; none is listed"
+    ]
   },
   {
     "slug": "pulumi",
