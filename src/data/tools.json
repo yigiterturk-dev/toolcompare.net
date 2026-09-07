@@ -4628,21 +4628,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Strapi — Pricing",
-          "url": "https://strapi.io/pricing-cloud",
-          "checkedAt": "2026-08-31",
+          "url": "https://strapi.io/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Strapi is open source under the MIT licence and free when self-hosted",
+            "Strapi Cloud has no free tier",
+            "Starter $35/month per project with 100,000 API requests, 50 GB asset storage and 50 GB bandwidth",
+            "Pro $90/month with 1M API requests, Business $450/month with 10M",
+            "overage +$1.50 per additional 25,000 API requests",
+            "yearly billing saves up to 17%"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Self-hosting a headless CMS for free — Strapi is MIT licensed",
+      "Teams that want to own the content API and the database behind it",
+      "Projects that will outgrow a hosted CMS's content model"
+    ],
+    "skipIf": [
+      "You want managed hosting — Strapi Cloud has NO free tier; Starter is $35/month per project",
+      "You have several projects: Cloud is priced per project, not per account",
+      "Your API is busy: Starter includes 100,000 requests a month and overage is $1.50 per additional 25,000"
+    ]
   },
   {
     "slug": "strava",
@@ -6223,7 +6238,7 @@
       "Analytics"
     ],
     "basePrice": 0,
-    "isFlat": true,
+    "isFlat": false,
     "category": "Hosting",
     "shortDescription": "Modern web hosting.",
     "longDescription": "Netlify is a powerful platform for deploying modern web projects, specifically optimized for the Jamstack architecture. It automates your entire build process, taking your code from GitHub and deploying it to a global CDN with one push. Beyond just hosting, Netlify provides essential services like serverless functions, form handling, and identity management, allowing you to build full-stack applications without managing a backend. It is the premier choice for speed, simplicity, and a great developer experience.",
@@ -6270,21 +6285,33 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Netlify — Pricing",
           "url": "https://www.netlify.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with a 300 credit limit, unlimited deploy previews and global CDN",
+            "Personal $9/month, Pro $20/month with unlimited members, Enterprise custom",
+            "credit costs: production deploys 15 credits ($0.10), compute 10 credits per GB-hour ($0.07), bandwidth 20 credits per GB ($0.13), web requests 2 credits per 10k ($0.01)"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Deploying a static or Jamstack site with a global CDN at no cost",
+      "Unlimited deploy previews on every plan, including free",
+      "Teams that want unlimited members: Pro is $20/member/month with no seat cap"
+    ],
+    "skipIf": [
+      "You are budgeting a flat figure — Netlify bills in credits: bandwidth is 20 credits per GB, compute 10 per GB-hour",
+      "Your site gets real traffic; the free plan carries a 300-credit limit",
+      "You need published bandwidth and build-minute allowances up front; the pricing page states credits, not allowances"
+    ]
   },
   {
     "slug": "terraform",
@@ -6390,7 +6417,7 @@
       "APM",
       "Infrastructure"
     ],
-    "basePrice": 15,
+    "basePrice": 0,
     "isFlat": false,
     "category": "Developer Tools",
     "shortDescription": "Full-stack monitoring.",
@@ -6437,21 +6464,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Datadog — Pricing",
           "url": "https://www.datadoghq.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free infrastructure monitoring for up to 5 hosts with 1-day metric retention",
+            "Infrastructure Pro $15/host/month, Enterprise $23/host/month, billed annually",
+            "APM $31/host/month with infrastructure attached, APM Pro $35, APM Enterprise $40",
+            "Log Management $0.10 per ingested or scanned GB plus $1.70 per million log events indexed"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Small setups — infrastructure monitoring is free for up to 5 hosts",
+      "Teams that want metrics, traces and logs from one vendor",
+      "Organisations that can size their host count in advance"
+    ],
+    "skipIf": [
+      "You have more than 5 hosts — the free tier ends there and Pro is $15/host/month billed annually",
+      "You log heavily: logs are billed at $0.10 per ingested GB PLUS $1.70 per million indexed events",
+      "You need history on the free tier; metric retention there is 1 day"
+    ]
   },
   {
     "slug": "appwrite",
@@ -9239,19 +9280,21 @@
     "verdict": "The default choice for dashboards, and rightly so. Budget time for building the dashboards, not just installing it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Grafana — Pricing",
           "url": "https://grafana.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Grafana is open source and available on GitHub",
+            "Cloud free tier: 3 active users per month, 10k active metric series, 50 GB logs ingested per month, 14 days retention, no credit card",
+            "Pro from $19/month plus usage with volume discounts"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -9267,6 +9310,16 @@
         "title": "Dashboard as code",
         "description": "Stores dashboards as JSON so they can be versioned and provisioned."
       }
+    ],
+    "bestFor": [
+      "Self-hosting for free — Grafana itself is open source",
+      "Small teams trying the hosted version: no credit card needed",
+      "Dashboards over data you already collect elsewhere"
+    ],
+    "skipIf": [
+      "You are more than three people — the Cloud free tier allows 3 active users a month",
+      "You keep history: free retention is 14 days for metrics, logs, traces and profiles",
+      "Your volume is real: free covers 10k active series and 50 GB of logs a month, then Pro is $19/month plus usage"
     ]
   },
   {
@@ -11354,19 +11407,23 @@
     "verdict": "The strongest option when data ownership is a requirement. Otherwise the operational load is real.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Matomo — Pricing",
           "url": "https://matomo.org/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Community plan free forever when self-hosted, with unlimited users and hits and forum support only",
+            "Matomo Cloud from EUR 29/month at 50,000 hits per month",
+            "Cloud pricing scales by monthly hit bands",
+            "2 months free with annual billing",
+            "free trial with no credit card required"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -11382,6 +11439,16 @@
         "title": "Heatmaps and session recording",
         "description": "Adds behaviour tools alongside standard traffic reporting."
       }
+    ],
+    "bestFor": [
+      "Owning your analytics data outright — self-hosting is free forever with unlimited users and hits",
+      "Teams that need a Google Analytics alternative for privacy or regulatory reasons",
+      "Trying the hosted version: free trial with no card"
+    ],
+    "skipIf": [
+      "You will not run a server — free means self-hosted; Matomo Cloud starts at €29/month for 50,000 hits",
+      "Your traffic grows: Cloud pricing scales by monthly hits, band by band",
+      "You want support included; the free Community plan gets forum support only"
     ]
   },
   {
@@ -17764,7 +17831,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "fiyatModeli": "ucretsiz-katman",
+    "fiyatModeli": "teklif",
     "kriterler": {
       "api": true,
       "mobil": false,
@@ -17786,19 +17853,21 @@
     "verdict": "Treat the numbers as directional. For small sites the error bars swallow the signal.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Similarweb — Pricing",
-          "url": "https://www.similarweb.com/packages/web/",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.similarweb.com/corp/pricing/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "business and enterprise packages are quoted by the sales team, no published prices",
+            "free data on similarweb.com is a high-level sample with a limited feature set and no deeper drill-downs",
+            "free trial and self-service packages are mentioned for entrepreneurs and small teams"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Similarweb publishes no figures on its pricing page, so none are claimed here."
       ]
     },
     "keyFeatures": [
@@ -17814,6 +17883,16 @@
         "title": "Audience overlap",
         "description": "Shows which other sites a domain's visitors also use."
       }
+    ],
+    "bestFor": [
+      "Competitive traffic and market research at agency or enterprise scale",
+      "Teams that want a sales conversation rather than a self-serve tier",
+      "Starting with the free tools before committing"
+    ],
+    "skipIf": [
+      "You need a price to compare — Similarweb publishes none for its business packages",
+      "You expect the free data to be enough: the vendor calls it a high-level sample without deeper drill-downs",
+      "You want a self-serve monthly plan; the main route is contacting sales"
     ]
   },
   {
