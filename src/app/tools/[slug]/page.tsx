@@ -8,7 +8,7 @@ import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki, kanitRel } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
-import { kanonikSlug, indekslenebilirAkranlar, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { kanonikSlug, indekslenebilirAkranlar, alternatifSayfasiVar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
@@ -134,6 +134,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   // Metin icinde akranlardan bahsedilebilir; ama LINK verilen liste
   // yalnizca cift sayfasi indekslenebilenler (bkz. indekslenebilirAkranlar).
   const karsilastirmalar = indekslenebilirAkranlar(tool.slug);
+  // Alternatif sayfasi kapisi karsilastirma cifti kapisindan AYRI (bkz. compare.ts).
+  const altSayfasiVar = alternatifSayfasiVar(tool.slug);
   const fiyat = fiyatDurumu(tool);
   const ucretsizModel = ["bedava", "ucretsiz", "ucretsiz-katman"].includes(tool.fiyatModeli ?? "");
   const bestFor: string[] = Array.isArray(tool.bestFor) ? tool.bestFor.filter(Boolean) : [];
@@ -606,31 +608,74 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </section>
           )}
 
-          {/* ---------- Karsilastirma ic linkleri ---------- */}
-          {karsilastirmalar.length >= EN_AZ_ALTERNATIF && (
+          {/* ---------- Karsilastirma ve alternatif ic linkleri ----------
+              Bu bolumun tamami eskiden TEK bir kosula ("indekslenebilir
+              karsilastirma cifti sayisi >= 3") bagliydi. Alternatif
+              sayfasinin baglantisi da icinde oldugu icin, cifti olmayan
+              araclarda /alternatives/<slug> URETILIYOR ama ona giden link
+              HIC BASILMIYORDU (olculdu: photopea 374 gosterim, sayfa 200
+              donuyor, link sayisi 0). Iki kapi artik ayri.
+          */}
+          {(altSayfasiVar || karsilastirmalar.length >= EN_AZ_ALTERNATIF) && (
             <section className="mt-12 border-t border-line pt-10">
               <h2 className="text-xl font-semibold">Compare {tool.name} with alternatives</h2>
-              <p className="mt-2 text-sm">
-                <Link
-                  href={`/alternatives/${tool.slug}`}
-                  className="text-accent underline underline-offset-4"
-                >
-                  See all {tool.name} alternatives ranked →
-                </Link>
-              </p>
-              <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
-                {karsilastirmalar.map((t: Arac) => (
-                  <li key={t.slug}>
-                    <Link
-                      href={`/compare/${kanonikSlug(tool.slug, t.slug)}`}
-                      className="inline-flex rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
-                    >
-                      {tool.name} vs {t.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+
+              {altSayfasiVar && (
+                <p className="mt-2 text-sm">
+                  <Link
+                    href={`/alternatives/${tool.slug}`}
+                    className="text-accent underline underline-offset-4"
+                  >
+                    See all {tool.name} alternatives ranked →
+                  </Link>
+                </p>
+              )}
+
+              {karsilastirmalar.length >= EN_AZ_ALTERNATIF && (
+                <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
+                  {karsilastirmalar.map((t: Arac) => (
+                    <li key={t.slug}>
+                      <Link
+                        href={`/compare/${kanonikSlug(tool.slug, t.slug)}`}
+                        className="inline-flex rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
+                      >
+                        {tool.name} vs {t.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
             </section>
+          )}
+
+          {/*
+            Kategori baglantisi -- YUKARIDAKI BOLUMUN DISINDA.
+
+            Kategori adresi sayfada yalnizca JSON-LD kirinti semasinda vardi;
+            Google semadaki adresi baglanti saymaz, dolayisiyla arac
+            sayfalarinin hicbiri kategorisine link akitmiyordu. Oysa
+            /categories/* sayfa basina en verimli bolum (19,5 gosterim) ve
+            orneklemde %100 indeksli.
+
+            Ilk denemede bu blok karsilastirma bolumunun ICINE konmustu ve
+            ise yaramadi: alternatif sayfasi da karsilastirma cifti de
+            olmayan araclarda bolumun tamami cizilmiyor, kategori linki de
+            onunla birlikte kayboluyordu. Olculdu -- `dbeaver` tam olarak bu
+            durumda ve sitenin EN COK gosterim alan sayfasi (487 gosterim):
+            derlenmis HTML'inde hicbir derin ic link yoktu, cikmaz sokakti.
+            Kategori linki artik yalnizca kendi kosuluna bagli.
+          */}
+          {tool.category && (
+            <p className="mt-8 text-sm text-ink-muted">
+              More {tool.category} tools:{" "}
+              <Link
+                href={`/categories/${kategoriSlug(tool.category)}`}
+                className="text-accent underline underline-offset-4"
+              >
+                see the full {tool.category} category
+              </Link>
+            </p>
           )}
         </article>
       </main>

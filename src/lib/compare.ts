@@ -185,6 +185,28 @@ export function alternatifSayfasiOlanlar(): Arac[] {
 }
 
 /**
+ * Bu arac icin /alternatives/<slug> sayfasi URETILIYOR mu?
+ *
+ * NEDEN AYRI BIR KAPI (GSC olcumu, 2026-09-07):
+ * Arac sayfasindaki "Compare X with alternatives" bolumu tek bir kosula
+ * baglanmisti: INDEKSLENEBILIR karsilastirma cifti sayisi. Alternatif
+ * sayfasinin baglantisi da o bolumun ICINDE oldugu icin, cifti olmayan
+ * araclarda sayfa VAR ama ona giden link YOKTU.
+ *
+ * Olculdu: /alternatives/photopea ve /alternatives/sublime-text canlida
+ * 200 donuyor, ama /tools/photopea ve /tools/sublime-text o sayfalara
+ * SIFIR link veriyordu -- ustelik bu ikisi sitenin en cok gosterim alan
+ * sayfalarindan (374 ve 158 gosterim). Uretilen ama link almayan sayfa
+ * yetimdir; Google'a "bu onemli" diyemeyiz.
+ *
+ * Kapi, sayfanin gercekten uretildigi kosulun aynisi olmali -- yukaridaki
+ * alternatifSayfasiOlanlar() ile ayni olcut.
+ */
+export function alternatifSayfasiVar(slug: string): boolean {
+  return akranlar(slug).length >= EN_AZ_ALTERNATIF;
+}
+
+/**
  * Iki arac arasindaki farki ELDEKI VERIDEN tek cumleye cevirir.
  * Uydurma bir ustunluk iddiasi yok; fark kucukse o olcut hic yazilmaz.
  */
