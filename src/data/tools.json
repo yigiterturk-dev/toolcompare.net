@@ -3972,21 +3972,34 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "AWS — Pricing",
-          "url": "https://aws.amazon.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "label": "AWS — Free Tier",
+          "url": "https://aws.amazon.com/free/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "new Free Tier account receives $100 in credits immediately and can earn up to $100 more, $200 over 6 months",
+            "the account closes on its own 6 months after opening, or when credits run out",
+            "30+ AWS services are always free within monthly usage limits",
+            "access to over 90 services"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Trying it with real credit — a new account gets $100 immediately and up to $200 over six months",
+      "Workloads that fit the always-free monthly allowances on 30+ services",
+      "Teams that need breadth: over 90 services from one account"
+    ],
+    "skipIf": [
+      "You expect a permanent free account — a new Free Tier account CLOSES ITSELF after six months, or when the credits run out",
+      "You want predictable monthly cost; everything past the free allowances is usage-billed",
+      "You need a small, simple platform; the surface area here is enormous"
+    ]
   },
   {
     "slug": "google-cloud",
@@ -7968,6 +7981,36 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": false
+    },
+    "bestFor": [
+      "Heatmaps and session recordings at any traffic level — the vendor states no traffic limits and no cost",
+      "Sites that cannot justify a paid analytics subscription",
+      "Teams in regulated markets: the vendor states GDPR and CCPA readiness"
+    ],
+    "skipIf": [
+      "You are uncomfortable sending behavioural data to Microsoft in exchange for a free product",
+      "You need funnel or revenue analytics; this is behaviour recording, not product analytics",
+      "You want a paid support contract; there is no paid tier to buy"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Microsoft Clarity",
+          "url": "https://clarity.microsoft.com/",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "always free with no traffic limits",
+            "heatmaps, session recordings and AI summaries included",
+            "GDPR and CCPA ready",
+            "used by more than 2 million sites and applications"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
+      ]
     }
   },
   {
