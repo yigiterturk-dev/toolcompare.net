@@ -11827,8 +11827,8 @@
     "shortDescription": "Spreadsheet-style work and project management.",
     "websiteUrl": "https://www.smartsheet.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 9,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": true,
@@ -11850,19 +11850,25 @@
     "verdict": "The easiest migration path off spreadsheets. Teams that never liked spreadsheets will not like this either.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Smartsheet — Pricing",
           "url": "https://www.smartsheet.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Pro from $9 per member/month billed annually",
+            "Business from $19 per member/month billed annually",
+            "Enterprise is custom priced",
+            "30-day free trial with no credit card",
+            "no free tier",
+            "Pro is available to new customers only"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The vendor's pricing table renders in the browser and an automated read returned inconsistent figures; the values here come from Smartsheet's own published plan summaries.",
+        "Monthly billing is higher than the annual figures recorded here."
       ]
     },
     "keyFeatures": [
@@ -11882,6 +11888,17 @@
         "title": "Forms",
         "description": "Collect structured requests from people who never open the sheet itself."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Teams that think in spreadsheets but need automation, forms and dashboards on top",
+      "Small groups: Pro starts at $9/member/month billed annually",
+      "Trying it fully first — 30 days with no card"
+    ],
+    "skipIf": [
+      "You need unlimited automations or timeline view; those start at Business, $19/member/month annual",
+      "You want a free tier; Smartsheet has none, only a trial",
+      "You are an existing customer hoping to move to Pro — the vendor lists Pro as available to new customers only"
     ]
   },
   {
@@ -14738,8 +14755,8 @@
     "shortDescription": "Sales pipeline CRM for small teams.",
     "websiteUrl": "https://www.pipedrive.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 14,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": true,
@@ -14761,19 +14778,23 @@
     "verdict": "Good at the one thing it does. If you need marketing automation too, you will end up buying a second tool.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Pipedrive — Pricing",
-          "url": "https://www.pipedrive.com/tr/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.pipedrive.com/en/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "entry plan from $14 per user/month billed annually",
+            "top tier $99 per user/month billed annually",
+            "charged per seat whether or not the seat is assigned",
+            "no free tier"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Pipedrive's pricing page blocked an automated read (HTTP 403); these figures come from the vendor's own published summaries.",
+        "The vendor is renaming its tiers, so plan names may not match a current quote."
       ]
     },
     "keyFeatures": [
@@ -14789,6 +14810,17 @@
         "title": "Email sync",
         "description": "Threads two-way email against the deal and contact record."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Sales teams that want a visual pipeline without a heavy CRM rollout",
+      "Small teams — the entry plan is $14 per seat/month billed annually",
+      "Companies that would rather add features by tier than configure everything"
+    ],
+    "skipIf": [
+      "You want a free tier; Pipedrive has none",
+      "You have unassigned seats — billing is per seat whether or not someone is using it",
+      "You are matching an old quote: Pipedrive has been reorganising its plan names and tiers"
     ]
   },
   {
