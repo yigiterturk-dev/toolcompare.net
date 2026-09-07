@@ -2193,7 +2193,7 @@
       "Campaigns",
       "AI Images"
     ],
-    "basePrice": 39,
+    "basePrice": 59,
     "isFlat": false,
     "category": "AI Tools",
     "shortDescription": "Enterprise AI content.",
@@ -2240,21 +2240,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Jasper — Pricing",
           "url": "https://www.jasper.ai/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Pro $59/month per seat billed annually, $69 monthly",
+            "Business is custom priced",
+            "no free plan; 7-day free trial on Pro",
+            "GEO Hub and Agents consume credits per action; chat and canvas do not"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Marketing teams producing content at volume with brand voice controls",
+      "Buyers who will use it daily — at $59/seat/mo annual it is priced for professional use",
+      "Trying it first: 7-day trial on the Pro plan"
+    ],
+    "skipIf": [
+      "You write occasionally — $59/seat/month annual ($69 monthly) is a lot for light use",
+      "You want a free tier; Jasper has none",
+      "You plan to lean on Agents and the GEO Hub: those consume credits on top of the seat price"
+    ]
   },
   {
     "slug": "copy-ai",
@@ -3286,21 +3300,37 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Zendesk — Pricing",
           "url": "https://www.zendesk.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Suite Team $55/agent/month billed annually",
+            "Suite Professional $115/agent/month billed annually",
+            "Suite Enterprise + Copilot is custom priced",
+            "no free tier; 14-day trial",
+            "AI agents billed per automated resolution",
+            "add-ons: Copilot $50/agent/month, Workforce Engagement $50/agent/month, Contact Center $83/agent/month"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Support teams that need ticketing, help centre and channels as one product",
+      "Organisations that will use the AI agent, billed per resolved request rather than per seat",
+      "Trying it first: 14-day trial on the Professional plan"
+    ],
+    "skipIf": [
+      "You are price-sensitive — Suite Team is $55/agent/month billed annually and there is no free tier",
+      "You need Copilot or workforce tools: those are $50/agent/month EACH on top of the plan",
+      "You want predictable AI cost; AI agents bill per automated resolution, not per seat"
+    ]
   },
   {
     "slug": "intercom",
@@ -4877,8 +4907,8 @@
       "Wix ADI",
       "App Market"
     ],
-    "basePrice": 16,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Popular website builder.",
     "longDescription": "Wix is a pioneer in 'drag-and-drop' website creation with over 200 million users. It lets anyone build a professional, mobile-responsive site with zero technical knowledge. Its AI-driven ADI can even design a site for you based on a few questions. Its App Market adds features like bookings or e-commerce easily. It's the most popular 'all-in-one' choice for both simple portfolios and complex business sites.",
@@ -4924,21 +4954,34 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Wix — Pricing",
+          "label": "Wix — Plans",
           "url": "https://www.wix.com/plans",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0",
+            "Light $17.77/month, Core $29.77, Business $39.77, Business Elite $159.77, billed annually",
+            "free plan includes hosting, the drag and drop editor and templates"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The page does not state the free plan's ad or custom-domain restrictions, so none are claimed here."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Building a site with no budget — the free plan includes hosting and the full editor",
+      "Small sites moving up gradually: Light is $17.77/mo billed annually",
+      "People who want templates and drag-and-drop rather than a developer"
+    ],
+    "skipIf": [
+      "You need your own domain — that comes with a paid plan, not the free one",
+      "You are comparing on price alone; Business Elite is $159.77/mo",
+      "You may want to move the site off Wix later; it cannot be exported"
+    ]
   },
   {
     "slug": "squarespace",
@@ -5323,21 +5366,33 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Gumroad — Pricing",
           "url": "https://gumroad.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "no monthly fee",
+            "10% + $0.50 per transaction on sales through your profile or direct links",
+            "30% per transaction when a new customer finds you through the Gumroad discover marketplace"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Selling a digital product with zero fixed cost — there is no monthly fee at all",
+      "Occasional sellers, where a per-sale cut beats a subscription",
+      "Anyone who wants a checkout link today rather than a store build"
+    ],
+    "skipIf": [
+      "You sell steadily — 10% + $0.50 on every direct sale adds up fast against a flat monthly platform",
+      "Buyers find you through Gumroad's own marketplace: that cut is 30%",
+      "You want to own the storefront and customer relationship"
+    ]
   },
   {
     "slug": "kajabi",
@@ -7064,8 +7119,8 @@
       "Logic Jump",
       "Video forms"
     ],
-    "basePrice": 25,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "Beautiful online forms.",
     "longDescription": "Typeform turned the boring online form into a conversational experience. Instead of a long list of questions, Typeform asks them 'one at a time,' mimicking a human conversation. This approach significantly increases completion rates and provides a much better user experience. With its beautiful design, complex logic jumps, and deep integrations, it is the premier choice for brands that want to collect data without annoying their customers.",
@@ -7111,21 +7166,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Typeform — Pricing",
-          "url": "https://www.typeform.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.typeform.com/pricing/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free tier 100 responses/month with unlimited questions per form",
+            "Basic $25/month annual, $29 monthly, 100 responses/month",
+            "Plus $50/month annual, $59 monthly, 1,000 responses/month",
+            "Business $83/month annual, $99 monthly, 10,000 responses/month"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Forms where completion rate matters — one question at a time is the whole product",
+      "Low volume: the free plan covers 100 responses a month with unlimited questions",
+      "Buyers comparing entry cost: Basic is $25/mo billed annually"
+    ],
+    "skipIf": [
+      "You collect real volume — free stops at 100 responses/month and Basic also includes only 100",
+      "You need thousands of responses: 1,000/month starts at Plus ($50/mo annual), 10,000 at Business ($83/mo)",
+      "You want a simple cheap form; this is priced as a conversion tool, not a form builder"
+    ]
   },
   {
     "slug": "replit",
