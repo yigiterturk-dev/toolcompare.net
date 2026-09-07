@@ -148,7 +148,7 @@
       "Docs",
       "Databases"
     ],
-    "basePrice": 8,
+    "basePrice": 0,
     "isFlat": false,
     "category": "Productivity",
     "shortDescription": "The all-in-one workspace.",
@@ -195,22 +195,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Notion — Pricing",
           "url": "https://www.notion.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0/member/month",
+            "Plus $10/member/month, Business $20/member/month, Enterprise custom",
+            "free plan: unlimited blocks for individuals but limited for 2+ members, 5 MB file uploads, 10 guests, 7-day version history",
+            "Notion AI is a limited trial on Free and Plus, fully included on Business and Enterprise",
+            "Custom Agents $10 per 1,000 monthly credits after a free trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to notion.com."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "One person taking notes and building a personal system — the free plan is unlimited for individuals",
+      "Small teams that can live with 5 MB file uploads and 7-day history",
+      "Teams that want docs, wiki and light project tracking in one place"
+    ],
+    "skipIf": [
+      "You are a team of two or more — the free plan's block allowance becomes limited the moment you add a member",
+      "You upload real files: the free plan caps uploads at 5 MB each",
+      "You want full Notion AI: it is a limited trial on Free and Plus, included only from Business ($20/member/mo)"
+    ]
   },
   {
     "slug": "chatgpt",
@@ -537,7 +551,7 @@
       "Timeline",
       "Automation"
     ],
-    "basePrice": 10,
+    "basePrice": 0,
     "isFlat": false,
     "category": "Project Management",
     "shortDescription": "Work management for teams.",
@@ -584,21 +598,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Asana — Pricing",
           "url": "https://asana.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Personal free for up to 2 users, unlimited tasks and projects, 100MB per file",
+            "Starter $10.99/user/month annual, $13.49 monthly",
+            "Advanced $24.99/user/month annual, $30.49 monthly",
+            "no minimum seat purchase on paid plans"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Individuals and pairs — the free Personal plan covers up to 2 users with unlimited tasks and projects",
+      "Teams that want to add people without a seat minimum; paid plans have none",
+      "Buyers comparing per-seat cost: Starter is $10.99/user/mo billed annually"
+    ],
+    "skipIf": [
+      "You are three or more and want to stay free — Personal stops at 2 users",
+      "You need timeline, workflow rules or reporting; those start at Starter",
+      "You attach large files: the free plan caps uploads at 100MB per file"
+    ]
   },
   {
     "slug": "semrush",
@@ -613,8 +641,8 @@
       "Market Analysis",
       "Keyword Magic"
     ],
-    "basePrice": 129,
-    "isFlat": false,
+    "basePrice": 117.33,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "All-in-one SEO suite.",
     "longDescription": "SEMrush is the Swiss Army knife of digital marketing, offering all the data needed for SEO, PPC, content marketing, and competitor analysis in one platform. With a database of over 25 billion keywords and 800 million domains, it allows you to see exactly which keywords your competitors are ranking for, how much they spend on ads, and their content strategies. From 'Site Audit' to 'Keyword Magic Tool,' it provides the strategic data required to dominate the search engine result pages.",
@@ -660,21 +688,37 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "SEMrush — Pricing",
-          "url": "https://www.semrush.com/pricing/seo-ai-search/",
-          "checkedAt": "2026-08-31",
+          "label": "Semrush — Pricing",
+          "url": "https://www.semrush.com/prices/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "SEO plan $139/month monthly, $117.33/month annual",
+            "Starter $199 monthly, $165.17 annual",
+            "Pro+ $299 monthly, $248.17 annual",
+            "Advanced $549 monthly, $455.67 annual",
+            "additional users from $45/month",
+            "seven-day free trial, cancel anytime"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Agencies and in-house teams doing keyword, backlink and competitor research daily",
+      "Buyers who will actually use the breadth — the price only makes sense at volume",
+      "Trying it first: seven-day free trial, cancel anytime"
+    ],
+    "skipIf": [
+      "You are a solo site owner — the entry plan is $117.33/mo billed annually ($139 monthly), which is professional-tier pricing",
+      "Your team needs seats: additional users start at $45/mo each on top of the plan",
+      "You want a permanent free tier; Semrush offers separate free tools and a 7-day trial, not a free plan"
+    ]
   },
   {
     "slug": "ahrefs",
@@ -2453,7 +2497,7 @@
       "Sync",
       "Workflows"
     ],
-    "basePrice": 10,
+    "basePrice": 0,
     "isFlat": false,
     "category": "Productivity",
     "shortDescription": "Painless scheduling.",
@@ -2500,21 +2544,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Calendly — Pricing",
           "url": "https://calendly.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with 1 event type and 1 calendar connection",
+            "Standard $10/seat/month",
+            "Teams $16/seat/month",
+            "Enterprise from $15,000/year with a 50-seat minimum"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "One person booking one kind of meeting — that is exactly what the free plan covers",
+      "Teams that need round-robin and routing, which start at the paid tiers",
+      "Buyers comparing per-seat cost: Standard is $10/seat/month"
+    ],
+    "skipIf": [
+      "You offer more than one kind of meeting — the free plan allows 1 event type",
+      "You use more than one calendar; free connects exactly 1",
+      "You are looking at Enterprise: it starts at $15,000/year with a 50-seat minimum"
+    ]
   },
   {
     "slug": "miro",
@@ -2848,7 +2906,7 @@
       "Dashboards",
       "Everything view"
     ],
-    "basePrice": 7,
+    "basePrice": 0,
     "isFlat": false,
     "category": "Project Management",
     "shortDescription": "All-in-one work.",
@@ -2895,21 +2953,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "ClickUp — Pricing",
           "url": "https://clickup.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free Forever with unlimited tasks, 60MB storage, 5 spaces, 5 active rules and 100 automation executions, 30-day message history",
+            "Unlimited $7/user/month annual, $10 monthly",
+            "Business $12/user/month annual, $19 monthly",
+            "Brain AI $7.20/user/month annual, $9 monthly, charged on top of the plan",
+            "Everything AI $22.40/user/month annual, $28 monthly"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Teams that want unlimited tasks at no cost — the free plan does not cap task count",
+      "Small teams that fit inside 5 spaces and 60 MB of storage",
+      "Buyers comparing per-seat cost: Unlimited is $7/user/mo billed annually"
+    ],
+    "skipIf": [
+      "You store files — the free plan gives 60 MB total, which one design file can exhaust",
+      "You rely on automations: free allows 5 rules and 100 executions a month",
+      "You want the AI: it is a separate per-user charge on top of the plan, from $7.20/user/mo annual"
+    ]
   },
   {
     "slug": "monday",
@@ -2971,21 +3044,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Monday.com — Pricing",
+          "label": "monday.com — Pricing",
           "url": "https://monday.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free plan up to 2 seats, 3 boards and 3 docs",
+            "Basic, Standard and Pro tiers billed per seat per month with an 18% annual discount",
+            "paid plans start at a 3-seat minimum",
+            "price is determined by the user's billing country and shown excluding tax"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The vendor's page priced in EUR for this read and states the figure depends on billing country, so no USD amount is claimed here."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Teams that want boards, automations and dashboards without building them from scratch",
+      "Two-person setups: the free plan covers 2 seats and 3 boards",
+      "Committing annually — the vendor lists an 18% saving over month-to-month"
+    ],
+    "skipIf": [
+      "You are three people on the free plan — it stops at 2 seats and 3 boards",
+      "You want to buy exactly the seats you use: paid plans start at a 3-seat minimum",
+      "You need a firm USD figure; the price is set by your billing country and shown in local currency"
+    ]
   },
   {
     "slug": "trello",
@@ -3318,8 +3405,8 @@
       "Payments",
       "Apps"
     ],
-    "basePrice": 39,
-    "isFlat": false,
+    "basePrice": 19,
+    "isFlat": true,
     "category": "E-commerce",
     "shortDescription": "Best store platform.",
     "longDescription": "Shopify is the world's most powerful e-commerce platform, designed for everyone from individual sellers to billion-dollar global brands. It lets you open a professional store without worrying about server management or security updates. The 'Shopify App Store' adds thousands of extra features, while 'Shop Pay' offers the world's fastest checkout experience. Shopify is not just software; it is the operating system for global internet commerce.",
@@ -3365,21 +3452,37 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Shopify — Pricing",
           "url": "https://www.shopify.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Basic $19/mo annual, $27 monthly",
+            "Grow $54/mo annual, $72 monthly",
+            "Advanced $299/mo annual, $399 monthly",
+            "Plus from $2,300/mo",
+            "third-party payment provider fees: Basic 2%, Grow 1%, Advanced 0.6%, Plus 0.2%",
+            "3-day free trial then $1/month for 3 months"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The $1/month figure is a 3-month promotion; the regular prices are recorded as the real cost."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Selling online without running your own infrastructure",
+      "Starting cheaply — $1/month for the first 3 months after a 3-day trial",
+      "Stores that will use Shopify Payments, which avoids the extra platform cut"
+    ],
+    "skipIf": [
+      "You are budgeting from the offer — $1/mo lasts 3 months; Basic is $19/mo annual ($27 monthly) after that",
+      "You use an external payment provider: Shopify takes an extra 2% on Basic on top of your processor's fee",
+      "You want to own the platform; you are renting a hosted store"
+    ]
   },
   {
     "slug": "magento",
@@ -7990,21 +8093,33 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Grammarly — Pricing",
+          "label": "Grammarly — Plans",
           "url": "https://www.grammarly.com/plans",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0/month with spelling, grammar, tone and 100 AI prompts",
+            "Pro $12/month adds rewrites, tone adjustment, plagiarism and AI detection, and 2,000 AI prompts",
+            "Enterprise is quoted by sales; no per-seat business price published"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "bestFor": [
+      "Everyday writing where spelling, grammar and tone checks are enough — that is the free plan",
+      "Writers who want full-sentence rewrites and plagiarism detection, which are Pro",
+      "People who write in English as a second language"
+    ],
+    "skipIf": [
+      "You lean on AI generation — free includes 100 prompts, Pro 2,000",
+      "You need plagiarism or AI-text detection; both are Pro at $12/month",
+      "You are buying for a team: Grammarly does not publish a per-seat business price, only Contact Sales"
+    ]
   },
   {
     "slug": "adobe-firefly",
