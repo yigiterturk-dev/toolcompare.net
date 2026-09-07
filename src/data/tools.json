@@ -1887,8 +1887,8 @@
       "Tax Prep",
       "Ledger"
     ],
-    "basePrice": 30,
-    "isFlat": false,
+    "basePrice": 38,
+    "isFlat": true,
     "category": "Finance Tools",
     "shortDescription": "Business accounting.",
     "longDescription": "QuickBooks is the global standard for small business accounting and finance management. It centralizes everything from income/expense tracking to invoicing, inventory management, and tax preparation. By syncing directly with your bank accounts, it automatically categorizes transactions. It is not just a bookkeeping tool, but a strategic financial advisor that helps you forecast cashflow and monitor your business health through professional reports.",
@@ -1934,21 +1934,37 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "QuickBooks — Pricing",
           "url": "https://quickbooks.intuit.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Simple Start $38/month regular, $19 promotional, 1 user",
+            "Essentials $85/month regular, $42.50 promotional, 3 users",
+            "Plus $140/month regular, $70 promotional, 5 users",
+            "Advanced $340/month regular, $170 promotional, 25 users",
+            "promotion is 50% off for 3 months",
+            "30-day free trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The advertised figures are a 3-month promotion; the regular prices are recorded as the real cost."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Small businesses that need accounting their accountant already knows",
+      "Trying it first: 30-day free trial",
+      "Teams: Essentials includes 3 users, Plus 5, Advanced 25"
+    ],
+    "skipIf": [
+      "You are budgeting from the advertised price — $19/mo is 50% off for 3 months; Simple Start is $38/mo after that",
+      "You need multiple users on the cheapest plan: Simple Start is ONE user",
+      "You want a free tier; QuickBooks has none"
+    ]
   },
   {
     "slug": "mailchimp",
@@ -8271,8 +8287,8 @@
       "PostgreSQL",
       "Scalable"
     ],
-    "basePrice": 59,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Developer Tools",
     "shortDescription": "No-code pro backend.",
     "longDescription": "Xano is the premier 'no-code backend' for applications that need to scale. It provides a professional PostgreSQL database, a scalable API, and a powerful logic builder without requiring you to write code. Xano is often used as the 'brain' for apps built with frontend tools like FlutterFlow or Webflow. It removes the 'no-code ceiling' by offering developer-level features like database indexing, external API connectivity, and server-side processing at high speed.",
@@ -8318,21 +8334,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Xano — Pricing",
-          "url": "https://www.xano.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.xano.com/pricing/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with up to 100K database records, a 10 requests per 20 seconds rate limit and 1 GB watermarked image storage",
+            "Essential $85/month with no API rate limit",
+            "Pro $224/month with unlimited background tasks",
+            "Custom is quoted by sales"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Prototyping a backend without writing server code — the free plan holds up to 100K records",
+      "Teams that want a real API layer behind a no-code front end",
+      "Testing before committing: no card needed on the free tier"
+    ],
+    "skipIf": [
+      "You are going to production — the free plan is rate limited to 10 requests per 20 seconds",
+      "Your images are customer-facing: free image storage is watermarked",
+      "You need unlimited background tasks and no rate limit; that starts at Essential, $85/month"
+    ]
   },
   {
     "slug": "flutterflow",
@@ -8347,8 +8377,8 @@
       "Firebase",
       "Code export"
     ],
-    "basePrice": 30,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Build native mobile apps.",
     "longDescription": "FlutterFlow is a visual app builder that allows you to create high-performance, native mobile applications for iOS and Android using Google's Flutter framework. Unlike other 'no-code' builders that produce slow web-wrappers, FlutterFlow produces real, clean code that you can export and customize. With deep integrations for Firebase and Supabase, it is the top choice for founders looking to build a high-end mobile app with professional performance and modern design in record time.",
@@ -8394,21 +8424,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "FlutterFlow — Pricing",
-          "url": "https://flutterflow.io/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.flutterflow.io/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with 2 projects, 10 Lite credits/month, up to 2 free subdomains and up to 2 API endpoints",
+            "Basic $39/month, Growth $80/month first seat and $55 second, Business $150/month first seat and $85 for seats 2-5",
+            "code download and APK download start at Basic",
+            "annual billing saves about 25%"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Learning and prototyping mobile apps visually — the free plan covers 2 projects",
+      "Teams that will export the Flutter code rather than stay locked in",
+      "Annual billing: the vendor lists roughly 25% off"
+    ],
+    "skipIf": [
+      "You want your code — code and APK download are NOT in the free plan, they start at Basic ($39/mo)",
+      "You need a custom domain: free publishes to a FlutterFlow subdomain",
+      "You need more than 2 API endpoints or 2 projects on the free tier"
+    ]
   },
   {
     "slug": "grammarly",
