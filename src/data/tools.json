@@ -6173,7 +6173,7 @@
       "Downloads",
       "Webinars"
     ],
-    "basePrice": 0,
+    "basePrice": 42,
     "isFlat": true,
     "category": "E-commerce",
     "shortDescription": "All-in-one creator site.",
@@ -6220,21 +6220,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Podia — Pricing",
           "url": "https://www.podia.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Mover $42/mo with 5% fees",
+            "Shaker $84/mo with no Podia fees",
+            "Earthquaker $150/mo with no Podia fees",
+            "no free plan; 30-day free trial with full access",
+            "payment processors charge 2.9% + 30 cents on all plans"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Creators selling courses, downloads and memberships from one flat-priced site",
+      "Anyone who wants to test the whole product first — there is a 30-day full-feature trial",
+      "Sellers with enough volume that dropping the 5% cut pays for the higher tier"
+    ],
+    "skipIf": [
+      "You want a free plan — Podia has none; the entry tier is $42/mo",
+      "You are on Mover and selling steadily: it takes a 5% cut on top of Stripe/PayPal's 2.9% + 30¢",
+      "Your sales are occasional; a flat $42/mo before any revenue is a lot of runway"
+    ]
   },
   {
     "slug": "teachable",
@@ -11623,19 +11638,22 @@
     "verdict": "Refreshing if your team drowns in tooling. Engineering teams with dependencies will find it thin.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Basecamp — Pricing",
           "url": "https://basecamp.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with 1 project, 1 GB storage, up to 5 users",
+            "Freelancer $25/mo, Studio $59/mo, Pro $99/mo",
+            "Unlimited Edition $299/mo billed annually",
+            "no per-user fees on any plan; Studio and above include unlimited users"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -11651,6 +11669,17 @@
         "title": "Hill charts",
         "description": "Reports progress by where work sits between unknown and done."
       }
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Teams that hate per-seat billing — every paid tier is a flat price with no per-user fee",
+      "Small projects that fit the free plan: 1 project, 1 GB, up to 5 users",
+      "Growing teams: Studio and above include unlimited users at no extra cost"
+    ],
+    "skipIf": [
+      "You need more than one project without paying — the free plan allows exactly one",
+      "You want a cheap per-seat entry for two people; flat pricing starts at $25/mo regardless of headcount",
+      "You need deep agile tooling; Basecamp is deliberately simple"
     ]
   },
   {
@@ -13170,19 +13199,22 @@
     "verdict": "Excellent for content that must be updated often. Marketing work where authenticity matters still needs people.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Synthesia — Pricing",
           "url": "https://www.synthesia.io/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Free plan $0 with 10 minutes of video/month, 9 AI avatars, 1,200 credits/month",
+            "Starter $29/mo monthly or $18/mo billed annually, 12 minutes of video/month",
+            "Creator $89/mo monthly or $64/mo annually, 30 minutes/month",
+            "Enterprise quoted by sales with unlimited minutes"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -13202,6 +13234,17 @@
         "title": "Custom avatars",
         "description": "Paid tiers can build an avatar from footage of a real presenter."
       }
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Trying AI video for free — the free plan gives 10 minutes of video a month with 9 avatars, no card",
+      "Teams turning documents and training material into video without a studio",
+      "Annual commitment: the entry plan drops from $29 to $18/mo"
+    ],
+    "skipIf": [
+      "You need volume — the entry paid plan covers 12 minutes of video a month, not hours",
+      "You want unlimited minutes or unlimited personal avatars; those are Enterprise, quoted by sales",
+      "Your budget is per-video rather than monthly; this is a subscription with credit limits"
     ]
   },
   {
@@ -14256,8 +14299,8 @@
     "shortDescription": "Global payroll and contractor compliance.",
     "websiteUrl": "https://www.deel.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 49,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": true,
@@ -14279,19 +14322,24 @@
     "verdict": "Solves a genuinely hard problem. Compare EOR fees against setting up an entity if a country becomes core to you.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "Deel — Pricing",
           "url": "https://www.deel.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Hire Contractors $49 per contractor per month",
+            "Contractor of Record $325 per contractor of record per month",
+            "US PEO $125 per US PEO employee per month",
+            "EOR $599 per EOR employee per month",
+            "Find Talent (ATS) $14 per worker per month",
+            "no free tier; month-to-month with no long-term contract"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
       ]
     },
     "keyFeatures": [
@@ -14307,6 +14355,17 @@
         "title": "Multi-country payroll",
         "description": "Runs payroll and payments across many currencies and jurisdictions."
       }
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Hiring contractors across borders without setting up a local entity",
+      "Companies that need employment, payroll and compliance from one vendor",
+      "Month-to-month commitment — no long-term contract required"
+    ],
+    "skipIf": [
+      "You are comparing on the headline figure: contractor management is $49/contractor/mo, and EOR employment is $599/employee/mo",
+      "You want to try before paying — there is no free tier, only a demo",
+      "You have a local entity already; EOR pricing is for companies that do not"
     ]
   },
   {

@@ -26,20 +26,6 @@
     "sayfada_gorulen": []
   },
   {
-    "slug": "procreate",
-    "name": "Procreate",
-    "kaynak": null,
-    "ipucu": null,
-    "sayfada_gorulen": []
-  },
-  {
-    "slug": "affinity-designer",
-    "name": "Affinity Designer",
-    "kaynak": null,
-    "ipucu": null,
-    "sayfada_gorulen": []
-  },
-  {
     "slug": "hootsuite",
     "name": "Hootsuite",
     "kaynak": "https://www.hootsuite.com/plans",
@@ -187,9 +173,7 @@
     "ipucu": 12.0,
     "sayfada_gorulen": [
       12.0,
-      15.0,
-      33.0,
-      40.0
+      15.0
     ]
   },
   {
@@ -201,20 +185,6 @@
       5.59,
       9.99,
       12.99
-    ]
-  },
-  {
-    "slug": "obsidian-publish",
-    "name": "Obsidian Publish",
-    "kaynak": "https://obsidian.md/pricing",
-    "ipucu": 4.0,
-    "sayfada_gorulen": [
-      4.0,
-      5.0,
-      8.0,
-      10.0,
-      25.0,
-      50.0
     ]
   },
   {
@@ -239,17 +209,6 @@
     "sayfada_gorulen": []
   },
   {
-    "slug": "squarespace-commerce",
-    "name": "Squarespace Commerce",
-    "kaynak": "https://www.squarespace.com",
-    "ipucu": 14.0,
-    "sayfada_gorulen": [
-      14.0,
-      19.0,
-      36.0
-    ]
-  },
-  {
     "slug": "recurly",
     "name": "Recurly",
     "kaynak": "https://recurly.com/pricing/",
@@ -266,17 +225,6 @@
     "ipucu": 1000.0,
     "sayfada_gorulen": [
       1000.0
-    ]
-  },
-  {
-    "slug": "github-copilot",
-    "name": "GitHub Copilot",
-    "kaynak": "https://github.com/pricing",
-    "ipucu": 4.0,
-    "sayfada_gorulen": [
-      4.0,
-      5.0,
-      21.0
     ]
   },
   {
@@ -449,13 +397,6 @@
     "sayfada_gorulen": []
   },
   {
-    "slug": "sublime-text",
-    "name": "Sublime Text",
-    "kaynak": null,
-    "ipucu": null,
-    "sayfada_gorulen": []
-  },
-  {
     "slug": "launchdarkly",
     "name": "LaunchDarkly",
     "kaynak": "https://launchdarkly.com/pricing/",
@@ -523,20 +464,6 @@
     ]
   },
   {
-    "slug": "spyfu",
-    "name": "SpyFu",
-    "kaynak": "https://www.spyfu.com/mainpurchase/?page=default",
-    "ipucu": 15.0,
-    "sayfada_gorulen": [
-      15.0,
-      29.0,
-      30.0,
-      40.0,
-      100.0,
-      119.0
-    ]
-  },
-  {
     "slug": "buzzsumo",
     "name": "BuzzSumo",
     "kaynak": "https://buzzsumo.com/pricing/",
@@ -600,24 +527,8 @@
     "sayfada_gorulen": []
   },
   {
-    "slug": "1password-teams",
-    "name": "1Password Teams",
-    "kaynak": "https://1password.com",
-    "ipucu": 1.0,
-    "sayfada_gorulen": [
-      1.0
-    ]
-  },
-  {
     "slug": "keeper",
     "name": "Keeper",
-    "kaynak": null,
-    "ipucu": null,
-    "sayfada_gorulen": []
-  },
-  {
-    "slug": "todoist-pro",
-    "name": "Todoist Pro",
     "kaynak": null,
     "ipucu": null,
     "sayfada_gorulen": []
@@ -645,16 +556,6 @@
       20.0,
       34.0,
       981.0
-    ]
-  },
-  {
-    "slug": "linear-insights",
-    "name": "Linear Insights",
-    "kaynak": "https://linear.app/pricing",
-    "ipucu": 10.0,
-    "sayfada_gorulen": [
-      10.0,
-      16.0
     ]
   },
   {
@@ -732,13 +633,11 @@
   {
     "slug": "wpengine",
     "name": "WP Engine",
-    "kaynak": "https://wpengine.com/plans",
-    "ipucu": 3.0,
+    "kaynak": "https://wpengine.com/plans/",
+    "ipucu": 20.0,
     "sayfada_gorulen": [
-      3.0,
       20.0,
-      30.0,
-      400.0
+      336.0
     ]
   },
   {
@@ -751,45 +650,17 @@
     ]
   },
   {
-    "slug": "shopify-plus",
-    "name": "Shopify Plus",
-    "kaynak": "https://www.shopify.com/pricing",
-    "ipucu": 1.0,
-    "sayfada_gorulen": [
-      1.0,
-      19.0,
-      27.0,
-      54.0,
-      72.0,
-      89.0
-    ]
-  },
-  {
     "slug": "sellfy",
     "name": "Sellfy",
     "kaynak": "https://sellfy.com/pricing/",
-    "ipucu": 29.0,
+    "ipucu": 22.0,
     "sayfada_gorulen": [
+      22.0,
       29.0,
-      39.0,
       59.0,
       79.0,
       119.0,
       159.0
-    ]
-  },
-  {
-    "slug": "gorgias",
-    "name": "Gorgias",
-    "kaynak": "https://www.gorgias.com/pricing",
-    "ipucu": 1.5,
-    "sayfada_gorulen": [
-      1.5,
-      10.0,
-      27.0,
-      30.0,
-      40.0,
-      50.0
     ]
   },
   {
@@ -799,20 +670,6 @@
     "ipucu": 34.0,
     "sayfada_gorulen": [
       34.0
-    ]
-  },
-  {
-    "slug": "bill-com",
-    "name": "BILL",
-    "kaynak": "https://www.bill.com/product/pricing",
-    "ipucu": 1.0,
-    "sayfada_gorulen": [
-      1.0,
-      1.49,
-      1.99,
-      2.99,
-      3.0,
-      9.99
     ]
   },
   {
@@ -846,13 +703,6 @@
     ]
   },
   {
-    "slug": "copper",
-    "name": "Copper",
-    "kaynak": null,
-    "ipucu": null,
-    "sayfada_gorulen": []
-  },
-  {
     "slug": "keap",
     "name": "Keap",
     "kaynak": "https://keap.com/pricing",
@@ -865,5 +715,729 @@
       79.0,
       139.0
     ]
+  },
+  {
+    "slug": "browserstack",
+    "name": "BrowserStack",
+    "kaynak": "https://www.browserstack.com/pricing",
+    "ipucu": 12.5,
+    "sayfada_gorulen": [
+      12.5,
+      300.0,
+      1039.0
+    ]
+  },
+  {
+    "slug": "cloudbees",
+    "name": "CloudBees",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "wickr",
+    "name": "Wickr",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "linphone",
+    "name": "Linphone",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "dingtalk",
+    "name": "DingTalk",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "adobe-connect",
+    "name": "Adobe Connect",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "lifesize",
+    "name": "Lifesize",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "google-messages",
+    "name": "Google Messages",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "gitea",
+    "name": "Gitea",
+    "kaynak": "https://about.gitea.com/",
+    "ipucu": 19.0,
+    "sayfada_gorulen": [
+      19.0
+    ]
+  },
+  {
+    "slug": "forgejo",
+    "name": "Forgejo",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "gitee",
+    "name": "Gitee",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "kallithea",
+    "name": "Kallithea",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "azure-devops-server",
+    "name": "Azure DevOps Server",
+    "kaynak": "https://visualstudio.microsoft.com/vs/pricing/?tab=paid-subscriptions",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0,
+      45.0,
+      50.0,
+      66.59,
+      99.99,
+      150.0
+    ]
+  },
+  {
+    "slug": "redmine",
+    "name": "Redmine",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "openproject",
+    "name": "OpenProject",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "freedcamp",
+    "name": "Freedcamp",
+    "kaynak": "https://freedcamp.com/pricing",
+    "ipucu": 1.49,
+    "sayfada_gorulen": [
+      1.49,
+      2.49,
+      7.49,
+      8.99,
+      16.99,
+      19.99
+    ]
+  },
+  {
+    "slug": "toggl-track",
+    "name": "Toggl Track",
+    "kaynak": "https://toggl.com/track/pricing/",
+    "ipucu": 9.0,
+    "sayfada_gorulen": [
+      9.0,
+      14.0,
+      18.0
+    ]
+  },
+  {
+    "slug": "workflowy",
+    "name": "Workflowy",
+    "kaynak": "https://workflowy.com/pricing/",
+    "ipucu": 6.99,
+    "sayfada_gorulen": [
+      6.99,
+      8.99
+    ]
+  },
+  {
+    "slug": "zulip",
+    "name": "Zulip",
+    "kaynak": "https://zulip.com/plans/",
+    "ipucu": 3.5,
+    "sayfada_gorulen": [
+      3.5,
+      6.67,
+      8.0,
+      10.0,
+      12.0,
+      20.0
+    ]
+  },
+  {
+    "slug": "microsoft-project",
+    "name": "Microsoft Project",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "checkvist",
+    "name": "Checkvist",
+    "kaynak": "https://checkvist.com/pricing",
+    "ipucu": 39.0,
+    "sayfada_gorulen": [
+      39.0,
+      69.0
+    ]
+  },
+  {
+    "slug": "mindomo",
+    "name": "Mindomo",
+    "kaynak": "https://www.mindomo.com/pricing/",
+    "ipucu": 7.0,
+    "sayfada_gorulen": [
+      7.0,
+      16.0
+    ]
+  },
+  {
+    "slug": "tom-s-planner",
+    "name": "Tom's Planner",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "projectmanager-com",
+    "name": "ProjectManager.com",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "proworkflow",
+    "name": "ProWorkflow",
+    "kaynak": "https://proworkflow.com/pricing/",
+    "ipucu": 10.0,
+    "sayfada_gorulen": [
+      10.0,
+      35.0,
+      47.0
+    ]
+  },
+  {
+    "slug": "helix-alm",
+    "name": "Helix ALM",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "dotproject",
+    "name": "DotProject",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "planta-project",
+    "name": "PLANTA Project",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "bigtime-enterprise-psa",
+    "name": "BigTime Enterprise PSA",
+    "kaynak": "https://www.bigtime.net/pricing/",
+    "ipucu": 20.0,
+    "sayfada_gorulen": [
+      20.0
+    ]
+  },
+  {
+    "slug": "ceiton",
+    "name": "CEITON",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "cloudforge",
+    "name": "CloudForge",
+    "kaynak": "https://cloudforge.solutions",
+    "ipucu": 300.0,
+    "sayfada_gorulen": [
+      300.0,
+      528.0
+    ]
+  },
+  {
+    "slug": "teamforge",
+    "name": "TeamForge",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "getresponse",
+    "name": "GetResponse",
+    "kaynak": "https://www.getresponse.com/pricing",
+    "ipucu": 19.0,
+    "sayfada_gorulen": [
+      19.0
+    ]
+  },
+  {
+    "slug": "mailgun",
+    "name": "Mailgun",
+    "kaynak": "https://www.mailgun.com/pricing/",
+    "ipucu": 1.1,
+    "sayfada_gorulen": [
+      1.1,
+      1.2,
+      1.3,
+      1.8,
+      59.0
+    ]
+  },
+  {
+    "slug": "mailjet",
+    "name": "Mailjet",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "chartbeat",
+    "name": "Chartbeat",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "statcounter",
+    "name": "StatCounter",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "liveperson",
+    "name": "LivePerson",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "phplist",
+    "name": "PhpList",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "open-web-analytics",
+    "name": "Open Web Analytics",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "awstats",
+    "name": "AWStats",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "goaccess",
+    "name": "GoAccess",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "lastpass",
+    "name": "LastPass",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "enpass",
+    "name": "Enpass",
+    "kaynak": "https://www.enpass.io/pricing/",
+    "ipucu": 1.99,
+    "sayfada_gorulen": [
+      1.99,
+      3.99,
+      49.99,
+      99.99
+    ]
+  },
+  {
+    "slug": "keeweb",
+    "name": "KeeWeb",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "passwork",
+    "name": "Passwork",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "simplenote",
+    "name": "Simplenote",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "tiddlywiki",
+    "name": "TiddlyWiki",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "prezi",
+    "name": "Prezi",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "freeplane",
+    "name": "Freeplane",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "qownnotes",
+    "name": "QOwnNotes",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "zim",
+    "name": "Zim",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "tagspaces",
+    "name": "TagSpaces",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "coreldraw",
+    "name": "CorelDRAW",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "affinity",
+    "name": "Affinity",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "blackmagic-design",
+    "name": "Blackmagic Design",
+    "kaynak": "https://www.blackmagicdesign.com",
+    "ipucu": 179.0,
+    "sayfada_gorulen": [
+      179.0,
+      445.0
+    ]
+  },
+  {
+    "slug": "picsart",
+    "name": "Picsart",
+    "kaynak": "https://picsart.com/pricing/",
+    "ipucu": 5.0,
+    "sayfada_gorulen": [
+      5.0,
+      7.0,
+      13.0,
+      15.0
+    ]
+  },
+  {
+    "slug": "pixelmator-pro",
+    "name": "Pixelmator Pro",
+    "kaynak": "https://www.apple.com/pixelmator-pro/",
+    "ipucu": 2.99,
+    "sayfada_gorulen": [
+      2.99,
+      12.99,
+      29.99,
+      129.0
+    ]
+  },
+  {
+    "slug": "kinemaster",
+    "name": "KineMaster",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "vegas-pro",
+    "name": "Vegas Pro",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "xara-designer-pro",
+    "name": "Xara Designer Pro+",
+    "kaynak": "https://www.xara.com/pricing/",
+    "ipucu": 8.0,
+    "sayfada_gorulen": [
+      8.0,
+      12.0
+    ]
+  },
+  {
+    "slug": "recraft",
+    "name": "Recraft",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "screenpal",
+    "name": "ScreenPal",
+    "kaynak": "https://screenpal.com/plans",
+    "ipucu": 3.0,
+    "sayfada_gorulen": [
+      3.0,
+      4.0,
+      7.5,
+      8.0,
+      10.0
+    ]
+  },
+  {
+    "slug": "canvas-x",
+    "name": "Canvas X",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "kayako",
+    "name": "Kayako",
+    "kaynak": "http://kayako.com/pricing/",
+    "ipucu": 1.0,
+    "sayfada_gorulen": [
+      1.0,
+      4.6
+    ]
+  },
+  {
+    "slug": "livechat",
+    "name": "LiveChat",
+    "kaynak": "https://www.livechat.com/pricing/",
+    "ipucu": 19.0,
+    "sayfada_gorulen": [
+      19.0,
+      49.0,
+      79.0
+    ]
+  },
+  {
+    "slug": "nationbuilder",
+    "name": "NationBuilder",
+    "kaynak": "https://nationbuilder.com/pricing",
+    "ipucu": 5.0,
+    "sayfada_gorulen": [
+      5.0,
+      9.0,
+      10.0,
+      13.0,
+      15.0,
+      16.0
+    ]
+  },
+  {
+    "slug": "onlyoffice",
+    "name": "OnlyOffice",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "servicetitan",
+    "name": "ServiceTitan",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "snapforce-crm",
+    "name": "Snapforce CRM",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "dolibarr",
+    "name": "Dolibarr",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "erpnext",
+    "name": "ERPNext",
+    "kaynak": "https://frappe.io/erpnext/pricing",
+    "ipucu": 5.0,
+    "sayfada_gorulen": [
+      5.0,
+      20.0,
+      125.0
+    ]
+  },
+  {
+    "slug": "freeagent",
+    "name": "FreeAgent",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "quicken",
+    "name": "Quicken",
+    "kaynak": "https://www.quicken.com",
+    "ipucu": 3.0,
+    "sayfada_gorulen": [
+      3.0,
+      4.0,
+      6.99,
+      8.99
+    ]
+  },
+  {
+    "slug": "tally-solutions",
+    "name": "Tally Solutions",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "tipalti",
+    "name": "Tipalti",
+    "kaynak": "https://tipalti.com/pricing",
+    "ipucu": 99.0,
+    "sayfada_gorulen": [
+      99.0,
+      249.0
+    ]
+  },
+  {
+    "slug": "bench-accounting",
+    "name": "Bench Accounting",
+    "kaynak": "https://www.bench.co/pricing",
+    "ipucu": 55.0,
+    "sayfada_gorulen": [
+      55.0,
+      59.0,
+      69.0,
+      150.0,
+      199.0,
+      399.0
+    ]
+  },
+  {
+    "slug": "ledgersmb",
+    "name": "LedgerSMB",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "7shifts",
+    "name": "7shifts",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "hibob",
+    "name": "HiBob",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "icims",
+    "name": "ICIMS",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "papaya-global",
+    "name": "Papaya Global",
+    "kaynak": "https://www.papayaglobal.com/pricing/",
+    "ipucu": 5.0,
+    "sayfada_gorulen": [
+      5.0,
+      29.0,
+      199.0,
+      499.0
+    ]
+  },
+  {
+    "slug": "paylocity",
+    "name": "Paylocity",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "beamery",
+    "name": "Beamery",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "otrs",
+    "name": "OTRS",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
+  },
+  {
+    "slug": "uservoice",
+    "name": "UserVoice",
+    "kaynak": null,
+    "ipucu": null,
+    "sayfada_gorulen": []
   }
 ]
