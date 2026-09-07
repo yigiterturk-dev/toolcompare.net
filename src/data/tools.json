@@ -18627,7 +18627,7 @@
     "websiteUrl": "https://www.jetbrains.com/youtrack/",
     "incelendi": true,
     "basePrice": 0,
-    "isFlat": true,
+    "isFlat": false,
     "fiyatModeli": "ucretsiz-katman",
     "kriterler": {
       "api": true,
@@ -18635,7 +18635,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "YouTrack is JetBrains' issue tracker with a powerful query language, agile boards and time tracking.",
+    "longDescription": "YouTrack is JetBrains' issue tracker and project management tool, usable for agile boards, bug tracking, helpdesk and a knowledge base in one workspace. Its query language is the part regular users notice: issues are filtered with a search syntax rather than nested dropdowns. The commercial shape matters more than the feature list for small teams — YouTrack Cloud is free for teams up to 10 users with the full feature set, not a stripped-down tier, which makes it unusually cheap to start with compared with per-seat trackers.",
     "pros": [
       "Query language is genuinely powerful",
       "Flexible workflows",
@@ -18649,22 +18649,54 @@
     "targetAudience": "Teams already using JetBrains tools that want a capable tracker.",
     "verdict": "Underrated and capable. Its obscurity is the main practical drawback.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "YouTrack — Pricing",
-          "url": "https://www.jetbrains.com/youtrack/buy/",
-          "checkedAt": "2026-09-03",
+          "label": "JetBrains — YouTrack pricing changes",
+          "url": "https://sales.jetbrains.com/hc/en-gb/articles/28384631938450-YouTrack-Pricing-Changes-Effective-October-1-2025",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "YouTrack Cloud free for teams of up to 10 users",
+            "monthly subscription USD 5.40 per user/month",
+            "annual subscription USD 4.50 per user/month",
+            "helpdesk free for 3 agents and unlimited reporters",
+            "per-user rate decreases as more users are added"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Free for teams of 10",
+        "description": "YouTrack Cloud is free for up to 10 users, with the full feature set rather than a limited tier."
+      },
+      {
+        "title": "Query-based issue search",
+        "description": "Issues are filtered with a search language instead of fixed dropdown filters."
+      },
+      {
+        "title": "Agile boards, helpdesk and knowledge base",
+        "description": "One workspace covers sprint boards, customer tickets and documentation."
+      },
+      {
+        "title": "Cloud or self-hosted",
+        "description": "Runs as JetBrains-hosted Cloud or as YouTrack Server on your own infrastructure."
+      }
+    ],
+    "bestFor": [
+      "Teams of 10 or fewer — YouTrack Cloud is free at that size with no feature cuts",
+      "Shops already using JetBrains IDEs that want the tracker in the same ecosystem",
+      "Teams that prefer a query language to nested filter menus"
+    ],
+    "skipIf": [
+      "Your team is just over 10 people — the free tier ends there and billing starts at $5.40/user/mo monthly ($4.50 annual)",
+      "You want a tracker your whole company already knows; Jira has far wider adoption",
+      "You need the free helpdesk beyond 3 agents"
+    ]
   },
   {
     "slug": "zoom-phone",
@@ -38061,7 +38093,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Yoast SEO manages the technical SEO of a WordPress site: meta tags, sitemaps, schema and content checks.",
+    "longDescription": "Yoast SEO is the most widely installed SEO plugin for WordPress. The free version handles the fundamentals — titles and meta descriptions, XML sitemaps, schema output and the readability and keyphrase checks that show up under the editor. Premium is not a different plugin but an unlock: it adds the redirect manager, internal linking suggestions, up to five keyphrases per page and bundles the Local, Video and News SEO plugins. For most sites the free version is genuinely enough; the redirect manager is what usually forces the upgrade.",
     "pros": [
       "Handles WordPress SEO plumbing correctly",
       "Content analysis guides non-specialists",
@@ -38085,23 +38117,53 @@
       "checkedAt": "2026-08-31"
     },
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "Yoast SEO — Vendor page (free, open source)",
-          "url": "https://wordpress.org/plugins/wordpress-seo/",
-          "checkedAt": "2026-09-03",
+          "label": "Yoast — SEO plugin",
+          "url": "https://yoast.com/wordpress/plugins/seo/",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "free version available",
+            "Premium $118.80/year excl. VAT for one domain",
+            "Premium adds redirect manager, internal linking suggestions, up to five keyphrases, and bundles Local, Video and News SEO"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "keyFeatures": [
+      {
+        "title": "Free version covers the basics",
+        "description": "Titles, meta descriptions, XML sitemaps, schema output and on-page keyphrase checks."
+      },
+      {
+        "title": "Redirect manager (Premium)",
+        "description": "Prompts you to set a redirect when a page moves or is deleted, with bulk CSV handling."
+      },
+      {
+        "title": "Internal linking suggestions (Premium)",
+        "description": "Suggests links between your own pages and flags orphaned content."
+      },
+      {
+        "title": "Five keyphrases per page (Premium)",
+        "description": "Checks one post against up to five keyphrases plus synonyms."
+      }
+    ],
+    "bestFor": [
+      "WordPress sites that need solid SEO fundamentals at no cost",
+      "Sites that move or delete pages often — the Premium redirect manager pays for itself there",
+      "Publishers who want Local, Video and News SEO bundled rather than bought separately"
+    ],
+    "skipIf": [
+      "You are not on WordPress — it is a WordPress plugin and nothing else",
+      "Your budget is tight and the free version already covers you; Premium is $118.80/year excl. VAT per domain",
+      "You run many sites — Premium is licensed per domain"
+    ]
   },
   {
     "slug": "phplist",
@@ -38300,7 +38362,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "NordPass is a password manager from the NordVPN team, with modern encryption and a clean interface.",
+    "longDescription": "NordPass is the password manager from the team behind NordVPN. It stores passwords, passkeys and personal details in an encrypted vault and fills them in across browsers and mobile apps. The free tier is unusually generous on storage — there is no cap on how many passwords or passkeys you keep — but it is deliberately crippled in one place: you can only stay signed in on one device at a time, so moving between a laptop and a phone means logging out and back in. Paying lifts that single restriction and adds the security tooling around the vault.",
     "pros": [
       "Clean, simple interface",
       "Data breach scanner included",
@@ -38314,22 +38376,62 @@
     "targetAudience": "People who want straightforward password management.",
     "verdict": "Perfectly good. Bitwarden costs less and 1Password is more polished.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
-          "label": "NordPass — Pricing",
-          "url": "https://nordpass.com/plans/",
-          "checkedAt": "2026-08-31",
+          "label": "NordPass — Free vs Premium",
+          "url": "https://support.nordpass.com/hc/en-us/articles/360006700458-Premium-vs-Free-version-of-NordPass",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "free version allows one active session on one device",
+            "no limit on stored passwords, passkeys or personal information",
+            "Premium allows simultaneous login on unlimited devices"
+          ]
+        },
+        {
+          "label": "NordPass — Plans",
+          "url": "https://nordpass.com/plans/",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Free, Premium (1 account) and Family (6 accounts) tiers",
+            "Password Health, Data Breach Scanner, Authenticator and file attachments are paid features"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "The plan table renders its prices in the browser, so no figure could be read from the page. Only the free/paid feature boundary is claimed here."
       ]
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "keyFeatures": [
+      {
+        "title": "Unlimited items on the free tier",
+        "description": "No limit on stored passwords, passkeys or personal information, even without paying."
+      },
+      {
+        "title": "One device at a time on free",
+        "description": "The free plan allows a single active session; Premium removes that and allows simultaneous logins."
+      },
+      {
+        "title": "Password Health and Breach Scanner",
+        "description": "Flags weak or reused credentials and checks whether your data appeared in a known breach. Paid only."
+      },
+      {
+        "title": "Family vaults",
+        "description": "The Family plan provides six separate encrypted vaults — one for the owner and five to share."
+      }
+    ],
+    "bestFor": [
+      "Storing an unlimited number of passwords for free — NordPass does not cap vault items",
+      "People who work on one device and do not need to sync sessions",
+      "Households that want six separate vaults under one plan"
+    ],
+    "skipIf": [
+      "You use more than one device — the free plan permits only one active session at a time",
+      "You want Password Health, the Data Breach Scanner or file attachments; all are paid-only",
+      "You need an open-source, auditable vault"
+    ]
   },
   {
     "slug": "enpass",
@@ -39023,7 +39125,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "CiviCRM is open-source constituent relationship management built for non-profits, memberships and campaigns.",
+    "longDescription": "CiviCRM is an open-source CRM built specifically for nonprofits, associations and civic-sector organisations rather than for sales teams. It handles contacts, memberships, donations, events and campaigns — the workflows a charity actually runs — and is free to download, use and share with no licence fee at any size. It can run standalone or inside WordPress, Drupal, Joomla or Backdrop. Free here means the software, not the project: hosting, upgrades and configuration are where the real budget goes.",
     "pros": [
       "Free and self-hostable",
       "Built for donations, memberships and events",
@@ -39045,6 +39147,55 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "fiyatModeli": "bedava",
+    "keyFeatures": [
+      {
+        "title": "Free at any scale",
+        "description": "No licence fee and no per-contact or per-user charge, however large the database gets."
+      },
+      {
+        "title": "Built for nonprofits",
+        "description": "Memberships, donations, events and campaigns are first-class objects, not add-ons."
+      },
+      {
+        "title": "Standalone or inside a CMS",
+        "description": "Runs on its own, or integrated with WordPress, Drupal 10+, Joomla 5+ or Backdrop."
+      },
+      {
+        "title": "Self-hosted data",
+        "description": "The database sits on infrastructure you control."
+      }
+    ],
+    "bestFor": [
+      "Nonprofits that need membership and donation tracking without a per-contact bill",
+      "Organisations that must own their supporter data outright",
+      "Teams already running WordPress or Drupal who want the CRM in the same stack"
+    ],
+    "skipIf": [
+      "You have nobody to maintain it — free covers the licence, not hosting, upgrades or configuration",
+      "You want a sales pipeline CRM; this is built around members and donors",
+      "You need vendor support included rather than buying it from a partner"
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "CiviCRM — Download",
+          "url": "https://civicrm.org/download",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "free to download, use and share",
+            "open source CRM for nonprofits, associations and civic sector organisations",
+            "standalone version requires no CMS; integrations for Backdrop, Drupal, Joomla and WordPress",
+            "hosting providers and CiviCRM Spark are paid options"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pages were reviewed; this record is not a ToolCompare benchmark."
+      ]
     }
   },
   {
@@ -39054,9 +39205,9 @@
     "shortDescription": "American software company.",
     "websiteUrl": "https://www.sugarcrm.com/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "SugarCRM is a customisable CRM available as cloud or self-hosted, with a history in open source.",
+    "basePrice": 59,
+    "isFlat": false,
+    "longDescription": "SugarCRM is a long-standing CRM aimed at mid-market sales, marketing and service teams, now marketed around its AI features. It began as an open-source project and that heritage still shows in how far the platform can be customised and in the availability of on-premise deployment. The commercial shape is the thing most buyers miss: it is not sold to small teams. Every edition carries a 15-user minimum on annual billing, so the real entry cost is the seat price multiplied by fifteen, not by however many people you have.",
     "pros": [
       "Highly customisable",
       "Self-hosting option remains",
@@ -39070,23 +39221,53 @@
     "targetAudience": "Organisations needing a CRM shaped to an unusual process.",
     "verdict": "Flexible and unglamorous. Pick it when standard CRMs cannot model your process.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
       "sources": [
         {
           "label": "SugarCRM — Pricing",
-          "url": "https://sugarai.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.sugarai.com/pricing",
+          "checkedAt": "2026-09-07",
           "supports": [
-            "the vendor's published pricing"
+            "Standard $59/user/month, Advanced $85, Premier $135",
+            "15 user minimum when billed annually",
+            "no free tier listed"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to sugarai.com."
+        "Vendor pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "keyFeatures": [
+      {
+        "title": "Three editions",
+        "description": "Standard at $59/user/mo, Advanced at $85 and Premier at $135, billed annually."
+      },
+      {
+        "title": "15-user minimum",
+        "description": "Every edition requires at least 15 seats on annual billing."
+      },
+      {
+        "title": "Deep customisation",
+        "description": "Module builder and workflow tooling inherited from its open-source origins."
+      },
+      {
+        "title": "On-premise option",
+        "description": "Can be deployed on your own infrastructure rather than the vendor cloud."
+      }
+    ],
+    "bestFor": [
+      "Mid-market teams of 15 or more, which is where the licence minimum starts to make sense",
+      "Organisations that need heavy CRM customisation rather than an off-the-shelf pipeline",
+      "Companies that must keep CRM data on their own infrastructure"
+    ],
+    "skipIf": [
+      "You have fewer than 15 people — the 15-seat minimum means paying for seats you will not use, roughly $885/mo at the Standard rate",
+      "You want to try before buying; the vendor lists no free tier",
+      "You want the cheapest possible CRM; free tiers elsewhere start at zero"
+    ]
   },
   {
     "slug": "kayako",
@@ -39169,9 +39350,9 @@
     "shortDescription": "Microsoft's CRM and ERP application suite for business operations.",
     "websiteUrl": "https://dynamics.microsoft.com/en-us/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "Microsoft Dynamics 365 covers CRM and ERP across sales, service, finance and operations, integrated with the Microsoft stack.",
+    "basePrice": 65,
+    "isFlat": false,
+    "longDescription": "Dynamics 365 is Microsoft's family of business applications — Sales, Customer Service, Finance, Field Service and more — sold as separate apps rather than one product. That structure is the thing to understand before budgeting: you licence each app per user, and the price you see quoted is usually for the first app a person gets. It fits organisations already standardised on Microsoft 365 and Azure, where the identity, Teams and Excel integration removes work that would otherwise be an integration project.",
     "pros": [
       "Deep Microsoft 365 and Power Platform integration",
       "Covers CRM and ERP in one family",
@@ -39193,6 +39374,62 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "fiyatModeli": "abonelik",
+    "keyFeatures": [
+      {
+        "title": "Sold as separate apps",
+        "description": "Sales, Customer Service, Finance and others are licensed individually, per user."
+      },
+      {
+        "title": "Tiered Sales licensing",
+        "description": "Sales Professional at $65/user/mo, Sales Enterprise at $95/user/mo."
+      },
+      {
+        "title": "Attach pricing for extra apps",
+        "description": "Additional apps for an already-licensed user are cheaper than the first app."
+      },
+      {
+        "title": "Microsoft ecosystem integration",
+        "description": "Shares identity, Teams, Excel and Power Platform with the rest of Microsoft 365."
+      }
+    ],
+    "bestFor": [
+      "Organisations already standardised on Microsoft 365, where identity and Teams integration comes free",
+      "Teams that need CRM and ERP from one vendor rather than stitching two together",
+      "Companies with an admin or partner who can configure it properly"
+    ],
+    "skipIf": [
+      "You want one flat price — cost depends on which apps each person needs, starting at $65/user/mo for Sales Professional",
+      "You have no Microsoft footprint; the main advantage disappears",
+      "You need to be running next week — Dynamics deployments assume a configuration project"
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-07",
+      "sources": [
+        {
+          "label": "Microsoft — Dynamics 365 Sales pricing",
+          "url": "https://www.microsoft.com/en-us/dynamics-365/products/sales/pricing",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "Sales Professional $65 per user per month",
+            "Sales Enterprise $95 per user per month"
+          ]
+        },
+        {
+          "label": "Microsoft — Dynamics 365 licensing guidance",
+          "url": "https://www.microsoft.com/licensing/guidance/Dynamics-365",
+          "checkedAt": "2026-09-07",
+          "supports": [
+            "apps are licensed individually per user",
+            "subsequent/attach pricing applies to a user already licensed for a first app"
+          ]
+        }
+      ],
+      "limitations": [
+        "Microsoft renders its full price table in the browser; only the figures readable from the vendor's own pages are claimed here."
+      ]
     }
   },
   {
