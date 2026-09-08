@@ -4591,21 +4591,41 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Ghost — Pricing",
           "url": "https://ghost.org/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Starter $18/month billed yearly: 1 staff user, 1,000 members, free custom domain, no marketplace themes or paid subscriptions",
+            "Publisher $29/month yearly: 3 staff users, 1,000 members, custom themes, paid subscriptions, analytics",
+            "Business $199/month yearly: 15 staff users, 10,000 members, priority support",
+            "Custom: unlimited, dedicated IP, 99.9% SLA, SSO; 0% transaction fees; monthly billing costs more"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Solo writers who want a hosted blog and newsletter with a custom domain for $18/month billed yearly",
+      "Publishers selling paid subscriptions with no transaction fee — Publisher ($29/month) unlocks that",
+      "Technical users who want to self-host the open-source version for free"
+    ],
+    "skipIf": [
+      "You need custom themes or paid memberships on the cheapest plan: Starter excludes both",
+      "Your audience is above 1,000 members on Starter or Publisher — higher tiers or usage pricing apply",
+      "You need more than 15 staff users or an SLA: that is the Custom plan"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Ghost cost?",
+        "cevap": "Ghost(Pro) hosting starts at $18 a month billed yearly for Starter (1 staff user, 1,000 members). Publisher is $29 a month and adds custom themes and paid subscriptions with 0% transaction fees; Business is $199 a month for 15 staff users and 10,000 members. Monthly billing is priced higher than yearly. The open-source Ghost software is free if you host it yourself."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "beehiiv",
@@ -5250,7 +5270,38 @@
       "mobil": false,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "bestFor": [
+      "Developer teams learning headless CMS: the Free plan gives 10 users, 100K API calls and 50 GB CDN a month forever",
+      "Small businesses with one project that can pay $300/month for Lite (20 users, 1M API calls, scheduled publishing)",
+      "Enterprises that need custom roles, SSO, SCIM and multi-region delivery and are ready for a sales-led contract"
+    ],
+    "skipIf": [
+      "Your site is content-heavy: the Starter Space is capped at 10,000 records and 25 content types, and overages are not sold on Free",
+      "You need more than 2 locales or 2 roles without paying — Free stops there, Lite gives 3 of each",
+      "You need an extra Space on Lite: the Lite Space add-on is $850/month, more than the plan itself"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-08",
+      "sources": [
+        {
+          "label": "Contentful — Pricing",
+          "url": "https://www.contentful.com/pricing/",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "Free $0 forever: 10 users, 2 roles, 2 locales, 100K API calls/month, 50 GB CDN/month, 50 MB uploads, no overages",
+            "Lite $300/month: 20 users, 3 roles, 3 locales, 1M API calls, 100 GB CDN, 1000 MB uploads, paid overages; additional Lite Space $850/month",
+            "Enterprise custom: unlimited API calls, custom users/roles/locales, 24/7 support, up to 99.99% SLA",
+            "Starter Space: 25 content types, 2 environments, 10,000 records; Lite Space: 50 types, 4 environments, 50,000 records"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ]
+    },
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "wix",
@@ -6724,21 +6775,41 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Appwrite — Pricing",
           "url": "https://appwrite.io/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 2 projects, 5 GB bandwidth, 2 GB storage, 750K executions, 75K MAU, 1 database/bucket and 2 functions per project, pauses after 1 week inactive",
+            "Pro $25/month: 2 TB bandwidth, 150 GB storage, 3.5M executions, 200K MAU, unlimited databases, daily backups with 7-day retention, $10 compute credit",
+            "Enterprise custom: SLAs, SOC 2, HIPAA/BAA, SSO",
+            "add-ons: reads $0.06/100K, writes $0.10/100K, storage $2.80/100 GB, functions $2 per million executions"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Indie developers building up to 2 projects with 75K monthly active users on the free Cloud tier",
+      "Teams that want auth, database, storage and functions in one backend for $25/month per organisation",
+      "Anyone who wants the option to self-host the open-source version on their own servers"
+    ],
+    "skipIf": [
+      "Your free project is dormant — Free projects pause after 1 week of inactivity",
+      "You need more than 1 database, 1 bucket or 2 functions per project without paying",
+      "You need SOC 2, HIPAA or an SLA: those are Enterprise"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Appwrite cost, and can I self-host it?",
+        "cevap": "Appwrite Cloud is free for up to 2 projects with 75,000 monthly active users, 2 GB storage and 5 GB bandwidth, though free projects pause after a week of inactivity. Pro costs $25 a month and raises limits to 200,000 users, 150 GB storage and 2 TB bandwidth with daily backups. Appwrite is also open source, so you can self-host it on your own infrastructure at no licence cost."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "wix-studio",
@@ -8057,21 +8128,41 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "PostHog — Pricing",
           "url": "https://posthog.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "free monthly allowances: 1M events, 5K session recordings, 1M feature flag requests, 100K exceptions, 1,500 survey responses, 1M data warehouse rows",
+            "no credit card for the free tier; pay-as-you-go beyond it with per-product billing limits",
+            "paid: 6 projects vs 1, 7-year retention vs 1 year, email/Slack support"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Per-unit prices beyond the free tier were not readable in the fetched copy and are not quoted."
       ]
-    }
+    },
+    "bestFor": [
+      "Startups that want product analytics, session replay, feature flags and error tracking from one vendor",
+      "Products under 1M events and 5K recordings a month — those allowances are free every month",
+      "Teams that want usage pricing with per-product billing limits instead of seat licences"
+    ],
+    "skipIf": [
+      "You need more than 1 project or over 1 year of retention without adding a card",
+      "You want a fixed monthly bill — costs scale per product once free allowances are exceeded",
+      "You need enterprise procurement and a signed SLA before use"
+    ],
+    "sss": [
+      {
+        "soru": "Is PostHog free?",
+        "cevap": "PostHog is free up to generous monthly allowances that reset every month: 1 million analytics events, 5,000 session recordings, 1 million feature-flag requests, 100,000 error-tracking exceptions and 1,500 survey responses. No card is needed until you exceed them, after which each product is billed on usage with its own spending limit. Paying also unlocks 6 projects and 7-year retention."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "mixpanel",
@@ -9627,23 +9718,50 @@
     "targetAudience": "Teams automating server configuration without adopting a full orchestration platform.",
     "verdict": "The easiest configuration tool to start with. Once playbooks contain real logic, you are programming in YAML and it shows.",
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Ansible — Vendor page (free, open source)",
-          "url": "https://www.redhat.com/en/ansible-collaborative?intcmp=7015Y000003t7aWQAQ",
-          "checkedAt": "2026-09-03",
+          "label": "Ansible — README (GitHub)",
+          "url": "https://github.com/ansible/ansible",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "GNU GPL v3.0 or later",
+            "agentless over the existing SSH daemon",
+            "sponsored by Red Hat"
+          ]
+        },
+        {
+          "label": "Red Hat — Ansible Automation Platform pricing",
+          "url": "https://www.redhat.com/en/technologies/management/ansible/pricing",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "pricing varies by sizing and subscription; quote via Red Hat or partners",
+            "Standard (business hours) and Premium (24x7) support tiers; trial available"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Ops teams that want agentless automation over SSH with a free, GPL-licensed engine",
+      "Organisations that need a supported platform with a web UI, RBAC and SLAs and are ready for a Red Hat subscription",
+      "Mixed estates: the same playbooks run on community Ansible and on Automation Platform"
+    ],
+    "skipIf": [
+      "You need a published price: Red Hat quotes Automation Platform by sizing and subscription, no list price",
+      "You want a hosted SaaS with a free tier — community Ansible is a CLI you run yourself",
+      "Your team expects a GUI on day one; the community UI (AWX) is a separate self-hosted project"
+    ],
+    "sss": [
+      {
+        "soru": "Is Ansible free, and what does Red Hat Ansible Automation Platform cost?",
+        "cevap": "The Ansible engine is free, open-source software under the GPL v3. Red Hat Ansible Automation Platform, the commercial product with a web UI, RBAC and support, has no published price: Red Hat says pricing varies with sizing and subscription choices and provides a quote, with Standard (business hours) or Premium (24x7) support. A trial is offered."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "grafana",
@@ -10754,22 +10872,41 @@
     ],
     "evidence": {
       "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Blender — Vendor page (free, open source)",
-          "url": "https://www.blender.org/",
-          "checkedAt": "2026-09-03",
+          "label": "Blender — License",
+          "url": "https://www.blender.org/about/license/",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "GNU GPL; free to use for any purpose, distribute and modify",
+            "source licensed GPL v2 or later, binaries distributed under GPL v3 or later; Cycles under Apache 2.0",
+            "your artwork and .blend files are your sole property; commercial use allowed",
+            "no registration, no internet connection required"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Artists, studios and students who want a full 3D suite at no cost, including for commercial work",
+      "Teams that need the freedom to modify and redistribute the software (GPL)",
+      "Anyone who wants software that works offline with no registration"
+    ],
+    "skipIf": [
+      "You sell Python add-ons and want to keep them proprietary — published scripts must be GPL-compatible",
+      "Your pipeline is standardised on a commercial DCC with vendor support contracts",
+      "You need paid, guaranteed support; the Foundation offers guidance, not SLAs"
+    ],
+    "sss": [
+      {
+        "soru": "Is Blender free for commercial use?",
+        "cevap": "Yes. Blender is released under the GNU GPL and is free to use for any purpose, including commercial films, games and client work. Everything you create with it, including .blend files, is your own property. The only licence obligation concerns the software itself: if you publish modified Blender code or Python add-ons, they must be shared under a GPL-compatible licence."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "procreate",
@@ -11308,19 +11445,23 @@
     "verdict": "Fine as a first SEO tool. Serious link analysis needs a bigger index.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Moz — Pricing",
+          "label": "Moz — Moz Pro pricing",
           "url": "https://moz.com/products/pro/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Standard $99/month ($79 yearly): 1 user, 3 sites, 300 keywords, 400K pages crawled/month",
+            "Medium $179 ($143 yearly): 2 users, 10 sites, 1,500 keywords, 2M pages",
+            "Large $299 ($239 yearly): 3 users, 25 sites, 3,000 keywords, 5M pages",
+            "entry plan $49/month for a single website; free trial on Medium; yearly saves 20%",
+            "extra AI dashboards $20 each, extra prompts $50 per 100; overages not included"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -11336,7 +11477,24 @@
         "title": "Site crawl",
         "description": "Audits pages for technical and on-page issues on a schedule."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small businesses that need rank tracking and site crawls for 3 sites: Standard is $99/month ($79 yearly) with 300 keywords",
+      "Agencies tracking 10–25 sites: Medium ($179) and Large ($299) with 1,500 and 3,000 keywords and 2–3 seats",
+      "Individuals with a single website who want the $49/month entry plan"
+    ],
+    "skipIf": [
+      "You need many seats: plans include only 1–3 users",
+      "Your keyword list is large — 300 keywords on Standard runs out quickly for a multi-market site",
+      "You want overages included: the price table says overages are not included"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Moz Pro cost?",
+        "cevap": "Moz Pro Standard is $99 a month or $79 a month billed yearly, with 1 user, 3 tracked sites and 300 keywords. Medium is $179 ($143 yearly) with 2 users, 10 sites and 1,500 keywords, and Large is $299 ($239 yearly) with 3 users, 25 sites and 3,000 keywords. A $49-a-month entry plan covers a single website, and Medium has a free trial."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "screaming-frog",
@@ -12320,7 +12478,42 @@
         "title": "Calendar view",
         "description": "Shows tasks and events together, with two-way calendar sync."
       }
-    ]
+    ],
+    "bestFor": [
+      "People who want a fast cross-platform to-do app: the free tier syncs and supports natural-language input",
+      "Users who need calendar views, durations and email reminders for US$49.99 a year",
+      "Anyone who outgrows 9 lists or 99 tasks per list"
+    ],
+    "skipIf": [
+      "You are a heavy list maker on Free — the caps are 9 lists and 99 tasks per list",
+      "You want a monthly plan in USD: the upgrade page lists an annual price",
+      "You need team features like shared projects with roles; TickTick is personal-first"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-08",
+      "sources": [
+        {
+          "label": "TickTick — Upgrade",
+          "url": "https://ticktick.com/about/upgrade",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "Free US$0: 9 lists, 99 tasks per list, list and kanban views, reminders, sync",
+            "Premium US$49.99/year: 299 lists, 999 tasks per list, calendar views, task duration, email reminders, themes"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ]
+    },
+    "sss": [
+      {
+        "soru": "How much does TickTick cost?",
+        "cevap": "TickTick is free with up to 9 lists and 99 tasks per list. Premium costs US$49.99 a year and raises the limits to 299 lists and 999 tasks per list, adding multiple calendar views, task durations, email reminders and themes."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "raycast",
@@ -12982,19 +13175,22 @@
     "verdict": "Capable where process matters. Small teams will find it slows them down.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Wrike — Pricing",
-          "url": "https://www.wrike.com/price-vag/",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.wrike.com/price/",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0 with unlimited users, essential task management",
+            "Team $10/user/month for 2–15 users with Gantt and AI Essentials",
+            "Business $25/user/month for 5–200 users with AI Elite and templates",
+            "Pinnacle and Apex custom; 14-day trial without credit card"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -13010,7 +13206,24 @@
         "title": "Resource management",
         "description": "Plans capacity and workload across people and projects."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small teams of 2–15 who want Gantt charts and AI basics for $10/user/month",
+      "Departments of 5–200 that need templates and advanced AI: Business at $25/user/month",
+      "Large organisations needing resource planning and budgeting on Pinnacle or Apex"
+    ],
+    "skipIf": [
+      "You are a solo user who needs paid features: Team requires at least 2 users",
+      "You need enterprise budgeting on a self-serve plan — Pinnacle and Apex are quoted",
+      "You only need a task list: the unlimited-user Free plan may be all you need, and paid tiers are per seat"
+    ],
+    "sss": [
+      {
+        "soru": "Is Wrike free, and how much are the paid plans?",
+        "cevap": "Wrike has a free plan with unlimited users for basic task management. Team costs $10 per user per month for 2 to 15 users and adds Gantt charts; Business is $25 per user per month for 5 to 200 users with advanced AI and templates. Pinnacle and Apex are quoted by sales. There is a 14-day free trial with no credit card."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "smartsheet",
@@ -13479,19 +13692,21 @@
     "verdict": "The design is the argument. If your team wants instant chat, they will resist it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Twist — Pricing",
           "url": "https://twist.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free US$0: 1 month of message history, 5 integrations, 5 GB storage, up to 500 members and 500 guests",
+            "Unlimited US$6 per user/month: full history, unlimited integrations and storage, priority support",
+            "single-channel guests free; enterprise pricing for 200+ employees via support"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -13507,7 +13722,18 @@
         "title": "Inbox model",
         "description": "Delivers thread updates to a personal inbox to triage."
       }
-    ]
+    ],
+    "bestFor": [
+      "Async, remote teams that prefer threaded discussions over real-time chat",
+      "Teams up to 500 people who can live with 1 month of history, 5 integrations and 5 GB on the Free plan",
+      "Companies that want a flat US$6 per user/month for unlimited history, storage and guests"
+    ],
+    "skipIf": [
+      "You need searchable history older than a month on Free",
+      "You rely on many integrations: Free allows 5",
+      "Your team wants voice/video calls and presence-driven chat like Slack — Twist is deliberately asynchronous"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "hetzner",
@@ -13804,19 +14030,22 @@
     "verdict": "The least disruptive way to add a store. Serious commerce deserves a proper platform.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Ecwid — Pricing",
           "url": "https://www.ecwid.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Starter $5/month: 10 products",
+            "Venture $35/month or $29 yearly: 100 products, Instagram and Facebook selling, live chat support",
+            "Business $65 or $49 yearly: 2,500 products, marketplaces, phone support, 2 staff accounts",
+            "Unlimited $149 or $119 yearly: unlimited products, POS, unlimited staff; $0 transaction fees on all plans"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -13832,7 +14061,24 @@
         "title": "Hosted checkout",
         "description": "Handles payment, tax and shipping calculation in the embedded cart."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small sellers adding a shop to an existing website for $5/month (Starter, 10 products)",
+      "Shops up to 100 products that want Instagram and Facebook selling: Venture $35/month or $29 yearly",
+      "Businesses that want 0% transaction fees at every tier"
+    ],
+    "skipIf": [
+      "You have more than 2,500 products: only Unlimited ($149/month) removes the cap",
+      "You need POS or more than 2 staff accounts below the Unlimited tier",
+      "You want a free trial period — the pricing page did not state one"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Ecwid cost?",
+        "cevap": "Ecwid Starter is $5 a month for up to 10 products. Venture is $35 a month ($29 billed yearly) for 100 products, Business $65 ($49 yearly) for 2,500 products, and Unlimited $149 ($119 yearly) with no product cap and POS. Ecwid charges no transaction fees on any plan."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "shopware",
@@ -13865,19 +14111,24 @@
     "verdict": "A serious platform for complex catalogues. Expect an implementation project, not a signup.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Shopware — Pricing",
           "url": "https://www.shopware.com/en/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Community Edition free, open-source core, self-hosted",
+            "Rise from €600/month excl. VAT: unlimited sales channels, basic support with 8-hour reaction time",
+            "Evolve from €2,400/month excl. VAT: B2B components, advanced search, 4-hour reaction, phone support",
+            "Beyond custom: digital sales rooms, multi-inventory, customer-specific pricing, subscriptions, 24/7 priority support",
+            "Shopware Intelligence+ add-on €29/month (Community) or €19/month (paid plans)"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Prices were read from the vendor's EUR price list; USD figures on the same page were not used."
       ]
     },
     "keyFeatures": [
@@ -13893,7 +14144,24 @@
         "title": "Self-hosted or cloud",
         "description": "Runs on your own hosting or as a managed cloud plan."
       }
-    ]
+    ],
+    "bestFor": [
+      "Merchants with a developer team who want a free, open-source Community Edition they host themselves",
+      "Growing DACH and EU shops that can budget from €600/month for Rise with unlimited sales channels",
+      "B2B-heavy brands: Evolve (from €2,400/month) adds B2B components, advanced search and 4-hour support reaction"
+    ],
+    "skipIf": [
+      "You want a hosted store with no developers — Community Edition is self-hosted and the paid plans start at €600/month",
+      "You are a very small shop for whom €600/month exceeds the margin",
+      "You need 24/7 priority support, subscriptions or multi-inventory: those sit in the custom-priced Beyond plan"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Shopware cost, and is there a free version?",
+        "cevap": "Yes. Shopware Community Edition is free and open source, but you host it yourself. The commercial plans start at €600 per month (excl. VAT) for Rise, €2,400 per month for Evolve with B2B features, and Beyond is custom-priced with 24/7 priority support. Shopware also sells SaaS and PaaS hosting; self-hosting is recommended only if you have an expert developer team."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "snipcart",
@@ -13926,19 +14194,21 @@
     "verdict": "The right tool when the site already exists and you just need checkout.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Snipcart — Pricing",
           "url": "https://snipcart.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "2% per transaction; $20 USD monthly minimum when sales are under $1,000 USD",
+            "forever-free test/development mode without a card",
+            "payment gateway fees are separate; single plan, billed in USD"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -13954,7 +14224,18 @@
         "title": "Hosted checkout and webhooks",
         "description": "Processes payment and posts order events to your backend."
       }
-    ]
+    ],
+    "bestFor": [
+      "Static or JAMstack sites that want a cart and checkout dropped in with HTML attributes",
+      "Developers who want to build and test for free — test mode is free forever",
+      "Stores selling over $1,000 a month, where the 2% fee beats a monthly SaaS subscription"
+    ],
+    "skipIf": [
+      "Your sales are under $1,000/month: a $20 minimum applies",
+      "You expected the 2% to include card processing — gateway fees are charged separately",
+      "You need a full store back office (inventory, POS, marketplaces); Snipcart is checkout-only"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "chargebee",
@@ -14486,19 +14767,21 @@
     "verdict": "Impressive output. Check the licence terms carefully before using anything commercially.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Suno — Pricing",
           "url": "https://suno.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free: 50 credits renew daily (10 songs), no commercial use, 4 concurrent in shared queue",
+            "Pro $8/month (20% off annual): 2,500 credits, up to 500 songs, commercial use for new songs, 10 concurrent priority",
+            "Premier $24/month: 10,000 credits, up to 2,000 songs, Suno Studio with MIDI, effects, stems"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -14514,7 +14797,24 @@
         "title": "Track extension",
         "description": "Continues or reworks sections of an existing generation."
       }
-    ]
+    ],
+    "bestFor": [
+      "Hobbyists making a few songs a day — 50 free credits (about 10 songs) renew daily",
+      "Creators who need commercial rights: Pro at $8/month with 2,500 credits (up to 500 songs)",
+      "Producers who want stems, MIDI and effects in Suno Studio: Premier $24/month with 10,000 credits"
+    ],
+    "skipIf": [
+      "You plan to monetise free-tier songs — commercial use is not included on Free",
+      "You need more than 10 concurrent generations",
+      "You expect ownership terms like a traditional DAW; commercial rights apply to songs created while subscribed"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Suno cost, and can I use free songs commercially?",
+        "cevap": "Suno's free plan gives 50 credits a day, about 10 songs, but does not include commercial use. Pro costs $8 a month (20% less on annual billing) for 2,500 credits, up to 500 songs, with commercial rights for songs created while subscribed. Premier is $24 a month for 10,000 credits and adds Suno Studio with MIDI, effects and stem separation."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "synthesia",
@@ -15185,19 +15485,22 @@
     "verdict": "Good value at small scale. Bigger support operations outgrow the reporting.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Crisp — Pricing",
           "url": "https://crisp.chat/en/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 2 seats, website chat, shared inbox, mobile apps",
+            "Mini $45/month per workspace: 4 seats, ~$5 AI credits; Essentials $95: 10 seats, omnichannel, chatbot builder, knowledge base, ~$25 credits",
+            "Plus $295: 20+ seats, ticketing, white label, 100+ integrations, ~$75 credits; Enterprise custom",
+            "unlimited conversations on all plans; 14-day free trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -15213,7 +15516,24 @@
         "title": "Knowledge base",
         "description": "Publishes help articles and surfaces them inside the chat widget."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small sites that want a free live chat widget and shared inbox for 2 seats",
+      "Support teams of up to 10 that need omnichannel inbox, chatbot builder and knowledge base: Essentials $95/month",
+      "Companies that prefer per-workspace pricing over per-seat pricing"
+    ],
+    "skipIf": [
+      "You are one or two people who just need chat — the paid jump is to $45/month for 4 seats",
+      "You need ticketing or white labelling below the $295/month Plus plan",
+      "Your AI usage is high: each tier includes a fixed credit allowance (about 90 to 1,350 automated conversations)"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Crisp cost?",
+        "cevap": "Crisp has a free plan with 2 seats and a website chat widget. Paid plans are priced per workspace: Mini is $45 a month with 4 seats, Essentials $95 with 10 seats, an omnichannel inbox, chatbot builder and knowledge base, and Plus $295 with 20 or more seats, ticketing and white labelling. All plans have unlimited conversations and a 14-day trial."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "tidio",
@@ -15579,19 +15899,22 @@
     "verdict": "Very strong value where available. The lack of a fee is real, not a trial.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Ramp — Pricing",
           "url": "https://ramp.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0/user/month: unlimited cards, travel and expense, AP with OCR, basic accounting integrations",
+            "Plus $15/month per user plus a platform fee based on team size; 30-day trial; 20% off annual",
+            "Enterprise custom, annual only: dedicated manager, Workday/Oracle, local-currency cards in 30+ countries"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Card reward rates rendered as placeholders on the fetched page and are not quoted."
       ]
     },
     "keyFeatures": [
@@ -15607,7 +15930,18 @@
         "title": "Accounting sync",
         "description": "Pushes coded transactions into the general ledger automatically."
       }
-    ]
+    ],
+    "bestFor": [
+      "US companies that want corporate cards, expenses and bill pay with no software fee on the free tier",
+      "Finance teams that want AI expense review and NetSuite or Sage Intacct sync: Plus is $15/user/month plus a platform fee",
+      "Multi-entity groups on Plus or Enterprise"
+    ],
+    "skipIf": [
+      "You are outside Ramp's supported markets — local-currency issuing in 30+ countries is an Enterprise feature",
+      "You need Workday or Oracle ERP integrations on a self-serve plan",
+      "You want a published cashback rate: the page did not display one at fetch time"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "brex",
@@ -16460,22 +16794,41 @@
     ],
     "evidence": {
       "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Visual Studio Code — Vendor page (free, open source)",
+          "label": "Visual Studio Code — Home",
           "url": "https://code.visualstudio.com/",
-          "checkedAt": "2026-09-03",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "free to download and use",
+            "source open under MIT; product ships under a separate licence and privacy statement",
+            "macOS, Windows, Linux (.deb/.rpm) and vscode.dev in the browser",
+            "built-in Git; 80,000+ extensions in the Marketplace"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Anyone who wants a free editor on macOS, Windows and Linux with built-in Git and 80,000+ extensions",
+      "Web and TypeScript developers — the ecosystem and language support are strongest there",
+      "Teams that want the same editor in the browser at vscode.dev"
+    ],
+    "skipIf": [
+      "You need a full IDE with deep refactoring for Java, .NET or C++ out of the box — JetBrains or Visual Studio go further",
+      "You want a fully MIT-licensed binary: the source is MIT, the Microsoft build ships under a proprietary licence with telemetry",
+      "You expect AI features included: Copilot is a separate GitHub product with its own free tier and paid plans"
+    ],
+    "sss": [
+      {
+        "soru": "Is VS Code free?",
+        "cevap": "Yes. Visual Studio Code is free to download and use on macOS, Windows and Linux, and runs in the browser at vscode.dev. Its source code is open under the MIT licence, while the Microsoft-built product is distributed under a separate proprietary licence. GitHub Copilot is a separate product with its own free tier."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "jetbrains",
@@ -16507,21 +16860,43 @@
     "verdict": "Worth the money if you live in the IDE. Occasional users get less from it than the price suggests.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-03",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "JetBrains — Pricing",
-          "url": "https://www.jetbrains.com/store/",
-          "checkedAt": "2026-09-03",
+          "label": "JetBrains — Store (individual, yearly)",
+          "url": "https://www.jetbrains.com/store/?section=personal&billing=yearly",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "All Products Pack US$299 first year, $239 second, $179 third onwards; 17 tools incl. AI Pro",
+            "IntelliJ IDEA Ultimate US$199 / $159 / $119",
+            "WebStorm $79 / $63 / $47; PyCharm Pro, GoLand, PhpStorm, CLion, DataGrip, RubyMine $109 / $87 / $65; Rider $169; RustRover $69",
+            "free for non-commercial use: CLion, DataGrip, GoLand, Rider, RubyMine, RustRover, WebStorm",
+            "all yearly subscriptions include a perpetual fallback licence; prices excl. VAT"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Individual pricing only; organisation prices are listed separately by the vendor."
       ]
-    }
+    },
+    "bestFor": [
+      "Professional Java and Kotlin developers: IntelliJ IDEA Ultimate is $199 the first year, falling to $119 from year three",
+      "Polyglot developers who use several IDEs — the All Products Pack is $299 the first year for 17 tools",
+      "Hobbyists: CLion, DataGrip, GoLand, Rider, RubyMine, RustRover and WebStorm are free for non-commercial use"
+    ],
+    "skipIf": [
+      "You will not renew: yearly plans include a perpetual fallback licence, but monthly plans do not",
+      "You need one language only and a free editor does the job — VS Code or a Community edition may be enough",
+      "Your company buys seats: organisation pricing is higher than the individual prices quoted here"
+    ],
+    "sss": [
+      {
+        "soru": "How much do JetBrains IDEs cost, and are any free?",
+        "cevap": "For individuals, IntelliJ IDEA Ultimate costs US$199 for the first year, $159 the second and $119 from the third year on. The All Products Pack with 17 tools is $299, $239, then $179. WebStorm starts at $79 and most single IDEs at $109. WebStorm, PyCharm's community edition, CLion, DataGrip, GoLand, Rider, RubyMine and RustRover are free for non-commercial use, and yearly subscriptions include a perpetual fallback licence."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "sublime-text",
@@ -16721,19 +17096,22 @@
     "verdict": "A real improvement on the default terminal. The account requirement is the main objection people raise.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Warp — Pricing",
           "url": "https://www.warp.dev/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: terminal, agent CLI, limited cloud features, bring your own inference",
+            "Build $20/month or $18 annually: 1,500 credits, OpenAI and Anthropic models",
+            "Max $200/month or $180 annually: 18,000 credits",
+            "Business $50/user/month or $45 annually: up to 25 seats, SAML SSO; Enterprise custom, self-hosted option"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -16749,7 +17127,24 @@
         "title": "Command suggestions",
         "description": "Suggests and explains commands from history and documentation."
       }
-    ]
+    ],
+    "bestFor": [
+      "Developers who want a modern terminal with an agent CLI for free and can bring their own AI inference",
+      "People who use AI in the terminal daily: Build is $20/month ($18 annually) with 1,500 credits and OpenAI/Anthropic models",
+      "Teams under 25 seats that need SAML SSO and data controls: Business $50/user/month"
+    ],
+    "skipIf": [
+      "You only want a terminal, not an AI agent — the paid tiers are about AI credits",
+      "Your usage is heavy: Max is $200/month for 18,000 credits",
+      "You need more than 25 seats or self-hosting; that is Enterprise"
+    ],
+    "sss": [
+      {
+        "soru": "Is Warp terminal free?",
+        "cevap": "Yes, Warp has a free plan with the terminal and its agent CLI, with limited AI usage unless you bring your own model access. Build costs $20 a month ($18 billed annually) for 1,500 AI credits, Max is $200 a month for 18,000 credits, and Business is $50 per user per month with SSO for teams up to 25 seats."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "iterm2",
@@ -17361,19 +17756,22 @@
     "verdict": "The safe answer for enterprise identity. For a consumer app with simple needs it is more platform than you need.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Auth0 — Pricing",
           "url": "https://auth0.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free: up to 25,000 MAUs, 1 custom domain, passwordless, unlimited social connections, 5 organisations, 1 enterprise connection",
+            "Essentials from $35/month (B2C) or $150/month (B2B) at 500 MAUs",
+            "Professional from $240/month (B2C) or $800/month (B2B) at 500 MAUs",
+            "Enterprise contact sales; B2B Essentials adds unlimited organisations and 3 enterprise connections"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -17389,7 +17787,24 @@
         "title": "MFA and anomaly detection",
         "description": "Adds step-up factors and blocks credential-stuffing attempts."
       }
-    ]
+    ],
+    "bestFor": [
+      "Apps under 25,000 monthly active users — the Free plan includes a custom domain, passwordless and 5 organisations",
+      "Consumer apps that outgrow Free: B2C Essentials starts at $35/month for 500 MAUs",
+      "B2B SaaS that needs enterprise connections and unlimited organisations: B2B Essentials from $150/month"
+    ],
+    "skipIf": [
+      "You need B2B features on a small budget — B2B plans cost roughly four times the B2C plans at the same MAU",
+      "Your MAU count is large: paid plans are priced per MAU tier from 500 upward",
+      "You need compliance and SLAs: Enterprise is quoted by sales"
+    ],
+    "sss": [
+      {
+        "soru": "Is Auth0 free, and what does it cost after that?",
+        "cevap": "Auth0's Free plan covers up to 25,000 monthly active users with a custom domain, passwordless login and 5 organisations. Paid plans are priced per monthly-active-user tier starting at 500 MAUs: Essentials from $35 a month for B2C apps or $150 for B2B, and Professional from $240 (B2C) or $800 (B2B). Enterprise is quoted by sales."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "keycloak",
@@ -17436,22 +17851,48 @@
     ],
     "evidence": {
       "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Keycloak — Vendor page (open source)",
+          "label": "Keycloak — Home",
           "url": "https://www.keycloak.org/",
-          "checkedAt": "2026-09-03",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor describes the software as open source, so the self-hosted edition is free to use"
+            "CNCF incubation project",
+            "OpenID Connect, OAuth 2.0, SAML 2.0"
+          ]
+        },
+        {
+          "label": "Keycloak — LICENSE (GitHub)",
+          "url": "https://github.com/keycloak/keycloak/blob/main/LICENSE.txt",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "Apache License 2.0"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page describes the software as open source. It does not print a price; the free-to-self-host reading follows from the licence, not from a published price list.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Open-source project with no price list; hosting and staff time are the real cost."
       ]
-    }
+    },
+    "bestFor": [
+      "Teams that want a free, Apache-licensed identity server with OpenID Connect, OAuth 2.0 and SAML 2.0",
+      "Organisations that must keep identity data on their own infrastructure",
+      "Companies that want a CNCF project rather than a per-MAU SaaS bill"
+    ],
+    "skipIf": [
+      "You have nobody to run and upgrade it: Keycloak is self-hosted and the operational cost is yours",
+      "You need vendor support without a Red Hat subscription",
+      "You want a managed service with a free tier and no servers — Auth0 or Clerk fit that better"
+    ],
+    "sss": [
+      {
+        "soru": "How much does it cost to run Keycloak?",
+        "cevap": "Keycloak itself is free: it is Apache-2.0 licensed open-source software and a CNCF incubation project supporting OpenID Connect, OAuth 2.0 and SAML 2.0. The cost is the infrastructure you run it on and the staff time for upgrades and operations, since there is no hosted Keycloak service from the project. Commercial support is available through Red Hat's build."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "nginx",
@@ -18913,19 +19354,21 @@
     "verdict": "Effective for consistency. The automation is visible to readers if you lean on it too hard.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Hypefury — Pricing",
+          "label": "Hypefury — Features & pricing",
           "url": "https://hypefury.com/features-pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Flexible $6/month: 1 channel, $6/month per additional platform",
+            "Full $19/month: all channels included",
+            "7-day free trial without credit card; no free plan; X/Twitter no longer supported"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -18941,7 +19384,24 @@
         "title": "Auto-engagement actions",
         "description": "Triggers follow-up posts and replies based on performance rules."
       }
-    ]
+    ],
+    "bestFor": [
+      "Creators scheduling to one network on a budget: Flexible is $6/month per channel",
+      "Multi-platform creators on Bluesky, Threads, LinkedIn, Instagram and TikTok: the Full plan is $19/month for all channels",
+      "People who want to try before paying — 7-day trial without a card"
+    ],
+    "skipIf": [
+      "You want to schedule X/Twitter posts: the vendor FAQ says Hypefury no longer supports X",
+      "You need a permanent free plan; there is none",
+      "You manage more than three networks on Flexible — Full becomes cheaper"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Hypefury cost?",
+        "cevap": "Hypefury's Flexible plan is $6 a month for one channel, plus $6 for each additional platform. The Full plan is $19 a month and includes every supported channel (Bluesky, Threads, LinkedIn, Instagram, TikTok). Both start with a 7-day free trial and no credit card; there is no permanent free plan, and the vendor states it no longer supports X."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "typefully",
@@ -19065,19 +19525,22 @@
     "verdict": "A pleasure to integrate. For high-volume marketing sends, an established ESP still has the edge.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Resend — Pricing",
           "url": "https://resend.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 3,000 emails/month, 100/day, 3 domains, 30-day retention",
+            "Pro $20/month for 50,000 emails, $35 for 100,000, overage $0.90 per 1,000, 10 domains",
+            "Scale $90–$1,150/month for 100K–2.5M emails, overage $0.90 down to $0.46; dedicated IP $30/month, SSO $150/month",
+            "Enterprise custom for 3M+ emails; marketing: Free 1,000 contacts, Pro $40–$650/month for 5,000–150,000 contacts"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -19093,7 +19556,24 @@
         "title": "Domain authentication",
         "description": "Guides SPF, DKIM and DMARC setup for the sending domain."
       }
-    ]
+    ],
+    "bestFor": [
+      "Developers sending transactional email from code — 3,000 emails a month are free with 3 domains",
+      "Products around 50,000 emails a month for $20 (Pro) with 10 domains and no daily cap",
+      "Teams that also want marketing sends priced by contacts: Free covers 1,000 contacts"
+    ],
+    "skipIf": [
+      "You send more than 100 emails a day on Free — that daily cap is the trigger",
+      "You need a dedicated IP or SSO on a small plan: both are Scale add-ons ($30 and $150/month)",
+      "You are above 3 million emails a month and need a negotiated contract"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Resend cost?",
+        "cevap": "Resend's free plan includes 3,000 emails a month with a 100-per-day cap and 3 domains. Pro is $20 a month for 50,000 emails or $35 for 100,000, with overage at $0.90 per 1,000. Scale runs from $90 to $1,150 a month for 100,000 to 2.5 million emails, and Enterprise is custom above 3 million. Marketing email is priced by contacts, free up to 1,000."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "postmark",
@@ -19493,19 +19973,29 @@
     "verdict": "The right choice when confidentiality outranks convenience. Otherwise mainstream sync is smoother.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Sync.com — Pricing",
-          "url": "https://www.sync.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "label": "Sync.com — Individual pricing",
+          "url": "https://www.sync.com/pricing-individual/",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Personal 150 GB $4/month ($3.50 yearly); Personal 1 TB $16/month or $12 yearly; Pro Solo 5 TB $32/month or $28 yearly",
+            "30-day trial and 30-day money-back guarantee; unlimited transfer"
+          ]
+        },
+        {
+          "label": "Sync.com — Team pricing",
+          "url": "https://www.sync.com/pricing/",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "Teams minimum 3 users: 1 TB $8/user/month or $6 yearly, 2 TB $12 or $9, 10 TB $18 or $15; Enterprise min 100 users"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Promotional 50% prices shown at fetch time were ignored; list prices are quoted."
       ]
     },
     "keyFeatures": [
@@ -19521,7 +20011,18 @@
         "title": "Version history",
         "description": "Restores previous file versions and deleted items."
       }
-    ]
+    ],
+    "bestFor": [
+      "Individuals who want zero-knowledge encrypted storage: 150 GB for $4/month or 1 TB from $12/month yearly",
+      "Small teams of 3+ that need admin controls: Teams 1 TB per user from $6/user/month yearly",
+      "Buyers who value a 30-day trial and money-back guarantee over a permanent free tier"
+    ],
+    "skipIf": [
+      "You want a free plan for ongoing use — the pricing pages list a 30-day trial, not a free tier",
+      "You need real-time collaborative editing like Google Docs; Sync is storage and sharing first",
+      "Your team is under 3 users: Teams plans require a minimum of 3"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "keeper",
@@ -20922,19 +21423,22 @@
     "verdict": "The standard way to start without capital. Margins are the trade-off you accept.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Printful — Pricing",
           "url": "https://www.printful.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "free signup, no monthly fee on Free",
+            "Growth $24.99/month, free at $12K/year in sales; up to 33% off products and 9% off branding",
+            "samples 20% off (Free) or 25% off (Growth), 1 order/month up to 3 items",
+            "base price includes blank, one design placement and fulfilment; shipping and taxes separate"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -20950,7 +21454,24 @@
         "title": "White-label fulfilment",
         "description": "Ships under your branding with custom packing inserts."
       }
-    ]
+    ],
+    "bestFor": [
+      "New sellers who want print-on-demand with no signup or monthly fee — you pay per order",
+      "Stores past $12K a year in sales: the Growth membership becomes free and gives up to 33% off products",
+      "Sellers who want fulfilment included in the product base price"
+    ],
+    "skipIf": [
+      "Your margins are thin: shipping and taxes are charged on top of base price",
+      "You want frequent samples — sample orders are limited to 1 per month with up to 3 items",
+      "You need Growth pricing under $12K/year without paying $24.99/month"
+    ],
+    "sss": [
+      {
+        "soru": "Is Printful free to use?",
+        "cevap": "Yes. Signing up is free and there is no monthly fee; you pay the product base price (blank item, one design placement and fulfilment) plus shipping and taxes when an order comes in. The optional Growth membership costs $24.99 a month, becomes free once you pass $12,000 in yearly sales, and gives up to 33% off product prices."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "printify",
