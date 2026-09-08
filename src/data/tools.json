@@ -4268,21 +4268,40 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Google Cloud — Pricing",
-          "url": "https://cloud.google.com/pricing",
-          "checkedAt": "2026-08-31",
+          "label": "Google Cloud — Free cloud features",
+          "url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "$300 welcome credit for 90 days",
+            "Always Free: 1 e2-micro VM/month in select US regions, 5 GB-months regional storage, BigQuery 1 TiB queries and 10 GiB storage/month",
+            "Cloud Run 2 million requests, 360,000 GB-seconds, 180,000 vCPU-seconds, 1 GB egress/month"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "New customers who want to evaluate with $300 in credit over 90 days",
+      "Tiny always-on workloads: one e2-micro VM, 5 GB regional storage and 2 million Cloud Run requests a month free",
+      "Data teams that query up to 1 TiB a month in BigQuery for free"
+    ],
+    "skipIf": [
+      "You expect the free tier to cover production — limits are per month and only in select US regions",
+      "You forget that overage bills at standard rates once the trial credit is used",
+      "You need simple, fixed pricing; GCP bills per resource and per second"
+    ],
+    "sss": [
+      {
+        "soru": "Is Google Cloud Platform free?",
+        "cevap": "Partly. New accounts get $300 of credit for 90 days, and the Always Free tier covers small monthly amounts: one e2-micro VM in select US regions, 5 GB of regional storage, 1 TiB of BigQuery queries with 10 GiB of storage, and 2 million Cloud Run requests. Anything beyond those limits is billed at standard rates."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "digitalocean",
@@ -4534,21 +4553,41 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Supabase — Pricing",
           "url": "https://supabase.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 2 active projects, 500 MB database, 50,000 MAU, pauses after 1 week inactive",
+            "Pro $25/month: 100,000 MAU then $0.00325/MAU, 8 GB disk then $0.125/GB, $10 compute credit, 7-day logs",
+            "Team $599/month: SOC 2, ISO 27001, PrivateLink, 14-day backups; Enterprise custom",
+            "compute billed per project from $10/month Micro to $3,730 16XL; spend cap on by default for Pro"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Developers who want Postgres, auth and storage free for 2 projects with 500 MB and 50,000 MAU",
+      "Startups paying $25/month for 8 GB disk, 100,000 MAU and a $10 compute credit",
+      "Companies needing SOC 2, PrivateLink and SLAs on Team at $599/month"
+    ],
+    "skipIf": [
+      "Your free project is dormant — projects pause after 1 week of inactivity",
+      "You run several projects on Pro: only one Micro compute credit is included, others are billed in full",
+      "You expect flat pricing at scale; storage is $0.125/GB and MAU $0.00325 beyond included amounts"
+    ],
+    "sss": [
+      {
+        "soru": "Is Supabase free, and what does Pro include?",
+        "cevap": "Supabase's Free plan allows 2 active projects with a 500 MB database and 50,000 monthly active users, but projects pause after a week of inactivity. Pro costs $25 a month per organisation and includes 100,000 MAU, 8 GB of disk and a $10 compute credit, with usage billed beyond that. Team is $599 a month with SOC 2 and PrivateLink."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "ghost",
@@ -9985,22 +10024,33 @@
     "verdict": "Pair it with Grafana and you have a complete metrics stack. Plan for long-term storage before you need it.",
     "evidence": {
       "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Prometheus — Vendor page (open source)",
+          "label": "Prometheus — Home",
           "url": "https://prometheus.io/",
-          "checkedAt": "2026-09-03",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "Apache 2 licence; CNCF graduated",
+            "dimensional time-series model, pull-based collection, PromQL, Alertmanager"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Teams that want a free, Apache-licensed metrics store with a pull model and PromQL",
+      "Kubernetes environments where Prometheus is the de-facto monitoring standard",
+      "Engineers who want alerting rules in the same query language"
+    ],
+    "skipIf": [
+      "You need long-term, multi-year storage out of the box — that requires Thanos, Cortex or a vendor",
+      "You want logs and traces in the same tool",
+      "You need vendor support without a managed provider"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "new-relic",
@@ -10112,19 +10162,21 @@
     "verdict": "The release-stability framing is genuinely useful. Sentry covers more ground for most teams.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Bugsnag — Pricing",
+          "label": "BugSnag — Pricing",
           "url": "https://www.bugsnag.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 7.5K events, 1M spans/month, 1 user",
+            "Select from $0 usage-based: 50k–3M events, unlimited users; Preferred: 100k–3M events, SAML SSO",
+            "Enterprise custom with on-prem; 14-day trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -10140,7 +10192,18 @@
         "title": "Breadcrumbs",
         "description": "Records the user actions leading up to an error for reproduction."
       }
-    ]
+    ],
+    "bestFor": [
+      "Solo developers: the Free plan gives 7.5K events and 1M spans a month for 1 user",
+      "Small teams that want usage-based pricing from 50k events with unlimited users",
+      "Larger teams that need error prioritisation and SAML SSO on Preferred"
+    ],
+    "skipIf": [
+      "You need more than one user for free",
+      "You want a fixed price list — paid tiers are configured by event and span volume",
+      "You need on-premises: that is Enterprise"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "planetscale",
@@ -10831,19 +10894,22 @@
     "verdict": "A big shortcut for CRUD-heavy products. Complex domain logic still belongs in your own services.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Hasura — Pricing",
           "url": "https://hasura.io/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "DDN Free $0: 1 developer, 15-minute observability retention",
+            "Base $5 per active model/month: unlimited developers, 30-day retention",
+            "Advanced $30 per active model/month: federation, multi-repo CI/CD",
+            "active model = accessed more than 1,000 times/month; unlimited API requests on all plans"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -10859,7 +10925,18 @@
         "title": "Actions and remote schemas",
         "description": "Extends the generated API with custom business logic and other services."
       }
-    ]
+    ],
+    "bestFor": [
+      "Individual developers building a GraphQL supergraph free with unlimited API requests",
+      "Single teams paying $5 per active model per month for unlimited developers and 30-day retention",
+      "Multi-team federated graphs on Advanced at $30 per active model"
+    ],
+    "skipIf": [
+      "Your schema has many hot models — pricing is per model accessed over 1,000 times a month",
+      "You need business support on the public cloud; it is bundled with Private DDN",
+      "You want Hasura v2 style pricing; DDN is a different model"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "sketch",
@@ -11433,19 +11510,21 @@
     "verdict": "The established option. Solo creators get better value from lighter tools.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Hootsuite — Pricing",
+          "label": "Hootsuite — Plans",
           "url": "https://www.hootsuite.com/plans",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Standard $99/user/month annual: 10 social accounts",
+            "Professional $199 and Advanced $399/user/month annual: unlimited social accounts; Enterprise custom",
+            "14-day trial, no card; no free plan"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -11461,7 +11540,24 @@
         "title": "Social listening",
         "description": "Monitors keywords and mentions across networks in streams."
       }
-    ]
+    ],
+    "bestFor": [
+      "Marketing teams managing 10 social accounts from one dashboard: Standard $99/user/month annually",
+      "Agencies that need unlimited social accounts on Professional ($199) or Advanced ($399)",
+      "Companies that want a 14-day trial without a card"
+    ],
+    "skipIf": [
+      "You are a solo creator on a budget — there is no free plan and the entry price is $99/month",
+      "You want month-to-month pricing: the plans page shows annual rates only",
+      "You need enterprise governance: that is custom-priced"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Hootsuite cost?",
+        "cevap": "Hootsuite Standard is $99 per user per month billed annually with 10 social accounts. Professional is $199 and Advanced $399 per user per month annually, both with unlimited social accounts. Enterprise is custom. There is no free plan, but every tier has a 14-day trial without a credit card."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "later",
@@ -12046,19 +12142,21 @@
     "verdict": "Justified by ad spend. If you are not testing pages, your website builder is enough.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Unbounce — Pricing",
           "url": "https://unbounce.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Starter $29/month or $22 annually: 5 pages, 500 traffic, 1 user, 1 domain",
+            "Build $99/$74: unlimited pages, 20,000 traffic; Experiment $149/$112: 30,000 traffic, 3 users, 2 domains; Optimize $249/$187: 50,000 traffic, 5 users, 3 domains",
+            "unlimited conversions; 14-day trial; annual saves 25%; Concierge and Agency custom"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -12074,7 +12172,18 @@
         "title": "Dynamic text replacement",
         "description": "Matches page copy to the keyword or ad that sent the visitor."
       }
-    ]
+    ],
+    "bestFor": [
+      "Marketers who want a landing-page builder with unlimited conversions and a 14-day trial",
+      "Low-traffic campaigns: Starter is $29/month ($22 annually) for 5 pages and 500 visitors",
+      "Teams that need A/B tests and 3 users on Experiment ($149/month)"
+    ],
+    "skipIf": [
+      "Your traffic is high — plans cap visitors at 500 to 50,000 a month, unlike per-page tools with unlimited traffic",
+      "You need many root domains: Starter and Build allow 1",
+      "You are an agency needing 100k+ visitors; that is a custom Agency plan"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "instapage",
@@ -13183,19 +13292,22 @@
     "verdict": "Strong value in password management, particularly if open source matters to you.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Bitwarden — Pricing",
           "url": "https://bitwarden.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free: basic password management, unlimited devices",
+            "Premium $1.65/month ($19.80/year); Families $3.99/month ($47.88/year) for 6",
+            "Teams $4/user/month annual; Enterprise $6/user/month annual with SSO, self-hosting, free Families for users",
+            "open source; self-hosting available"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -13211,7 +13323,24 @@
         "title": "Organisation sharing",
         "description": "Shares credentials through collections with role-based access."
       }
-    ]
+    ],
+    "bestFor": [
+      "Individuals who want an open-source, zero-knowledge password manager free on unlimited devices",
+      "Families of up to 6 for $3.99/month billed annually",
+      "Businesses that want self-hosting and SSO: Enterprise at $6/user/month annually"
+    ],
+    "skipIf": [
+      "You need an integrated authenticator or file attachments for free — that is Premium ($1.65/month annually)",
+      "You want passwordless SSO on the cheaper Teams plan ($4/user/month); it is Enterprise only",
+      "You prefer a closed, single-vendor ecosystem like iCloud Keychain"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Bitwarden cost, and can I self-host it?",
+        "cevap": "Bitwarden is free for individuals on unlimited devices. Premium costs $19.80 a year, Families $47.88 a year for up to 6 people. For businesses, Teams is $4 and Enterprise $6 per user per month billed annually. Bitwarden is open source, and the server can be self-hosted on your own infrastructure."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "dashlane",
@@ -13663,19 +13792,21 @@
     "verdict": "Well matched to agency work. Product teams should look at trackers built for them.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Teamwork — Pricing",
+          "label": "Teamwork.com — Pricing",
           "url": "https://www.teamwork.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free: 5 users, 5 projects, 100 automations",
+            "Basics $9.99/user/month yearly; Accelerate $24.99/user/month yearly with client invoicing; 14-day trial",
+            "Optimize and Enterprise custom; usage-based AI credits from September 2026"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -13691,7 +13822,18 @@
         "title": "Workload planning",
         "description": "Shows capacity across people and projects."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small teams: Free allows 5 users and 5 projects with Gantt and time logging",
+      "Client-service teams that need time tracking and templates for $9.99/user/month yearly",
+      "Agencies that bill clients: Accelerate ($24.99/user/month yearly) adds time budgets and invoicing"
+    ],
+    "skipIf": [
+      "You have more than 5 users or projects and no budget",
+      "You need quoting, resource scheduling or profitability: Optimize is custom-priced",
+      "You rely on AI features long term — usage-based AI credits are scheduled from September 2026"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "google-meet",
@@ -14234,19 +14376,21 @@
     "verdict": "The right answer when control matters. Total cost of ownership is higher than the licence suggests.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "WooCommerce — Pricing",
           "url": "https://woocommerce.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "core plugin free and open source, no revenue share",
+            "hosting typically $25–$350/month; extensions $29–$299/year",
+            "WooPayments about 2.5–2.9% + 30¢ per transaction"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -14262,7 +14406,24 @@
         "title": "Extension ecosystem",
         "description": "Covers payments, shipping and subscriptions through plugins."
       }
-    ]
+    ],
+    "bestFor": [
+      "WordPress site owners who want a free, open-source store with no platform fee or revenue share",
+      "Merchants who want to choose any payment gateway without penalties",
+      "Stores that prefer paying for hosting and extensions over a monthly SaaS tier"
+    ],
+    "skipIf": [
+      "You have no hosting: the vendor estimates $25–$350/month for most stores",
+      "You need many premium extensions — each runs $29–$299 a year",
+      "You want zero maintenance; updates, backups and security are on you"
+    ],
+    "sss": [
+      {
+        "soru": "Is WooCommerce free?",
+        "cevap": "The WooCommerce plugin is free and open source with no platform fee or revenue share. Your real costs are hosting, which the vendor estimates at $25 to $350 a month for most stores, optional extensions at $29 to $299 a year each, and payment processing of roughly 2.5 to 2.9% plus 30¢ per transaction with WooPayments."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "ecwid",
@@ -14970,20 +15131,21 @@
     "verdict": "The strongest generative video tool for now. Budget credits carefully; experimentation is expensive.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Runway — Pricing",
           "url": "https://runway.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free: 125 one-time credits, 5 GB",
+            "Standard $12/month annual or $15 monthly: 625 credits; Pro $28/$35: 2,250 credits; Max $76/$95: 9,500 credits, rollover 1 month",
+            "Gen-4.5 60 credits per 5 seconds; extra credits from 1,000 minimum, never expire"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to runway.com."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -14999,7 +15161,18 @@
         "title": "Editing timeline",
         "description": "Combines generated and filmed footage in one editor."
       }
-    ]
+    ],
+    "bestFor": [
+      "Creators testing AI video: 125 one-time free credits with basic models",
+      "Regular users: Standard $12/month annually ($15 monthly) with 625 credits and all models",
+      "Studios that need volume: Max $76/month annually with 9,500 credits and rollover"
+    ],
+    "skipIf": [
+      "You expect long clips cheaply — Gen-4.5 costs 60 credits per 5 seconds of video",
+      "You need custom voice clones below Pro ($28/month annually)",
+      "You need API or team pricing; those are listed separately"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "suno",
@@ -16258,19 +16431,21 @@
     "verdict": "Solid for its target customer. Smaller businesses often find they no longer qualify.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Brex — Pricing",
           "url": "https://www.brex.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Essentials $0/user/month: cards, up to two entities, accounting integrations",
+            "Premium $12/user/month: expense policies, approval chains, multi-entity",
+            "Enterprise custom: unlimited entities, local card issuance, dedicated manager"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -16286,7 +16461,18 @@
         "title": "Business accounts",
         "description": "Holds operating cash alongside the card programme."
       }
-    ]
+    ],
+    "bestFor": [
+      "Startups that want corporate cards and expense software with no software fee on Essentials",
+      "Mid-size companies that need approval chains and multi-entity support: Premium $12/user/month",
+      "Global companies issuing local-currency cards in 50+ countries on Enterprise"
+    ],
+    "skipIf": [
+      "You have more than two entities on Essentials",
+      "You need custom implementation services below Enterprise",
+      "You are outside Brex's eligibility criteria for business accounts"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "deel",
@@ -16589,19 +16775,21 @@
     "verdict": "The name recognition is worth something in negotiations. For occasional signing, cheaper tools do the job.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "DocuSign — Pricing",
+          "label": "Docusign — eSignature plans",
           "url": "https://ecom.docusign.com/plans-and-pricing/esignature",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Personal $11/month annual ($132/year): 5 envelopes/month",
+            "Standard $30/user/month annual; Business Pro $45/user/month annual; 100 envelopes/user/year",
+            "Enhanced plans custom; annual saves up to 33%; 30-day money back on annual"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -16617,7 +16805,24 @@
         "title": "Agreement audit trail",
         "description": "Records every view, sign and change for evidentiary use."
       }
-    ]
+    ],
+    "bestFor": [
+      "Individuals sending up to 5 envelopes a month for $11/month billed annually",
+      "Small businesses that need templates and reminders: Standard $30/user/month annually",
+      "Teams that need payments and advanced fields: Business Pro $45/user/month"
+    ],
+    "skipIf": [
+      "You send more than 100 envelopes per user a year — that cap applies to Standard and Business Pro",
+      "You sign a few documents a year; the monthly plan exists but with lower allowances",
+      "You need SSO or bulk sending: Enhanced plans are custom-priced"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Docusign cost?",
+        "cevap": "Docusign eSignature Personal costs $11 a month billed annually for 5 envelopes a month. Standard is $30 per user per month and Business Pro $45, both billed annually with 100 envelopes per user per year. Larger or SSO-enabled plans are custom-priced, and annual purchases carry a 30-day money-back guarantee."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "pipedrive",
@@ -16928,19 +17133,21 @@
     "verdict": "Excellent if you know how you work and want the tool to follow. Teams wanting an opinionated default should look elsewhere.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Attio — Pricing",
           "url": "https://attio.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 3 seats, 50,000 records",
+            "Plus $44/user/month or $35 annual: 10 seats, 250,000 records",
+            "Pro $99/user/month or $79 annual: unlimited seats, 1M records; Enterprise custom; 14-day Pro trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -16956,7 +17163,24 @@
         "title": "Collaborative lists",
         "description": "Runs pipelines as shared, filterable lists over any object."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small teams of up to 3 who want a modern CRM free with 50,000 records",
+      "Startups scaling to 10 seats and 250,000 records: Plus $35/user/month annually",
+      "Sales teams that want call intelligence and sequences on Pro ($79 annually)"
+    ],
+    "skipIf": [
+      "You have more than 3 users and no budget",
+      "You want cheap seats: Pro is $99/user/month billed monthly",
+      "You need SCIM or SSO — Enterprise, annual billing only"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Attio cost?",
+        "cevap": "Attio is free for up to 3 seats and 50,000 records. Plus costs $35 per user per month billed annually ($44 monthly) for up to 10 seats, and Pro $79 annually ($99 monthly) with unlimited seats and a million records. Enterprise is custom on annual billing, and there is a 14-day Pro trial."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "folk",
@@ -17637,19 +17861,21 @@
     "verdict": "Worth paying for if you open a database client every day.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "TablePlus — Pricing",
           "url": "https://tableplus.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Basic $99 (1 device), Standard $129 (2 devices), Team $79/seat min 3",
+            "free: 2 tabs, 2 windows, 2 advanced filters at a time",
+            "macOS 10.13+, Windows, Linux, iOS 12+; one year of updates, perpetual use"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -17665,7 +17891,18 @@
         "title": "Safe editing",
         "description": "Previews generated SQL before changes are committed."
       }
-    ]
+    ],
+    "bestFor": [
+      "Developers who want a native, fast database GUI on macOS, Windows, Linux and iOS",
+      "People who prefer a one-time licence: $99 for one device, $129 for two",
+      "Teams of 3+ at $79 per seat"
+    ],
+    "skipIf": [
+      "The free version's 2 tabs and 2 windows at a time are too restrictive for your workflow",
+      "You want updates beyond a year without renewing — the licence keeps working but updates stop",
+      "You need collaboration features; TablePlus is a local client"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "prisma",
@@ -18904,21 +19141,34 @@
     ],
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-03",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Dribbble — Pricing",
+          "label": "Dribbble — Pro",
           "url": "https://dribbble.com/pro",
-          "checkedAt": "2026-09-03",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "free: 10 shot uploads/day, 1 service, 15 Project Brief credits/month",
+            "Lite $4/month yearly; Standard $8/month yearly with 0% designer fees, 3 team seats; Plus $99/month yearly with 10 seats and VIP support"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Monthly-billed rates were not readable in the fetched copy."
       ]
-    }
+    },
+    "bestFor": [
+      "Designers who want a free portfolio with up to 10 shot uploads a day",
+      "Freelancers who want a search boost and 0% designer fees on payouts: Standard at $8/month yearly",
+      "Agencies needing 10 team seats and VIP support on Plus ($99/month yearly)"
+    ],
+    "skipIf": [
+      "You only need a place to host work — the free tier already allows uploads and 1 service",
+      "You want a monthly price quote before committing; the page shows yearly-billed rates",
+      "You need a full portfolio website with custom domain; Dribbble is a community profile"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "behance",
@@ -19212,19 +19462,21 @@
     "verdict": "Effective for its intended playbook. A poor fit for brands that do not sell that way.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "ClickFunnels — Pricing",
           "url": "https://www.clickfunnels.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Launch $97/month or $81 annual: 1 workspace, 2 members, 10K contacts, 5 domains",
+            "Scale $197/$164: 5 workspaces, 75K contacts; Optimize $297/$248: 10 workspaces, 150K contacts; Dominate $5,997/year",
+            "14-day trial; 30-day money back; no sales commission"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -19240,7 +19492,24 @@
         "title": "Built-in checkout",
         "description": "Takes payment without wiring up a separate commerce platform."
       }
-    ]
+    ],
+    "bestFor": [
+      "Marketers who want funnels, email and courses in one platform with a 14-day trial",
+      "Solo founders on Launch: $97/month ($81 annually) with 10K contacts and 5 domains",
+      "Teams running several brands: Scale ($197) and Optimize ($297) add workspaces and members"
+    ],
+    "skipIf": [
+      "Your budget is under $100/month — there is no cheaper tier",
+      "You need more than 10K contacts on the entry plan",
+      "You only need landing pages; cheaper page builders exist"
+    ],
+    "sss": [
+      {
+        "soru": "How much does ClickFunnels cost?",
+        "cevap": "ClickFunnels Launch is $97 a month or $81 a month billed annually, with 10,000 contacts and 5 custom domains. Scale is $197 ($164 annually) and Optimize $297 ($248 annually) with more workspaces and contacts; Dominate is $5,997 a year. All plans have a 14-day free trial and a 30-day money-back guarantee."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "leadpages",
@@ -19272,19 +19541,21 @@
     "verdict": "Reasonable value at the low end. Serious ad spend justifies a stronger testing platform.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Leadpages — Pricing",
-          "url": "https://leadpages.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.leadpages.com/pricing",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Leadpages Grow $57/month: unlimited pages and traffic, 4 custom domains; Optimize $115; Scale $231",
+            "HTML Pub Starter $6, Pro $17, Business $28/month",
+            "7-day trial; annual saves 20%"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -19300,7 +19571,18 @@
         "title": "Site hosting",
         "description": "Hosts pages and small sites on a custom domain."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small businesses that want unlimited pages and traffic with no overage fees: Grow $57/month",
+      "Marketers who want AI traffic routing and heatmaps on Optimize ($115/month)",
+      "Publishers who only need hosting: HTML Pub plans from $6/month"
+    ],
+    "skipIf": [
+      "You need more than 4 custom domains on the entry Leadpages plan",
+      "You want a free plan — only a 7-day trial",
+      "You want full auto-optimisation on a lower tier; that is Scale ($231/month)"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "carrot",
@@ -19332,19 +19614,21 @@
     "verdict": "Well fitted to its niche and useless outside it. The template similarity is the trade-off for speed.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Carrot — Pricing",
           "url": "https://carrot.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Individual $119/month: 1 site, extra sites $39/month, 35 keywords, 1 call number",
+            "Agency $299/month: extra sites $29/month, 100 keywords",
+            "AI Suite add-on $99/month; 30-day money back on primary subscription"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -19360,7 +19644,18 @@
         "title": "Content library",
         "description": "Supplies prewritten pages and posts for the vertical."
       }
-    ]
+    ],
+    "bestFor": [
+      "Real-estate investors and agents who want SEO-ready lead sites: Individual $119/month for 1 site",
+      "Agencies managing client sites: Agency $299/month with client dashboards",
+      "Teams that want rank tracking and call tracking bundled"
+    ],
+    "skipIf": [
+      "You need several sites — each extra site is $39/month (Individual) or $29 (Agency)",
+      "You want AI lead management included: the AI Suite is a $99/month add-on",
+      "You are outside real estate; the templates and SEO are niche-specific"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "similarweb",
@@ -20893,19 +21188,21 @@
     "verdict": "A genuinely different structure. Try it before committing a large archive.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Capacities — Pricing",
           "url": "https://capacities.io/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Basic free: unlimited spaces, objects and blocks, sync, 5 GB media then 100 MB/month",
+            "Pro $9.99/month (16% off yearly): tasks, AI assistant, calendar, smart queries, unlimited media, API",
+            "Believer from $12.49/month yearly; AI add-on $8.33/month annually"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -20921,7 +21218,24 @@
         "title": "Object-based search",
         "description": "Filters and lists notes by type and property."
       }
-    ]
+    ],
+    "bestFor": [
+      "Note takers who want object-based notes with unlimited objects free and 5 GB of media",
+      "Users who want tasks, calendar integration and AI for $9.99/month",
+      "People who like supporting an indie team: Believer from $12.49/month yearly with beta access"
+    ],
+    "skipIf": [
+      "You upload lots of media on Free — after 5 GB total it is 100 MB a month",
+      "You need task management or API access without paying",
+      "You want a plain Markdown-file vault like Obsidian"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Capacities cost?",
+        "cevap": "Capacities Basic is free with unlimited objects and sync, plus 5 GB of media. Pro costs $9.99 a month, with a 16% discount on yearly billing, and adds tasks, AI, calendar integration and API access. Believer starts at $12.49 a month billed yearly and includes beta access."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "anytype",
@@ -21102,19 +21416,21 @@
     "verdict": "Valuable when feedback volume is real. A small team with one product does not need it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Productboard — Pricing",
           "url": "https://www.productboard.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 500 feedback notes, 25 contributors, 1 portal, 50 AI credits",
+            "Plus $19/maker/month annual or $25 monthly; Business $59 annual (2-maker minimum) or $75 monthly",
+            "Enterprise custom, 5-maker minimum, SAML SSO, SCIM, Salesforce; 14-day Business trial"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "keyFeatures": [
@@ -21130,7 +21446,24 @@
         "title": "Roadmap views",
         "description": "Publishes tailored roadmap views for different audiences."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small product teams collecting feedback: Free covers 500 notes and 25 contributors",
+      "Product managers who need customer segments and usage integrations: Plus at $19 per maker/month annually",
+      "Teams that need unlimited feedback and two portals on Business ($59 per maker annually)"
+    ],
+    "skipIf": [
+      "Your feedback volume exceeds 500 notes and you are not ready to pay per maker",
+      "You are a single PM wanting Business — it has a 2-maker minimum",
+      "You need SAML SSO or Salesforce: Enterprise with a 5-maker minimum"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Productboard cost?",
+        "cevap": "Productboard has a free plan with 500 feedback notes and 25 contributors. Plus costs $19 per maker per month billed annually ($25 monthly), Business $59 per maker annually ($75 monthly) with a two-maker minimum, and Enterprise is custom with a five-maker minimum. A 14-day trial of Business is available without a card."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "aha",
@@ -21616,7 +21949,37 @@
       "Not aimed at large webinars"
     ],
     "targetAudience": "Teams meeting with external guests who should not have to install anything.",
-    "verdict": "The friction-free option for client calls. Internal all-hands need something bigger."
+    "verdict": "The friction-free option for client calls. Internal all-hands need something bigger.",
+    "bestFor": [
+      "Quick calls with no downloads: free rooms for 4 participants up to 30 minutes",
+      "Consultants who want a permanent room link for 100 participants: Pro $10.99/month",
+      "Product teams embedding video via API, billed by usage"
+    ],
+    "skipIf": [
+      "You host group calls longer than 30 minutes on Free",
+      "You are a small team under 3 hosts — Business requires a 3-host minimum",
+      "You need webinars for thousands; the cap is 200 on Business"
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-08",
+      "sources": [
+        {
+          "label": "Whereby — Meetings pricing",
+          "url": "https://whereby.com/information/meetings/pricing",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "Free: 4 participants, 30 minutes",
+            "Pro $10.99/month: 100 participants, unlimited duration",
+            "Business $13.99/month per host, minimum 3 hosts: 200 participants; 14-day trial"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ]
+    },
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "kinsta",
@@ -23816,21 +24179,21 @@
     "targetAudience": "Consumer brands where the same customers contact support repeatedly.",
     "verdict": "The conversation model genuinely improves service. It costs enough that you need the volume to justify it.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Gladly — Pricing",
-          "url": "https://www.gladly.ai/",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.gladly.ai/pricing/",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "no per-seat or per-resolution price published; demo or contact sales"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to gladly.ai."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No published prices exist; nothing beyond the vendor's own positioning could be verified."
       ]
     },
     "keyFeatures": [
@@ -23846,7 +24209,18 @@
         "title": "Built-in voice",
         "description": "Handles phone conversations inside the same timeline."
       }
-    ]
+    ],
+    "bestFor": [
+      "Customer-service teams that want a customer-centred (not ticket-centred) helpdesk and are ready for a sales-led evaluation",
+      "Mid-size and enterprise support organisations that buy through demos and contracts",
+      "Teams that want AI-driven resolutions bundled with agent tooling"
+    ],
+    "skipIf": [
+      "You need a published per-seat price to budget — Gladly does not list one",
+      "You are a small team wanting self-serve signup and a free tier",
+      "You need a quick trial; the site routes to demo requests"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "chatwoot",
@@ -39784,22 +40158,34 @@
     },
     "evidence": {
       "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
-          "label": "Gitea — Vendor page (free, open source)",
-          "url": "https://about.gitea.com/",
-          "checkedAt": "2026-09-03",
+          "label": "Gitea — Pricing",
+          "url": "https://about.gitea.com/pricing",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
+            "open source free, MIT licence: code hosting, issues, pull requests, Actions, packages",
+            "Enterprise self-managed $9.50–$19/user/month, 30-day trial, SAML SSO, audit logs"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Gitea Cloud prices were not shown on the fetched page."
       ]
-    }
+    },
+    "bestFor": [
+      "Teams that want a lightweight, MIT-licensed, self-hosted Git service with CI and packages for free",
+      "Organisations needing SAML SSO and audit logs: Enterprise self-managed at $9.50–$19/user/month",
+      "Nonprofits and small organisations that qualify for discounts"
+    ],
+    "skipIf": [
+      "You want a hosted service with a published price — Gitea Cloud pricing was not shown on the page",
+      "You need GitHub's marketplace and Copilot ecosystem",
+      "You have nobody to maintain a server"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "forgejo",
@@ -41770,19 +42156,22 @@
     "verdict": "Good for quick social assets. Professional work needs a desktop editor.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-08",
       "sources": [
         {
           "label": "Picsart — Pricing",
           "url": "https://picsart.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-08",
           "supports": [
-            "the vendor's published pricing"
+            "Pro: 100 GB storage, 50 daily uses for most AI tools, annual billing saves up to 40%",
+            "Ultra per seat: 5x Pro usage, 300 GB, brand kits, bulk editing up to 100 images",
+            "free trial availability varies by account"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Prices were displayed in TRY when fetched, so no USD figure is quoted."
       ]
     },
     "kriterler": {
@@ -41808,7 +42197,18 @@
         "title": "AI editing tools",
         "description": "Removes backgrounds and generates elements inside the editor."
       }
-    ]
+    ],
+    "bestFor": [
+      "Casual creators who want AI photo and video editing with 100 GB cloud storage on Pro",
+      "Teams and agencies needing brand kits, bulk editing and 300 GB per seat on Ultra",
+      "Users who want access to many third-party AI models in one app"
+    ],
+    "skipIf": [
+      "You generate heavily: most AI tools are capped at 50 uses a day on Pro",
+      "You need a published USD price — the pricing page showed local currency when fetched",
+      "You want a desktop-grade editor like Photoshop"
+    ],
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "pixelmator-pro",
