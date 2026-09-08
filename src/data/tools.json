@@ -3554,6 +3554,12 @@
       "You need a permanently free tier — Intercom has none, only a 14-day trial; seats start at $29/seat/mo",
       "You cannot absorb usage charges on top of seats: the Fin AI agent is billed at $0.99 per resolution, and SMS, WhatsApp and phone are usage-priced",
       "You want the cheapest seat to be the full product — Advanced is $85/seat/mo and Expert $132/seat/mo"
+    ],
+    "sss": [
+      {
+        "soru": "Does Intercom have a free plan, and what does it cost?",
+        "cevap": "There is no perpetual free plan, only a 14-day free trial with no card required that includes every feature and Fin. Seats are Essential at $29, Advanced at $85 and Expert at $132 per seat per month. The Fin AI agent is billed at $0.99 per outcome, charged when a customer confirms a resolution, stops asking or Fin completes a workflow. Add-ons: Copilot $29 per agent monthly on annual billing, Pro $99 per month, Proactive Support Plus $99 per month; Product Tours and Surveys sit inside Proactive Support Plus rather than as separate line items."
+      }
     ]
   },
   {
@@ -4899,6 +4905,12 @@
       "You need team collaboration — the free plan is a single user; Team is $19/user/mo billed annually ($25 monthly)",
       "You rely on webhooks, private NPM packages or data-driven testing; those start at Solo, $9/mo annual ($12 monthly)",
       "You cannot keep data on Postman's servers, which some collaboration features require"
+    ],
+    "sss": [
+      {
+        "soru": "What does the Postman free plan include?",
+        "cevap": "Free covers the core API client, specs and mock servers, native Git support, the Collection Runner with performance testing, manual Flows and 50 AI credits per month. Solo is $9 per month billed annually with 400 AI credits, data-driven testing exports, custom-branded docs and custom domains. Team is $19 per user per month annually and adds collaboration, unlimited viewers, basic role-based access and SDK generation. Enterprise is $49 per user per month annually with the API Catalog, Private API Network, advanced RBAC and audit logs."
+      }
     ]
   },
   {
@@ -5976,6 +5988,12 @@
       "You need an uptime SLA — the 100% uptime SLA starts at Business, $200/mo billed annually",
       "You want image optimization; lossless image optimization begins at Pro, not Free",
       "You cannot move DNS management to Cloudflare, which the platform requires"
+    ],
+    "sss": [
+      {
+        "soru": "What does the Cloudflare Free plan include?",
+        "cevap": "The Free plan is $0 and covers DNS, CDN, unmetered DDoS protection, a Universal SSL certificate, the Web Application Firewall with the free managed ruleset, 70 Cloudflare Rules and 10,000 bulk redirects, basic bot mitigation and community-forum support. Pro is $20 per month annually ($25 monthly), Business $200 per month annually ($250 monthly), Enterprise on contract. Cloudflare for SaaS adds up to 100 custom hostnames free, then $0.10 per hostname."
+      }
     ]
   },
   {
@@ -6692,6 +6710,12 @@
       "You may need to move the site off Wix later; Wix sites cannot be exported to another host",
       "You want one flat platform fee — cost scales with the number of published client sites, not seats",
       "You only need a simple site; Studio is markedly more complex than the standard Wix editor"
+    ],
+    "sss": [
+      {
+        "soru": "Is Wix Studio free to use, and what do the paid plans add?",
+        "cevap": "Building a site in the Wix Studio editor is free, including the developer platform for code, but a free site cannot use a custom domain, remove Wix Studio branding or accept payments. Paid plans run Basic (10 GB storage, 1,500 CMS items), Standard (payments, 50 GB, 4,000 CMS items), Plus (120 GB, 20,000 CMS items) and Elite (unlimited media, 10 million CMS items), plus a custom Enterprise tier. Current prices are on Wix's Studio plans page; we list the starting price above."
+      }
     ]
   },
   {
@@ -7358,6 +7382,12 @@
       "You want official cross-device sync included — Sync is a separate $4/user/mo billed annually ($5 monthly)",
       "You need to publish notes as a website: Publish is $8/site/mo billed annually ($10 monthly)",
       "You are using it inside a company — the commercial licence is $50/user/year"
+    ],
+    "sss": [
+      {
+        "soru": "Is Obsidian free for commercial use, and what do Sync and Publish cost?",
+        "cevap": "The app is free with no sign-up, for personal and commercial use alike; the optional Commercial license is $50 per user per year for organisations that want to support development. Sync is $4 per month billed annually or $5 monthly, with end-to-end encryption, version history and shared vaults. Publish is $8 per site per month annually or $10 monthly. Catalyst is a $25 one-time supporter licence for beta access. Students, faculty and nonprofits get 40% off Sync and Publish."
+      }
     ]
   },
   {
@@ -8607,6 +8637,12 @@
       "You want your code — code and APK download are NOT in the free plan, they start at Basic ($39/mo)",
       "You need a custom domain: free publishes to a FlutterFlow subdomain",
       "You need more than 2 API endpoints or 2 projects on the free tier"
+    ],
+    "sss": [
+      {
+        "soru": "Can you export code or publish an app on the FlutterFlow free plan?",
+        "cevap": "No. Free lets you build and test in the visual editor with the template library, but code download and deployment need a paid plan. Basic at $39 per month adds code and APK download, unlimited projects, custom-domain web publishing and one-click store deployment. Growth is $80 per month for the first seat ($55 for the second) with real-time collaboration for 2, GitHub integration, the VS Code extension and 2 open branches. Business is $150 for the first seat ($85 for seats 2-5) with collaboration up to 5, 5 branches, Figma frame import, CLI access and automated tests. Annual billing saves about 25%."
+      }
     ]
   },
   {
@@ -10475,7 +10511,13 @@
       "limitations": [
         "The vendor page states the purchase model but does not print the price; the App Store is the price of record."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "Is Procreate a one-time purchase or a subscription?",
+        "cevap": "One-time purchase from the App Store; the vendor states there are no subscriptions. Procreate itself is iPad-only. Procreate Pocket is the separate iPhone app and Procreate Dreams the separate animation app, each sold on its own. Prices are set per App Store region, which is why we show the starting price above rather than a fixed figure."
+      }
+    ]
   },
   {
     "slug": "affinity-designer",
@@ -10698,7 +10740,13 @@
       "limitations": [
         "Vendor pages were reviewed; this record is not a ToolCompare benchmark."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "Is Photopea free, and what does Premium cost?",
+        "cevap": "The full editor runs free in the browser with no account. Photopea Premium is $5 per month and the vendor describes it as voluntary support for development; its own announcement says there is no functional difference beyond possible beta features or themes and, in the live app, an ad-free workspace."
+      }
+    ]
   },
   {
     "slug": "hootsuite",
@@ -11028,6 +11076,12 @@
       "Your site is bigger than 500 URLs; that is the only real wall, and lifting it costs £199/year",
       "You need collaboration — it is a desktop tool with no shared workspace",
       "You are crawling very large sites on a modest machine; the crawl ceiling depends on your memory and storage"
+    ],
+    "sss": [
+      {
+        "soru": "What is the free version of Screaming Frog limited to?",
+        "cevap": "The free SEO Spider crawls up to 500 URLs per site and otherwise matches the paid feature set almost entirely. A licence is £199 per year and removes the crawl limit, bounded only by your machine's memory and storage. Volume pricing: £189 each for 5-9 licences, £179 for 10-19, £169 for 20 or more."
+      }
     ]
   },
   {
@@ -15759,6 +15813,12 @@
       "You have more than 3 users and want to stay free — the free edition caps at 3",
       "You need AI agents, predictive intelligence, unlimited reports or CPQ; the vendor lists these from Professional up, not Standard",
       "Exporting data matters day to day; the free edition allows only 10 data exports"
+    ],
+    "sss": [
+      {
+        "soru": "How many users does the Zoho CRM free plan allow?",
+        "cevap": "The free edition covers up to 3 users with contact management, basic workflow automation and standard reports. Paid tiers are Standard (email integration, built-in calling, multiple pipelines), Professional (AI agents, process automation, inventory), Enterprise (multi-team management, approvals, extended AI) and Ultimate (higher limits, custom AI/ML). Zoho prices in local currency by region; annual billing saves up to 34% over monthly."
+      }
     ]
   },
   {
@@ -16140,6 +16200,12 @@
       "You expect updates forever — a personal licence includes 3 years of updates, after which an upgrade is required",
       "You are buying for a company: business use is a per-seat annual subscription from $65/seat/year",
       "You want the breadth of the VS Code extension ecosystem, or language support that works without configuration"
+    ],
+    "sss": [
+      {
+        "soru": "How much is a Sublime Text licence, and can you keep using it unpaid?",
+        "cevap": "A personal licence is a one-time $99 with 3 years of updates and works on all your computers and operating systems; after 3 years you pay to upgrade for further updates. Business licences are annual per seat: $65 for 1-10 seats, $60 for 11-25, $55 for 26-50, $50 for 51 or more. The editor can be downloaded and evaluated free, but the vendor's terms require a licence for continued use."
+      }
     ]
   },
   {
@@ -18110,6 +18176,12 @@
       "You want a free tier — SpyFu has none; the entry plan is $39/month, or $29/month billed annually",
       "The Basic caps are too tight for you: 10k search results, 10k export rows, 1 tracking project and 5k tracked keywords",
       "Your market is outside the US, where data accuracy varies and coverage is weaker"
+    ],
+    "sss": [
+      {
+        "soru": "How much does SpyFu cost, and is API access included?",
+        "cevap": "Basic is $39 per month, or $29 per month billed annually, with 10,000-row search results and exports, 1 site-tracking project and 5,000 weekly tracked keywords; it has no API access. Pro + AI is $119 per month after a $59 first month, or $89 per month annually, with unlimited results and exports, 10 projects, 15,000 tracked keywords and API access for 1 user ($30 per extra user). Team/Agency is $249 per month, or $187 annually, with 50,000 tracked keywords, API access and 5 users. All plans carry a 30-day money-back guarantee."
+      }
     ]
   },
   {
@@ -30664,7 +30736,13 @@
       "limitations": [
         "Official IBM pricing and documentation pages were reviewed; ToolCompare did not create an account, redeem credit, inspect a region-specific quote, deploy or benchmark a workload, test APIs/IAM/support, validate a compliance claim, calculate tax or egress, suspend every instance type, or restore a cross-region backup. Service plans, prices, regions and eligibility can change."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "Is there a free tier on IBM Cloud?",
+        "cevap": "Yes. New accounts get a $200 credit to spend within the first 30 days, and Lite-plan services stay free indefinitely alongside Free plans with monthly allowances. Basic support (docs, forums, support cases) is included. Billing is pay-as-you-go with no commitment, or a subscription account that trades a committed spend for platform-wide discounts. A credit card is required to open the account even if you only use free plans."
+      }
+    ]
   },
   {
     "slug": "cdnjs",
@@ -30777,12 +30855,29 @@
             "library metadata access",
             "open-source API code"
           ]
+        },
+        {
+          "label": "cdnjs — About",
+          "url": "https://cdnjs.com/about",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "Cloudflare-run free CDN",
+            "request volume and site share",
+            "SRI hashes and HTTPS-only",
+            "library request via pull request"
+          ]
         }
       ],
       "limitations": [
         "Official Cloudflare and cdnjs repositories were reviewed; ToolCompare did not benchmark delivery, test a live outage or fallback, audit package provenance, scan hosted releases for malware, verify every SRI hash, assess privacy or licensing for a specific application, or obtain an availability SLA. Library contents, versions and policies can change."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "What is cdnjs, and does it cost anything?",
+        "cevap": "cdnjs is a free, open-source CDN for popular JavaScript, CSS and font libraries, run by Cloudflare and served from its 330+ edge locations; it handles more than 250 billion requests a month and is used by roughly 12.5% of websites. You reference a library by URL with no build step, and every script and link tag comes with a Subresource Integrity hash; content is HTTPS-only and HSTS-preloaded. To add a library you open a pull request with a JSON config in the cdnjs/packages repository; after approval, new versions are pulled automatically from npm or GitHub."
+      }
+    ]
   },
   {
     "slug": "jsdelivr",
