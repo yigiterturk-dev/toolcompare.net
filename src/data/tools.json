@@ -8924,6 +8924,12 @@
       "You want a free mailbox — HEY has no free tier at all, only a trial",
       "You need your own domain: that is HEY for Domains at $12 per user per month, billed MONTHLY only",
       "You want a short address; 2-character addresses are $999/year and 3-character $349/year"
+    ],
+    "sss": [
+      {
+        "soru": "How much is a HEY subscription?",
+        "cevap": "HEY for You is $99 per year, billed annually only, with a 30-day free trial and no card required; it includes an @hey.com address, HEY Calendar, 100 GB of storage and a HEY World blog. HEY for Domains (your own domain, teams) is $12 per user per month, monthly billing only, with no free trial. HEY for Families covers up to 5 people for $179 per year. Short @hey.com addresses cost extra: $349 per year for 3 characters, $999 per year for 2."
+      }
     ]
   },
   {
@@ -11991,6 +11997,12 @@
       "You want AI, cloud sync or custom themes — those are Pro, not free",
       "You take notes in it: the free tier caps at 5 Raycast Notes",
       "You want the most advanced AI models; that is a further $8/month on top of Pro"
+    ],
+    "sss": [
+      {
+        "soru": "Is Raycast Pro worth it?",
+        "cevap": "Pro costs $10 per month, or $8 per month billed annually, and mainly buys Raycast AI (Quick AI, AI Chat, Agents, AI Commands, AI Extensions), cloud sync across Macs, custom themes, unlimited clipboard history (Free keeps 3 months) and unlimited Notes (Free keeps 5). If you use the launcher, clipboard and extensions on one machine and do not want the AI, Free covers it. An Advanced AI add-on for frontier models is another $8 per month; Teams Pro is $15 per user monthly or $12 annually."
+      }
     ]
   },
   {
@@ -16383,6 +16395,12 @@
       "You want the AI SQL assistant, ERD edit mode or mock data generation — the vendor lists these as PRO features, and PRO starts at $113/year",
       "You need SSO and enterprise authentication, which are not part of the free Community edition",
       "You want a lightweight client; the Java-based interface is heavy and the UI is dense"
+    ],
+    "sss": [
+      {
+        "soru": "How much do the paid DBeaver editions cost?",
+        "cevap": "DBeaver Community is free and open source. Paid editions are priced per user: Lite at $12 per month or $113 per year; Enterprise at $26 per month or $255 per year; Ultimate at $510 per year, annual only. Team Edition starts at $1,630 per year per team, and CloudBeaver Enterprise, the browser-based version, at $1,025 per year. Figures are from the vendor's editions page, checked September 2026."
+      }
     ]
   },
   {
@@ -21144,13 +21162,30 @@
           "supports": [
             "the vendor's published pricing"
           ]
+        },
+        {
+          "label": "LangChain Docs — Tools",
+          "url": "https://docs.langchain.com/oss/python/langchain/tools",
+          "checkedAt": "2026-09-08",
+          "supports": [
+            "@tool decorator and docstring description",
+            "args_schema structured inputs",
+            "create_agent tool binding",
+            "prebuilt tool integrations"
+          ]
         }
       ],
       "limitations": [
         "Official documentation was reviewed; ToolCompare did not independently measure framework overhead, integration reliability or LangSmith operating cost for a production workload.",
         "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "How do tools work in LangChain?",
+        "cevap": "A tool is a plain function decorated with @tool: its type hints become the argument schema and its docstring becomes the description the model reads to decide when to call it. For structured inputs you pass a Pydantic model or JSON schema through args_schema. You hand a list of tools to create_agent together with a model, and the framework runs the loop: the model picks a tool, LangChain executes it and feeds the result back. Prebuilt integrations cover web search, code execution, databases and more."
+      }
+    ]
   },
   {
     "slug": "llamaindex",
@@ -24853,7 +24888,13 @@
       "limitations": [
         "Vendor pricing, product pages and help documentation were reviewed; ToolCompare did not purchase licenses, build an app, test clients or APIs, measure transfer and performance, operate Server, validate Cloud controls or calculate implementation and migration cost."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "What is FileMaker Cloud, and how does it compare to hosting FileMaker Server yourself?",
+        "cevap": "FileMaker Cloud is Claris's own managed hosting on AWS data centres: no server install, automatic updates and automated backups, sold as a subscription. Self-hosting FileMaker Server means you run the hardware and updates yourself with annual or perpetual licensing, but it supports plug-ins, which FileMaker Cloud does not. Third-party Claris partner hosting is the middle path: managed setup with plug-in support. Claris does not list FileMaker Cloud prices on the hosting page; quotes go through its pricing page."
+      }
+    ]
   },
   {
     "slug": "git",
@@ -28787,7 +28828,13 @@
       "limitations": [
         "Official DreamHost plan, knowledge-base and policy pages were reviewed; ToolCompare did not purchase hosting, inspect checkout tax or every billing term, deploy or migrate a site, benchmark shared performance, contact support, measure uptime, validate credits, restore files or databases, test email, scan malware, or compare VPS and DreamPress. Prices, limits and promotions may change after the review date."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "What are DreamHost's shared hosting quotas and limits?",
+        "cevap": "Per the DreamHost knowledge base: Launch allows 25 GB storage, 25 websites, 250,000 inodes, 20 mailboxes and 25 MySQL databases. Growth raises those to 50 GB, 50 sites, 500,000 inodes, 40 mailboxes and 50 databases. Scale gives 100 GB, 100 sites, 300 subdomains, 1,000,000 inodes, 60 mailboxes and 300 databases. Going over the storage quota makes uploads and one-click installs fail until you are back under it. Email is free for the first 3 months, then a paid email plan activates automatically."
+      }
+    ]
   },
   {
     "slug": "heroku",
@@ -32469,7 +32516,17 @@
       "limitations": [
         "Official Red Hat product, pricing, trial and subscription sources plus the official OKD repository were reviewed; ToolCompare did not size or purchase a subscription, verify a cloud marketplace quote, provision or benchmark a cluster, test SSO/APIs/operators/upgrades/security controls/support, inspect every responsibility matrix, calculate infrastructure or staff cost, induce node/region failure, or restore workloads. Editions, versions, prices, provider terms and supported platforms change."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "Can you run OpenShift on-premise, and what does it cost?",
+        "cevap": "Yes. Red Hat sells four self-managed editions for your own data centre or cloud accounts: Kubernetes Engine, Virtualization Engine, Container Platform and Platform Plus, licensed by core pairs. Red Hat does not publish self-managed prices; the pricing page says cost varies with sizing and subscription choices and routes you to sales. The managed cloud services (ROSA, Azure Red Hat OpenShift, OpenShift Dedicated, OpenShift on IBM Cloud) do list a starting rate: as little as $0.076 per hour for 4 vCPU on a 3-year reserved contract."
+      },
+      {
+        "soru": "Is there a free or community edition of OpenShift?",
+        "cevap": "Red Hat offers a free Developer Sandbox (a minimal, preconfigured environment), a 60-day trial of the self-managed Container Platform on your own infrastructure, and a trial of OpenShift Dedicated. The community upstream distribution is OKD: free, Apache-licensed, community-supported and not covered by Red Hat support."
+      }
+    ]
   },
   {
     "slug": "cloud-foundry",
@@ -35528,7 +35585,13 @@
       "limitations": [
         "Official Qualtrics free-account, self-service, trial, pricing-update and support sources were reviewed; ToolCompare did not register, buy or renew a license, build a survey, collect an interaction, test logic/analysis/export/API/SSO/SMS/email/offline/mobile/integrations, migrate a brand, verify FedRAMP or contract language, contact sales or support, or evaluate research validity. Prices, entitlements and interaction definitions can change and agreements control actual rights."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "What does the Qualtrics free trial include?",
+        "cevap": "The free account runs for 30 days and is capped at 3 active surveys and 500 responses, with unlimited questions per survey, 22 question types and translations in 75+ languages. Exports to CSV, Google Sheets and Tableau are included. The lowest self-service paid tier, Strategic Research, is listed at $420 per month, or $5,040 per year."
+      }
+    ]
   },
   {
     "slug": "braze-inc",

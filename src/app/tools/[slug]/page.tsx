@@ -191,6 +191,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       cevap: `Skip ${tool.name} if: ${skipIf.slice(0, 3).join("; ")}.`,
     });
   }
+  // GSC'de gosterim alip tik almayan niyet sorgulari (fiyat on-prem,
+  // free trial, kota, "worth it") icin elle yazilmis, satici sayfasindan
+  // dogrulanmis cevaplar. Uretilen genel sorulardan ONCE gelir: kullanici
+  // bu soruyla geldi, ilk gordugu o olsun.
+  const ozelSss = Array.isArray(tool.sss)
+    ? tool.sss.filter((q) => q && q.soru?.trim() && q.cevap?.trim())
+    : [];
+  if (ozelSss.length) sss.unshift(...ozelSss);
 
 
   /*

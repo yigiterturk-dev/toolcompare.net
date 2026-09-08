@@ -77,6 +77,8 @@ export type Arac = {
   /** "Bunu al" / "bunu alma" maddeleri -- saticinin sitesinde olmayan icerik. */
   bestFor?: string[];
   skipIf?: string[];
+  /** Arama niyetine gore elle yazilmis SSS; saticinin sayfasindan dogrulanmis, kaynagi evidence.sources'ta. */
+  sss?: { soru: string; cevap: string }[];
   kriterKaynagi?: KriterKaynagi;
 
   /* --- eski izgara gorunumunden kalan gorsel alanlar (108 kayit) --- */
