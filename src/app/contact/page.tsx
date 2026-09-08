@@ -40,30 +40,23 @@ export default function ContactPage() {
           <div>
             <Mail size={32} />
             <h2>Email Us</h2>
-            <p>Our team is ready to assist you with any inquiries.</p>
+            <p>One address for everything: reviews, listings, partnerships, corrections.</p>
             <a href="mailto:hello@toolcompare.net">hello@toolcompare.net</a>
           </div>
 
           <div>
             <MessageSquare size={32} />
-            <h2>Live Chat</h2>
-            <p>Available for our premium partners and tool vendors.</p>
-            <span>Available 9 AM - 6 PM EST</span>
+            <h2>Corrections</h2>
+            <p>Wrong price, renamed plan, missing feature? Say which page and what changed; corrections are handled first.</p>
+            <span>Vendors: use the <a href="/submit">submit a tool</a> form for new listings.</span>
           </div>
         </div>
 
         <div>
-          <form>
-            <div>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-            </div>
-            <input type="text" placeholder="Subject" />
-            <textarea placeholder="Message" rows={6}></textarea>
-            <button>
-              Send Message
-            </button>
-          </form>
+          <p>
+            Every message gets a reply from the person who maintains the site. There is no ticket
+            system and no live chat; email is the only channel, and it is read.
+          </p>
         </div>
       </div>
       </main>

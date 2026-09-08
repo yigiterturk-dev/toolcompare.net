@@ -138,3 +138,44 @@ yönetici panelinde o araç kırmızı `free` yerine yeşil `affiliate` görün�
 
 Onay geldiğinde `/terms` ve `/methodology` sayfalarını da güncellemen gerekiyor —
 ikisi de şu an "hiçbir programda değiliz, komisyon almıyoruz" diyor.
+
+---
+
+## Başvuru formu metinleri (2026-09-08, İngilizce, kopyala-yapıştır)
+
+Site inceleyen kişinin ilk baktığı yerler hazır: `/about`, `/affiliate-disclosure`,
+`/privacy` (6. madde), `/contact` (sahte "live chat" ve boş form kaldırıldı),
+`/methodology`. Örnek URL sorulduğunda gösterim alan sayfaları ver (aşağıda).
+
+**Website description (kısa):**
+ToolCompare is an independent buyer's guide to software tools: CRMs, editors, hosting,
+analytics, design and developer tools. Each listing records the starting price, pricing
+model, free-tier limits and a written verdict with pros and cons, checked against the
+vendor's own pricing page. Side-by-side comparison and alternatives pages are built from
+the same data.
+
+**How do you promote / traffic sources:**
+Organic search. The site is new in Google Search Console (indexed late August 2026) and
+already receives roughly 2,000 impressions per day across ~1,000 indexed pages, growing
+week over week. No paid traffic, no email blasts, no social spam. Editorial rules and the
+affiliate disclosure are published on the site and apply equally to paying and
+non-paying vendors.
+
+**Why should we approve you / how will you promote us:**
+Your tool is already covered with a written review, pricing breakdown and comparison pages
+against the alternatives buyers actually consider. Partner links replace the plain vendor
+links already on those pages; nothing about the review changes. Compensated links are
+marked rel="sponsored" and disclosed on a dedicated page.
+
+**Example URLs (gösterim alan, derin gövdeli):**
+- https://toolcompare.net/tools/wix-studio
+- https://toolcompare.net/tools/zoho-crm
+- https://toolcompare.net/tools/spyfu
+- https://toolcompare.net/tools/intercom
+- https://toolcompare.net/tools/cloudflare
+- https://toolcompare.net/about
+- https://toolcompare.net/affiliate-disclosure
+
+**Sıra:** önce yumuşak programlar (Hostinger, Bunny, Wix Studio kendi programı, PartnerStack
+içindekiler), onay gelince seçicilere (HubSpot, Zoho ağ üzerinden) "aktif partneriz" diye git.
+Red gelirse çoğu 30-90 gün sonra yeniden kabul ediyor.

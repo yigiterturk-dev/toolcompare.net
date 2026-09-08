@@ -99,7 +99,18 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2>6. Changes</h2>
+            <h2>6. Affiliate links</h2>
+            <p>
+              Where a vendor runs an affiliate programme we are enrolled in, the outbound link carries a
+              partner identifier so the vendor can attribute a sign-up to us. That identifier tells the
+              vendor a visitor came from ToolCompare; it does not tell us who you are, and we receive no
+              personal data back. Which links are compensated, and how they are marked, is explained on
+              the <a href="/affiliate-disclosure">affiliate disclosure</a> page.
+            </p>
+          </section>
+
+          <section>
+            <h2>7. Changes</h2>
             <p>
               If we ever start collecting something not listed above, this page will say so before it happens.
               Questions or a deletion request: <a href="mailto:support@toolcompare.net">support@toolcompare.net</a>.
