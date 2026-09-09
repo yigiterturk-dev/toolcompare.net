@@ -8,7 +8,7 @@ import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki, kanitRel } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
-import { kanonikSlug, indekslenebilirAkranlar, alternatifSayfasiVar, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { kanonikSlug, indekslenebilirAkranlar, karsilastirmaAkranlari, alternatifSayfasiVar } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { metaAciklamasi } from "@/lib/meta";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
@@ -146,6 +146,16 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   // Metin icinde akranlardan bahsedilebilir; ama LINK verilen liste
   // yalnizca cift sayfasi indekslenebilenler (bkz. indekslenebilirAkranlar).
   const karsilastirmalar = indekslenebilirAkranlar(tool.slug);
+  /*
+    Sayfanin ALT kismindaki tam liste, ust kisimdaki "one cikan uc
+    karsilastirma"dan farkli bir soruyu cevaplar: hangi karsilastirma
+    sayfalari VAR? Onceki surumde ikisi de indekslenebilirAkranlar'dan
+    besleniyordu, o da tek yonlu: sitemap'e konan 1.314 ciftin 641'i
+    (%49) yalnizca tek bir arac sayfasindan link aliyordu. Google onlari
+    "Discovered - currently not indexed" diye geri ceviriyordu.
+    Tam liste artik iki yonun birlesimini basar.
+  */
+  const tumKarsilastirmalar = karsilastirmaAkranlari(tool.slug);
   // Alternatif sayfasi kapisi karsilastirma cifti kapisindan AYRI (bkz. compare.ts).
   const altSayfasiVar = alternatifSayfasiVar(tool.slug);
   const fiyat = fiyatDurumu(tool);
@@ -636,7 +646,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               HIC BASILMIYORDU (olculdu: photopea 374 gosterim, sayfa 200
               donuyor, link sayisi 0). Iki kapi artik ayri.
           */}
-          {(altSayfasiVar || karsilastirmalar.length >= EN_AZ_ALTERNATIF) && (
+          {(altSayfasiVar || tumKarsilastirmalar.length > 0) && (
             <section className="mt-12 border-t border-line pt-10">
               <h2 className="text-xl font-semibold">Compare {tool.name} with alternatives</h2>
 
@@ -651,9 +661,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </p>
               )}
 
-              {karsilastirmalar.length >= EN_AZ_ALTERNATIF && (
+              {/* Esik BURADA uygulanmaz: uc alti karsilastirmasi olan
+                  aracin sayfasi da var olan cifte link vermeli, yoksa
+                  sitemap'e konan sayfa yetim kalir (olculdu: 41 cift). */}
+              {tumKarsilastirmalar.length > 0 && (
                 <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
-                  {karsilastirmalar.map((t: Arac) => (
+                  {tumKarsilastirmalar.map((t: Arac) => (
                     <li key={t.slug}>
                       <Link
                         href={`/compare/${kanonikSlug(tool.slug, t.slug)}`}

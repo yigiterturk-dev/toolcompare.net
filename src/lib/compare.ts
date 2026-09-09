@@ -301,6 +301,40 @@ export function indekslenebilirAkranlar(slug: string, adet: number = AKRAN_ADEDI
   return akranlar(slug, adet).filter((t) => ciftIndekslenir(arac, t));
 }
 
+/**
+ * Bir aracin GORUNMESI GEREKEN butun karsilastirmalari.
+ *
+ * OLCULEN HATA (2026-09-09): akranlar() tek yonlu. A'nin ilk bes akrani
+ * arasinda B varsa `A-vs-B` sitemap'e giriyor, ama B'nin ilk besinde A
+ * yoksa B'nin sayfasi o karsilastirmaya link VERMIYORDU. Sonuc: sitemap'e
+ * konan 1.314 ciftin 641'i (%49) yalnizca tek bir arac sayfasindan link
+ * aliyordu ve URL Inspection ornegi bunlarin indekslenmedigini gosterdi
+ * (indekslenen yedi sayfanin hepsi cift yonluydu, indekslenmeyenlerin
+ * cogu tek yonlu).
+ *
+ * Kural: Google'dan indekslemesini istedigimiz bir sayfa, sitenin kendi
+ * icinde de ulasilabilir olmali. Sitemap ile ic linkleme ayrisamaz --
+ * ayristigi anda "kesfedildi, indekslenmedi" yigini olusuyor.
+ *
+ * Bu yuzden liste iki yonun BIRLESIMI: kendi akranlari + kendisini akran
+ * sayanlar. Yalnizca cifti gercekten indekslenebilir olanlar kalir, yani
+ * ciftIndekslenir kapisi aynen korunur.
+ */
+export function karsilastirmaAkranlari(slug: string): Arac[] {
+  const arac = araclar.find((t) => t.slug === slug);
+  if (!arac) return [];
+  const kume = new Map<string, Arac>();
+  for (const t of akranlar(slug)) kume.set(t.slug, t);
+  // Ters yon: beni akran sayan araclar.
+  for (const t of araclar) {
+    if (t.slug === slug || kume.has(t.slug)) continue;
+    if (akranlar(t.slug).some((a) => a.slug === slug)) kume.set(t.slug, t);
+  }
+  return [...kume.values()]
+    .filter((t) => ciftIndekslenir(arac, t))
+    .sort(siralamaKarsilastir);
+}
+
 /** Verilen araclardan alternatif sayfasi OLANLAR (link vermek guvenli). */
 export function alternatifSayfasiOlan(sluglar: string[]): Arac[] {
   const kume = new Set(sluglar);
