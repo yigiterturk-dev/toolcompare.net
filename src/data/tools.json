@@ -15802,20 +15802,24 @@
     "verdict": "The translation feature is the standout. Get explicit consent for any real person's likeness.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "HeyGen — Pricing",
           "url": "https://www.heygen.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0/mo: 3 videos per month, videos up to 1 min, access to Avatar IV, standard processing, 500+ stock video avatars, 1 custom video avatar, 30+ languages",
+            "Creator $29/mo: 600 credits, videos up to 30 mins, 1080p export, extended Avatar IV generation, fast processing, unlimited photo avatars, watermark removal, voice cloning, 175+ languages, credit rollovers",
+            "Pro $49/mo: 1,000 credits, 4K export, faster processing, customizable monthly usage, access to all advanced AI models",
+            "Business $149/mo: 1,500 credits, videos up to 60 mins, 4K export, 2x concurrency of Pro, 5 custom video avatars, SAML/SSO, centralized billing, flexible top-up or auto-reload; additional seats $20/seat",
+            "Monthly and yearly billing offered"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -15829,6 +15833,22 @@
       {
         "title": "Brand templates",
         "description": "Reuses layouts and voices across a series of videos."
+      }
+    ],
+    "bestFor": [
+      "Trying AI video free: 3 videos a month up to 1 minute, 500+ stock video avatars, 1 custom video avatar and 30+ languages at $0",
+      "Solo creators on Creator at $29/month — 600 credits, videos up to 30 minutes, 1080p export, watermark removal, voice cloning and 175+ languages",
+      "Teams on Business at $149/month: 1,500 credits, 60-minute videos, 4K export, 5 custom video avatars, SAML/SSO and centralised billing, with extra seats at $20 each"
+    ],
+    "skipIf": [
+      "You publish continuously — everything is metered in credits (600 on Creator, 1,000 on Pro, 1,500 on Business) and volume, not features, sets the tier you need",
+      "You need the watermark gone on a budget: watermark removal starts at Creator, not on the free plan",
+      "You want 4K on the entry paid tier — 4K export starts at Pro ($49/month)"
+    ],
+    "sss": [
+      {
+        "soru": "How much does HeyGen cost and what do credits buy?",
+        "cevap": "Free is $0 with 3 videos a month up to 1 minute each. Creator is $29/month with 600 credits, 30-minute videos, 1080p export, watermark removal and voice cloning. Pro is $49/month with 1,000 credits and 4K export. Business is $149/month with 1,500 credits, 60-minute videos, 5 custom video avatars and SAML/SSO, plus additional seats at $20 each. Credits are the unit everything draws on, so output volume rather than feature need usually decides the plan. Credit rollovers start at Creator."
       }
     ]
   },
@@ -15863,20 +15883,27 @@
     "verdict": "Useful and mature. Check your jurisdiction's recording consent rules before switching it on.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Otter.ai — Pricing",
           "url": "https://otter.ai/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Basic (free): 300 monthly transcription minutes, live transcription, speaker identification, audio playback, multi-language support, iOS and Android apps, Zoom/MS Teams/Google Meet, AI chat, 3 lifetime audio/video file imports, Otter MCP server",
+            "Pro $16.99/user/month: 1,200 in-app recording minutes, advanced AI workflows, 10 monthly file imports, meetings up to 90 minutes, advanced meeting templates, unlimited storage, team vocabulary, advanced search/export/playback, Salesforce/HubSpot/Zapier integrations",
+            "Business $30/user/month: unlimited meetings and in-app recordings, custom AI workflows, unlimited file imports, meetings up to 4 hours, admin activity logs and usage analytics, 3 concurrent meetings, prioritized support",
+            "Enterprise (schedule a demo): unlimited custom AI workflows, Otter Sales Notetaker, custom CRM and dialer integrations, SSO/SCIM/domain capture, enterprise security controls, HIPAA compliance add-on, Otter API and webhooks",
+            "Workspace member caps by tier: 5 billed users, 25 billed users, unlimited",
+            "Custom AI meeting template usage limits: 5, 15 and 30 meetings per user by tier",
+            "Discounted introductory rates advertised on the page ($8.49 and $24)"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Promotional rates shown alongside list prices were not recorded as the plan price; the list prices are quoted."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -15890,6 +15917,22 @@
       {
         "title": "Summaries and action items",
         "description": "Extracts decisions and follow-ups from the transcript."
+      }
+    ],
+    "bestFor": [
+      "Individuals testing meeting transcription: the free tier gives 300 monthly transcription minutes, live transcription, speaker identification and 3 lifetime file imports",
+      "Solo users and small teams on Pro at $16.99 per user/month — 1,200 in-app recording minutes, meetings up to 90 minutes, 10 monthly file imports, unlimited storage and Salesforce, HubSpot and Zapier integrations",
+      "Medium teams on Business at $30 per user/month: unlimited meetings and recordings, 4-hour meetings, custom AI workflows, admin activity logs and usage analytics, and 3 concurrent meetings"
+    ],
+    "skipIf": [
+      "You need SSO, SCIM, domain capture, the API or HIPAA compliance — all Enterprise, which is demo-only",
+      "You import a lot of existing audio: the free tier allows 3 lifetime imports and Pro only 10 per month",
+      "Your workspace is large — member caps differ by tier (5 billed users, then 25, unlimited only above)"
+    ],
+    "sss": [
+      {
+        "soru": "What does Otter's free plan actually include?",
+        "cevap": "The free tier gives 300 monthly transcription minutes with live transcription, speaker identification, audio recording playback, multi-language support, the iOS and Android apps, Zoom, MS Teams and Google Meet integration, AI chat, and 3 lifetime audio or video file imports. Pro at $16.99 per user/month raises this to 1,200 in-app recording minutes, meetings up to 90 minutes, 10 file imports a month, unlimited storage and advanced search and export. Business at $30 per user/month makes meetings and recordings unlimited with 4-hour meetings."
       }
     ]
   },
@@ -16217,20 +16260,25 @@
     "verdict": "Good value for the money. Larger operations tend to outgrow the reporting.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Freshdesk — Pricing",
+          "label": "Freshworks — Freshdesk pricing",
           "url": "https://www.freshworks.com/freshdesk/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Growth $19/agent/month billed annually: Freddy AI Agent (first 500 sessions included), ticketing and shared inbox, customer portal and knowledge base, out-of-the-box analytics, threads and tasks, roles and permissions",
+            "Pro $55/agent/month billed annually: multilingual helpdesk, custom dashboards and reporting, intelligent routing, multiple SLA policies, external collaborators, Freddy AI Copilot",
+            "Enterprise $89/agent/month billed annually: Freddy AI Insights, skill-based routing, sandbox, audit logs, allowed domains and IP whitelisting",
+            "Add-ons: additional AI Agent sessions $49/100 sessions; day passes $2/pass; connector app tasks $80/5000 tasks",
+            "Annual billing advertised as saving 20% versus monthly",
+            "5,000 collaborators included on the tier that lists external collaborators"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -16244,6 +16292,22 @@
       {
         "title": "Self-service portal",
         "description": "Publishes a help centre that deflects repeat questions."
+      }
+    ],
+    "bestFor": [
+      "Teams starting with email support: Growth is $19 per agent/month billed annually and includes ticketing, shared inbox, customer portal, knowledge base and the first 500 Freddy AI Agent sessions",
+      "Businesses that need routing and custom reporting — Pro at $55 per agent/month adds a multilingual helpdesk, custom dashboards, intelligent routing, multiple SLA policies and Freddy AI Copilot",
+      "Organisations with governance requirements: Enterprise at $89 per agent/month adds skill-based routing, sandbox, audit logs and allowed domains with IP whitelisting"
+    ],
+    "skipIf": [
+      "Your AI usage is heavy — only the first 500 Freddy AI Agent sessions are included and extra sessions are $49 per 100",
+      "You have occasional helpers rather than full agents: day passes are $2 each and collaborator limits differ by plan",
+      "You automate across systems: connector app tasks are billed separately at $80 per 5,000 tasks"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Freshdesk cost per agent?",
+        "cevap": "Billed annually, Growth is $19 per agent/month, Pro is $55 and Enterprise is $89; Freshworks advertises a 20% saving for annual over monthly billing. Growth includes the first 500 Freddy AI Agent sessions. The add-ons matter for the real bill: additional AI Agent sessions are $49 per 100, day passes are $2 each, and connector app tasks are $80 per 5,000 tasks."
       }
     ]
   },
@@ -16503,20 +16567,24 @@
     "verdict": "Excellent for collaborative email. If you need ticketing and SLAs, a helpdesk fits better.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Front — Pricing",
           "url": "https://front.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $25/seat/mo, up to 10 seats, billed annually: shared inbox and ticketing, AI Topics, up to 10 automation rules, basic analytics, no-code public knowledge base, AI add-ons available; single channel type",
+            "Professional $65/seat/mo, up to 50 seats: omnichannel (email, SMS, social), macros and up to 20 automation rules, advanced analytics, multiple workspaces, SSO and SCIM",
+            "Enterprise $105/seat/mo: smart rules, unlimited rules and macros, multi-language knowledge base, custom roles and permissions, AI Copilot, QA and CSAT included",
+            "Annual billing advertised as saving 24%",
+            "AI Copilot listed as an add-on on lower tiers"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -16530,6 +16598,22 @@
       {
         "title": "Rules and SLAs",
         "description": "Routes conversations and tracks response commitments."
+      }
+    ],
+    "bestFor": [
+      "Small support teams on a single channel: Starter is $25 per seat/month for up to 10 seats with a shared inbox, ticketing, AI Topics, up to 10 automation rules and a no-code public knowledge base",
+      "Omnichannel teams — Professional at $65 per seat/month for up to 50 seats adds email, SMS and social, macros, 20 automation rules, advanced analytics, multiple workspaces, SSO and SCIM",
+      "Teams that want AI included rather than bolted on: Enterprise at $105 per seat/month bundles AI Copilot, QA and CSAT plus unlimited rules and macros"
+    ],
+    "skipIf": [
+      "You are over the seat ceiling of your tier — Starter caps at 10 seats and Professional at 50, so growth forces a tier change rather than just more seats",
+      "You need more than one channel type: Starter is single-channel, and omnichannel starts at Professional",
+      "You want AI Copilot without paying the top tier — below Enterprise it is a paid add-on"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Front cost per seat?",
+        "cevap": "Billed annually, Starter is $25 per seat/month for up to 10 seats, Professional is $65 per seat/month for up to 50 seats, and Enterprise is $105 per seat/month. Front advertises a 24% saving for annual billing. The seat ceilings matter as much as the price: Starter is capped at 10 seats and single-channel, Professional at 50 seats with omnichannel. AI Copilot, QA and CSAT are included at Enterprise and are add-ons below it."
       }
     ]
   },
