@@ -10,6 +10,7 @@ import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, indekslenebilirAkranlar, alternatifSayfasiVar, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { metaAciklamasi } from "@/lib/meta";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { notFound } from "next/navigation";
@@ -33,9 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ? `${tool.name} Review 2026: Features, Pricing & Verdict`
     : `${tool.name}: Pricing and Alternatives (2026)`;
   const title = cekirdek.length <= 51 ? `${cekirdek} | ToolCompare` : cekirdek;
-  const description = incelendi
-    ? (tool.shortDescription || `Comprehensive review of ${tool.name}.`)
-    : `${tool.shortDescription || tool.name} What it costs to start and the closest alternatives we track — we have not published a full review of ${tool.name} yet.`;
+  const description = metaAciklamasi(tool);
   const url = `/tools/${tool.slug}`;
 
   return {
