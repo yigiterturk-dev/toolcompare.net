@@ -271,10 +271,17 @@
 }
 
 /* ---- Yukleniyor iskeletleri --------------------------------------------
-   DENETIMDE BULUNAN (2026-09-09): 19 sayfa var, tek loading.tsx yok. Sitenin
-   buyuk kismi statik uretiliyor, ama istemci tarafi gecislerde ve dinamik
-   segmentlerde kullanici bos ekrana bakiyordu. Suspense sinirini loading.tsx
-   kendisi kuruyor; buradaki siniflar onun icerigi.
+   🔴 GERI ALINDI (2026-09-09, ayni gun): denetim "19 sayfa var, tek
+   loading.tsx yok" dedi ve kok iskelet eklendi. Olculdu: loading.tsx bir
+   Suspense siniri kuruyor, Next yaniti erken akitiyor ve HTTP durumu 200'de
+   KILITLENIYOR -- sonra cagrilan notFound() 404 arayuzunu gosteriyor ama
+   HTTP 404 DONMUYOR. Yerel `next start` ile kanit: loading.tsx varken
+   /tools/olmayan-arac 200, kaldirilinca 404. Bes sayfa tipi birden
+   etkileniyordu (tools, compare, alternatives, categories, blog).
+   Soft 404 = yanlis yazilan her adres gecerli sayfa gibi indekslenebilir.
+   Siniflar burada BIRAKILDI (kullanan kalmadi ama ileride bir bileseninin
+   kendi Suspense sinirinda ise yarayabilir); dosya kurali geri gelmemeli.
+   tests/soft404.test.ts bekcilik ediyor.
    Renk projenin kendi jetonlarindan geliyor (--color-line / --color-surface-sunken),
    yoksa iskelet koyu temada beyaz blok gibi patliyor. */
 .skeleton {
