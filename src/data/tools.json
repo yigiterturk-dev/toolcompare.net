@@ -22485,50 +22485,87 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Spark is an email client with smart inbox grouping and features for discussing emails inside a team. Discussing an email privately with colleagues before replying is the feature teams actually adopt it for. The smart inbox grouping helps volume, but the client is heavier than minimal alternatives. The desktop and mobile clients share the same rules.",
+    "longDescription": "Spark is an email client for individuals and small teams, built around a smart inbox that groups and prioritises mail, with shared drafts and comments for teams on top. The free tier is a complete client — unlimited accounts, unified inbox, calendar and the core productivity features — so the paid plans are mostly about AI meeting notes, templates and team collaboration depth. The AI meeting notes allowance is the sharpest line between the tiers: Plus gives you forty a month, and only Pro makes them unlimited.",
     "pros": [
-      "Team discussion attached to emails",
-      "Smart inbox reduces clutter",
-      "Free tier is usable"
+      "Free tier is a fully usable client with unlimited accounts",
+      "Annual billing cuts the price by roughly 17%",
+      "Team collaboration and shared drafts on paid tiers"
     ],
     "cons": [
-      "Emails pass through their servers for some features",
-      "Interface changes have upset long-time users",
-      "Team features need a paid plan"
+      "AI meeting notes are capped at 40 a month on Plus",
+      "Some Pro features are still marked as coming soon",
+      "Enterprise security controls are quote-only"
     ],
-    "targetAudience": "Teams that share responsibility for an inbox but do not want a helpdesk.",
-    "verdict": "Good middle ground between a mail client and a shared inbox. Check the data handling if privacy matters.",
+    "targetAudience": "Individuals and client-facing teams who live in a shared inbox.",
+    "verdict": "The free plan is generous enough that most individuals never need to pay. Upgrade when you want AI meeting notes or shared team drafts, and take the annual price if you do.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Spark Mail — Pricing",
           "url": "https://sparkmailapp.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0: unlimited email accounts, smart notifications, essential email productivity, calendar",
+            "Plus $10 per user/month billed monthly, or $120 per year; the yearly rate is shown as $8.25/month at $99 per year: advanced email productivity, 40 AI meeting notes, essential team collaboration, custom templates, productivity integrations",
+            "Pro $20 per user/month billed monthly, or $240 per year; the yearly rate is shown as $16.58/month at $199 per year: unlimited AI meeting notes, auto-labels and auto-drafts, read statuses, advanced team collaboration, HubSpot integration, Spark CLI with triage access; Workflows is marked SOON",
+            "Enterprise is contact-sales: everything in Pro plus security and controls, a dedicated success manager and 1:1 productivity coaching",
+            "Yearly billing is advertised as saving 17%",
+            "A separate Teams pricing page is linked for team plans"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Pro lists 'Workflows' as a feature marked SOON rather than shipped."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
         "title": "Smart inbox",
-        "description": "Groups newsletters, notifications and personal mail separately."
+        "description": "Groups and prioritises mail, separating newsletters and notifications from people."
       },
       {
-        "title": "Team discussions",
-        "description": "Comments on an email thread privately with colleagues."
+        "title": "AI meeting notes",
+        "description": "Records and summarises calendar meetings; 40 a month on Plus, unlimited on Pro."
       },
       {
-        "title": "Shared drafts",
-        "description": "Composes a reply together before it is sent."
+        "title": "Team collaboration",
+        "description": "Shared drafts, comments and templates across a team inbox."
       }
-    ]
+    ],
+    "bestFor": [
+      "People who just want a better client: the free plan covers unlimited accounts, unified inbox, calendar and smart notifications",
+      "Small teams that need shared drafts and templates — Plus at $10 per user monthly, or $99 a year per user",
+      "Anyone leaning on AI meeting notes, which only become unlimited on Pro at $20 per user monthly, or $199 a year",
+      "Client-facing teams wanting read statuses, auto-drafts and a HubSpot integration, all Pro features"
+    ],
+    "skipIf": [
+      "You take more than about ten meetings a week on Plus — AI meeting notes are capped at 40 a month there",
+      "You are buying for Workflows, which the pricing page still marks as SOON",
+      "You need security controls, a success manager or coaching: those are Enterprise and quote-only",
+      "You bill monthly — Plus and Pro are $10 and $20 a month against $99 and $199 a year, a 17% difference"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Spark Mail cost?",
+        "cevap": "There is a free plan, then Plus at $10 per user per month ($99 a year) and Pro at $20 per user per month ($199 a year). Enterprise is contact-sales."
+      },
+      {
+        "soru": "What does the Spark free plan include?",
+        "cevap": "Unlimited email accounts, a unified inbox, smart notifications, calendar and the essential email productivity features. Paid tiers add AI meeting notes, templates and team collaboration."
+      },
+      {
+        "soru": "How many AI meeting notes does Spark include?",
+        "cevap": "40 a month on Plus. Pro makes them unlimited at $20 per user per month, or $199 a year."
+      },
+      {
+        "soru": "Is Spark cheaper billed yearly?",
+        "cevap": "Yes, about 17%. Plus is $99 a year against $120 billed monthly, and Pro $199 against $240."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "shortwave",
@@ -22537,59 +22574,97 @@
     "shortDescription": "AI email client built on Gmail.",
     "websiteUrl": "https://www.shortwave.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 30,
     "isFlat": true,
-    "fiyatModeli": "ucretsiz-katman",
+    "fiyatModeli": "kullanici-basina",
     "kriterler": {
       "api": true,
       "mobil": true,
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Shortwave rebuilds the Gmail experience around bundles, AI summaries and fast keyboard navigation. It is Gmail underneath, so migration risk is low and labels keep working, while the surface is rebuilt for speed and summarisation. That also means it is Gmail-only, which rules it out for anyone on another provider.",
+    "longDescription": "Shortwave is an AI-first email client whose pricing is unusual in that the tiers do not unlock features so much as buy a stronger model and a larger daily quota. The vendor names the models directly: Standard is Claude Sonnet 4.6, Advanced adds adaptive thinking, and Expert is Claude Opus 4.6. Every plan is per seat and there is no free tier, only a 14-day trial, so the decision is really about how much AI work you push through your inbox each day and how far back the AI needs to search.",
     "pros": [
-      "AI summaries of long threads",
-      "Fast keyboard-driven interface",
-      "Works on top of existing Gmail"
+      "Vendor names the underlying models and quotas openly",
+      "AI search history, filters and context scale with the tier",
+      "14-day free trial on every plan"
     ],
     "cons": [
-      "Gmail only",
-      "Subscription on top of your mail account",
-      "AI features require sending content to a model"
+      "No free plan at any level",
+      "Daily AI usage is a quota, not unlimited",
+      "Entry price is high for a mail client"
     ],
-    "targetAudience": "Heavy Gmail users drowning in threads.",
-    "verdict": "A real improvement over the Gmail web client. Non-Gmail users are out of luck.",
+    "targetAudience": "Heavy email users who want an AI assistant working inside the inbox.",
+    "verdict": "Priced as an AI subscription that happens to include a mail client. Worth it if AI triage is the point; overpriced if you mainly want a nicer inbox.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Shortwave — Pricing",
           "url": "https://www.shortwave.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "14-day free trial; no free tier is listed",
+            "Business $30 per seat/month: standard intelligence, full standard search history, 5 years of AI search history, max 50 threads per AI search, 3 AI-powered filters, AI integrations and web browsing, AI autocomplete, summaries and attachment analysis, read statuses, link tracking and snippets",
+            "Premier $45 per seat/month: advanced intelligence, 2x more AI usage, unlimited AI search history, max 100 threads per AI search, 10 AI-powered filters, 2x context tokens",
+            "Max $120 per seat/month: expert intelligence, 6x more AI usage, max 150 threads per AI search, 50 AI-powered filters, 3x context tokens",
+            "Intelligence levels are named as Basic (Claude Haiku 4.5), Standard (Claude Sonnet 4.6), Advanced (Claude Sonnet 4.6 with adaptive thinking) and Expert (Claude Opus 4.6 with adaptive thinking)",
+            "The Business plan is stated to allow roughly 150-300 Standard intelligence AI requests per day, with quota consumption varying by request complexity and intelligence level",
+            "24/7 workflow automation is handled by a separate sister product, Tasklet, rather than by Shortwave itself"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The pricing page has a Business/Individual toggle whose alternate view renders client-side, so only the view served in the page HTML could be read."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
-        "title": "Bundled inbox",
-        "description": "Groups related mail into bundles delivered on a schedule."
+        "title": "AI assistant",
+        "description": "Answers questions across your mail using a selectable intelligence level."
       },
       {
-        "title": "AI summaries and search",
-        "description": "Summarises long threads and answers questions over the mailbox."
+        "title": "AI-powered filters",
+        "description": "Custom prompts that label, archive, delete or star incoming mail automatically."
       },
       {
-        "title": "Gmail-native",
-        "description": "Works on top of an existing Gmail account without migration."
+        "title": "AI search",
+        "description": "Natural-language search across email history, 5 years or unlimited by plan."
       }
-    ]
+    ],
+    "bestFor": [
+      "People who want AI triage rather than a mail client: even the entry plan includes filters, web browsing and attachment analysis",
+      "Buyers who want to know what they are running — the vendor names the exact model behind each intelligence level",
+      "Heavy searchers: unlimited AI search history and 100 threads per search start at Premier, $45 per seat per month",
+      "Power users automating the inbox, since AI filters go from 3 to 10 to 50 across the three tiers"
+    ],
+    "skipIf": [
+      "You want to try before paying beyond two weeks — there is no free tier, only a 14-day trial",
+      "Your budget expects mail-client pricing: this starts at $30 per seat per month",
+      "You need heavy daily AI use on the entry plan, which is quoted at roughly 150-300 standard requests a day",
+      "You expect 24/7 workflow automation in the product — that is a separate sister product, Tasklet"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Shortwave cost?",
+        "cevap": "Business is $30 per seat per month, Premier $45 and Max $120. There is no free tier, only a 14-day free trial."
+      },
+      {
+        "soru": "Does Shortwave have a free plan?",
+        "cevap": "No. Every plan is paid per seat, with a 14-day free trial to start."
+      },
+      {
+        "soru": "Which AI models does Shortwave use?",
+        "cevap": "The vendor names them: Basic is Claude Haiku 4.5, Standard is Claude Sonnet 4.6, Advanced is Claude Sonnet 4.6 with adaptive thinking and Expert is Claude Opus 4.6 with adaptive thinking."
+      },
+      {
+        "soru": "What are Shortwave's AI usage limits?",
+        "cevap": "Usage is a daily quota. Business is quoted at roughly 150-300 standard requests a day, Premier has 2x that and Max 6x, and consumption varies with request complexity."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "mem",
@@ -22607,50 +22682,91 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Mem stores notes and uses AI to surface related ones instead of asking you to file them. It removes the filing step: notes go in and related ones are surfaced when relevant. That works if you trust retrieval over structure; if you want a deliberate hierarchy, this is the wrong model. Capture is fast enough to use mid-conversation.",
+    "longDescription": "Mem has moved from a notes app to an AI agent that reads what you save, tracks tasks and projects out of it and checks in on a schedule, and the pricing reflects that shift completely: instead of a seat price you buy a capacity ladder. Every tier is defined by the same five meters — messages to the agent, new notes per month, notes reviewed for task detection, open tasks and projects held at once, and hours of voice capture — multiplied step by step from Free up to a twentyfold plan. That makes the free tier unusually tight for a notes tool, at twenty-five new notes a month.",
     "pros": [
-      "No folder maintenance required",
-      "Surfaces related notes automatically",
-      "Fast capture"
+      "Seven published tiers, so capacity can be matched closely",
+      "Extra capacity sold as a fixed monthly block, not a quote",
+      "Voice capture allowance included at every level"
     ],
     "cons": [
-      "Retrieval quality depends on the AI",
-      "Less control than manual organisation",
-      "Subscription for the useful tier"
+      "Free tier caps new notes at 25 a month",
+      "Every meaningful action is metered",
+      "Custom routines and connections only start on Pro"
     ],
-    "targetAudience": "People who capture a lot and organise nothing.",
-    "verdict": "Interesting for messy note-takers. Those who like their own structure will find it fights them.",
+    "targetAudience": "Solo founders, consultants and managers who want an agent watching their notes.",
+    "verdict": "Pick the tier by your note volume, not by features — the ladder is the same product at different capacities. If you write more than a note a day, the free plan will not hold you.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Mem — Pricing",
           "url": "https://get.mem.ai/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free: 25 messages to Mem, 25 new notes per month, task and project tracking for up to 25 notes, 15 open tasks and projects, 3 hours of Voice Mode",
+            "Mem Plus $9/month: 50 messages, 50 new notes, tracking for 50 notes, 25 open tasks and projects, 10 hours of Voice Mode",
+            "Mem Pro $29/month: 100 messages, 100 new notes, tracking for 100 notes, 50 open tasks and projects, one Custom Routine, one Connection, 25 hours of Voice Mode",
+            "Mem Pro 2x $49/month: 200 messages, 200 notes, 100 open tasks, 2 routines, 2 connections, 50 hours of Voice Mode",
+            "Mem Pro 5x $99/month: 500 messages, 500 notes, 250 open tasks, 5 routines, 5 connections, 125 hours of Voice Mode",
+            "Mem Pro 10x $149/month: 1,000 messages, 1,000 notes, 500 open tasks, 10 routines, 10 connections, 250 hours of Voice Mode",
+            "Mem Pro 20x $199/month: 2,000 messages, 2,000 notes, 1,000 open tasks, 20 routines, 20 connections, 500 hours of Voice Mode",
+            "Extra Usage is sold as a $50 monthly block adding a further increment of capacity — the page lists +500 messages, +250 open tasks and projects and +5 custom routines among them — and more than one block can be added",
+            "A Connection links Mem to an external source such as Gmail, Slack or Todoist",
+            "Monthly activity resets each billing period; open work, routines and connections measure what is active at the same time"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The Extra Usage column lists increments against several meters at once; only the meters explicitly labelled on the page are recorded here."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
-        "title": "AI-surfaced related notes",
-        "description": "Recommends connected notes instead of requiring manual linking."
+        "title": "Mem Agent",
+        "description": "Reads saved notes, detects tasks and projects and follows up proactively."
       },
       {
-        "title": "Fast capture",
-        "description": "Records notes quickly without choosing a location first."
+        "title": "Custom routines",
+        "description": "Scheduled background work such as briefings or research; from Pro upward."
       },
       {
-        "title": "Natural-language search",
-        "description": "Retrieves notes by description rather than exact keyword."
+        "title": "Voice mode",
+        "description": "Captures meetings or thinking aloud into structured notes, metered in hours."
       }
-    ]
+    ],
+    "bestFor": [
+      "Trying the agent idea cheaply: Free covers 25 notes and 25 messages a month with 3 hours of voice capture",
+      "Light everyday use — Plus at $9 a month doubles the free allowances to 50 notes and 10 hours of voice",
+      "Anyone who wants scheduled routines and a Gmail, Slack or Todoist connection, which start on Pro at $29 a month",
+      "Heavy users who would rather buy a bigger step than negotiate: the ladder runs to $199 a month at twenty times Pro capacity"
+    ],
+    "skipIf": [
+      "You take a lot of notes: the free plan allows 25 new notes a month, which is under one a day",
+      "You want unmetered AI — messages to the agent are capped at every tier, from 25 up to 2,000 a month",
+      "You need several integrations on a budget: connections start at one on the $29 plan",
+      "You share work with a team; the published ladder is built around individual capacity, not seats"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Mem cost?",
+        "cevap": "There is a free plan, then Plus at $9 a month, Pro at $29, and multiplied Pro tiers at $49, $99, $149 and $199 a month for two, five, ten and twenty times the Pro capacity."
+      },
+      {
+        "soru": "What are the limits of Mem's free plan?",
+        "cevap": "25 messages to the agent, 25 new notes a month, task tracking across those 25 notes, 15 open tasks and projects and 3 hours of Voice Mode."
+      },
+      {
+        "soru": "What is a Connection in Mem?",
+        "cevap": "A link to an external source such as Gmail, Slack or Todoist that Mem uses as context and to detect completed work. Connections start on Mem Pro at $29 a month, one per tier step."
+      },
+      {
+        "soru": "Can you buy extra capacity on Mem?",
+        "cevap": "Yes. Extra Usage is sold as a $50 monthly block that adds a further increment — the page lists +500 messages, +250 open tasks and +5 routines — and multiple blocks can be added."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "capacities",
@@ -22748,50 +22864,92 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Anytype is a local-first, encrypted workspace for notes and objects, syncing peer-to-peer rather than through a central server. Data stays encrypted on your device and syncs peer-to-peer, so there is no server holding a readable copy. That architecture costs convenience: collaboration and cross-device sync are less seamless than hosted competitors.",
+    "longDescription": "Anytype is a local-first, encrypted workspace for notes and knowledge run by a Swiss association, and its paid tiers buy two things that are unusual for the category: remote storage on the Anytype network and a shorter ANY ID, the unique handle used for sharing and web publishing. The app itself is not gated behind the subscription — you can self-host your own network and set your own limits without any membership at all, which makes the paid plans closer to hosting-plus-identity than to a feature unlock.",
     "pros": [
-      "Local-first and end-to-end encrypted",
-      "No central server holding your data",
-      "Flexible object model"
+      "Self-hosting requires no membership at all",
+      "Local-first and encrypted by design",
+      "30-day money-back guarantee and 50% education discount"
     ],
     "cons": [
-      "Concepts take time to learn",
-      "Younger and less mature than rivals",
-      "Collaboration features still developing"
+      "Free tier is limited to 100 MB of remote storage",
+      "Shorter ANY ID handles cost more",
+      "Team features live in a separate Business product"
     ],
-    "targetAudience": "Privacy-minded people who want a Notion-like workspace without the cloud.",
-    "verdict": "Promising and genuinely different. Judge it on where it is today, not the roadmap.",
+    "targetAudience": "Privacy-minded note takers who want an encrypted, local-first workspace.",
+    "verdict": "The rare tool where the paid plan is optional in principle: self-host and pay nothing. Subscribe if you want the hosted network, more storage and a short handle.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Anytype — Pricing",
-          "url": "https://anytype.io/pricing/",
-          "checkedAt": "2026-08-31",
+          "url": "https://anytype.io/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free: 100 MB of remote storage, 10 shared channels, unlimited private channels",
+            "Plus $4 per month: 1 GB of remote storage, unlimited shared channels, ANY ID of 9 or more characters",
+            "Pro $8 per month: 10 GB of remote storage, ANY ID of 7 or more characters",
+            "Ultra $16 per month: 100 GB of remote storage, ANY ID of 5 or more characters",
+            "Yearly billing is advertised at -20%",
+            "30-day money-back guarantee, with refunds guaranteed if requested within 30 days of purchase",
+            "Self-hosting your own network requires no membership: limits are managed via configuration",
+            "Educators and students receive a 50% discount on membership plans, subject to verification",
+            "Anytype for Business is a separate offering with SSO, an admin panel and self-hosting",
+            "Payments run through Stripe on desktop and web, or the App Store and Play Store on mobile, where prices adjust to local currency",
+            "Network names are released after a one-month grace period if a membership is not renewed"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Mobile purchases are billed by the App Store or Play Store in local currency, so the dollar figures apply to Stripe checkout on desktop and web."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
-        "title": "Local-first storage",
-        "description": "Keeps the working copy on device rather than on a vendor server."
+        "title": "Local-first workspace",
+        "description": "Notes, objects and relations stored on device and synced peer to peer."
       },
       {
-        "title": "End-to-end encryption",
-        "description": "Encrypts content so sync nodes cannot read it."
+        "title": "ANY ID",
+        "description": "A unique handle in the Anytype network, also usable for web publishing."
       },
       {
-        "title": "Object graph",
-        "description": "Links typed objects into a graph instead of a folder tree."
+        "title": "Shared channels",
+        "description": "Collaborative spaces; 10 on the free tier and unlimited on paid plans."
       }
-    ]
+    ],
+    "bestFor": [
+      "Privacy-first individuals: the free tier gives unlimited private channels and only limits remote storage to 100 MB",
+      "Anyone willing to run their own infrastructure — self-hosting needs no membership and no fee at all",
+      "People who publish from their workspace and want a short handle, since ANY ID length is what the tiers actually shorten",
+      "Students and educators, who get a verified 50% discount on membership"
+    ],
+    "skipIf": [
+      "You need meaningful hosted storage on the free tier — it is 100 MB, and 1 GB costs $4 a month",
+      "You want SSO, an admin panel or team administration; those are the separate Anytype for Business product",
+      "You buy on mobile and want the listed price: App Store and Play Store convert to local currency",
+      "You might lapse: network names are released after a one-month grace period once a membership ends"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Anytype cost?",
+        "cevap": "There is a free tier, then Plus at $4 a month, Pro at $8 and Ultra at $16, with 20% off for yearly billing. Educators and students get 50% off."
+      },
+      {
+        "soru": "Is Anytype free if you self-host?",
+        "cevap": "Yes. The vendor states self-hosting your own network requires no membership; limits are managed through configuration instead."
+      },
+      {
+        "soru": "What is ANY ID in Anytype?",
+        "cevap": "A unique handle in the Anytype network, also usable for web publishing. Paid tiers allow shorter ones — 9 or more characters on Plus, 7 on Pro and 5 on Ultra."
+      },
+      {
+        "soru": "How much storage does Anytype include?",
+        "cevap": "100 MB of remote storage on the free tier, 1 GB on Plus, 10 GB on Pro and 100 GB on Ultra. Private channels are unlimited on every tier."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "logseq",
@@ -41570,35 +41728,43 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Freedcamp offers tasks, discussions, files and calendars with an unusually generous free tier for unlimited users. An unlimited free tier for unlimited users is unusual and genuinely useful for volunteer groups and small teams. Depth is the trade: reporting and automation are thin next to paid competitors.",
+    "longDescription": "Freedcamp's free plan is unusually broad for project management — unlimited projects, tasks, users and storage under a fair-usage policy, with calendar, time tracking, milestones, discussions, files and a password manager included. What the paid plans sell is the second layer of modules rather than capacity, and the jump matters: the entry Pro tier at under two dollars a user mainly adds email-in and cloud file linking, while the modules most teams associate with project management software — issue tracker, wiki, CRM, invoicing, reports and project templates — all start at Business, five times the price.",
     "pros": [
-      "Unlimited users on the free plan",
-      "Covers the basics competently",
-      "Cheap paid tiers"
+      "Free plan covers unlimited projects, tasks, users and storage",
+      "Pro is among the cheapest paid tiers in the category",
+      "Password manager and time tracking included on every plan"
     ],
     "cons": [
-      "Interface is dated",
-      "Advanced features are add-on priced",
-      "Reporting is limited"
+      "Core modules like wiki, CRM and reports are Business and above",
+      "Pro to Business is a five-fold price jump",
+      "Private cloud carries a separate fixed yearly cost"
     ],
-    "targetAudience": "Small teams and non-profits that cannot pay per seat.",
-    "verdict": "Hard to beat on price. Teams needing polish will pay for it elsewhere.",
+    "targetAudience": "Small teams and budget-conscious organisations running projects without per-seat costs.",
+    "verdict": "Genuinely usable for free, and the cheapest real paid tier in its category. Just check which module you actually need — most of them sit on Business, not Pro.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Freedcamp — Pricing",
           "url": "https://freedcamp.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "All plans include unlimited tasks, projects and storage, subject to a fair usage policy",
+            "Free, forever: unlimited projects, tasks, storage and users with all essential features",
+            "Pro $1.49 per user/month billed annually, $2.49 billed monthly, with a 14-day free trial: adds Email-In for creating tasks, discussions, issues and file uploads from email, plus Google Drive, Dropbox and OneDrive file linking",
+            "Business $7.49 per user/month billed annually, $8.99 billed monthly: adds Overview, Issue Tracker, Wiki, Invoices+, CRM, Project Copy and templates, and Reports",
+            "Enterprise $16.99 per user/month billed annually, $19.99 billed monthly: adds White Label, priority email and phone support with under one business day response, daily data snapshots, SSO with SAML supporting Azure AD, Google, Okta, Citrix and Amazon SSO",
+            "Private Cloud is an isolated instance hosted in an Amazon region of the customer's choosing for a fixed extra yearly cost",
+            "Core applications on every plan: Calendar, Time, Milestones, Discussions, Files, Tasks and Passwords",
+            "Contact Sales is offered for volume discounts on Enterprise"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The Private Cloud option is described as a fixed extra yearly cost, but that figure is not published on the pricing page."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": null,
@@ -41612,18 +41778,50 @@
     },
     "keyFeatures": [
       {
-        "title": "Unlimited free users",
-        "description": "Allows unlimited members and projects on the free tier."
+        "title": "Core project modules",
+        "description": "Tasks, calendar, milestones, discussions, files, time tracking and passwords on every plan."
       },
       {
-        "title": "Modular add-ons",
-        "description": "Adds invoicing, CRM and issue tracking as optional modules."
+        "title": "Business modules",
+        "description": "Issue tracker, wiki, CRM, invoicing, reports and project templates from the Business tier."
       },
       {
-        "title": "Tasks, files and discussions",
-        "description": "Keeps project conversation and documents next to the work."
+        "title": "Enterprise controls",
+        "description": "White label, SAML SSO, daily data snapshots and an optional private cloud instance."
       }
-    ]
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Teams with no budget: the free plan is unlimited on projects, tasks, users and storage under fair use",
+      "Small teams needing email-in and cloud file linking — Pro is $1.49 per user per month billed annually",
+      "Teams that need a wiki, issue tracker, CRM, invoicing or reports, all of which begin on Business at $7.49 per user per month",
+      "Regulated buyers wanting SAML SSO, daily data snapshots and white labelling, which are Enterprise at $16.99 per user per month"
+    ],
+    "skipIf": [
+      "You assume Pro is the working tier: the issue tracker, wiki, CRM, invoicing and reports all start on Business, five times the price",
+      "You need a published private cloud price — the vendor calls it a fixed extra yearly cost without stating it",
+      "You rely on unlimited storage without caveats; every plan's allowance is subject to a fair usage policy",
+      "You bill monthly, which raises the tiers to $2.49, $8.99 and $19.99 per user"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Freedcamp cost?",
+        "cevap": "There is a free forever plan, then Pro at $1.49 per user per month billed annually ($2.49 monthly), Business at $7.49 ($8.99) and Enterprise at $16.99 ($19.99)."
+      },
+      {
+        "soru": "Is Freedcamp really free?",
+        "cevap": "Yes. The free plan includes unlimited projects, tasks, users and storage subject to a fair usage policy, along with calendar, time tracking, milestones, discussions, files and a password manager."
+      },
+      {
+        "soru": "What does the Freedcamp Business plan add?",
+        "cevap": "Overview, Issue Tracker, Wiki, Invoices+, CRM, Project Copy templates and Reports — the modules that Pro does not include — at $7.49 per user per month billed annually."
+      },
+      {
+        "soru": "Does Freedcamp support SSO?",
+        "cevap": "SAML SSO is an Enterprise feature at $16.99 per user per month, supporting Azure AD, Google, Okta, Citrix and Amazon SSO, alongside white labelling and daily data snapshots."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "toggl-track",
