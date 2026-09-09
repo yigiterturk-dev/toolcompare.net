@@ -12,7 +12,7 @@ import { kanonikSlug, indekslenebilirAkranlar, alternatifSayfasiVar, EN_AZ_ALTER
 import { fiyatDurumu } from "@/lib/fiyat";
 import { metaAciklamasi } from "@/lib/meta";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
-import { evidenceLabel, toolEvidence } from "@/lib/evidence";
+import { evidenceLabel, toolEvidence, kanitRakamli } from "@/lib/evidence";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
@@ -106,7 +106,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     tarihi vermemek, yapilmis isi gizlemek oluyordu. 467/512 aracta var.
   */
   const dogrulamaTarihi = (tool.evidence as { reviewedAt?: string } | undefined)?.reviewedAt;
-  if (typeof dogrulamaTarihi === "string" && /^\d{4}-\d{2}-\d{2}$/.test(dogrulamaTarihi)) {
+  // Rakam tasimayan kayitta tarih YAYINLANMAZ: bos bir kaydin tarihini
+  // tazelik iddiasi olarak gondermek, yapilmamis isi beyan etmektir.
+  if (kanitRakamli(tool) && typeof dogrulamaTarihi === "string" && /^\d{4}-\d{2}-\d{2}$/.test(dogrulamaTarihi)) {
     yapilandirilmis.dateModified = dogrulamaTarihi;
   }
 
@@ -590,7 +592,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-ink-soft">
               <span>
                 <strong className="font-medium text-ink">Status:</strong>{" "}
-                {evidenceLabel(evidence.status)}
+                {kanitRakamli(tool) ? evidenceLabel(evidence.status) : "Source listed, figures not recorded"}
               </span>
               <span>
                 <strong className="font-medium text-ink">Reviewed:</strong> {evidence.reviewedAt}
