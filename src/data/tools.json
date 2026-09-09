@@ -17722,20 +17722,26 @@
     "verdict": "Excellent for its niche. Not the tool for a marketing-led business.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Close — Pricing",
-          "url": "https://close.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://close.com/pricing/",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Four tiers listed at $19, $49, $109 and $149 per user/month, with $9, $35, $99 and $139 per user/month on the alternate billing cycle",
+            "Positioning by tier: founders and solo reps; small teams wanting calls, email and deals in one place; teams letting Chloe work leads; high-volume orgs needing advanced controls and fastest dialing",
+            "Included Chloe and AI credits per user per month: 500, 1,000, 1,500, 2,000; additional credits available for purchase",
+            "Chloe features: batch calling, chat (beta), enrichment, use in workflows, auto updates via playbooks, restrict user access to Chloe",
+            "Leads: up to 10,000 on the entry tier, unlimited above",
+            "No credit card needed to start; 30-day money-back guarantee with full refund"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The page presents two billing cycles via a selector; both rate sets are recorded, but which cycle each belongs to was not stated unambiguously in the page text, so plan names are not paired with a single figure."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -17749,6 +17755,22 @@
       {
         "title": "Reporting on activity",
         "description": "Measures calls, emails and outcomes per rep."
+      }
+    ],
+    "bestFor": [
+      "Founders and solo reps who need a real CRM rather than a spreadsheet: the entry tier is $19 per user/month, or $9 per user/month on the longer billing cycle",
+      "Small teams wanting calls, email and deals in one place — the second tier is $49 per user/month ($35 on the longer cycle) with unlimited leads",
+      "Teams leaning on the AI assistant: included Chloe AI credits scale by tier at 500, 1,000, 1,500 and 2,000 per user per month"
+    ],
+    "skipIf": [
+      "Your AI usage is heavy — credits are per user per month and additional credits are a separate purchase",
+      "You are on the entry tier and growing: leads are capped at 10,000 there and unlimited above",
+      "You need advanced access controls or the fastest dialing, which sit on the $149 per user/month tier"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Close cost per user?",
+        "cevap": "Close lists four tiers at $19, $49, $109 and $149 per user/month, with lower rates of $9, $35, $99 and $139 per user/month on the longer billing cycle. Every plan includes the Chloe AI assistant, but the included credits differ: 500, 1,000, 1,500 and 2,000 per user per month, with extra credits sold separately. The entry tier caps leads at 10,000; higher tiers are unlimited. Close offers a 30-day money-back guarantee and needs no credit card to start."
       }
     ]
   },
@@ -20098,20 +20120,27 @@
     "verdict": "The resale model is the reason to buy it. As a tool for one business, specialists do each job better.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "GoHighLevel — Pricing",
+          "label": "HighLevel — Pricing",
           "url": "https://www.gohighlevel.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $97/month or $970/year: 3 sub-accounts, unlimited contacts, unlimited users, 24/7 support, all core features",
+            "Unlimited $297/month or $2,970/year: unlimited sub-accounts, rebill phone and email with no markup, basic API access",
+            "Agency Pro $497/month or $4,970/year: SaaS Mode, automated sub-account creation, rebill phone and email with markup, user/agent reporting, advanced API access",
+            "Enterprise: custom, contact the enterprise team",
+            "Unlimited contacts and unlimited users on all plans; 14-day free trial on any plan",
+            "Core features: conversation AI, voice AI, content AI, funnel AI, reviews AI, website and funnel builder, CRM and pipelines, email + SMS marketing, inbound and outbound calling, social media management, workflow automation, booking calendars, reputation management, payments and invoicing, courses, communities, API access",
+            "Several features marked with an asterisk on the page indicating metered usage"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Usage-metered items (phone, SMS, email, some AI features) are billed on top of the plan fee; their rates are not quoted here."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -20125,6 +20154,22 @@
       {
         "title": "Sub-account management",
         "description": "Runs many client accounts from one agency console."
+      }
+    ],
+    "bestFor": [
+      "Solo marketers and small agencies: Starter is $97/month ($970/year) with 3 sub-accounts, and contacts and users are unlimited on every plan",
+      "Agencies serving many clients — Unlimited at $297/month ($2,970/year) removes the sub-account cap and adds basic API access and phone/email rebilling at no markup",
+      "Agencies reselling the platform: Agency Pro at $497/month ($4,970/year) adds SaaS Mode, automated sub-account creation, rebilling with markup, user/agent reporting and advanced API access"
+    ],
+    "skipIf": [
+      "You only need one or two of the modules — the price assumes you are replacing a stack (CRM, funnels, email/SMS, calls, booking, reputation, courses)",
+      "You are watching usage costs: phone, SMS, email and several AI features are metered on top of the plan fee",
+      "You want the platform without agency structure; sub-accounts and rebilling are the model, and the cheapest tier is capped at 3"
+    ],
+    "sss": [
+      {
+        "soru": "How much does GoHighLevel cost and what is the sub-account limit?",
+        "cevap": "Starter is $97/month or $970/year with 3 sub-accounts. Unlimited is $297/month or $2,970/year with unlimited sub-accounts, basic API access and phone and email rebilling at no markup. Agency Pro is $497/month or $4,970/year and adds SaaS Mode, automated sub-account creation, rebilling with markup, user and agent reporting and advanced API access. Enterprise is custom. Contacts and users are unlimited on every plan, so the sub-account count — not headcount — is what forces an upgrade. All plans come with a 14-day free trial."
       }
     ]
   },
@@ -20541,20 +20586,24 @@
     "verdict": "Useful for research sprints. Hard to justify as an always-on subscription for a small team.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "BuzzSumo — Pricing",
           "url": "https://buzzsumo.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Content Creation $199/mo billed yearly, save $478/yr: 1 user, unlimited searches, 2 alerts; includes Content Analyzer, Trending Feeds, Question Analyzer",
+            "PR & Comms $299/mo billed yearly, save $718/yr: 5 users, 5 alerts, everything in Content Creation plus media database and outreach, coverage reports",
+            "Pay annually and save 20%",
+            "Searches are shared by all users on an account and refresh monthly on the subscription date",
+            "Question Analyzer searches customer questions across millions of forum posts including Amazon, Reddit and Quora"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -20568,6 +20617,22 @@
       {
         "title": "Alerts",
         "description": "Monitors brands, keywords and competitors for new mentions."
+      }
+    ],
+    "bestFor": [
+      "Solo marketers researching content: Content Creation is $199/month billed yearly with 1 user, unlimited searches and 2 alerts",
+      "PR and comms teams — the next tier is $299/month billed yearly with 5 users, 5 alerts, the media database and outreach, and coverage reports",
+      "Anyone who needs question research: the Question Analyzer searches customer questions across forums including Amazon, Reddit and Quora on the entry tier"
+    ],
+    "skipIf": [
+      "You need several seats cheaply — the entry tier is a single user and seats are what separate the tiers",
+      "You want monthly billing at the listed rate: the prices shown are billed yearly, with the page advertising a 20% saving over monthly",
+      "You only need occasional alerts: alert counts are low (2 then 5) and are a per-tier limit rather than an add-on"
+    ],
+    "sss": [
+      {
+        "soru": "How much does BuzzSumo cost?",
+        "cevap": "Content Creation is $199/month billed yearly (advertised as saving $478 a year) with 1 user, unlimited searches and 2 alerts. The PR & Comms tier is $299/month billed yearly (saving $718 a year) with 5 users and 5 alerts, adding the media database and journalist outreach plus coverage reports. Paying annually is advertised as saving 20% against monthly. Searches are shared across all users on an account and refresh monthly on the subscription date."
       }
     ]
   },
