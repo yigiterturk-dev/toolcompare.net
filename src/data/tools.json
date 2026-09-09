@@ -17384,8 +17384,8 @@
     "shortDescription": "Employer of record and global payroll.",
     "websiteUrl": "https://remote.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 29,
+    "isFlat": false,
     "kriterler": {
       "api": true,
       "mobil": true,
@@ -17407,20 +17407,29 @@
     "verdict": "Solves a genuinely hard problem. Once a country becomes core, compare against opening an entity.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Remote — Pricing",
           "url": "https://remote.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Employer of Record $699 per employee/month: hire in 90+ countries without a local entity, dedicated onboarding specialist, local payroll, compliance protections, localized benefits, HR Essentials included",
+            "Global Payroll $29 per employee/month for organizations that already have legal entities abroad, HR Core included",
+            "Contractor Management $29 per contractor/month, billed only for contractors you actively work with",
+            "Contractor Management Plus $99 per contractor/month, adding indemnity coverage up to $100,000 per contractor for penalties",
+            "Contractor of Record from $325 per contractor/month: Remote engages and pays the contractor directly, with uncapped indemnity and IP transfer through Remote IP Guard",
+            "PEO from $99 per employee/month for hiring across US states; billed in USD and requires a US bank account",
+            "Equity from $39 per month for granting equity across global teams, for direct employees, EoR staff and contractors of Delaware C-Corps",
+            "Prices are shown in a choice of 12 currencies including USD, EUR, GBP, CAD, AUD, SGD and JPY",
+            "Reserve payments are collected only in rare high-risk circumstances; Remote states it does not charge extra deposits for PTO above the legal minimum, removed probation periods, incentive plans or severance accruals",
+            "Social purpose organizations get 15% off"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -17435,7 +17444,39 @@
         "title": "Local benefits",
         "description": "Administers statutory and supplementary benefits per country."
       }
-    ]
+    ],
+    "fiyatModeli": "kullanici-basina",
+    "bestFor": [
+      "Companies with contractors abroad but no entity: Contractor Management is $29 per contractor per month and bills only for contractors you actively work with",
+      "Teams that already have foreign entities and just need payroll infrastructure — Global Payroll is $29 per employee per month",
+      "US-only hiring across many states, where PEO starts at $99 per employee per month instead of the $699 EOR rate",
+      "Buyers who dislike deposits: Remote says it does not charge extra for PTO above the legal minimum, removed probation periods, incentive plans or severance accruals"
+    ],
+    "skipIf": [
+      "You are comparing on the $29 headline — that is payroll or contractor management; employing someone through the Employer of Record is $699 per employee per month",
+      "You want misclassification cover on the cheap plan: indemnity up to $100,000 needs Contractor Management Plus at $99, and uncapped protection means Contractor of Record from $325 per contractor per month",
+      "You need US PEO without a US bank account — PEO is billed in USD and requires one",
+      "Equity administration is part of your comparison: it is a separate line from $39 per month, limited to Delaware C-Corps"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Remote cost per employee?",
+        "cevap": "Employer of Record is $699 per employee per month. If you already have a local entity, Global Payroll is $29 per employee per month, and US PEO starts at $99 per employee per month."
+      },
+      {
+        "soru": "How much does Remote charge for contractors?",
+        "cevap": "Contractor Management is $29 per contractor per month and only bills for contractors you actively work with. Contractor Management Plus is $99 and adds indemnity up to $100,000 per contractor; Contractor of Record starts at $325 per contractor per month with uncapped indemnity."
+      },
+      {
+        "soru": "Does Remote charge deposits or accruals?",
+        "cevap": "Remote says it collects reserve payments only in rare, high-risk circumstances, and does not add deposits for PTO above the legal minimum, removed probation periods, incentive plans or monthly severance accruals."
+      },
+      {
+        "soru": "Does Remote offer discounts?",
+        "cevap": "Social purpose organizations are offered 15% off. Prices can also be displayed in 12 currencies, including EUR, GBP, CAD, AUD, SGD and JPY, rather than USD only."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "rippling",
@@ -19734,20 +19775,29 @@
     "verdict": "Pays for itself the first time an outage does not flood your inbox.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Atlassian Statuspage — Pricing",
           "url": "https://www.atlassian.com/software/statuspage/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Public page Free: 100 subscribers, 25 components, 2 team members, 2 metrics, email, Slack and Microsoft Teams notifications, REST API access",
+            "Hobby $29/month: 250 subscribers, 5 team members, 5 metrics, basic customization, custom domain",
+            "Startup $99/month: 1,000 subscribers, 10 team members, 10 metrics, email/SMS/webhook notifications, custom CSS, team member SSO with Atlassian Guard",
+            "Business $399/month: 5,000 subscribers, 25 team members, 25 metrics, custom CSS/HTML/JS, component subscriptions, role-based access control",
+            "Enterprise $1,499/month: 25,000 subscribers, 50 team members, 50 metrics, yearly purchase orders and invoicing",
+            "The core feature set — incidents, components, scheduled maintenances, templates, page analytics, REST API, chat and automation integrations — is included on all plans",
+            "SSL is free on all plans; notifications are unlimited on all plans, but only Startup and above send SMS and webhooks",
+            "SSO with Atlassian Guard is included at no extra charge on Startup, Business and Enterprise",
+            "Yearly credit card billing exists but is set up manually and requires a signed order form"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Only the public page plans are published on this view; private and audience-specific page pricing was not shown."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -19762,7 +19812,38 @@
         "title": "Subscriber notifications",
         "description": "Notifies subscribers by email, SMS or webhook on change."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small projects that need a credible public status page for nothing: Free covers 100 subscribers, 25 components and 2 team members",
+      "Teams whose audience is small but who want a custom domain — that appears on Hobby at $29/month",
+      "Atlassian shops: team member SSO through Atlassian Guard is included from Startup upward at no extra charge",
+      "Anyone who wants the incident workflow itself, since incidents, maintenances, templates, analytics and the REST API are on every plan including Free"
+    ],
+    "skipIf": [
+      "You need SMS or webhook alerts — email only on Free and Hobby; SMS and webhooks start at Startup, $99/month",
+      "Your subscriber list grows: pricing is driven by subscribers, and the jumps are steep — 1,000 at $99, 5,000 at $399 and 25,000 at $1,499 per month",
+      "You want per-customer status pages: audience-specific pages are a different page type, priced separately from the public page plans listed here",
+      "You expect a self-serve annual discount — yearly credit card billing is manual and needs a signed order form"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Statuspage cost?",
+        "cevap": "Public pages are Free (100 subscribers, 2 team members), Hobby $29/month (250 subscribers), Startup $99/month (1,000), Business $399/month (5,000) and Enterprise $1,499/month (25,000 subscribers, 50 team members)."
+      },
+      {
+        "soru": "Does Statuspage have a free plan?",
+        "cevap": "Yes. The free public page includes 100 subscribers, 25 components, 2 team members, 2 metrics, email, Slack and Microsoft Teams notifications and REST API access, with SSL at no cost."
+      },
+      {
+        "soru": "Does Statuspage charge extra for SMS notifications?",
+        "cevap": "Notifications themselves are unlimited on every plan, but the types differ: Hobby sends email only, while SMS and webhook notifications begin on Startup at $99/month."
+      },
+      {
+        "soru": "Is SSO extra on Statuspage?",
+        "cevap": "No — Statuspage team members get SSO with Atlassian Guard at no additional charge on Startup, Business and Enterprise. Users of other Atlassian products who are not on your Statuspage plan are billed for Atlassian Guard separately."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "launchdarkly",
@@ -20920,7 +21001,7 @@
     "shortDescription": "SEO content briefs and optimisation.",
     "websiteUrl": "https://www.frase.io",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 39,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -20943,20 +21024,26 @@
     "verdict": "Good at the research half. Treat the writing half as a rough draft.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Frase — Pricing",
+          "label": "Frase — Plans and pricing",
           "url": "https://www.frase.io/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $39/month billed yearly, $49 month to month: 1 seat, 1 site, 10 articles and 50 audit pages a month, publishing to WordPress, Webflow, Sanity or Wix, SEO and GEO scores, AI Visibility on ChatGPT and Google AI, Content Guard watching 10 pages",
+            "Professional $103/month billed yearly, $129 month to month: 3 seats and 5 sites, extra seats $29/month, 40 articles and 250 audit pages a month, content calendar, internal linking suggestions, AI crawler monitoring, Perplexity added to AI Visibility, Content Guard on 75 pages",
+            "Scale $239/month billed yearly, $299 month to month: 5 seats and up to 10 domains, extra seats $29/month, 100 articles and 1,000 audit pages a month, Content Guard on 300 pages, Claude and Gemini added to AI Visibility, client-ready exportable reports",
+            "Enterprise is custom scoped, adding white-label reports, a branded client portal, SSO and SAML",
+            "Yearly billing is advertised as saving 20%, billed once a year",
+            "Free 7-day trial with no credit card",
+            "Starter holds at its monthly limits rather than overflowing; Professional and Scale offer optional pay-as-you-go when a month runs long, off by default"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -20971,7 +21058,39 @@
         "title": "Draft assistance",
         "description": "Generates sections against the brief for editing."
       }
-    ]
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Solo SEO writers on one site: Starter is $39/month billed yearly with 10 articles and 50 audit pages a month",
+      "Content teams that want the whole loop — Professional at $103/month billed yearly adds 3 seats, 5 sites, 40 articles and a content calendar",
+      "Agencies running many sites, where Scale covers 10 domains, 100 articles and client-ready reports for $239/month billed yearly",
+      "Anyone wary of overage bills: Starter simply stops at its limits, and the pay-as-you-go option on higher tiers is off by default"
+    ],
+    "skipIf": [
+      "You want the advertised price monthly — month-to-month is $49, $129 and $299 against the yearly $39, $103 and $239",
+      "You publish at volume: article allowances are 10, 40 and 100 a month, and audit pages 50, 250 and 1,000",
+      "Your team is bigger than the seat count — Starter is a single seat, and extra seats on higher plans are $29/month each",
+      "You need white-label reports, a client portal, SSO or SAML, which are Enterprise-only and custom scoped"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Frase cost?",
+        "cevap": "Starter is $39/month billed yearly ($49 month to month), Professional $103 ($129 monthly) and Scale $239 ($299 monthly). Enterprise is custom scoped. There is a free 7-day trial with no credit card required."
+      },
+      {
+        "soru": "How many articles does each Frase plan include?",
+        "cevap": "10 articles and 50 audit pages a month on Starter, 40 articles and 250 audit pages on Professional, and 100 articles and 1,000 audit pages on Scale."
+      },
+      {
+        "soru": "Does Frase charge for extra seats?",
+        "cevap": "Yes — additional seats are $29/month on Professional and Scale. Starter is a single seat and cannot add more."
+      },
+      {
+        "soru": "Does Frase charge overage fees?",
+        "cevap": "Not by default. Starter holds at its monthly limits, and Professional and Scale offer optional pay-as-you-go for months that run long, which is switched off unless you enable it."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "clearscope",
@@ -42512,20 +42631,29 @@
     "verdict": "The right model if you distrust hosted vaults. It moves responsibility to you.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Enpass — Pricing",
-          "url": "https://www.enpass.io/pricing/",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.enpass.io/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free tier: up to 25 items and 1 vault, password generation, autofill and import from a browser, spreadsheet or another password manager",
+            "Individual Plan advertised at $1.99/month for the first 12 months, billed yearly, during an 'End of Summer Sale' offering up to 40% off",
+            "Family Plan advertised at $3.99/month for the first 12 months billed yearly, covering up to 6 members",
+            "3-Year Plan $49.99 one-time — described as paying for 2 years and getting 1 year free",
+            "Lifetime Plan $99.99 one-time for a personal lifetime licence",
+            "Paid personal plans include unlimited passwords, items, vaults and devices, passkey support, breach alerts, an integrated TOTP authenticator and secure document storage",
+            "Apps for Windows, macOS, Linux, iOS and Android including wearables, with extensions for Chrome, Edge, Firefox, Safari, Brave, Vivaldi and Opera",
+            "Vaults are stored in your own cloud — iCloud, Google Drive, OneDrive, Dropbox, Box or Nextcloud — which Enpass calls 'zero possession': encrypted data is never stored on its servers",
+            "Business and Enterprise plans exist but their prices are not shown on the personal pricing view"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Personal plan prices were on sale ('up to 40% off', first 12 months) when checked; renewal pricing and business plan pricing are not published on this page."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": true,
@@ -42550,7 +42678,39 @@
         "title": "One-time purchase option",
         "description": "Offers a perpetual licence alongside subscriptions."
       }
-    ]
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "People who want to own their data: vaults sync through your own iCloud, Google Drive, OneDrive, Dropbox, Box or Nextcloud rather than the vendor's servers",
+      "Anyone tired of subscriptions — there is a $99.99 one-time lifetime licence and a $49.99 three-year licence",
+      "Households: the Family plan covers up to 6 members on one subscription",
+      "Light users who need a handful of logins, since the free tier allows 25 items in one vault across all platforms"
+    ],
+    "skipIf": [
+      "You are budgeting from the advertised monthly figures: $1.99 and $3.99 are promotional rates for the first 12 months, billed yearly, during a sale — the renewal price is not shown on the page",
+      "You store more than a few credentials for free: the free tier stops at 25 items and a single vault",
+      "You want the vendor to handle sync — Enpass deliberately puts the vault in your own cloud account, which is a setup step and a recovery responsibility",
+      "You are buying for a company: business and enterprise pricing is not published on the personal pricing page"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Enpass cost?",
+        "cevap": "The personal plans are advertised at $1.99/month for the Individual plan and $3.99/month for the Family plan (up to 6 members), each billed yearly and each a first-12-months sale price. One-time options are $49.99 for three years and $99.99 for a lifetime licence."
+      },
+      {
+        "soru": "Is Enpass free?",
+        "cevap": "There is a free tier limited to 25 items and one vault, on every platform. Unlimited items, vaults and devices, breach monitoring and the built-in authenticator require a paid plan."
+      },
+      {
+        "soru": "Does Enpass have a lifetime licence?",
+        "cevap": "Yes — a personal lifetime licence is $99.99 as a one-time payment, and there is also a $49.99 three-year licence, described as paying for two years and getting the third free."
+      },
+      {
+        "soru": "Where does Enpass store my passwords?",
+        "cevap": "In your own cloud account — iCloud, Google Drive, OneDrive, Dropbox, Box or Nextcloud. Enpass calls this 'zero possession': the encrypted vault is never stored on its own servers."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "keeweb",
@@ -43625,24 +43785,32 @@
     "shortDescription": "American software company.",
     "websiteUrl": "https://nationbuilder.com/",
     "incelendi": false,
-    "basePrice": 0,
+    "basePrice": 34,
     "isFlat": true,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "NationBuilder — Pricing",
           "url": "https://nationbuilder.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $34/month: integrated people database from 500 up to 5K contacts, website with standard templates, email blasts, payment and donation processing, events and ticketing, ActionButton Basic, US voter registration check",
+            "Starter add-ons: 1 additional website +$9/month, ActionButton Plus +$49/month, plus phone number and text messaging priced separately",
+            "Pro $160/month: everything in Starter with the database up to 10K contacts, custom fields and permissions, membership management, drip automations and A/B testing, geocoding and turf cutting, walk and call sheets, autodistricting",
+            "Pro add-ons: customization pack +$29/month (5 custom fields, 2 permission sets), membership pack +$39/month, automation pack +$39/month, election pack +$89/month (adds 1,650 text messages a month)",
+            "Enterprise is custom-priced: custom database capacity, unlimited email sends, dedicated account manager, Groups, custom reporting via Insights, lower payment processing rates, developer API and single sign-on",
+            "Both Starter and Pro list capacity bands (0-500, 500-1,000, 1,000-2,000, 2,000-3,000, 3,000-5,000 contacts, and further bands up to 10,000 on Pro)",
+            "The page states that if contacts exceed the maximum allowable capacity for a plan, additional costs apply",
+            "Custom fields are 5 on Pro (more via add-on) against 100 on Enterprise; single sign-on and the developer API are Enterprise-only",
+            "Text messaging is available only in the continental US and Canada"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": null,
@@ -43653,7 +43821,39 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
-    }
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Small campaigns and community groups: $34/month covers a database, a website, email blasts, donation processing and ticketing in one subscription",
+      "Organizations that grow by contacts rather than staff — pricing bands follow the size of your people database, not the number of users",
+      "Field operations needing walk and call sheets, turf cutting and autodistricting, which arrive on Pro at $160/month",
+      "US and Canadian organizations, where text messaging and the voter registration check actually work"
+    ],
+    "skipIf": [
+      "Your list is growing fast: the quoted prices cover capacity bands up to 5K contacts on Starter and 10K on Pro, and exceeding a plan's capacity adds cost",
+      "You need memberships, extra custom fields or more automations on Pro — each is a separate pack at $29 to $89 per month",
+      "You need SSO or the developer API, which are Enterprise-only and custom-priced",
+      "You are outside the US and Canada and were counting on SMS blasts — text messaging is limited to the continental US and Canada"
+    ],
+    "sss": [
+      {
+        "soru": "How much does NationBuilder cost?",
+        "cevap": "Starter is $34/month for up to 5,000 contacts and Pro is $160/month for up to 10,000 contacts, each sold in capacity bands. Enterprise is custom-priced. Add-ons range from $9/month for an extra website to $89/month for the election pack."
+      },
+      {
+        "soru": "Does NationBuilder charge per user or per contact?",
+        "cevap": "Per contact. Plans are sold in capacity bands based on the size of your people database, and the pricing page states that exceeding a plan's maximum capacity brings additional costs."
+      },
+      {
+        "soru": "What is included in NationBuilder Starter?",
+        "cevap": "A people database from 500 contacts, a website built on standard templates, email blast functionality, payment and donation processing, events and ticketing, ActionButton Basic and the US voter registration check."
+      },
+      {
+        "soru": "What do NationBuilder add-ons cost?",
+        "cevap": "On Starter, an additional website is $9/month and ActionButton Plus is $49/month. On Pro, the customization pack is $29/month, the membership and automation packs $39/month each, and the election pack $89/month, which includes 1,650 extra text messages per month."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "onlyoffice",
