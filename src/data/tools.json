@@ -12640,20 +12640,27 @@
     "verdict": "Good for finding the obvious problem on a page. Make sure your privacy policy covers recordings.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Crazy Egg — Pricing",
           "url": "https://www.crazyegg.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $29/mo: 5,000 tracked pageviews/mo, heatmap reports, 50 recordings/mo, 6 months of recordings storage, unlimited website domains, unlimited team members, unlimited web analytics, unlimited conversion tracking and funnel reports, unlimited surveys, AI analysis for heatmaps and recordings",
+            "Plus $99/mo: 150,000 tracked pageviews, 2 years of recordings storage, unlimited A/B testing, CTAs and error tracking, target A/B tests by device type",
+            "Pro $249/mo: 500,000 tracked pageviews, target A/B tests by device type, country, UTMs and conversions, export heatmaps and recordings to AI",
+            "Enterprise $599/mo: 1,000,000 tracked pageviews, target A/B tests by all available audience segments, SAML single sign-on",
+            "All plans are billed annually; 'No overages, ever'; 30-day free trial on all plans",
+            "Pricing basis: monthly tracked pageviews (covering multiple domains at no extra cost) and number of session recordings; recording volume set by an adjustable per-domain sampling rate that can be disabled",
+            "More heatmaps or recordings available as an add-on via sales"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The comparison table's per-tier recording counts were not all unambiguous in the page text; only the figures that could be attributed with certainty are recorded."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -12667,6 +12674,22 @@
       {
         "title": "A/B testing",
         "description": "Runs simple page tests without developer involvement."
+      }
+    ],
+    "bestFor": [
+      "Small sites that want heatmaps without usage anxiety: Starter is $29/month billed annually for 5,000 tracked pageviews and 50 recordings a month, and Crazy Egg states there are no overages, ever",
+      "Growing sites — Plus at $99/month covers 150,000 tracked pageviews and adds unlimited A/B testing, CTAs and error tracking with device-type targeting",
+      "Teams that need audience-level testing: Pro at $249/month covers 500,000 pageviews and targets A/B tests by device, country, UTM and conversion"
+    ],
+    "skipIf": [
+      "You want monthly billing — every plan is billed annually",
+      "Your traffic is the constraint rather than your team: pricing is driven by tracked pageviews and recordings, while team members and website domains are unlimited on every tier",
+      "You need SAML single sign-on, which is Enterprise at $599/month"
+    ],
+    "sss": [
+      {
+        "soru": "How does Crazy Egg pricing work?",
+        "cevap": "Plans are priced on two things: monthly tracked pageviews and the number of session recordings collected. Team members and website domains are unlimited on every plan, so multiple sites cost nothing extra. Billed annually, Starter is $29/month for 5,000 tracked pageviews, Plus is $99 for 150,000, Pro is $249 for 500,000 and Enterprise is $599 for 1,000,000. Crazy Egg states there are no overages ever; if you need more heatmaps or recordings they are sold as an add-on. Recording volume is controlled by a sampling rate you can set per domain, or disable entirely. All plans include a 30-day free trial."
       }
     ]
   },
@@ -16570,20 +16593,24 @@
     "verdict": "A sensible starting point for small shops. High-volume support outgrows it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Tidio — Pricing",
           "url": "https://www.tidio.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $24.17/mo: 100 billable conversations, 50 Lyro AI Agent conversations (one-off), 100 Flows visitors reached, live chat and ticketing, live visitors list, operating hours, basic analytics, 7-day free trial",
+            "Growth starts at $49.17/mo from 250 billable conversations: everything in Starter plus advanced analytics, user permissions, automatic chat assignment, automatic reply, live typing preview, viewed pages history, macros",
+            "Plus $300/mo + monthly usage: custom billable conversations, premium support, dedicated success manager, discounted usage rates, departments, multiproject, custom branding, ticketing automations, OpenAPI, custom limits and seats, pay by wire transfer",
+            "Premium (contact for pricing): from 3,000 Lyro AI conversations, guaranteed 50% Lyro AI resolution rate, pay-per-resolution billing, mobile SDK, AI insights and CSAT, super admin role, custom analytics, Lyro AI as a managed service",
+            "Monthly and annual billing offered; annual advertised as 2 months free"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -16597,6 +16624,22 @@
       {
         "title": "Multichannel inbox",
         "description": "Collects chat, email and social messages in one queue."
+      }
+    ],
+    "bestFor": [
+      "Small teams starting with live chat: Starter is $24.17/month billed annually and includes 100 billable conversations, live chat and ticketing, a live visitors list and operating hours",
+      "Teams adding automation — Growth starts at $49.17/month from 250 billable conversations and adds advanced analytics, user permissions, automatic chat assignment and macros",
+      "Businesses that want premium support and team structure: Plus is $300/month plus usage, with departments, multiproject, custom branding, OpenAPI and a dedicated success manager"
+    ],
+    "skipIf": [
+      "You expect a flat bill — pricing is per billable conversation, so cost tracks support volume rather than seats",
+      "You are counting on the AI agent at the entry tier: Starter includes 50 Lyro AI conversations as a ONE-OFF allowance, not monthly",
+      "You need a guaranteed AI resolution rate or pay-per-resolution billing; those are Premium, which is contact-for-pricing"
+    ],
+    "sss": [
+      {
+        "soru": "What is a 'billable conversation' in Tidio and how does it affect the price?",
+        "cevap": "Tidio prices by conversation volume rather than by seat. Starter at $24.17/month billed annually includes 100 billable conversations; Growth starts at $49.17/month from 250. Plus is $300/month plus monthly usage with a custom conversation allowance and discounted usage rates. The AI agent is metered separately: Starter's 50 Lyro AI Agent conversations are a one-off allowance, not a monthly one, and Premium starts from 3,000 Lyro AI conversations with a guaranteed 50% resolution rate and pay-per-resolution billing. Annual billing is advertised as 2 months free."
       }
     ]
   },
