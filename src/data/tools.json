@@ -4334,38 +4334,33 @@
     "isFlat": true,
     "category": "Design",
     "shortDescription": "3D design for web.",
-    "longDescription": "Spline brings 3D into the browser with the ease of a standard graphic design tool. It eliminates the need for heavy software or complex code to include interactive 3D objects on your site. You can create scenes and embed them into your web project with a single link. With physics and interactive triggers, Spline takes the web experience from 2D flatness into an immersive depth that responds to user movement and clicks.",
+    "longDescription": "Spline is a browser-based editor for interactive 3D and 2D scenes that can be exported straight to the web, so designers build the object and the interaction in one place instead of handing a model to a developer. The free tier is genuinely usable for learning, but almost every step of the paid ladder is about removing a restriction rather than adding a tool: the watermark comes off web exports on Hobby and off embeds on Pro, and code or self-hosted export only exists on Enterprise. AI generation runs on a monthly credit allowance that can be topped up for a fixed annual fee.",
     "pros": [
-      "Web Native: Your 3D scenes run directly in the browser with high performance.",
-      "Interactivity: Build 3D objects that react to mouse movements or user clicks.",
-      "Physics Engine: Add realistic effects like gravity and collisions to your scene.",
-      "Easy Export: Export your designs as React, Webflow, or simple HTML snippets."
+      "Design and interaction live in one browser file",
+      "Exports straight to the web, plus Apple and Android targets on Pro",
+      "AI credit allowance can be topped up at a published rate"
     ],
     "cons": [
-      "Device Performance: Extremely complex 3D scenes may lag on older mobile devices.",
-      "Learning Curve: Thinking in 3D (X, Y, Z axes) can be difficult for absolute beginners.",
-      "File Size: High-resolution textures may increase your page's initial load time."
+      "Watermark removal is split across two paid tiers",
+      "Code and self-hosted export are Enterprise-only",
+      "AI generation is metered by monthly credits"
     ],
     "keyFeatures": [
       {
-        "title": "Interactive 3D",
-        "description": "Objects that the user can rotate or interact with using their mouse."
+        "title": "Browser 3D editor",
+        "description": "Models, materials and scenes edited live in the browser with no install."
       },
       {
-        "title": "Game Controls",
-        "description": "Build small web games controlled via keyboard or mouse inputs."
+        "title": "Web and app export",
+        "description": "Publishes to the web, with Apple and Android exports from Pro."
       },
       {
-        "title": "Real-Time Collaboration",
-        "description": "Work live with your team on the same 3D scene simultaneously."
-      },
-      {
-        "title": "Material Layers",
-        "description": "Design realistic surfaces like glass, metal, or fabric using layers."
+        "title": "AI generation credits",
+        "description": "3D, texture and image generation drawn from a monthly credit allowance."
       }
     ],
-    "targetAudience": "Web Designers, Creative Developers, and Product Brands.",
-    "verdict": "The easiest way to add 'wow-factor' interactive 3D experiences to any website.",
+    "targetAudience": "Product and web designers who want interactive 3D on a site without a 3D pipeline.",
+    "verdict": "Good value at Hobby if you only publish to the web. Check where your watermark and export needs land before picking a tier — that, not features, is what moves you up the ladder.",
     "color": "#ff4d8d",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://spline.design",
@@ -4378,21 +4373,58 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Spline — Pricing",
           "url": "https://spline.design/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0/month: limited personal files, unlimited file viewers, web exports with watermark, access to the Spline Library",
+            "Hobby $12 per seat/month billed annually, $15 monthly (save $36/seat/yr, described as 2 months free): 2,000 monthly AI credits, unlimited 3D and 2D files, video upload, no watermark on web exports, higher resolution image exports, material and audio library",
+            "Pro $25 per seat/month billed annually, $30 monthly (save $60/seat/yr): 3,000 monthly credits, unlimited folders and projects, video export, unlimited scenes per file, Apple and Android exports, audio upload, unlimited variables, APIs and webhooks, no watermark on web embeds",
+            "Max $60 per seat/month billed annually, $70 monthly (save $120/seat/yr): 10,000 AI credits per month, 5x more media generation per week, 100MB max video size, higher MCP tool call limits",
+            "Enterprise custom pricing: centralized licensing and billing, multiple teams with team privacy, SAML SSO, code and self-hosted exports, file version history, team library, custom onboarding, priority support",
+            "Extra AI credits are sold as annual add-ons: 3,000/month +$48/year, 4,000 +$96, 5,000 +$144, rising in $48 steps per additional 1,000 credits up to 20,000 at +$480/year",
+            "ISO 27001 and SOC 2 compliance stated on the pricing page"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Solo designers publishing to the web: Hobby at $12 per seat per month billed annually removes the watermark from web exports and unlocks unlimited files",
+      "Teams embedding scenes in a product site — no watermark on web embeds starts at Pro, $25 per seat per month billed annually",
+      "Heavy AI users: Max includes 10,000 credits a month at $60 per seat, and extra credits are a published add-on rather than a quote",
+      "Buyers who need SAML SSO, file version history and team privacy, which are the Enterprise tier"
+    ],
+    "skipIf": [
+      "You need the code or a self-hosted export — that is Enterprise-only, at custom pricing",
+      "You expect the free plan to be publishable: web exports carry a watermark and personal files are limited",
+      "You bill monthly — the real monthly rates are $15, $30 and $70 per seat, not the advertised $12, $25 and $60",
+      "Your work leans on AI generation: credits are capped at 2,000, 3,000 and 10,000 a month, and more costs $48 per extra 1,000 per year"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Spline cost?",
+        "cevap": "There is a free plan, then Hobby at $12 per seat per month billed annually ($15 monthly), Pro at $25 ($30 monthly) and Max at $60 ($70 monthly). Enterprise is custom priced."
+      },
+      {
+        "soru": "Does the Spline free plan have a watermark?",
+        "cevap": "Yes. Web exports on the free plan carry a watermark. Hobby removes it from web exports, and Pro also removes it from web embeds."
+      },
+      {
+        "soru": "Can you export code from Spline?",
+        "cevap": "Code export and self-hosted export are listed under Enterprise only, which is custom priced. Lower tiers export to the web, and Pro adds Apple and Android exports."
+      },
+      {
+        "soru": "How do Spline AI credits work?",
+        "cevap": "Each plan includes a monthly allowance — 2,000 on Hobby, 3,000 on Pro and 10,000 on Max. Extra credits are an annual add-on starting at $48 per year for 1,000 more per month."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "aws",
@@ -12049,8 +12081,8 @@
     "shortDescription": "Visual social scheduling built around Instagram.",
     "websiteUrl": "https://later.com",
     "incelendi": true,
-    "fiyatModeli": "ucretsiz-katman",
-    "basePrice": 0,
+    "fiyatModeli": "abonelik",
+    "basePrice": 18.75,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -12058,50 +12090,89 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Later plans social posts visually, built originally around Instagram and still strongest there. The visual planner suits accounts where the grid itself is the product, and the link-in-bio tool closes the loop to a store. It is weaker on listening and enterprise approvals, so it fits creators and small brands rather than large teams.",
+    "longDescription": "Later is a social media scheduling and analytics platform whose pricing unit is the 'social set' — one profile from each supported network — rather than the individual account, so a brand running two Instagram handles consumes two sets even though it uses one network. Plans also cap how many posts each profile can schedule per month and how far back analytics reach, and the AI features draw on a small monthly credit allowance. Starter is the tier where the limits bite hardest: it cannot buy extra sets, users or credits at all.",
     "pros": [
-      "Visual planning grid suits image-led accounts",
-      "Simple to learn",
-      "Link-in-bio tool included"
+      "One social set covers all eight supported networks",
+      "Extra sets, users and AI credits are priced add-ons on Growth and above",
+      "Approvals, social inbox and UGC collection from the middle tier"
     ],
     "cons": [
-      "Weaker for text-first networks",
-      "Analytics are basic on lower plans",
-      "Post limits per plan"
+      "Starter allows no add-ons of any kind",
+      "Scheduled posts are capped per profile below the top tier",
+      "Analytics history is limited by plan"
     ],
-    "targetAudience": "Creators and small brands whose main channel is visual.",
-    "verdict": "Good fit for Instagram-first accounts, less compelling elsewhere.",
+    "targetAudience": "Social media managers and small agencies scheduling across several networks.",
+    "verdict": "Priced sensibly if you fit inside a social set and its post cap. Count your profiles first — the set, not the seat, is what you are buying.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Later — Pricing",
           "url": "https://later.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "14-day free trial on all plans; prices shown are billed yearly with a promotion reading '3 months free | 25% off'",
+            "Starter $18.75 USD/month billed yearly: 1 social set (8 social profiles), 1 user, 30 posts per profile per month, 5 AI credits per month, platform analytics up to 3 months, Link in Bio, basic support; extra social sets, users and AI credits are explicitly not available",
+            "Growth $37.50 USD/month billed yearly: 2 social sets (16 profiles), 2 users, 180 posts per profile per month, 50 AI credits, analytics up to 1 year, social inbox, internal and external approvals, UGC collection, custom roles and permissions",
+            "Growth add-ons: extra social sets $11.25 USD/month each, extra users $3.75 USD/month, extra AI credits sold per 100 credits/month",
+            "Scale $82.50 USD/month billed yearly: 6 social sets (48 profiles), unlimited posts, 100 AI credits, analytics up to 2 years, Meta Ads analytics, custom analytics, competitive benchmarking, brand health and brand mentions, priority support",
+            "A social set is defined as one profile from each supported platform",
+            "Prices are billed in USD and applicable taxes are extra"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The page defaults to yearly billing and the monthly rates render client-side, so the monthly price of each plan could not be read from the vendor page.",
+        "The listed prices carry an active '3 months free / 25% off' promotion; the undiscounted rate is not shown."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
-        "title": "Visual content calendar",
-        "description": "Plans posts on a grid preview before scheduling them."
+        "title": "Multi-network scheduling",
+        "description": "Publishes to Instagram, Facebook, TikTok, Threads, YouTube, Pinterest, LinkedIn and Snapchat."
       },
       {
-        "title": "Link in bio",
-        "description": "Turns a profile link into a shoppable page tied to posts."
+        "title": "Approval workflow",
+        "description": "Internal and external collaboration and approvals from the Growth plan."
       },
       {
-        "title": "Best-time scheduling",
-        "description": "Suggests posting times from the account's own engagement history."
+        "title": "Analytics history",
+        "description": "Platform analytics reaching back 3 months, 1 year or 2 years by plan."
       }
-    ]
+    ],
+    "bestFor": [
+      "One brand on many networks: a single social set covers one profile on each of the eight supported platforms",
+      "Small teams that need approvals and a shared inbox — those start on Growth at $37.50 per month billed yearly",
+      "Agencies that grow in steps: extra social sets are $11.25 a month and extra users $3.75 a month on Growth and above",
+      "Reporting-led buyers who need Meta Ads analytics, benchmarking and two years of history, which is Scale at $82.50 per month"
+    ],
+    "skipIf": [
+      "You are on Starter and expect to expand — extra social sets, users and AI credits are not sold on that plan at all",
+      "You run several accounts on the same network: each one consumes a social set, so two Instagram handles cost two sets",
+      "You post heavily below the top tier: Starter caps 30 posts per profile per month and Growth 180; only Scale is unlimited",
+      "You need long analytics history — Starter keeps 3 months and Growth 1 year"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Later cost?",
+        "cevap": "Billed yearly, Starter is $18.75, Growth $37.50 and Scale $82.50 per month, all with a 14-day free trial. Those figures carry a current 25% off promotion, and monthly billing rates are not shown on the pricing page."
+      },
+      {
+        "soru": "What is a social set in Later?",
+        "cevap": "One profile from each supported platform — Instagram, Facebook, TikTok, Threads, YouTube, Pinterest, LinkedIn and Snapchat — so one set is eight social profiles. Starter includes 1 set, Growth 2 and Scale 6."
+      },
+      {
+        "soru": "How many posts can you schedule on Later?",
+        "cevap": "Starter allows 30 posts per profile per month, Growth 180, and Scale is unlimited."
+      },
+      {
+        "soru": "Can you add extra users to a Later plan?",
+        "cevap": "Only from Growth up, at $3.75 per user per month, alongside extra social sets at $11.25 each. Starter cannot buy extra users, sets or AI credits."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "sprout-social",
@@ -12584,7 +12655,7 @@
     "shortDescription": "Popups and lead capture forms.",
     "websiteUrl": "https://optinmonster.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 7,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -12592,50 +12663,90 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "OptinMonster builds popups, slide-ins and other opt-in forms with targeting rules based on behaviour and exit intent. Exit intent and behavioural triggers are the reason to use it rather than a built-in form: the offer appears at a chosen moment instead of on load. It only captures leads, so the list, the sending and the follow-up all live elsewhere.",
+    "longDescription": "OptinMonster builds popups, floating bars and other on-site campaigns to capture email addresses, and it is sold on an annual subscription with an aggressive introductory discount. The headline monthly figures are 60% off for the first twelve months only; the vendor states plainly that all renewals are at full price, which roughly doubles the cost in year two. The tiers are separated less by campaign type than by how many sites you can run, how many campaign impressions you get, and which targeting triggers are unlocked — exit intent, the feature most buyers arrive for, is on the third tier.",
     "pros": [
-      "Exit-intent and behavioural targeting",
-      "Many form types in one tool",
-      "Works on any platform"
+      "Unlimited campaigns and subscribers on every plan",
+      "Wide targeting trigger set on higher tiers",
+      "14-day money-back guarantee"
     ],
     "cons": [
-      "Billed annually, so the monthly figure is misleading",
-      "Aggressive popups harm user experience if overused",
-      "Higher tiers needed for the more precise targeting rules"
+      "Advertised prices are first-year only; renewals are full price",
+      "Exit intent is not on the two cheapest plans",
+      "Impressions and site count are hard caps per tier"
     ],
-    "targetAudience": "Marketers building an email list from existing site traffic.",
-    "verdict": "Effective at capture. Restraint is the difference between a working list and an annoyed audience.",
+    "targetAudience": "Small business and ecommerce site owners building an email list.",
+    "verdict": "Fine for a first list-building tool, but budget for year two: the renewal, not the intro price, is the real cost. If exit intent is why you are buying, the entry plans do not have it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "OptinMonster — Pricing",
           "url": "https://optinmonster.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "All plans are billed annually and advertised at 60% off for 12 months",
+            "Basic $7/month, normally $210/year, save $126: 1 site, 2,500 campaign impressions, all campaign types, 700+ templates, page targeting, time and scroll triggers, unlimited campaigns and subscribers",
+            "Plus $19/month, normally $570/year, save $342: 2 sites, 10,000 impressions, A/B testing, device targeting, content locking, yes/no forms, full analytics reporting, advanced integrations",
+            "Pro $29/month, normally $870/year, save $522: 3 sites, 25,000 impressions, exit intent, revenue attribution, countdown timers, campaign scheduling, webhooks, Zapier, Google Analytics, remove OptinMonster badge, 2 sub-accounts",
+            "Growth $49/month, normally $1,470/year, save $882: 5 sites, 100,000 impressions, geolocation targeting, new vs returning visitor, OnSite Retargeting, follow-up campaigns, coupon wheel campaigns, custom branding and JavaScript, ecommerce integrations, unlimited sub-accounts",
+            "Footnote: 'Special introductory pricing, all renewals are at full price'",
+            "Monthly subscriptions are offered, but the vendor states annual subscriptions are 50% less than monthly",
+            "14-day money-back guarantee"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The advertised monthly figures are a first-year introductory rate; the vendor confirms renewals bill at full price."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
-        "title": "Exit-intent triggers",
-        "description": "Shows an offer as the visitor moves to leave the page."
+        "title": "Campaign builder",
+        "description": "700+ templates for popups, bars, slide-ins and inline forms."
       },
       {
-        "title": "Behavioural targeting",
-        "description": "Targets by scroll depth, referrer, device and visited pages."
+        "title": "Behaviour targeting",
+        "description": "Page, time, scroll, referrer, device and geolocation triggers by tier."
       },
       {
-        "title": "A/B testing",
-        "description": "Compares campaign variants on conversion rate."
+        "title": "Exit intent",
+        "description": "Fires a campaign as the visitor moves to leave; available from the Pro plan."
       }
-    ]
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "A single site starting a list: Basic is $7 a month for the first year, with unlimited campaigns and subscribers",
+      "Buyers who want A/B testing and full analytics without exit intent — Plus at $19 a month covers two sites",
+      "Anyone whose main goal is exit-intent capture, which begins on Pro at $29 a month with revenue attribution and badge removal",
+      "Ecommerce sellers needing Shopify or WooCommerce integrations, coupon wheels and OnSite Retargeting, which are Growth at $49 a month"
+    ],
+    "skipIf": [
+      "You are budgeting past year one: the renewal is full price — $210, $570, $870 and $1,470 a year respectively",
+      "You came for exit intent and planned to buy Basic or Plus; that trigger starts on Pro",
+      "You have traffic: impressions are capped at 2,500, 10,000, 25,000 and 100,000 per tier",
+      "You want to pay monthly — the vendor states monthly subscriptions cost about twice the annual rate"
+    ],
+    "sss": [
+      {
+        "soru": "How much does OptinMonster cost?",
+        "cevap": "Billed annually and discounted 60% for the first 12 months: Basic $7, Plus $19, Pro $29 and Growth $49 per month. Renewals are at full price — $210, $570, $870 and $1,470 per year."
+      },
+      {
+        "soru": "Does OptinMonster renew at the same price?",
+        "cevap": "No. The pricing page states that the discount is introductory and all renewals bill at full price, so the second year is roughly two and a half times the first."
+      },
+      {
+        "soru": "Which OptinMonster plan has exit intent?",
+        "cevap": "Pro, at $29 a month for the first year. Basic and Plus do not include exit intent; Pro also adds revenue attribution, campaign scheduling and badge removal."
+      },
+      {
+        "soru": "How many impressions does OptinMonster allow?",
+        "cevap": "2,500 a month on Basic, 10,000 on Plus, 25,000 on Pro and 100,000 on Growth. Campaigns and subscribers themselves are unlimited on every plan."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "unbounce",
@@ -20512,50 +20623,89 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Coolors generates colour palettes quickly and exports them in the formats designers and developers need. It is fast enough to use during a conversation, which is why it survives against more capable colour tools. It does not check contrast rigorously, so accessibility still needs a separate pass. Designers use it early rather than late.",
+    "longDescription": "Coolors is a palette generator and colour toolkit run by a single independent developer, and its free tier is unusually complete: you can generate palettes, browse thousands of ready schemes and pull colours out of an image without paying, at the cost of ads and a handful of ceilings. Pro removes the ads, lifts the palette from five colours to ten and makes saving unlimited, and there is a one-time lifetime option that pays for itself against the monthly rate in under three years. AI features run on a monthly credit allowance rather than being unlimited.",
     "pros": [
-      "Fast palette exploration",
-      "Exports to code and design formats",
-      "Usable free"
+      "Free tier covers the core generator and image picker",
+      "Pro is priced at a few dollars a month",
+      "One-time lifetime purchase available instead of a subscription"
     ],
     "cons": [
-      "Generated palettes need judgement to use well",
-      "Pro features behind a subscription",
-      "Accessibility checking is limited"
+      "Free tier is ad-supported and caps saves",
+      "Palettes are limited to five colours without Pro",
+      "AI is metered by monthly credits"
     ],
-    "targetAudience": "Anyone who needs a starting palette in a hurry.",
-    "verdict": "A useful starting point, not a substitute for colour decisions.",
+    "targetAudience": "Designers and developers who need quick palettes and contrast checks.",
+    "verdict": "One of the cheapest useful design subscriptions available, and the lifetime option makes sense for anyone who expects to keep using it. Free is enough if you save little and tolerate ads.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Coolors — Pricing",
           "url": "https://coolors.co/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free plan: ads shown on the page, palettes up to 5 colours, 10K+ ready colour schemes, save up to 10 palettes, 1 project and 1 collection, save up to 5 colours, pick colours from an image, collages with limited options, basic public profile page",
+            "Pro removes ads, allows palettes up to 10 colours, 10M+ ready schemes, unlimited saved palettes, unlimited projects and collections, unlimited saved colours, full collages, Pro profile page, palette contrast checking and palette variations",
+            "Pro includes access to Coolors AI with 3,000 credits per month",
+            "Forever plan: $99 one-time payment, listed against a $149 reference price, including all the benefits of the Pro plan",
+            "The vendor's own ad-blocker notice on the same domain offers the subscription at $3/mo",
+            "A yearly billing option exists via a 'Switch to yearly' toggle",
+            "Affiliate programme pays 20% commission"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The Pro plan's monthly and yearly prices render client-side on the pricing page; the $3/mo figure is taken from the vendor's own on-site subscription prompt.",
+        "The discounted $99 lifetime price is shown against a $149 reference price, and the vendor does not say when the offer ends."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
-        "title": "Palette generation",
-        "description": "Produces and locks palettes through rapid iteration."
+        "title": "Palette generator",
+        "description": "Builds and locks colour palettes, up to five colours free and ten on Pro."
       },
       {
-        "title": "Export formats",
-        "description": "Exports palettes as CSS, SVG, PDF and design tool files."
+        "title": "Image picker",
+        "description": "Extracts a palette from any uploaded image."
       },
       {
-        "title": "Image colour extraction",
-        "description": "Builds a palette from an uploaded photograph."
+        "title": "Contrast checker",
+        "description": "Tests palettes against accessibility contrast requirements; a Pro feature."
       }
-    ]
+    ],
+    "bestFor": [
+      "Casual use: the free tier generates palettes, browses 10K+ schemes and pulls colours from an image",
+      "Anyone who saves a lot of work — Pro lifts the 10-palette, 1-project and 5-colour save limits to unlimited",
+      "Long-term users: the Forever plan is a $99 one-time payment against roughly $3 a month, so it pays back in under three years",
+      "Accessibility work, since contrast checking and palette variations sit on the paid tier"
+    ],
+    "skipIf": [
+      "You need more than five colours in a palette without paying — that ceiling is a free-plan limit",
+      "Ads are a problem: removing them is the main thing Pro buys",
+      "You expect unlimited AI — Pro includes a 3,000 credit monthly allowance",
+      "You want the exact subscription price before signing up; the pricing page renders it client-side rather than listing it"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Coolors Pro cost?",
+        "cevap": "The vendor's own on-site prompt offers the subscription at $3 a month, and a Forever plan is a $99 one-time payment listed against a $149 reference price. The pricing page itself renders the subscription rate client-side."
+      },
+      {
+        "soru": "Is Coolors free?",
+        "cevap": "Yes, with ads. The free plan generates palettes of up to 5 colours, browses 10K+ ready schemes, picks colours from an image, and saves up to 10 palettes, 1 project and 5 colours."
+      },
+      {
+        "soru": "Is the Coolors lifetime plan worth it?",
+        "cevap": "At $99 one-time against roughly $3 a month, it breaks even after about 33 months and includes all Pro benefits."
+      },
+      {
+        "soru": "What do you get with Coolors Pro?",
+        "cevap": "No ads, palettes up to 10 colours, 10M+ schemes, unlimited palettes, projects, collections and saved colours, full collages, a Pro profile, contrast checking, palette variations and 3,000 AI credits a month."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "gohighlevel",
@@ -21208,7 +21358,7 @@
     "shortDescription": "Content optimisation for search.",
     "websiteUrl": "https://www.clearscope.io",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 129,
     "isFlat": true,
     "kriterler": {
       "api": false,
@@ -21216,50 +21366,91 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Clearscope grades content against what already ranks, focusing narrowly on term coverage and readability. It grades a draft against what already ranks and stops there, which keeps it honest and easy to use in an editorial workflow. That narrowness is why it is priced against agencies rather than individuals.",
+    "longDescription": "Clearscope is a content optimisation platform that has extended from search rankings into tracking how often a brand is cited by AI assistants. Its pricing is unusual for the category in that seats and projects are unlimited on every plan — what you actually buy is usage: tracked prompts, optimised pages, topic explorations and drafts per month. The add-on rates are the detail that decides the tier, because extra pages and drafts cost noticeably less on the higher plan, so a heavy Essentials subscriber ends up paying Business money without the Business allowance.",
     "pros": [
-      "Clean, focused workflow",
-      "Grading is well calibrated",
-      "Integrates with Docs and WordPress"
+      "Unlimited users and projects on every plan",
+      "Add-on pages and drafts are published rates, not quotes",
+      "No contract; monthly plans can be cancelled anytime"
     ],
     "cons": [
-      "Expensive for the scope it covers",
-      "Only useful if you publish regularly",
-      "Encourages writing to a score"
+      "Entry price is high for a single-writer team",
+      "Add-ons cost more on the cheaper plan",
+      "SSO and crawler whitelisting are Enterprise-only"
     ],
-    "targetAudience": "Content teams with budget who publish consistently.",
-    "verdict": "The most respected tool in its narrow lane. Writing to the grade rather than the reader is the trap.",
+    "targetAudience": "Content and SEO teams optimising for both search engines and AI answers.",
+    "verdict": "Priced for teams, not individuals, but the unlimited-seat model means a whole content team can use it for one subscription. Do the add-on maths before staying on Essentials.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Clearscope — Pricing",
+          "label": "Clearscope — Plans & Pricing",
           "url": "https://www.clearscope.io/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "14-day free trial, no contracts, stated as no hidden costs",
+            "Essentials $129/month: 50 tracked prompts, 50 pages, 20 monthly topic explorations, 20 monthly drafts",
+            "Business $399/month: 300 tracked prompts, 300 pages, 50 monthly topic explorations, dedicated account manager",
+            "Enterprise custom pricing: everything in Business plus custom credits, custom agreements, crawler whitelisting and single sign-on",
+            "Users and projects are unlimited on Essentials, Business and Enterprise alike",
+            "Additional pages are sold in blocks of 100 to 5,000 at $25/mo on Essentials and $15/mo on Business, custom on Enterprise",
+            "Additional drafts are sold in blocks of 10 to 500 at $50 on Essentials and $20 on Business",
+            "Every plan includes prompt tracking, brand visibility tracking, query fan-out awareness, free training and onboarding, priority support and unlimited sharing and exporting",
+            "Payment is by credit card; invoicing is available on a yearly custom plan"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The add-on selector maps block sizes to prices client-side, so only the per-plan add-on rates could be read, not the price of each individual block."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
-        "title": "Content grading",
-        "description": "Scores a draft on term coverage against ranking pages."
+        "title": "Prompt tracking",
+        "description": "Tracks specific prompts across ChatGPT and Gemini to see when the brand is mentioned."
       },
       {
-        "title": "Term recommendations",
-        "description": "Lists concepts competitors cover that the draft omits."
+        "title": "Content optimisation reports",
+        "description": "Search-intent-driven recommendations for pages being written or refreshed."
       },
       {
-        "title": "Editor integrations",
-        "description": "Grades drafts inside common writing tools."
+        "title": "Query fan-out data",
+        "description": "Shows the web searches AI platforms trigger while building an answer."
       }
-    ]
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Content teams of any size: users and projects are unlimited on every plan, so the cost does not grow with headcount",
+      "Small teams publishing at a steady pace — Essentials at $129 a month covers 50 pages and 50 tracked prompts",
+      "Agencies and in-house teams at volume: Business at $399 covers 300 pages and 300 prompts and adds a dedicated account manager",
+      "Buyers who want to expand predictably, since extra pages and drafts have published add-on rates rather than a quote"
+    ],
+    "skipIf": [
+      "You are a single writer — the entry plan is $129 a month and there is no cheaper individual tier",
+      "You expect to lean on add-ons from Essentials: extra pages cost $25 a month there against $15 on Business, and drafts $50 against $20",
+      "You need SSO or crawler whitelisting, which are Enterprise features at custom pricing",
+      "Your workflow needs many drafts: Essentials includes 20 a month and Business is not listed with an unlimited allowance"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Clearscope cost?",
+        "cevap": "Essentials is $129 a month and Business $399 a month, both with unlimited users and projects and a 14-day free trial. Enterprise is custom priced."
+      },
+      {
+        "soru": "Does Clearscope charge per user?",
+        "cevap": "No. Users and projects are unlimited on every plan; the meter is usage — tracked prompts, pages, topic explorations and drafts per month."
+      },
+      {
+        "soru": "What are Clearscope's add-on prices?",
+        "cevap": "Additional pages are $25 a month on Essentials and $15 a month on Business; additional drafts are $50 on Essentials and $20 on Business. Enterprise add-ons are custom."
+      },
+      {
+        "soru": "Does Clearscope require a contract?",
+        "cevap": "No. The vendor states there is no minimum contract on monthly plans and they can be cancelled at any time; yearly custom plans can be invoiced."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "hypefury",
