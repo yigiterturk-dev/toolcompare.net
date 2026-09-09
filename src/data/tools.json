@@ -1387,21 +1387,45 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "ElevenLabs — Pricing",
-          "url": "https://elevenlabs.io/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.elevenlabs.io/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0/month: text to speech, speech to text, sound effects, voice design, music, productions, image, 3 projects in Studio, 10k credits",
+            "Starter $6: everything in Free plus commercial licence, instant voice cloning, 20 projects in Studio, music commercial use, dubbing studio, image and video, 30k credits",
+            "Creator $22 (first month 50% off, $11): everything in Starter plus professional voice cloning, additional credits, 121k credits",
+            "Pro $99: everything in Creator plus 44.1kHz PCM audio output via API, 192kbps quality audio, 600k credits",
+            "Scale $299: everything in Pro plus 3 workspace seats, team collaboration, 3 professional voice clones, 1.8M credits",
+            "Business $990: everything in Scale plus low-latency TTS as low as 5c/minute, 10 professional voice clones, 10 workspace seats, 6M credits",
+            "Enterprise custom: DPA/SLA terms, BAAs for HIPAA customers, custom SSO, more seats and voices, elevated concurrency limits, fully managed dubbing, priority support",
+            "Monthly and yearly billing offered; prices exclude all taxes, levies and duties",
+            "Startup Grants Program: 12 months free and 33M characters for eligible startups"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Trying voice AI at no cost: Free is $0/month with 10k credits, 3 Studio projects and access to text to speech, speech to text, sound effects, voice design and music",
+      "Creators who need to publish commercially — Starter at $6/month adds the commercial licence, instant voice cloning, dubbing studio and 30k credits",
+      "Production work: Creator at $22/month adds professional voice cloning and 121k credits, and Pro at $99/month adds 44.1kHz PCM output via API, 192kbps audio and 600k credits"
+    ],
+    "skipIf": [
+      "You need seats — the individual tiers are single-user; workspace seats start at Scale ($299/month, 3 seats) and Business ($990/month, 10 seats)",
+      "You need HIPAA BAAs, custom SSO or elevated concurrency limits, which are only on the custom Enterprise tier",
+      "Your usage is spiky: everything is metered in credits, so the plan you need is set by volume rather than by feature"
+    ],
+    "sss": [
+      {
+        "soru": "How much does ElevenLabs cost and what do credits buy?",
+        "cevap": "Free is $0/month with 10k credits, Starter $6 with 30k, Creator $22 with 121k (first month 50% off at $11), Pro $99 with 600k, Scale $299 with 1.8M credits and 3 workspace seats, and Business $990 with 6M credits and 10 seats. Enterprise is custom. Credits are the unit everything draws on, so the tier you need is driven by volume rather than features. The commercial licence and instant voice cloning start at Starter; professional voice cloning starts at Creator. Prices exclude taxes, levies and duties."
+      }
+    ]
   },
   {
     "slug": "midjourney",
@@ -8235,21 +8259,42 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Replit — Pricing",
           "url": "https://replit.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter: Free, daily agent credits, built-in database, publish 1 live project, run one background task at a time",
+            "Core $20/month or $17/month billed annually: AI integrations, more free agent usage, $20 towards most powerful models, plan mode, unlimited workspaces, removes 'Made with Replit' badge",
+            "Pro $100/month or $95/month billed annually: 10 parallel agents, premium support, even more free agent usage, $100 towards most powerful models, up to 15 collaborators, invite up to 50 viewers, database rollback up to 28 days",
+            "Enterprise custom: enterprise-grade security and control, custom seat limits, SSO/SAML, advanced privacy controls, single-tenant environments, static outbound IPs",
+            "Annual billing advertised as up to 15% off; prices subject to tax depending on location",
+            "Effort-Based Pricing (pay-as-you-go) is documented alongside the plans"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Trying the agent workflow free: Starter includes daily agent credits, a built-in database, one live published project and one background task at a time",
+      "Solo builders — Core at $20/month ($17 billed annually) adds unlimited workspaces, plan mode, $20 towards the most powerful models and removes the 'Made with Replit' badge",
+      "Small teams shipping fast: Pro at $100/month ($95 annually) runs 10 parallel agents, allows up to 15 collaborators and 50 viewers, and keeps 28 days of database rollback"
+    ],
+    "skipIf": [
+      "You need SSO/SAML, single-tenant environments, static outbound IPs or advanced privacy controls — all Enterprise, which is custom-priced",
+      "You want a fixed monthly bill: the subscription includes a model-credit allowance and beyond that Replit uses effort-based pay-as-you-go pricing",
+      "You are on Starter and expect to ship several apps — it publishes one live project and runs one background task at a time"
+    ],
+    "sss": [
+      {
+        "soru": "What does Replit cost and how do the credits work?",
+        "cevap": "Starter is free with daily agent credits, one live published project and one background task at a time. Core is $20/month, or $17/month billed annually, and includes $20 towards the most powerful models plus unlimited workspaces and plan mode. Pro is $100/month, or $95 annually, includes $100 towards models, runs 10 parallel agents and allows up to 15 collaborators. Enterprise is custom. Usage beyond the included credit allowance is billed on Replit's effort-based pay-as-you-go pricing, and prices are subject to tax by location."
+      }
+    ]
   },
   {
     "slug": "surfer-seo",
@@ -16231,21 +16276,29 @@
     "targetAudience": "Small teams that want support to feel personal.",
     "verdict": "Excellent for human-feeling support. If you need queues, SLAs and routing rules, look heavier.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
           "label": "Help Scout — Pricing",
           "url": "https://www.helpscout.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "User limits by plan: up to 5, up to 25, up to 50, unlimited (minimum 10)",
+            "Inboxes: 1 on Free, 2 included on the next tier, 5, then 10; maximums by plan Free 1, Standard 20, Plus 50, Pro unlimited; additional inboxes $10/mo",
+            "Contacts: 100/mo on the free tier, unlimited on paid tiers; multiple conversations with the same person count as one contact",
+            "Light users let teammates view conversations and collaborate without taking a full user seat; maximums Plus 25, Pro 50; 5 and 15 included on the respective tiers",
+            "Saved replies limited to 10 on the entry tier",
+            "Advanced permissions and Teams (assign conversations and report by group) listed on higher tiers",
+            "AI Answers is a paid add-on with its own cost line in the vendor's ROI calculator"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No per-seat price is quoted: the plan price cards render client-side and only the feature comparison table was present in the page text.",
+        "Figures in the vendor's ROI calculator are marketing projections, not prices, and are not recorded here."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -16259,6 +16312,22 @@
       {
         "title": "Docs knowledge base",
         "description": "Publishes help articles and suggests them in chat."
+      }
+    ],
+    "bestFor": [
+      "Very small support teams: the free tier covers up to 5 users with 1 shared inbox and 100 contacts a month",
+      "Teams that outgrow one inbox — Standard allows up to 25 users and 2 inboxes with unlimited contacts, and Plus raises it to 50 users, 5 inboxes and 25 light users",
+      "Companies that want collaborators without paying for seats: light users can view conversations and collaborate without taking a full user seat, 15 included on Pro"
+    ],
+    "skipIf": [
+      "You need many shared inboxes — they are capped per plan (1 on Free, 20 on Standard, 50 on Plus, unlimited on Pro) and extra inboxes are $10/month each",
+      "Your contact volume is high and you wanted to stay free: the free tier caps contacts at 100 per month",
+      "You want Pro for a small team — Pro is unlimited users but carries a minimum of 10"
+    ],
+    "sss": [
+      {
+        "soru": "How many users and inboxes does each Help Scout plan allow?",
+        "cevap": "The free tier covers up to 5 users with 1 inbox and 100 contacts per month. Standard allows up to 25 users, 2 included inboxes (maximum 20) and unlimited contacts. Plus allows up to 50 users, 5 included inboxes (maximum 50) and 25 light users. Pro is unlimited users with a minimum of 10, 10 included inboxes and unlimited inboxes overall, plus 15 light users included. Additional inboxes cost $10/month on every paid tier. Light users can view conversations and collaborate without consuming a full seat."
       }
     ]
   },
