@@ -11970,21 +11970,27 @@
     "targetAudience": "Small businesses with large lists who send occasionally.",
     "verdict": "The send-based pricing is genuinely better for big, quiet lists.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
           "label": "Brevo — Pricing",
           "url": "https://www.brevo.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free forever plan, no credit card needed, positioned for individuals and solopreneurs",
+            "Starter: from 5,000 emails per month, email and transactional messages, drag-and-drop editor, templates, AI content generator, advanced segmentation, forms, basic reporting, email support, no Brevo logo",
+            "SMS credit sold separately from the plan",
+            "Standard: everything in Starter plus unlimited multi-step marketing automation workflows and A/B testing",
+            "Yearly billing discounted 10% versus monthly",
+            "150+ integrations including Shopify, WordPress, Stripe and Zapier"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price is quoted: the monthly figures render client-side and were not present in the page text."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -11999,6 +12005,16 @@
         "title": "Built-in CRM",
         "description": "Keeps a light contact and deal record without a separate system."
       }
+    ],
+    "bestFor": [
+      "Solo creators starting out — the free plan needs no credit card and is positioned for individuals building an online presence",
+      "Small teams sending across channels: Starter covers email and transactional messages with the drag-and-drop editor, templates, forms and advanced segmentation",
+      "Businesses ready to automate: Standard adds unlimited multi-step automation workflows and A/B testing on top of Starter"
+    ],
+    "skipIf": [
+      "You need SMS included — Brevo sends SMS but the credits are sold separately from the plan",
+      "You want your logo-free sending on the cheapest tier: removing the Brevo logo is a paid item rather than a default",
+      "Your volume is unpredictable — Starter is quoted from 5,000 emails per month and the plan price moves with the send volume you pick"
     ]
   },
   {
@@ -12815,7 +12831,40 @@
       "No built-in calendar"
     ],
     "targetAudience": "Individuals on Apple hardware who want a considered personal task system.",
-    "verdict": "The most refined personal task manager. Buy it knowing it will never be a team tool."
+    "verdict": "The most refined personal task manager. Buy it knowing it will never be a team tool.",
+    "bestFor": [
+      "People who want to own a task manager outright instead of renting it — Things is a one-time purchase per platform, not a subscription",
+      "Apple-only users: it ships for Mac, iPhone, Apple Watch, iPad and Vision Pro, with sync across those devices",
+      "Anyone who values interface craft — the app has twice won an Apple Design Award"
+    ],
+    "skipIf": [
+      "Your team is mixed-platform: there is no Windows, Android or web version, so shared workflows break down",
+      "You want one purchase to cover everything — Mac, iPhone/Watch, iPad and Vision Pro are sold as separate apps",
+      "You need collaboration, assignees or shared projects; Things is built as a personal task manager"
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "sources": [
+        {
+          "label": "Cultured Code — Things",
+          "url": "https://culturedcode.com/things/",
+          "supports": [
+            "Positioned as a personal task manager for planning your day and managing projects",
+            "Sold per platform: Things for Mac, for iPhone, for Apple Watch, for iPad, for Vision Pro — separate products with separate prices",
+            "Apple platforms only; no Windows, Android or web client listed",
+            "Twice honored with the Apple Design Award",
+            "One-time purchase through the App Store rather than a subscription",
+            "Supports Shortcuts, keyboard shortcuts, fast sync and Markdown notes in projects and tasks"
+          ],
+          "checkedAt": "2026-09-09"
+        }
+      ],
+      "limitations": [
+        "Vendor product page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price is quoted: the page links out to the App Store to 'view in your currency' and showed a temporary Mac discount when fetched."
+      ],
+      "reviewedAt": "2026-09-09"
+    }
   },
   {
     "slug": "omnifocus",
@@ -14271,22 +14320,48 @@
       }
     ],
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "vendor-sourced",
       "sources": [
         {
-          "label": "Hetzner — Pricing",
-          "url": "https://www.hetzner.com/cloud/",
-          "checkedAt": "2026-09-03",
+          "label": "Hetzner — Cloud",
+          "url": "https://www.hetzner.com/cloud",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Plan families: Shared (Cost-Optimized, Regular Performance) and Dedicated (General Purpose)",
+            "Shared plans recommended for test/dev, personal sites, small databases, low-to-moderate traffic web servers",
+            "Dedicated vCPUs for constantly high CPU usage: high-traffic sites, large databases, game servers, machine learning",
+            "Stateful firewalls without additional costs, assignable to unlimited cloud servers",
+            "REST API and CLI; integrations for Python, Go, Ansible, Terraform, Kubernetes",
+            "Private networks for server-to-server communication; GDPR-compliant, made in Germany"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor product page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Plans and limits change.",
+        "No price is quoted: the plan table and price calculator render client-side and the page prices per location and currency."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Teams that can run their own stack and want European data centres with GDPR-compliant hosting",
+      "Bandwidth-heavy or always-on workloads: firewalls, private networks and the REST API are included at no extra charge",
+      "Projects that outgrow shared vCPUs — the Dedicated (General Purpose) line assigns unshared vCPUs for sustained high CPU load"
+    ],
+    "skipIf": [
+      "You want managed databases, queues or serverless — Hetzner Cloud covers compute, storage and networking, you assemble the rest",
+      "You need many regions or an edge footprint; the location list is short compared with the hyperscalers",
+      "You need a published USD figure before deciding — the site prices per location and currency, and the plan table renders client-side"
+    ],
+    "sss": [
+      {
+        "soru": "What is the difference between Hetzner's shared and dedicated cloud plans?",
+        "cevap": "Shared plans (Cost-Optimized and Regular Performance) run on hardware whose CPU resources are shared with other tenants. Hetzner recommends them for test and development environments, personal sites, small databases and web servers with low to moderate traffic — variable usage rather than sustained load. Dedicated plans (General Purpose) assign unshared vCPUs, which Hetzner positions for constantly high CPU usage: high-traffic sites, large databases, game servers, machine learning and bulk data processing."
+      },
+      {
+        "soru": "Does Hetzner Cloud charge extra for firewalls, private networks or the API?",
+        "cevap": "No. Hetzner lists stateful firewalls as available without additional costs, and once configured a firewall can be assigned to as many cloud servers as you like. Private networks, the developer REST API, the CLI tool and integrations for Python, Go, Ansible, Terraform and Kubernetes are all listed as included functions rather than paid add-ons."
+      }
+    ]
   },
   {
     "slug": "fastly",
@@ -19088,23 +19163,39 @@
     "targetAudience": "Teams that want consistent code standards enforced rather than argued.",
     "verdict": "Effective once tuned. Left at defaults it produces warnings people learn to ignore.",
     "evidence": {
-      "status": "open-source-verified",
-      "reviewedAt": "2026-09-03",
+      "status": "vendor-sourced",
       "sources": [
         {
-          "label": "SonarQube — Vendor page (free, open source)",
-          "url": "https://www.sonarsource.com/products/sonarqube/",
-          "checkedAt": "2026-09-03",
+          "label": "Sonar — SonarQube Server plans and pricing",
+          "url": "https://www.sonarsource.com/plans-and-pricing/sonarqube/",
           "supports": [
-            "the vendor's published pricing: the software is free and open source"
-          ]
+            "Self-hosted editions priced per instance, per year, based on your lines of code",
+            "Developer: recommended for 100K+ lines of code, 34 languages and frameworks, autodetect AI-generated code, AI Code Assurance, advanced bug detection",
+            "Enterprise: Developer plus 40 total languages, MISRA C++:2023 compliance, AI CodeFix, detailed project health insights, commercial and 24/7 support available — Contact sales",
+            "Data Center: Enterprise plus autoscaling based on demand and high availability, recommended for 20M+ lines of code",
+            "Supports one integration each for GitHub, GitLab, Bitbucket and Azure DevOps",
+            "IDE synchronization with SonarQube for IDE across VS Code, Visual Studio, IntelliJ, Eclipse, Cursor and Windsurf",
+            "SonarQube Cloud is the separate cloud-based product; SonarQube for IDE is a free extension"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
-        "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price is quoted: the figures render client-side and Enterprise and Data Center are contact-sales."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Teams that must keep source code in-house: SonarQube Server is self-hosted and licensed per instance, per year, based on lines of code",
+      "Codebases around 100K+ lines on Developer Edition — 34 languages and frameworks, AI-generated code detection and AI Code Assurance",
+      "Large estates: Enterprise adds 40 languages, MISRA C++:2023 compliance and project health insights; Data Center adds high availability and autoscaling"
+    ],
+    "skipIf": [
+      "You want a per-seat or usage price — licensing is per instance, per year, priced by lines of code, so cost tracks the codebase not the team",
+      "You need more than one connection per DevOps platform: an edition supports one integration each for GitHub, GitLab, Bitbucket and Azure DevOps",
+      "You do not want to run the server — SonarQube Cloud is the hosted product, a different SKU from the self-managed editions on this page"
+    ]
   },
   {
     "slug": "dribbble",
@@ -20734,21 +20825,27 @@
     "targetAudience": "Organisations with compliance requirements around credential handling.",
     "verdict": "Solid enterprise choice. Small teams get most of the value from cheaper tools.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
-          "label": "Keeper — Pricing",
-          "url": "https://www.keepersecurity.com/pricing/business-and-enterprise.html?t=b",
-          "checkedAt": "2026-08-31",
+          "label": "Keeper Security — Business Pricing",
+          "url": "https://www.keepersecurity.com/pricing.html",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Business Starter: sole proprietors and small teams, protection for 5–10 users, encrypted vault and admin console, credential sharing and autofill",
+            "Business: all Business Starter features plus shared team folders, delegated administration, advanced organizational structure and integrations, free Family Plan for every user",
+            "Enterprise: all Business features plus advanced provisioning (SCIM, AD/LDAP, SSO/SAML), advanced two-factor authentication, role-based access control, developer APIs — Request a Quote",
+            "KeeperMSP for managing customer passwords, infrastructure secrets, endpoints and privileged access — Contact Sales",
+            "Free Family Plan covers up to 5 family members with unlimited devices",
+            "Vault transfer when an employee leaves; policy engine enforced by user, role or team"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price is quoted: the per-user figures render client-side and Enterprise and MSP are quote-only."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -20763,6 +20860,16 @@
         "title": "Compliance reporting",
         "description": "Produces access and audit reports for review."
       }
+    ],
+    "bestFor": [
+      "Sole proprietors and small teams: Business Starter covers 5–10 users with the encrypted vault, admin console, credential sharing and autofill",
+      "Companies that need shared team folders, delegated administration and a free Family plan for every employee — that tier is Business",
+      "Organisations with identity requirements: SCIM, AD/LDAP and SSO/SAML provisioning, role-based access control and developer APIs sit on Enterprise"
+    ],
+    "skipIf": [
+      "You are between 10 users and full enterprise governance — the jump from Business Starter is a whole tier, not a seat count",
+      "You need advanced provisioning or RBAC on a small budget: those are Enterprise features and Enterprise is quote-only",
+      "You want a published price before talking to anyone — the plan table renders client-side and Enterprise is 'Request a Quote' by design"
     ]
   },
   {
@@ -22422,21 +22529,27 @@
     "targetAudience": "Creators selling digital products who do not want a monthly bill.",
     "verdict": "A practical starting point, and the VAT handling saves real work.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
           "label": "Payhip — Pricing",
           "url": "https://payhip.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free Forever: +5% transaction fee, all features, unlimited products, unlimited revenue",
+            "Plus: +2% transaction fee; Pro: no transaction fee",
+            "All plans have the same features — no feature-gating, even on the free plan",
+            "PayPal and Stripe charge their standard rates on top, on all plans",
+            "EU VAT and UK VAT collected and remitted automatically on your behalf",
+            "Payouts deposited immediately after a transaction completes; cancel anytime"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No monthly price is quoted: the figures render client-side and were not present in the page text. The transaction-fee tiers were."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -22450,6 +22563,26 @@
       {
         "title": "Courses and memberships",
         "description": "Sells recurring access alongside one-off downloads."
+      }
+    ],
+    "bestFor": [
+      "Creators who want to launch without a monthly bill: the Free Forever plan carries a 5% transaction fee but has unlimited products and unlimited revenue",
+      "Sellers who dislike feature gating — Payhip states every plan includes all features, so the plan only changes the transaction fee",
+      "EU and UK sellers of digital goods: Payhip collects and remits EU and UK VAT on your behalf automatically"
+    ],
+    "skipIf": [
+      "Your volume is high and steady — a percentage of every sale eventually costs more than a flat platform fee, and Plus still takes 2%",
+      "You expect the platform fee to be the only cost: PayPal and Stripe charge their standard rates on top, on every plan",
+      "You need a published price before deciding — the monthly figures on the pricing page render client-side; only the fee tiers are in the page text"
+    ],
+    "sss": [
+      {
+        "soru": "Is Payhip really free, and what does the free plan cost you?",
+        "cevap": "Payhip's Free Forever plan has no monthly fee and no product or revenue cap, but it takes a 5% transaction fee on each sale. Plus reduces that to 2% and Pro removes it entirely. Payhip states that all plans include all features — unlimited products, unlimited revenue and the full toolset — so the plan you pick changes the fee, not what you can do. PayPal and Stripe fees are charged separately at their standard rates on every plan."
+      },
+      {
+        "soru": "Does Payhip handle VAT for digital products?",
+        "cevap": "Yes. Payhip says it is fully compliant to collect and remit EU VAT and UK VAT on your behalf automatically. Other taxes can be configured manually and Payhip reports those back to you rather than remitting them. Payouts are deposited immediately after a transaction completes."
       }
     ]
   },
