@@ -49,3 +49,19 @@ test("shortDescription yoksa da anlamli cumle uretilir", () => {
   assert.ok(d.includes("DBeaver"), d);
   assert.ok(d.length > 60, d);
 });
+
+// --- Kategori basligi: "Developer Tools" + " Tools" = "Tools Tools" idi.
+import { kategoriBasligi } from "../src/lib/meta.ts";
+
+test("adi Tools ile biten kategoride kelime tekrarlanmaz", () => {
+  assert.equal(kategoriBasligi("Developer Tools", 115), "Developer Tools in 2026: 115 Compared by Price");
+  assert.equal(kategoriBasligi("AI Tools", 40), "AI Tools in 2026: 40 Compared by Price");
+});
+
+test("adi Tools ile bitmeyen kategoride kelime eklenir", () => {
+  assert.equal(kategoriBasligi("Design", 12), "Design Tools in 2026: 12 Compared by Price");
+});
+
+test("Software ile biten kategoriye Tools eklenmez", () => {
+  assert.equal(kategoriBasligi("HR Software", 9), "HR Software in 2026: 9 Compared by Price");
+});

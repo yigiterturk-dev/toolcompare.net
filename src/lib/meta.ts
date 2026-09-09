@@ -56,3 +56,15 @@ export function metaAciklamasi(t: Arac): string {
 
   return kirp(parcalar.join(" "));
 }
+
+/**
+ * Kategori sayfasi basligi. Once sablon kosulsuz " Tools" ekliyordu;
+ * katalogdaki 14 kategorinin 4'u zaten "Tools" ile bittigi icin arama
+ * sonucunda "Developer Tools Tools in 2026" yaziyordu. Ad zaten bir
+ * urun kelimesiyle bitiyorsa ikincisi eklenmez.
+ */
+export function kategoriBasligi(ad: string, adet: number): string {
+  const bitiyor = /\b(tools?|software|platforms?|apps?)$/i.test(ad.trim());
+  const govde = bitiyor ? ad.trim() : `${ad.trim()} Tools`;
+  return `${govde} in 2026: ${adet} Compared by Price`;
+}

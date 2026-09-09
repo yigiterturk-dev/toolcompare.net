@@ -16,6 +16,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { kategoriBul, kategoriler, EN_AZ_ARAC } from "@/lib/categories";
+import { kategoriBasligi } from "@/lib/meta";
 import { kumeIcindekiCiftler, alternatifSayfasiOlan } from "@/lib/compare";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
 
   // "Best" DEMIYORUZ: sayfa fiyata gore siraliyor, kalite puanina gore
   // degil. Uydurma puan kaldirildi; basligin da onu yansitmasi gerekiyor.
-  const cekirdek = `${kategori.ad} Tools in 2026: ${kategori.araclar.length} Compared by Price`;
+  const cekirdek = kategoriBasligi(kategori.ad, kategori.araclar.length);
   const title = cekirdek.length <= 51 ? `${cekirdek} | ToolCompare` : cekirdek;
   const description = `${kategori.araclar.length} ${kategori.ad.toLowerCase()} tools compared on what they cost to start: monthly price, free tiers and usage-based plans. See the full list and who each one is for.`;
   const url = `/categories/${kategori.slug}`;
