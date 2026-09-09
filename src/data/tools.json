@@ -8591,21 +8591,42 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Mixpanel — Pricing",
           "url": "https://mixpanel.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free forever, no credit card: unlimited seats, up to 1M events/month, 10K session replays/month, up to 1k MEU/month for experiments, up to 10 active feature flags, funnels and retention analysis",
+            "Growth starts at $0, priced by an event-volume slider with volume discounts: up to 20M events/month, up to 500K session replays/month, 5k MEU/month included, up to 100k MEU/month for experiments, up to 50 active feature flags, unlimited saved cohorts, metrics and reports, up to 5 alerts",
+            "Enterprise quote-only: up to 1T events/month, custom session replay and experiment volumes, unlimited alerts and anomaly detection, data verification and quality monitoring, root cause analysis, Metric Trees, custom data and replay retention, dedicated success team, first-party tracking domains",
+            "Startup Program: companies founded less than 5 years ago with up to $8M total funding and no other offers redeemed get their first year free",
+            "Annual billing on Growth advertised as saving $480/yr"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The Growth plan's monthly figure comes from an interactive volume slider; no single headline price is quoted."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Teams validating product analytics for nothing: the Free plan is unlimited seats with up to 1M events/month, 10K session replays and up to 10 active feature flags",
+      "Growing products on Growth, which starts at $0 and scales by event volume up to 20M events/month with 500K session replays, unlimited saved cohorts and reports",
+      "Early-stage startups — companies founded less than 5 years ago with up to $8M in total funding get their first year free on the Startup Plan"
+    ],
+    "skipIf": [
+      "You need anomaly detection, root cause analysis, metric trees or custom retention policies — all Enterprise, which is quote-only",
+      "You dislike volume-based bills: the Growth price is driven by a monthly event slider, so cost tracks instrumentation volume rather than headcount",
+      "You want more than 5 alerts on a mid tier; alerts are capped on Growth and unlimited only on Enterprise"
+    ],
+    "sss": [
+      {
+        "soru": "Is Mixpanel's free plan actually usable?",
+        "cevap": "Yes, within volume limits. The Free plan has unlimited seats — unusual for analytics — with up to 1M events per month, 10K session replays per month, up to 1K monthly experiment users and up to 10 active feature flags, plus funnels and retention analysis. It requires no credit card. The Growth plan starts at $0 and is priced from an event-volume slider, raising limits to 20M events and 500K session replays per month; annual billing is advertised as saving $480/yr against monthly on that plan."
+      }
+    ]
   },
   {
     "slug": "logrocket",
@@ -12842,21 +12863,26 @@
     "targetAudience": "People with years of notes already inside it.",
     "verdict": "Hard to recommend for a new user today. Existing archives are the main reason to stay.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
-          "label": "Evernote — Pricing",
+          "label": "Evernote — Compare plans",
           "url": "https://evernote.com/compare-plans",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free: 50 notes, 1 notebook, 100 tags, 200 attachments, 1 synced device, 1 GB storage",
+            "Starter: 1,000 notes, 10 spaces, 3 synced devices, 5 GB storage",
+            "Advanced: unlimited notes; AI Assistant, Semantic Search, meeting recording with summaries and transcripts, AI Edit",
+            "Enterprise: custom limits",
+            "All tiers: apps for iOS, Android, Web, Windows and Mac; tasks, dates and reminders; Evernote Calendar with Google and Microsoft calendar connections; Boolean, geographic and filtered search; offline notes; PDF export"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor comparison page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price is quoted: the per-tier figures render client-side and were not present in the page text, so only the published limits are recorded."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -12870,6 +12896,22 @@
       {
         "title": "Cross-platform sync",
         "description": "Keeps the same archive on desktop, mobile and web."
+      }
+    ],
+    "bestFor": [
+      "People testing note-taking at no cost, accepting hard caps: Free allows 50 notes, 1 notebook-level workspace, 1 synced device and 1 GB of storage",
+      "Individuals who want the app on more than one machine — Starter lifts the cap to 1,000 notes, 3 synced devices and 5 GB of storage",
+      "Heavy users: Advanced removes the note limit entirely and adds the AI features (assistant, semantic search, meeting transcription and summaries)"
+    ],
+    "skipIf": [
+      "You expect a free plan you can live in — 50 notes and one synced device is a trial in practice, not a working tier",
+      "You work across a laptop, phone and tablet: Starter's 3-device cap is the first wall most people hit",
+      "You need custom limits or organisational controls, which sit on the separate Enterprise tier"
+    ],
+    "sss": [
+      {
+        "soru": "What are the limits on Evernote's free plan?",
+        "cevap": "Free is capped at 50 notes, 1 notebook, 1 synced device and 1 GB of storage, with 100 tags and 200 attachments. Starter raises this to 1,000 notes, 10 spaces, 3 synced devices and 5 GB of storage. Advanced makes notes unlimited and unlocks the AI features — AI assistant, semantic search, meeting recording with summaries and transcripts. Enterprise offers custom limits. All tiers include the iOS, Android, Web, Windows and Mac apps, tasks, reminders and the Evernote Calendar."
       }
     ]
   },
@@ -13730,21 +13772,28 @@
     "targetAudience": "People who want password management with monitoring built in.",
     "verdict": "Polished but priced above the competition. Bitwarden covers the essentials for far less.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
-          "label": "Dashlane — Pricing",
+          "label": "Dashlane — Business Password Manager Pricing",
           "url": "https://www.dashlane.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Two business tiers: Business (per user/month billed annually) and Omnix Enterprise (custom, volume-optimized pricing, dedicated account management, flexible packaging)",
+            "Business: protect employee passwords and passkeys, secure workforce password sharing, password policy management, SSO and SCIM integration",
+            "Credential Protection layer: credential risk detection and response, breach prevention, protection for domains outside SSO, AI phishing detection in the browser, integration with the existing security stack for remediation",
+            "Feature areas listed: secure vault and access controls, enforceable admin policies, SIEM integration, AI-powered autofill, password generator, secure sharing, password health dashboard, vault security alerts",
+            "Integrations: single sign-on, SCIM provisioning, Yubico, SIEM tools, KnowBe4, SOAR tools, IGA tools",
+            "Support tiers: expert email support 7 days a week, live chat, phone support, onboarding support, Customer Success Manager",
+            "14-day free trial offered on the business plan"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price is quoted: the per-user figure rendered as a placeholder ('--') when the page was fetched, and Enterprise is custom by design."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -13759,6 +13808,16 @@
         "title": "Passwordless login",
         "description": "Supports passkeys and device-based unlocking."
       }
+    ],
+    "bestFor": [
+      "Teams that want credential security rather than a plain vault: Dashlane's Business tier bundles password management with credential risk detection and phishing detection in the browser",
+      "Organisations already running an identity stack — SSO and SCIM provisioning, Yubico, SIEM and SOAR integrations are listed as plan features",
+      "Larger estates that want flexible packaging: the Omnix Enterprise tier is custom with volume-optimized pricing and dedicated account management"
+    ],
+    "skipIf": [
+      "You want to compare prices before contacting anyone — the per-user figures render client-side and the page showed placeholders when fetched",
+      "You need a simple, cheap vault: the product is positioned around risk detection and response, and the plan structure reflects that",
+      "You want phone support or a Customer Success Manager on the lower tier; those are listed against the higher tier"
     ]
   },
   {
@@ -20900,20 +20959,26 @@
     "verdict": "Still the most dependable pure file sync. If you already pay for Workspace or 365, storage is included there.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Dropbox — Pricing",
+          "label": "Dropbox — Plans",
           "url": "https://www.dropbox.com/plans",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Basic: Free, 2 GB to store and share files",
+            "Plus $9.99/month for 1 person: 2 TB storage, 30 days to restore deleted files, transfer files up to 50 GB, edit PDFs and get signatures, integrate with leading AI tools",
+            "Standard $15/user/month for 1 person or more: starts at 3 TB for the team, 180 days restore, 100 GB transfers, brand files to share, password protect files, team folders, groups and roles, admin control",
+            "Advanced $24/user/month for 3 people or more: starts at 15 TB for the team, 1 year history, tiered-admin management, end-to-end encryption, advanced key management, compliance tracking, single sign-on",
+            "Enterprise: contact us for pricing, enterprise-grade security and dedicated live support",
+            "Common to plans: 256-bit AES and SSL/TLS encryption, multi-factor authentication, remote device wipe, ransomware detection and recovery, HIPAA compliance enablement listed on higher tiers",
+            "Billing cycle toggle: billed monthly or billed yearly"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -20927,6 +20992,22 @@
       {
         "title": "File recovery",
         "description": "Restores previous versions and deleted files within a retention window."
+      }
+    ],
+    "bestFor": [
+      "One person who needs real storage: Plus is $9.99/month for 2 TB with 30 days to restore deleted files and file transfers up to 50 GB",
+      "Small teams — Standard at $15 per user/month starts at 3 TB for the team, extends restore history to 180 days and adds team folders, groups, roles and admin control",
+      "Companies with compliance needs: Advanced at $24 per user/month starts at 15 TB, keeps a year of version history and adds single sign-on, end-to-end encryption, advanced key management and compliance tracking"
+    ],
+    "skipIf": [
+      "You only need a little space — the free Basic plan is 2 GB, which is small enough that it functions as a trial rather than a plan",
+      "You want SSO or HIPAA compliance without jumping two tiers: those sit on Advanced, not Standard",
+      "You have fewer than 3 people and wanted Advanced — it is sold for 3 people or more"
+    ],
+    "sss": [
+      {
+        "soru": "How much storage do you get on each Dropbox plan?",
+        "cevap": "Basic is free with 2 GB. Plus is $9.99/month for one person with 2 TB. Standard is $15 per user/month and starts at 3 TB for the team. Advanced is $24 per user/month for 3 people or more and starts at 15 TB for the team. Enterprise is contact-sales. Version history and restore windows scale with the plan too: 30 days on Plus, 180 days on Standard and 1 year on Advanced."
       }
     ]
   },
@@ -40512,20 +40593,24 @@
     "verdict": "The least annoying time tracker, which is the only quality that matters in one.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Toggl Track — Pricing",
           "url": "https://toggl.com/track/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0 for a limited number of users: manual and real-time timers, focus mode, calendar integrations, tasks, boards and task estimates, Google and Outlook Calendar integrations, personal-level reports",
+            "Starter $9 per user per month, 30-day trial: billable rates, team-level productivity and revenue reports, timeline views, tags and milestones, capacity basics (PTO, public holidays, flexible hours), team visibility and team reports",
+            "Premium $16 per user per month: labour costs and profitability reports, fixed fee projects, project dashboards with actuals vs estimates, timesheet approvals, data accuracy features, Jira and Asana integrations, single sign-on",
+            "Enterprise contact us: personalised onboarding, dedicated customer success manager, custom solutions and custom roles",
+            "Annual billing advertised as 4 months free, a 33.3% saving versus monthly"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": null,
@@ -40549,6 +40634,22 @@
       {
         "title": "Idle detection",
         "description": "Prompts to discard or assign time when the machine was idle."
+      }
+    ],
+    "bestFor": [
+      "Individuals and very small groups: the Free plan covers a limited number of users with manual and real-time timers, focus mode, calendar integrations and personal reports",
+      "Teams that bill clients — Starter at $9 per user per month adds billable rates, team-level productivity and revenue reports, timeline views, tags, milestones and PTO/holiday capacity basics",
+      "Agencies watching margins: Premium at $16 per user per month adds labour costs and profitability reports, fixed fee projects, project dashboards, timesheet approvals, Jira and Asana integrations and SSO"
+    ],
+    "skipIf": [
+      "You need SSO or timesheet approvals on a budget — both are Premium features, two tiers above Free",
+      "Your team is larger than the free plan's user cap, which is limited rather than unlimited",
+      "You want monthly billing at the headline rate: the advertised saving is 33.3% and comes from paying annually (4 months free)"
+    ],
+    "sss": [
+      {
+        "soru": "What does Toggl Track cost per user?",
+        "cevap": "The Free plan is $0 for a limited number of users. Starter is $9 per user per month and Premium is $16 per user per month, both with a 30-day trial. Enterprise is contact-sales with personalised onboarding, a dedicated customer success manager and custom roles. Toggl advertises 4 months free — a 33.3% saving — for annual billing rather than monthly."
       }
     ]
   },
