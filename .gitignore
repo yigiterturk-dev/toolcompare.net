@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 .data/
 src/data/subscribers.json
+
+# nocturn-audit raporlari (yerel olcum ciktisi, depoya girmez)
+report/
