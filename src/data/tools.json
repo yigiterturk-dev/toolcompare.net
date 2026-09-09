@@ -1728,21 +1728,45 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "1Password — Pricing",
-          "url": "https://1password.com/pricing",
-          "checkedAt": "2026-08-31",
+          "label": "1Password — Business & Teams Pricing",
+          "url": "https://1password.com/business-pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Teams Starter Pack $24.95, includes 10 members per month, paid annually; add up to 10 additional seats at per member pricing",
+            "Teams Starter Pack includes: password and sensitive data sharing, actionable security alerts, role-based permissions, 1Password Developer tools, onboarding support",
+            "1Password Business $8.99 per user, per month, paid annually: everything from Teams Starter Pack plus Okta, Entra ID, OneLogin and Duo integration, role-based vault sharing and permissions, Watchtower alerts",
+            "Enterprise is talk to sales; 14-day free trial on paid plans",
+            "Available via Buy with AWS for consolidated billing",
+            "Separate Enterprise Password Manager MSP Edition with a dedicated MSP console and consumption-based billing, no license minimums",
+            "Platform coverage: macOS, iOS, watchOS, Windows, Android, Linux; extensions for Chrome, Safari, Edge, Firefox, Brave",
+            "Developer tooling: SSH key signing, Git commit signing, CLI and SDKs"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The page offers USD, CAD and EUR and stores data in your currency's region; the USD figures are recorded."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Small teams that want a fixed bill: the Teams Starter Pack is $24.95 per month paid annually and includes 10 members, with additional seats at per-member pricing",
+      "Companies needing identity integration — 1Password Business at $8.99 per user/month paid annually connects to Okta, Entra ID, OneLogin and Duo",
+      "Developer-heavy teams: SSH key signing, Git commit signing, the CLI and SDKs are listed as included developer tooling rather than an add-on"
+    ],
+    "skipIf": [
+      "You are just over 10 people — the Starter Pack's flat rate stops being the cheap option once you add seats at per-member pricing",
+      "You want a free tier: there is none, only a 14-day trial",
+      "You are a managed service provider expecting the standard plan to fit — MSPs are steered to a separate Enterprise Password Manager MSP Edition with consumption-based billing"
+    ],
+    "sss": [
+      {
+        "soru": "How much does 1Password cost for a business?",
+        "cevap": "The Teams Starter Pack is $24.95 per month paid annually and includes 10 members, with up to 10 additional seats available at per-member pricing. 1Password Business is $8.99 per user per month paid annually and adds integrations with Okta, Entra ID, OneLogin and Duo, role-based vault sharing and permissions, and Watchtower security hygiene alerts. Enterprise is talk-to-sales. Both paid plans offer a 14-day free trial, and 1Password Business can also be purchased through AWS Marketplace."
+      }
+    ]
   },
   {
     "slug": "hotjar",
@@ -3524,21 +3548,41 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Trello — Pricing",
           "url": "https://trello.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free: up to 10 collaborators per Workspace, unlimited cards, up to 10 boards per Workspace, unlimited Power-Ups per board, unlimited storage at 10MB/file, 250 Workspace command runs per month, unlimited activity log, iOS and Android apps, 2-factor authentication",
+            "Standard: '$6 billed monthly', lower per user/month if billed annually — unlimited boards, AI, advanced checklists, card mirroring, custom fields, list colors, collapsible lists, unlimited storage at 250MB/file, 1,000 Workspace command runs per month, single board guests, saved searches",
+            "Premium $10 per user/month if billed annually ($12.50 billed monthly): Calendar, Timeline, Table, Dashboard and Map views, Workspace views, unlimited Workspace command runs, admin and security features, Workspace-level templates, collections, observers, simple data export",
+            "Enterprise $17.50 per user/month billed annually ($210.00 annual price per user): unlimited Workspaces, organization-wide permissions, public board management, multi-board guests, attachment permissions, Power-Up administration, free SSO and user provisioning with Atlassian Guard, 24/7 Enterprise Admin support"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The Standard annual per-user figure is rendered separately from its label on the page and is not quoted; only the explicit '$6 billed monthly' is recorded."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Small groups working for free: up to 10 collaborators per Workspace with unlimited cards, 10 boards, unlimited Power-Ups and 250 Workspace command runs per month",
+      "Teams that hit the board cap — Standard ($6 per user/month billed monthly, less annually) gives unlimited boards, advanced checklists, custom fields and 1,000 command runs",
+      "Teams that need views: Premium at $10 per user/month billed annually ($12.50 monthly) adds Calendar, Timeline, Table, Dashboard and Map views plus unlimited command runs and admin controls"
+    ],
+    "skipIf": [
+      "You need SSO and user provisioning below the top tier — those come with Atlassian Guard on Enterprise at $17.50 per user/month billed annually ($210.00 per user per year)",
+      "You attach large files: storage is unlimited but capped per file at 10MB on Free and 250MB on Standard",
+      "Your Workspace has more than 10 collaborators and you wanted to stay free — that is the hard limit on the Free plan"
+    ],
+    "sss": [
+      {
+        "soru": "What are the limits of Trello's free plan?",
+        "cevap": "Free covers up to 10 collaborators per Workspace with unlimited cards, up to 10 boards per Workspace, unlimited Power-Ups per board, unlimited storage with a 10MB per-file cap, 250 Workspace command runs per month, unlimited activity log, assignee and due dates, iOS and Android apps and two-factor authentication. The board count and the collaborator count are the two limits most teams hit first."
+      }
+    ]
   },
   {
     "slug": "jira",
@@ -5344,21 +5388,44 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Sentry — Pricing",
-          "url": "https://sentry.io/pricing/?",
-          "checkedAt": "2026-08-31",
+          "url": "https://sentry.io/pricing/",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Developer: Free $0, limited to one user, error monitoring and tracing, alerts and notifications via email, 10 custom dashboards, MCP access",
+            "Team $26/mo when billed annually with default pre-paid data: Developer features plus unlimited users, API and third-party integrations, 20 custom dashboards, Seer AI debugging agent (subscription required)",
+            "Business $80/mo: Team features plus unlimited custom dashboards, advanced quota management, SAML + SCIM support",
+            "Enterprise custom: Business features plus technical account manager and dedicated customer support",
+            "Quotas: 5k errors on Developer, 50k errors on Team; 50 replays, 1 uptime monitor and 1 cron monitor on the free tier",
+            "Overage pricing: +$0.50/GB additional, +$1.00/uptime alert additional, +$0.78/monitor additional, +$0.25/hr UI profiling, +$0.0315/hr continuous profiling",
+            "Spend notifications and maximum spend threshold available; annual billing offered alongside monthly"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Sentry's price scales with the pre-paid data volume selected; the quoted figures are the default pre-paid data amounts shown on the page."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Solo developers: the Developer plan is free for one user with error monitoring and tracing, email alerts, 10 custom dashboards and MCP access",
+      "Growing teams — Team at $26/month billed annually lifts you to unlimited users, 50k errors, API and third-party integrations and 20 custom dashboards",
+      "Teams that need governance: Business at $80/month adds unlimited custom dashboards, advanced quota management and SAML with SCIM support"
+    ],
+    "skipIf": [
+      "You want one predictable bill — quotas are pre-paid and overage is metered per unit: $0.50 per additional GB, $1.00 per additional uptime alert, $0.78 per additional cron monitor, $0.25/hr for UI profiling",
+      "You are on Developer and expect to grow: it is limited to one user and 5k errors, and unlimited users only start at Team",
+      "You need SAML or SCIM below Business, or a technical account manager and dedicated support below Enterprise"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Sentry cost and what counts towards the bill?",
+        "cevap": "Developer is free for one user. Team is $26/month when billed annually with the default pre-paid data, and Business is $80/month; Enterprise is custom. The monthly price buys a data allowance rather than seats above Team — Developer includes 5k errors, Team 50k — and usage beyond it is billed per unit: $0.50 per additional GB, $1.00 per additional uptime alert, $0.78 per additional cron monitor and $0.25/hr for UI profiling. Spend notifications and a maximum spend threshold are available so the metered part does not run away."
+      }
+    ]
   },
   {
     "slug": "firebase",
@@ -7979,21 +8046,43 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Linear — Pricing",
           "url": "https://linear.app/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free: unlimited members, 2 teams, 250 issues, 10MB file upload, agent platform, Linear Agent",
+            "Basic $10 per user/month billed yearly: all Free features plus 5 teams, unlimited issues, unlimited file uploads, admin roles",
+            "Business $16 per user/month: all Basic plus unlimited teams, private teams and guests, Triage Intelligence, Loops, Code Intelligence, Linear Insights, Linear Asks, Zendesk and Intercom integrations",
+            "Enterprise custom, annual billing only: invoice/PO billing, SAML and SCIM, granular admin controls, advanced org modeling, migration and onboarding support, priority support, account management",
+            "SSO: Google on lower tiers, Google + SAML on Business; SCIM provisioning, IP restrictions, domain claiming and audit log listed above Business",
+            "Sub-teams: 1 level on Basic, 5 levels on Business",
+            "Coding sessions and Loops require AI credits"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Small teams testing the workflow: Free covers unlimited members but caps you at 2 teams and 250 issues",
+      "Teams that outgrow the issue cap — Basic at $10 per user/month billed yearly lifts issues and file uploads to unlimited and allows 5 teams",
+      "Companies running many squads: Business at $16 per user/month adds unlimited teams, private teams and guests, Triage Intelligence, Linear Insights, Linear Asks and Zendesk/Intercom integrations"
+    ],
+    "skipIf": [
+      "You need SAML or SCIM — SSO on Business is Google plus SAML, but SCIM provisioning, IP restrictions, domain claiming and audit logs are Enterprise, which is annual-only and quote-based",
+      "You want deep sub-team structure on a mid plan: Basic allows 1 level of sub-teams and Business 5, with unlimited only above",
+      "You plan to lean on the AI features — coding sessions and Loops require AI credits on top of the seat price"
+    ],
+    "sss": [
+      {
+        "soru": "What does Linear's free plan actually limit?",
+        "cevap": "Linear's Free plan allows unlimited members, which is unusual, but caps you at 2 teams and 250 issues with a 10MB file upload limit. Core features — issues, projects, cycles, initiatives, customer requests, API and webhook access, import and export — are included. Basic at $10 per user/month billed yearly raises this to 5 teams with unlimited issues and unlimited file uploads plus admin roles; Business at $16 per user/month removes the team limit entirely."
+      }
+    ]
   },
   {
     "slug": "typeform",
@@ -12667,20 +12756,26 @@
     "verdict": "Directly comparable with Plausible; pick on price and data residency, since capability is close.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Fathom Analytics — Pricing",
           "url": "https://usefathom.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "$15/m up to 100,000 monthly page views; $25/m 200,000; $45/m 500,000; $60/m 1,000,000; $100/m 2,000,000; $140/m 5,000,000; $200/m 10,000,000; $290/m 15,000,000; $380/m 20,000,000; $470/m 25,000,000; custom above 25,000,000",
+            "All plans include: 50 sites, 100% data ownership, no cookie banners required, unlimited email reports, full analytics history while subscribed, unlimited CSV data exports, privacy law compliance",
+            "Extra sites in packs of 50 for $10/month",
+            "7-day free trial; no free plan — stated explicitly",
+            "Switch to yearly for 2 months free; all pricing in USD, renews automatically",
+            "Events count towards monthly page views",
+            "No sales calls or live demos offered"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -12694,6 +12789,26 @@
       {
         "title": "EU data isolation",
         "description": "Offers processing routed through EU-owned infrastructure."
+      }
+    ],
+    "bestFor": [
+      "Site owners who want privacy-first analytics with no cookie banner: pricing starts at $15/month for up to 100,000 monthly page views and every plan includes 50 sites",
+      "Agencies and multi-site operators — 50 sites are included at every tier and extra sites come in packs of 50 for $10/month",
+      "Anyone who wants predictable cost as traffic grows: the ladder is published in full, from $15 at 100K page views to $470 at 25M, with custom pricing above that"
+    ],
+    "skipIf": [
+      "You need a free tier — Fathom states plainly that it does not offer one, because subscription fees are what pay for the product instead of selling data",
+      "You send a lot of custom events: events count towards your monthly page view allowance, so they push you up the pricing ladder",
+      "You want a sales call or a live demo before buying; Fathom does not offer either, only a 7-day trial and a walkthrough"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Fathom Analytics cost?",
+        "cevap": "Fathom prices on average monthly page views: $15 for up to 100,000, $25 for 200,000, $45 for 500,000, $60 for 1,000,000, $100 for 2,000,000, $140 for 5,000,000, $200 for 10,000,000, $290 for 15,000,000, $380 for 20,000,000 and $470 for 25,000,000, with custom pricing above that. Switching to yearly billing gives 2 months free. There is a 7-day free trial but no free plan. All pricing is in USD and events count towards your page view total."
+      },
+      {
+        "soru": "What is included at every Fathom plan level?",
+        "cevap": "Every plan includes 50 sites, 100% data ownership, no cookie banner requirement, unlimited email reports, full analytics history while subscribed, unlimited CSV data exports and privacy law compliance. Extra sites are sold in packs of 50 for $10/month. The plan you pick changes only the page view allowance, not the feature set."
       }
     ]
   },
