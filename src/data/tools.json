@@ -926,42 +926,37 @@
       "Templates",
       "Magic Media"
     ],
-    "basePrice": 12,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Design for everyone.",
-    "longDescription": "Canva has democratized design by making it possible for anyone to create professional-looking visuals. Its drag-and-drop interface and millions of templates allow non-designers to produce impressive social media posts, presentations, and reports in minutes. Unlike complex software like Photoshop, Canva is focused strictly on speed and results. With the addition of 'Magic Studio' AI tools, it has become a leader in automated content creation and intelligent image editing for everyday users.",
+    "longDescription": "Canva is a browser-based design tool whose free tier is wide enough to be a real product — over a million templates, millions of stock assets and 5 GB of storage — and whose paid tiers are drawn along three lines: how much premium content you can reach, how many Brand Kits you control, and how much AI you are allowed to consume. The AI allowance is the newest and least obvious axis: it is a shared pool consumed at different rates by Standard, Premium and Ultra tools, expressed as a multiple of the free plan rather than a number of generations, and it can be topped up with a paid AI Pass add-on.",
     "pros": [
-      "Extreme Ease of Use: Produce professional work without any formal design training.",
-      "Massive Asset Library: Includes millions of free stock photos, videos, and fonts.",
-      "Cloud-Based: Access your designs instantly from any device, anywhere in the world.",
-      "Team Collaboration: Comment and edit in real-time with other team members."
+      "Free tier includes 1.6M+ templates and 5 GB storage",
+      "Brand Kit count scales clearly from 1 to 1,000",
+      "K-12 schools and nonprofits get most premium features free"
     ],
     "cons": [
-      "Limited Vector Editing: Can be restrictive for high-end professional graphic designers.",
-      "Common Aesthetics: Overusing popular templates can make designs look generic.",
-      "Pro Dependency: A large share of templates, assets and features are locked behind 'Pro'."
+      "AI is a shared allowance expressed only as a multiple",
+      "Dedicated success manager needs 150+ contracted seats",
+      "Fair use limits apply to AI tools"
     ],
     "keyFeatures": [
       {
-        "title": "Magic Resize",
-        "description": "Instantly transform an Instagram post into a Twitter header or a slide deck."
+        "title": "Template and asset library",
+        "description": "1.6M+ templates free, 3.6M+ with premium, and 141M+ premium stock assets."
       },
       {
-        "title": "Brand Kit",
-        "description": "Save your logos, colors, and fonts to ensure brand consistency across all work."
+        "title": "Brand Kits and approvals",
+        "description": "1 kit free, 5 on Pro, 100 with approvals on Business, 1,000 tiered on Enterprise."
       },
       {
-        "title": "AI Background Remover",
-        "description": "Remove image backgrounds with one professional-quality click."
-      },
-      {
-        "title": "Canva Docs",
-        "description": "Create design-first, animated, and interactive presentations directly in the browser."
+        "title": "Shared AI allowance",
+        "description": "One pool drawn on by Standard, Premium and Ultra tools at different rates."
       }
     ],
-    "targetAudience": "Social Media Managers, SMB Owners, and Students.",
-    "verdict": "The world's best platform for fast, high-quality, and practical visual content creation.",
+    "targetAudience": "Marketers, small teams and non-designers producing branded content at volume.",
+    "verdict": "The free tier covers more than most people expect; pay when you need premium assets, more Brand Kits or serious AI volume. Treat the AI multipliers as relative, not as a quota you can plan against.",
     "websiteUrl": "https://www.canva.com",
     "color": "#00c4cc",
     "incelendi": true,
@@ -970,7 +965,67 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "evidence": {
+      "status": "vendor-sourced",
+      "sources": [
+        {
+          "label": "Canva — Plans and pricing",
+          "url": "https://www.canva.com/en/pricing/",
+          "supports": [
+            "Free plan: drag-and-drop editor and 1,000+ design types, 1.6M+ templates, 4.7M+ photos, videos, graphics and audio, 1 Brand Kit limited to 3 colors, ad insights and AI ad creation, access to Affinity, 5GB of cloud storage, up to 20 Standard or Premium AI uses, Canva Offline",
+            "Pro: AI tools including resize, translate and background removal, 3.6M+ templates including premium, 141M+ premium assets, 5 Brand Kits, social content scheduling, 100GB of cloud storage, Affinity with AI, 10x more AI than Canva Free, custom short links up to 100",
+            "Business: collaboration and team admin tools, 100 Brand Kits with approvals, access to Flourish, 500GB of cloud storage, 20x more AI than Canva Free, AI top-ups available at extra cost, unlimited custom short links",
+            "Enterprise: enterprise-level security and controls, SSO and SCIM provisioning, custom apps, 1,000 Brand Kits with tiered approvals and multi-team management, 1TB of cloud storage, 20x more AI than Canva Free, priority support and a dedicated success manager",
+            "The dedicated success manager applies only to enterprise customers with 150+ contracted seats",
+            "AI Pass is a paid add-on to Pro or Business, advertised as 40x more AI than Canva Pro or 20x more than Canva Business",
+            "Standard, Premium and Ultra AI tools consume the shared AI allowance at different rates, so stated multiples are estimates based on simple tasks; fair use limits apply",
+            "Yearly billing is advertised as saving from 16%",
+            "Free trials are offered for Pro and Business; Enterprise is contact-sales",
+            "K-12 educational organizations and not-for-profits can use most premium features for free"
+          ],
+          "checkedAt": "2026-09-10"
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was read in a real browser by an editor on this date, but Canva pins its currency to the visitor's region: the page served Turkish lira figures even on the en/US locale, so no price is recorded here — only the published plan limits.",
+        "AI capacity is published as a multiple of the free plan rather than an absolute number of generations, and the vendor states actual usage may be lower."
+      ],
+      "reviewedAt": "2026-09-10"
+    },
+    "bestFor": [
+      "Anyone producing occasional graphics: the free plan carries 1.6M+ templates, 4.7M+ assets and 5 GB of storage",
+      "Solo creators needing premium stock and background removal, which arrive on Pro along with 5 Brand Kits and 100GB",
+      "Teams guarding brand consistency — Business carries 100 Brand Kits with approvals and team admin controls",
+      "Organisations needing SSO, SCIM and multi-team management, which are Enterprise with 1,000 Brand Kits and 1TB",
+      "Schools and nonprofits, since K-12 organisations and not-for-profits get most premium features at no cost"
+    ],
+    "skipIf": [
+      "You need a predictable AI quota: the allowance is a shared pool expressed as a multiple, and the vendor says actual usage may be lower",
+      "You expect a dedicated success manager on Enterprise without scale — that requires 150+ contracted seats",
+      "You are on the free plan and need more than one Brand Kit, which is capped at 1 kit and 3 colors",
+      "You need a firm price in your own currency before signing up; Canva serves region-pinned figures rather than a single published rate"
+    ],
+    "sss": [
+      {
+        "soru": "Is Canva free?",
+        "cevap": "Yes, there is a permanently free plan with 1.6M+ templates, 4.7M+ photos, videos, graphics and audio, 1 Brand Kit limited to 3 colors, 5GB of cloud storage and up to 20 Standard or Premium AI uses."
+      },
+      {
+        "soru": "What is the difference between Canva Pro and Business?",
+        "cevap": "Pro gives 5 Brand Kits, 100GB storage and 10x the free plan's AI. Business adds collaboration and team admin tools, 100 Brand Kits with approvals, Flourish, 500GB storage and 20x the free plan's AI."
+      },
+      {
+        "soru": "How does Canva's AI allowance work?",
+        "cevap": "It is a single shared pool drawn on by Standard, Premium and Ultra tools at different rates. Plans state a multiple of the free plan — 10x on Pro, 20x on Business and Enterprise — and the vendor notes actual usage may be lower. An AI Pass add-on adds 40x over Pro or 20x over Business."
+      },
+      {
+        "soru": "How much storage does each Canva plan include?",
+        "cevap": "5GB on Free, 100GB on Pro, 500GB on Business and 1TB on Enterprise."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "premiere-pro",
@@ -43397,36 +43452,46 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "LastPass is a password manager with browser-first design and business features. Browser-first design and long market presence mean most people can use it without training. Its security incident history is part of any honest comparison, and it is the reason a number of teams migrated away. Weigh that history against the convenience it still offers.",
+    "longDescription": "LastPass is a password manager sold across five paid tiers plus a free plan, and the free plan has one restriction that decides everything: it works on a single device type, so a browser and a phone cannot both be active. Above it, the business tiers separate on administrative depth rather than vault features — every tier stores unlimited passwords — with security policies going from 25 to over 100 and reporting from basic to advanced. The sharpest business-tier detail is single sign-on: Business includes it for only three applications, and unlimited SSO apps require Business Max.",
     "pros": [
-      "Wide platform coverage",
-      "Easy for non-technical users",
-      "Business admin controls"
+      "Unlimited password storage on every plan including free",
+      "Business tiers include a free Families account for each employee",
+      "Trials need no credit card: 30 days personal, 14 days business"
     ],
     "cons": [
-      "Repeated security incidents damaged trust",
-      "Free tier restricted to one device type",
-      "Interface changes have been unpopular"
+      "Free plan is limited to one device type",
+      "SSO on Business covers only three apps",
+      "Teams is capped at 50 users"
     ],
-    "targetAudience": "Teams already using it, weighing whether to move.",
-    "verdict": "Capable, but the breach history is a real consideration. Most alternatives now look safer.",
+    "targetAudience": "Households and small-to-medium businesses standardising credential management.",
+    "verdict": "The free plan is a single-device trial in practice, not a daily driver. For businesses the real fork is SSO: three apps on Business against unlimited on Business Max.",
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "LastPass — Pricing",
+          "label": "LastPass — Plans and pricing",
           "url": "https://www.lastpass.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
-          ]
+            "Free plan: limited to 1 device type, unlimited password storage, autofill, dark web monitoring and basic password sharing, and includes a 30-day trial of Premium",
+            "Premium: 1 user, access and sync across all devices, unlimited secure password sharing, 1 GB of secure-note file storage",
+            "Families: 6 Premium accounts and a family manager dashboard covering up to 6 members",
+            "Teams: up to 50 users, admin console, shared folders, 25 security policies, basic reporting",
+            "Business: unlimited users, 100+ advanced security policies, advanced reporting with SIEM integrations, groups, customizable user management, directory integrations including Active Directory, Entra ID, Google Workspace, OneLogin and Okta, federated login, LastPass Families for employees giving each employee a personal account plus 5 licenses, and single sign-on limited to 3 apps",
+            "Business Max: unlimited SSO apps, advanced MFA capabilities, SaaS Monitoring and SaaS Protect",
+            "Secure-note file storage is 1 GB on every tier",
+            "Trials are 30 days for Premium and Families and 14 days for Teams, Business and Business Max, with no credit card required",
+            "A customer success manager is account-based on Business and Business Max, arranged through sales",
+            "Security is stated as zero-knowledge architecture with AES-256 local encryption, PBKDF2 SHA-256 and per-user salted hashes",
+            "Applicable taxes are added at checkout and promotional pricing carries separate terms that may not apply to existing customers"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was read in a real browser by an editor on this date, but every price rendered as an unresolved template placeholder ({LPPremium}, {LPTeams} and so on) rather than a figure, so no price is recorded here — only the published plan limits.",
+        "The vendor notes promotional pricing is subject to separate terms and may not apply to current customers, so advertised rates may not be renewal rates."
+      ],
+      "reviewedAt": "2026-09-10"
     },
     "kriterler": {
       "api": null,
@@ -43440,18 +43505,52 @@
     },
     "keyFeatures": [
       {
-        "title": "Browser-based vault",
-        "description": "Fills and captures credentials directly in the browser."
+        "title": "Encrypted vault",
+        "description": "Unlimited passwords, passkeys, notes and cards with AES-256 local encryption."
       },
       {
-        "title": "Shared folders",
-        "description": "Distributes credentials to teams without revealing them."
+        "title": "Admin console and policies",
+        "description": "25 security policies on Teams, 100+ on Business and above, with groups and reporting."
       },
       {
-        "title": "Admin policies",
-        "description": "Sets password rules and recovery options centrally."
+        "title": "MFA and SSO",
+        "description": "Passwordless login, hardware MFA, and SSO for 3 apps on Business or unlimited on Business Max."
       }
-    ]
+    ],
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Anyone testing a password manager: the free plan stores unlimited passwords and includes a 30-day Premium trial",
+      "Households, since Families covers 6 Premium accounts under one manager dashboard",
+      "Small teams up to 50 users, which is what Teams covers with an admin console, shared folders and 25 policies",
+      "Businesses needing directory integration, federated login and 100+ policies, which begin on Business",
+      "Companies running many SSO apps, since unlimited SSO is the defining Business Max feature"
+    ],
+    "skipIf": [
+      "You use more than one kind of device on the free plan — it is limited to a single device type",
+      "You need SSO across your app estate on Business, which covers only 3 apps before Business Max",
+      "Your team will pass 50 people on Teams, which is its hard user ceiling",
+      "You store large attachments: secure-note file storage is 1 GB on every tier, including the top one",
+      "You are relying on promotional pricing, which the vendor says carries separate terms and may exclude existing customers"
+    ],
+    "sss": [
+      {
+        "soru": "Is the LastPass free plan any good?",
+        "cevap": "It stores unlimited passwords with autofill, dark web monitoring and basic sharing, but it is limited to one device type — so a browser and a phone cannot both be active. It includes a 30-day Premium trial."
+      },
+      {
+        "soru": "How many users does LastPass Teams support?",
+        "cevap": "Up to 50 users. Business and Business Max are unlimited."
+      },
+      {
+        "soru": "Does LastPass Business include SSO?",
+        "cevap": "Yes, but limited to 3 applications. Unlimited SSO apps require Business Max, which also adds advanced MFA, SaaS Monitoring and SaaS Protect."
+      },
+      {
+        "soru": "What is the difference between LastPass Teams and Business?",
+        "cevap": "Teams covers up to 50 users with 25 security policies and basic reporting. Business is unlimited users with 100+ policies, advanced reporting and SIEM integrations, groups, directory integrations, federated login and a free Families account for each employee."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "nordpass",
