@@ -6,7 +6,8 @@ import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ayrimCumlesi } from "@/lib/compare";
-import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
+import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
+import { karsilastirmaSss } from "@/lib/sss";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
@@ -136,9 +137,19 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
     [tool1, tool2]
   );
 
+  /*
+    SSS: bu sayfa turunde FAQPage semasi hic yoktu, oysa "X vs Y" tam
+    olarak kullanicinin arama motoruna ve sohbet asistanina yazdigi
+    cumle. Sorular dogrulanmis veriden turetiliyor (bkz. lib/sss.ts) ve
+    asagida GORUNUR olarak da basiliyor -- semaya yalnizca sayfada
+    gercekten duran soru konur.
+  */
+  const sorular = karsilastirmaSss(tool1, tool2);
+
   // Kirinti semasi bu sayfa turunde de yoktu.
   const semalar = [
     sema,
+    ...(sorular.length ? [sssSemasi(sorular)] : []),
     kirintiSemasi([
       { ad: tool1.name, yol: `/tools/${tool1.slug}` },
       { ad: `${tool1.name} vs ${tool2.name}`, yol: `/compare/${kanonikSlug(tool1.slug, tool2.slug)}` },
@@ -451,6 +462,23 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
               This page compares what we can verify — pricing and documented capabilities.
             </span>
           </p>
+        )}
+
+        {/* ---------- SSS ---------- */}
+        {sorular.length > 0 && (
+          <section className="mt-12 border-t border-line pt-10">
+            <h2 className="text-lg font-semibold">
+              {tool1.name} vs {tool2.name}: common questions
+            </h2>
+            <dl className="mt-6 space-y-5">
+              {sorular.map((q) => (
+                <div key={q.soru}>
+                  <dt className="text-sm font-medium text-ink">{q.soru}</dt>
+                  <dd className="mt-1.5 text-sm text-ink-soft">{q.cevap}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
         )}
 
         {/* ---------- Ilgili karsilastirmalar ---------- */}

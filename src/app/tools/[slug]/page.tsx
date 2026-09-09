@@ -99,6 +99,17 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     url: sayfaUrl,
     sameAs: tool.websiteUrl || undefined,
   };
+  /*
+    Son dogrulama tarihi. Sayfada "What we checked" bolumunde zaten
+    yaziyordu ama yapilandirilmis veride hicbir tarih yoktu. Hem arama
+    motoru hem sohbet asistani tazeligi bu alandan okuyor; elimizdeki
+    tarihi vermemek, yapilmis isi gizlemek oluyordu. 467/512 aracta var.
+  */
+  const dogrulamaTarihi = (tool.evidence as { reviewedAt?: string } | undefined)?.reviewedAt;
+  if (typeof dogrulamaTarihi === "string" && /^\d{4}-\d{2}-\d{2}$/.test(dogrulamaTarihi)) {
+    yapilandirilmis.dateModified = dogrulamaTarihi;
+  }
+
   // Dogrulanmamis fiyat yapilandirilmis veriye KONMAZ: Google'a yanlis
   // fiyat beyan etmek zengin sonuclarda yaptirim sebebi.
   if (fiyatDurumu(tool).karsilastirilabilir) {
