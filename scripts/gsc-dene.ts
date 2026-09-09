@@ -18,7 +18,10 @@ async function main() {
   if (!sites.length) {
     console.log("⛔ Servis hesabi hicbir mulke erisemiyor.");
     console.log("   Search Console > Ayarlar > Kullanicilar ve izinler > kullanici ekle:");
-    console.log(`   ${process.env.GSC_CLIENT_EMAIL}`);
+    // Servis hesabi adresi maskelenir: bu cikti oturum dokumune dusuyor.
+    const sa = process.env.GSC_CLIENT_EMAIL ?? "";
+    const [saAd, saAlan] = sa.split("@");
+    console.log(`   ${saAd ? `${saAd.slice(0, 4)}${"*".repeat(Math.max(1, saAd.length - 4))}@${saAlan ?? ""}` : "(GSC_CLIENT_EMAIL yok)"}  (tam adres .env'de)`);
     return;
   }
 

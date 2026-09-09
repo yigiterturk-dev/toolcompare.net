@@ -88,6 +88,10 @@ let girisGunu = "";
 let basarisizGiris = 0;
 
 function bugunTarih(): string {
+  // UTC gunu KASITLI: bu bir sayac penceresi, okura gosterilen bir tarih degil.
+  // Sunucu saat dilimi degisse bile pencere sinirinin ayni kalmasi, yerel gun
+  // sinirina uymasindan daha onemli. (Okura gosterilen tarihler icin
+  // scripts/_tarih.mjs -> yerelTarih kullaniliyor.)
   return new Date().toISOString().slice(0, 10);
 }
 

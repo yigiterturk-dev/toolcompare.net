@@ -21,6 +21,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
+import { yerelTarih } from "./_tarih.mjs";
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 const yol = join(kok, 'src/data/tools.json');
 
@@ -30,7 +31,7 @@ const limitIdx = argv.indexOf('--limit');
 const limit = limitIdx >= 0 ? Number(argv[limitIdx + 1]) : Infinity;
 
 const UA = 'Mozilla/5.0 (compatible; ToolCompareBot/1.0; +https://toolcompare.net)';
-const BUGUN = new Date().toISOString().slice(0, 10);
+const BUGUN = yerelTarih(); // toISOString UTC'ye ceviriyordu, gece yarisi-03:00 arasi gun kayiyordu
 
 /* Sinyaller. Her biri saticinin KENDI sayfasinda gorulebilir olmali. */
 const APP_STORE = /apps\.apple\.com\/[^"']*\/(app|id)|play\.google\.com\/store\/apps/i;

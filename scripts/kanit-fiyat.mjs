@@ -25,6 +25,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
+import { yerelTarih } from "./_tarih.mjs";
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 const yol = join(kok, 'src/data/tools.json');
 
@@ -87,7 +88,7 @@ const ELLE_YOLLAR = {
    site 404'u 200 ile servis eder ("soft 404"). */
 const PARA = /(\$|€|£)\s?\d|\bper month\b|\/mo\b|\bper user\b|\bfree plan\b/i;
 const UA = 'Mozilla/5.0 (compatible; ToolCompareBot/1.0; +https://toolcompare.net)';
-const BUGUN = new Date().toISOString().slice(0, 10);
+const BUGUN = yerelTarih(); // toISOString UTC'ye ceviriyordu, gece yarisi-03:00 arasi gun kayiyordu
 
 /** Kayitli alan adi (ornek: app.hotjar.com -> hotjar.com). */
 function kokAlanAdi(u) {

@@ -30,6 +30,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
+import { yerelTarih } from "./_tarih.mjs";
 const kok = join(dirname(fileURLToPath(import.meta.url)), '..');
 const yol = join(kok, 'src/data/tools.json');
 const yaz = process.argv.includes('--yaz');
@@ -50,7 +51,7 @@ const ACIK = /open[-\s]source/i;
 const UCRETSIZ = /\bfree\b/i;
 const LISANS = /(MIT[-\s]licen[cs]ed?|Apache[-\s](?:License|2)|\bGPL(?:v[23])?\b|\bAGPL\b|\bLGPL\b|Mozilla Public License|MPL[-\s]?2\.0|BSD[-\s]licen[cs]e|(?:2|3)[-\s]clause BSD)/i;
 const UA = 'Mozilla/5.0 (compatible; ToolCompareBot/1.0; +https://toolcompare.net)';
-const BUGUN = new Date().toISOString().slice(0, 10);
+const BUGUN = yerelTarih(); // toISOString UTC'ye ceviriyordu, gece yarisi-03:00 arasi gun kayiyordu
 
 /**
  * Sayfa metni acik kaynakligi soyluyor mu, ve nasil?
