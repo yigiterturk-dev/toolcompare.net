@@ -7526,6 +7526,22 @@
       {
         "soru": "Is Wix Studio free to use, and what do the paid plans add?",
         "cevap": "Building a site in the Wix Studio editor is free, including the developer platform for code, but a free site cannot use a custom domain, remove Wix Studio branding or accept payments. Paid plans run Basic (10 GB storage, 1,500 CMS items), Standard (payments, 50 GB, 4,000 CMS items), Plus (120 GB, 20,000 CMS items) and Elite (unlimited media, 10 million CMS items), plus a custom Enterprise tier. Current prices are on Wix's Studio plans page; we list the starting price above."
+      },
+      {
+        "soru": "Is Wix Studio free?",
+        "cevap": "Building on Wix Studio is free: you only pay when you upgrade a site. Each site is upgraded with its own plan, so the cost scales with how many live sites you run rather than with the editor itself."
+      },
+      {
+        "soru": "What does upgrading a Wix Studio site add?",
+        "cevap": "An upgraded Studio plan adds a custom domain and removes Wix branding from the site. Until you upgrade, the site stays on a Wix address with Wix branding."
+      },
+      {
+        "soru": "Does Wix Studio charge per site or per account?",
+        "cevap": "Per site. Studio sites are upgraded with their own per-site plans, so five live client sites mean five plans rather than one account-wide subscription."
+      },
+      {
+        "soru": "Can you get a refund on a Wix Studio plan?",
+        "cevap": "The vendor offers a 14-day full refund on a first Studio plan upgrade."
       }
     ]
   },
@@ -22685,6 +22701,18 @@
       {
         "soru": "How much does Akiflow cost?",
         "cevap": "Akiflow Pro costs $34 a month billed monthly or $19 a month billed yearly. There is no free plan, but every account starts with a 7-day free trial. Team plans and academic discounts are arranged through sales and support."
+      },
+      {
+        "soru": "Does Akiflow have a free plan?",
+        "cevap": "No. There is a 7-day free trial and no free tier, so continued use requires the Pro subscription."
+      },
+      {
+        "soru": "Is Akiflow cheaper billed yearly?",
+        "cevap": "Substantially. Pro is $34 a month billed monthly against $19 a month billed yearly, a saving the vendor advertises as 44%."
+      },
+      {
+        "soru": "Are there Akiflow discounts for students or teams?",
+        "cevap": "Academic discounts are handled through support, and team plans through sales, rather than being listed as self-serve prices."
       }
     ],
     "fiyatKontrolTarihi": "2026-09-08"
@@ -23659,6 +23687,20 @@
       "Your team is just over 10 people — the free tier ends there and billing starts at $5.40/user/mo monthly ($4.50 annual)",
       "You want a tracker your whole company already knows; Jira has far wider adoption",
       "You need the free helpdesk beyond 3 agents"
+    ],
+    "sss": [
+      {
+        "soru": "How much does YouTrack cost?",
+        "cevap": "YouTrack Cloud is free for teams of up to 10 users. Beyond that it is USD 5.40 per user per month billed monthly, or USD 4.50 per user per month billed annually, and the per-user rate decreases as more users are added."
+      },
+      {
+        "soru": "Is YouTrack free for small teams?",
+        "cevap": "Yes, YouTrack Cloud is free for teams of up to 10 users. The helpdesk is separately free for 3 agents with unlimited reporters."
+      },
+      {
+        "soru": "Does YouTrack get cheaper with more users?",
+        "cevap": "Yes. The vendor states the per-user rate decreases as more users are added, so the effective cost per seat falls as the team grows."
+      }
     ]
   },
   {
@@ -32552,6 +32594,18 @@
       {
         "soru": "What are DreamHost's shared hosting quotas and limits?",
         "cevap": "Per the DreamHost knowledge base: Launch allows 25 GB storage, 25 websites, 250,000 inodes, 20 mailboxes and 25 MySQL databases. Growth raises those to 50 GB, 50 sites, 500,000 inodes, 40 mailboxes and 50 databases. Scale gives 100 GB, 100 sites, 300 subdomains, 1,000,000 inodes, 60 mailboxes and 300 databases. Going over the storage quota makes uploads and one-click installs fail until you are back under it. Email is free for the first 3 months, then a paid email plan activates automatically."
+      },
+      {
+        "soru": "How much storage does each DreamHost plan include?",
+        "cevap": "Web Hosting Launch includes 25 GB of NVMe SSD across up to 25 websites with unmetered bandwidth, DreamPress 1 includes 15 GB for a single website, and VPS Business includes 60 GB with unlimited websites."
+      },
+      {
+        "soru": "Does DreamHost's price go up after the first year?",
+        "cevap": "Yes. The vendor states all plans renew at a higher rate than the first-year promotional price, so the advertised figure is an introductory rate."
+      },
+      {
+        "soru": "How many mailboxes does DreamHost include?",
+        "cevap": "Web Hosting Launch includes 20 mailboxes free for the first three months; DreamPress 1 includes unlimited mailboxes."
       }
     ]
   },
@@ -34475,6 +34529,18 @@
       {
         "soru": "What is cdnjs, and does it cost anything?",
         "cevap": "cdnjs is a free, open-source CDN for popular JavaScript, CSS and font libraries, run by Cloudflare and served from its 330+ edge locations; it handles more than 250 billion requests a month and is used by roughly 12.5% of websites. You reference a library by URL with no build step, and every script and link tag comes with a Subresource Integrity hash; content is HTTPS-only and HSTS-preloaded. To add a library you open a pull request with a JSON config in the cdnjs/packages repository; after approval, new versions are pulled automatically from npm or GitHub."
+      },
+      {
+        "soru": "Is cdnjs free to use?",
+        "cevap": "Yes. cdnjs describes itself as a free, open-source CDN for the web's most popular JavaScript, CSS and font resources, with no account or payment required."
+      },
+      {
+        "soru": "Who runs and pays for cdnjs?",
+        "cevap": "Every file is served directly from Cloudflare's global network, with Cloudflare providing the infrastructure and maintenance. The project is funded by Cloudflare, Algolia, DigitalOcean, Statuspage, Sentry and UptimeRobot."
+      },
+      {
+        "soru": "How widely used is cdnjs?",
+        "cevap": "The project reports more than 250 billion requests per month and use on 12.5% of all websites."
       }
     ]
   },
@@ -39284,6 +39350,18 @@
       {
         "soru": "What does the Qualtrics free trial include?",
         "cevap": "The free account runs for 30 days and is capped at 3 active surveys and 500 responses, with unlimited questions per survey, 22 question types and translations in 75+ languages. Exports to CSV, Google Sheets and Tableau are included. The lowest self-service paid tier, Strategic Research, is listed at $420 per month, or $5,040 per year."
+      },
+      {
+        "soru": "How long is the Qualtrics free trial and what does it allow?",
+        "cevap": "30 days, with 500 trial responses, three active surveys and 22 question types. Paid plans start at $420 a month, or $5,040 billed annually."
+      },
+      {
+        "soru": "What happens when the Qualtrics trial ends?",
+        "cevap": "The account downgrades automatically and loses access to premium features, while existing surveys and responses remain accessible. The vendor does not extend or repeat trials."
+      },
+      {
+        "soru": "What can the free Qualtrics account not do?",
+        "cevap": "The free account is limited to eight question types with logic and branding restrictions, distribution limits, no API or third-party integrations and no offline app."
       }
     ]
   },
@@ -43757,6 +43835,20 @@
       "You use more than one device — the free plan permits only one active session at a time",
       "You want Password Health, the Data Breach Scanner or file attachments; all are paid-only",
       "You need an open-source, auditable vault"
+    ],
+    "sss": [
+      {
+        "soru": "Is NordPass free, and what does the free version limit?",
+        "cevap": "There is a free version with no limit on stored passwords, passkeys or personal information. Its real constraint is devices: the free version allows one active session on one device, so logging in elsewhere signs you out."
+      },
+      {
+        "soru": "What do you get by paying for NordPass?",
+        "cevap": "Premium allows simultaneous login on unlimited devices and unlocks Password Health, the Data Breach Scanner, the Authenticator and file attachments, all of which are paid features."
+      },
+      {
+        "soru": "What NordPass plans are available?",
+        "cevap": "Three tiers: Free, Premium for one account, and Family covering six accounts."
+      }
     ]
   },
   {
@@ -44416,6 +44508,20 @@
       "You are on iPad — the iPad version comes only through the Apple Creator Studio subscription",
       "You want the Warp Tool; it is in the subscription version, not the one-time purchase",
       "You want a free version; there is none, only a 30-day Creator Studio trial"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Pixelmator Pro cost?",
+        "cevap": "It is a one-time purchase of $49.99 for Mac. Alternatively it is included in the Apple Creator Studio subscription at $12.99 a month or $129 a year, with an education rate of $2.99 a month or $29.99 a year."
+      },
+      {
+        "soru": "Is the one-time purchase or the subscription better value for Pixelmator Pro?",
+        "cevap": "The $49.99 one-time purchase pays for itself against $12.99 a month in under four months, but it covers Mac only and excludes some features — the iPad version and the Warp Tool are available through the subscription only."
+      },
+      {
+        "soru": "Is there a free version of Pixelmator Pro?",
+        "cevap": "No. There is no free version; the only no-cost route is a 30-day trial of Apple Creator Studio."
+      }
     ]
   },
   {
