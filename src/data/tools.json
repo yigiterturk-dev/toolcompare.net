@@ -1198,6 +1198,57 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
+    },
+    "bestFor": [
+      "Small businesses that only need meetings: Microsoft Teams Essentials is $4.00 per user/month paid yearly, with chat, calls, video, file sharing and 10 GB of cloud storage per user",
+      "Companies that want Teams plus business email and Office on the web — Microsoft 365 Business Basic at $7.00 per user/month paid yearly, with 1 TB of storage per user",
+      "Teams that need the desktop Office apps and Copilot: Business Standard with Copilot at $23.50 per user/month paid yearly"
+    ],
+    "skipIf": [
+      "You have more than 300 employees — every business plan caps identity and access management at 300 users, so you are pushed to the enterprise SKUs",
+      "You want month-to-month billing: all of these are annual subscriptions that auto-renew, with the monthly figure shown only for comparison",
+      "You need desktop Word, Excel and PowerPoint on a budget — Business Basic is web and mobile only, and Teams Essentials has no Office apps at all"
+    ],
+    "sss": [
+      {
+        "soru": "What is the cheapest way to get Microsoft Teams for a business?",
+        "cevap": "Microsoft Teams Essentials is the cheapest paid tier at $4.00 per user/month paid yearly. It covers chat, calls and video conferencing, real-time collaboration with file sharing, tasks and polling, meeting recordings with transcripts, English live captions and 10 GB of cloud storage per user. It does not include Office apps or business email. Microsoft 365 Business Basic at $7.00 per user/month adds custom business email, web and mobile Word, Excel, PowerPoint and Outlook, and raises storage to 1 TB per user."
+      },
+      {
+        "soru": "How long can a Microsoft Teams meeting run and how many people can join?",
+        "cevap": "All three business plans — Teams Essentials, Business Basic and Business Standard with Copilot — allow a maximum meeting duration of 30 hours and a participant capacity of 300. Live captions differ: Essentials is English only, while the Microsoft 365 plans support over 30 languages with Microsoft Entra identities."
+      },
+      {
+        "soru": "Is Copilot included in the Teams business plans?",
+        "cevap": "Only in Business Standard with Copilot ($23.50 per user/month paid yearly), which includes work-grounded Copilot in Word, Excel, PowerPoint, Outlook and Teams. On Teams Essentials and Business Basic, Microsoft 365 Copilot Business is a paid add-on requiring an eligible subscription, and Copilot Chat with web grounding is included on Business Basic at no extra cost. Teams Premium is a separate $10.00 per user/month add-on and still requires an eligible Teams licence."
+      }
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "sources": [
+        {
+          "label": "Microsoft — Microsoft Teams pricing for business",
+          "url": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options",
+          "supports": [
+            "Microsoft Teams Essentials $4.00 user/month paid yearly: chat, call, video conferencing, file sharing, tasks and polling, meeting recordings with transcripts, English live captions, 10 GB cloud storage per user",
+            "Microsoft 365 Business Basic $7.00 user/month paid yearly: web and mobile Word, Excel, PowerPoint, Outlook, custom business email, 1 TB storage per user, 10+ additional apps, identity and access management for up to 300 users",
+            "Microsoft 365 Business Standard with Copilot $23.50 user/month paid yearly: desktop, web and mobile Office apps plus Microsoft 365 Copilot Business, webinar hosting, 1 TB per user",
+            "All three plans: 1-300 employees, 30-hour maximum meeting duration, 300 participant capacity",
+            "Business Basic is web and mobile only; Business Standard covers up to 5 PCs or Macs, 5 tablets and 5 mobile devices",
+            "All listed plans are annual subscriptions that auto-renew; monthly figures are the annual total divided by 12",
+            "Microsoft Teams Premium add-on $10.00 user/month paid yearly, eligible Teams licence required",
+            "Microsoft 365 Copilot Business add-on listed at $21.00, discounted to $18.00 user/month paid yearly, for up to 300 users",
+            "Teams Audio Conferencing with dial-out to USA/CAN listed as a no-cost add-on with an eligible Teams licence"
+          ],
+          "checkedAt": "2026-09-09"
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The Copilot add-on figure is a promotional price with a stated end date; the list price is recorded alongside it.",
+        "Enterprise plans, Teams Phone and Teams Rooms add-ons are separate tabs and are not covered by this record."
+      ],
+      "reviewedAt": "2026-09-09"
     }
   },
   {
@@ -19429,20 +19480,27 @@
     "verdict": "The safe default for icons. Load only what you use or it costs page weight.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Font Awesome — Pricing",
+          "label": "Font Awesome — Plans & Pricing",
           "url": "https://fontawesome.com/plans",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $4/mo billed annually ($48/yr): all Pro icons via CDN, 5 project kits, 50K pageviews/month, WordPress plugin, 1 seat, 20 icon uploads",
+            "Solo $8/mo billed annually ($96/yr): everything in Starter plus Pro+ icons, icon downloads, npm, Figma, perpetual license, 10 kits, 1M pageviews, 200 icon uploads, 3 GB bandwidth",
+            "Team $16/mo billed annually ($192/yr): everything in Solo plus 3 seats scaling to 50 with graduated seat pricing ($20/seat), team roles and permissions, 20 kits, 2M pageviews, 400 icon uploads, 6 GB bandwidth",
+            "Free plan $0/yr: 1 project kit, 10K pageviews, WordPress; no Pro icons, no seats, no icon uploads",
+            "Enterprise is Contact Sales for large organizations with procurement requirements",
+            "Overages: flat $2 per extra 250K pageviews, $1.00 per extra GB bandwidth",
+            "Annual Starter and all monthly plans are CDN-only ('Cloud'); annual Solo and Team unlock downloads, self-hosting and the perpetual license",
+            "Annual billing stated as saving 50% versus monthly; monthly cancels anytime, annual lasts the year"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -19456,6 +19514,30 @@
       {
         "title": "Framework packages",
         "description": "Provides official components for the common front-end frameworks."
+      }
+    ],
+    "bestFor": [
+      "Hosted projects that just need the Pro library from a CDN: Starter is $4/month billed annually ($48/yr) with 5 kits, 50K pageviews and 1 seat",
+      "Individual designers and developers who need downloads, npm and Figma — Solo at $8/month annually ($96/yr) adds Pro+ icons, 10 kits, 1M pageviews and 200 icon uploads",
+      "Small teams: Team at $16/month annually ($192/yr) starts at 3 seats and scales to 50 with graduated seat pricing, 20 kits and 2M pageviews"
+    ],
+    "skipIf": [
+      "You want to self-host on a monthly plan — annual Starter and every monthly plan are Cloud/CDN only; downloads, npm, Figma and the perpetual license need annual Solo or Team",
+      "Your traffic is spiky: pageviews are capped per plan and overage runs $2 per extra 250K pageviews plus $1 per extra GB of bandwidth",
+      "You only need free icons — the Free plan covers 1 kit and 10K pageviews with no Pro icons, no uploads and no seats, and there is no reason to pay"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Font Awesome Pro cost?",
+        "cevap": "Billed annually, Starter is $4/month ($48/yr), Solo is $8/month ($96/yr) and Team is $16/month ($192/yr); Enterprise is contact-sales. All paid plans include the full Pro library, and Pro+ icons come with Solo and Team. Font Awesome states annual billing saves 50% against monthly. The Free plan stays free with no trial and no time limit, but it has no Pro icons, no icon uploads and no team seats."
+      },
+      {
+        "soru": "What does 'Cloud' mean on a Font Awesome plan, and can I self-host?",
+        "cevap": "Cloud means icons are served from Font Awesome's CDN — no downloads, no self-hosting and no local files. Starter is Cloud-only, and Solo and Team are Cloud when billed monthly. Switching Solo or Team to annual billing unlocks the full toolkit: icon downloads, hosted npm, Figma and a perpetual license that lets you keep the icons released during your subscription forever."
+      },
+      {
+        "soru": "What happens if I go over the pageview limit?",
+        "cevap": "Font Awesome charges a flat overage rather than cutting you off: $2 per month for each additional 250K pageviews on Starter, Solo and Team, and $1.00 per additional GB of bandwidth on Solo and Team. Included allowances are 10K pageviews on Free, 50K on Starter, 1M on Solo and 2M on Team; bandwidth is 3 GB on Solo and 6 GB on Team, and is not included on Free or Starter."
       }
     ]
   },
