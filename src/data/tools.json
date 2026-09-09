@@ -13783,8 +13783,8 @@
     "shortDescription": "Fast keyboard-first email client.",
     "websiteUrl": "https://superhuman.com",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 12,
+    "isFlat": false,
     "kriterler": {
       "api": false,
       "mobil": true,
@@ -13806,20 +13806,25 @@
     "verdict": "Real speed gains for heavy senders. Light inboxes will not repay the price.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Superhuman — Pricing",
+          "label": "Superhuman — Plans",
           "url": "https://superhuman.com/plans",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Superhuman is now sold as a suite of Mail, Grammarly, Docs and Go, with Mail included only from the Business plan upward",
+            "Free $0: Grammarly, Docs and Go — AI chat across applications, writing correction in 20+ languages, collaborative docs with tables, charts, Kanban boards and forms",
+            "Pro $12 per member/month billed annually, $15 billed monthly: unlimited paragraph rewrites and translations in 15+ languages, AI text detection, brand style, custom domains for docs, unlimited doc size with 30-day version history",
+            "Business $33 per member/month billed annually, $40 billed monthly: adds Mail — the Superhuman inbox, AI email writing, HubSpot, Salesforce and Pipedrive inside the inbox, unlimited automations and version history, data sync from Jira, GitHub and Figma",
+            "Enterprise is custom: analytics and reporting, advanced security and admin controls, SAML single sign-on, custom roles, data loss prevention, BYOK encryption, dedicated support",
+            "The vendor claims the Business inbox saves 4 hours a week"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -13834,7 +13839,39 @@
         "title": "Follow-up reminders",
         "description": "Resurfaces sent mail that has not received a reply."
       }
-    ]
+    ],
+    "fiyatModeli": "kullanici-basina",
+    "bestFor": [
+      "Teams that want the writing and docs half only: Free covers Grammarly, Docs and Go, and Pro is $12 per member per month billed annually",
+      "Sales-facing inboxes — Business puts HubSpot, Salesforce and Pipedrive records inside the email client",
+      "Organizations consolidating tools, since one subscription now covers email, a writing assistant, docs and an AI agent",
+      "Companies needing SAML SSO, DLP and BYOK encryption, which are the Enterprise tier"
+    ],
+    "skipIf": [
+      "You came for the email client: Mail is not on Free or Pro — the cheapest plan that includes it is Business at $33 per member per month billed annually ($40 monthly)",
+      "You bill monthly: Pro is $15 and Business $40 per member per month, above the advertised annual rates",
+      "You only wanted a fast inbox and no writing assistant or docs — the suite is sold as a bundle, not as separate products",
+      "You need admin analytics, custom roles or SSO, which move you to a custom-priced Enterprise agreement"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Superhuman cost?",
+        "cevap": "Free is $0, Pro is $12 per member per month billed annually ($15 monthly) and Business is $33 billed annually ($40 monthly). Enterprise is custom-priced. The Superhuman Mail inbox is included only from Business upward."
+      },
+      {
+        "soru": "Is Superhuman email included in the cheaper plans?",
+        "cevap": "No. Free and Pro cover Grammarly, Docs and Go. Mail — the Superhuman inbox with AI email writing and CRM records inline — starts on Business at $33 per member per month billed annually."
+      },
+      {
+        "soru": "Is there a free version of Superhuman?",
+        "cevap": "Yes, but it is the suite's writing and docs side: AI chat that works across apps, writing correction in 20+ languages and collaborative docs. The email client is not part of the free plan."
+      },
+      {
+        "soru": "What does Superhuman Enterprise add?",
+        "cevap": "Analytics and reporting, advanced security and admin controls, SAML single sign-on, custom roles and permissions, data loss prevention, BYOK encryption and a dedicated support team, at a custom price."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "readwise",
@@ -16251,20 +16288,25 @@
     "verdict": "Strong for teams where meeting content feeds a CRM. Check recording consent rules in your jurisdiction.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Fireflies.ai — Pricing",
+          "label": "Fireflies.ai — Pricing & Plans",
           "url": "https://fireflies.ai/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0 forever: unlimited transcription with limited AI summaries, 400 minutes of storage per team, 20 AI credits, 100+ languages, AskFred assistant, mobile and desktop apps, API access",
+            "Pro $10 per seat/month billed annually, $18 monthly: unlimited AI summaries, 8,000 minutes of storage per seat, 20 AI credits, video recording, downloads, Email Assistant, AI Skills, voice agents, unlimited integrations",
+            "Business $19 per seat/month billed annually, $29 monthly: unlimited storage, 30 AI credits, multi-language mode, conversation intelligence, team analytics, user groups",
+            "Enterprise $39 per seat/month, annual only: 50 AI credits, rules engine, SSO and SCIM, audit logs, HIPAA compliance, private storage, custom data retention, dedicated account manager",
+            "Annual billing is advertised as saving up to 44%",
+            "Recording length limits differ by plan: 2 hours on Free and Pro, 3 hours on Business, 4 hours on Enterprise"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -16279,7 +16321,38 @@
         "title": "CRM sync",
         "description": "Writes call notes and summaries back to the CRM record."
       }
-    ]
+    ],
+    "bestFor": [
+      "Individuals who mostly need the transcript: the free plan transcribes without limit in 100+ languages and includes the mobile, desktop and API access",
+      "Small teams committing annually — Pro is $10 per seat per month against $18 monthly, an advertised saving of up to 44%",
+      "Teams with a large meeting archive: unlimited storage arrives on Business at $19 per seat per month billed annually",
+      "Regulated buyers needing HIPAA, SSO, SCIM, audit logs and custom retention, which are Enterprise at $39 per seat per month"
+    ],
+    "skipIf": [
+      "You expect the free plan to keep your recordings — storage is 400 minutes per team, and AI summaries are limited rather than unlimited",
+      "You bill monthly: the real monthly prices are $18, $29 and $39 per seat, not the advertised annual $10 and $19",
+      "You run long sessions — recordings are capped at 2 hours on Free and Pro, 3 on Business and 4 on Enterprise",
+      "Your workflow leans on AI credits: they are a per-plan allowance of 20, 20, 30 and 50, not an unlimited feature"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Fireflies.ai cost?",
+        "cevap": "There is a free forever plan, then Pro at $10 per seat per month billed annually ($18 monthly), Business at $19 ($29 monthly) and Enterprise at $39 per seat per month, annual only."
+      },
+      {
+        "soru": "What are the limits of the Fireflies free plan?",
+        "cevap": "Transcription is unlimited, but AI summaries are limited, storage is 400 minutes for the whole team, you get 20 AI credits and recordings are capped at 2 hours."
+      },
+      {
+        "soru": "Which Fireflies plan has unlimited storage?",
+        "cevap": "Business, at $19 per seat per month billed annually. Pro includes 8,000 minutes of storage per seat and the free plan 400 minutes per team."
+      },
+      {
+        "soru": "Does Fireflies support HIPAA and SSO?",
+        "cevap": "Those are Enterprise features at $39 per seat per month, annual only, alongside SCIM, audit logs via API, private storage, custom data retention and a rules engine."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "cursor",
@@ -16459,8 +16532,8 @@
     "shortDescription": "AI writing for marketing content.",
     "websiteUrl": "https://writesonic.com",
     "incelendi": true,
-    "fiyatModeli": "ucretsiz-katman",
-    "basePrice": 0,
+    "fiyatModeli": "abonelik",
+    "basePrice": 79,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -16483,20 +16556,25 @@
     "verdict": "Useful as a drafting aid. Publishing its output unedited is how sites lose credibility.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Writesonic — Pricing",
+          "label": "Writesonic — Plans & Pricing",
           "url": "https://writesonic.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $79/month billed annually (advertised saving $240/year): tracks ChatGPT, Gemini and Google AI Overviews with 50 prompts and 50 answers tracked daily, 15 AI articles a month, 10 site audits of 100 pages each, 1 user and 1 project, 10 agentic workflow trial runs",
+            "Basic $199/month billed annually (saving $600/year): 100 prompts and 300 answers daily, 25 AI articles, 20 site audits of 1,200 pages, 2 users and 1 project, 50 workflow trial runs",
+            "Growth $399/month billed annually (saving $1,200/year): 200 prompts and 600 answers daily, sentiment analysis included, Action Center trial (5 off-page and 5 on-page actions a month), 50 AI articles, 50 site audits of 2,500 pages, 3 users and 2 projects, priority email support",
+            "Enterprise is custom: all 10 AI platforms tracked, custom prompts, regions and languages, full Action Center, custom article and audit volumes, dedicated strategy team",
+            "Annual billing is advertised as saving 20% against monthly",
+            "The product is positioned as an AI search visibility platform: sentiment analysis is Growth and above, and the Action Center is a trial below Enterprise"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -16511,7 +16589,38 @@
         "title": "Bulk workflows",
         "description": "Generates many assets from a spreadsheet of inputs."
       }
-    ]
+    ],
+    "bestFor": [
+      "Brands that want to see which AI answers recommend competitors — tracking of ChatGPT, Gemini and Google AI Overviews starts on the $79/month Starter plan",
+      "Single-site marketers: Starter covers 1 user, 1 project, 50 daily prompts and 15 AI articles a month",
+      "Teams that need sentiment analysis and a first taste of the Action Center, which start on Growth at $399/month",
+      "Agencies willing to talk to sales, since all 10 AI platforms, custom regions and languages and the full Action Center are Enterprise-only"
+    ],
+    "skipIf": [
+      "You need seats: 1 user on Starter, 2 on Basic and 3 on Growth, with projects limited to 1, 1 and 2",
+      "You want the agentic workflows for real — below Enterprise they are trial runs (10, 50 and 100), not an included capability",
+      "Your budget is monthly: the listed $79, $199 and $399 are annual rates, with monthly billing about 20% higher",
+      "You compare it to a general AI writer: the plans are built around AI search visibility tracking, and article volumes are modest (15, 25 and 50 a month)"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Writesonic cost?",
+        "cevap": "Starter is $79/month, Basic $199/month and Growth $399/month, each billed annually, with Enterprise custom-priced. Annual billing is advertised as saving 20% against monthly."
+      },
+      {
+        "soru": "How many AI articles do Writesonic plans include?",
+        "cevap": "15 a month on Starter, 25 on Basic and 50 on Growth, alongside 10, 20 and 50 site audits respectively (100, 1,200 and 2,500 pages per audit). Enterprise volumes are custom."
+      },
+      {
+        "soru": "Which AI platforms does Writesonic track?",
+        "cevap": "Starter, Basic and Growth track ChatGPT, Gemini and Google AI Overviews, with 50, 100 and 200 daily prompts. All 10 AI platforms, plus custom regions and languages, require Enterprise."
+      },
+      {
+        "soru": "Does Writesonic include team seats?",
+        "cevap": "Sparingly: 1 user and 1 project on Starter, 2 users and 1 project on Basic, and 3 users and 2 projects on Growth. Larger teams need an Enterprise quote."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "freshdesk",
@@ -44115,7 +44224,7 @@
     "shortDescription": "American financial technology company.",
     "websiteUrl": "https://www.tipalti.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 99,
     "isFlat": true,
     "longDescription": "Tipalti automates mass payouts and supplier payments, including tax forms and cross-border compliance. Paying hundreds of suppliers across borders drags in tax forms, sanctions screening and currency handling, and that whole problem is what it removes. Below a few hundred payees the automation rarely justifies the platform cost.",
     "pros": [
@@ -44132,20 +44241,29 @@
     "verdict": "Valuable at payout volume. Below that, your bank and accounting tool suffice.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Tipalti — Pricing",
-          "url": "https://tipalti.com/pricing",
-          "checkedAt": "2026-08-31",
+          "label": "Tipalti — Pricing & Costs",
+          "url": "https://www.tipalti.com/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Tipalti Accounts Payable plans start at $99/month, including unlimited users, a self-service supplier portal and core automation features",
+            "Tipalti Mass Payments plans start at $249/month, including unlimited users, a payee portal and core automation",
+            "Both products carry additional transaction pricing — per invoice and per payment for AP, per payment for Mass Payments — which is not published on the page",
+            "Standard implementations are included and cover common AP and payment workflows; more complex environments may require additional professional services",
+            "Procurement, Expenses and Treasury are separate modules you expand into",
+            "Payments run in 200+ countries using local rails, with FX management and money transmitter licences in the US, Canada, UK and EU",
+            "Supplier onboarding is self-service in 27 languages, with W9/W8 tax form collection and global tax validation; invoice scanning covers 146 languages",
+            "ERP integrations include NetSuite, Sage Intacct, QuickBooks, Microsoft Dynamics and SAP, with others via API",
+            "Every listed price is a starting point: the page directs you to sales for a custom quote"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Per-invoice and per-payment transaction fees are referenced but not published; only the subscription starting prices are stated."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": null,
@@ -44170,7 +44288,39 @@
         "title": "Payment reconciliation",
         "description": "Matches payouts back to the accounting ledger automatically."
       }
-    ]
+    ],
+    "fiyatModeli": "abonelik-arti-islem",
+    "bestFor": [
+      "Finance teams with many approvers: both products include unlimited users, so the subscription does not scale with headcount",
+      "Companies paying a distributed global payee network — Mass Payments starts at $249/month and covers 200+ countries on local rails",
+      "Multi-entity operations on NetSuite, Sage Intacct, QuickBooks, Dynamics or SAP, where the ERP integration and entity-level rules are core features",
+      "Businesses that need tax compliance built in: W9/W8 collection, tax ID validation and supplier onboarding in 27 languages"
+    ],
+    "skipIf": [
+      "You need a total cost up front — the $99 and $249 figures are subscription starting points, with per-invoice and per-payment transaction fees added and not published",
+      "You are a small business with few bills: at $99/month plus transaction fees before any module expansion, the entry price assumes real AP volume",
+      "You want procurement, expenses or treasury included — those are separate modules to expand into",
+      "Your environment is unusual: standard implementation is included, but complex setups may need paid professional services"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Tipalti cost?",
+        "cevap": "Accounts Payable plans start at $99 per month and Mass Payments at $249 per month, both including unlimited users. Transaction fees per invoice and per payment are charged on top and are not published — Tipalti quotes them individually."
+      },
+      {
+        "soru": "Does Tipalti charge per user?",
+        "cevap": "No. Both the Accounts Payable and Mass Payments plans state unlimited users; the cost drivers are the subscription tier and per-transaction fees."
+      },
+      {
+        "soru": "Is implementation included with Tipalti?",
+        "cevap": "Standard implementations are included and cover common AP and payment workflows. More complex environments may require additional professional services, quoted separately."
+      },
+      {
+        "soru": "Which countries can Tipalti pay?",
+        "cevap": "Over 200 countries and territories using local payment rails, with multi-currency accounts, FX management and money transmitter licences in the US, Canada, UK and EU."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "bench-accounting",
@@ -44179,25 +44329,63 @@
     "shortDescription": "North American financial technology company purchased by Employer.com.",
     "websiteUrl": "https://bench.co/",
     "incelendi": false,
-    "basePrice": 0,
+    "basePrice": 199,
     "isFlat": true,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Bench Accounting — Pricing",
-          "url": "https://www.bench.co/pricing",
-          "checkedAt": "2026-08-31",
+          "label": "Bench — Pricing",
+          "url": "https://bench.co/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Bookkeeping Grow: $1,910 billed annually at a 20% discount versus monthly, or starting at $199/month billed monthly — dedicated bookkeeping experts, monthly books, year-end tax-ready packages, P&L, balance sheet and 1099 reporting, pre-scheduled communication touchpoints, custom categorizations",
+            "Bookkeeping Core: $3,830 billed annually, or starting at $399/month billed monthly — adds unlimited communication with your bookkeeping team",
+            "Bookkeeping Core + Tax: $5,750 billed annually — adds a dedicated team of licensed tax professionals filing business income tax returns (partnerships, S corps, C corps) and individual returns (sole proprietors, contractors)",
+            "QBO Certified Bookkeeper: $55/hour with a $1,200 onboarding fee — certified experts working inside your existing QuickBooks Online account",
+            "All plans are described as 100% tax deductible; the Grow plan is subject to qualification ('See if you qualify')",
+            "Bench serves US-based business owners and says over 35,000 have used it",
+            "A free trial is offered on every plan"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Lean US businesses that want a human bookkeeper rather than software: Grow starts at $199/month, or $1,910 paid annually",
+      "Owners who want books and taxes from one provider — Core + Tax is $5,750 a year and includes business and personal income tax filing",
+      "Teams that already run QuickBooks Online: the certified bookkeeper option works inside your account at $55/hour",
+      "Anyone who prefers paying yearly, since annual billing is a 20% discount against monthly"
+    ],
+    "skipIf": [
+      "You want unlimited access to your bookkeeper — the entry Grow plan gives pre-scheduled touchpoints, and unlimited communication starts on Core at $399/month",
+      "You are outside the US: Bench's plans, filings and reporting (1099s, S corps, C corps) are built around US businesses",
+      "You assumed the QuickBooks option is the cheap one — it is $55/hour on top of a $1,200 onboarding fee",
+      "You need the entry price guaranteed: the Grow plan is qualification-based, and both monthly figures are quoted as 'starting at'"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Bench cost?",
+        "cevap": "Bookkeeping Grow is $1,910 a year (from $199/month monthly), Bookkeeping Core $3,830 a year (from $399/month) and Core + Tax $5,750 a year. A QuickBooks-certified bookkeeper is $55/hour plus a $1,200 onboarding fee. Annual billing is a 20% discount."
+      },
+      {
+        "soru": "What is the difference between Bench Grow and Core?",
+        "cevap": "Both provide dedicated bookkeepers, monthly books, year-end tax-ready packages and P&L, balance sheet and 1099 reporting. Grow is a lighter-touch plan with pre-scheduled communication and is qualification-based; Core adds unlimited communication with your bookkeeping team."
+      },
+      {
+        "soru": "Does Bench file taxes?",
+        "cevap": "On the Core + Tax plan, $5,750 billed annually: a dedicated team of licensed tax professionals files business income tax returns for partnerships, S corps and C corps, plus individual returns for sole proprietors and contractors."
+      },
+      {
+        "soru": "Is Bench available outside the United States?",
+        "cevap": "The plans are aimed at US-based business owners — the reporting and filings listed (1099s, S corps, C corps, sole proprietors) are US tax forms."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "ledgersmb",
