@@ -72,7 +72,7 @@
       "Huddles",
       "Integrations"
     ],
-    "basePrice": 7,
+    "basePrice": 7.25,
     "isFlat": false,
     "category": "Communication",
     "shortDescription": "Digital headquarters for teams.",
@@ -119,21 +119,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Slack — Pricing",
           "url": "https://slack.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 90 days message history, up to 10 apps, 1:1 huddles, 1:1 external messages",
+            "Pro $8.75/user/month monthly or $7.25/user/month annual: unlimited history and apps, group huddles",
+            "Business+ $18/user/month monthly or $15/user/month annual",
+            "Enterprise+ contact sales; Multi-SAML and unlimited workspaces"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "fiyatKontrolTarihi": "2026-09-09",
+    "bestFor": [
+      "Teams on Pro at $7.25 per user/month billed annually ($8.75 monthly) who need unlimited message history",
+      "Small groups testing the Free plan: 90 days of message history, up to 10 apps and 1:1 huddles",
+      "Companies on Business+ at $15 per user/month annually ($18 monthly) that need group external messaging"
+    ],
+    "skipIf": [
+      "You rely on the Free plan long term — history is cut at 90 days and apps are capped at 10",
+      "You need Multi-SAML or unlimited workspaces; those are Enterprise+ and priced only by sales",
+      "Your headcount is large: every plan is per user, so cost scales linearly with the team"
+    ]
   },
   {
     "slug": "notion",
@@ -416,7 +430,7 @@
       "Prototyping",
       "Dev Mode"
     ],
-    "basePrice": 12,
+    "basePrice": 16,
     "isFlat": false,
     "category": "Design",
     "shortDescription": "Collaborative UI/UX design.",
@@ -463,21 +477,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Figma — Pricing",
           "url": "https://www.figma.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "the vendor's published pricing"
+            "Starter free: 150 AI credits/day, up to 500 AI credits/month",
+            "Professional: full seat $16/mo, Dev seat $12/mo, Collab seat $3/mo; 3,000 AI credits/mo on full seat",
+            "Organization (annual only): full $55/mo, Dev $25/mo, Collab $5/mo",
+            "Enterprise (annual only): full $90/mo, Dev $35/mo, Collab $5/mo"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "fiyatKontrolTarihi": "2026-09-09",
+    "bestFor": [
+      "Designers on Professional at $16/month for a full seat, with Dev seats $12 and Collab seats $3",
+      "Free Starter users who need occasional design work: 150 AI credits/day, up to 500/month",
+      "Organizations at $55/month per full seat (annual billing only) that need design systems across teams"
+    ],
+    "skipIf": [
+      "You want monthly billing at scale — Organization and Enterprise are billed annually only",
+      "Your team is mostly viewers and commenters; you still pay per seat type rather than a flat fee",
+      "You need Enterprise controls: full seats jump to $90/month there"
+    ]
   },
   {
     "slug": "webflow",
@@ -765,8 +793,8 @@
       "Site Explorer",
       "Content Gap"
     ],
-    "basePrice": 99,
-    "isFlat": false,
+    "basePrice": 29,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "Industry-leading link analysis.",
     "longDescription": "Ahrefs is widely considered the gold standard among professional SEOs, boasting the world's second most active web crawler after Google. Its backlink index is among the largest in the industry, which is what most teams buy it for. It can analyze why a competitor is outranking you in seconds and provide a clear roadmap for your own growth. From content marketing to keyword research, every feature is designed to help you make data-backed decisions. It is known for providing some of the most accurate search volume data available outside of Google itself.",
@@ -812,21 +840,36 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Ahrefs — Pricing",
           "url": "https://ahrefs.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "the vendor's published pricing"
+            "Starter $29/month; Ahrefs Free available",
+            "Lite $129/month: 5 projects, 1 user (+2 at $40/mo), 750 tracked keywords, 100,000 crawl credits, 6 months history",
+            "Standard $249/month: 20 projects, 1 user (+5 at $60/mo), 2,000 keywords, 500,000 crawl credits, 2 years history",
+            "Advanced $449/month: 50 projects, 1 user (+10 at $80/mo), 5,000 keywords, 1,500,000 crawl credits, 5 years history",
+            "Enterprise $1,499/month with annual commitment: uncapped API access"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "fiyatKontrolTarihi": "2026-09-09",
+    "bestFor": [
+      "Solo SEOs on Starter at $29/month, or Lite at $129/month for 5 projects and 750 tracked keywords",
+      "Agencies on Standard at $249/month: 20 projects, 2,000 keywords, 500,000 crawl credits, 2 years of history",
+      "In-house teams on Advanced at $449/month with 50 projects and 5 years of historical data"
+    ],
+    "skipIf": [
+      "You need several seats — every plan includes 1 user and extra seats cost $40 to $80/month each",
+      "You want uncapped API access; that starts at Enterprise, $1,499/month with an annual commitment",
+      "You track more than 750 keywords but only have Lite budget — keyword caps are per plan, not add-ons"
+    ]
   },
   {
     "slug": "canva",
@@ -1800,21 +1843,34 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Todoist — Pricing",
-          "url": "https://www.todoist.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://todoist.com/pricing",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "the vendor's published pricing"
+            "Beginner free: 5 personal projects, 5 MB file uploads, 3 filter views, 1 week activity history, 5 people per project",
+            "Pro: 300 personal projects, 100 MB file uploads, 150 filter views, full reporting history",
+            "Business: 300 projects per member, up to 500 team projects, 250 people per team project, 1,000 team members and guests"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Plan prices were not rendered on the pricing page at the time of review; only the published limits are recorded here."
       ]
-    }
+    },
+    "bestFor": [
+      "Individuals on the free Beginner plan: 5 personal projects, 5 MB uploads, 3 filter views and 5 people per project",
+      "Power users on Pro: 300 personal projects, 100 MB uploads, 150 filter views and full reporting history",
+      "Teams on Business: up to 500 team projects, 250 people per team project and 1,000 team members and guests"
+    ],
+    "skipIf": [
+      "You keep more than 5 projects and will not upgrade — the free plan caps projects, not tasks",
+      "You need one week of history to be enough; the free plan keeps only 1 week of activity",
+      "You want a large free team: the free plan allows 5 people per project"
+    ]
   },
   {
     "slug": "buffer",
@@ -1829,7 +1885,7 @@
       "Analytics",
       "Post Ideas"
     ],
-    "basePrice": 6,
+    "basePrice": 5,
     "isFlat": false,
     "category": "Marketing",
     "shortDescription": "Social media planning.",
@@ -1876,21 +1932,35 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Buffer — Pricing",
           "url": "https://buffer.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "the vendor's published pricing"
+            "Free $0: 3 channels, 10 scheduled posts per channel, 1 user, 30-day analytics history",
+            "Essentials $5 per channel/month or $60/year: unlimited scheduled posts, 1 user, unlimited analytics history",
+            "Team $10 per channel/month or $120/year: unlimited team members, branded reports",
+            "Channels 1-10 at standard rate; channels above 10 cost less per channel"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "fiyatKontrolTarihi": "2026-09-09",
+    "bestFor": [
+      "Solo creators on Free: 3 channels, 10 scheduled posts per channel and 30 days of analytics history",
+      "Freelancers on Essentials at $5 per channel/month ($60/year) with unlimited scheduled posts",
+      "Teams on Team at $10 per channel/month ($120/year) with unlimited team members and branded reports"
+    ],
+    "skipIf": [
+      "You manage many accounts — pricing is per channel, so ten channels on Team is $100/month",
+      "You need more than 10 scheduled posts per channel without paying; that is the free cap",
+      "You want team seats on the cheaper tier: Essentials is a single user account"
+    ]
   },
   {
     "slug": "gusto",
@@ -2316,21 +2386,34 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Vercel — Pricing",
           "url": "https://vercel.com/pricing",
-          "checkedAt": "2026-08-31",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "the vendor's published pricing"
+            "Hobby $0/month: 100 GB fast data transfer, 1M function invocations, 5K image optimization transformations",
+            "Pro $20/month per developer: 1 TB transfer then from $0.15/GB, invocations from $0.60 per 1M",
+            "Build minutes $0.014/minute standard, $0.028/minute enhanced",
+            "SAML SSO add-on $300/month; Enterprise custom"
           ]
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
-    }
+    },
+    "bestFor": [
+      "Solo developers on Hobby at $0: 100 GB fast data transfer, 1M function invocations and 5K image transformations per month",
+      "Teams on Pro at $20/month per developer with 1 TB transfer included, then $0.15/GB",
+      "Production apps that need SAML SSO, available on Pro as a $300/month add-on"
+    ],
+    "skipIf": [
+      "You expect flat hosting costs — beyond the included amounts everything is metered ($0.60 per 1M invocations, $0.05 per 1K image transformations)",
+      "You build heavily on Pro: build minutes are billed at $0.014/minute standard and $0.028/minute enhanced",
+      "You need SSO on a small budget: the add-on costs $300/month, more than the seats for most small teams"
+    ]
   },
   {
     "slug": "jasper",
