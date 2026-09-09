@@ -13541,20 +13541,26 @@
     "verdict": "Genuinely helpful for meeting-heavy schedules. Little benefit if your calendar is mostly empty.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Reclaim.ai — Pricing",
           "url": "https://reclaim.ai/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Lite (free): 1 week scheduling range (excluding scheduling links), 1 calendar sync, 1 scheduling link, limited integrations (Google Tasks, Slack, Zoom, Google Meet), task recommendations",
+            "Starter $10 per seat/month: 10 AI Agents per seat, up to 10 seats, 8 week scheduling range, 3 calendar syncs, 3 scheduling links, unlimited integrations",
+            "Paid plans add Todoist, Asana, ClickUp, Jira and Linear integrations",
+            "Attendee Users (AUs): attendees without a paid seat, needed for Smart Meetings with 3+ people, cumulative per team account",
+            "AU packs on Starter: +3 $8/mo, +6 $16/mo, +9 $24/mo, +12 $32/mo; on Business: +6 $12/mo, +12 $24/mo, +18 $36/mo, +24 $48/mo",
+            "Each additional AU pack includes a free seat that can be assigned to a team member"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Only the Starter seat price was present in the page text; Business and Enterprise seat prices are not quoted here."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -13568,6 +13574,22 @@
       {
         "title": "Calendar sync",
         "description": "Reconciles work and personal calendars to avoid double booking."
+      }
+    ],
+    "bestFor": [
+      "Individuals defending focus time free: the Lite plan covers a 1-week scheduling range, 1 calendar sync, 1 scheduling link and Google Tasks, Slack, Zoom and Google Meet",
+      "Small teams on Starter at $10 per seat/month — 10 AI agents per seat, an 8-week scheduling range, 3 calendar syncs, 3 scheduling links and unlimited integrations",
+      "Teams already living in a task tool: paid plans add Todoist, Asana, ClickUp, Jira and Linear on top of the free integrations"
+    ],
+    "skipIf": [
+      "You run large meetings — Smart Meetings with 3+ people consume Attendee Users (AUs), billed separately: 3 extra AUs on Starter cost $8/month, 12 extra cost $32/month",
+      "Your team is bigger than 10 people; Starter is capped at 10 seats",
+      "You need a long planning horizon on the free plan: Lite looks only 1 week ahead for automated scheduling"
+    ],
+    "sss": [
+      {
+        "soru": "What are Attendee Users in Reclaim and do they cost extra?",
+        "cevap": "Attendee Users (AUs) are meeting attendees who do not hold a paid Reclaim seat, and they are consumed by Smart Meetings with 3 or more people — two-person meetings do not require them. AUs are cumulative across a team account and are sold in packs: on Starter, 3 extra AUs cost $8/month, 6 cost $16, 9 cost $24 and 12 cost $32; on Business, 6 cost $12/month up to 24 for $48. Each additional pack includes a free seat you can assign to a teammate. This is the line most people miss when comparing the per-seat price."
       }
     ]
   },
@@ -15183,20 +15205,25 @@
     "verdict": "Worth it when billing edge cases start costing engineering time. Simple monthly plans do not need it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Chargebee — Pricing",
-          "url": "https://www.chargebee.com/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.chargebee.com/pricing/",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Flow priced from a monthly invoicing volume calculator; at $20,000 monthly invoicing volume the page shows $160/mo",
+            "Rate bands shown on the page: $0 + 0.80% and $99 + 0.65%, with a stated $66K breakeven",
+            "Flow includes: 100M usage events/mo, 40+ payment gateways, price book and invoicing, usage ingestion and billing with MCP, real-time usage limits and alerts, usage/pricing/revenue analytics, pricing tables + 1 growth experiment, CRM/ERP/productivity integrations",
+            "Enterprise (schedule a demo): multi-entity management, account hierarchy, contract terms, on-demand discounting, paid add-ons, up to 500M usage events/mo, enterprise access controls, data export to GCS/Amazon S3/Snowflake and BI stack, higher API/webhook/sandbox limits",
+            "CPQ Lite: free for the first 50 quotes, available exclusively to Chargebee Billing customers; includes quote creation, immediate amendments, Chargebee CPQ for Salesforce and HubSpot"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The $160/mo figure is the output of the page's interactive volume calculator at $20,000 monthly invoicing volume, not a fixed list price. Your figure depends on your billing volume."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -15210,6 +15237,22 @@
       {
         "title": "Revenue reporting",
         "description": "Produces recognised revenue and MRR reporting from billing data."
+      }
+    ],
+    "bestFor": [
+      "Usage-based and hybrid billing models: the Flow plan includes 100M usage events per month, usage ingestion and billing, real-time usage limits and alerts",
+      "Teams that need gateway breadth — 40+ payment gateways plug in, with CRM, ERP and productivity integrations included",
+      "Companies running billing at global scale: Enterprise adds multi-entity management, account hierarchies, contract terms, up to 500M usage events per month and data export to GCS, S3, Snowflake or a BI stack"
+    ],
+    "skipIf": [
+      "You want a flat published price — Flow is quoted from a volume calculator (a percentage of invoicing volume on top of a base), so your number depends on what you bill",
+      "You need multi-entity management, account hierarchies or enterprise access controls: those are Enterprise and Enterprise is demo-only",
+      "You are past the first 50 quotes on CPQ — CPQ Lite is free only for those, and it requires being a Chargebee Billing customer"
+    ],
+    "sss": [
+      {
+        "soru": "How is Chargebee priced?",
+        "cevap": "Chargebee's Flow plan is priced from monthly invoicing volume rather than a flat fee: the pricing page shows a calculator where $20,000 of monthly invoicing volume produces $160/month, and the underlying formula is shown as a base plus a percentage of volume (0.80% at the lower band, and $99 + 0.65% at the next), with a stated $66K breakeven point between bands. Flow includes 100M usage events per month, 40+ payment gateways and pricing tables with one growth experiment. Enterprise is demo-only. CPQ Lite is free for the first 50 quotes and is available only to Chargebee Billing customers."
       }
     ]
   },
@@ -15243,20 +15286,24 @@
     "verdict": "The dunning recovery alone can justify it at scale. Small subscriber counts do not need this.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Recurly — Pricing",
-          "url": "https://recurly.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.recurly.com/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter: $249 per month + 0.9% of billing volume; first $40K of billings included at no charge each month; 90-day free trial",
+            "Starter includes: automated global subscription billing, flexible plans and pricing, static churn-prevention tools, 1 dunning campaign, 10+ payment methods, 20+ payment gateways",
+            "All-Access: as low as <1% of billing volume, billed annually, $1M billing volume minimum; rate improves with volume",
+            "All-Access adds: AI-powered agents and analytics, intelligent churn-prevention, multiple dunning campaigns, advanced plans/pricing/promotions, payments orchestration across gateways, custom reporting and automated exports, ACH and additional gateways, multicurrency, single sign-on",
+            "All-Access for Shopify offered as a separate bundle"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -15270,6 +15317,22 @@
       {
         "title": "Revenue analytics",
         "description": "Reports subscription metrics and cohort retention."
+      }
+    ],
+    "bestFor": [
+      "Subscription businesses starting out: Starter is $249 per month plus 0.9% of billing volume, with the first $40K of billings each month included at no charge",
+      "Teams that want to try before committing — Recurly offers a 90-day free trial on Starter and a free sandbox on the higher tier",
+      "Businesses past $1M in billing volume: All-Access is quoted as low as under 1% of billing volume, billed annually, and the rate improves with volume"
+    ],
+    "skipIf": [
+      "Your billing volume is small and irregular — a percentage of billings on top of a $249 monthly floor is expensive relative to a flat tool",
+      "You need multicurrency, single sign-on, payments orchestration across gateways or intelligent churn prevention: those are All-Access, which carries a $1M billing volume minimum",
+      "You want one published number: the All-Access rate is volume-negotiated rather than listed"
+    ],
+    "sss": [
+      {
+        "soru": "How is Recurly priced?",
+        "cevap": "Recurly charges a platform fee plus a percentage of what you bill. Starter is $249 per month plus 0.9% of billing volume, and the first $40,000 of billings each month is included at no charge; it comes with a 90-day free trial. All-Access is quoted as low as under 1% of billing volume, billed annually, and requires a $1M billing volume minimum — the rate improves as volume grows. Starter includes automated global subscription billing, one dunning campaign, 10+ payment methods and 20+ payment gateways; multicurrency, SSO, payments orchestration and multiple dunning campaigns sit on All-Access."
       }
     ]
   },
