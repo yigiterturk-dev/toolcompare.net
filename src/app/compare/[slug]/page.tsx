@@ -16,6 +16,7 @@ import Link from "next/link";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
 import type { Metadata } from "next";
 
+import { paylasimMeta } from "@/lib/paylasim";
 /**
  * Karsilastirma sayfalari build aninda uretilsin.
  *
@@ -84,8 +85,7 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
     description,
     robots: indekslensin ? undefined : { index: false, follow: true },
     alternates: { canonical },
-    openGraph: { title, description, url: canonical, siteName: "ToolCompare", type: "article" },
-    twitter: { card: "summary_large_image", title, description },
+    ...paylasimMeta({ url: canonical, title, description, type: "article" }),
   };
 }
 

@@ -7,6 +7,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+
+export const metadata = {
+  // Kanonik SAYFA BASINA yazilir; kok layout artik miras birakmiyor
+  // (bkz. src/app/layout.tsx, 2026-09-09 olcumu).
+  alternates: { canonical: "/tools/udf-reader" },
+};
 export default function UdfReader() {
   const [content, setContent] = useState<string>("");
   const [fileName, setFileName] = useState<string>("");

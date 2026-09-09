@@ -30,7 +30,17 @@ export const metadata: Metadata = {
   // metadataBase olmadan canonical ve OG url'leri goreli kaliyordu; Google'in
   // hangi adresi kanonik sayacagi belirsizdi.
   metadataBase: new URL("https://toolcompare.net"),
-  alternates: { canonical: "/" },
+  /*
+    OLCULEN HATA (2026-09-09): burada `alternates: { canonical: "/" }`
+    duruyordu. Next metadata'yi alt sayfalara MIRAS birakiyor, yani kendi
+    kanonigini yazmayan HER sayfa Google'a "ben anasayfayim" diyordu.
+    Canlida dogrulandi: /top-picks, /categories, /blog ve /tools/udf-reader
+    (hepsi 200) kanonik olarak anasayfayi gosteriyordu. Ikisi ayni zamanda
+    sitemap'te -- yani sitemap "beni indeksle", kanonik "ben baskasiyim"
+    diyordu. Celisen sinyalin sonucu: sayfa indekslenmez.
+    Kanonik artik SAYFA BASINA yaziliyor; anasayfaninki app/page.tsx'te.
+    tests/kanonik.test.ts kendi kanonigini yazmayan sayfa kalirsa kiriliyor.
+  */
   openGraph: {
     title: "ToolCompare | The World's Best Software Tools, Compared",
     description:

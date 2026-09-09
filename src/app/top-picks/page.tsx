@@ -10,6 +10,7 @@ import { fiyatDurumu } from "@/lib/fiyat";
 import { kumeIcindekiCiftler, alternatifSayfasiOlan } from "@/lib/compare";
 
 export const metadata = {
+  alternates: { canonical: "/top-picks" },
   title: "The Cheapest Tools We Track (2026) | ToolCompare",
   description:
     "The lowest verified starting prices across our whole directory. Price is not quality — this is a price list, not a recommendation.",

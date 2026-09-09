@@ -28,6 +28,7 @@ import AffiliateNotu from "@/components/AffiliateNotu";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
+import { paylasimMeta } from "@/lib/paylasim";
 function aracBul(slug: string): Arac | undefined {
   return (toolsData as Arac[]).find((t) => t.slug === slug);
 }
@@ -57,8 +58,7 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
     // Fiyati dogrulanmamis aracin alternatif sayfasi indekslenmez; sayfa
     // yine acik ve linkli kalir. Kural: src/lib/indeks.ts
     robots: alternatifIndekslenir(tool) ? undefined : NOINDEX,
-    openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
-    twitter: { card: "summary_large_image", title, description },
+    ...paylasimMeta({ url, title, description, type: "article" }),
   };
 }
 

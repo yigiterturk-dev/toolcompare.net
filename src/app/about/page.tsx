@@ -6,6 +6,7 @@ import toolsData from "@/data/tools.json";
 import type { Arac } from "@/lib/arac";
 import { dogrulanmamisSayisi } from "@/lib/fiyat";
 
+import { OG_GORSEL } from "@/lib/paylasim";
 export const metadata: Metadata = {
   title: "About ToolCompare | ToolCompare",
   description:
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
     url: "/about",
     siteName: "ToolCompare",
     type: "article",
+    images: [{ url: OG_GORSEL, width: 1200, height: 630, alt: "ToolCompare" }],
   },
 };
 

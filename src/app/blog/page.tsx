@@ -5,6 +5,12 @@ import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import fs from 'fs';
 import path from 'path';
 
+
+export const metadata = {
+  // Kanonik SAYFA BASINA yazilir; kok layout artik miras birakmiyor
+  // (bkz. src/app/layout.tsx, 2026-09-09 olcumu).
+  alternates: { canonical: "/blog" },
+};
 export default function BlogPage() {
   const postsPath = path.join(process.cwd(), 'src/data/posts.json');
   /* `let posts = []` tipi `never[]` cikariyordu; JSON okunduktan sonra

@@ -4,13 +4,14 @@ import { Send, Rocket, Shield, Zap, Globe } from "lucide-react";
 
 import type { Metadata } from "next";
 
+import { OG_GORSEL } from "@/lib/paylasim";
 // Kendi metadata'si yoktu: kok layout'unkini miras alip
 // anasayfayla AYNI baslik/aciklamayi kullaniyordu.
 export const metadata: Metadata = {
   title: "Submit a Tool | ToolCompare",
   description: "Think a tool belongs in the ToolCompare directory? Send it in and we will review it.",
   alternates: { canonical: "/submit" },
-  openGraph: { title: "Submit a Tool | ToolCompare", description: "Think a tool belongs in the ToolCompare directory? Send it in and we will review it.", url: "/submit", siteName: "ToolCompare", type: "website" },
+  openGraph: { title: "Submit a Tool | ToolCompare", description: "Think a tool belongs in the ToolCompare directory? Send it in and we will review it.", url: "/submit", siteName: "ToolCompare", type: "website" , images: [{ url: OG_GORSEL, width: 1200, height: 630, alt: "ToolCompare" }]},
 };
 
 

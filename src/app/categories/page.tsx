@@ -59,6 +59,7 @@ const KATEGORI_IKONU: Record<string, LucideIcon> = {
 };
 
 export const metadata = {
+  alternates: { canonical: "/categories" },
   title: "Software Categories | ToolCompare",
   description: "Browse SaaS tools by category: CRM, AI, project management and more — each list ordered by verified starting price.",
 };

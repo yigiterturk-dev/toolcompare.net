@@ -2,6 +2,12 @@ import Link from "next/link";
 import ToolGridClient, { type IzgaraArac } from "@/components/ToolGridClient";
 import { getTools } from "@/lib/tools";
 
+
+export const metadata = {
+  // Kanonik SAYFA BASINA yazilir; kok layout artik miras birakmiyor
+  // (bkz. src/app/layout.tsx, 2026-09-09 olcumu).
+  alternates: { canonical: "/" },
+};
 // Sunucu bileseni: veriyi burada yukluyoruz ki urun linkleri HTML'e girsin.
 // Onceden sayfanin tamami "use client" idi ve useSearchParams() yuzunden
 // statik uretimde bailout ediyordu; Google yalnizca "Loading..." goruyordu.

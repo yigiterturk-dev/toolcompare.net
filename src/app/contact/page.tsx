@@ -4,13 +4,14 @@ import { Mail, MessageSquare, MapPin } from "lucide-react";
 
 import type { Metadata } from "next";
 
+import { OG_GORSEL } from "@/lib/paylasim";
 // Kendi metadata'si yoktu: kok layout'unkini miras alip
 // anasayfayla AYNI baslik/aciklamayi kullaniyordu.
 export const metadata: Metadata = {
   title: "Contact ToolCompare | ToolCompare",
   description: "Questions about a review, a correction, or a listing? Here is how to reach the ToolCompare team.",
   alternates: { canonical: "/contact" },
-  openGraph: { title: "Contact ToolCompare | ToolCompare", description: "Questions about a review, a correction, or a listing? Here is how to reach the ToolCompare team.", url: "/contact", siteName: "ToolCompare", type: "website" },
+  openGraph: { title: "Contact ToolCompare | ToolCompare", description: "Questions about a review, a correction, or a listing? Here is how to reach the ToolCompare team.", url: "/contact", siteName: "ToolCompare", type: "website" , images: [{ url: OG_GORSEL, width: 1200, height: 630, alt: "ToolCompare" }]},
 };
 
 

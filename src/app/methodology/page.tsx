@@ -22,6 +22,7 @@ import type { Arac } from "@/lib/arac";
 import { dogrulanmamisSayisi } from "@/lib/fiyat";
 import { kategoriler } from "@/lib/categories";
 
+import { OG_GORSEL } from "@/lib/paylasim";
 export const metadata: Metadata = {
   title: "How We Rank Tools | ToolCompare",
   description:
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
     url: "/methodology",
     siteName: "ToolCompare",
     type: "article",
+    images: [{ url: OG_GORSEL, width: 1200, height: 630, alt: "ToolCompare" }],
   },
 };
 

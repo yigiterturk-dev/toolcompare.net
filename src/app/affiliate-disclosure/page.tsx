@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { affiliateAktifMi, ACIKLAMA_METNI } from "@/lib/affiliate";
 
+import { OG_GORSEL } from "@/lib/paylasim";
 export const metadata: Metadata = {
   title: "Affiliate Disclosure | ToolCompare",
   description:
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     url: "/affiliate-disclosure",
     siteName: "ToolCompare",
     type: "article",
+    images: [{ url: OG_GORSEL, width: 1200, height: 630, alt: "ToolCompare" }],
   },
 };
 

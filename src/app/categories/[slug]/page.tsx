@@ -21,6 +21,7 @@ import { kumeIcindekiCiftler, alternatifSayfasiOlan } from "@/lib/compare";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
+import { paylasimMeta } from "@/lib/paylasim";
 export function generateStaticParams() {
   return kategoriler().map((k) => ({ slug: k.slug }));
 }
@@ -50,8 +51,7 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
     description,
     robots: indekslensin ? undefined : { index: false, follow: true },
     alternates: { canonical: url },
-    openGraph: { title, description, url, siteName: "ToolCompare", type: "article" },
-    twitter: { card: "summary_large_image", title, description },
+    ...paylasimMeta({ url, title, description, type: "article" }),
   };
 }
 
