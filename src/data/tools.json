@@ -42117,26 +42117,91 @@
     "category": "Productivity",
     "shortDescription": "Checkvist is a keyboard-focused online outliner.",
     "websiteUrl": "https://checkvist.com",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Checkvist — Pricing",
+          "label": "Checkvist — Plans and pricing",
           "url": "https://checkvist.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0 forever: unlimited hierarchical lists, unlimited sharing and collaboration, keyboard support, add tasks via email, markdown, notes, due dates, tags, search and live filtering, focus/hoist, import and export, mobile offline web app, browser extensions and open API",
+            "PRO $3.9 per person per month, or $39 per year: 2 GB file storage, bookmarks, task assignment, repeating tasks, Google Calendar synchronisation, export to other calendar apps, save from Slack, MCP server for AI assistants, interface customisation, advanced sharing options, private tags and tag colours, bulk operations, due task reminders, instant change notifications, daily change reports, 30-day backup plus Dropbox backup",
+            "PRO team $6.9 per person per month, or $69 per year, marked COMING SOON: centralised data ownership, user management, group access rights, spaces, list and branch locking, priority support, theming",
+            "14-day trial of all PRO features with no credit card; accounts downgrade to free automatically afterwards with no data lost or locked, and the trial can be extended on request",
+            "Sharing lists does not require PRO; PRO is needed only to password-protect a list or set an expiry on a sharing link",
+            "Subscriptions can be cancelled anytime, and the vendor states it sends an email reminder one week before payment"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The PRO team tier is listed with a price but marked COMING SOON, so it is not yet purchasable."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "longDescription": "Checkvist is a keyboard-driven outliner and task list whose free tier is close to the whole product: unlimited hierarchical lists, unlimited sharing and collaboration, markdown, notes, due dates, tags, import and export, an open API and the mobile web app all cost nothing. The single paid tier adds the things that turn an outliner into a working task system — assignment, repeating tasks, calendar sync, reminders and backups — plus an MCP server for AI assistants. The vendor is unusually explicit about billing conduct: the trial needs no card, expiry downgrades rather than locks your data, and it promises an email reminder a week before each payment.",
+    "pros": [
+      "Free tier includes unlimited lists, sharing and the open API",
+      "One flat paid tier at under $4 a person per month",
+      "No card for the trial, and data is never locked on downgrade"
+    ],
+    "cons": [
+      "Team plan is still marked coming soon",
+      "File storage is only 2 GB on Pro",
+      "Interface is keyboard-first and plain by design"
+    ],
+    "targetAudience": "Keyboard-driven writers, developers and planners who think in outlines.",
+    "verdict": "Among the cheapest serious task tools available, and the free tier is honest rather than crippled. Pay when you need assignment, recurring tasks or calendar sync.",
+    "keyFeatures": [
+      {
+        "title": "Hierarchical outlining",
+        "description": "Unlimited nested lists with markdown, notes, tags and live filtering."
+      },
+      {
+        "title": "Keyboard-first workflow",
+        "description": "Full keyboard control including focus, hoist and bulk multi-select operations."
+      },
+      {
+        "title": "MCP server",
+        "description": "Connects AI assistants to lists; a Pro feature marked new."
+      }
+    ],
+    "bestFor": [
+      "Anyone who wants a free outliner without a task ceiling: lists, sharing and the API are all free",
+      "Individuals needing recurring tasks, reminders and Google Calendar sync — PRO is $3.9 a month or $39 a year",
+      "People wiring AI assistants into their task list, since the MCP server is included in PRO",
+      "Cautious buyers: the trial takes no card, and expiry downgrades the account rather than locking the data"
+    ],
+    "skipIf": [
+      "You need team administration, group access rights or list locking — the PRO team tier is still marked coming soon",
+      "You store large files: PRO includes 2 GB",
+      "You want a visual, drag-first task board; this is a keyboard and outline tool",
+      "You need password-protected or expiring share links on the free plan, which is one of the few things PRO gates"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Checkvist cost?",
+        "cevap": "The free plan is $0 forever. PRO is $3.9 per person per month or $39 a year. A PRO team tier at $6.9 per month or $69 a year is listed but marked coming soon."
+      },
+      {
+        "soru": "What does the Checkvist free plan include?",
+        "cevap": "Unlimited hierarchical lists, unlimited sharing and collaboration, markdown, notes, due dates, tags, live filtering, import and export, browser extensions, the mobile offline web app and the open API."
+      },
+      {
+        "soru": "What happens when the Checkvist trial ends?",
+        "cevap": "The account downgrades to the free version automatically. The vendor states no data is lost or locked, no credit card is needed for the trial, and the trial can be extended on request."
+      },
+      {
+        "soru": "Do you need Checkvist PRO to share lists?",
+        "cevap": "No. All lists can be shared on a free account. PRO is required only to password-protect a list or set an expiry time on a sharing link."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "mindomo",
@@ -42144,25 +42209,33 @@
     "category": "Productivity",
     "shortDescription": "Online collaborative mind mapping software.",
     "websiteUrl": "https://www.mindomo.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Mindomo — Pricing",
-          "url": "https://www.mindomo.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "label": "Mindomo — Pricing (Individuals)",
+          "url": "https://www.mindomo.com/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0: 3 diagrams, unlimited collaborators, sharing and publishing, free templates, trial AI credits, iOS and Android apps",
+            "Premium $7 per month billed yearly, $8.5 per month otherwise (shown as €6 and €7): unlimited diagrams, 50 AI credits per month, file and multimedia attachments, printing, 10 export formats, 14 import formats, Microsoft Teams integration, API access, cloud plus mobile plus desktop",
+            "Professional $16 per month billed yearly, $17.5 per month otherwise (shown as €13.5 and €15), covering 1 user plus 5 guests per month: all Premium features, guest editing for people without a Mindomo account, premium sharing so shared diagrams keep premium functionality, Gantt charts, 20 export formats, business templates",
+            "One AI credit generates approximately 1,000 words, and each subscription month grants 50 AI credits on Premium",
+            "Yearly billing is advertised at up to 20% off, with a six-month option also offered",
+            "Import formats include Mindomo, MindManager, Freemind, MindMeister, XMind, Bubbl.us, SimpleMind, iThoughts, Markdown, Microsoft Project, Text, OPML and Excel",
+            "All prices are exclusive of applicable local taxes",
+            "Separate Teams and Education pricing tabs exist alongside the individual plans"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Only the Individuals tab renders server-side; the Teams and Education prices load client-side and were not read."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": null,
@@ -42173,7 +42246,66 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
-    }
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "longDescription": "Mindomo is a mind mapping, concept mapping and outlining tool sold in individual, team and education variants, with the individual ladder built around two limits: how many diagrams you may keep and how much AI generation you get. The free plan allows three diagrams — enough to evaluate, not to work — while Premium lifts that to unlimited and adds a monthly AI credit allowance where roughly one credit generates a thousand words. The Professional tier exists for a specific case: letting clients without accounts edit your diagrams, and keeping premium functionality on anything you share with free users.",
+    "pros": [
+      "Wide import and export format support, including MindManager and XMind",
+      "Guest editing without accounts on the Professional tier",
+      "Works on cloud, mobile and offline desktop"
+    ],
+    "cons": [
+      "Free plan is capped at three diagrams",
+      "AI runs on a monthly credit allowance",
+      "Gantt charts require the Professional tier"
+    ],
+    "targetAudience": "Consultants, educators and planners who work visually with clients or classes.",
+    "verdict": "Premium is the sensible individual tier; Professional only earns its price if clients edit your maps. Check the import list first — it is the strongest reason to move here from another mapping tool.",
+    "keyFeatures": [
+      {
+        "title": "Mind and concept mapping",
+        "description": "Diagrams, outlines and Gantt views over the same underlying structure."
+      },
+      {
+        "title": "AI generation",
+        "description": "Turns a prompt or document into a diagram, metered in monthly credits."
+      },
+      {
+        "title": "Import and export breadth",
+        "description": "14 import and up to 20 export formats including MindManager, XMind and Office."
+      }
+    ],
+    "bestFor": [
+      "Evaluating the tool or keeping one or two living maps — the free plan allows three diagrams with unlimited collaborators",
+      "Individuals who map regularly: Premium at $7 a month billed yearly removes the diagram cap and adds 50 AI credits",
+      "Consultants whose clients must edit the map, which is what Professional's guest editing at $16 a month buys",
+      "Anyone migrating from another mapping tool, given 14 import formats including MindManager, XMind and MindMeister"
+    ],
+    "skipIf": [
+      "You need more than three diagrams and do not want to pay — that is the free plan's hard limit",
+      "You expect unlimited AI: Premium includes 50 credits a month, roughly 1,000 words each",
+      "You need Gantt charts, which start on Professional at $16 a month billed yearly",
+      "You are buying for a team or a school; those are separate pricing tabs that were not part of this individual comparison"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Mindomo cost?",
+        "cevap": "There is a free plan with 3 diagrams, then Premium at $7 per month billed yearly ($8.5 otherwise) and Professional at $16 per month billed yearly ($17.5 otherwise). Yearly billing saves up to 20%."
+      },
+      {
+        "soru": "What are the limits of Mindomo's free plan?",
+        "cevap": "Three diagrams, with unlimited collaborators, sharing and publishing, free templates, trial AI credits and the iOS and Android apps."
+      },
+      {
+        "soru": "How do Mindomo AI credits work?",
+        "cevap": "One credit generates roughly 1,000 words. Premium grants 50 credits each subscription month; the free plan includes trial credits only."
+      },
+      {
+        "soru": "What does Mindomo Professional add over Premium?",
+        "cevap": "Guest editing for people without an account, premium sharing that keeps functionality for free recipients, Gantt charts, 20 export formats and business templates, covering 1 user plus 5 guests a month."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "tom-s-planner",
@@ -42228,26 +42360,95 @@
     "category": "Project Management",
     "shortDescription": "Project management software.",
     "websiteUrl": "https://www.proworkflow.com",
-    "incelendi": false,
-    "basePrice": 0,
+    "incelendi": true,
+    "basePrice": 20,
     "isFlat": true,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "ProWorkflow — Pricing",
-          "url": "https://proworkflow.com/pricing/",
-          "checkedAt": "2026-08-31",
+          "url": "https://www.proworkflow.com/pricing/",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "30-day free trial, no credit card, cancel anytime; prices can be shown in USD, GBP or EUR",
+            "Professional $20 per user per month paid monthly with no user limit, saving $2 per month on the yearly plan; minimum 1 user, 25 GB file space; quoting $10 and invoicing $10 as add-ons; setup costs free",
+            "Professional includes 25 GB storage, unlimited external projects, unlimited tasks, unlimited client access and task templates",
+            "Advanced $30 per user per month paid monthly, saving $3 per month on the yearly plan; minimum 5+ users, 50 GB file space; quoting, invoicing and setup all free",
+            "Advanced adds an organisational chart, recurring and retainer projects, priority training and support, project templates, custom project fields and internal projects",
+            "An introductory offer is displayed at $18 per user per month for Professional and $29 for Advanced",
+            "Enterprise is contact-sales: everything in Advanced plus a dedicated account manager, on-premise hosting, Active Directory and LDAP sync, custom payment options and a custom SLA",
+            "Annual billing is advertised as saving up to 10%",
+            "All plans include free onboarding with a ProWorkflow specialist and no training fees"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The quoting and invoicing add-ons are listed as $10 each without stating whether the charge is per user or per account.",
+        "The page shows both an 'introductory offer' price and a standard price for each tier without stating how long the introductory rate lasts."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "fiyatModeli": "kullanici-basina",
+    "longDescription": "ProWorkflow is a project, time and resource management platform aimed at agencies and service firms, and its pricing has a detail that changes the comparison: on the entry Professional plan, quoting and invoicing are paid add-ons rather than included modules. Add both and the plan costs roughly what the Advanced tier does — except Advanced includes them, doubles the storage and adds recurring projects, templates and an organisational chart, while requiring at least five users. There is no free plan, but the 30-day trial takes no card and onboarding is included at every level.",
+    "pros": [
+      "Quoting and invoicing included from the Advanced tier",
+      "Free onboarding with a specialist on every plan",
+      "30-day trial with no credit card"
+    ],
+    "cons": [
+      "Quoting and invoicing cost extra on Professional",
+      "Advanced requires a minimum of five users",
+      "No free tier at any level"
+    ],
+    "targetAudience": "Agencies, consultancies and service firms billing project time to clients.",
+    "verdict": "Do the add-on maths before choosing Professional: with quoting and invoicing it lands near Advanced pricing without the extras. Advanced is the real product, if you have five seats.",
+    "keyFeatures": [
+      {
+        "title": "Time and project tracking",
+        "description": "Tracks time against projects and feeds it straight into invoices."
+      },
+      {
+        "title": "Resource planning",
+        "description": "Allocates staff and workload using Kanban and Gantt views."
+      },
+      {
+        "title": "Quoting and invoicing",
+        "description": "Converts quotes to invoices; an add-on on Professional and included on Advanced."
+      }
+    ],
+    "bestFor": [
+      "Small teams that only need project, task and time management — Professional starts at one user, $20 per user per month",
+      "Agencies that quote and invoice from the same system, which is free from Advanced at $30 per user per month",
+      "Teams of five or more, since Advanced adds recurring and retainer projects, templates and custom fields",
+      "Buyers who want implementation help included: onboarding with a specialist is free on every plan"
+    ],
+    "skipIf": [
+      "You picked Professional for the price but need quoting and invoicing — those are $10 each on top",
+      "You are a team of fewer than five and want Advanced, which lists a 5+ user minimum",
+      "You want to try before committing budget: there is no free tier, only a 30-day trial",
+      "You need on-premise hosting, LDAP sync or a custom SLA, which are Enterprise and quote-only"
+    ],
+    "sss": [
+      {
+        "soru": "How much does ProWorkflow cost?",
+        "cevap": "Professional is $20 per user per month and Advanced $30, both paid monthly, with about 10% off annually and an introductory offer of $18 and $29 displayed. Enterprise is contact-sales."
+      },
+      {
+        "soru": "Does ProWorkflow include invoicing?",
+        "cevap": "Not on Professional, where quoting and invoicing are $10 add-ons each. Both are free on the Advanced plan at $30 per user per month."
+      },
+      {
+        "soru": "Is there a minimum number of users on ProWorkflow?",
+        "cevap": "Professional starts at one user with no upper limit. Advanced requires a minimum of five users."
+      },
+      {
+        "soru": "Does ProWorkflow have a free plan?",
+        "cevap": "No. There is a 30-day free trial with no credit card required, and free onboarding with a specialist on every paid plan."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "helix-alm",
@@ -43891,26 +44092,92 @@
     "category": "Design",
     "shortDescription": "US software company.",
     "websiteUrl": "https://screenpal.com/",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "ScreenPal — Pricing",
+          "label": "ScreenPal — Plans",
           "url": "https://screenpal.com/plans",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free, always free: screen capture and screenshots, unlimited recordings, editing, drawing while recording, desktop and mobile creation, sharing and hosting; recording time is limited to 15 minutes",
+            "Solo Deluxe $4 per month paid annually: unlimited recorder, full video editor, audio recording and editing, interactive storyboards, unlimited standard stock assets, AI speech-to-text captions, 5 video quizzes",
+            "Solo Max $10 per month paid annually: everything in Deluxe plus ScreenPal AI, auto-captions and transcriptions, AI text-to-speech and video dubbing, branding and call-to-action buttons, unlimited premium stock assets, unlimited quizzes and polls, secure backup and restore, live chat support",
+            "Team Business $8 per user per month paid annually with a 3+ user minimum, advertised at 20% off: everything in Max plus collaboration tools, team management, advanced integrations, ownership transfer and SSO including SAML",
+            "ScreenPal AI covers auto-generated titles and summaries, speech-to-text captions, quiz questions, translated titles, summaries and transcripts, background removal and text-to-speech narration, and is included in Solo Max and Team Business only",
+            "A sale banner advertises 25% off Solo plans, showing $3 and $7.50 against the standard $4 and $10",
+            "Separate education pricing is offered for teachers, schools and higher education"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The sale banner on the page reads 'now through September 2', a date already past on the review date, so the discounted $3 and $7.50 figures may not be live; the standard $4 and $10 prices are recorded as the reliable ones."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "longDescription": "ScreenPal, formerly Screencast-O-Matic, is a screen recorder, video editor and hosting platform whose free plan is usable but capped at fifteen minutes a recording. The paid ladder splits along a clear line: Deluxe buys the full recorder and editor, while everything labelled AI — auto captions, transcription, text-to-speech dubbing, translation, background removal — sits on Max and Team Business. Team Business adds collaboration, team management and SAML SSO but requires at least three users, and the per-user price is lower than the individual Max plan.",
+    "pros": [
+      "Free plan records and edits without a subscription",
+      "Team price per user is lower than the individual Max plan",
+      "Hosting, quizzing and analytics included rather than bolted on"
+    ],
+    "cons": [
+      "Free recordings are limited to 15 minutes",
+      "All AI features require Max or Team Business",
+      "Team Business needs a minimum of three users"
+    ],
+    "targetAudience": "Teachers, trainers and support teams producing instructional video.",
+    "verdict": "Cheap for what it does, and the free plan is a real trial rather than a demo. If AI captions or dubbing are why you are here, budget for Max, not Deluxe.",
+    "keyFeatures": [
+      {
+        "title": "Screen recorder and editor",
+        "description": "Records screen and webcam with drawing tools, then edits video and audio."
+      },
+      {
+        "title": "ScreenPal AI",
+        "description": "Auto captions, transcripts, translation, text-to-speech narration and background removal."
+      },
+      {
+        "title": "Video quizzing and hosting",
+        "description": "Quizzes, polls and hosted channels with viewer analytics."
+      }
+    ],
+    "bestFor": [
+      "Short clips and quick demos: the free plan records and edits with a 15-minute cap and no watermark cost",
+      "Individuals needing unlimited recording length and the full editor — Deluxe at $4 a month paid annually",
+      "Anyone who wants captions, transcripts, dubbing or translation, which are Max at $10 a month paid annually",
+      "Teams of three or more: Team Business is $8 per user per month, less than the individual Max plan, and adds SAML SSO"
+    ],
+    "skipIf": [
+      "You record long sessions on the free plan, which stops at 15 minutes",
+      "You bought Deluxe expecting AI — auto-captions, dubbing and translation are Max and Team Business only",
+      "You are a team of two and want SSO or collaboration, since Team Business has a 3+ user minimum",
+      "You are relying on the advertised sale price; the banner's end date had already passed when this record was checked"
+    ],
+    "sss": [
+      {
+        "soru": "How much does ScreenPal cost?",
+        "cevap": "There is a free plan, then Solo Deluxe at $4 a month and Solo Max at $10 a month paid annually, and Team Business at $8 per user per month with a three-user minimum."
+      },
+      {
+        "soru": "What are the limits of the ScreenPal free plan?",
+        "cevap": "Recordings are capped at 15 minutes, though the number of recordings is unlimited. Screen capture, editing, drawing tools, sharing and hosting are included."
+      },
+      {
+        "soru": "Which ScreenPal plan includes AI?",
+        "cevap": "Solo Max at $10 a month and Team Business at $8 per user per month. Deluxe includes speech-to-text captions only, not the wider ScreenPal AI feature set."
+      },
+      {
+        "soru": "Is ScreenPal cheaper for teams?",
+        "cevap": "Yes, per user. Team Business is $8 per user per month against $10 for an individual Max plan, but it requires at least three users."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "canvas-x",
@@ -44448,38 +44715,48 @@
     "shortDescription": "Enterprise resource planning software.",
     "websiteUrl": "https://erpnext.com/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "ERPNext is an open-source ERP covering accounting, inventory, manufacturing, HR and CRM in one system. An open-source ERP means no per-module licence and full access to the data model, which is why it appears in manufacturing and distribution businesses with unusual processes. You take on implementation and hosting, and that is where most of the real cost sits.",
+    "basePrice": 5,
+    "isFlat": false,
+    "longDescription": "ERPNext is a fully open-source ERP under AGPL-3.0, and the vendor is unusually blunt about the business model: the software is free with no features held behind a paywall, and Frappe makes its money from hosting and enterprise support instead. That means the real cost has two parts. Hosting on Frappe Cloud starts at $5 a month for a single site and is billed by resources rather than per user, and implementation is handled not by Frappe at all but by a network of certified partners, which is where an ERP budget usually goes.",
     "pros": [
-      "Full ERP scope with no licence fee",
-      "Self-hostable with complete control",
-      "Active community"
+      "Genuinely open source with no paywalled features",
+      "Hosting is billed by resource, not per user",
+      "Self-hosting is free with published installation scripts"
     ],
     "cons": [
-      "Implementation and configuration are substantial",
-      "Requires technical maintenance",
-      "Localisation varies by country"
+      "Implementation is not sold by the vendor at all",
+      "Cheapest server tiers carry limited uptime guarantees",
+      "Total cost depends on a partner quote you have to obtain separately"
     ],
-    "targetAudience": "Small and mid-size businesses wanting ERP without licence costs.",
-    "verdict": "Genuinely capable for the price. The saving is in licences, not in effort.",
+    "targetAudience": "Small and mid-sized businesses wanting an ERP without per-seat licensing.",
+    "verdict": "The licence really is free, so judge it on hosting plus implementation. If you have a technical team, self-hosting makes this one of the cheapest full ERPs available.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "ERPNext — Pricing",
-          "url": "https://frappe.io/erpnext/pricing",
-          "checkedAt": "2026-08-31",
+          "url": "https://erpnext.com/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Cost is presented as two components, hosting and implementation; ERPNext itself is free and open source but must be hosted",
+            "Frappe Cloud Sites: from $5 per month (₹410) for a single site with multiple apps on shared servers, including managed upgrades and backups, scripting and custom apps and product warranty",
+            "Frappe Cloud Servers: from $20 per month (₹1,800) for a virtual machine hosting multiple sites and benches, shared or dedicated instances, with limited uptime guarantees and incident-only support",
+            "A higher server tier from $125 per month (₹5,400) adds dedicated server isolation, snapshots and autoscaling, stronger reliability guarantees and global data centre locations",
+            "Frappe Cloud is billed by usage rather than per user",
+            "Self-hosting is supported with published installation scripts under AGPL-3.0 at no cost",
+            "Frappe states it provides no implementation services directly, working instead through 200+ certified partners; Starter Packs are offered for economical migration help",
+            "14-day free trial, after which a Frappe Cloud plan is required; payment by card, prepaid wallet credits or annual wire transfer",
+            "Product Warranty covers bug fixes in Frappe apps by Frappe engineers but explicitly excludes functional support",
+            "Discounts are available for educational institutions and non-profits on request"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
-        "The vendor's pricing URL redirects to frappe.io."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Implementation is quoted by third-party partners, so no implementation price is published by the vendor.",
+        "Hosting tiers are listed as 'onwards' starting prices that vary with the resources selected."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": true,
@@ -44493,18 +44770,50 @@
     },
     "keyFeatures": [
       {
-        "title": "Integrated modules",
-        "description": "Covers accounting, inventory, manufacturing, HR and CRM in one system."
+        "title": "Full ERP module set",
+        "description": "Accounting, stock, manufacturing, CRM, projects, assets, POS, HR and payroll."
       },
       {
-        "title": "Open-source core",
-        "description": "Allows direct modification of workflows and the data model."
+        "title": "Frappe Cloud hosting",
+        "description": "Managed sites and servers with upgrades, backups and product warranty support."
       },
       {
-        "title": "Self-hosted or cloud",
-        "description": "Runs on your own servers or as a hosted deployment."
+        "title": "No-code builder",
+        "description": "Customisation and custom apps without forking the platform."
       }
-    ]
+    ],
+    "fiyatModeli": "kullanima-gore",
+    "bestFor": [
+      "Companies with a technical team: self-hosting under AGPL-3.0 costs nothing in licence fees",
+      "Small businesses starting cheaply — a single managed site on Frappe Cloud is $5 a month onwards",
+      "Growing teams that would otherwise pay per seat, since Frappe Cloud bills by resources instead of users",
+      "Buyers who want the vendor fixing bugs, which is what Product Warranty covers on paid hosting"
+    ],
+    "skipIf": [
+      "You want one vendor to sell and implement the system — Frappe does no implementation and routes you to partners",
+      "You need a total cost figure up front: hosting prices are 'onwards' and implementation is a separate partner quote",
+      "You need strong uptime guarantees on a budget, since the cheaper server tier states limited guarantees and incident-only support",
+      "You expect functional consulting from support; Product Warranty covers bug fixes only"
+    ],
+    "sss": [
+      {
+        "soru": "How much does ERPNext cost?",
+        "cevap": "The software is free and open source. Hosting on Frappe Cloud starts at $5 a month for a single site, $20 a month for a server, and $125 a month for the dedicated tier. Implementation is quoted separately by partners."
+      },
+      {
+        "soru": "Is ERPNext really free?",
+        "cevap": "Yes. It is AGPL-3.0 licensed with no features behind a paywall, and it can be self-hosted at no cost using the published installation scripts. Frappe earns from hosting and support instead."
+      },
+      {
+        "soru": "Does ERPNext charge per user?",
+        "cevap": "No. Frappe Cloud is billed by the resources used, not per user, which is the main cost difference against per-seat ERP licensing."
+      },
+      {
+        "soru": "Who implements ERPNext?",
+        "cevap": "Not Frappe. The vendor states it provides no implementation services directly and works through a network of 200+ certified partners, with Starter Packs offered for basic migration help."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "freeagent",
@@ -44950,25 +45259,31 @@
     "category": "HR Software",
     "shortDescription": "Fintech SaaS company.",
     "websiteUrl": "https://www.papayaglobal.com/",
-    "incelendi": false,
-    "basePrice": 0,
+    "incelendi": true,
+    "basePrice": 29,
     "isFlat": true,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Papaya Global — Pricing",
           "url": "https://www.papayaglobal.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Employer of Record (EOR) starting from $499 per employee per month: hiring in 180+ countries, full payroll and benefits, immigration services, auto-generated country-specific contracts, time and attendance tracking",
+            "Contractor of Record (COR) starting from $199 per contractor per month: compliant hiring in 160+ countries, comprehensive payroll and benefits management, immigration services, mass worker onboarding for 1,000+, auto-generated country-specific contracts",
+            "Payroll Plus starting from $29 per employee per month: fully managed global payroll, centralised workforce data, in-country experts in 160+ countries, automated payroll processes, standardised gross-to-net reports",
+            "Contractor solution starting from $5 per contractor per month: invoice management, invoice-to-pay automation, mass contractor onboarding for 1,000+, self-service contractor onboarding, document collection",
+            "Every tier is described as including all features of Payments OS",
+            "Each tier carries a 'Get a Quote' call to action rather than a self-serve checkout"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "All four figures are published as 'starting from' prices behind a quote request, so the actual rate for a given country and headcount is not disclosed."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": true,
@@ -44979,7 +45294,66 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
-    }
+    },
+    "fiyatModeli": "kullanici-basina",
+    "longDescription": "Papaya Global is a global payroll and workforce payments platform, and the thing to understand about its pricing is that the four published figures are four different products, not four tiers of one. Managing and paying existing contractors starts at $5 a contractor a month; running managed payroll for employees starts at $29; engaging a contractor through Papaya's own entity starts at $199; and full employer of record, where Papaya legally employs the worker for you, starts at $499. Every figure is a 'starting from' price attached to a quote request, so the published number is a floor rather than a rate card.",
+    "pros": [
+      "Coverage of 180+ countries for employer of record",
+      "Separate published floors for each service type",
+      "Payments infrastructure included across all services"
+    ],
+    "cons": [
+      "All prices are 'starting from' with a quote required",
+      "Employer of record is nearly seventeen times the payroll price",
+      "No self-serve signup or free tier"
+    ],
+    "targetAudience": "Companies employing or paying people across many countries at once.",
+    "verdict": "Read the price against the service, not the brand: the $5 contractor figure and the $499 EOR figure are the same vendor doing very different work. Expect a quote either way.",
+    "keyFeatures": [
+      {
+        "title": "Employer of record",
+        "description": "Papaya employs the worker in-country so you hire without an entity."
+      },
+      {
+        "title": "Global managed payroll",
+        "description": "Fully managed payroll with in-country experts across 160+ countries."
+      },
+      {
+        "title": "Payments infrastructure",
+        "description": "In-country payment rails and an API, included with every service tier."
+      }
+    ],
+    "bestFor": [
+      "Companies that only need to pay existing contractors: the contractor solution starts at $5 per contractor per month",
+      "Businesses with local entities wanting managed payroll — Payroll Plus starts at $29 per employee per month across 160+ countries",
+      "Teams hiring contractors compliantly without their own entity, which is Contractor of Record from $199 a month",
+      "Companies hiring employees in countries where they have no entity at all, which is employer of record from $499 per employee per month"
+    ],
+    "skipIf": [
+      "You need a firm price today — every tier is 'starting from' and routes to a quote request",
+      "You are comparing the $5 headline against employer of record vendors; those are different services nearly a hundredfold apart",
+      "You want self-serve onboarding without sales contact, which is not offered on any tier",
+      "You have a handful of domestic employees; this is priced for cross-border complexity"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Papaya Global cost?",
+        "cevap": "Four published starting prices: $5 per contractor per month for contractor management, $29 per employee per month for Payroll Plus, $199 per contractor per month for Contractor of Record and $499 per employee per month for Employer of Record."
+      },
+      {
+        "soru": "How much is Papaya Global's employer of record?",
+        "cevap": "From $499 per employee per month, covering 180+ countries with full payroll and benefits, immigration services, country-specific contracts and time and attendance tracking."
+      },
+      {
+        "soru": "Is Papaya Global's pricing fixed?",
+        "cevap": "No. Every figure is published as a 'starting from' price with a quote request, so the actual rate depends on country and headcount."
+      },
+      {
+        "soru": "What is the difference between Papaya's $5 and $199 contractor plans?",
+        "cevap": "The $5 contractor solution manages and pays contractors you have already engaged. The $199 Contractor of Record engages them through Papaya's entity, adding compliant hiring in 160+ countries, benefits management and immigration services."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "paylocity",
