@@ -35,16 +35,38 @@ type Kaynak = { label?: string; supports?: string[] };
  * Ama hepsi fiyat kaynagi degil: LangChain/Selenium/Drupal kayitlarinin
  * kaynagi dokumantasyon -- o kayitla fiyat iddia edilemez.
  *
- * Kural: en az bir kaynagin basligi veya `supports` maddesi bir fiyat
- * ifadesi icersin. Temkinli taraf dogru taraf; supheliyi disarida birakir.
+ * Kural: en az bir kaynagin `supports` maddesi SOMUT bir fiyat ifadesi
+ * icersin. Temkinli taraf dogru taraf; supheliyi disarida birakir.
+ *
+ * OLCULEN HATA (2026-09-10): kural "pricing" / "price" kelimesinin
+ * KENDISINI kanit sayiyordu ve kaynagin BASLIGINI da tariyordu. Sonuc:
+ * `supports: ["the vendor's published pricing"]` yazan ve limitations'inda
+ * "An editor has not read it line by line" diyen 42 otomatik kayit --
+ * yani icinde tek rakam olmayan kayitlar -- fiyat kapisindan geciyordu.
+ * "Proton Mail — Pricing" baslinin kendisi de geciyordu. Fiyat
+ * dogrulamasi uzerine kurulu bir sitede bu, kapinin olmamasiyla ayni sey.
+ *
+ * Yeni kural: rakamli para birimi, rakamli birim fiyat (per user/month/
+ * seat), ya da acik "ucretsiz plan/katman yok/var" ifadesi. Cikarilanlar:
+ * ciplak "pricing", ciplak "price", ciplak "monthly".
  */
 const FIYAT_IDDIASI =
-  /(\$\s?\d|€\s?\d|£\s?\d|\bpricing\b|\bprice[sd]?\b|per (user|month|seat)|\bmonthly\b|\bfree tier\b|\bfree plan\b)/i;
+  /([$€£₹]\s?\d|\d+(?:[.,]\d+)?\s?(?:USD|EUR|GBP)\b|\d[^.]{0,24}\bper (?:user|seat|month|employee|contractor)\b|\bcontact sales\b|\bcustom pricing\b|\bquote\b|\bfree (?:tier|plan|forever)\b|\bno free (?:tier|plan)\b)/i;
+
+/* Para birimi olmadan da somut kanit olur: "Free: 1,500 blocks, 1 GB storage"
+   elle okunmus bir plan tablosudur, "always free with no traffic limits" da
+   bir fiyat iddiasidir. Ayrim dolar isareti DEGIL, OZ: rakamli bir plan
+   ifadesi ya da acik bedava beyani. Ciplak "plan limits" ve
+   "the vendor's published pricing" bu kapidan gecmez. */
+const OZLU_PLAN_IDDIASI =
+  /(\bfree\b|\bno price\b|\bopen source\b|\b(?:plan|tier|edition)s?\b[^.]{0,60}\d|\d[^.]{0,60}\b(?:plan|tier|edition)s?\b)/i;
 
 function fiyatDestekleyenKaynak(t?: Arac): boolean {
-  return (t?.evidence?.sources || []).some((s) =>
-    FIYAT_IDDIASI.test([s.label || "", ...(s.supports || [])].join(" ")),
-  );
+  // Baslik KANIT DEGIL: "… — Pricing" her saticide var, hicbir sey soylemez.
+  return (t?.evidence?.sources || []).some((s) => {
+    const destek = (s.supports || []).join(" ");
+    return FIYAT_IDDIASI.test(destek) || OZLU_PLAN_IDDIASI.test(destek);
+  });
 }
 
 /** Insan elinden gecmis: kendi yorumu ve uzun anlatimi var. */

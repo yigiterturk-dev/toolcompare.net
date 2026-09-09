@@ -1352,7 +1352,7 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -1360,11 +1360,12 @@
           "url": "https://zoom.us/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -3266,7 +3267,7 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -3274,11 +3275,12 @@
           "url": "https://www.make.com/en/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -6521,7 +6523,7 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -6529,11 +6531,12 @@
           "url": "https://azure.microsoft.com/en-us/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -8847,7 +8850,7 @@
       "sso": true
     },
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -8855,11 +8858,12 @@
           "url": "https://logrocket.com/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -11250,7 +11254,7 @@
     "targetAudience": "Engineering organisations with enough repositories that finding code is a daily problem.",
     "verdict": "Genuinely valuable past a certain repo count. Below that, your editor's search is enough.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -11258,11 +11262,12 @@
           "url": "https://sourcegraph.com/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -11873,7 +11878,7 @@
     "targetAudience": "Store owners and marketers processing product or portrait images.",
     "verdict": "Saves real time on straightforward images. Complex edges still need a human.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -11881,11 +11886,12 @@
           "url": "https://www.remove.bg/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -12850,7 +12856,7 @@
     "targetAudience": "Advertisers running many campaigns who need pages matched to each one.",
     "verdict": "Serious tooling for serious ad spend. Small campaigns cannot justify the price.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -12858,11 +12864,12 @@
           "url": "https://instapage.com/plans",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -13501,7 +13508,7 @@
     "targetAudience": "People running a serious GTD practice with many projects.",
     "verdict": "The right tool if you already work this way. If you do not, it will feel like homework.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-09-03",
       "sources": [
         {
@@ -13509,11 +13516,12 @@
           "url": "https://www.omnigroup.com/omnifocus/buy",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -13773,7 +13781,7 @@
     "targetAudience": "People with more tasks than hours who want the calendar decided for them.",
     "verdict": "Effective if you accept its decisions. Fighting the scheduler defeats the purpose.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -13781,11 +13789,12 @@
           "url": "https://www.usemotion.com/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -14585,7 +14594,7 @@
     "targetAudience": "Software teams that outgrew a basic board but do not want Jira.",
     "verdict": "A well-judged middle ground. Enterprise compliance requirements will push you elsewhere.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -14593,11 +14602,12 @@
           "url": "https://www.shortcut.com/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -14893,7 +14903,7 @@
     "targetAudience": "Organisations that must keep messaging on their own infrastructure.",
     "verdict": "Strong when self-hosting is required. Otherwise commercial chat is less work.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -14901,11 +14911,12 @@
           "url": "https://www.rocket.chat/plans",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -21674,7 +21685,7 @@
     "targetAudience": "Software companies that want one tool for product and marketing email.",
     "verdict": "Pleasant to work with. Very large senders should still test deliverability carefully.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -21682,11 +21693,12 @@
           "url": "https://loops.so/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -21893,7 +21905,7 @@
     "targetAudience": "Applications sending large volumes of email.",
     "verdict": "Reliable at volume. On shared IPs your deliverability depends partly on other senders.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -21901,11 +21913,12 @@
           "url": "https://www.twilio.com/en-us/sendgrid",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
         "The vendor's pricing URL redirects to twilio.com."
       ]
@@ -21954,7 +21967,7 @@
     "targetAudience": "Teams that write and edit together and want mail on their own domain.",
     "verdict": "The default for collaborative work. Heavy spreadsheet or document formatting still argues for Microsoft.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -21962,11 +21975,12 @@
           "url": "https://workspace.google.com/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -22014,7 +22028,7 @@
     "targetAudience": "Organisations with document-heavy work or existing Windows infrastructure.",
     "verdict": "Still the reference point for serious documents and spreadsheets. The licensing maze is the main cost you do not see coming.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-09-03",
       "sources": [
         {
@@ -22022,11 +22036,12 @@
           "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -22144,7 +22159,7 @@
     "targetAudience": "Regulated organisations that need content governance, not just storage.",
     "verdict": "Buy it for compliance requirements. For plain file sync it is more than you need.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -22152,11 +22167,12 @@
           "url": "https://www.box.com/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -22521,7 +22537,7 @@
     "targetAudience": "Apple users who live in their calendar.",
     "verdict": "The strongest calendar app on Apple platforms. Nothing to offer anyone else.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -22529,11 +22545,12 @@
           "url": "https://flexibits.com/pricing?product=fantastical",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -23593,7 +23610,7 @@
     "targetAudience": "Larger organisations replacing traditional phone systems.",
     "verdict": "The safe enterprise choice. Small teams will find newer tools cheaper and simpler.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -23601,11 +23618,12 @@
           "url": "https://www.ringcentral.com/office/plansandpricing.html",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -24940,7 +24958,7 @@
           "url": "https://www.langchain.com/pricing",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         },
         {
@@ -25071,7 +25089,7 @@
           "url": "https://www.llamaindex.ai/pricing",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
@@ -25276,7 +25294,7 @@
           "url": "https://weaviate.io/pricing",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
@@ -25757,7 +25775,7 @@
           "url": "https://bolt.new/pricing",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
@@ -28897,7 +28915,7 @@
           "url": "https://fossil-scm.org/home/doc/trunk/www/index.wiki",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
@@ -30402,7 +30420,7 @@
           "url": "https://platform.uno/select-subscription/",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
@@ -41554,7 +41572,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -41562,11 +41580,12 @@
           "url": "https://www.enghousevideo.com/lifesize",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line.",
         "The vendor's pricing URL redirects to enghousevideo.com."
       ]
@@ -42492,7 +42511,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -42500,11 +42519,12 @@
           "url": "https://www.projectmanager.com/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -42693,7 +42713,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -42701,11 +42721,12 @@
           "url": "https://www.bigtime.net/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -42740,7 +42761,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -42748,11 +42769,12 @@
           "url": "https://cloudforge.solutions/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -43099,7 +43121,7 @@
     "targetAudience": "Small sites wanting basic visitor stats without complexity.",
     "verdict": "Old-fashioned and functional. Privacy-focused alternatives are more current.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -43107,11 +43129,12 @@
           "url": "https://statcounter.com/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -43388,7 +43411,7 @@
     "targetAudience": "Teams already using it, weighing whether to move.",
     "verdict": "Capable, but the breach history is a real consideration. Most alternatives now look safer.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -43396,11 +43419,12 @@
           "url": "https://www.lastpass.com/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -44198,7 +44222,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -44206,11 +44230,12 @@
           "url": "https://www.vegascreativesoftware.com/vegas-pro/plans-pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -44225,7 +44250,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -44233,11 +44258,12 @@
           "url": "https://www.xara.com/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -44262,7 +44288,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -44270,11 +44296,12 @@
           "url": "https://www.recraft.ai/pricing",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -44555,7 +44582,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -44563,11 +44590,12 @@
           "url": "https://kayako.com/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },
@@ -45041,7 +45069,7 @@
     "targetAudience": "UK freelancers and small service companies.",
     "verdict": "Excellent inside the UK, much less compelling outside it.",
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -45049,11 +45077,12 @@
           "url": "https://www.freeagent.com/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -45101,7 +45130,7 @@
       "checkedAt": "2026-08-31"
     },
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-09-03",
       "sources": [
         {
@@ -45109,11 +45138,12 @@
           "url": "https://tallysolutions.com/buy-tally/",
           "checkedAt": "2026-09-03",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     }
@@ -45336,7 +45366,7 @@
     "basePrice": 0,
     "isFlat": true,
     "evidence": {
-      "status": "pricing-page-verified",
+      "status": "vendor-sourced",
       "reviewedAt": "2026-08-31",
       "sources": [
         {
@@ -45344,11 +45374,12 @@
           "url": "https://www.7shifts.com/pricing/",
           "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
+            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
           ]
         }
       ],
       "limitations": [
+        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
     },

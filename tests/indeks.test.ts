@@ -80,11 +80,24 @@ test("elle kuratorlu vendor-sourced kayit fiyat kaniti sayilir", () => {
     ),
     true,
   );
+  // Somut iddia (ucretsiz plan) -> gecer.
+  assert.equal(
+    alternatifIndekslenir(
+      vendor([{ label: "Slack - Plans", supports: ["free plan with 90-day history"] }]) as never,
+    ),
+    true,
+  );
+
+  /* BASLIK KANIT DEGIL (2026-09-10): eskiden bu kayit GECIYORDU, cunku
+     kural kaynagin basligini da tariyor ve ciplak "pricing" kelimesini
+     kanit sayiyordu. "… — Pricing" her saticide var; supports'ta tek
+     rakam yoksa fiyat iddia edilemez. 42 otomatik kayit bu bosluktan
+     geciyordu (bkz. lib/indeks.ts FIYAT_IDDIASI). */
   assert.equal(
     alternatifIndekslenir(
       vendor([{ label: "Slack - Pricing", supports: ["plan limits"] }]) as never,
     ),
-    true,
+    false,
   );
 
   // Kaynak yalnizca dokumantasyon -> fiyat iddia edilemez, elenir.
@@ -95,6 +108,25 @@ test("elle kuratorlu vendor-sourced kayit fiyat kaniti sayilir", () => {
     false,
   );
   assert.equal(alternatifIndekslenir(vendor([]) as never), false);
+
+  /* OTOMATIK TARAMA KANIT DEGIL (2026-09-10). 42 kayitta supports tam olarak
+     buydu: "the vendor's published pricing" -- fiyat sayfasinin ULASILABILIR
+     oldugunu soyluyor, fiyat hakkinda hicbir sey soylemiyor. Bu satir kapidan
+     gecerse site "fiyati dogrulanmis" iddiasini bos yere tasir. */
+  assert.equal(
+    alternatifIndekslenir(
+      vendor([{ label: "Zoom — Pricing", supports: ["the vendor's published pricing"] }]) as never,
+    ),
+    false,
+  );
+
+  /* Para birimi OLMADAN somut kanit gecer: elle okunmus plan tablosu. */
+  assert.equal(
+    alternatifIndekslenir(
+      vendor([{ label: "Craft — Plans", supports: ["Free: 1,500 blocks, 1 GB storage"] }]) as never,
+    ),
+    true,
+  );
 });
 
 test("bakilmamis kriter (null) fark sayilmaz, dolu da saymaz", () => {
