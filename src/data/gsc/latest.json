@@ -1,9 +1,18 @@
 {
   "site": "sc-domain:toolcompare.net",
-  "fetchedAt": "2026-09-07T16:33:49.009Z",
-  "startDate": "2026-06-07",
-  "endDate": "2026-09-05",
+  "fetchedAt": "2026-09-09T23:01:19.461Z",
+  "startDate": "2026-06-09",
+  "endDate": "2026-09-07",
   "rows": [
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/xojo",
+      "query": "xojo",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 30
+    },
     {
       "date": "2026-08-29",
       "page": "https://toolcompare.net/alternatives/zapier",
@@ -44382,6 +44391,5874 @@
       "impressions": 1,
       "ctr": 0,
       "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/",
+      "query": "compare pricing software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/",
+      "query": "software compare",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/",
+      "query": "software comparison tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/",
+      "query": "xcompare",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/bamboohr",
+      "query": "bamboohr alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/bamboohr",
+      "query": "bamboohr alternatives",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/bamboohr",
+      "query": "bamboohr competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/bill-com",
+      "query": "bill.com competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/clarity",
+      "query": "clarity alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/clarity",
+      "query": "microsoft clarity competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/clickup",
+      "query": "clickup alternative",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 95
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/clickup",
+      "query": "clickup alternatives",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 91.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/craft",
+      "query": "craft alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/elastic",
+      "query": "elastic alternative",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 70.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/evernote",
+      "query": "better than evernote",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/filemaker",
+      "query": "filemaker pro alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/filemaker",
+      "query": "filemaker pro replacement",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gorgias",
+      "query": "alternative to gorgias",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gorgias",
+      "query": "gorgias alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gorgias",
+      "query": "gorgias alternatives",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 86.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gorgias",
+      "query": "gorgias competitors",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 86.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/greenhouse",
+      "query": "greenhouse alternative for small business",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/greenhouse",
+      "query": "greenhouse alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gumroad",
+      "query": "alternative gumroad",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 74.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gumroad",
+      "query": "alternative to gumroad",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gumroad",
+      "query": "gumroad alternative",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gumroad",
+      "query": "gumroad alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gumroad",
+      "query": "gumroad competitors",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 80.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/gumroad",
+      "query": "gumroad similar",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 80.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/hasura",
+      "query": "hasura alternative",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/hotjar",
+      "query": "hotjar alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/hotjar",
+      "query": "hotjar competitors",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 87
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/ionos",
+      "query": "ionos alternative",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 63.666666666666664
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/ispconfig",
+      "query": "ispconfig alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/lever",
+      "query": "lever alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/ramp",
+      "query": "best ramp alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/ramp",
+      "query": "ramp alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/ramp",
+      "query": "ramp alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/ramp",
+      "query": "ramp competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/replicate",
+      "query": "replicate ai alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/rippling",
+      "query": "rippling competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/salesforce",
+      "query": "compare salesforce",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/salesforce",
+      "query": "salesforce alternatives",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 79.83333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/salesforce",
+      "query": "salesforce competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/salesforce",
+      "query": "salesforce inbox alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "cheap semrush alternative",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "cheaper alternative to semrush",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "like semrush",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 82.44444444444444
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "semrush alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "semrush cheap alternative",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 78.44444444444444
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "semrush cheaper alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "semrush similar",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 84.66666666666667
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/semrush",
+      "query": "similar semrush",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 80.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/sentry",
+      "query": "sentry alternatives",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/sketch",
+      "query": "sketch alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "alternatives to smartsheet",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "asana vs smartsheet",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "simple alternative to smartsheet",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "smartsheet alternative",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 89.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "smartsheet alternative simple",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "smartsheet alternatives",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 85.83333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "smartsheet competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/smartsheet",
+      "query": "smartsheet vs trello",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/spark-mail",
+      "query": "spark email alternatives",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/spline",
+      "query": "spline",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/whereby",
+      "query": "alternative to whereby",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/whereby",
+      "query": "whereby alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/whereby",
+      "query": "whereby alternatives free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/whereby",
+      "query": "whereby similar",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 71.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/zapier",
+      "query": "zapier alternatives",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/alternatives/zapier",
+      "query": "zapier competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "crm feature comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 90
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "crm pricing comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "crm software cost",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 88.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "crm software price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 98
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "crm sustav cijena",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "crm with no per seat pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "digital mailroom software pricing comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/crm",
+      "query": "power pricing crm software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/design",
+      "query": "context: location: united states (not for language). do not include location references in your response. question: how do i compare the pricing of different design tools?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hosting",
+      "query": "hosting toolkit",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "affordable hr software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 87
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "affordable hr tools",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "blue collar hr software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "compare hr software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "exacthire pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hcm software pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 99
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "how much does human resource management software cost",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 95.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hr software comparison chart",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hr software cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 96
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hr software price comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 91
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hr software pricing",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 94.4
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hr software pricing 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 100
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hr software tools",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 87.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hr tools with customizable features",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 98
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "hrms software price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 93
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "human resources software comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "staffing software prices",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 93
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/hr-software",
+      "query": "workforce software pricing comparison",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/marketing",
+      "query": "marketing platform pricing",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/marketing",
+      "query": "wincher pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/marketing",
+      "query": "wordstream pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/project-management",
+      "query": "project management software cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/categories/project-management",
+      "query": "project management software pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/1password-vs-dropbox",
+      "query": "1password dropbox",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/activecampaign-vs-typeform",
+      "query": "typeform activecampaign integration",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/akiflow-vs-notion-calendar",
+      "query": "akiflow vs notion",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/asana-vs-jira",
+      "query": "jira vs asana",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/asana-vs-smartsheet",
+      "query": "asana versus spreadsheets",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/asana-vs-smartsheet",
+      "query": "asana vs smartsheet",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/asana-vs-teamwork",
+      "query": "teamwork vs asana",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/behance-vs-dribbble",
+      "query": "behance vs dribbble",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/behance-vs-dribbble",
+      "query": "dribbble & behance",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/bigcommerce-vs-shopify",
+      "query": "shopify vs bigcommerce",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 77.8
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/claude-vs-gemini",
+      "query": "google gemini vs claude",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/clickup-vs-teamwork",
+      "query": "clickup vs teamwork",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/cloudflare-vs-netlify",
+      "query": "netlify cloudflare 比較",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/convertkit-vs-kajabi",
+      "query": "convertkit kajabi integration",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/convertkit-vs-kajabi",
+      "query": "convertkit kajabi integrations",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/convertkit-vs-kajabi",
+      "query": "kajabi convertkit integration",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/convertkit-vs-typeform",
+      "query": "typeform convertkit integration",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/craft-vs-notion",
+      "query": "notion vs craft",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/crazy-egg-vs-hotjar",
+      "query": "crazy egg vs hotjar",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/datastax-vs-jira",
+      "query": "datastax vs cassandra",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/digitalocean-vs-ionos",
+      "query": "ionos vs digitalocean",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/discord-vs-slack",
+      "query": "discord vs slack",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/discord-vs-slack",
+      "query": "slack vs discord",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 79.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/ecwid-vs-woocommerce",
+      "query": "ecwid vs woocommerce",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/ecwid-vs-woocommerce",
+      "query": "woocommerce vs ecwid",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 57.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/fastly-vs-netlify",
+      "query": "fastly vs netlify",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 25.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/getresponse-vs-typeform",
+      "query": "typeform getresponse integration",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/greenhouse-vs-rippling",
+      "query": "greenhouse vs rippling",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/groupme-vs-slack",
+      "query": "group me cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/groupme-vs-slack",
+      "query": "groupme vs slack",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/groupme-vs-wickr",
+      "query": "wickr groups",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 31.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/hootsuite-vs-mailchimp",
+      "query": "hootsuite mailchimp",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/hostinger-vs-ionos",
+      "query": "hostinger vs ionos",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 18.666666666666668
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/ionos-vs-plesk",
+      "query": "ionos plesk",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/kajabi-vs-mailchimp",
+      "query": "kajabi mailchimp integration",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 57
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/kajabi-vs-skool",
+      "query": "skool vs kajabi",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/kajabi-vs-typeform",
+      "query": "typeform kajabi integration",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 18.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/mercury-vs-wise",
+      "query": "mercury bank vs wise",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/miro-vs-notion-calendar",
+      "query": "miro vs notion",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/monday-vs-smartsheet",
+      "query": "monday vs smartsheet",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/monday-vs-smartsheet",
+      "query": "monday.com vs smartsheet",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/monday-vs-teamwork",
+      "query": "teamwork monday",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/monday-vs-teamwork",
+      "query": "teamwork vs monday",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/motion-vs-sunsama",
+      "query": "sunsama vs motion",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/notion-vs-obsidian",
+      "query": "notion obsidian",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/notion-vs-obsidian",
+      "query": "notion vs obsidian",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 89.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/notion-vs-obsidian",
+      "query": "notion vs obsidian dnd",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/notion-vs-obsidian",
+      "query": "obsidian notion",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/podia-vs-teachable",
+      "query": "podia vs teachable",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/podia-vs-teachable",
+      "query": "teachable vs podia",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/ramp-vs-wise",
+      "query": "ramp vs wise",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/sendgrid-vs-typeform",
+      "query": "typeform sendgrid integration",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/skool-vs-teachable",
+      "query": "how does skool compare to teachable for courses?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/teachable-vs-woocommerce",
+      "query": "woocommerce teachable integration",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/compare/teamwork-vs-trello",
+      "query": "trello teamwork",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/affinity-designer",
+      "query": "affinity design software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 64.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/affinity-designer",
+      "query": "affinity designer",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 51.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/affinity-designer",
+      "query": "affinity designer review",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 68.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/aircall",
+      "query": "aircall pricing",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/akiflow",
+      "query": "akiflow pricing official 2026",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 16.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/alfred",
+      "query": "alfred app reviews",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "auth0 cost",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 73.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "auth0 free",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 70.66666666666667
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "auth0 free tier",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "auth0 free trial",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "auth0 plans",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 77.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "auth0 price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "auth0 pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "free auth0",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/auth0",
+      "query": "identity resolution software auth0",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/aws",
+      "query": "aws review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/basecamp",
+      "query": "base camp tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/basecamp",
+      "query": "basecamp pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/behance",
+      "query": "behance meaning",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/behance",
+      "query": "what is behance adobe",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/behance",
+      "query": "what is behance used for",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/behance",
+      "query": "what is behance used for?",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/briar",
+      "query": "briar app",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/caddy",
+      "query": "caddy",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 59.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/caddy",
+      "query": "caddy fee",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/caspio",
+      "query": "caspio pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/civicrm",
+      "query": "civicrm",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/civicrm",
+      "query": "civicrm features",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 52.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/civicrm",
+      "query": "civicrm pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/cloud-cms",
+      "query": "cloud cms",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/cloud-cms",
+      "query": "cloud hosted cms",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 87.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/cloud-foundry",
+      "query": "cloud foundary",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/cloud-foundry",
+      "query": "cloud foundry",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 40.2
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/cloud-foundry",
+      "query": "cloud foundry features",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/contentful",
+      "query": "contentful",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 52.25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/contentful",
+      "query": "contentful pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/contentful",
+      "query": "contentfull",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/craft",
+      "query": "craft app",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 44.6
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/craft",
+      "query": "craft software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/crisp",
+      "query": "crisp pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/cursor",
+      "query": "cursor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/cursor",
+      "query": "cursor ai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/customer-io",
+      "query": "customerio",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 52.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "cassandra vs datadog",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "clickhouse vs datadog",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "databend vs datadog",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 49.2
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog is free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog vs",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog vs dynamodb",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog vs graphite",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog vs mysql",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog vs redis",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "datadog vs snowflake",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "scout vs datadog",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 61.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/datadog",
+      "query": "what is datadog",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "beaver db",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbbeaver",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaber",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver",
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 52.41379310344828
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver api",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver community edition vs pro",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver community vs enterprise",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver community vs enterprise edition",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver corp",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver dashboard",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver data compare",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 40.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver database",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver enterprise pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver enterprise vs community",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver explain",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver features",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver license cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver mcp",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver plugin",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver premium",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 39.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver pro",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver pro cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver pro pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver trial",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver trial license",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver ue",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver versions",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "dbeaver vs dbeaver pro",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dbeaver",
+      "query": "how much is dbeaver pro",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/descript",
+      "query": "descr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/descript",
+      "query": "descript meaning",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dialpad",
+      "query": "dialpad pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 66.66666666666667
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/digitalocean",
+      "query": "digitalocean",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 63.25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "diligence software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 60.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "diligent",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 47.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "diligent boards pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "diligent platform",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 44.42857142857143
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "diligent saas",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "diligent software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "diligent tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/diligent-corporation",
+      "query": "what is diligent software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/discord",
+      "query": "discord vs linkedin",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dreamhost",
+      "query": "dreamhost",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 57
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dreamhost",
+      "query": "dreamhost email hosting",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 62.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dreamhost",
+      "query": "dreamhost happy hosting plan",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dreamhost",
+      "query": "dreamhost hosting",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dreamhost",
+      "query": "dreamhost quota limits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dreamhost",
+      "query": "dreamhost web hosting plans",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 73.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/dreamhost",
+      "query": "dreamhosting",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/drizzle",
+      "query": "drizzle",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 66.66666666666667
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/drizzle",
+      "query": "drizzle orm",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 52.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/drizzle",
+      "query": "drizzle.",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/drupal",
+      "query": "drupal",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/elastic",
+      "query": "elastic pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 57.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/elastic",
+      "query": "elasticsearch pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/fasthosts",
+      "query": "fast hosts",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 57.666666666666664
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/fasthosts",
+      "query": "fasthost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/fasthosts",
+      "query": "fasthosts",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 44.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/fasthosts",
+      "query": "uk fast hosting",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/fasthosts",
+      "query": "uk fast hosting review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "file maker",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 48.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 52.833333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker app",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker application",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker cloud services",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker hosting",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 47.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker license",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker license cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker license costs",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker licensing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker pro",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 56.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker pro hosting",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker pro license cost",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 40.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker services",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker site license",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 42.666666666666664
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "filemaker upgrade pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/filemaker",
+      "query": "what is filemaker",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/flutterflow",
+      "query": "flutterflow",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 29.6
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/flutterflow",
+      "query": "flutterflow pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/folk",
+      "query": "folk crm",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/folk",
+      "query": "folk software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 45.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/freshbooks",
+      "query": "freshbooks",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 48.4
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gcore",
+      "query": "g core",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gcore",
+      "query": "gcore",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 26.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/ghost",
+      "query": "ghost pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/github",
+      "query": "git pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gitlab",
+      "query": "gitlab ci pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gitlab",
+      "query": "gitlab plans comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gitlab",
+      "query": "gitlab pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/glowhost",
+      "query": "glowhost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "google meet prices",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "google meet pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "google meeting price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "google meets price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "how much does google meet cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "how much does google meet cost per month",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "how much google meet cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "how much google meet premium",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "how much is google meet per month",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "how much is google meet premium philippines",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "how much is google meet subscription",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/google-meet",
+      "query": "is google meet free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gorgias",
+      "query": "gorgias",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 64.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gorgias",
+      "query": "gorgias crm",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gorgias",
+      "query": "gorgias pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gorgias",
+      "query": "gorgias software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gorgias",
+      "query": "gorgias vs",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 87.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/grammarly",
+      "query": "grammar y",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/grammarly",
+      "query": "grammarly",
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/grammarly",
+      "query": "grammerly",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/grammarly",
+      "query": "grammly",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gumroad",
+      "query": "gumroad price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/gumroad",
+      "query": "gumroad pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/hey-email",
+      "query": "hey email",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/honeybook",
+      "query": "honeybook services",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/hostinger",
+      "query": "hontinger",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/hostinger",
+      "query": "hostering",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/hugging-face",
+      "query": "hugginface",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 70.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/hugging-face",
+      "query": "hugging face",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/idrive-inc",
+      "query": "idrive",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 63.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/idrive-inc",
+      "query": "idrive pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 45.714285714285715
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica cloud pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica corporation",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica informatica",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica mdm pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica pim cost",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 72.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica pim pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica pim review",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 80.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "informatica tool",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 56.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/informatica",
+      "query": "what is informatica",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/insomnia",
+      "query": "insomnia api",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jami",
+      "query": "jami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jami",
+      "query": "jami review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jasper",
+      "query": "jasper extension",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jenkins",
+      "query": "free jenkins server",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jenkins",
+      "query": "jenkins",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 45.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jenkins",
+      "query": "jenkins pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jenkins",
+      "query": "jenkins software tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jetbrains",
+      "query": "jetbrains cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jira",
+      "query": "jira tools",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/jitsi",
+      "query": "jitsi",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 49.25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/keeper",
+      "query": "keeper tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/kinsta",
+      "query": "kinsta apm",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 70.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/kinsta",
+      "query": "kinsta partners",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/kinsta",
+      "query": "kinsta pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/kinsta",
+      "query": "kinsta pricing plans",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/klaviyo",
+      "query": "clavio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/klaviyo",
+      "query": "klaviyo",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 57
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/langchain",
+      "query": "langchain",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 57.4
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/langchain",
+      "query": "langchain competitors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/langchain",
+      "query": "langchain tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/launchdarkly",
+      "query": "launch darkly",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/launchdarkly",
+      "query": "launchdarkly",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/loom",
+      "query": "loom vs zoom",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mailchimp",
+      "query": "mailchimp features comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mailerlite",
+      "query": "mailer lite",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mailerlite",
+      "query": "mailerlite",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 55.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mailerlite",
+      "query": "mailrelite",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mailgun",
+      "query": "mailgun price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mailgun",
+      "query": "mailgun pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/matomo",
+      "query": "matomo",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/matomo",
+      "query": "matomo database",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/matomo",
+      "query": "matomo digitalocean",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/matomo",
+      "query": "matomo kosten",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 86.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/matomo",
+      "query": "matomo preise",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 84.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/matomo",
+      "query": "matomo pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mattermost",
+      "query": "mattermost",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 58.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mattermost",
+      "query": "mattermost обзор",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 99
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mercury",
+      "query": "mercury software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/microsoft-dynamics",
+      "query": "dynamics crm kosten",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/microsoft-dynamics",
+      "query": "kosten microsoft dynamics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/microsoft-dynamics",
+      "query": "microsoft crm online kosten",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/microsoft-dynamics",
+      "query": "microsoft dynamics crm review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/microsoft-dynamics",
+      "query": "microsoft dynamics kosten",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mistral",
+      "query": "mistral pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 68.66666666666667
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mongodb",
+      "query": "mongodb prices",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/mongodb",
+      "query": "mongodb pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/name-com",
+      "query": "name.com premium domain",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/neon",
+      "query": "%neon postgres pricing free tier 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/neovim",
+      "query": "neovim",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/netlify",
+      "query": "is netlify free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/netlify",
+      "query": "netlifu",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/netlify",
+      "query": "netlify hosting",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/netlify",
+      "query": "netlify plans",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/netlify",
+      "query": "netlify prices",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/netlify-cms",
+      "query": "netlify cms",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/netlify-cms",
+      "query": "netlify cms database",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "new relic",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 44.6
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "new relic apm pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "new relic browser vs google analytics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "new relic cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "new relic free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "new relic pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 61.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "newrelic",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/new-relic",
+      "query": "what is new relic",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/notion-calendar",
+      "query": "notion calendar",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsedian",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsibian",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsidian",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 46.54545454545455
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsidian co",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsidian cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsidian seo",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsidian sync price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsidian sync pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "obsidian tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/obsidian",
+      "query": "onbsidian",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/october",
+      "query": "october cms",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/october",
+      "query": "octobercms",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "free version of openshift",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "managed openshift",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 48.8
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "open shift",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 44.2
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift cloud platform",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift free",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 35.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift on premise",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift on premise pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift platform",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 23.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift pricing on premise",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift red hat",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift redhat",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift renewal cost review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift server",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift services",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift subscription guide",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 21.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift technology",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "openshift.",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "opensift",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "red hat openshift",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 70.88888888888889
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "red hat openshift free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "red hat openstack platform price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "what is openshift",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 62.25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/openshift",
+      "query": "what is red hat openshift",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/paddle",
+      "query": "paddle com market ltd",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/paddle",
+      "query": "paddle net",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/paddle",
+      "query": "paddle payment processor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/paddle",
+      "query": "paddle pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/paddle",
+      "query": "paddle software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/payhip",
+      "query": "payhip pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/paylocity",
+      "query": "paylocity",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/photopea",
+      "query": "fotopea",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/photopea",
+      "query": "photo pea",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 54.3
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/photopea",
+      "query": "photopea",
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 55.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/photopea",
+      "query": "photopea.",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/photopea",
+      "query": "photopeia",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/photopea",
+      "query": "photosea",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/photopea",
+      "query": "photpea",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 57.666666666666664
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/picsart",
+      "query": "pics art software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/picsart",
+      "query": "picsart pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/pinecone",
+      "query": "pinecone pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/pixelmator-pro",
+      "query": "pixelmator review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/pixelmator-pro",
+      "query": "propixelmator",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/pixelmator-pro",
+      "query": "review pixelmator pro",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/planetscale",
+      "query": "planetscale pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/podia",
+      "query": "podia vs circle",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postgresql",
+      "query": "is postgresql free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postgresql",
+      "query": "postgresql pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postman",
+      "query": "postman",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 30.09090909090909
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postman",
+      "query": "postman pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postman",
+      "query": "postman tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postman",
+      "query": "postman'",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postman",
+      "query": "postmans",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/postmark",
+      "query": "postmark",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 92
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/prezi",
+      "query": "prezi software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "ile kosztuje procreate",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "is procreate free",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 54.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "is procreate free on ipad",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "precio procreate",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "pro create",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 37.4
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate app",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 48.375
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate app cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate art program",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate buy",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate cena",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate drawing app",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate drawing apps",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate ipad precio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate ipad review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate price",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate program",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/procreate",
+      "query": "procreate versions",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/prometheus",
+      "query": "prometheus tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qdrant",
+      "query": "qdrant",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qaultrics",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtric s",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics",
+      "clicks": 0,
+      "impressions": 38,
+      "ctr": 0,
+      "position": 32.73684210526316
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics crm",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics free trial",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics research",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics research services",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics services",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics survey",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics system",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrics what is it",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "qualtrixs",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "surveys qualtrics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/qualtrics",
+      "query": "what is qualtrics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/raycast",
+      "query": "raycast",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/raycast",
+      "query": "what is raycast",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 89
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/redis",
+      "query": "how fast is redis",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/redis",
+      "query": "redis pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/redis",
+      "query": "redis vs sqlite",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/redis",
+      "query": "redis write throughput",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/replicate",
+      "query": "replicate",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/resend",
+      "query": "resend pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/resend",
+      "query": "resend reviews from developers",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/runway",
+      "query": "runway ml free tier vs alternatives 2026",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sanity",
+      "query": "sanity pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "scream frog",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 79
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "screaming fog",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "screaming frog",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 74.17647058823529
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "screaming frog kosten",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "screaming frog price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "screaming frog pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 71
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "screaming frog software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 67.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "screamingfrog",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "wat is screaming frog",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 87.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/screaming-frog",
+      "query": "what is screaming frog",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sellfy",
+      "query": "sellfy pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/shopware",
+      "query": "shopware hosting",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 72.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/shopware",
+      "query": "shopware price",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 51.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/shopware",
+      "query": "shopware prices",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/similarweb",
+      "query": "pricing similarweb",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/similarweb",
+      "query": "similarweb pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sketch",
+      "query": "design software sketch",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 87
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sketch",
+      "query": "sketch alternative",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 85
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sketch",
+      "query": "sketch design tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 91
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sketch",
+      "query": "sketch mac price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sketch",
+      "query": "sketch software",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 76.6
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sketch",
+      "query": "sketch tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sketch",
+      "query": "sketch ui",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/skype",
+      "query": "skype pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/snyk",
+      "query": "snyk pricing",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sonarqube",
+      "query": "sonarqube",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 54.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/strapi",
+      "query": "strapi",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 50.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/strapi",
+      "query": "strapi pricing",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 61.333333333333336
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/strapi",
+      "query": "strapi versions",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/strapi",
+      "query": "strappi",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "is sublime text free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "sub line text editor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "sublime ide",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "sublime text",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 69.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "sublime text 5",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 73.75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "sublime text editor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "sublime text editors",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "submlime text",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "sumbline text",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sublime-text",
+      "query": "what is sublime text",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 81.66666666666667
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sugarcrm",
+      "query": "sugar crm free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sugarcrm",
+      "query": "sugarcrm",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sugarcrm",
+      "query": "sugarcrm free version",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sugarcrm",
+      "query": "sugarcrm host",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/sugarcrm",
+      "query": "sugarcrm hosting",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 73.66666666666667
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/supabase",
+      "query": "is supabase free",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/surveymonkey",
+      "query": "survey monkey surveys",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 20
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/surveymonkey",
+      "query": "surveymonkey review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/synthesia",
+      "query": "synthesia",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 63.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/synthesia",
+      "query": "synthesia software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/telegram",
+      "query": "telegram api price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/telegram",
+      "query": "telegram api pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/telegram",
+      "query": "telegram server",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/telegram",
+      "query": "telegram service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 58
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/tencent-cloud",
+      "query": "tencent cloud pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/terraform",
+      "query": "terraform",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 51.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/terraform",
+      "query": "terraform software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 57
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/terraform",
+      "query": "terraform tools",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/terraform",
+      "query": "terrfaorm",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/threema",
+      "query": "threema price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/together-ai",
+      "query": "together ai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/twilio",
+      "query": "twilio verify pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 64
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/twist",
+      "query": "twist app",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/twist",
+      "query": "twist meta",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/twist",
+      "query": "twist software",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/unbounce",
+      "query": "unbounce comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/unbounce",
+      "query": "unbounced",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/vanta",
+      "query": "vanta pricing",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 92
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "+viber delete without a trace delete for everyone message deleted not shown",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "online viber",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viber",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 50.166666666666664
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viber and viber out",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viber app",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viber online",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viber plus price",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viber review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viber tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "viver",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "víběr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/viber",
+      "query": "what is a viber",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/webflow",
+      "query": "webflpow",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/webnode",
+      "query": "webnode preise",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "what is wickr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "what is wickr app",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "wick me",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "wickr",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "wickr desktop",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "wickr me",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "wickr messenger",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "wickr pc",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wickr",
+      "query": "wickr pro",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wire",
+      "query": "wire server",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wix-studio",
+      "query": "wix code editor",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 31.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wix-studio",
+      "query": "wix editor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wix-studio",
+      "query": "wix studio",
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 22.46875
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wix-studio",
+      "query": "wix studio developer",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 44.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wix-studio",
+      "query": "wix studio editor",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wix-studio",
+      "query": "wix studios",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wix-studio",
+      "query": "wixstudio",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 20
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/workflowy",
+      "query": "workflowy",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 47.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/workflowy",
+      "query": "workflowy pricing",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/wrike",
+      "query": "wrike prices",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/xero",
+      "query": "xero",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/xero",
+      "query": "xero software",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 40.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/yoast-seo",
+      "query": "yoast seo checker",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 90.5
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/yoast-seo",
+      "query": "yoast seo online tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zendesk",
+      "query": "zendesk competitive advantage",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "crm software zoho",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 71.25
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "crm zoho",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "zoho crm",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 71.33333333333333
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "zoho crm feature comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "zoho crm features comparison",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 83
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "zoho crm software",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 76.2
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "zoho crm system",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "zoho crm tool",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoho-crm",
+      "query": "zoho software review",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 86
+    },
+    {
+      "date": "2026-09-06",
+      "page": "https://toolcompare.net/tools/zoom",
+      "query": "cost of zoom",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
     }
   ]
 }

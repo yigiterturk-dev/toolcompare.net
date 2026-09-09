@@ -16,38 +16,33 @@
     "isFlat": true,
     "category": "CRM",
     "shortDescription": "Top-tier inbound marketing and CRM.",
-    "longDescription": "HubSpot CRM is a comprehensive platform that aligns sales, marketing, and service teams through a single 'source of truth.' Unlike traditional, rigid CRM systems, HubSpot is built around the modern customer journey, offering powerful automation tools that scale as your business grows. Its free tier is exceptionally generous, allowing small businesses to manage their sales pipelines, track email engagements, and log every customer interaction. As you scale, its advanced AI and automation features help you shape marketing strategies based on data-driven insights.",
+    "longDescription": "HubSpot's CRM is free for up to two users and stays free indefinitely, which makes it one of the few genuinely usable free CRMs — but the free tier is shaped by two constraints that decide whether you can work in it: HubSpot branding appears on nearly everything you publish or send, and the per-object allowances are small enough to hit quickly. Three email templates, three snippets, one deal pipeline, one meetings link and 2,000 email sends a month are the working limits. The Starter Customer Platform lifts those by orders of magnitude for a per-seat price that is currently discounted heavily for new customers only.",
     "pros": [
-      "Generous Free Tier: Unbeatable value for small businesses and startups starting out.",
-      "Deep Ecosystem: Seamless integration with Gmail, Outlook, and over 1,000 third-party apps.",
-      "HubSpot Academy: Access free training to enhance your sales and marketing skills.",
-      "User-Friendly Interface: Manage your business through drag-and-drop tools without technical knowledge."
+      "Free for up to 2 users with no credit card and no time limit",
+      "Starter lifts template and snippet limits by three orders of magnitude",
+      "One subscription covers marketing, sales, service, content and data"
     ],
     "cons": [
-      "Steep Pricing Curve: Paid tiers can become very expensive as you add more features.",
-      "Complex Customization: Advanced enterprise setups may require technical implementation assistance.",
-      "Reporting Limits: Detailed analytical reports are often locked behind higher-tier plans."
+      "Free tier stamps HubSpot branding on public-facing output",
+      "Headline Starter price is a new-customer promotion",
+      "AI agents consume a separate HubSpot Credits balance"
     ],
     "keyFeatures": [
       {
-        "title": "Sales Automation",
-        "description": "Set up automated follow-up sequences to nurture leads without manual effort."
+        "title": "Free CRM core",
+        "description": "Contacts, deals, live chat, forms and email tracking at no cost for up to 2 users."
       },
       {
-        "title": "Lead Intelligence",
-        "description": "See exactly which pages your leads are visiting on your site before you even call them."
+        "title": "Starter Customer Platform",
+        "description": "Starter tiers of Marketing, Sales, Service, Content and Data Hub in one subscription."
       },
       {
-        "title": "Meeting Scheduler",
-        "description": "Share a link that allows clients to book time on your calendar directly."
-      },
-      {
-        "title": "Universal Inbox",
-        "description": "A centralized hub where your entire team can access and manage customer chats and emails."
+        "title": "HubSpot Credits",
+        "description": "A separate balance consumed by the Prospecting and Data AI agents."
       }
     ],
-    "targetAudience": "SaaS Companies, Marketing Agencies, and High-Growth Sales Teams.",
-    "verdict": "A CRM teams actually adopt: easy to start on the free tier, with room to grow into the paid hubs.",
+    "targetAudience": "Small businesses wanting a free CRM that can grow into a marketing suite.",
+    "verdict": "The free tier is real, not a trial — but count the branding and the per-object caps before committing. And read the Starter price as a promotion, not a rate.",
     "websiteUrl": "https://www.hubspot.com",
     "color": "#ff7a59",
     "fiyatModeli": "ucretsiz-katman",
@@ -57,7 +52,71 @@
       "mobil": true,
       "acikKaynak": false,
       "sso": true
-    }
+    },
+    "evidence": {
+      "status": "pricing-page-verified",
+      "sources": [
+        {
+          "label": "HubSpot — Pricing (Free Tools and Starter)",
+          "url": "https://www.hubspot.com/pricing/crm",
+          "supports": [
+            "Free Tools $0/mo: free for up to 2 users, no credit card required, including free Marketing, Sales, Service, Content, Data and Revenue tools",
+            "Starter Customer Platform starts at $7/mo/seat, shown against $20/mo/seat on the monthly-commit option, and includes 500 HubSpot Credits plus the Starter tier of Marketing, Sales, Service, Content and Data Hub",
+            "Starter includes 1,000 marketing contacts",
+            "A banner advertises saving up to 65% on Starter for new customers only, on select offers available for a limited time",
+            "Individual hubs — Marketing, Sales, Service, Content and Data — are each listed at $7/mo on Starter",
+            "Free tier limits: email marketing 2,000 sends per calendar month with HubSpot branding; up to 3 canned snippets against 5,000 on Starter; up to 3 email templates per account against 10,000 on Starter; 1 deal pipeline against 2; a maximum of 1 personal meetings link against 1,000 personal and team links; 1 automated email action against up to 10",
+            "Free tier includes 500 calling minutes and 1 HubSpot-provided phone number, not supported in all countries",
+            "Reporting is 10 dashboards with 50 reports each on free, 30 dashboards on Starter",
+            "Content limits are up to 30 landing pages and 30 website pages, with HubSpot branding and a non-customizable favicon on free",
+            "Multi-language content covers up to 3 HubSpot-supported languages on free and up to 50 on Starter",
+            "CRM segments on free are 10 active and 1,000 static, rising to 50 active on Starter",
+            "Live chat, conversational bots and Facebook Messenger all carry HubSpot branding on free; Starter removes it",
+            "The Prospecting agent and Data agent consume HubSpot Credits",
+            "Prices are displayed in USD ($)"
+          ],
+          "checkedAt": "2026-09-10"
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was read in a real browser by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The Starter headline price is a limited-time promotion restricted to new customers; the monthly-commit figure shown alongside it is the higher rate.",
+        "HubSpot Credits consumption rates for the AI agents are not published on this page."
+      ],
+      "reviewedAt": "2026-09-10"
+    },
+    "bestFor": [
+      "Teams of one or two: the CRM is free indefinitely with no credit card and no trial clock",
+      "Businesses that want sales, marketing and service in one place — Starter bundles all five hubs from $7 per seat per month",
+      "Anyone hitting the free template and snippet ceilings, which go from 3 to 5,000 and 10,000 respectively on Starter",
+      "Companies publishing content, since Starter removes HubSpot branding from chat, email, landing pages and blogs"
+    ],
+    "skipIf": [
+      "You need a third user — the free tier stops at 2 and there is no free expansion",
+      "You publish customer-facing content on the free plan: HubSpot branding appears on chat, email, pages and the blog, and the favicon is fixed",
+      "You are budgeting beyond the promotion: the $7 per seat figure is new-customer only and shown against $20 per seat monthly",
+      "You run more than one sales process on free, which allows a single deal pipeline",
+      "You plan to lean on the AI agents, which draw on a separate HubSpot Credits balance rather than being included"
+    ],
+    "sss": [
+      {
+        "soru": "Is HubSpot CRM really free?",
+        "cevap": "Yes. The free tools are $0 a month for up to 2 users with no credit card and no time limit, covering marketing, sales, service, content and data tools — but public-facing output carries HubSpot branding."
+      },
+      {
+        "soru": "How much does HubSpot Starter cost?",
+        "cevap": "It starts at $7 per seat per month, shown against $20 per seat per month on the monthly-commit option. The lower figure is a limited-time promotion for new customers only and includes 500 HubSpot Credits."
+      },
+      {
+        "soru": "What are the limits of HubSpot's free plan?",
+        "cevap": "Two users, 2,000 email sends a month, 3 email templates, 3 snippets, 1 deal pipeline, 1 personal meetings link, 500 calling minutes, 30 landing pages and 30 website pages — all with HubSpot branding."
+      },
+      {
+        "soru": "How many users can use HubSpot for free?",
+        "cevap": "Up to 2. Beyond that you need a paid seat on Starter or higher."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "slack",
@@ -3276,42 +3335,37 @@
       "Granular logic",
       "Fast"
     ],
-    "basePrice": 9,
-    "isFlat": false,
+    "basePrice": 0,
+    "isFlat": true,
     "category": "Productivity",
     "shortDescription": "Pro automation.",
-    "longDescription": "Make (formerly Integromat) is the 'professional' and visual alternative to Zapier. It connects apps in a much deeper, more granular, and cost-effective way. Its visual scenario builder allows you to map out and watch the actual flow of data. With features like JSON handling, data filters, and iterators, it brings developer-level control to non-coders. It is the choice for those who want to push limits and run more automations for less money.",
+    "longDescription": "Make is a visual automation platform priced by operations rather than by seat, with a monthly credit allowance you choose on a slider — so two teams on the same named plan can pay very different amounts. The free plan has no time limit and is genuinely usable for low-frequency work, but it carries the restriction that defines the tier: a fifteen-minute minimum interval between scheduled runs, which rules out anything that needs to react promptly. Paid plans remove that, allow unlimited active scenarios and add team roles.",
     "pros": [
-      "Visual Builder: Mapping out scenarios as a web-like flow is intuitive and powerful.",
-      "Cost Effective: Offers significantly more operations for a much lower price than Zapier.",
-      "Extreme Flexibility: Manipulate data down to its smallest component without code.",
-      "Real-Time Monitoring: See exactly where data is in your flow as it runs live."
+      "Free plan has no time limit",
+      "Priced by operations, not per user, with unlimited users",
+      "Scheduling granularity down to the minute on paid plans"
     ],
     "cons": [
-      "Learning Curve: Not as 'simple' as Zapier; requires an understanding of data logic.",
-      "App Support: Does not (yet) support quite as many apps as Zapier does.",
-      "Debugging: Solving errors when they occur can require more technical knowledge."
+      "Free plan cannot run more often than every 15 minutes",
+      "Price depends on a credit slider rather than a flat tier",
+      "Scenario execution time is capped per plan"
     ],
     "keyFeatures": [
       {
-        "title": "Visual Scenario Builder",
-        "description": "Drag and drop automation steps and link them together on a visual map."
+        "title": "Visual scenario builder",
+        "description": "Drag-and-drop automation across apps with branching and error handling."
       },
       {
-        "title": "Iterators & Aggregators",
-        "description": "Process lists of data individually or combine parts into a single file."
+        "title": "Operations-based pricing",
+        "description": "A monthly credit allowance selected on a slider, independent of user count."
       },
       {
-        "title": "HTTP Request Support",
-        "description": "Connect directly to any app with an API, even if it's not natively on Make."
-      },
-      {
-        "title": "Error Handling",
-        "description": "Determine exactly what the flow should do (stop, skip, warn) when an error occurs."
+        "title": "Custom apps and API",
+        "description": "Own apps shared inside the organisation, plus 300+ Make API endpoints."
       }
     ],
-    "targetAudience": "Developers, No-Code Builders, and Tech-Ops Professionals.",
-    "verdict": "For technical users who want visual control over each step and lower cost per operation than Zapier.",
+    "targetAudience": "Teams automating workflows across SaaS tools without writing code.",
+    "verdict": "Judge it by operations volume and how fast you need a scenario to fire — those two decide the bill, not the plan name. The 15-minute floor is what pushes most people off the free plan.",
     "color": "#7214ff",
     "websiteUrl": "https://www.make.com",
     "incelendi": true,
@@ -3323,22 +3377,62 @@
     },
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Make.com — Pricing",
+          "label": "Make — Pricing & Subscription Packages",
           "url": "https://www.make.com/en/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
-          ]
+            "The free plan has no time limit and is selected alongside paid tiers by a monthly credits slider",
+            "Free plan carries a 15-minute minimum interval between scheduled scenario runs",
+            "Paid plans add unlimited active scenarios, scheduling down to the minute, increased data transfer limits, teams and team roles, and access to the Value Engineering team",
+            "Users are unlimited; the meter is operations rather than seats",
+            "Each plan states a minimum interval between scheduled scenarios and a maximum scenario execution time in minutes",
+            "Access to 300+ Make API endpoints is included, with a per-minute rate call limit that varies by plan",
+            "Higher tiers allow creating and sharing workflow templates across business functions and user groups, and building custom apps shared within the organisation",
+            "Free professional access to Make is offered for students"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was read in a real browser by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Plan prices are generated client-side from a monthly credits slider and did not render as figures in the page text, so no price is recorded here — only the published plan limits.",
+        "Operation allowances and API rate limits vary per slider position rather than being fixed per named tier."
+      ],
+      "reviewedAt": "2026-09-10"
+    },
+    "fiyatModeli": "ucretsiz-katman",
+    "bestFor": [
+      "Low-frequency automation: the free plan has no time limit and no user cap",
+      "Teams rather than individuals, since users are unlimited and the meter is operations",
+      "Anything that must react within a minute, which requires a paid plan — free is floored at 15-minute intervals",
+      "Organisations building internal tooling, given custom apps and 300+ API endpoints"
+    ],
+    "skipIf": [
+      "You need near-real-time automation on the free plan, where runs cannot be closer than 15 minutes apart",
+      "You want a fixed monthly price: the figure comes from a credits slider, not a flat tier",
+      "You run long scenarios, since maximum execution time is capped per plan",
+      "You need team roles and unlimited active scenarios, both of which are paid-only"
+    ],
+    "sss": [
+      {
+        "soru": "Is Make free?",
+        "cevap": "Yes, there is a free plan with no time limit and unlimited users, but scheduled scenarios cannot run more often than every 15 minutes."
+      },
+      {
+        "soru": "How does Make pricing work?",
+        "cevap": "By operations, not per user. You choose a monthly credit allowance on a slider, so the price depends on volume rather than on headcount."
+      },
+      {
+        "soru": "What is the Make free plan's biggest limitation?",
+        "cevap": "The 15-minute minimum interval between scheduled runs. Paid plans allow scheduling down to the minute and add unlimited active scenarios."
+      },
+      {
+        "soru": "Does Make charge per user?",
+        "cevap": "No. Users are unlimited on every plan; the cost comes from the monthly operations allowance."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "airtable",
@@ -8859,43 +8953,38 @@
       "UX Analytics"
     ],
     "basePrice": 0,
-    "isFlat": true,
+    "isFlat": false,
     "category": "Developer Tools",
     "shortDescription": "Frontend monitoring.",
-    "longDescription": "LogRocket is a frontend monitoring tool that shows you exactly what your users see and where they get stuck. It records video of user sessions and logs console errors, network requests, and performance metrics alongside them. This allows developers to reproduce and fix 'impossible-to-find' bugs in minutes instead of days. By combining error tracking with product analytics, it helps teams understand not just that a bug happened, but how it affected the user's journey and business goals.",
+    "longDescription": "LogRocket is session replay and product analytics priced on one meter: the number of sessions you capture each month. Everything else the product collects — analytics events, errors, logs and projects — is unlimited on every plan, which is unusual in the category and means the bill does not grow as your instrumentation gets richer, only as your traffic does. There is no published flat price: the figure comes from a session slider, and the vendor states plainly that the final number also depends on seats, retention length and add-ons, with annual contracts locking the rate.",
     "pros": [
-      "Bug Reproduction: The fastest way to see exactly what went wrong for a specific user.",
-      "Performance Insights: Identify slow components and sluggish network requests visually.",
-      "UX Visibility: See 'rage clicks' and confusing UI elements through user videos.",
-      "Security: Excellent tools for masking sensitive data within session recordings."
+      "Analytics, errors, logs and projects unlimited on every plan",
+      "Cost tracks traffic, not instrumentation depth",
+      "Free trial with no credit card"
     ],
     "cons": [
-      "Performance Overhead: Can slightly impact the performance of your frontend application.",
-      "Pricing: The Pro tiers are expensive for high-traffic applications.",
-      "Data Volume: Session recordings can consume massive amounts of data storage."
+      "No published flat price; the slider sets it",
+      "Final price also depends on seats and retention",
+      "Sampling rate means not every session is captured"
     ],
     "keyFeatures": [
       {
-        "title": "Pixel-Perfect Replay",
-        "description": "Watch a video of every user session, including every click and mouse move."
+        "title": "Session replay",
+        "description": "Replays real user sessions, with the captured percentage set per plan."
       },
       {
-        "title": "Network Logging",
-        "description": "See every API call and response that happened during a user's session."
+        "title": "Unlimited telemetry",
+        "description": "Analytics events, error events, log events and projects unlimited on every plan."
       },
       {
-        "title": "Error Aggregation",
-        "description": "Automatically group similar frontend errors and see which users they affected."
-      },
-      {
-        "title": "Heatmaps",
-        "description": "Visualize user engagement and scroll depth across your entire application."
+        "title": "Retention and export",
+        "description": "Retention length and add-ons such as Streaming Export adjust the final price."
       }
     ],
-    "targetAudience": "Frontend Developers and UX Researchers.",
-    "verdict": "An indispensable tool for debugging and optimizing modern web applications.",
+    "targetAudience": "Product and engineering teams debugging real user sessions.",
+    "verdict": "A rare pricing model where adding instrumentation costs nothing — only traffic does. But you cannot budget from the website: seats and retention move the number and the quote comes from sales.",
     "color": "#764abc",
-    "fiyatModeli": "ucretsiz-katman",
+    "fiyatModeli": "kullanima-gore",
     "websiteUrl": "https://logrocket.com",
     "incelendi": true,
     "kriterler": {
@@ -8906,22 +8995,60 @@
     },
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "LogRocket — Pricing",
           "url": "https://logrocket.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "An automated check confirmed this vendor pricing page was reachable on the date shown. No plan name, price or limit was extracted from it."
-          ]
+            "Pricing is stated as: pay for the sessions you capture, while analytics, logs and errors are always unlimited",
+            "Cost scales with sessions captured, selected by a sessions-per-month slider",
+            "Unlimited analytics events, unlimited error events, unlimited log events and unlimited projects on every plan",
+            "The percentage of sessions captured is a per-plan setting",
+            "The vendor states the final price depends on seats, retention length and add-ons such as Streaming Export, and that annual contracts lock the rate for the term",
+            "Free trial with no credit card required",
+            "Discounts are indicated for companies under $50M funding, arranged with the sales team"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was read in a real browser by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "There is no published flat price: figures are generated client-side from a sessions slider and the vendor states seats, retention and add-ons change the final number, so no price is recorded here.",
+        "The discount criteria are described loosely by the vendor rather than published as a rate."
+      ],
+      "reviewedAt": "2026-09-10"
+    },
+    "bestFor": [
+      "Teams that instrument heavily: analytics, error and log events are unlimited on every plan, so only traffic costs money",
+      "Products with predictable session volume, which is the single meter the price is built on",
+      "Startups under $50M in funding, for whom the vendor indicates discounts are usual",
+      "Buyers who want to try first, since the trial needs no credit card"
+    ],
+    "skipIf": [
+      "You need a price before talking to sales — there is no published flat figure, only a slider plus seat and retention variables",
+      "You expect every session captured: the captured percentage is a per-plan setting, not 100% by default",
+      "You need short-term flexibility, since the rate lock the vendor offers is tied to an annual contract",
+      "Your traffic is spiky, because the meter is sessions captured per month"
+    ],
+    "sss": [
+      {
+        "soru": "How does LogRocket pricing work?",
+        "cevap": "You pay for the sessions you capture each month, chosen on a slider. Analytics events, errors, logs and projects are unlimited on every plan."
+      },
+      {
+        "soru": "Does LogRocket publish its prices?",
+        "cevap": "Not as a flat figure. The page uses a sessions slider, and the vendor states the final price also depends on seats, retention length and add-ons such as Streaming Export."
+      },
+      {
+        "soru": "Does LogRocket limit analytics or error events?",
+        "cevap": "No. Analytics events, error events, log events and projects are unlimited on every plan; only session capture is metered."
+      },
+      {
+        "soru": "Does LogRocket offer discounts?",
+        "cevap": "The vendor indicates companies under $50M in funding usually receive one, arranged through the sales team."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "segment",
