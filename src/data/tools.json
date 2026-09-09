@@ -10790,20 +10790,28 @@
     "verdict": "A solid middle ground. If you need VPC-level control or exotic services, you will outgrow it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Render — Pricing",
           "url": "https://render.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Hobby $0/mo + compute; Pro $25/mo + compute; Scale $499/mo + compute; Enterprise custom pricing — every workspace tier is quoted '+ compute'",
+            "Hobby: up to 25 services, 5 GB bandwidth included, 1 team seat, 1 workspace, 7-day log retention, 500 build minutes/mo then $5 per 1K minutes",
+            "Pro: unlimited seats and services, 25 GB bandwidth, full-stack previews, horizontal autoscaling, 14-day log retention, 1K build minutes then $5 per 1K",
+            "Scale: multiple workspaces, 1 TB bandwidth, SAML SSO & SCIM, advanced RBAC, HIPAA-compliant workspaces, organization audit logs",
+            "Bandwidth beyond the included amount is $0.15 per GB on every tier; custom domains 2 included then $0.25/domain/month",
+            "Web service compute: free instance 512 MB RAM under 1 CPU; paid from $7/mo (512 MB) to $1,000/mo (64 GB, 8 CPU); SSD disks $0.25/GB per month",
+            "Postgres is priced separately: free tier, then $6/mo (256 MB) up to $11,000/mo (1024 GB); expandable storage $0.30/GB",
+            "Compute bills by the second — a paid web service turned off 24 hours later is billed for 24 hours; cron jobs and workflows bill only while running",
+            "If a workspace has no services (live or suspended) and no activity during a month, the workspace subscription fee for that month is waived"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -10818,7 +10826,38 @@
         "title": "Background workers and cron",
         "description": "Runs queues and scheduled jobs as first-class service types."
       }
-    ]
+    ],
+    "bestFor": [
+      "Solo developers and prototypes: Hobby is $0/month plus compute, with up to 25 services, 5 GB bandwidth and a free 512 MB instance",
+      "Small production teams: Pro is $25/month per workspace plus compute and includes unlimited seats and services, so headcount does not change the bill",
+      "Bursty or scheduled workloads — compute bills by the second, so a cron job or a service you turn off after 24 hours is billed for those hours only",
+      "Dormant side projects: a workspace with no services and no activity in a month has its subscription fee waived"
+    ],
+    "skipIf": [
+      "You read $25 as the whole bill — every tier is '+ compute'. Paid instances run $7/month (512 MB) to $1,000/month (64 GB), and Postgres is billed separately from $6/month",
+      "You serve heavy traffic: only 5 GB (Hobby) or 25 GB (Pro) of bandwidth is included, then $0.15 per GB, and build minutes overflow at $5 per 1,000",
+      "You need SAML SSO, SCIM, advanced RBAC or HIPAA — those begin at Scale, $499/month per workspace plus compute",
+      "You want long log history: retention is 7 days on Hobby and 14 on Pro, reaching 30 days only at Scale"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Render cost?",
+        "cevap": "Workspace plans are Hobby $0/month, Pro $25/month, Scale $499/month and Enterprise custom — each quoted '+ compute'. Compute is billed on top: web service instances run from $7/month for 512 MB to $1,000/month for 64 GB, with a free 512 MB instance available, and Postgres is priced separately from $6/month."
+      },
+      {
+        "soru": "Is Render's $25 Pro plan the total monthly bill?",
+        "cevap": "No. The $25 is the workspace subscription; the instances you run are added to it, as are bandwidth over 25 GB at $0.15 per GB and build minutes over 1,000 at $5 per 1,000."
+      },
+      {
+        "soru": "Does Render have a free tier?",
+        "cevap": "Yes. Hobby is $0/month with up to 25 services, 5 GB of bandwidth, one team seat, 7-day log retention and a free instance with 512 MB RAM and less than one CPU."
+      },
+      {
+        "soru": "Does Render charge per user?",
+        "cevap": "Not on Pro and above: Pro, Scale and Enterprise list unlimited team seats. Hobby is limited to a single seat."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "fly-io",
@@ -10851,20 +10890,28 @@
     "verdict": "Compelling when latency actually matters. Single-region apps get little benefit from the added complexity.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Fly.io — Pricing",
-          "url": "https://fly.io/pricing/",
-          "checkedAt": "2026-08-31",
+          "url": "https://fly.io/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Machines compute is billed by the second while a Machine runs; presets from shared-cpu-1x 256MB at $0.0027/hour ($1.94/month) to performance-16x 32GB at $0.6889/hour ($496.00/month)",
+            "Every preset takes more RAM at $5.00 per GB per month, up to 128GB; a stopped Machine costs $0.15 per GB of rootfs",
+            "Volumes bill on provisioned capacity, not usage: $0.15 per GB/month; snapshots $0.08 per GB/month with the first 10GB free each month",
+            "Egress is regional: $0.02/GB North America and Europe, $0.04/GB Asia Pacific, Oceania and South America, $0.12/GB Africa and India",
+            "Dedicated IPv4 is $2.00/month; every app gets a shared IPv4 and unlimited Anycast IPv6",
+            "Reserved compute saves 40% in one-year blocks from $36/yr for shared and $144/yr for performance",
+            "Managed Postgres cluster plans: Basic $38, Starter $72, Launch $282, Scale $962, Performance $1,922 per month; database storage $0.28 per provisioned GB, max 1,000 GB per cluster",
+            "Sprites are metered per hour of active use: $0.07 per CPU-hour, $0.04375 per GB-hour of memory, hot storage $0.50 and cold storage $0.02 per GB-month",
+            "Support: community support is free; Standard $29/mo (36-hour first response), Premium $199/mo (24-hour, 1-hour urgent), Enterprise from $2,500/mo (4-hour 24x7, 99.9% uptime SLA)"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -10879,7 +10926,38 @@
         "title": "Private networking",
         "description": "Connects application instances across regions on a private mesh."
       }
-    ]
+    ],
+    "bestFor": [
+      "Small always-on services: a shared-cpu-1x with 256MB is $0.0027/hour, about $1.94/month, and compute bills by the second",
+      "Multi-region apps served to North America or Europe, where egress is $0.02/GB — the cheapest of Fly's regional bands",
+      "Predictable workloads willing to commit: reserved compute is 40% off in one-year blocks from $36/yr shared, $144/yr performance",
+      "Teams that want managed Postgres alongside compute — cluster plans start at $38/month with high availability, backups and connection pooling included"
+    ],
+    "skipIf": [
+      "You expect storage to bill like compute: volumes charge $0.15 per GB of provisioned capacity whether you use it or not, and a stopped Machine still costs $0.15 per GB of rootfs",
+      "Your audience is in Africa or India — egress there is $0.12/GB, six times the $0.02/GB charged for North America and Europe",
+      "You need a support commitment: only community support is free, and paid tiers are $29/month, $199/month, or from $2,500/month for the 24x7 SLA",
+      "You want a memory-heavy box cheaply: extra RAM is $5.00 per GB per month on top of the preset's price"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Fly.io cost?",
+        "cevap": "Compute bills by the second: presets run from shared-cpu-1x 256MB at $1.94/month to performance-16x 32GB at $496/month, with extra RAM at $5 per GB per month. Storage and egress are billed separately — volumes $0.15 per provisioned GB/month and egress $0.02/GB in North America and Europe."
+      },
+      {
+        "soru": "Is Fly.io free?",
+        "cevap": "There is no free plan on the pricing page; the smallest preset is $0.0027 per hour (about $1.94 a month) and community support is the free part. New accounts start with pay-as-you-go compute billed by the second."
+      },
+      {
+        "soru": "How much is Fly.io Postgres?",
+        "cevap": "Managed Postgres clusters are $38 (Basic), $72 (Starter), $282 (Launch), $962 (Scale) and $1,922 (Performance) per month, plus $0.28 per provisioned GB of storage, capped at 1,000 GB per cluster."
+      },
+      {
+        "soru": "Does Fly.io charge for bandwidth?",
+        "cevap": "Yes, and the rate depends on the region: $0.02/GB for North America and Europe, $0.04/GB for Asia Pacific, Oceania and South America, and $0.12/GB for Africa and India."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "insomnia",
@@ -14768,20 +14846,27 @@
     "verdict": "Powerful for teams who will use the programmability. Simple static sites do not need it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Fastly — Pricing",
           "url": "https://www.fastly.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Full Site Delivery bandwidth: first 100 GB free, then billed per GB per region per month — in the 100 GB–10 TB band $0.12 North America and Europe, $0.16 Mexico, $0.19 Asia, Australia and Saudi Arabia, $0.28 Africa, India and South Korea",
+            "Next 10 TB band drops to $0.08 for North America and Europe and $0.24 for Africa, India and South Korea",
+            "Requests: 1 million free per month, then $0.01 per 10,000 requests up to 100 million and $0.0095 per 10,000 beyond",
+            "TLS: 5 domains free on managed TLS and on Certainly, then $20.00 per domain per month; Managed TLS with a commercial CA is $275.00 per domain per month; mutual TLS covers 2 domains free then a $500.00 flat rate",
+            "Image Optimizer: 100,000 image requests free, then $0.50 per 10,000 falling to $0.15 above 10 million and $0.01 beyond 5 billion",
+            "Compute: 10 million requests free then $0.50 per million; 100 million vCPU-milliseconds free then $0.05 per million",
+            "AI Accelerator: 20,000 requests free then $0.40 per 1,000; Fanout: 100 million minutes free then $0.50 per million",
+            "Volume discounts apply automatically as usage grows; enterprise packages and custom pricing are quoted by the sales team, with no figures published"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -14796,7 +14881,38 @@
         "title": "Real-time logging",
         "description": "Streams request logs to your own systems as they happen."
       }
-    ]
+    ],
+    "bestFor": [
+      "Traffic concentrated in North America or Europe, where delivery is $0.12/GB in the first paid band and $0.08/GB in the next",
+      "Small or spiky sites: the first 100 GB of bandwidth and the first 1 million requests each month are free",
+      "Image-heavy sites — Image Optimizer includes 100,000 image requests free and the per-request rate falls sharply above 10 million",
+      "Teams that do not want seat licensing: everything here is metered by usage, with volume discounts applied automatically"
+    ],
+    "skipIf": [
+      "Your audience is in Africa, India or South Korea: delivery there is $0.28/GB, more than twice the $0.12/GB charged for North America and Europe",
+      "You need many TLS domains — only 5 are free, then $20 per domain per month, and a commercial-CA certificate is $275 per domain per month",
+      "You need mutual TLS beyond two domains: that switches to a $500 flat monthly rate",
+      "You want a quoted enterprise package before talking to sales — package and support-plan prices are not published"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Fastly cost?",
+        "cevap": "Delivery is usage-based: 100 GB of bandwidth and 1 million requests are free each month, then bandwidth is $0.12/GB in North America and Europe (up to $0.28/GB for Africa, India and South Korea) and requests are $0.01 per 10,000. Compute, TLS and Image Optimizer are metered separately."
+      },
+      {
+        "soru": "Does Fastly have a free tier?",
+        "cevap": "Yes. The free allowances are 100 GB of bandwidth, 1 million requests, 5 TLS domains, 100,000 image optimization requests, 10 million Compute requests and 100 million Compute vCPU-milliseconds per month."
+      },
+      {
+        "soru": "Why does Fastly bandwidth cost different amounts?",
+        "cevap": "Bandwidth is billed per GB per region. In the 100 GB–10 TB band it is $0.12 for North America and Europe, $0.16 for Mexico, $0.19 for Asia, Australia and Saudi Arabia, and $0.28 for Africa, India and South Korea."
+      },
+      {
+        "soru": "How much is a TLS certificate on Fastly?",
+        "cevap": "Managed TLS covers 5 domains free and then $20 per domain per month. A commercial CA certificate is $275 per domain per month, and mutual TLS is free for 2 domains then a $500 flat monthly rate."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "bunny-net",
@@ -18607,20 +18723,28 @@
     "verdict": "The typing genuinely prevents bugs. If your queries are unusual, expect to drop to raw SQL more than you would like.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Prisma — Pricing",
           "url": "https://www.prisma.io/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Prisma ORM is always free and included in every plan",
+            "Free $0/month: 1M compute requests, 360 GB-hours memory, 4 active vCPU-hours, 10 GB outbound bandwidth, 200k Postgres operations, 500 MB storage, 50 databases",
+            "Starter $10/month: 5M requests then $1 per million, 1M Postgres operations then $8 per million, 10 GB storage then $2.00/GB, 1,000 databases, 7-day daily backups",
+            "Pro $49/month: 20M requests, 10M operations then $2 per million, 50 GB storage then $1.50/GB, GDPR and HIPAA",
+            "Business $129/month: 100M requests, 50M operations then $1 per million, 100 GB storage, 30-day backup retention, GDPR, HIPAA, SOC 2, ISO 27001",
+            "Compute metering on paid plans: $0.006 per GB-hour memory, $0.064 per active vCPU-hour, $0.025 per GB outbound bandwidth",
+            "Every query counts as one operation, and operations are what you pay for",
+            "No seats: deploys, preview branches, idle time and the number of people on your team never add to the bill; an idle app scales to zero",
+            "Prisma Postgres data transfer is unlimited and included; every paid plan has a hard spend limit on by default"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -18635,7 +18759,38 @@
         "title": "Multi-database support",
         "description": "Targets the common relational databases from one schema language."
       }
-    ]
+    ],
+    "bestFor": [
+      "Teams that grow headcount faster than traffic — there are no seats, and deploys, preview branches and idle time do not add to the bill",
+      "Apps with quiet periods: an idle app scales to zero and costs nothing, and compute is metered per GB-hour and vCPU-hour",
+      "Anyone burned by surprise cloud bills — every paid plan has a hard spend limit switched on by default",
+      "Egress-heavy workloads on Prisma Postgres, where data transfer is unlimited and included rather than billed per GB"
+    ],
+    "skipIf": [
+      "Your app is query-chatty: every single query is one billable operation, and overage on Starter is $8 per million against $2 on Pro and $1 on Business",
+      "You need HIPAA or GDPR commitments on the cheapest paid tier — those start at Pro ($49/month), and SOC 2 and ISO 27001 only at Business ($129/month)",
+      "You want long backup history: daily backups are 7-day on Starter and Pro, reaching 30-day retention only on Business",
+      "You only want the ORM — that part is free and needs no plan at all; these prices buy the hosted Postgres and compute platform"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Prisma cost?",
+        "cevap": "The ORM is free. The hosted platform is Free $0, Starter $10, Pro $49 and Business $129 per month, each including a request and operation allowance, after which you pay per million operations and per GB of storage."
+      },
+      {
+        "soru": "Is Prisma ORM free?",
+        "cevap": "Yes — Prisma ORM is always free and included on every plan, including the free one. The paid tiers buy Prisma Postgres and Prisma Compute, not the ORM."
+      },
+      {
+        "soru": "How does Prisma count operations?",
+        "cevap": "Every query your app runs against the database counts as one operation. Included volumes are 200k (Free), 1M (Starter), 10M (Pro) and 50M (Business) per month, with overage at $8, $2 and $1 per million respectively."
+      },
+      {
+        "soru": "Does Prisma charge per user or for egress?",
+        "cevap": "Neither. There are no seats, and Prisma Postgres data transfer is unlimited and included; paid plans also carry a hard spend limit that is on by default."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "drizzle",
@@ -19396,20 +19551,29 @@
     "verdict": "Good consolidation for small teams. Large log volumes need a cost check first.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Better Stack — Pricing",
           "url": "https://betterstack.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free plan $0/month: 10 monitors & heartbeats, 1 status page, Slack and e-mail alerts, 100,000 exceptions/month, 5,000 session replays, 3 GB logs and 3 GB traces retained 3 days, 30 GB metrics",
+            "Responder license $34 per month, or $29 per license per month billed annually; unlimited team members are free and only responders need a license",
+            "Slack and MS Teams native incident management: basic single-channel integration included, channel- and thread-based workflows $9 per responder license per month",
+            "Status pages: 1 included; additional public status page $15/month ($12 annually); custom CSS & JavaScript $15 per page/month; white-labeling $250 per page/month ($208 annually)",
+            "Status page password authentication $50 per page/month, IP allowlisting $250, Single Sign-On $250, sending e-mail from your own domain $250 per page/month",
+            "Status pages include 1,000 subscribers; each additional 1,000 subscribers is $40/month",
+            "Call routing is $250 per phone number per month ($208 annually)",
+            "AI SRE chat is metered at $5 per million tokens",
+            "Telemetry bundles are separate and include 30-day log retention: Nano $30/month ($25 billed yearly) for 40 GB each of traces, logs and metrics; Micro $120 ($100 yearly) for 160 GB each; Mega $250 ($210 yearly)",
+            "60-day money-back guarantee; annual billing is advertised as about 2 months free"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -19424,7 +19588,38 @@
         "title": "On-call scheduling",
         "description": "Runs rotations and escalation policies for incidents."
       }
-    ]
+    ],
+    "bestFor": [
+      "Teams with a small on-call rota: only responders need a $34/month license ($29 billed annually) and unlimited team members are free",
+      "Side projects and small sites — the free plan covers 10 monitors and heartbeats, one status page and 3 GB of logs retained for 3 days",
+      "Anyone replacing three tools at once: uptime checks, on-call, logs and a status page are one subscription rather than four",
+      "Predictable telemetry volumes: bundles are flat (Nano $30/month for 40 GB each of logs, traces and metrics) rather than per-GB metering"
+    ],
+    "skipIf": [
+      "You need a polished customer-facing status page: white-labeling, SSO and IP allowlisting are $250 per page per month each, and password protection is another $50",
+      "You expect Slack workflows to be included — channel- and thread-based incident workflows are $9 per responder license per month on top of the license",
+      "You have many responders: the per-license price is the whole model, so cost scales with how many people carry the pager",
+      "You need phone call routing — that is $250 per phone number per month, more than seven responder licenses"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Better Stack cost?",
+        "cevap": "There is a free plan (10 monitors, 1 status page, 3 GB logs), then $34 per responder licence per month, or $29 billed annually. Team members who do not respond to incidents are free. Telemetry bundles are separate, starting at $30/month ($25 yearly) for 40 GB each of logs, traces and metrics."
+      },
+      {
+        "soru": "Does Better Stack charge per team member?",
+        "cevap": "No — unlimited team members are free. You pay per responder license, which is the person who can be alerted and handle incidents."
+      },
+      {
+        "soru": "How much is a white-label status page on Better Stack?",
+        "cevap": "Removing the 'Powered by Better Stack' footer is $250 per page per month ($208 billed annually). Single Sign-On and IP allowlisting are also $250 per page per month each, and password authentication is $50."
+      },
+      {
+        "soru": "Is there a free plan?",
+        "cevap": "Yes. It covers 10 monitors and heartbeats, 1 status page, Slack and e-mail alerts, 100,000 exceptions and 5,000 session replays a month, with 3 GB of logs and traces retained for 3 days."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "statuspage",
