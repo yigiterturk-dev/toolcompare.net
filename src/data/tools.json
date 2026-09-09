@@ -3600,21 +3600,54 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Jira — Pricing",
+          "label": "Atlassian — Jira pricing",
           "url": "https://www.atlassian.com/software/jira/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0 forever for up to 10 users: unlimited goals, projects, tasks and forms; backlog, list, board, timeline, calendar and summary views; reports and dashboards; 150 automation steps per subscription per month; 2 GB storage; 100 emails per day; Atlassian Community support; 1 site",
+            "Standard $7.91 per user/month: everything in Free plus Rovo Search, Chat and Agents, user roles and permissions, external collaboration, multi-region data residency, 400 automation steps per user per month, 250 GB storage, 9/5 regional support, up to 100,000 users per site",
+            "Premium $14.54 per user/month: everything in Standard plus cross-team planning and dependency management, customizable approvals, customizable onboarding, 750 automation steps per user per month, unlimited storage, 24/7 support for critical issues, 99.9% uptime SLA",
+            "Enterprise contact sales, billed annually only: Atlassian Analytics and Data Lake, advanced admin controls and security, enterprise-grade identity and access management, 1,000 automation steps per user per month, up to 150 sites, 24/7 support for all issues, 99.95% uptime SLA",
+            "Annual billing stated as saving up to 17% versus monthly",
+            "Atlassian Guard Standard (SSO, SCIM, Active Directory Sync) requires a separate subscription on Free, Standard and Premium; included on Enterprise",
+            "Rovo credits per user per month: 25 on Free, 70 on Standard, 150 on Premium",
+            "Data Center is the separate self-managed offering for strict regulatory or security requirements"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Per-user figures are produced by the page's team size selector and change with headcount; the quoted rates are those shown at the page's default selection.",
+        "Enterprise pricing is only displayed after switching the page to annual billing and is otherwise contact sales; no Enterprise figure is quoted here."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Teams of up to 10 people who need real project tracking for nothing: the Free plan covers unlimited goals, projects, tasks and forms with board, timeline, calendar and backlog views",
+      "Growing teams on Standard at $7.91 per user/month — user roles and permissions, external collaboration, multi-region data residency, 250 GB storage and up to 100,000 users per site",
+      "Organisations coordinating several teams: Premium at $14.54 per user/month adds cross-project planning and dependency management, unlimited storage and a 99.9% uptime SLA"
+    ],
+    "skipIf": [
+      "Automation is central to your workflow — Free gives only 150 steps per subscription per month, and even Standard is capped at 400 steps per user per month",
+      "You need SSO, SCIM or Active Directory Sync below Enterprise: on Free, Standard and Premium those require a separate Atlassian Guard Standard subscription",
+      "You run more than one site — Free, Standard and Premium are single-site; multiple sites (up to 150) start at Enterprise, which is annual-only and quote-based"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Jira cost per user?",
+        "cevap": "Jira's Free plan is $0 forever for up to 10 users. Standard is listed at $7.91 per user/month and Premium at $14.54 per user/month; Atlassian states annual billing saves up to 17% against monthly. Enterprise is billed annually only and its price is shown after switching the page to annual billing, otherwise it is contact sales. The per-user figures move with the team size selector on the pricing page, so the exact rate depends on your headcount."
+      },
+      {
+        "soru": "What does the free Jira plan actually limit?",
+        "cevap": "The Free plan caps you at 10 users on a single site with 2 GB of file storage, 100 emails per day and 150 automation steps per subscription per month — not per user. It includes unlimited goals, work items, spaces and forms, customizable workflows, all the views (backlog, list, board, timeline, calendar, summary), reports and dashboards, and the iOS and Android apps. Support is Atlassian Community only, and there is no uptime SLA."
+      },
+      {
+        "soru": "What is the difference between Jira Premium and Enterprise?",
+        "cevap": "Premium adds cross-project planning and dependency management, capacity management, scenario modeling, customizable approvals, unlimited storage, 750 automation steps per user per month, 24/7 support for critical issues and a 99.9% uptime SLA. Enterprise adds cross-product insights with Atlassian Analytics and Data Lake, advanced admin controls, enterprise-grade identity and access management with Atlassian Guard Standard included, 1,000 automation steps per user per month, up to 150 sites, 24/7 support for all issues and a 99.95% SLA. Enterprise is billed annually only."
+      }
+    ]
   },
   {
     "slug": "zendesk",
