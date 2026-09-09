@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy',
     '/terms',
     '/methodology',
+    '/data',
     '/about',
     '/affiliate-disclosure',
     // Metodoloji sayfasindan link aliyor; sitemap disinda kalmasin.

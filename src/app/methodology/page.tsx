@@ -105,9 +105,13 @@ export default function MethodologyPage() {
             cheaper to write and simply untrue.
           </p>
           <p>
-            Software pricing changes often. We do not yet stamp each tool with the date its price was last
-            checked, so treat every figure as a starting point and confirm on the vendor&apos;s own page before
-            you buy.
+            Software pricing changes often, so every record now carries the URL its price came from and the
+            date an editor read it. Treat a figure as accurate as of that date and no later, and confirm on
+            the vendor&apos;s own page before you buy.
+          </p>
+          <p>
+            All of it — the sources, the dates and the records we could not verify — is published as a free
+            dataset under CC BY 4.0: see <Link href="/data">the open dataset</Link>.
           </p>
         </B>
 

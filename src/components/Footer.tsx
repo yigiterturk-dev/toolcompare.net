@@ -26,6 +26,7 @@ const LINKLER = [
   { href: "/top-picks", label: "Cheapest tools" },
   { href: "/compare", label: "Comparisons" },
   { href: "/methodology", label: "How we rank" },
+  { href: "/data", label: "Open dataset" },
   { href: "/about", label: "About" },
   { href: "/affiliate-disclosure", label: "Affiliate disclosure" },
   { href: "/terms", label: "Terms" },

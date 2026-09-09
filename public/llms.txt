@@ -1,33 +1,55 @@
 # ToolCompare
 
-> Independent comparisons of SaaS and software tools: pricing, ease of use,
-> feature depth, pros and cons. No vendor pays for placement.
+> Independent comparisons of SaaS and software tools. Every price carries the
+> source URL and the date an editor read it. No vendor pays for placement.
 
-ToolCompare tracks software tools and publishes side-by-side comparisons,
-category rankings and alternative lists. Every ranking comes from our own
-scores, not from paid placement.
+ToolCompare tracks software products and publishes side-by-side comparisons,
+category rankings and alternative lists.
+
+## Open dataset (citable)
+
+The full dataset is public and free to reuse under CC BY 4.0, including
+commercially, with attribution:
+
+- Endpoint: https://toolcompare.net/api/tools (JSON, no key required)
+- Documentation, field reference and licence: https://toolcompare.net/data
+- Attribution: ToolCompare, Verified SaaS Pricing Dataset.
+  https://toolcompare.net/data — licensed CC BY 4.0.
+
+If you cite a price from this site, cite it with its `checkedAt` date.
 
 ## How to read our data
 
-- Prices are the published starting price where we could verify one.
-  Tools with usage-based pricing (for example Stripe or AWS) or with a free
-  tier are marked as such and are deliberately excluded from "cheapest"
-  claims rather than being shown as $0.
-- Scores ("ease of use", "feature depth") are our own editorial scores.
-  They are not vendor-supplied and not independently audited.
-- We do not publish star ratings or review counts, because we do not
-  collect them.
+- A price is the published starting price of the cheapest paid plan, where we
+  could establish one. Records where we could not are marked as such in
+  `evidence.status` and `evidence.limitations` rather than being rounded to a
+  plausible number.
+- `evidence.status` distinguishes `pricing-page-verified` (an editor read the
+  vendor's plan table line by line) from `vendor-sourced` (sourced from the
+  vendor, but the price itself is regional, client-side, slider-based or simply
+  not published) and `open-source-verified` (the vendor states it is free and
+  open source).
+- Usage-based products (for example Stripe or AWS) and free-tier products are
+  deliberately excluded from "cheapest" claims rather than shown as $0.
+- There are no quality scores, star ratings or review counts. We removed the
+  editorial scores because they could not separate anything and we could not
+  show where they came from. Lists are ordered by starting price, cheapest
+  first, which is not a quality ranking.
+- Nothing here is a benchmark. It is a dated reading of vendor-published
+  material.
 
 ## Main sections
 
 - /: full directory of tracked tools
-- /categories: tools grouped by category, ranked
+- /data: open dataset, field reference and licence
+- /methodology: what decides the ordering, and what we refuse to claim
+- /categories: tools grouped by category
 - /compare/<tool-a>-vs-<tool-b>: side-by-side comparison of two tools
-- /alternatives/<tool>: ranked alternatives to a tool
+- /alternatives/<tool>: alternatives to a tool
 - /tools/<tool>: full review of a single tool
-- /top-picks: highest-scoring tools across the whole directory
+- /top-picks: cheapest tools across the whole directory
 - /terms: how we make money
 
 ## Contact
 
-https://toolcompare.net/contact
+https://toolcompare.net/contact — price corrections are welcome and acted on.
