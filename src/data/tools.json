@@ -12122,20 +12122,26 @@
     "verdict": "Powerful once your event tracking is in place. Without good events it is an expensive newsletter tool.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Customer.io — Pricing",
+          "label": "Customer.io — Pricing + Plans",
           "url": "https://customer.io/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Essentials starts at $100 per month billed monthly, priced for a number of profiles (people + objects)",
+            "Essentials includes AI Agent with core execution skills, visual workflow builder, email and community support, basic data integrations",
+            "Premium $1,000 per month billed yearly: everything in Essentials plus custom profile volume and email volume pricing, elevated Agent limits and custom skills, Daily Routines (scheduled tasks), premium chat and email support, 90-day onboarding support, HIPAA Compliance",
+            "Enterprise is contact-sales: best pricing on profile and email volume, priority technical support, dedicated hardware, audit logging and data governance, dedicated Customer Success Manager",
+            "Startup Program: 12 months free for companies that raised under $10M",
+            "Comparison table lists SSO and 2-factor authentication, US/EU data centers, SOC Tier II compliance; custom role-based permissions above standard"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Per-tier profile and volume allowances are shown by an interactive slider and are not quoted here."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -12149,6 +12155,26 @@
       {
         "title": "Multi-channel delivery",
         "description": "Reaches users by email, push, SMS and in-app messages."
+      }
+    ],
+    "bestFor": [
+      "Teams getting started with behaviour-triggered messaging: Essentials starts at $100 per month billed monthly, with a visual workflow builder and basic data integrations",
+      "Companies scaling across channels — Premium is $1,000 per month billed yearly and adds custom profile and email volume, Daily Routines and premium chat support",
+      "Early-stage companies: Customer.io's Startup Program gives 12 months free to companies that raised under $10M"
+    ],
+    "skipIf": [
+      "You need HIPAA compliance, custom role-based permissions or a data warehouse destination — those sit on Premium or Enterprise, not Essentials",
+      "Your audience grows fast: pricing is quoted per profile volume, so the bill tracks your contact count rather than your send count",
+      "You want dedicated hardware, audit logging or a named Customer Success Manager; that is Enterprise and Enterprise is contact-sales"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Customer.io cost?",
+        "cevap": "Essentials starts at $100 per month billed monthly and is priced by the number of profiles (people plus objects), with a visual workflow builder, an AI Agent with core execution skills, basic data integrations, and email and community support. Premium is $1,000 per month billed yearly and moves profile and email volume to custom pricing while adding Daily Routines, elevated Agent limits, premium chat and email support, 90-day onboarding and HIPAA compliance. Enterprise is quote-only. Companies that raised under $10M can apply to the Startup Program for 12 months free."
+      },
+      {
+        "soru": "What do you actually give up on the Essentials plan?",
+        "cevap": "Essentials includes the visual workflow builder, the AI Agent with core execution skills and basic data integrations. Customer.io places custom profile and email volume pricing, elevated AI Agent limits with custom skills, Daily Routines (scheduled tasks), premium chat support, 90-day onboarding support and HIPAA compliance on Premium. Dedicated hardware, audit logging and data governance, custom role-based permissions, priority support and a dedicated Customer Success Manager are Enterprise items."
       }
     ]
   },
@@ -16725,21 +16751,26 @@
     "targetAudience": "Growing companies tired of doing onboarding in five systems.",
     "verdict": "The consolidation is real and valuable. Model the module costs before signing.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
           "label": "Rippling — Pricing",
           "url": "https://www.rippling.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "No plan table and no published price; the page is a 'Request a free Rippling quote' form",
+            "Stated basis: 'Tell us what services you need, and we'll send you a custom quote' — modular, quoted per selected services",
+            "Quote form fields: work email, full name, company name, country, phone number, and number of employees + contractors",
+            "Headcount bands offered: 1-10, 11-50, 51-250, 251-1000, 1001+",
+            "Platform capabilities listed: AI queries across all your data, custom dashboards and reports across every system, workflow automation across systems, custom apps for your business processes"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price or plan structure is quoted because the vendor publishes neither; the page is a quote request form."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -16753,6 +16784,22 @@
       {
         "title": "Device management",
         "description": "Ships, enrols and locks company laptops from the same console."
+      }
+    ],
+    "bestFor": [
+      "Companies that want HR, payroll, IT device management and app provisioning on one employee record — hiring provisions accounts and a laptop from the same action",
+      "Buyers who want to pick modules rather than a suite: Rippling's pricing page asks which services you need and quotes on that basis",
+      "Teams past the small-company stage — the quote form's headcount bands run 1-10, 11-50, 51-250, 251-1000 and 1001+"
+    ],
+    "skipIf": [
+      "You need a published price to shortlist vendors: Rippling publishes none, and the pricing page is a quote request form, not a plan table",
+      "You want to compare before talking to sales — the form asks for a work email, company name, headcount and phone number before you see a figure",
+      "Consolidation worries you: one record driving payroll, apps and devices means replacing a single module later means unpicking it from the rest"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Rippling cost?",
+        "cevap": "Rippling does not publish prices. Its pricing page is a quote request form: you tell Rippling which services you need and it sends a custom quote. The form asks for a work email, full name, company name, country, phone number and a headcount band (1-10, 11-50, 51-250, 251-1000 or 1001+). Because the product is modular and priced by the services you select, there is no single list price to compare — the figure depends on which modules you take and how many employees and contractors you have."
       }
     ]
   },
@@ -43013,6 +43060,43 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
+    },
+    "bestFor": [
+      "Mid-size companies that want HR software staff will actually open — HiBob's pitch is culture, engagement and interface over enterprise depth",
+      "Organisations with flexible or non-hierarchical org structures rather than a single rigid reporting tree",
+      "Buyers who are comfortable with a sales-led process: HiBob's pricing page is a demo request, so scoping happens in conversation"
+    ],
+    "skipIf": [
+      "You need a published price to build a shortlist: HiBob does not publish one and the pricing page shows a demo form, not a plan table",
+      "You want payroll run natively in every country you operate in — HiBob leans on partners for payroll in many markets",
+      "You need the depth of a full enterprise HR suite; the trade-off for the lighter interface is fewer deep configuration options"
+    ],
+    "sss": [
+      {
+        "soru": "Does HiBob publish pricing?",
+        "cevap": "No. HiBob's pricing page is a demo request form asking for a business email, full name and country rather than a plan table with figures. Pricing is quote-based and scoped in conversation with sales, so the figure depends on headcount and which modules you take. If you need a published list price to build a shortlist before talking to a vendor, HiBob will not give you one."
+      }
+    ],
+    "evidence": {
+      "status": "vendor-sourced",
+      "sources": [
+        {
+          "label": "HiBob — Pricing",
+          "url": "https://www.hibob.com/pricing/",
+          "supports": [
+            "No plan table and no published price; the page renders a 'Get a free demo' request form",
+            "Form fields: business email, full name, country",
+            "Pricing is therefore quote-based and scoped through sales"
+          ],
+          "checkedAt": "2026-09-09"
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No price or plan structure is quoted because the vendor publishes neither; the page is a demo request form.",
+        "Product capability statements come from the existing ToolCompare catalogue record, not from this page."
+      ],
+      "reviewedAt": "2026-09-09"
     }
   },
   {
