@@ -14234,50 +14234,90 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Proton Mail is an encrypted email service based in Switzerland, built so that the provider cannot read message contents. End-to-end encryption and Swiss jurisdiction are the reasons to choose it, and both are real rather than marketing. The consequence is that server-side features other providers take for granted — full-text search on the server, easy third-party client access — work differently or need a bridge.",
+    "longDescription": "Proton Mail is an encrypted email service funded entirely by subscriptions, with zero-access encryption meaning the provider cannot read stored mail on any plan. The free tier is deliberately narrow — one gigabyte of storage and a single address — while Mail Plus widens storage, addresses and aliases, and Proton Unlimited bundles the rest of the Proton suite: VPN, password manager and encrypted cloud storage. The plan structure is clear on the vendor's page even though the prices themselves render client-side, so the limits below are recorded without the figures.",
     "pros": [
-      "End-to-end encryption by default between Proton users",
-      "Swiss jurisdiction and a clear privacy stance",
-      "Free tier available"
+      "Zero-access encryption on every plan including free",
+      "Unlimited hide-my-email aliases on the top tier",
+      "30-day money-back guarantee"
     ],
     "cons": [
-      "Encryption breaks the usual IMAP workflow",
-      "Search inside encrypted mail is limited",
-      "Costs more than mainstream mail providers"
+      "Free tier is 1 GB and one address",
+      "Attachments capped at 25 MB",
+      "Custom domains and IMAP access are paid features"
     ],
-    "targetAudience": "People and teams for whom mail confidentiality is a requirement rather than a preference.",
-    "verdict": "Buy it for the threat model, not the features. If privacy is not your reason, a mainstream provider is more convenient.",
+    "targetAudience": "Privacy-focused individuals who want encrypted mail without self-hosting.",
+    "verdict": "The free tier is a demonstration rather than a daily driver. Mail Plus is the real individual plan; Unlimited only pays off if you want the VPN and password manager too.",
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
+      "status": "vendor-sourced",
       "sources": [
         {
           "label": "Proton Mail — Pricing",
           "url": "https://proton.me/mail/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Proton Free: 1 GB storage, 1 encrypted email address",
+            "Mail Plus: 15 GB storage, 10 encrypted email addresses, support for 1 custom email domain, 10 hide-my-email aliases, priority customer support",
+            "Proton Unlimited: 500 GB storage, 1 user, 15 extra email addresses, support for 3 custom email domains, unlimited folders and labels, unlimited hide-my-email aliases, dedicated customer support, Proton VPN, encrypted password manager, encrypted cloud storage for photos and documents, advanced account protection",
+            "Messages per day are unlimited and attachments are capped at 25 MB",
+            "30-day money-back guarantee; prices can be shown in CHF, EUR or USD, billed monthly or over 12 months",
+            "Personal, Family and Business plan groups are offered separately",
+            "The Proton Scribe writing assistant is an add-on with a free trial",
+            "Paid features listed in the comparison include password-protected emails, short @pm.me addresses, contact groups, IMAP/SMTP client support, auto-reply, catch-all email, automatic forwarding and scheduled or snoozed sending",
+            "The vendor states Proton Mail is funded entirely by paying subscribers and that it never has access to user data on any plan"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date, but the plan prices render client-side — the page served placeholder values rather than figures, so no price is recorded here and only the published plan limits are.",
+        "The Family and Business plan groups were not read; these limits cover the Personal plans."
+      ],
+      "reviewedAt": "2026-09-10"
     },
     "keyFeatures": [
       {
-        "title": "End-to-end encryption",
-        "description": "Encrypts messages so the provider cannot read stored content."
+        "title": "Zero-access encryption",
+        "description": "Stored mail is encrypted so the provider cannot read it, on every plan."
       },
       {
-        "title": "Swiss jurisdiction",
-        "description": "Stores data under Swiss privacy law rather than US or EU rules."
+        "title": "Hide-my-email aliases",
+        "description": "Disposable addresses; 10 on Mail Plus and unlimited on Unlimited."
       },
       {
-        "title": "Custom domains",
-        "description": "Runs business mail on your own domain with multiple addresses."
+        "title": "Bundled Proton suite",
+        "description": "VPN, password manager and encrypted cloud storage included with Unlimited."
       }
-    ]
+    ],
+    "bestFor": [
+      "Trying encrypted mail at no cost: the free tier gives 1 GB and one address with the same zero-access encryption",
+      "Individuals wanting a custom domain and aliases, which is Mail Plus with 15 GB and 10 aliases",
+      "People who also want a VPN, password manager and encrypted cloud storage, all bundled into Proton Unlimited with 500 GB",
+      "Buyers who want an exit: a 30-day money-back guarantee applies"
+    ],
+    "skipIf": [
+      "You need real mailbox space on the free plan — it is 1 GB with a single address",
+      "You use a desktop mail client: IMAP and SMTP support is a paid feature",
+      "You send large files, since attachments are capped at 25 MB",
+      "You need a firm price before signing up; the vendor's pricing page renders its figures client-side"
+    ],
+    "sss": [
+      {
+        "soru": "What does the Proton Mail free plan include?",
+        "cevap": "1 GB of storage and one encrypted email address, with the same zero-access encryption as the paid plans and unlimited messages per day."
+      },
+      {
+        "soru": "What is the difference between Mail Plus and Proton Unlimited?",
+        "cevap": "Mail Plus gives 15 GB, 10 addresses, 1 custom domain and 10 aliases. Proton Unlimited gives 500 GB, 15 extra addresses, 3 custom domains, unlimited aliases, and adds Proton VPN, the password manager and encrypted cloud storage."
+      },
+      {
+        "soru": "Does Proton Mail support IMAP?",
+        "cevap": "Email client support via IMAP and SMTP is listed as a paid feature, not part of the free plan."
+      },
+      {
+        "soru": "How much does Proton Mail cost?",
+        "cevap": "The vendor's pricing page renders its figures client-side and served placeholder values when this record was checked, so no price is published here. A 30-day money-back guarantee applies, and prices are offered in CHF, EUR and USD."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "basecamp",
@@ -18015,7 +18055,7 @@
     "shortDescription": "Enterprise CRM platform.",
     "websiteUrl": "https://www.salesforce.com",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 25,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -18023,50 +18063,93 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Salesforce is the enterprise CRM standard, extensible to almost anything through configuration, its own platform and a large partner ecosystem. Almost any process can be modelled in it, and that is exactly why implementations get expensive: the platform will let you build something nobody can maintain. It earns its place where the process genuinely is complex and an admin owns it.",
+    "longDescription": "Salesforce Sales Cloud is the reference CRM, and its edition ladder spans a twenty-two-fold price range for what is nominally the same product. The two cheapest editions are the Starter and Pro suites, sold as small-business bundles covering sales, service, marketing and commerce; from Core upward the price reflects platform capability rather than extra apps, bringing Slack, Tableau and the Agentforce AI agents into the licence. The AI allowance is itself metered, published as Flex Credits per organisation per year, and the vendor states explicitly that the page is informational and that detailed pricing comes from a sales representative.",
     "pros": [
-      "Can model almost any sales process",
-      "Vast ecosystem of apps and consultants",
-      "Reporting depth others cannot match"
+      "Published per-user prices across five editions",
+      "AI usage allowance stated as Flex Credits per org",
+      "Starter and Pro suites bundle service, marketing and commerce"
     ],
     "cons": [
-      "Expensive once you add the tiers you actually need",
-      "Implementation usually requires outside help",
-      "Complexity slows small teams down"
+      "Top edition is 22 times the entry price",
+      "Vendor states the page is informational only",
+      "Pro Suite and above are annual billing"
     ],
-    "targetAudience": "Larger sales organisations with dedicated operations staff.",
-    "verdict": "Powerful and heavy. Below roughly twenty salespeople, lighter tools usually win on total cost.",
+    "targetAudience": "Sales organisations that need a CRM their whole company can standardise on.",
+    "verdict": "Pick the edition by platform needs, not feature lists — the jump from Pro to Core is where you start paying for Slack, Tableau and AI agents. Treat every figure as a starting point for a sales conversation.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Salesforce — Pricing",
-          "url": "https://www.salesforce.com/sales/pricing/?bc=DB",
-          "checkedAt": "2026-08-31",
+          "label": "Salesforce — Sales Cloud editions and pricing",
+          "url": "https://www.salesforce.com/editions-pricing/sales-cloud/",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter Suite $25 USD per user per month, billed monthly or annually: lead, account, contact and opportunity management, built-in sales flows and lead routing, AI email, event and contact sync, dynamic email marketing and analytics",
+            "Pro Suite $100 USD per user per month, billed annually: everything in Starter plus greater customisation and automation, sales quoting and forecasting, access to AgentExchange, Premier Support as an add-on",
+            "Core $195 USD per user per month: everything in Professional Edition plus Momentum and Premier Success, Slack Business+ and Tableau Next",
+            "Advanced $395 USD per user per month: everything in Core plus enhanced security, more AI and expanded data capacity, Sales Programs, Backup & Recover, Archive, Data Detect and Security Center",
+            "Max $550 USD per user per month: everything in Advanced plus the full AI suite, Agentforce for Sales and Agentforce Coworker, Salesforce Spiff, Sales Planning, Sales Programs, Salesforce Maps, Tableau Next and Slack Enterprise+, and 2.75M Flex Credits per org per year",
+            "A Free Suite at $0 per user per month is listed in the edition comparison table",
+            "Flex Credits are allocated per org per year: 500K, 1M, 2.5M and 2.75M across the higher editions",
+            "Data storage differs by edition: 10GB per org, 10GB per org plus 20MB per user, and 1GB per user",
+            "The vendor states the page is provided for information purposes only and subject to change, that AI can be added to Core and above, and that detailed pricing requires contacting a sales representative",
+            "Prices are also published in EUR, AUD, JPY, GBP and SEK"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The vendor labels the pricing page informational and subject to change, directing buyers to a sales representative for detailed pricing.",
+        "Sales Cloud is one of several Salesforce clouds; these figures cover Sales Cloud editions only."
+      ],
+      "reviewedAt": "2026-09-10"
     },
     "keyFeatures": [
       {
-        "title": "Configurable objects",
-        "description": "Models custom records, fields and relationships without code."
+        "title": "Lead and opportunity management",
+        "description": "Accounts, contacts, leads and opportunities with built-in flows and routing."
       },
       {
-        "title": "Automation and flows",
-        "description": "Builds approval and process automation declaratively."
+        "title": "Agentforce AI",
+        "description": "AI agents for prospecting, pipeline and sales email, metered in Flex Credits."
       },
       {
-        "title": "AppExchange ecosystem",
-        "description": "Extends the platform through a large partner marketplace."
+        "title": "Forecasting and quoting",
+        "description": "Sales quoting and forecasting from Pro Suite, predictive forecasting higher up."
       }
-    ]
+    ],
+    "fiyatModeli": "kullanici-basina",
+    "bestFor": [
+      "Small teams wanting a bundled suite: Starter Suite is $25 per user per month and includes service, marketing and commerce alongside sales",
+      "Growing businesses needing quoting and forecasting, which begin on Pro Suite at $100 per user per month billed annually",
+      "Companies standardising on Slack and Tableau, since both enter the licence at Core, $195 per user per month",
+      "Organisations committing to AI agents, where Max at $550 per user per month carries the full Agentforce suite and 2.75M Flex Credits a year"
+    ],
+    "skipIf": [
+      "You are comparing on the $25 headline: the same product line runs to $550 per user per month, a twenty-two-fold spread",
+      "You want a firm quote from the website — the vendor states the page is informational and routes you to a sales representative",
+      "You need AI on a cheap edition; the vendor states AI can be added to Core and above",
+      "You are storing a lot per user: the lower editions allocate 10GB per org rather than per user"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Salesforce Sales Cloud cost?",
+        "cevap": "Starter Suite is $25 per user per month, Pro Suite $100 billed annually, Core $195, Advanced $395 and Max $550. A Free Suite at $0 is also listed in the comparison table."
+      },
+      {
+        "soru": "What is the difference between Salesforce Starter and Core?",
+        "cevap": "Starter Suite at $25 covers core CRM plus bundled service, marketing and commerce. Core at $195 adds Slack Business+, Tableau Next, Momentum, Premier Success and the platform capability that AI can be added to."
+      },
+      {
+        "soru": "Are Salesforce Flex Credits included?",
+        "cevap": "Yes, as a yearly allowance per organisation: 500K, 1M, 2.5M and 2.75M Flex Credits across the higher editions. AI usage draws on that allowance."
+      },
+      {
+        "soru": "Is Salesforce pricing on the website final?",
+        "cevap": "No. The vendor states the pricing page is for information purposes only and subject to change, and that detailed pricing requires contacting a sales representative."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "zoho-crm",
@@ -23125,7 +23208,7 @@
     "shortDescription": "Roadmaps and product strategy.",
     "websiteUrl": "https://www.aha.io",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 59,
     "isFlat": true,
     "kriterler": {
       "api": true,
@@ -23133,50 +23216,91 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Aha! covers product strategy, roadmapping and release planning, with goals linked to features. Goals sit above features, so the roadmap can be defended in strategy terms rather than as a list of tickets. That formality is heavy for a small team that just needs to know what ships next. Larger organisations buy it precisely for that discipline.",
+    "longDescription": "Aha! is sold as a family of separate products rather than a single tiered tool, which changes how you read its price. Aha! Roadmaps is the flagship at fifty-nine dollars a user a month and bundles the Essentials level of the Ideas, Whiteboards and Knowledge products with it; the other products — agile delivery, project management, research, the AI app builder — are licensed and priced on their own. Upgrades within a bundled product are add-ons: Ideas Advanced, for example, costs twenty dollars a user a month on an annual plan and twenty-five on a monthly one.",
     "pros": [
-      "Strategy and roadmap connected explicitly",
-      "Strong presentation and reporting",
-      "Idea portals for customer input"
+      "Roadmaps bundles Ideas, Whiteboards and Knowledge Essentials",
+      "Add-on upgrade prices are published, not quoted",
+      "Free trial needs no credit card and support is non-sales"
     ],
     "cons": [
-      "Expensive per product manager",
-      "More process than small teams want",
-      "Setup takes real time"
+      "Each product is licensed separately",
+      "Bundled products are only at Essentials level",
+      "Per-product prices are spread across a details page"
     ],
-    "targetAudience": "Product organisations that must present strategy to executives.",
-    "verdict": "Strong when roadmaps are a communication tool for leadership. Small teams need much less.",
+    "targetAudience": "Product managers and product teams running roadmaps, ideas and specs together.",
+    "verdict": "Price this per product, not per seat-tier. Roadmaps at $59 is the anchor; everything else you assume is included is bundled only at Essentials level.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Aha! — Pricing",
           "url": "https://www.aha.io/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Aha! Roadmaps starts at $59 per user per month and includes everything in the Aha! Ideas Essentials plan, plus Whiteboards Essentials and Knowledge Essentials",
+            "Ideas Advanced can be added to any annual plan for $20 per user per month, or to any monthly plan for $25 per user per month; the Startup pack is exempt",
+            "Roadmaps Essentials covers scorecard prioritisation, release plans and dependencies, shareable roadmaps, an AI assistant and integrations with Jira, Azure DevOps and 40+ other tools",
+            "Ideas Essentials covers branded idea portals, portal access control, unlimited portal users, idea visibility, scoring and prioritisation, automatic status updates and promoting ideas to features",
+            "Whiteboards Essentials covers unlimited whiteboards, nearly 100 templates, drawing tools, diagrams, unlimited guests and real-time collaboration",
+            "Knowledge Essentials covers unlimited documents, an AI drafting assistant, 100+ templates, co-creation, version history and to-dos",
+            "Separate products are offered for agile delivery, project management, research interviews, knowledge bases and an AI app builder, each with its own price",
+            "Free trials give access to all features of the selected product and require no credit card",
+            "The vendor states its Customer Success team handles questions rather than salespeople"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Only the Aha! Roadmaps starting price and the Ideas Advanced add-on price could be attributed to a named product from the page source; the other products' individual prices are behind a pricing details page that was not read."
+      ],
+      "reviewedAt": "2026-09-10"
     },
     "keyFeatures": [
       {
-        "title": "Goal-linked roadmaps",
-        "description": "Connects features to strategic goals and initiatives."
+        "title": "Roadmaps",
+        "description": "Strategy, scorecard prioritisation, release plans and shareable roadmaps."
       },
       {
-        "title": "Release planning",
-        "description": "Schedules features into releases with dependencies."
+        "title": "Ideas portals",
+        "description": "Branded idea portals with unlimited portal users, scoring and status updates."
       },
       {
-        "title": "Idea portals",
-        "description": "Collects and votes on requests from customers and staff."
+        "title": "Whiteboards and Knowledge",
+        "description": "Unlimited whiteboards and documents with templates and an AI assistant."
       }
-    ]
+    ],
+    "fiyatModeli": "kullanici-basina",
+    "bestFor": [
+      "Product teams wanting one purchase to cover roadmaps, ideas, whiteboards and docs at Essentials level — $59 per user per month",
+      "Teams running a customer-facing idea portal, since portal users are unlimited on Ideas Essentials",
+      "Buyers who want to upgrade one piece rather than the whole suite: Ideas Advanced is $20 per user per month annually",
+      "Cautious evaluators, since trials cover all features of the chosen product with no credit card"
+    ],
+    "skipIf": [
+      "You expect the full Ideas, Whiteboards or Knowledge products: Roadmaps bundles only their Essentials level",
+      "You need agile delivery, project management or research, which are separately licensed products",
+      "You want every product's price in one place — the page publishes a starting figure and routes detail elsewhere",
+      "You are on a monthly plan and adding Ideas Advanced, which costs $25 per user per month against $20 annually"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Aha! cost?",
+        "cevap": "Aha! Roadmaps starts at $59 per user per month and includes Ideas, Whiteboards and Knowledge at Essentials level. Other Aha! products are licensed and priced separately."
+      },
+      {
+        "soru": "What does Aha! Roadmaps include?",
+        "cevap": "Roadmaps Essentials — scorecard prioritisation, release plans, shareable roadmaps, an AI assistant and 40+ integrations — plus the Essentials level of Aha! Ideas, Whiteboards and Knowledge."
+      },
+      {
+        "soru": "How much is the Aha! Ideas Advanced upgrade?",
+        "cevap": "$20 per user per month added to an annual plan, or $25 per user per month on a monthly plan. The Startup pack is exempt from this add-on."
+      },
+      {
+        "soru": "Does Aha! offer a free trial?",
+        "cevap": "Yes. Trials give full access to the features of the product you select and require no credit card."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "plane",
@@ -41662,37 +41786,46 @@
     "shortDescription": "Open-source project management software.",
     "websiteUrl": "https://www.openproject.org",
     "incelendi": true,
-    "basePrice": 0,
+    "basePrice": 5.95,
     "isFlat": true,
-    "longDescription": "OpenProject is open-source project management with Gantt charts, agile boards and time tracking, self-hostable or cloud. Self-hosting puts roadmaps, requirements and time data inside your own network, which is often a hard requirement in public sector and regulated work. The cost is that you run the upgrades and the database.",
+    "longDescription": "OpenProject is open-source project management with a free Community edition you can self-host, and paid Enterprise tiers that add feature add-ons and, crucially, a support level with published service hours. The detail that decides the real cost is not the per-user price but the minimum user count attached to each tier: the cheapest paid plan bills for at least twenty-five users whatever the size of your team, so a six-person group pays the same as a twenty-five-person one. Support hours widen tier by tier, and the Corporate tier adds a named engineer and onboarding.",
     "pros": [
-      "Classic project management and agile in one tool",
-      "Self-hostable with no per-seat licence",
-      "Gantt and baseline features included"
+      "Community edition is free with no minimum users",
+      "Support hours and channels are published per tier",
+      "Self-hosted and cloud both offered, with 14-day trials"
     ],
     "cons": [
-      "Enterprise features are behind the paid edition",
-      "Self-hosting is real maintenance",
-      "Interface is functional rather than fast"
+      "Paid tiers carry 25, 100 and 250 user minimums",
+      "Per-user price billed in increments of five users",
+      "Corporate tier is quote-only"
     ],
-    "targetAudience": "Organisations needing formal project planning without commercial licensing.",
-    "verdict": "The most complete open-source option for traditional project management.",
+    "targetAudience": "Organisations wanting self-hostable project management with a support contract.",
+    "verdict": "The free edition is the real product for small teams. Paid tiers only make sense once you actually have the minimum headcount — below it you are buying seats you do not use.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "OpenProject — Pricing",
           "url": "https://www.openproject.org/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Community: free, no minimum users, Community features and community support via tickets, forum and user guides",
+            "Basic €5.95 per user per month with a 25 user minimum: Basic Enterprise add-ons and Basic support with email, Mon-Fri 9:30-16:00 CET",
+            "Professional €10.95 per user per month with a 25 user minimum: Professional Enterprise add-ons and Professional support adding phone, Mon-Fri 9:30-17:00 CET",
+            "Premium €15.95 per user per month with a 100 user minimum: Premium Enterprise add-ons and Premium support adding remote hands plus installation and upgrade assistance, Mon-Fri 9:30-17:30 CET",
+            "Corporate on request with a 250 user minimum: Corporate Enterprise add-ons, OpenID Connect for Nextcloud Hub and openDesk integration, custom plugin support, a dedicated support engineer, training material, onboarding training and a dedicated onboarding manager for 3 hours, Mon-Fri 9:00-18:00 CET",
+            "OpenProject BIM is an add-on at +€1.00 per user for construction teams",
+            "Users are selected in increments of 5",
+            "A 14-day free trial of the Enterprise cloud, or a 14-day trial licence key to upgrade a self-hosted Community installation, is offered without cancellation requirements",
+            "Prices are shown in EU/€ or US/$"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Prices were read from the EU/€ view of the pricing page; a US/$ toggle exists and was not read."
+      ],
+      "reviewedAt": "2026-09-10"
     },
     "kriterler": {
       "api": true,
@@ -41706,18 +41839,50 @@
     },
     "keyFeatures": [
       {
-        "title": "Gantt and agile boards",
-        "description": "Supports classic scheduling and board-based work in one project."
+        "title": "Community edition",
+        "description": "Full open-source project management, self-hosted, free and with no user minimum."
       },
       {
-        "title": "Self-hosted deployment",
-        "description": "Runs entirely on your infrastructure with an open-source core."
+        "title": "Enterprise add-ons",
+        "description": "Tiered feature add-ons layered on the Community base."
       },
       {
-        "title": "Time and cost tracking",
-        "description": "Records effort and budget against work packages."
+        "title": "Published support levels",
+        "description": "Email, phone, remote hands and a dedicated engineer by tier, with stated hours."
       }
-    ]
+    ],
+    "fiyatModeli": "kullanici-basina",
+    "bestFor": [
+      "Small teams and self-hosters: the Community edition is free with no user minimum at all",
+      "Organisations of 25 or more needing a support contract — Basic is €5.95 per user per month with email support",
+      "Teams needing phone support, which begins on Professional at €10.95 per user per month",
+      "Construction teams, since the BIM module is a published add-on at +€1.00 per user"
+    ],
+    "skipIf": [
+      "Your team is under 25 people: the cheapest paid tier still bills a 25-user minimum",
+      "You need installation and upgrade assistance, which starts on Premium with a 100 user minimum",
+      "You want support outside European business hours; every tier publishes Mon-Fri CET windows",
+      "You need openDesk or Nextcloud Hub single sign-on, which are Corporate with a 250 user minimum and a quote"
+    ],
+    "sss": [
+      {
+        "soru": "How much does OpenProject cost?",
+        "cevap": "The Community edition is free. Basic is €5.95 per user per month, Professional €10.95 and Premium €15.95, with Corporate on request. Minimums are 25, 25, 100 and 250 users respectively."
+      },
+      {
+        "soru": "Is OpenProject free?",
+        "cevap": "Yes, the Community edition is free open-source software with no minimum user count, self-hosted. Paid Enterprise tiers add feature add-ons and a support contract."
+      },
+      {
+        "soru": "Does OpenProject have a minimum number of users?",
+        "cevap": "Community has none. Basic and Professional require 25 users, Premium 100 and Corporate 250, and users are selected in increments of five."
+      },
+      {
+        "soru": "What support does OpenProject include?",
+        "cevap": "Community support via forum and tickets on the free edition; email support Mon-Fri 9:30-16:00 CET on Basic, phone support on Professional, remote hands plus install and upgrade help on Premium, and a dedicated engineer with onboarding on Corporate."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "freedcamp",
@@ -42637,37 +42802,43 @@
     "shortDescription": "Email marketing platform.",
     "websiteUrl": "https://www.getresponse.com/",
     "incelendi": true,
-    "basePrice": 0,
-    "isFlat": true,
-    "longDescription": "GetResponse combines email marketing with landing pages, automation and webinar hosting. Bundling webinars with email is unusual and genuinely useful for course and coaching businesses that would otherwise pay two vendors. Each individual piece is a step behind the specialists, which is the cost of the bundle.",
+    "basePrice": 19,
+    "isFlat": false,
+    "longDescription": "GetResponse is an email marketing platform that has grown into course selling, webinars and a website builder, and its plans separate on automation depth rather than send volume — every paid tier advertises unlimited monthly email sends. The Starter plan includes exactly one custom automation workflow, which is the feature most buyers are actually shopping for; unlimited workflows, segmentation and abandoned-cart recovery begin on Marketer at three times the price. Prices also move with list size through a contact selector, so the published figures are the floor for the smallest list rather than a flat rate.",
     "pros": [
-      "Webinars included, which rivals charge extra for",
-      "Automation builder is capable",
-      "Landing pages built in"
+      "Unlimited monthly email sends on every paid plan",
+      "Course creator, webinars and website builder on the Creator tier",
+      "14-day trial with no credit card"
     ],
     "cons": [
-      "Interface tries to do a lot at once",
-      "Deliverability is mid-pack",
-      "List-size pricing"
+      "Starter allows only one automation workflow",
+      "Prices scale with contact list size",
+      "Enterprise features like SSO and dedicated IP are quote-only"
     ],
-    "targetAudience": "Small businesses that run webinars alongside email marketing.",
-    "verdict": "The webinar inclusion is the differentiator. Pure email senders have better options.",
+    "targetAudience": "Small businesses and creators running email marketing plus paid content.",
+    "verdict": "Starter is only enough if you genuinely need one automation. Most buyers land on Marketer, so compare against that price, not the headline.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "GetResponse — Pricing",
           "url": "https://www.getresponse.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "14-day free trial, no credit card required; yearly billing advertised at -18%",
+            "Starter $19/month monthly, or $15.58/month paid annually saving up to $41 a year: unlimited monthly email sends, AI content generators, welcome email series, 1 custom automation workflow, landing page builder, signup forms and popups, free custom domain on the yearly plan",
+            "Marketer $59/month monthly, or $48.38/month paid annually saving up to $127 a year: adds unlimited automation workflows, advanced audience segmentation, abandoned cart recovery, sales funnels, promo codes and revenue reports, unlimited web push notifications",
+            "Creator $69/month monthly, or $56.58/month paid annually saving up to $149 a year: adds webinars, website builder, course creator for up to 500 students and premium newsletter subscriptions",
+            "Enterprise is custom pricing, adding student management, a dedicated sending domain, a dedicated IP address, premium priority support and single sign-on",
+            "The pricing page includes a contact-count selector, so plan prices vary with list size"
+          ],
+          "checkedAt": "2026-09-10"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The contact-count selector renders client-side; the recorded prices correspond to the default list size shown on page load and rise with larger lists."
+      ],
+      "reviewedAt": "2026-09-10"
     },
     "kriterler": {
       "api": true,
@@ -42681,18 +42852,50 @@
     },
     "keyFeatures": [
       {
-        "title": "Email campaigns and autoresponders",
-        "description": "Runs broadcasts and scheduled sequences from one list."
+        "title": "Email marketing",
+        "description": "Unlimited monthly sends with AI content generation and welcome series."
       },
       {
-        "title": "Webinar hosting",
-        "description": "Runs live and on-demand webinars tied to the contact list."
+        "title": "Automation workflows",
+        "description": "One custom workflow on Starter, unlimited from Marketer upward."
       },
       {
-        "title": "Landing pages and funnels",
-        "description": "Builds capture pages and conversion flows in the same account."
+        "title": "Content monetisation",
+        "description": "Course creator, premium newsletters and webinars on the Creator plan."
       }
-    ]
+    ],
+    "fiyatModeli": "abonelik",
+    "bestFor": [
+      "Starting a list cheaply: Starter is $15.58 a month paid annually with unlimited monthly sends",
+      "Marketers needing real automation — unlimited workflows, segmentation and abandoned-cart recovery start on Marketer at $48.38 a month annually",
+      "Creators selling courses or premium newsletters, which is the Creator plan at $56.58 a month annually including up to 500 students",
+      "Anyone testing first, since the trial needs no credit card"
+    ],
+    "skipIf": [
+      "You need more than one automation workflow on Starter — that is its single hardest limit",
+      "You have a large contact list: published prices are for the default list size and rise with the contact selector",
+      "You need SSO, a dedicated IP or a dedicated sending domain, which are Enterprise and quote-only",
+      "You teach more than 500 students on Creator, where student management moves to Enterprise"
+    ],
+    "sss": [
+      {
+        "soru": "How much does GetResponse cost?",
+        "cevap": "Starter is $19 a month, or $15.58 paid annually; Marketer $59 or $48.38; Creator $69 or $56.58. Enterprise is custom priced. Prices rise with contact list size."
+      },
+      {
+        "soru": "How many automations does GetResponse Starter include?",
+        "cevap": "One custom automation workflow. Unlimited workflows begin on the Marketer plan at $48.38 a month paid annually."
+      },
+      {
+        "soru": "Does GetResponse limit email sends?",
+        "cevap": "No. Every paid plan advertises unlimited monthly email sends; the plans differ on automation, segmentation and monetisation features instead."
+      },
+      {
+        "soru": "What does GetResponse Creator add?",
+        "cevap": "Webinars, a website builder, a course creator for up to 500 students and premium newsletter subscriptions, at $56.58 a month paid annually."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-10"
   },
   {
     "slug": "mailgun",
