@@ -26117,92 +26117,34 @@
     ],
     "targetAudience": "Organizations needing a customizable structured-content platform and able to fund ongoing PHP, Composer and Drupal engineering.",
     "bestFor": [
-      "Content-heavy sites with custom structures, permissions and publishing workflows",
-      "Teams that need a modular open-source foundation rather than a fixed hosted site builder",
-      "Organizations with owners for dependencies, hosting, backups and security updates"
+      "Publishers who need a CMS with no licence fee — Drupal is GPL v2 or later",
+      "Agencies that resell work: the project confirms selling Drupal, modules and themes is permitted",
+      "Teams that want the right to modify and redistribute the code they run"
     ],
     "skipIf": [
-      "You need a fully managed no-maintenance website subscription",
-      "The team cannot test core, module, theme and PHP compatibility before upgrades",
-      "A required contributed module is abandoned or incompatible with a supported core branch"
+      "You want to keep your modifications proprietary — GPL requires distributing under the same terms",
+      "You need vendor support included; the project charges nothing and provides no commercial SLA",
+      "You are costing a project on licence alone: the software is free, hosting and build are not"
     ],
     "verdict": "Choose Drupal when its structured-content and extension model justifies a maintained application platform; budget operations and upgrade engineering separately from the zero-dollar core license.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
-        {
-          "label": "Drupal Docs — System requirements",
-          "url": "https://www.drupal.org/docs/getting-started/system-requirements",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "web-server requirement",
-            "database requirement",
-            "PHP requirement",
-            "Composer requirement",
-            "browser support",
-            "production platform guidance"
-          ]
-        },
-        {
-          "label": "Drupal Docs — Composer requirements",
-          "url": "https://www.drupal.org/docs/getting-started/system-requirements/composer-requirements",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "Composer-managed installation and updates",
-            "version-specific Composer requirements",
-            "supported Composer versions",
-            "security rationale"
-          ]
-        },
-        {
-          "label": "Drupal Docs — Web-server requirements",
-          "url": "https://www.drupal.org/docs/getting-started/system-requirements/web-server-requirements",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "Apache and Nginx",
-            "PHP patching responsibility",
-            "file permissions",
-            "non-Apache security configuration",
-            "IIS support boundary"
-          ]
-        },
-        {
-          "label": "Drupal Docs — Updating core",
-          "url": "https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "supported major and minor branches",
-            "bug-fix and security-fix windows",
-            "Composer update process",
-            "dry-run option",
-            "maintenance workflow"
-          ]
-        },
-        {
-          "label": "Drupal Docs — JSON:API",
-          "url": "https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "core JSON:API module",
-            "entity resources",
-            "HTTP methods",
-            "authorization behavior"
-          ]
-        },
         {
           "label": "Drupal — Licensing",
           "url": "https://www.drupal.org/about/licensing",
-          "checkedAt": "2026-08-24",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "GPL licensing",
-            "open-source distribution",
-            "contributed code licensing"
+            "Released under the GNU General Public License, version 2 or later (GPL v2+)",
+            "\"You are free to download, reuse, modify, and distribute any files hosted in Drupal.org's Git repositories under the terms of either the GPL version 2 or version 3\"",
+            "Selling Drupal, a Drupal module or a Drupal theme is explicitly permitted, under GPL v2 or later",
+            "No fees are stated anywhere on the licensing page"
           ]
         }
       ],
       "limitations": [
-        "Official project documentation was reviewed; ToolCompare did not install Drupal, audit a module stack, test upgrades, benchmark hosting, verify accessibility or security, assess editor usability or calculate development and maintenance cost."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     }
   },
@@ -26670,103 +26612,35 @@
     ],
     "targetAudience": "Organizations building internal custom applications that can standardize on FileMaker clients, licensing and a governed hosting model.",
     "bestFor": [
-      "Business workflows needing a tailored data application rather than an off-the-shelf SaaS process",
-      "Teams choosing explicitly between managed Cloud simplicity and Server infrastructure control",
-      "Deployments whose users, apps, storage and API transfer fit the selected license"
+      "Small teams that meet the 5-user minimum: Starter is sold for 5-10 users only",
+      "Departments building several apps: Max allows 256 apps against Starter's 3",
+      "Teams that need storage headroom — 6 GB per user per year on Max versus 2 GB on Starter"
     ],
     "skipIf": [
-      "Required plug-ins must run in FileMaker Cloud",
-      "Expected app, storage or API-transfer usage exceeds the acceptable tier or purchase agreement",
-      "You need an open-source application stack without named-user licensing"
+      "You are a single user or a team of fewer than 5 — the cloud plans have a 5-user floor",
+      "You need to budget from a published figure: no price is shown on the pricing page",
+      "You expect more than 5 Claris Connect flows on the entry plan; that is the Starter cap"
     ],
     "verdict": "Choose FileMaker when faster custom-app delivery outweighs platform licensing and ecosystem dependence; price the actual users, hosting, apps, storage, API traffic, integrations and operations together.",
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "reviewedAt": "2026-09-09",
       "sources": [
-        {
-          "label": "Claris — FileMaker",
-          "url": "https://www.claris.com/filemaker/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "low-code custom apps",
-            "FileMaker Pro",
-            "FileMaker Cloud",
-            "FileMaker Server",
-            "FileMaker Go",
-            "WebDirect",
-            "access controls"
-          ]
-        },
         {
           "label": "Claris — Pricing",
           "url": "https://www.claris.com/pricing/",
-          "checkedAt": "2026-08-24",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "per-user annual billing",
-            "Cloud and Server choice",
-            "user ranges",
-            "hosted-app limits",
-            "storage limits",
-            "API transfer allowance",
-            "Connect flows",
-            "Studio web views"
-          ]
-        },
-        {
-          "label": "Claris — Hosting options",
-          "url": "https://www.claris.com/filemaker/hosting/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "Cloud versus Server versus third party",
-            "maintenance ownership",
-            "backup responsibility",
-            "plug-in support boundary",
-            "infrastructure cost",
-            "hosting selection"
-          ]
-        },
-        {
-          "label": "Claris Help — FileMaker Cloud introduction",
-          "url": "https://help.claris.com/en/cloud-help/content/introduction.html",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "Claris ID sign-on",
-            "Data API",
-            "OData",
-            "Admin API",
-            "REST architecture",
-            "Cloud administration"
-          ]
-        },
-        {
-          "label": "Claris Help — Server license settings",
-          "url": "https://help.claris.com/en/server-help/content/license-settings.html",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "license certificate",
-            "purchase agreement",
-            "client connection limits",
-            "license synchronization",
-            "trial conversion"
-          ]
-        },
-        {
-          "label": "Claris — FileMaker Server",
-          "url": "https://www.claris.com/filemaker/server/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "self-hosted deployment",
-            "macOS Windows and Linux",
-            "infrastructure control",
-            "OAuth and Active Directory",
-            "remote backup and standby add-ons",
-            "trial"
+            "Starter (formerly Essentials): 5-10 users only, 3 apps, 2 GB storage per user per year, 5 active Claris Connect flows",
+            "Max (formerly Standard): 5-99 users (100+ contact sales), 256 apps, 6 GB storage per user per year, 50 active Claris Connect flows",
+            "Both cloud plans billed per user, per month, billed annually",
+            "Single License available for individual FileMaker Pro use; 100+ licences via sales"
           ]
         }
       ],
       "limitations": [
-        "Vendor pricing, product pages and help documentation were reviewed; ToolCompare did not purchase licenses, build an app, test clients or APIs, measure transfer and performance, operate Server, validate Cloud controls or calculate implementation and migration cost."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Claris does not display price amounts or currency on the pricing page; every option routes to \"Buy now\" or sales, so no figure is recorded here."
       ]
     },
     "sss": [
