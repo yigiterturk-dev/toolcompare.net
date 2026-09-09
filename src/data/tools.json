@@ -401,21 +401,63 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Stripe — Pricing",
           "url": "https://stripe.com/pricing",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Standard pricing is pay-as-you-go with no setup fees, monthly fees or hidden fees: 2.9% + 30¢ per successful transaction for domestic cards",
+            "Surcharges: +0.5% for manually entered cards, +1.5% for international cards, +1% if currency conversion is required",
+            "In-person (Terminal) cards are 2.7% + 5¢ for domestic cards, +1.5% international, +$0.10 per authorization for Tap to Pay",
+            "ACH Direct Debit is 0.8% capped at $5.00; instant bank payments 2.6% + 30¢; Klarna 5.99% + 30¢; Pix and UPI 1.8% + 30¢",
+            "Stablecoin payments 0.8% per transaction as a promotional rate through January 1, 2027, then +0.2%",
+            "Disputes: $15.00 for each dispute received and $15.00 for each dispute countered manually — the countered fee is returned only for won disputes; Smart Disputes is 30% of the disputed amount for each dispute won",
+            "Instant Payouts cost 1.5% of volume with a 50¢ minimum; the standard payout schedule is free; instant currency conversion starts at 0.5%",
+            "Managed Payments (merchant of record) is 3.5% per transaction in addition to Payments fees",
+            "Billing is 0.7% of Billing volume pay-as-you-go, or a plan starting at $620.00 per month on a 1-year contract",
+            "Radar is $0.05 per screened transaction pay-as-you-go, or a plan starting at $10.00 per month",
+            "Custom domain for hosted payment pages is $10.00 per month; post-payment invoices 0.4% of the transaction total capped at $2.00 per invoice",
+            "Terminal readers are hardware purchases: $59.00 Reader M2, $299.00 S710 and S700, $329.00 T600"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Businesses that want no fixed cost: standard pricing has no setup, monthly or hidden fees — you pay 2.9% + 30¢ only on successful domestic card charges",
+      "Selling to one country in one currency, where the headline 2.9% + 30¢ is close to what you actually pay",
+      "Teams that would rather buy fraud screening and billing per use — Radar is $0.05 per screened transaction and Billing 0.7% of volume, with no minimum",
+      "In-person retail alongside online: Terminal is 2.7% + 5¢ for domestic cards, cheaper per transaction than the online rate"
+    ],
+    "skipIf": [
+      "You sell internationally: +1.5% for international cards and +1% for currency conversion turn 2.9% into 5.4% before any product fees",
+      "Your category attracts chargebacks — each dispute received is $15.00, countering costs another $15.00 that you only get back if you win, and Smart Disputes takes 30% of every dispute it wins",
+      "You want the platform bundled: Billing (0.7% of volume), Radar ($0.05 per screened transaction) and Managed Payments (3.5%) are added to the processing fee, not included",
+      "You need money early: standard payouts are free but Instant Payouts cost 1.5% of the amount with a 50¢ minimum"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Stripe charge per transaction?",
+        "cevap": "Standard pricing is 2.9% + 30¢ per successful domestic card transaction online, with no setup or monthly fee. In-person Terminal payments are 2.7% + 5¢, ACH Direct Debit is 0.8% capped at $5.00, and Klarna is 5.99% + 30¢."
+      },
+      {
+        "soru": "What does Stripe charge for international cards?",
+        "cevap": "An extra 1.5% for international cards, plus another 1% if currency conversion is required, on top of the 2.9% + 30¢ base rate. Manually entered card details add 0.5%."
+      },
+      {
+        "soru": "How much does a Stripe chargeback cost?",
+        "cevap": "$15.00 for each dispute you receive, and $15.00 for each dispute you counter manually — the countering fee is refunded only for disputes you win. Stripe's Smart Disputes service instead charges 30% of the disputed amount for each dispute it wins, and nothing for the ones it loses."
+      },
+      {
+        "soru": "Does Stripe Billing cost extra?",
+        "cevap": "Yes. Billing is 0.7% of Billing volume on pay-as-you-go, or a subscription starting at $620.00 per month on a one-year contract, and that is charged on top of the payment processing fee."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "figma",
@@ -5512,21 +5554,61 @@
     },
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Firebase — Pricing",
-          "url": "https://firebase.google.com/pricing?hl=pt-br",
-          "checkedAt": "2026-08-31",
+          "url": "https://firebase.google.com/pricing",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Two plans: Spark (no-cost, no payment method needed) and Blaze (pay as you go), with the Spark free quotas included on Blaze; eligible accounts get $300 in free credit",
+            "Firestore free daily quotas: 1 GiB stored, 10 GiB/month egress, 20K document writes/day, 50K reads/day, 20K deletes/day, then Google Cloud pricing",
+            "Cloud Functions: 2M invocations/month free then $0.40/million; 400K GB-seconds and 200K CPU-seconds free; 5 GB/month outbound then $0.12/GB; 120 build minutes/day then $0.003/min",
+            "Realtime Database: 100 simultaneous connections on Spark, 200K per database on Blaze; 1 GB stored free then $5/GB; ~10 GB/month download free then $1/GB",
+            "Hosting: 10 GB storage free then $0.026/GB; 360 MB/day transfer free then $0.15/GB",
+            "App Hosting outgoing bandwidth: 10 GiB/month free then $0.20/GiB uncached and $0.15/GiB cached; 5 GB storage free then $0.10/GB",
+            "Authentication is free up to 50K monthly active users (50 MAUs for SAML/OIDC), then Google Cloud Identity Platform pricing; phone auth is billed per SMS sent",
+            "Test Lab: virtual device tests $1/device/hour after 60 free minutes a day; physical device tests $5/device/hour after 30 free minutes a day",
+            "Remote Config: from September 1, 2026, 100,000 fetch requests per day per project are free, then $0.06 per 10K requests up to 10M/day and $0.01 per 10K beyond",
+            "A/B Testing, Analytics, App Distribution, Cloud Messaging, Crashlytics, In-App Messaging and Performance Monitoring are listed as no-cost"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
-    }
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
+    },
+    "bestFor": [
+      "Prototypes and small apps: the Spark plan needs no payment method and its quotas (50K Firestore reads a day, 10 GB Hosting storage) carry over into the paid plan",
+      "Teams that want analytics, Crashlytics, Cloud Messaging, A/B testing and Performance Monitoring at no cost regardless of plan",
+      "Apps with fewer than 50,000 monthly active users, where Authentication is free",
+      "Mobile teams needing device testing occasionally — 60 virtual and 30 physical device minutes a day are free before $1 and $5 per device-hour"
+    ],
+    "skipIf": [
+      "You want a bill you can predict: Blaze is metered per read, write, GB and invocation, and beyond Firebase's own table most services fall through to Google Cloud pricing",
+      "Your app is read-heavy — Firestore's free tier is a daily 50K reads, and a busy client that re-reads documents is the classic source of surprise Firebase bills",
+      "You serve large files or video: Hosting includes only 360 MB of transfer a day, then $0.15/GB, and Realtime Database downloads are $1/GB",
+      "You need a hard spend cap — the pricing plans are a free tier and pay-as-you-go, with budget alerts rather than a stop-at-limit switch"
+    ],
+    "sss": [
+      {
+        "soru": "Is Firebase free?",
+        "cevap": "The Spark plan is free with no payment method required, and its quotas — 50K Firestore reads and 20K writes a day, 1 GB stored, 10 GB Hosting storage, 50K auth MAUs — are also included on the paid Blaze plan. Analytics, Crashlytics, Cloud Messaging and A/B Testing are free on both."
+      },
+      {
+        "soru": "How much does Firebase cost after the free tier?",
+        "cevap": "Blaze is pay-as-you-go: Cloud Functions $0.40 per million invocations after 2M/month, Realtime Database $5/GB stored and $1/GB downloaded, Hosting $0.026/GB stored and $0.15/GB transferred, and Firestore usage at Google Cloud rates."
+      },
+      {
+        "soru": "How many users can Firebase Authentication handle for free?",
+        "cevap": "Up to 50,000 monthly active users at no cost — but only 50 monthly active users for SAML and OIDC sign-in. Beyond that, Google Cloud Identity Platform pricing applies, and phone verification is billed per SMS."
+      },
+      {
+        "soru": "Why do Firebase bills grow unexpectedly?",
+        "cevap": "Because Blaze meters reads, writes, storage, egress and invocations separately. Firestore's free allowance is a daily 50K document reads, so a client that repeatedly re-reads the same documents can pass it quickly, and egress beyond the free tier is billed per GB."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "contentful",
@@ -23346,20 +23428,25 @@
     "verdict": "The provider network is the advantage and the risk. Order samples before you sell.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "Printify — Pricing",
           "url": "https://printify.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Free $0/month: 5 stores per account, unlimited product designs, product creator, integrations with Shopify, Etsy, eBay and more, manual order creation, custom order import, 24/7 merchant support",
+            "Premium from $39/month, or from $24.99/month billed yearly (advertised as saving 36%): up to 33% discount on new products, up to 20% discount on all products, up to 33% off custom branding features, 10 stores per account, AI mockups, Printify Connect order management, 1:1 mentorship with Sellers Club PRO, early access to new features",
+            "Enterprise is custom-priced: unlimited stores, additional discounts on all products, custom API integration, dedicated account manager, branded customer support",
+            "No upfront costs; the marketplace lists 2,000+ products and 90+ print providers across 140+ facilities",
+            "Printify frames the upgrade decision as 'upgrade only when the discounts outearn the fee'",
+            "The site's profit calculator example uses a fulfillment cost of $8.77 on an item sold for $35"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "keyFeatures": [
       {
@@ -23374,7 +23461,38 @@
         "title": "Mockup generator",
         "description": "Produces product images from uploaded artwork."
       }
-    ]
+    ],
+    "bestFor": [
+      "Testing print-on-demand with no risk: the Free plan costs nothing, allows 5 stores and unlimited designs, and there are no upfront costs or inventory",
+      "Sellers with steady volume — Premium is from $39/month ($24.99 billed yearly) and gives up to 20% off all products and up to 33% off new ones",
+      "Multi-storefront sellers: 5 stores on Free and 10 on Premium, with integrations to Shopify, Etsy, eBay and others included on every plan",
+      "Anyone who can do the arithmetic Printify itself suggests: pay the fee only once the per-order discount outearns it"
+    ],
+    "skipIf": [
+      "Your margin depends on the plan fee alone — the real cost is the per-item fulfillment price (the vendor's own example is $8.77 on a $35 item) plus shipping and taxes, which no plan removes",
+      "You sell too little for the discount to pay for itself: at up to 20% off products, Premium's $39/month needs a few hundred dollars of monthly fulfillment spend to break even",
+      "You need a custom API integration, a dedicated account manager or branded customer support — those are Enterprise-only and quoted individually",
+      "You want the yearly price without the yearly commitment: $24.99/month is the annual rate, against $39/month paid monthly"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Printify cost?",
+        "cevap": "The Free plan is $0/month with 5 stores and unlimited designs. Premium is from $39/month, or from $24.99/month billed yearly, and adds up to 20% off all products, up to 33% off new products and 10 stores. Enterprise is custom-priced."
+      },
+      {
+        "soru": "Is Printify Premium worth it?",
+        "cevap": "It depends on volume: Premium is from $39/month and gives up to 20% off products, so it pays for itself only once your monthly fulfillment spend is large enough for the discount to exceed the fee — the vendor states the same test, 'upgrade only when the discounts outearn the fee'."
+      },
+      {
+        "soru": "Does Printify have a free plan?",
+        "cevap": "Yes. Free is $0/month with 5 stores per account, unlimited product designs, the product creator, storefront integrations, manual order creation and 24/7 merchant support. There are no upfront costs on any plan."
+      },
+      {
+        "soru": "What does Printify charge per order?",
+        "cevap": "The plan fee is separate from production: you pay each print provider's fulfillment price per item — the site's own example is $8.77 for a one-print item sold at $35 — plus shipping and taxes."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "payhip",
@@ -41274,20 +41392,27 @@
     "verdict": "The threading model solves a real Slack problem. It only works if the team maintains it.",
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
-          "label": "Zulip — Pricing",
+          "label": "Zulip — Plans and pricing",
           "url": "https://zulip.com/plans/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Zulip Cloud Free: 10,000 messages of search history, file storage up to 5 GB total, guest accounts, hundreds of integrations, advanced roles and permissions",
+            "Zulip Cloud Standard: $6.67 per user per month billed annually, or $8 billed monthly — unlimited search history, 5 GB storage per user, custom groups, message retention policies, your own logo, priority commercial support",
+            "Zulip Cloud Plus: $10 per user per month billed annually or $12 monthly, 10 users minimum — 25 GB storage per user, SAML SSO, SCIM sync, custom domain",
+            "Self-hosted Free: 100% open-source, all features included; mobile notifications unlimited for eligible communities and limited to 10 users otherwise",
+            "Self-hosted Basic: $3.50 per user per month billed monthly, with $20/month off for the first year, and an 85%+ discount for non-workplace users",
+            "Self-hosted Business: $6.67 per user per month billed annually or $8 monthly, 25 users minimum, adds SAML/Entra ID SSO, AD/LDAP sync, compliance exports and data retention policies",
+            "Zulip sponsors over 1,500 organizations: open-source projects, academic research, conferences and most small non-profits are eligible for a free Standard plan",
+            "Export and import tools let you move between Zulip Cloud and your own servers"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": true,
@@ -41312,7 +41437,39 @@
         "title": "Full-history search",
         "description": "Searches the entire archive including topics you never joined."
       }
-    ]
+    ],
+    "bestFor": [
+      "Open-source projects, academic research and small non-profits — they are eligible for a free Standard plan, and Zulip says it sponsors over 1,500 organizations",
+      "Teams that want an exit: the same product is self-hostable and free, with export and import tools for moving either direction",
+      "Self-hosters who only need mobile push: the Basic plan is $3.50 per user per month, and non-workplace users get an 85%+ discount",
+      "Small teams testing the water — Cloud Free keeps 10,000 messages of search history and all the core chat features"
+    ],
+    "skipIf": [
+      "You need SSO on the cloud: SAML and SCIM only appear on Plus at $10 per user per month billed annually, which also has a 10-user minimum",
+      "Your archive matters and you want to stay free — the free cloud tier caps search history at 10,000 messages and total file storage at 5 GB",
+      "You are a company below 25 seats wanting self-hosted SSO: the self-hosted Business plan enforces a 25-user minimum",
+      "You want month-to-month pricing at the advertised rate: the headline $6.67 and $10 figures are annual, rising to $8 and $12 billed monthly"
+    ],
+    "sss": [
+      {
+        "soru": "How much does Zulip cost?",
+        "cevap": "Zulip Cloud Free is $0. Cloud Standard is $6.67 per user per month billed annually ($8 monthly) and Cloud Plus is $10 billed annually ($12 monthly, 10 users minimum). Self-hosting is free, with paid Basic ($3.50/user/month) and Business ($6.67/user/month annually, 25 users minimum) plans."
+      },
+      {
+        "soru": "Is Zulip free for open-source projects?",
+        "cevap": "Yes — open-source projects, academic research, conferences and most small non-profits can apply for a free Standard plan. Zulip says it sponsors over 1,500 organizations, with further discounts for education and organizations in the developing world."
+      },
+      {
+        "soru": "What are the limits of Zulip's free cloud plan?",
+        "cevap": "10,000 messages of search history and 5 GB of file storage in total. Paid Standard lifts search history to unlimited and storage to 5 GB per user; Plus raises storage to 25 GB per user."
+      },
+      {
+        "soru": "Does self-hosted Zulip cost anything?",
+        "cevap": "No — the self-hosted server is fully open-source and free, including all features. Paid self-hosted plans exist mainly for unlimited mobile push notifications and support: Basic $3.50 per user per month, Business $6.67 per user per month billed annually."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09",
+    "fiyatModeli": "ucretsiz-katman"
   },
   {
     "slug": "microsoft-project",
@@ -43304,24 +43461,30 @@
     "shortDescription": "Online customer service software.",
     "websiteUrl": "https://www.livechat.com",
     "incelendi": false,
-    "basePrice": 0,
-    "isFlat": true,
+    "basePrice": 19,
+    "isFlat": false,
     "evidence": {
       "status": "pricing-page-verified",
-      "reviewedAt": "2026-08-31",
       "sources": [
         {
           "label": "LiveChat — Pricing",
           "url": "https://www.livechat.com/pricing/",
-          "checkedAt": "2026-08-31",
           "supports": [
-            "the vendor's published pricing"
-          ]
+            "Starter $19/month per person billed annually ($25 billed monthly): 1 user, track up to 100 visitors, 1 recurring campaign, 60-day chat history, basic widget customization, 24/7/365 support",
+            "Team $49/month per person billed annually ($59 billed monthly): unlimited users, track up to 400 visitors, unlimited campaigns, unlimited chat history, full widget customization, basic reporting",
+            "Business $79/month per person billed annually ($89 billed monthly): track up to 1,000 visitors, work scheduler, staffing prediction, on-demand and advanced reporting, agent performance, SMS and Apple Messages for Business",
+            "Enterprise is quoted by sales",
+            "Free 14-day trial with AI-driven features and no credit card required",
+            "Custom skills for the AI Agent are a separate Text product from $19 per user per month with 14 days free",
+            "Reply suggestions draw on imported knowledge sources, and the number of sources allowed depends on the plan"
+          ],
+          "checkedAt": "2026-09-09"
         }
       ],
       "limitations": [
-        "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
-      ]
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
+      ],
+      "reviewedAt": "2026-09-09"
     },
     "kriterler": {
       "api": null,
@@ -43332,7 +43495,39 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
-    }
+    },
+    "fiyatModeli": "kullanici-basina",
+    "bestFor": [
+      "A one-person support desk: Starter is $19/month billed annually and includes 24/7 support, though it is limited to a single user",
+      "Teams that need unlimited chat history and campaigns — those start on Team at $49 per person per month billed annually",
+      "Larger service departments wanting scheduling, staffing prediction and agent performance reporting, which appear on Business at $79 per person",
+      "Anyone who wants to try before paying: the 14-day trial includes the AI features and needs no credit card"
+    ],
+    "skipIf": [
+      "You expected a free tier — there is none, only a 14-day trial, and the cheapest paid seat is $19/month billed annually",
+      "You bill monthly: the real monthly prices are $25, $59 and $89 per person, roughly 30% above the advertised annual rates",
+      "You have heavy traffic on the entry tier: visitor tracking is capped at 100 on Starter, 400 on Team and 1,000 on Business",
+      "You want the AI agent's custom skills included — those are a separate Text subscription from $19 per user per month"
+    ],
+    "sss": [
+      {
+        "soru": "How much does LiveChat cost?",
+        "cevap": "Starter is $19, Team $49 and Business $79 per person per month billed annually. Billed monthly the same plans are $25, $59 and $89 per person. Enterprise is quoted by sales, and there is a 14-day free trial."
+      },
+      {
+        "soru": "Does LiveChat have a free plan?",
+        "cevap": "No. There is a 14-day free trial with the AI features and no credit card required, but every plan afterwards is paid, starting at $19 per person per month billed annually."
+      },
+      {
+        "soru": "How many agents does the Starter plan include?",
+        "cevap": "One. Unlimited users start on the Team plan at $49 per person per month billed annually, which also adds unlimited chat history and unlimited campaigns."
+      },
+      {
+        "soru": "What is the visitor tracking limit on LiveChat?",
+        "cevap": "Up to 100 tracked visitors on Starter, 400 on Team and 1,000 on Business — a per-plan cap rather than an add-on."
+      }
+    ],
+    "fiyatKontrolTarihi": "2026-09-09"
   },
   {
     "slug": "microsoft-dynamics",
