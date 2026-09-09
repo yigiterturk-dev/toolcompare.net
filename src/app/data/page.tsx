@@ -117,7 +117,27 @@ export default function DataPage() {
           <a href="/api/tools" rel="nofollow">
             <code>GET https://toolcompare.net/api/tools</code>
           </a>{" "}
-          — returns the full array.
+          — returns the full array. CORS is open and the response is cached for a day.
+        </p>
+        <p>
+          The full document is around 1.8&nbsp;MB, so three query parameters are available to keep
+          it sane:
+        </p>
+        <ul>
+          <li>
+            <code>?fields=slug,name,basePrice,fiyatModeli</code> — only the top-level fields you name
+          </li>
+          <li>
+            <code>?format=compact</code> — identity, price and billing model, plus{" "}
+            <code>evidence.status</code> and its date, without the full source list
+          </li>
+          <li>
+            <code>?limit=50&amp;offset=100</code> — pagination; the total is returned in the{" "}
+            <code>X-Total-Count</code> header
+          </li>
+        </ul>
+        <p>
+          With no parameters the response is unchanged from before, so existing callers keep working.
         </p>
 
         <section>
