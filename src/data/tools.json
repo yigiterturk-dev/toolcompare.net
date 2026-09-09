@@ -11300,31 +11300,32 @@
     ],
     "fiyatModeli": "tek-seferlik",
     "bestFor": [
-      "iPad illustration where you want to own the app outright — the vendor states 'no subscriptions'",
-      "Artists who already have an iPad and Apple Pencil and do not want a monthly bill",
-      "Raster painting and sketching rather than layout or vector work"
+      "Illustrators who refuse subscriptions — Procreate is sold as a one-time purchase",
+      "iPad owners who buy through the App Store, the only channel the vendor lists",
+      "Artists who want to own a version outright rather than rent access monthly"
     ],
     "skipIf": [
-      "You are not on an iPad — the main app is iPad-only; the iPhone version (Pocket) and the animation app (Dreams) are separate purchases",
-      "You need vector tools; Procreate has none",
-      "You need desktop-grade file handling for very large documents"
+      "You work on Windows or Android; the vendor sells exclusively through Apple's App Store",
+      "You expect cross-platform sync with a desktop version included in the same purchase",
+      "You need to confirm the price before buying — the vendor's own page does not publish it"
     ],
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-09-07",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Procreate — Product page",
           "url": "https://procreate.com/procreate",
-          "checkedAt": "2026-09-07",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "one-time purchase, 'No subscriptions. Exclusively from the App Store'",
-            "Procreate is iPad-only; Procreate Pocket (iPhone) and Procreate Dreams are separate apps"
+            "Sold as a one-time purchase: the vendor states \"No subscriptions. Exclusively from the App Store\"",
+            "Distributed only through Apple's App Store"
           ]
         }
       ],
       "limitations": [
-        "The vendor page states the purchase model but does not print the price; the App Store is the price of record."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The vendor's own page does not publish a purchase price; the App Store listing is the only source and was not scraped."
       ]
     },
     "sss": [
@@ -14060,34 +14061,35 @@
       }
     ],
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-07",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Mattermost — Pricing",
           "url": "https://mattermost.com/pricing/",
-          "checkedAt": "2026-09-07",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "Professional, Enterprise and Enterprise Advanced tiers are all quoted by sales",
-            "no per-user prices published",
-            "licences sold as prepaid annual subscriptions based on the number of seats",
-            "a limited-use edition of Enterprise Advanced is offered free for technical evaluation"
+            "Professional self-hosted, maximum 250 users; SSO/SAML and guest accounts start here",
+            "Enterprise scales to 50,000 concurrent users; high availability starts at this tier",
+            "Enterprise Advanced scales to 200,000 concurrent users",
+            "Compliance export and eDiscovery available from Enterprise"
           ]
         }
       ],
       "limitations": [
-        "Mattermost publishes no figures on its pricing page, so none are claimed here."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No per-user price is published on the pricing page; all tiers direct to sales."
       ]
     },
     "bestFor": [
-      "Organisations that must self-host their team chat rather than use a SaaS",
-      "Technical evaluation first — a limited-use edition is offered free",
-      "Teams replacing Slack for security or sovereignty reasons"
+      "Teams that must self-host: Professional is self-hosted and supports a maximum of 250 users",
+      "Organisations needing scale — Enterprise scales to 50,000 concurrent users, Enterprise Advanced to 200,000",
+      "Regulated environments that need compliance export and eDiscovery, available from Enterprise"
     ],
     "skipIf": [
-      "You need a price to compare — Mattermost publishes no per-seat figures; all tiers are quoted",
-      "You want month-to-month billing: licences are sold as prepaid ANNUAL seat subscriptions",
-      "You want a hosted product with no infrastructure work"
+      "You need a published price — no per-user figure is listed; every tier requires contacting sales",
+      "You are above 250 users but only budgeted for Professional; that tier is capped there",
+      "You need SSO/SAML or guest accounts on the free edition — both start at Professional"
     ]
   },
   {
@@ -15126,60 +15128,35 @@
     ],
     "targetAudience": "ML practitioners and organizations that need to discover, version, collaborate on or deploy models and datasets.",
     "bestFor": [
-      "Discovering and versioning community or private models and datasets",
-      "Teams that want serverless, dedicated or local inference options behind related tooling",
-      "Publishing model demos and documentation alongside artifacts"
+      "Researchers on the free tier: CPU Basic Spaces and ZeroGPU are listed as FREE",
+      "Individuals on PRO at $9/month for 10x private storage and 20x included inference credits",
+      "Teams at $20 per user/month (SSO, audit logs, resource groups) or Enterprise at $50 per user/month"
     ],
     "skipIf": [
-      "You need one vendor-guaranteed quality or license standard across every repository",
-      "You cannot monitor pay-as-you-go compute and storage separately from subscriptions",
-      "You need a turnkey application rather than an ML collaboration and infrastructure platform"
+      "You store large datasets — Hub storage is billed from $12/TB/month public and $18/TB/month private",
+      "You need sustained GPU: Spaces hardware runs hourly, T4-small $0.40 up to L40S $23.50",
+      "You want flat inference costs; endpoints are hourly, $0.03 CPU up to $74.00 for 8x B200"
     ],
     "verdict": "Choose Hugging Face when artifact discovery, collaboration and flexible inference matter; audit each repository's license and model card, then budget compute separately.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "Hugging Face Docs — Hub",
-          "url": "https://huggingface.co/docs/hub/index",
-          "checkedAt": "2026-08-24",
+          "label": "Hugging Face — Pricing",
+          "url": "https://huggingface.co/pricing",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "models",
-            "datasets",
-            "Spaces",
-            "public and private collaboration",
-            "repository features",
-            "model cards"
-          ]
-        },
-        {
-          "label": "Hugging Face Docs — Run inference",
-          "url": "https://huggingface.co/docs/huggingface_hub/guides/inference",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "Inference Providers",
-            "Inference Endpoints",
-            "local inference",
-            "monthly credits",
-            "provider billing"
-          ]
-        },
-        {
-          "label": "Hugging Face Docs — Billing",
-          "url": "https://huggingface.co/docs/hub/billing",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "PRO features",
-            "Team and Enterprise plans",
-            "compute billing",
-            "private storage",
-            "monthly credits"
+            "PRO $9/month: 10x private storage, 2x public storage, 20x inference credits, 8x ZeroGPU quota",
+            "Team $20/month per user: SSO, audit logs, resource groups; Enterprise $50/month per user with SCIM",
+            "Hub storage $12/TB/mo public and $18/TB/mo private, falling to $8 and $12 above 500TB",
+            "Spaces hourly: CPU Basic FREE, ZeroGPU FREE, CPU Upgrade $0.03, T4-small $0.40, L40S $1.80-$23.50",
+            "Inference Endpoints: CPU $0.03-$0.54/hour, GPU $0.50 (T4) to $74.00 (8x B200)"
           ]
         }
       ],
       "limitations": [
-        "Vendor platform documentation was reviewed; individual repository quality, licensing and security were not independently audited."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     }
   },
@@ -15647,58 +15624,34 @@
     ],
     "targetAudience": "Developers who want completion and code-editing agents inside one editor and will review generated changes.",
     "bestFor": [
-      "Multi-file coding tasks where an agent can search and edit the repository",
-      "Developers who want model choice and tab completion in one editor",
-      "Teams that need centralized billing, administration and privacy-mode controls"
+      "Developers trying the free Hobby plan: limited Agent requests and Composer access, no credit card required",
+      "Individuals on Pro at $20/month with extended Agent limits and access to frontier models",
+      "Teams at $40 per user/month, which adds SAML/OIDC SSO, usage analytics and team-wide privacy mode"
     ],
     "skipIf": [
-      "Your code policy does not allow requests to pass through Cursor's backend",
-      "You need predictable unlimited agent usage at a fixed low price",
-      "You cannot review agent edits and terminal actions before accepting them"
+      "You need heavy Agent usage on the free plan — Hobby requests are explicitly limited",
+      "You want SSO on the individual plan; SAML/OIDC starts at Teams ($40 per user/month)",
+      "You need SCIM, audit logs or pooled usage: those are Enterprise, priced by sales only"
     ],
     "verdict": "Choose Cursor when codebase-aware editing and agents justify an editor change; review its data settings, usage model and every generated change before adoption.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "Cursor Docs — Models and pricing",
-          "url": "https://cursor.com/docs/models-and-pricing",
-          "checkedAt": "2026-08-24",
+          "label": "Cursor — Pricing",
+          "url": "https://cursor.com/pricing",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "individual plan prices",
-            "usage pools",
-            "tab completions",
-            "agent limits",
-            "team plans",
-            "on-demand usage"
-          ]
-        },
-        {
-          "label": "Cursor Docs — Agent overview",
-          "url": "https://cursor.com/docs/agent/overview",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "file editing",
-            "codebase search",
-            "terminal execution",
-            "agent model selection"
-          ]
-        },
-        {
-          "label": "Cursor Docs — Privacy and security",
-          "url": "https://docs.cursor.com/account/privacy",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "privacy modes",
-            "backend routing",
-            "codebase indexing",
-            "embedding storage"
+            "Hobby free: limited Agent requests, Composer access, no credit card required",
+            "Individual $20/month: extended Agent limits, frontier models, MCPs, skills and hooks",
+            "Teams $40 per user/month: SAML/OIDC SSO, centralized billing, usage analytics",
+            "Enterprise custom: pooled usage, SCIM seat management, audit logs"
           ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; coding quality, productivity and security outcomes were not independently benchmarked."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     }
   },
@@ -18666,34 +18619,33 @@
       }
     ],
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-07",
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "Caddy",
+          "label": "Caddy — Home",
           "url": "https://caddyserver.com/",
-          "checkedAt": "2026-09-07",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "free and open source, hosted on GitHub",
-            "automatically obtains and renews TLS certificates for all sites by default",
-            "On-Demand TLS provisions certificates during the TLS handshake for custom domains",
-            "the project relies on sponsorships; no licence fee"
+            "Described by the vendor as \"a free open source project\"",
+            "Sponsorship tiers exist and include private support and training"
           ]
         }
       ],
       "limitations": [
-        "The homepage does not name the licence or publish support pricing, so neither is claimed."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No sponsorship or support price is published on the page, and the licence name is not stated there."
       ]
     },
     "bestFor": [
-      "Serving HTTPS without touching a certificate — Caddy obtains and renews TLS automatically by default",
-      "Small servers where a short config file beats an nginx block",
-      "Custom customer domains: On-Demand TLS provisions certificates during the handshake"
+      "Teams that want automatic HTTPS from a free, open source web server",
+      "Self-hosters who prefer a single binary over a package plus certificate tooling",
+      "Businesses that want paid private support, offered through sponsorship tiers"
     ],
     "skipIf": [
-      "You need a vendor with an SLA — the project runs on sponsorships, not licences",
-      "Your team already knows nginx and its module ecosystem",
-      "You need a published support contract price; none is listed"
+      "You require a contractual support SLA at a published price — sponsorship tiers are not priced on the site",
+      "Your organisation forbids depending on sponsorship-funded projects",
+      "You need a named commercial licence; the licence is not stated on the homepage"
     ]
   },
   {
@@ -24164,72 +24116,33 @@
     ],
     "targetAudience": "Ecommerce support teams, particularly Shopify merchants, that want store actions inside the helpdesk and can forecast usage-based billing.",
     "bestFor": [
-      "Shopify support teams that frequently inspect or modify customer orders",
-      "Organizations whose support volume maps predictably to ticket allowances",
-      "Teams prepared to configure and audit automated ecommerce actions"
+      "Ecommerce support teams that grow between 50 and 5,000 tickets a month",
+      "Shops with many agents: the helpdesk is priced by ticket volume, never per agent",
+      "Teams that want AI deflection billed only on resolved conversations"
     ],
     "skipIf": [
-      "Your business is not centered on supported ecommerce workflows",
-      "Seasonal ticket volume and overage charges cannot be forecast or capped",
-      "Your order scenarios rely on Shopify operations that Gorgias does not support"
+      "You need to budget from a published price — the plan table is not rendered on the pricing page",
+      "Your ticket volume is spiky; volume-based pricing punishes seasonal peaks",
+      "You handle far more than 5,000 tickets a month — that is the top published band"
     ],
     "verdict": "Choose Gorgias when its store-side actions reduce real ecommerce support work; model every applicable ticket, automation, voice and SMS event against seasonal volume.",
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "reviewedAt": "2026-09-09",
       "sources": [
-        {
-          "label": "Gorgias Docs — Billing",
-          "url": "https://docs.gorgias.com/en-US/how-youre-billed-for-using-gorgias-199385",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "billable ticket definition",
-            "AI automation fee",
-            "voice and SMS events",
-            "overages",
-            "multiple charges per ticket",
-            "usage monitoring"
-          ]
-        },
-        {
-          "label": "Gorgias Docs — Connect Shopify",
-          "url": "https://docs.gorgias.com/en-US/connect-shopify-to-gorgias-81814",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "customer profiles",
-            "order history",
-            "Shopify permissions",
-            "order actions",
-            "macros",
-            "AI Agent store requirement"
-          ]
-        },
-        {
-          "label": "Gorgias Docs — Shopify actions",
-          "url": "https://docs.gorgias.com/en-US/shopify-actions-461552",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "create and duplicate order",
-            "cancellation",
-            "refund",
-            "edit order",
-            "payment and age limitations"
-          ]
-        },
         {
           "label": "Gorgias — Pricing",
           "url": "https://www.gorgias.com/pricing",
-          "checkedAt": "2026-08-24",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "ticket-volume tiers",
-            "not priced per agent",
-            "outcome-priced AI Agent",
-            "voice and SMS add-ons"
+            "Helpdesk scales from 50 to 5,000 tickets a month, never priced per agent",
+            "AI Agent included on every plan, charged only when it resolves a conversation"
           ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; ToolCompare did not independently measure support productivity, automation success, Shopify action reliability, revenue attribution or total seasonal cost."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Plan prices, ticket overage rates and seat counts were not rendered on the pricing page at the time of review."
       ]
     }
   },
@@ -30830,99 +30743,35 @@
     ],
     "targetAudience": "Individuals and small organizations whose conventional websites fit shared-hosting resource and policy limits.",
     "bestFor": [
-      "Small brochure, blog and business sites with predictable PHP/MySQL needs",
-      "Multi-site portfolios that fit the chosen tier's explicit site and inode limits",
-      "Buyers willing to price the full initial term, renewal, domain and email together"
+      "Hosting several small sites: the entry shared plan allows 25 websites on 25 GB NVMe SSD",
+      "Single WordPress sites on DreamPress 1: 1 website, 15 GB NVMe SSD, unlimited mailboxes",
+      "Growing sites on VPS Business: unlimited websites on 60 GB NVMe SSD"
     ],
     "skipIf": [
-      "The application needs dedicated compute, custom daemons, guaranteed resource isolation or root access",
-      "The account would primarily store backups, archives or distributed files",
-      "Independent file and database backups plus a tested migration path are not maintained"
+      "You budget on the advertised rate — every plan renews far higher than the first-year price",
+      "You need more than 25 GB on the entry plan; storage is the binding limit, not bandwidth",
+      "You want mailboxes included indefinitely on the entry plan — they are free for 3 months only"
     ],
     "verdict": "DreamHost shared hosting is reasonable for conventional small sites, but buy against the renewal rate and real limits—not the teaser price or 'unmetered' label; keep independent file/database backups and move to VPS or managed hosting before shared-resource contention becomes critical.",
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "DreamHost — Web Hosting plans",
-          "url": "https://www.dreamhost.com/hosting/web-hosting/",
-          "checkedAt": "2026-08-24",
+          "label": "DreamHost — Shared hosting",
+          "url": "https://www.dreamhost.com/hosting/shared/",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "current promotional and renewal prices",
-            "one-year and four-year terms",
-            "site visit storage and mailbox limits",
-            "unmetered bandwidth",
-            "backups SSL and domain inclusions",
-            "money-back period",
-            "uptime-credit positioning"
-          ]
-        },
-        {
-          "label": "DreamHost KB — Web Hosting overview",
-          "url": "https://help.dreamhost.com/hc/en-us/articles/41728738370068-Web-Hosting-overview",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "shared-server model",
-            "Launch Growth and Scale tiers",
-            "storage and inode limits",
-            "subdomain mailbox and database limits",
-            "billing-term options"
-          ]
-        },
-        {
-          "label": "DreamHost KB — Website restore",
-          "url": "https://help.dreamhost.com/hc/en-us/articles/215768257-How-do-I-restore-my-website",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "panel file restore",
-            "approximately two-week non-guaranteed retention",
-            "files-only limitation",
-            "database exclusion",
-            "independent local-backup recommendation",
-            "dedicated-server boundary"
-          ]
-        },
-        {
-          "label": "DreamHost — Acceptable Use Policy",
-          "url": "https://www.dreamhost.com/legal/acceptable-use-policy/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "website-hosting purpose",
-            "backup and archive prohibition",
-            "shared-resource limits",
-            "CPU-intensive script restriction",
-            "traffic-capacity boundary",
-            "suspension and termination risk"
-          ]
-        },
-        {
-          "label": "DreamHost — Unlimited Policy",
-          "url": "https://www.dreamhost.com/legal/unlimited-policy/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "unmetered-policy meaning",
-            "CPU RAM and disk-I/O constraints",
-            "VPS migration possibility",
-            "database and email boundaries",
-            "prohibited storage and distribution uses"
-          ]
-        },
-        {
-          "label": "DreamHost — Pricing",
-          "url": "https://www.dreamhost.com/pricing/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "current plan catalog",
-            "first-term prices",
-            "renewal disclosure",
-            "included feature summaries",
-            "domain and email promotional periods"
+            "Web Hosting Launch: 25 websites, 25 GB NVMe SSD, unmetered bandwidth, 1 year free domain, 20 mailboxes free for 3 months",
+            "DreamPress 1: 1 website, 15 GB NVMe SSD, unlimited mailboxes",
+            "VPS Business: unlimited websites, 60 GB NVMe SSD",
+            "All plans renew at a higher rate than the first-year promotional price"
           ]
         }
       ],
       "limitations": [
-        "Official DreamHost plan, knowledge-base and policy pages were reviewed; ToolCompare did not purchase hosting, inspect checkout tax or every billing term, deploy or migrate a site, benchmark shared performance, contact support, measure uptime, validate credits, restore files or databases, test email, scan malware, or compare VPS and DreamPress. Prices, limits and promotions may change after the review date."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "The pricing page served euro prices from this location, so no USD figure is recorded; only limits are."
       ]
     },
     "sss": [
