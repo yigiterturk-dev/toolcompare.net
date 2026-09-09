@@ -6406,34 +6406,34 @@
       "sso": false
     },
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-07",
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "PostgreSQL — Licence",
           "url": "https://www.postgresql.org/about/licence/",
-          "checkedAt": "2026-09-07",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "released under the PostgreSQL License, a liberal open source licence similar to BSD or MIT",
-            "permission to use, copy, modify and distribute for any purpose, without fee and without a written agreement",
-            "free for commercial use with no fees or restrictions",
-            "provided AS-IS with no obligation for maintenance, support, updates or modifications"
+            "Released under the PostgreSQL License, a liberal Open Source licence similar to BSD or MIT",
+            "\"Permission to use, copy, modify, and distribute this software and its documentation for any purpose, without fee, and without a written agreement is hereby granted\"",
+            "Free for commercial use; no fee or restriction stated in the licence",
+            "The PostgreSQL Global Development Group states there are no plans to change the licence"
           ]
         }
       ],
       "limitations": [
-        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
     "bestFor": [
-      "Any project, commercial included — the licence charges no fee and requires no agreement",
-      "Teams that refuse vendor lock-in: you can use, modify and redistribute it freely",
-      "Long-term bets: the development group has committed to keeping it open source"
+      "Any project that needs a database with no licence fee — the PostgreSQL License grants use \"without fee\"",
+      "Commercial products: the licence permits use, copy, modify and distribute for any purpose without a written agreement",
+      "Teams that want long-term certainty; the project states there are no plans to change the licence"
     ],
     "skipIf": [
-      "You want a vendor to call when it breaks — the software is provided as-is with no support obligation",
-      "You need managed hosting; that is a separate paid service from a cloud provider, not from PostgreSQL",
-      "You need a licence warranty or indemnity; the licence explicitly disclaims liability"
+      "You want a vendor with a support contract included — support is bought separately from third parties",
+      "You need managed backups and failover out of the box; those come from hosted providers, not the project",
+      "You are comparing total cost: the software is free, the operations are not"
     ]
   },
   {
@@ -8230,33 +8230,33 @@
     },
     "fiyatModeli": "teklif",
     "bestFor": [
-      "Startups chasing SOC 2 or ISO 27001 for the first time, where evidence collection is the bottleneck",
-      "Teams that want continuous monitoring rather than a once-a-year scramble",
-      "Companies whose auditor will accept an automated evidence trail"
+      "Companies that want compliance automation across four tiers: Essentials, Plus, Professional and Enterprise",
+      "Teams whose volume of security questionnaires matters — the tiers differ at 25 versus 144 per year",
+      "Buyers comfortable with a sales process, since pricing is personalised after a demo"
     ],
     "skipIf": [
-      "You need a price before a sales call — Vanta publishes none; all four tiers are quoted",
-      "You want a free tier or self-serve signup; neither exists",
-      "You only need one framework once; the model assumes ongoing monitoring"
+      "You need to budget before talking to sales — no price is published on any tier",
+      "You want to self-serve; the vendor's only call to action is \"Request a free demo\"",
+      "You are comparing on cost: the published differences are features, not figures"
     ],
     "evidence": {
-      "status": "pricing-page-verified",
-      "reviewedAt": "2026-09-07",
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
           "label": "Vanta — Pricing",
           "url": "https://www.vanta.com/pricing",
-          "checkedAt": "2026-09-07",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "four tiers: Essentials, Plus, Professional, Enterprise",
-            "no dollar amounts published; pricing given after a demo",
-            "Essentials covers one compliance framework with automated evidence collection",
-            "no free tier"
+            "Four tiers listed: Essentials, Plus (most popular), Professional, Enterprise",
+            "Questionnaire automation differs by tier: 25 versus 144 per year",
+            "Page states \"Request a free demo today to discuss your business needs and get personalized pricing\""
           ]
         }
       ],
       "limitations": [
-        "Vanta publishes no figures on its pricing page, so none are claimed here."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Vanta publishes no prices at all; every tier is quote-only, so no figure is recorded here."
       ]
     }
   },
@@ -15021,61 +15021,36 @@
     ],
     "targetAudience": "Developers and organizations evaluating Mistral's hosted models, APIs or agent products with model-specific licensing and pricing review.",
     "bestFor": [
-      "Teams that want one vendor surface for text, audio, OCR and agent APIs",
-      "Developers who want to prototype in a Playground before using an SDK",
-      "Organizations willing to evaluate licensing and price per selected model"
+      "Individuals on the free plan, which includes $10/month in API credits",
+      "Pro users at $14.99/month ($5.99 for verified students) with $15/month in credits",
+      "High-volume API work: batch processing halves the price and cached input tokens cut input cost by up to 90%"
     ],
     "skipIf": [
-      "You assume every model in the catalog has open weights or the same license",
-      "You need a fixed subscription instead of model- and usage-dependent API billing",
-      "You need independently benchmarked proof that a Mistral model wins your workload"
+      "You need a published price for every model — only Mistral Large is quoted on the pricing page ($0.5/M in, $1.5/M out)",
+      "You are a small team: the Team plan is $24.99 per user/month on top of a $50/month base fee",
+      "You cannot batch or cache; the headline discounts do not apply to latency-sensitive single calls"
     ],
     "verdict": "Choose Mistral when its API breadth, agent surfaces or specific model licenses fit the workload; verify the exact model's terms, region and metered price before building around it.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "Mistral Docs — Platform overview",
-          "url": "https://docs.mistral.ai/getting-started/platform-overview",
-          "checkedAt": "2026-08-24",
+          "label": "Mistral — Pricing",
+          "url": "https://mistral.ai/pricing",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "Vibe",
-            "Studio",
-            "Admin",
-            "web and mobile",
-            "coding workflows",
-            "organization controls"
-          ]
-        },
-        {
-          "label": "Mistral Docs — Studio",
-          "url": "https://docs.mistral.ai/studio",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "API",
-            "Playground",
-            "agents",
-            "document intelligence",
-            "audio",
-            "RAG",
-            "usage monitoring"
-          ]
-        },
-        {
-          "label": "Mistral Docs — Pricing",
-          "url": "https://docs.mistral.ai/inference/pricing",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "model-specific pricing",
-            "token pricing",
-            "specialized model units",
-            "batch and priority pricing"
+            "Free plan: $10/month in API credits",
+            "Pro $14.99/month ($5.99/month verified students): $15/month credits ($30 for students)",
+            "Team $24.99 per user/month plus a $50/month base fee; Enterprise custom",
+            "Mistral Large $0.5 per million input tokens and $1.5 per million output tokens",
+            "Batch processing reduces price by 50%; cached input tokens reduce input cost by up to 90%"
           ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; model performance, hosting region and license suitability must be validated for the selected model and workload."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "Per-model API prices other than Mistral Large are not listed on the pricing page; the vendor links to a separate models overview."
       ]
     }
   },
@@ -22807,71 +22782,35 @@
     ],
     "targetAudience": "Teams that want hosted inference with a path from variable serverless traffic to reserved model infrastructure.",
     "bestFor": [
-      "Prototyping or variable traffic on a supported serverless model",
-      "Steady workloads that justify reserved dedicated hardware",
-      "Teams that want one API surface across serverless and dedicated deployment"
+      "Cheap open-model inference: Llama 3 8B Instruct Lite at $0.14 per million tokens in and out",
+      "Prompt-heavy workloads — cached input drops DeepSeek V4 Flash from $0.14 to $0.03 per million tokens",
+      "Teams renting GPUs directly: HGX H100 at $3.99/hour on demand, down to $3.19/hour reserved"
     ],
     "skipIf": [
-      "You require a free trial before purchasing platform credits",
-      "A required model is unavailable in the chosen serverless or dedicated catalog",
-      "You cannot monitor dynamic rate limits or dedicated endpoint runtime cost"
+      "You need a free tier to evaluate; none is published on the pricing page",
+      "You run large frontier models constantly — DeepSeek V4 Pro is $1.32 in and $3.96 out per million tokens",
+      "You want the lowest reserved GPU rate without commitment: those need 7 to 180+ day terms"
     ],
     "verdict": "Choose Together AI when its current model catalog and serverless-to-dedicated path match your traffic; compare total workload cost rather than relying on a generic price claim.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "Together AI Docs — Inference overview",
-          "url": "https://docs.together.ai/docs/inference/overview",
-          "checkedAt": "2026-08-24",
+          "label": "Together AI — Pricing",
+          "url": "https://www.together.ai/pricing",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "serverless inference",
-            "dedicated endpoints",
-            "shared API",
-            "per-token and per-minute billing",
-            "deployment fit"
-          ]
-        },
-        {
-          "label": "Together AI Docs — Serverless models",
-          "url": "https://docs.together.ai/docs/serverless/models",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "model catalog",
-            "modalities",
-            "usage pricing",
-            "no provisioning minimum",
-            "rate limits",
-            "batch discounts"
-          ]
-        },
-        {
-          "label": "Together AI Docs — Dedicated endpoints",
-          "url": "https://docs.together.ai/docs/dedicated-endpoints/overview",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "reserved hardware",
-            "predictable performance",
-            "configuration",
-            "same inference APIs",
-            "per-minute billing"
-          ]
-        },
-        {
-          "label": "Together AI Docs — Credits",
-          "url": "https://docs.together.ai/docs/billing-credits",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "credit usage",
-            "minimum credit purchase",
-            "no free trial",
-            "fine-tuning and endpoint billing"
+            "DeepSeek V4 Flash $0.14 per million input ($0.03 cached), $0.28 output",
+            "Llama 3 8B Instruct Lite $0.14 per million input and output",
+            "DeepSeek V4 Pro $1.32 per million input ($0.13 cached), $3.96 output",
+            "GPU on demand per GPU: HGX H100 $3.99/hr, H200 $5.99/hr, B200 $8.19/hr; reserved $3.19-$7.99/hr over 7-180+ days",
+            "No free tier or credits are published on the pricing page"
           ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; ToolCompare did not benchmark model quality, latency, availability or total cost for a specific workload."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     }
   },
@@ -22924,60 +22863,35 @@
     ],
     "targetAudience": "Developers who want API access to supported models or managed deployment of their own model without operating the underlying GPU fleet directly.",
     "bestFor": [
-      "Testing public or official models through a common API workflow",
-      "Variable public-model workloads that benefit from active-time billing",
-      "Teams that need managed custom-model hardware and scaling controls"
+      "Bursty inference: hardware is billed per second, from $0.000025/sec ($0.09/hr) on small CPU",
+      "Image and video work priced per output, such as FLUX 1.1 Pro at $0.04 per output image",
+      "Teams that need large GPUs occasionally: Nvidia H100 at $0.001525/sec ($5.49/hr)"
     ],
     "skipIf": [
-      "Cold-start latency is unacceptable and you cannot fund always-on capacity",
-      "A required model lacks the maintenance, license or output consistency you need",
-      "You have not compared active, setup and idle charges for your deployment mode"
+      "You run steady, high-volume inference — per-second GPU rates beat idle servers only when usage is spiky",
+      "You need a free tier to evaluate; none is published on the pricing page",
+      "You need very large clusters cheaply: 8x H100 runs $0.012200/sec ($43.92/hr)"
     ],
     "verdict": "Choose Replicate after matching the exact model type and scaling mode to your traffic; public-model and dedicated-deployment economics are materially different.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "Replicate Docs — Billing",
-          "url": "https://replicate.com/docs/topics/billing",
-          "checkedAt": "2026-08-24",
+          "label": "Replicate — Pricing",
+          "url": "https://replicate.com/pricing",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "pay-as-you-go billing",
-            "active-time public model billing",
-            "setup and idle charges",
-            "cold boots",
-            "failed and canceled prediction rules"
-          ]
-        },
-        {
-          "label": "Replicate Docs — Official models",
-          "url": "https://replicate.com/docs/topics/models/official-models",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "official model catalog",
-            "vendor maintenance",
-            "stable APIs",
-            "published input and output pricing",
-            "warm availability"
-          ]
-        },
-        {
-          "label": "Replicate Docs — Deployments",
-          "url": "https://replicate.com/docs/topics/deployments/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "dedicated endpoints",
-            "hardware selection",
-            "scaling controls",
-            "scale to zero",
-            "monitoring",
-            "rollbacks"
+            "CPU Small $0.000025/sec ($0.09/hr); CPU $0.000100/sec ($0.36/hr)",
+            "Nvidia T4 $0.000225/sec ($0.81/hr); L40S $0.000975/sec ($3.51/hr); A100 80GB $0.001400/sec ($5.04/hr)",
+            "Nvidia H100 and H200 $0.001525/sec ($5.49/hr); 8x H100 $0.012200/sec ($43.92/hr)",
+            "Per-prediction models: FLUX 1.1 Pro $0.04 per output image, FLUX Dev $0.025, DeepSeek R1 $3.75 per million input tokens",
+            "No free tier is published on the pricing page"
           ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; ToolCompare did not independently benchmark cold starts, availability, model output quality or workload cost."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     }
   },
@@ -23387,77 +23301,34 @@
     ],
     "targetAudience": "Teams that want a managed retrieval service and can design namespace boundaries around cost, isolation and plan quotas.",
     "bestFor": [
-      "Applications that do not want to operate vector-search infrastructure",
-      "Multi-tenant designs that can use a namespace per tenant",
-      "Teams able to monitor read units, write units and storage by workload"
+      "Prototypes on the free Starter tier: 2 GB storage, 2M write units and 1M read units a month across up to 5 indexes",
+      "Small products on Builder at $20/month flat: 10 GB storage, 10 indexes per project and 5 users",
+      "Production workloads on Standard from $50/month with SAML 2.0 SSO and unlimited storage at $0.33/GB/month"
     ],
     "skipIf": [
-      "You require a self-hosted or open-source database deployment",
-      "Your consistency model requires every immediate post-write read to show the latest state",
-      "Your required indexes, regions, storage or backups exceed the selected plan's limits"
+      "You want predictable bills above the flat tiers — Standard and Enterprise are minimums, then metered ($4-$4.50 per million writes, $16-$18 per million reads)",
+      "You need SSO on a small budget: SAML starts at Standard, so the floor is $50/month",
+      "You need an uptime SLA, BYOC or audit logs; those begin at Enterprise with a $500/month minimum"
     ],
     "verdict": "Choose Pinecone when managed operations and namespace isolation justify a service-specific data model; estimate cost from real namespace sizes and request patterns before committing.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
         {
-          "label": "Pinecone Docs — Understanding cost",
-          "url": "https://docs.pinecone.io/guides/manage-cost/understanding-cost",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "serverless billing dimensions",
-            "read units",
-            "write units",
-            "storage charges",
-            "namespace-size query cost"
-          ]
-        },
-        {
-          "label": "Pinecone Docs — Indexing overview",
-          "url": "https://docs.pinecone.io/guides/index-data/indexing-overview",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "namespaces",
-            "metadata filters",
-            "tenant partitioning",
-            "filter operators"
-          ]
-        },
-        {
-          "label": "Pinecone Docs — Database limits",
-          "url": "https://docs.pinecone.io/reference/api/database-limits",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "plan-specific quotas",
-            "serverless index limits",
-            "storage limits",
-            "namespace limits",
-            "backup availability"
-          ]
-        },
-        {
-          "label": "Pinecone Docs — Data modeling",
-          "url": "https://docs.pinecone.io/guides/index-data/data-modeling",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "eventual consistency",
-            "namespace cost behavior",
-            "multi-tenant design tradeoffs"
-          ]
-        },
-        {
-          "label": "Pinecone — Pricing (automated check)",
+          "label": "Pinecone — Pricing",
           "url": "https://www.pinecone.io/pricing/",
-          "checkedAt": "2026-09-03",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "the vendor's published pricing"
+            "Starter $0: 2 GB storage, 2M write units/mo, 1M read units/mo, 5 indexes, 100 namespaces per index, 1 GB egress",
+            "Builder $20/month flat: 10 GB storage, 5M writes, 2M reads, 10 indexes per project, 5 projects, 5 users",
+            "Standard from $50/month: storage $0.33/GB/mo, writes $4-$4.50 per million, reads $16-$18 per million, egress $0.10/GB with 100 GB included, SAML 2.0 SSO",
+            "Enterprise from $500/month: writes $6-$6.75 per million, reads $24-$27 per million, 99.95% uptime SLA, SCIM, audit logs"
           ]
         }
       ],
       "limitations": [
-        "Vendor documentation was reviewed; ToolCompare did not independently benchmark recall, latency, availability or total cost for a production dataset.",
-        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     }
   },
@@ -32666,83 +32537,35 @@
     ],
     "targetAudience": "Front-end developers who need simple public delivery of a supported open-source dependency and can pin, audit and fall back from that dependency.",
     "bestFor": [
-      "Static sites loading a well-known public library at an exact reviewed version",
-      "Documentation and prototypes where a third-party CDN is permitted",
-      "Teams that enforce CSP, verify SRI hashes and retain a self-hosted fallback for critical assets"
+      "Sites that want a free public CDN — every file is served from Cloudflare's global network",
+      "Projects at scale: the service reports 250B+ requests per month and use on 12.5% of all websites",
+      "Teams that do not want to self-host popular JavaScript, CSS and font libraries"
     ],
     "skipIf": [
-      "Assets are private, proprietary or outside the cdnjs library catalog",
-      "Policy forbids third-party asset requests or requires a contractual SLA",
-      "The team cannot review the package license and code or pin an immutable version"
+      "You need a contractual bandwidth or rate-limit guarantee — none is published",
+      "Your compliance rules forbid loading assets from a third-party network you have no agreement with",
+      "You depend on a sponsor-funded service staying free; funding comes from donated infrastructure"
     ],
     "verdict": "cdnjs is a convenient free path for public, versioned web dependencies; use exact versions and valid SRI, review the library's own license and code, and self-host or provide a fallback when availability, privacy or supply-chain control is critical.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "open-source-verified",
+      "reviewedAt": "2026-09-09",
       "sources": [
-        {
-          "label": "Cloudflare — cdnjs service",
-          "url": "https://ajax.cdnjs.com/",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "open-source library delivery",
-            "Cloudflare operation",
-            "versioned URL example",
-            "Subresource Integrity example",
-            "one-year asset caching",
-            "terms privacy and abuse-policy boundary",
-            "aggregate usage measurement"
-          ]
-        },
-        {
-          "label": "cdnjs — Asset repository",
-          "url": "https://github.com/cdnjs/cdnjs",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "public asset repository",
-            "automated repository role",
-            "separate package metadata repository",
-            "separate website and API repositories",
-            "MIT project license",
-            "per-library license distinction",
-            "Cloudflare sponsorship"
-          ]
-        },
-        {
-          "label": "cdnjs — Package metadata repository",
-          "url": "https://github.com/cdnjs/packages",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "package definitions",
-            "automatic-update configuration",
-            "community contribution workflow",
-            "catalog maintenance boundary"
-          ]
-        },
-        {
-          "label": "cdnjs — API repository",
-          "url": "https://github.com/cdnjs/api-server",
-          "checkedAt": "2026-08-24",
-          "supports": [
-            "public API implementation",
-            "library metadata access",
-            "open-source API code"
-          ]
-        },
         {
           "label": "cdnjs — About",
           "url": "https://cdnjs.com/about",
-          "checkedAt": "2026-09-08",
+          "checkedAt": "2026-09-09",
           "supports": [
-            "Cloudflare-run free CDN",
-            "request volume and site share",
-            "SRI hashes and HTTPS-only",
-            "library request via pull request"
+            "\"A free, open-source CDN for the web's most popular JavaScript, CSS, and font resources\"",
+            "Every file is served directly from Cloudflare's global network; Cloudflare provides infrastructure and maintenance",
+            "Reports 250B+ requests per month and use on 12.5% of all websites",
+            "Funded by Cloudflare, Algolia, DigitalOcean, Statuspage, Sentry and UptimeRobot"
           ]
         }
       ],
       "limitations": [
-        "Official Cloudflare and cdnjs repositories were reviewed; ToolCompare did not benchmark delivery, test a live outage or fallback, audit package provenance, scan hosted releases for malware, verify every SRI hash, assess privacy or licensing for a specific application, or obtain an availability SLA. Library contents, versions and policies can change."
+        "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change.",
+        "No usage limits, bandwidth caps, rate limits or paid tiers are published on the about page."
       ]
     },
     "sss": [
