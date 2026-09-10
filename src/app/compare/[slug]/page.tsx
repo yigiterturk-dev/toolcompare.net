@@ -10,6 +10,7 @@ import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { karsilastirmaSss } from "@/lib/sss";
 import { elleYazilmisSorular } from "@/lib/karsilastirma-notlari";
 import { merdiven, planEtiketi } from "@/lib/plan";
+import { linklenebilirAkranlar } from "@/lib/tarama";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
@@ -122,7 +123,10 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
   const ayrim = ayrimCumlesi(tool1, tool2);
 
   // Yalnizca akranlar: sitemap disi bir sayfaya link verilmemeli.
-  const ilgili = akranlar(tool1.slug).filter((t: Arac) => t.slug !== tool2.slug);
+  // Yalnizca sitemap'te olan cifte link verilir (bkz. lib/tarama.ts):
+  // sitemap disi sayfaya verilen link Googlebot'u oraya goturur ve
+  // budamayi anlamsiz kilar.
+  const ilgili = linklenebilirAkranlar(tool1, akranlar(tool1.slug)).filter((t: Arac) => t.slug !== tool2.slug);
 
   /*
     Karsilastirma satiri. Onceki surumde `type="score"` dali `{val1}%`

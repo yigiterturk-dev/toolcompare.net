@@ -3,6 +3,7 @@ import toolsData from '@/data/tools.json'
 import type { Arac } from '@/lib/arac'
 import { sitemapCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
 import { sitemapKategorileri } from '@/lib/categories'
+import { aracTaranmayaDeger, alternatifTaranmayaDeger } from '@/lib/tarama'
 import { aracIndekslenir, alternatifIndekslenir } from '@/lib/indeks'
 import { aracTarihi, turetilmisTarih, tarihNesnesi, TABAN_TARIH } from '@/lib/degisiklik'
 import fs from 'fs';
@@ -47,6 +48,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/top-picks',
     // /categories sitemap'te hic yoktu.
     '/categories',
+    // Karsilastirma giris kapisi. Footer her sayfadan buraya link
+    // veriyordu ama sayfa YOKTU (canlida 404) -- 2026-09-10'da eklendi.
+    '/compare',
     // Footer'dan link alan ama sitemap'te olmayan sayfalar.
     '/contact',
     '/privacy',
@@ -68,7 +72,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // KAPI: yalnizca incelenmis araclar. Incelenmemis kayit sadece ad +
   // fiyattan ibaret; Google bunlari "Discovered - currently not indexed"
   // diye geri ceviriyordu ve tarama butcesini yiyordu.
-  const toolRoutes = (toolsData as Arac[]).filter((t) => aracIndekslenir(t)).map((tool) => ({
+  // IKINCI KAPI (2026-09-10): indekslenebilir olmak sitemap'e girmeye
+  // yetmiyor. Olculdu: 1.234 adresin 355'inin (%29) ne cifte/araca OZGU
+  // bir icerigi ne de olculmus talebi vardi. Google'in "taramaya degmez"
+  // karari SITE basina veriliyor -- bos adres, hak eden sayfayi da
+  // bekletiyor. Elenen sayfa silinmez, noindex de olmaz; icerigi
+  // buyudugu an kapidan kendiliginden geri girer (bkz. lib/tarama.ts).
+  const toolRoutes = (toolsData as Arac[]).filter((t) => aracIndekslenir(t) && aracTaranmayaDeger(t)).map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
     lastModified: tarihNesnesi(aracTarihi(tool)),
     changeFrequency: 'weekly' as const,
@@ -94,6 +104,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Onceki hali elle yazilmis uc adresti ve biri (openai-vs-claude) var
   // olmayan bir slug'a isaret ediyordu -- Google'a 404 ilan ediliyordu.
   // Artik ciftler veriden uretiliyor; sinirlar src/lib/compare.ts'te.
+  // Kapi artik sitemapCiftleri()'nin ICINDE (bkz. lib/compare.ts): ayni
+  // liste kategori ve /top-picks linklerini de besliyor, tek yerden
+  // suzulmesi gerekiyordu.
   const comparisonRoutes = sitemapCiftleri().map((cift) => ({
     url: `${baseUrl}/compare/${cift}`,
     lastModified: tarihNesnesi(
@@ -116,7 +129,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // gelen ziyaretci zaten ayrilmaya karar vermis oluyor.
   // KAPI: bu sayfanin tek iddiasi "su fiyata su secenekler"; fiyat
   // dogrulanmamissa sayfanin soyleyecek sozu yok.
-  const alternativeRoutes = alternatifSayfasiOlanlar().filter((t) => alternatifIndekslenir(t)).map((t) => ({
+  const alternativeRoutes = alternatifSayfasiOlanlar()
+    .filter((t) => alternatifIndekslenir(t) && alternatifTaranmayaDeger(t))
+    .map((t) => ({
     url: `${baseUrl}/alternatives/${t.slug}`,
     lastModified: tarihNesnesi(aracTarihi(t)),
     changeFrequency: 'monthly' as const,

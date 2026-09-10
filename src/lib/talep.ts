@@ -54,3 +54,32 @@ export function talepGormus(slug?: string): boolean {
 export function gosterimSayisi(slug?: string): number {
   return slug ? GOSTERIM.get(slug) || 0 : 0;
 }
+
+/*
+  YOL BAZLI TALEP. Yukaridaki harita yalnizca /tools/ adreslerini
+  sayiyor, cunku ilk ihtiyac arac sayfasiydi. Ama tarama degeri kapisi
+  (bkz. lib/tarama.ts) /compare ve /alternatives adreslerini de sormak
+  zorunda: bir karsilastirma sayfasinin talebi, taraflarindan birinin
+  talebi DEGILDIR -- Asana gosterim aliyor diye "asana-vs-linear" da
+  aliyor demek degil.
+*/
+function yolToplami(): Map<string, number> {
+  const toplam = new Map<string, number>();
+  for (const satir of ((ham as { rows?: Satir[] }).rows || [])) {
+    const yol = (satir.page || "").replace(/^https?:\/\/[^/]+/, "").replace(/[?#].*$/, "").replace(/\/$/, "");
+    if (!yol) continue;
+    toplam.set(yol, (toplam.get(yol) || 0) + (satir.impressions || 0));
+  }
+  return toplam;
+}
+
+const YOL_GOSTERIM = yolToplami();
+
+export function yolTalepGormus(yol?: string): boolean {
+  if (!yol) return false;
+  return (YOL_GOSTERIM.get(yol.replace(/\/$/, "")) || 0) >= EN_AZ_GOSTERIM;
+}
+
+export function yolGosterimi(yol?: string): number {
+  return yol ? YOL_GOSTERIM.get(yol.replace(/\/$/, "")) || 0 : 0;
+}

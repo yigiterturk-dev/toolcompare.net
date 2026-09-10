@@ -23,6 +23,7 @@ import toolsData from "@/data/tools.json"
 import type { Arac } from "@/lib/arac";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { alternatifOzeti, ilkUcretliBasamak, planEtiketi } from "@/lib/plan";
+import { ciftTaranmayaDeger } from "@/lib/tarama";
 import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
@@ -224,12 +225,18 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
                   </p>
                 ) : null}
                 <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                  <Link
-                    href={`/compare/${kanonikSlug(tool.slug, alt.slug)}`}
-                    className="text-accent underline underline-offset-4"
-                  >
-                    {tool.name} vs {alt.name} →
-                  </Link>
+                  {/* Karsilastirma linki yalnizca o cift sitemap'teyse
+                      verilir (bkz. lib/tarama.ts): olculdu, alternatif
+                      sayfalari sitemap disi ciftlere 1.699 link
+                      veriyordu ve budamayi anlamsiz kiliyordu. */}
+                  {ciftTaranmayaDeger(tool, alt) ? (
+                    <Link
+                      href={`/compare/${kanonikSlug(tool.slug, alt.slug)}`}
+                      className="text-accent underline underline-offset-4"
+                    >
+                      {tool.name} vs {alt.name} →
+                    </Link>
+                  ) : null}
                   <a
                     href={gitLinki(alt.slug)}
                     target="_blank"

@@ -20,8 +20,9 @@
 import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
 import { ilkUcretliBasamak, planEtiketi } from "./plan.ts";
+import { ciftTaranmayaDeger, alternatifTaranmayaDeger } from "./tarama.ts";
 import type { KriterKumesi } from "./kriterler.ts";
-import { ciftIndekslenir, aracIndekslenir, fiyatiDogrulanmis, kriterliMi } from "./indeks.ts";
+import { ciftIndekslenir, aracIndekslenir, alternatifIndekslenir, fiyatiDogrulanmis, kriterliMi } from "./indeks.ts";
 import { islevi, ayniIslev } from "./islev.ts";
 
 export { kriterAyrimi, ayrimCumlesi } from "./kriter-ayrimi.ts";
@@ -162,6 +163,11 @@ export function oneCikanCiftler(): { slug: string; label: string }[] {
     // sitemap disinda kalan (ve indekslenmeyen) bir sayfaya link vermektir.
     if (!ayniIslev(a, b)) continue;
     if (!ciftIndekslenir(t1, t2)) continue;
+    /* Ve tarama degeri kapisindan da gecer: anasayfadan one cikarilan
+       cift, sitemap'te olmayan bir sayfaya link olamaz. Bu kapi bir
+       cifti dusuruyorsa cozum kapiyi gevsetmek degil, o cifte ozgu
+       icerik yazmaktir (elle not ya da plan merdiveni). */
+    if (!ciftTaranmayaDeger(t1, t2)) continue;
     sonuc.push({ slug: kanonikSlug(a, b), label: `${t1.name} vs ${t2.name}` });
   }
   return sonuc;
@@ -204,7 +210,12 @@ export function alternatifSayfasiOlanlar(): Arac[] {
  * alternatifSayfasiOlanlar() ile ayni olcut.
  */
 export function alternatifSayfasiVar(slug: string): boolean {
-  return akranlar(slug).length >= EN_AZ_ALTERNATIF;
+  if (akranlar(slug).length < EN_AZ_ALTERNATIF) return false;
+  /* Sitemap disi bir alternatif sayfasina link vermek, budamayi
+     anlamsiz kilar (ayni gerekce: sitemapCiftleri). Olculdu: sitemap
+     disi 261 alternatif sayfasina 316 ic link gidiyordu. */
+  const arac = araclar.find((t) => t.slug === slug);
+  return alternatifIndekslenir(arac) && alternatifTaranmayaDeger(arac);
 }
 
 /**
@@ -272,9 +283,19 @@ let _sitemapCiftleri: string[] | null = null;
 export function sitemapCiftleri(): string[] {
   if (_sitemapCiftleri) return _sitemapCiftleri;
   const harita = new Map(araclar.map((t) => [t.slug, t]));
+  /*
+    IKI KAPI. Birincisi kanit kapisi (ciftIndekslenir): iki tarafin da
+    fiyati dogrulanmis mi, gercek bir fark var mi. Ikincisi tarama
+    degeri kapisi (ciftTaranmayaDeger, 2026-09-10): bu sayfada bu CIFTE
+    OZGU bir sey var mi, ya da Google zaten gosteriyor mu. Ikincisi
+    olcumle geldi: 1.234 adresin 355'inin ne ozgu icerigi ne talebi
+    vardi ve "taramaya degmez" karari SITE basina veriliyor.
+    Bu liste sitemap'in yani sira kategori ve /top-picks linklerini de
+    besliyor -- kapi burada oldugu icin hepsi ayni cevabi aliyor.
+  */
   _sitemapCiftleri = karsilastirmaCiftleri().filter((c) => {
     const [a, b] = c.split("-vs-");
-    return ciftIndekslenir(harita.get(a), harita.get(b));
+    return ciftIndekslenir(harita.get(a), harita.get(b)) && ciftTaranmayaDeger(harita.get(a), harita.get(b));
   });
   return _sitemapCiftleri;
 }
@@ -318,7 +339,9 @@ export function kumeIcindekiCiftler(sluglar: string[], adet = 8): { slug: string
 export function indekslenebilirAkranlar(slug: string, adet: number = AKRAN_ADEDI): Arac[] {
   const arac = araclar.find((t) => t.slug === slug);
   if (!arac) return [];
-  return akranlar(slug, adet).filter((t) => ciftIndekslenir(arac, t));
+  /* Tarama degeri kapisi burada da uygulanir: sitemap disi bir cifte
+     link vermek budamayi anlamsiz kilar (bkz. lib/tarama.ts). */
+  return akranlar(slug, adet).filter((t) => ciftIndekslenir(arac, t) && ciftTaranmayaDeger(arac, t));
 }
 
 /**
@@ -350,8 +373,18 @@ export function karsilastirmaAkranlari(slug: string): Arac[] {
     if (t.slug === slug || kume.has(t.slug)) continue;
     if (akranlar(t.slug).some((a) => a.slug === slug)) kume.set(t.slug, t);
   }
+  /*
+    IKINCI KAPI (olcum, 2026-09-10): `ciftIndekslenir` tek basina 1.194
+    sitemap DISI karsilastirma sayfasina 9.710 ic link uretiyordu.
+    Googlebot linki sitemap'ten cok daha fazla takip eder; yani sitemap'i
+    688 adrese budamak, site ic linkleriyle 1.298 karsilastirmayi
+    bagirirken hicbir ise yaramiyordu. Kural artik tek: SITEMAP'TE OLANI
+    LINKLE. Boylece sitemap sayfalari yetim kalmaz (olculdu: 0 yetim) ve
+    sablon kopyalari tarama butcesi yemez. Icerigi buyuyen cift kapidan
+    kendiliginden geri girer.
+  */
   return [...kume.values()]
-    .filter((t) => ciftIndekslenir(arac, t))
+    .filter((t) => ciftIndekslenir(arac, t) && ciftTaranmayaDeger(arac, t))
     .sort(siralamaKarsilastir);
 }
 
