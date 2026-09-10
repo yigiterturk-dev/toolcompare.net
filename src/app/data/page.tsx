@@ -199,6 +199,16 @@ export default function DataPage() {
               plan, and its billing model. A <code>basePrice</code> of <code>0</code> means a free tier or an
               unpriceable model, never &quot;free software&quot;.
             </li>
+            <li>
+              <code>planlar</code> — the vendor&apos;s published plan ladder, not just its entry price: each
+              step carries <code>ad</code> (plan name), <code>aylik</code> (monthly figure),{" "}
+              <code>birim</code> (<code>kisi-basina</code> per seat, or <code>sabit</code> flat),{" "}
+              <code>faturalama</code> (annual or monthly), and — this is the part worth citing —{" "}
+              <code>kaynakSatiri</code>, the exact sentence the number was read from, with{" "}
+              <code>kaynakUrl</code>. Every figure is traceable to a line an editor recorded from the
+              vendor&apos;s own pricing page. Percentage cuts, per-transaction fees, hourly usage rates and
+              hardware prices are deliberately excluded: they are not plan steps.
+            </li>
           </ul>
 
           <h3>

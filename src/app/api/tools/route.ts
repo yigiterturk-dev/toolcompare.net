@@ -30,6 +30,12 @@ const COMPACT_ALANLAR = [
   "fiyatModeli",
   "isFlat",
   "fiyatKontrolTarihi",
+  /* Plan merdiveni: veri kumesinin en atif alabilir parcasi. Tek bir
+     "baslangic fiyati" degil, saticinin yayimladigi basamaklarin tamami
+     -- her biri okundugu cumleyle birlikte (bkz. scripts/plan-merdiveni.mjs).
+     Fiyat iddiasi icin kaynak arayan bir yazarin/asistanin isine yarayan
+     sey bu; `basePrice` tek basina degil. */
+  "planlar",
 ] as const;
 
 type Kayit = Record<string, unknown>;

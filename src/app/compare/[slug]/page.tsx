@@ -9,6 +9,7 @@ import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ay
 import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { karsilastirmaSss } from "@/lib/sss";
 import { elleYazilmisSorular } from "@/lib/karsilastirma-notlari";
+import { merdiven, planEtiketi } from "@/lib/plan";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
@@ -471,6 +472,69 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
               This page compares what we can verify — pricing and documented capabilities.
             </span>
           </p>
+        )}
+
+        {/* ----------------------------------------------------------
+            PLAN MERDIVENI
+
+            NEDEN BURADA: bu sayfa turunun ilk-20'ye girme orani
+            /tools'un 7 kati, ama 519 karsilastirmanin 413'u hic
+            gosterim almiyor -- sayfalar birbirinin ayni oldugu icin.
+            Merdiven her cifte FARKLI rakam koyar ve tek bir uydurma
+            icermez: sayilar saticinin fiyat sayfasindan okunup kanit
+            kaydina yazilmis cumlelerden geliyor, cumlenin kendisi de
+            satirin altinda duruyor.
+
+            Tek taraf merdivenliyse yine basilir: "obur taraf fiyat
+            yayimlamiyor" bilgisi de okura lazim olan seydir.
+        ---------------------------------------------------------- */}
+        {[tool1, tool2].some((t) => merdiven(t as never).length > 0) && (
+          <section className="mt-12 border-t border-line pt-10">
+            <h2 className="text-lg font-semibold">Published plans, side by side</h2>
+            <p className="mt-2 text-sm text-ink-soft">
+              Every figure below was read from the vendor&apos;s own pricing page and is shown with the
+              sentence it came from. Where a vendor publishes no plan prices, we say so rather than guess.
+            </p>
+
+            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+              {[tool1, tool2].map((t: Arac) => {
+                const basamaklar = merdiven(t as never);
+                return (
+                  <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
+                    <h3 className="text-base font-semibold">{t.name}</h3>
+                    {basamaklar.length === 0 ? (
+                      <p className="mt-3 text-sm text-ink-soft">
+                        No published plan prices verified. {t.name} either quotes on request or renders its
+                        prices in a way we could not read from the pricing page.
+                      </p>
+                    ) : (
+                      <ol className="mt-3 list-none space-y-3 p-0">
+                        {basamaklar.map((p) => (
+                          <li key={`${p.ad}-${p.aylik}`}>
+                            <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                              <span className="text-sm font-medium text-ink">{p.ad}</span>
+                              <span className="text-sm tabular-nums text-ink">{planEtiketi(p)}</span>
+                            </div>
+                            <p className="mt-1 text-xs leading-relaxed text-ink-muted">{p.kaynakSatiri}</p>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
+                    {basamaklar[0]?.kaynakUrl ? (
+                      <a
+                        href={basamaklar[0].kaynakUrl}
+                        rel="nofollow noopener"
+                        target="_blank"
+                        className="mt-3 inline-flex text-xs text-ink-muted underline underline-offset-2 hover:text-accent"
+                      >
+                        {t.name} pricing page
+                      </a>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         )}
 
         {/* ---------- SSS ---------- */}

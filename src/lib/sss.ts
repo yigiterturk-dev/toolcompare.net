@@ -11,6 +11,7 @@
  */
 import { fiyatDurumu, type Arac as FiyatArac } from "./fiyat.ts";
 import { ayrimCumlesi } from "./kriter-ayrimi.ts";
+import { merdivenCumlesi, type Plan } from "./plan.ts";
 
 /**
  * `kaynak` yalnizca ELLE yazilmis maddelerde dolu olur
@@ -25,7 +26,9 @@ export type Soru = {
 
 type Arac = FiyatArac & {
   name: string;
+  slug?: string;
   kriterler?: Record<string, boolean | undefined>;
+  planlar?: Plan[];
 };
 
 const UCRETSIZ_MODELLER = new Set(["bedava", "ucretsiz-katman"]);
@@ -34,6 +37,17 @@ function ucretsizCumlesi(t: Arac): string {
   const m = t.fiyatModeli;
   if (m === "bedava") return `${t.name} is free`;
   if (m === "ucretsiz-katman") return `${t.name} has a free tier with limits`;
+
+  /*
+    `fiyatModeli` bos olsa bile kanit ucretsiz plandan bahsediyor
+    olabilir. Linear'da tam boyle oldu: kanit "Free: unlimited members,
+    2 teams, 250 issues" diyordu ama sayfa "Linear'in ucretsiz plani
+    dogrulanmadi" basiyordu -- kanit ekranin uc santim yukarisindayken.
+    Merdivende $0 basamagi varsa o basamak cevabin kendisidir.
+  */
+  const bedava = (t.planlar ?? []).find((p) => p.aylik === 0);
+  if (bedava) return `${t.name} publishes a free plan (${bedava.ad})`;
+
   if (!m) return `we have not verified a free plan for ${t.name}`;
   return `${t.name} has no free plan listed`;
 }
@@ -69,7 +83,24 @@ export function karsilastirmaSss(a: Arac, b: Arac): Soru[] {
     });
   }
 
-  // 3) Fark: yalnizca olculmus kriter ayrimi varsa.
+  /*
+    3) Plan merdiveni: "ilk ucretli basamak" sorusu, "baslangic fiyati"
+    sorusundan farkli ve daha ise yarar -- $0 plani olan bir aracin
+    baslangic fiyati $0'dir ama kimse onu sormuyor. Cumle yalnizca IKI
+    tarafta da ucretli basamak varsa uretilir (bkz. lib/plan.ts).
+  */
+  const merdivenC = merdivenCumlesi(
+    { name: a.name, slug: a.slug ?? "", planlar: a.planlar },
+    { name: b.name, slug: b.slug ?? "", planlar: b.planlar }
+  );
+  if (merdivenC) {
+    sorular.push({
+      soru: `Which is cheaper once you start paying, ${a.name} or ${b.name}?`,
+      cevap: merdivenC,
+    });
+  }
+
+  // 4) Fark: yalnizca olculmus kriter ayrimi varsa.
   const ayrim = ayrimCumlesi(a as never, b as never);
   if (ayrim) {
     sorular.push({
