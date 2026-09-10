@@ -8,6 +8,7 @@ import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ayrimCumlesi } from "@/lib/compare";
 import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { karsilastirmaSss } from "@/lib/sss";
+import { elleYazilmisSorular } from "@/lib/karsilastirma-notlari";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
@@ -144,7 +145,15 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
     asagida GORUNUR olarak da basiliyor -- semaya yalnizca sayfada
     gercekten duran soru konur.
   */
-  const sorular = karsilastirmaSss(tool1, tool2);
+  /*
+    Elle yazilmis sorular ONCE gelir: bunlar sayfanin GSC'de fiilen
+    gosterim aldigi sorgunun ("woocommerce teachable integration" gibi)
+    cevabi, turetilmis fiyat kiyasi degil.
+  */
+  const sorular = [
+    ...elleYazilmisSorular(kanonikSlug(tool1.slug, tool2.slug)),
+    ...karsilastirmaSss(tool1, tool2),
+  ];
 
   // Kirinti semasi bu sayfa turunde de yoktu.
   const semalar = [
@@ -474,7 +483,22 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
               {sorular.map((q) => (
                 <div key={q.soru}>
                   <dt className="text-sm font-medium text-ink">{q.soru}</dt>
-                  <dd className="mt-1.5 text-sm text-ink-soft">{q.cevap}</dd>
+                  <dd className="mt-1.5 text-sm text-ink-soft">
+                    {q.cevap}
+                    {q.kaynak ? (
+                      <>
+                        {" "}
+                        <a
+                          href={q.kaynak.url}
+                          rel="nofollow noopener"
+                          target="_blank"
+                          className="whitespace-nowrap text-xs text-ink-muted underline underline-offset-2 hover:text-accent"
+                        >
+                          Source: {q.kaynak.etiket}
+                        </a>
+                      </>
+                    ) : null}
+                  </dd>
                 </div>
               ))}
             </dl>

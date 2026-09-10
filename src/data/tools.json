@@ -36285,6 +36285,18 @@
       {
         "soru": "Is there a free or community edition of OpenShift?",
         "cevap": "Red Hat offers a free Developer Sandbox (a minimal, preconfigured environment), a 60-day trial of the self-managed Container Platform on your own infrastructure, and a trial of OpenShift Dedicated. The community upstream distribution is OKD: free, Apache-licensed, community-supported and not covered by Red Hat support."
+      },
+      {
+        "soru": "What does Red Hat's OpenShift subscription guide say you actually have to count?",
+        "cevap": "Two bases, and they are not nodes in the way most people assume. A core-pair is 2 physical cores, or 4 vCPUs — on bare metal it always means physical cores regardless of hyperthreading, so 2 hyperthreaded cores presenting as 4 vCPUs are still one core-pair, and on AWS, Azure or GCP 4 vCPUs are always one core-pair. Core-pair subscriptions are counted at the cluster level, so a single subscription can span several instances, VMs and physical servers. The alternative base is the bare-metal node subscription: one per physical server, and it can never span more than one server. Add-on accelerators (GPUs, TPUs, DPUs, FPGAs) are counted separately by physical device, and every subscription must pick an SLA — Standard 8x5 or Premium 24x7."
+      },
+      {
+        "soru": "Do OpenShift control plane and infrastructure nodes need their own subscriptions?",
+        "cevap": "No, and this is the line item people over-buy. Entitlements for control plane nodes are included in self-managed OpenShift subscriptions and are not counted when you size your purchase. Infrastructure nodes — the ones running cluster support pods such as the HAProxy-based ingress load balancer — are also included, on one condition: no user application pods may run on them. Only compute nodes, where application pods actually run, need to be counted. They may still cost you in infrastructure spend; they just do not consume OpenShift entitlements."
+      },
+      {
+        "soru": "Is there a product called \"OpenShift Server\"?",
+        "cevap": "No. Red Hat does not sell anything under that name, which is why searches for it land on generic pages. The self-managed line — the thing you install on your own servers — is sold as four editions: OpenShift Kubernetes Engine, OpenShift Container Platform, OpenShift Virtualization Engine (bare-metal only, KVM-based) and OpenShift Platform Plus (x86 clusters only). The word people usually mean by \"server\" maps to a compute node: an instance of RHEL or RHEL CoreOS where application pods run, and the only node type that consumes a subscription. The other route is the managed cloud services, which Red Hat and its cloud partners operate for you."
       }
     ]
   },
@@ -38104,7 +38116,7 @@
     "verdict": "Astra DB is useful when the workload genuinely fits Cassandra or its Data API, but managed convenience comes with guardrails and several billable dimensions; validate the data model, burst behavior, consistency and IBM subscription path with production-shaped tests before migration.",
     "evidence": {
       "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "reviewedAt": "2026-09-10",
       "sources": [
         {
           "label": "DataStax Docs — Database limits",
@@ -38169,12 +38181,29 @@
             "continuation positioning for customers",
             "IBM ownership context"
           ]
+        },
+        {
+          "label": "IBM — DataStax product page (datastax.com redirects here)",
+          "url": "https://www.ibm.com/products/datastax",
+          "checkedAt": "2026-09-10",
+          "supports": [
+            "datastax.com 301s to ibm.com/products/datastax",
+            "product branded DataStax, an IBM company",
+            "support.datastax.com and its /s/ portal path redirect to IBM MySupport",
+            "Hyper-Converged Database delivered as DataStax with IBM watsonx.data Premium edition"
+          ]
         }
       ],
       "limitations": [
         "Official DataStax and IBM documentation for Astra limits, billing, pricing and ownership was reviewed; ToolCompare did not create a database, confirm every region or current plan, benchmark CQL/Data API/vector search, test APIs/SSO/drivers, exhaust credits, trigger hibernation, request a PCU, configure private networking or customer keys, measure consistency, fail a region, restore backups, inspect an IBM contract or migrate Cassandra data. Rates and transition details can change."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "Where do you get DataStax support now that it is part of IBM?",
+        "cevap": "Through IBM, and the old routes now forward there. datastax.com redirects to ibm.com/products/datastax, where the product is branded \"DataStax, an IBM company\", and the former support portal at support.datastax.com — including its /s/ case path — redirects to IBM MySupport (all checked 10 September 2026). Practically this means support tickets, entitlements and account contacts follow IBM's process rather than the standalone DataStax one, and the on-premise and private-cloud line, Hyper-Converged Database, is now delivered as DataStax with IBM watsonx.data Premium edition. Bookmarks and runbooks pointing at the old domain still resolve, but they land in IBM's system."
+      }
+    ]
   },
   {
     "slug": "cloudant",

@@ -12,7 +12,16 @@
 import { fiyatDurumu, type Arac as FiyatArac } from "./fiyat.ts";
 import { ayrimCumlesi } from "./kriter-ayrimi.ts";
 
-export type Soru = { soru: string; cevap: string };
+/**
+ * `kaynak` yalnizca ELLE yazilmis maddelerde dolu olur
+ * (bkz. lib/karsilastirma-notlari.ts): turetilmis sorularin kaynagi zaten
+ * aracin kendi kanit kaydi, elle yazilan entegrasyon cevabinin degil.
+ */
+export type Soru = {
+  soru: string;
+  cevap: string;
+  kaynak?: { etiket: string; url: string };
+};
 
 type Arac = FiyatArac & {
   name: string;
