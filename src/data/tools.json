@@ -238,7 +238,7 @@
         "ad": "Pro",
         "aylik": 8.75,
         "birim": "kisi-basina",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Pro $8.75/user/month monthly or $7.25/user/month annual: unlimited history and apps, group huddles",
         "kaynakUrl": "https://slack.com/pricing"
       },
@@ -246,7 +246,7 @@
         "ad": "Business+",
         "aylik": 18,
         "birim": "kisi-basina",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Business+ $18/user/month monthly or $15/user/month annual",
         "kaynakUrl": "https://slack.com/pricing"
       }
@@ -673,7 +673,7 @@
       {
         "ad": "Collab seat",
         "aylik": 3,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Professional: full seat $16/mo, Dev seat $12/mo, Collab seat $3/mo; 3,000 AI credits/mo on full seat",
         "kaynakUrl": "https://www.figma.com/pricing/"
@@ -689,7 +689,7 @@
       {
         "ad": "Dev seat",
         "aylik": 12,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Professional: full seat $16/mo, Dev seat $12/mo, Collab seat $3/mo; 3,000 AI credits/mo on full seat",
         "kaynakUrl": "https://www.figma.com/pricing/"
@@ -1149,7 +1149,7 @@
       {
         "ad": "Lite",
         "aylik": 129,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Lite $129/month: 5 projects, 1 user (+2 at $40/mo), 750 tracked keywords, 100,000 crawl credits, 6 months history",
         "kaynakUrl": "https://ahrefs.com/pricing"
@@ -1157,7 +1157,7 @@
       {
         "ad": "Standard",
         "aylik": 249,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Standard $249/month: 20 projects, 1 user (+5 at $60/mo), 2,000 keywords, 500,000 crawl credits, 2 years history",
         "kaynakUrl": "https://ahrefs.com/pricing"
@@ -3419,7 +3419,7 @@
       {
         "ad": "Creator",
         "aylik": 24,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Creator $24/month: 30 hours/month, 800 AI credits, 4K, 1 TB, up to 3 seats",
         "kaynakUrl": "https://www.descript.com/pricing"
@@ -4450,6 +4450,14 @@
         "kaynakUrl": "https://trello.com/pricing"
       },
       {
+        "ad": "Standard",
+        "aylik": 6,
+        "birim": "kisi-basina",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Standard: '$6 billed monthly', lower per user/month if billed annually — unlimited boards, AI, advanced checklists, card mirroring, custom fields, list colors, collapsible lists, unlimited storage at 250MB/file, 1,000 Workspace command runs per month, single board guests, saved searches",
+        "kaynakUrl": "https://trello.com/pricing"
+      },
+      {
         "ad": "Premium",
         "aylik": 10,
         "birim": "kisi-basina",
@@ -4808,6 +4816,14 @@
       }
     ],
     "planlar": [
+      {
+        "ad": "Fin AI agent",
+        "aylik": 0.99,
+        "birim": "kisi-basina",
+        "faturalama": null,
+        "kaynakSatiri": "Fin AI agent $0.99 per outcome",
+        "kaynakUrl": "https://www.intercom.com/pricing"
+      },
       {
         "ad": "Essential",
         "aylik": 29,
@@ -9065,7 +9081,7 @@
       {
         "ad": "Creator",
         "aylik": 33,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Creator $33/month, $390/year",
         "kaynakUrl": "https://kit.com/pricing"
@@ -9907,7 +9923,7 @@
       {
         "ad": "Core",
         "aylik": 20,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "yillik",
         "kaynakSatiri": "Core $20/month or $17/month billed annually: AI integrations, more free agent usage, $20 towards most powerful models, plan mode, unlimited workspaces, removes 'Made with Replit' badge",
         "kaynakUrl": "https://replit.com/pricing"
@@ -9915,7 +9931,7 @@
       {
         "ad": "Pro",
         "aylik": 100,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "yillik",
         "kaynakSatiri": "Pro $100/month or $95/month billed annually: 10 parallel agents, premium support, even more free agent usage, $100 towards most powerful models, up to 15 collaborators, invite up to 50 viewers, database rollback up to 28 days",
         "kaynakUrl": "https://replit.com/pricing"
@@ -11233,7 +11249,7 @@
       {
         "ad": "Basic",
         "aylik": 39,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Basic $39/month, Growth $80/month first seat and $55 second, Business $150/month first seat and $85 for seats 2-5",
         "kaynakUrl": "https://www.flutterflow.io/pricing"
@@ -11241,7 +11257,7 @@
       {
         "ad": "Growth",
         "aylik": 80,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Basic $39/month, Growth $80/month first seat and $55 second, Business $150/month first seat and $85 for seats 2-5",
         "kaynakUrl": "https://www.flutterflow.io/pricing"
@@ -11249,7 +11265,7 @@
       {
         "ad": "Business",
         "aylik": 150,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Basic $39/month, Growth $80/month first seat and $55 second, Business $150/month first seat and $85 for seats 2-5",
         "kaynakUrl": "https://www.flutterflow.io/pricing"
@@ -12405,6 +12421,14 @@
       "You want a simple interface; it is dense and takes learning"
     ],
     "planlar": [
+      {
+        "ad": "Standard",
+        "aylik": 10,
+        "birim": "kisi-basina",
+        "faturalama": null,
+        "kaynakSatiri": "Standard $10 first user then $99/additional user, max 5",
+        "kaynakUrl": "https://newrelic.com/pricing"
+      },
       {
         "ad": "Pro",
         "aylik": 349,
@@ -18922,15 +18946,15 @@
         "ad": "Starter",
         "aylik": 29,
         "birim": "sabit",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Starter $29/mo monthly or $18/mo billed annually, 12 minutes of video/month",
         "kaynakUrl": "https://www.synthesia.io/pricing"
       },
       {
         "ad": "Creator",
         "aylik": 89,
-        "birim": "sabit",
-        "faturalama": "yillik",
+        "birim": "kisi-basina",
+        "faturalama": "aylik",
         "kaynakSatiri": "Creator $89/mo monthly or $64/mo annually, 30 minutes/month",
         "kaynakUrl": "https://www.synthesia.io/pricing"
       }
@@ -19028,7 +19052,7 @@
       {
         "ad": "Creator",
         "aylik": 29,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Creator $29/mo: 600 credits, videos up to 30 mins, 1080p export, extended Avatar IV generation, fast processing, unlimited photo avatars, watermark removal, voice cloning, 175+ languages, credit rollovers",
         "kaynakUrl": "https://www.heygen.com/pricing"
@@ -21276,7 +21300,7 @@
         "ad": "Starter Suite",
         "aylik": 25,
         "birim": "kisi-basina",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Starter Suite $25 USD per user per month, billed monthly or annually: lead, account, contact and opportunity management, built-in sales flows and lead routing, AI email, event and contact sync, dynamic email marketing and analytics",
         "kaynakUrl": "https://www.salesforce.com/editions-pricing/sales-cloud/"
       },
@@ -22897,7 +22921,7 @@
       {
         "ad": "Pro",
         "aylik": 25,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "yillik",
         "kaynakSatiri": "Pro $25/month ($20 annually): 50,000 MRUs included, $0.02 per extra user/month, MFA, enterprise SSO, no branding",
         "kaynakUrl": "https://clerk.com/pricing"
@@ -23354,7 +23378,7 @@
       {
         "ad": "Enterprise",
         "aylik": 400,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Enterprise $400/month with ~2,000 resources, unlimited users, $0.365 per resource, audit logs, drift detection",
         "kaynakUrl": "https://www.pulumi.com/pricing/"
@@ -23473,7 +23497,7 @@
       {
         "ad": "Responder license",
         "aylik": 34,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "yillik",
         "kaynakSatiri": "Responder license $34 per month, or $29 per license per month billed annually; unlimited team members are free and only responders need a license",
         "kaynakUrl": "https://betterstack.com/pricing"
@@ -24254,7 +24278,7 @@
       {
         "ad": "Team",
         "aylik": 16,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "yillik",
         "kaynakSatiri": "Team $16/mo billed annually ($192/yr): everything in Solo plus 3 seats scaling to 50 with graduated seat pricing ($20/seat), team roles and permissions, 20 kits, 2M pageviews, 400 icon uploads, 6 GB bandwidth",
         "kaynakUrl": "https://fontawesome.com/plans"
@@ -24473,7 +24497,7 @@
       {
         "ad": "Agency Pro",
         "aylik": 497,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Agency Pro $497/month or $4,970/year: SaaS Mode, automated sub-account creation, rebill phone and email with markup, user/agent reporting, advanced API access",
         "kaynakUrl": "https://www.gohighlevel.com/pricing"
@@ -24953,7 +24977,7 @@
         "ad": "Basic",
         "aylik": 39,
         "birim": "sabit",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Basic $39/mo monthly or $29/mo annual",
         "kaynakUrl": "https://www.spyfu.com/mainpurchase/?page=default"
       },
@@ -24961,7 +24985,7 @@
         "ad": "Pro",
         "aylik": 119,
         "birim": "sabit",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Pro $119/mo monthly or $89/mo annual",
         "kaynakUrl": "https://www.spyfu.com/mainpurchase/?page=default"
       },
@@ -24969,7 +24993,7 @@
         "ad": "Team",
         "aylik": 249,
         "birim": "sabit",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Team $249/mo monthly or $187/mo annual",
         "kaynakUrl": "https://www.spyfu.com/mainpurchase/?page=default"
       }
@@ -25190,7 +25214,7 @@
       {
         "ad": "Professional",
         "aylik": 103,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "yillik",
         "kaynakSatiri": "Professional $103/month billed yearly, $129 month to month: 3 seats and 5 sites, extra seats $29/month, 40 articles and 250 audit pages a month, content calendar, internal linking suggestions, AI crawler monitoring, Perplexity added to AI Visibility, Content Guard on 75 pages",
         "kaynakUrl": "https://www.frase.io/pricing"
@@ -25198,7 +25222,7 @@
       {
         "ad": "Scale",
         "aylik": 239,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "yillik",
         "kaynakSatiri": "Scale $239/month billed yearly, $299 month to month: 5 seats and up to 10 domains, extra seats $29/month, 100 articles and 1,000 audit pages a month, Content Guard on 300 pages, Claude and Gemini added to AI Visibility, client-ready exportable reports",
         "kaynakUrl": "https://www.frase.io/pricing"
@@ -46486,7 +46510,7 @@
         "ad": "Pro",
         "aylik": 8.99,
         "birim": "sabit",
-        "faturalama": "yillik",
+        "faturalama": "aylik",
         "kaynakSatiri": "Pro $8.99/month monthly or $6.99/month billed annually",
         "kaynakUrl": "https://workflowy.com/pricing/"
       }
@@ -47323,7 +47347,7 @@
       {
         "ad": "Creator",
         "aylik": 69,
-        "birim": "sabit",
+        "birim": "kisi-basina",
         "faturalama": "aylik",
         "kaynakSatiri": "Creator $69/month monthly, or $56.58/month paid annually saving up to $149 a year: adds webinars, website builder, course creator for up to 500 students and premium newsletter subscriptions",
         "kaynakUrl": "https://www.getresponse.com/pricing"

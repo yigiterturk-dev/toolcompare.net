@@ -19,6 +19,7 @@
 
 import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
+import { ilkUcretliBasamak, planEtiketi } from "./plan.ts";
 import type { KriterKumesi } from "./kriterler.ts";
 import { ciftIndekslenir, aracIndekslenir, fiyatiDogrulanmis, kriterliMi } from "./indeks.ts";
 import { islevi, ayniIslev } from "./islev.ts";
@@ -217,6 +218,25 @@ export function farkCumlesi(asil: Arac, alt: Arac): string {
   // dogrulanmamis fiyat 0 sayiliyor ve "cheaper to start ($0 vs $39/mo)"
   // gibi yanlis cumleler uretiyordu (Stripe, AWS gibi kullanima gore
   // fiyatlanan araclar icin).
+  /*
+    MERDIVEN VARSA O KAZANIR. Olculmus bir celiski yuzunden: Trello icin
+    bu cumle "cheaper to start ($5/user/mo...)" derken hemen altindaki
+    satir "First paid step: Standard at $6/user/mo" diyordu. $5 elle
+    girilmis eski `basePrice` alanindan, $6 ise saticinin kanit kaydina
+    yazilmis cumlesinden geliyordu. Ayni sayfada iki rakam, okurun
+    guvenini bu sitenin tek varligi olan seyden -- dogruluktan -- eder.
+    Kaynagini gosterebilen rakam tercih edilir.
+  */
+  const ma = ilkUcretliBasamak(asil as never);
+  const mb = ilkUcretliBasamak(alt as never);
+  if (ma && mb && ma.birim === mb.birim) {
+    const eA = planEtiketi(ma);
+    const eB = planEtiketi(mb);
+    if (mb.aylik < ma.aylik) return `cheaper to start (${eB} vs ${eA})`;
+    if (mb.aylik > ma.aylik) return `pricier to start (${eB} vs ${eA})`;
+    return `the same starting price (${eB})`;
+  }
+
   const da = fiyatDurumu(asil);
   const db = fiyatDurumu(alt);
   if (da.karsilastirilabilir && db.karsilastirilabilir) {

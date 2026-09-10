@@ -62,7 +62,9 @@ const FIYAT = String.raw`(?:US)?\$\s?(?<fiyat>\d{1,3}(?:,\d{3})*(?:\.\d{1,2})?)`
 const KALIP = new RegExp(
   String.raw`^(?<ad>[A-Z][A-Za-z0-9+&.'’/ -]{1,44}?)` +
     String.raw`\s*(?:\((?:[^)]*)\))?\s*` +
-    String.raw`(?:—|-|:)?\s*` +
+    /* Tirnak: Trello "Standard: '$6 billed monthly'" satirinda fiyat tek
+       tirnak icindeydi ve basamak hic ayiklanmiyordu. */
+    String.raw`(?:—|-|:)?\s*['"“‘]?\s*` +
     String.raw`(?:starts? at\s+|starting at\s+|from\s+|listed at\s+|is\s+)?` +
     FIYAT +
     String.raw`(?<kuyruk>[^,;]{0,60})`,
@@ -89,21 +91,56 @@ function ilkEsleyen(kuyruk, satir, coz) {
   return coz(kuyruk) ?? coz(satir);
 }
 
-function birimiCozTek(alan) {
-  /* Kisi birimi satici sozlugune gore degisiyor: Sketch "editor", Whereby
-     "host", Deel "contractor", Notion "member". Hepsi ayni sey demek. */
-  const KISI = String.raw`user|seat|member|person|editor|host|contractor|agent|admin|author|creator|employee|licen[cs]e`;
-  if (new RegExp(String.raw`\/\s?(?:${KISI})\b`, "i").test(alan)) return "kisi-basina";
-  if (new RegExp(String.raw`\b(?:${KISI})\s?\/\s?(?:mo|month)\b`, "i").test(alan)) return "kisi-basina";
-  if (new RegExp(String.raw`\bper (?:${KISI})\b`, "i").test(alan)) return "kisi-basina";
-  if (/\/\s?(?:mo|month)\b/i.test(alan) || /\bper month\b/i.test(alan) || /\bmonthly\b/i.test(alan)) return "sabit";
+/* Kisi birimi satici sozlugune gore degisiyor: Sketch "editor", Whereby
+   "host", Deel "contractor", Notion "member". Hepsi ayni sey demek. */
+const KISI = String.raw`user|seat|member|person|editor|host|contractor|agent|admin|author|creator|employee|licen[cs]e`;
+
+function kisiBasinaMi(alan) {
+  return (
+    new RegExp(String.raw`\/\s?(?:${KISI})\b`, "i").test(alan) ||
+    new RegExp(String.raw`\b(?:${KISI})\s?\/\s?(?:mo|month)\b`, "i").test(alan) ||
+    new RegExp(String.raw`\bper (?:${KISI})\b`, "i").test(alan) ||
+    /* Figma "full seat $16/mo": birim kelimesi rakamin HEMEN oncesinde.
+       Bosluk 8 karakterle sinirli -- "for 50+ users, from $99" gibi
+       uzak duran bir kelimeyi birim sanmayalim. */
+    new RegExp(String.raw`\b(?:${KISI})s?\b[^$]{0,8}\$`, "i").test(alan)
+  );
+}
+
+/*
+  BIRIMDE ONCE KISI SORULUR, SONRA SABITE DUSULUR -- ve kisi sorusu tum
+  cumleye sorulur. Nedeni yine bir hata: Trello "Standard: '$6 billed
+  monthly', lower per user/month if billed annually" satirinda rakamin
+  hemen ardinda yalnizca "billed monthly" var, "per user" cumlenin
+  ilerisinde. Kuyruga bakip sabit demek, sayfada "$6/mo" yazdiriyordu --
+  oysa fiyat kisi basina. Faturalama icin kuyruk oncelikli kalir (orada
+  birden fazla rakam yarisir), birim icin kalmaz: bir plan ya kisi
+  basinadir ya degildir, cumle boyunca degismez.
+*/
+function birimiCoz(kuyruk, satir) {
+  if (kisiBasinaMi(kuyruk) || kisiBasinaMi(satir)) return "kisi-basina";
+  const sabitMi = (alan) => /\/\s?(?:mo|month)\b/i.test(alan) || /\bper month\b/i.test(alan) || /\bmonthly\b/i.test(alan);
+  if (sabitMi(kuyruk) || sabitMi(satir)) return "sabit";
   return null;
 }
 
+/*
+  Iki anahtar kelime de gecerse ONCE GELEN kazanir, "yillik" degil.
+  Nedeni bir hata: Slack'in "Pro $8.75/user/month monthly or $7.25/user/
+  month annual" satirinda cumlede "annual" gectigi icin $8,75 YILLIK
+  fiyat diye etiketlenmisti -- oysa yillik olan $7,25. Rakama en yakin
+  kelime hangi fiyat oldugunu soyler.
+*/
+const YILLIK_RE = /\b(?:annual(?:ly)?|paid yearly|billed yearly|yearly|per year|\/yr|annual commitment)\b/i;
+const AYLIK_RE = /\bmonthly\b/i;
+
 function faturalamaCozTek(alan) {
-  if (/\b(?:annual(?:ly)?|paid yearly|billed yearly|yearly|per year|\/yr|annual commitment)\b/i.test(alan)) return "yillik";
-  if (/\bmonthly\b/i.test(alan)) return "aylik";
-  return null;
+  const y = alan.search(YILLIK_RE);
+  const a = alan.search(AYLIK_RE);
+  if (y === -1 && a === -1) return null;
+  if (y === -1) return "aylik";
+  if (a === -1) return "yillik";
+  return a < y ? "aylik" : "yillik";
 }
 
 function planlariCikar(arac) {
@@ -127,7 +164,7 @@ function planlariCikar(arac) {
         const aylik = Number(m.groups.fiyat.replace(/,/g, ""));
         if (!Number.isFinite(aylik) || aylik > 100000) continue;
 
-        const birim = ilkEsleyen(m.groups.kuyruk, satir, birimiCozTek);
+        const birim = birimiCoz(m.groups.kuyruk, satir);
         if (!birim) continue;
 
         const anahtar = `${ad.toLowerCase()}|${aylik}|${birim}`;

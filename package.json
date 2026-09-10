@@ -19,7 +19,9 @@
     "gsc:firsat": "node --experimental-strip-types --no-warnings scripts/gsc-firsat.ts",
     "affiliate:sira": "tsx scripts/affiliate-sira.ts",
     "gsc:verim": "tsx scripts/bolum-verim.ts",
-    "denetim": "node scripts/verify-claims.mjs && node scripts/check-fiyat-modelleri.mjs && node scripts/check-izgara-alanlari.mjs"
+    "denetim": "node scripts/verify-claims.mjs && node scripts/check-fiyat-modelleri.mjs && node scripts/check-izgara-alanlari.mjs && node scripts/check-plan-basePrice.mjs",
+    "check:plan": "node scripts/check-plan-basePrice.mjs",
+    "plan:merdiven": "node scripts/plan-merdiveni.mjs"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

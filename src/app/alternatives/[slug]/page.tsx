@@ -22,6 +22,7 @@ import type { Metadata } from "next";
 import toolsData from "@/data/tools.json"
 import type { Arac } from "@/lib/arac";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { alternatifOzeti, ilkUcretliBasamak, planEtiketi } from "@/lib/plan";
 import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
@@ -68,6 +69,7 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
   if (!tool) notFound();
 
   const alts = akranlar(slug);
+  const ozet = alternatifOzeti(tool as never, alts as never[]);
   // Sayfa yalnizca yeterli alternatif varsa anlamli.
   if (alts.length < EN_AZ_ALTERNATIF) notFound();
 
@@ -103,7 +105,15 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
           they cost to start. Each entry says how its pricing differs from {tool.name}&apos;s —
           based on the numbers we hold, not on who pays us. We do not publish a quality score,
           because we do not have one we can stand behind.
-          {enUcuz && (
+          {/*
+            Merdiven ozeti varsa BU cumle basilmaz. Nedeni olculdu: ikisi
+            ayni sayfada farkli rakam soyluyordu (Trello icin biri
+            $5/user/mo, obulu $6) cunku biri `basePrice` alanindan, obulu
+            saticinin cumlesinden geliyor. Okur icin bu celiski, iki
+            rakamdan hangisinin dogru oldugundan daha kotudur. Kaynagini
+            gosteren cumle kazanir.
+          */}
+          {!ozet && enUcuz && (
             <>
               {" "}
               The cheapest verified option is{" "}
@@ -112,6 +122,15 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
             </>
           )}
         </p>
+
+        {/*
+          OLCUM (2026-09-10): bu sayfa turu 90 gunde 1.068 gosterim aldi,
+          ortalama sira 77,3, tik SIFIR -- ve sayfada tek bir rakam yoktu.
+          "X alternatives" arayan kisi isim listesi degil daha ucuz bir sey
+          ariyor. Cumle yalnizca dogrulanmis plan basamaklarindan kuruluyor
+          (bkz. lib/plan.ts); hicbiri yoksa hic basilmaz.
+        */}
+        {ozet && <p className="mt-3 max-w-4xl text-ink-soft">{ozet}</p>}
 
         {Array.isArray(tool.cons) && tool.cons.length > 0 && (
           <section className="mt-8 max-w-4xl rounded-[--radius-card] border border-line bg-surface p-5">
@@ -154,6 +173,14 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
                   <strong className="font-medium text-ink">vs {tool.name}:</strong>{" "}
                   {farkCumlesi(tool, alt)}.
                 </p>
+                {/* Dogrulanmis ilk ucretli basamak: "daha ucuz mu" sorusunun
+                    tek somut cevabi. Merdiveni olmayan aracta hic basilmaz. */}
+                {ilkUcretliBasamak(alt as never) ? (
+                  <p className="mt-1 text-sm text-ink-soft">
+                    <strong className="font-medium text-ink">First paid step:</strong>{" "}
+                    {ilkUcretliBasamak(alt as never)!.ad} at {planEtiketi(ilkUcretliBasamak(alt as never)!)}
+                  </p>
+                ) : null}
                 {/*
                   OLCUMDE BULUNAN (2026-08-31): bu sayfa arac verisinden yalnizca
                   adi, 3-5 kelimelik aciklamayi ve fiyat farkini gosteriyordu --
