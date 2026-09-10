@@ -167,7 +167,9 @@ Link satın alma, PBN, toplu guest post, dizin spam'i, "link exchange" e-postala
 ## Sıra
 
 1. ~~Madde 0 (endpoint alan süzgeci + cache)~~ ✅ yapıldı — canlıya deploy edilmesi gerekiyor
-2. `jimaek/Awesome-JSON-Datasets` PR'ı — en kolay, ilk merge'i buradan al
+2. ✅ **PR AÇILDI: https://github.com/marcelscruz/public-apis/pull/1215** (Add ToolCompare API,
+   Business bölümü, 1 satır, mergeable). Bot incelemesi ve maintainer merge'i bekleniyor.
+   ⚠️ `jimaek/Awesome-JSON-Datasets` **ÖLÜ** — 2015'ten beri push yok, 5 yıldız, fork. PR açma.
 3. public-apis PR'ı (Postman koleksiyonu ile)
 4. Show HN — 1 ve 3 bittikten sonra, hafta içi sabah ET
 5. Satıcı e-postaları — haftada 10-15, toplu değil
