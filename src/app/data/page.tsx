@@ -25,6 +25,7 @@ import type { Metadata } from "next";
 import toolsData from "@/data/tools.json";
 import type { Arac } from "@/lib/arac";
 import { OG_GORSEL } from "@/lib/paylasim";
+import { seffaflikOzeti } from "@/lib/seffaflik";
 
 export const metadata: Metadata = {
   title: "Open Dataset: Verified SaaS Pricing | ToolCompare",
@@ -101,6 +102,8 @@ const DURUM_ANLAMI: Record<string, string> = {
 export default function DataPage() {
   const araclar = toolsData as Arac[];
   const s = say(araclar);
+  /* Oran sayfaya elle yazilmasin: olcum degistiginde burasi sessizce eskir. */
+  const seffaflik = seffaflikOzeti(araclar);
   const atif = `ToolCompare, Verified SaaS Pricing Dataset (version ${SURUM}). https://toolcompare.net/data — licensed CC BY 4.0.`;
 
   return (
@@ -152,6 +155,12 @@ export default function DataPage() {
           <p>
             That last part is the point. If you are citing a pricing figure, you need to know how much weight
             it carries. This dataset tells you.
+          </p>
+          <p>
+            One finding already drawn from it:{" "}
+            <Link href="/research/pricing-transparency">the pricing transparency index</Link> — of the
+            products whose vendor page an editor actually reached, {seffaflik.rakamsizYuzde}% publish no
+            readable price at all.
           </p>
         </section>
 

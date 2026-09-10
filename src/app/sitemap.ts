@@ -57,6 +57,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms',
     '/methodology',
     '/data',
+    /*
+      Olcum sayfasi (2026-09-11). Sitenin tek amaci link olan sayfasi:
+      GSC Links raporu bu domain icin bos donuyor, ortalama sira 54 ve
+      sebebi otorite eksigi. Alintilanacak sayfa sitemap'te olmazsa
+      is gormez.
+    */
+    '/research/pricing-transparency',
     '/about',
     '/affiliate-disclosure',
     // Metodoloji sayfasindan link aliyor; sitemap disinda kalmasin.
