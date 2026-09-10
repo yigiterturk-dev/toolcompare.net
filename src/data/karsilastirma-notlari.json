@@ -6,12 +6,18 @@
       {
         "soru": "Can Teachable and WooCommerce work together?",
         "cevap": "Not through a first-party connector we could verify. Teachable's public site publishes no WooCommerce integration page, and searching the WooCommerce extension marketplace for \"Teachable\" returns no listed extension (both checked 10 September 2026). Teams bridge the two with Zapier, which publishes ready-made workflows in both directions — enrolling a user in a Teachable course when a WooCommerce order is placed, and creating a WooCommerce order from a new Teachable transaction. That means the link is real but it runs through a third service you also pay for and maintain.",
-        "kaynak": { "etiket": "Zapier — Teachable + WooCommerce workflows", "url": "https://zapier.com/apps/teachable/integrations/woocommerce" }
+        "kaynak": {
+          "etiket": "Zapier — Teachable + WooCommerce workflows",
+          "url": "https://zapier.com/apps/teachable/integrations/woocommerce"
+        }
       },
       {
         "soru": "Which is cheaper for selling courses, Teachable or WooCommerce?",
         "cevap": "It depends on sales volume, because Teachable's entry plan charges a cut. Teachable Starter is $29/month billed annually plus a 7.5% transaction fee; Builder removes that fee at $69/month annually. So on $2,000 of monthly course sales, Starter's fee alone is $150 — more than the $40 gap to Builder, which is why the cheap plan stops being the cheap plan quickly. WooCommerce charges no platform fee at all: the core plugin is free and open source, but you carry hosting (typically $25–$350/month), paid extensions ($29–$299/year) and payment processing of roughly 2.5–2.9% + 30¢ through WooPayments. Both figures come from the vendors' own pricing pages.",
-        "kaynak": { "etiket": "Teachable — Pricing", "url": "https://teachable.com/pricing" }
+        "kaynak": {
+          "etiket": "Teachable — Pricing",
+          "url": "https://teachable.com/pricing"
+        }
       }
     ]
   },
@@ -21,12 +27,18 @@
       {
         "soru": "Does GetResponse integrate with Typeform?",
         "cevap": "Not with a connector GetResponse builds itself, as far as we can verify. GetResponse's own integration directory carries pages for JotForm, Gravity Forms, Paperform, Formstack, 123ContactForm and Contact Form 7 — but there is no Typeform page in it, and the expected URL returns a 404 (checked 10 September 2026). Two routes work in practice: Zapier, which publishes prebuilt actions such as creating or updating a GetResponse contact from a new Typeform entry, or a Typeform webhook posting into the GetResponse API if you would rather not add a third subscription.",
-        "kaynak": { "etiket": "Zapier — GetResponse + Typeform workflows", "url": "https://zapier.com/apps/getresponse/integrations/typeform" }
+        "kaynak": {
+          "etiket": "Zapier — GetResponse + Typeform workflows",
+          "url": "https://zapier.com/apps/getresponse/integrations/typeform"
+        }
       },
       {
         "soru": "Are Typeform and GetResponse actually alternatives to each other?",
         "cevap": "Mostly no, and the pricing shows why. Typeform is priced on responses collected — free up to 100 responses a month, then $25/month annually for Basic at the same 100-response cap, $50 for 1,000 and $83 for 10,000. GetResponse is priced on what you do with contacts afterwards — Starter from $15.58/month annually with unlimited monthly email sends and one automation workflow, Marketer from $48.38 for unlimited automation. GetResponse does include its own signup forms, so it can replace a simple Typeform; it will not replace conditional logic-heavy forms. Most teams run both and pass data between them.",
-        "kaynak": { "etiket": "Typeform — Pricing", "url": "https://www.typeform.com/pricing/" }
+        "kaynak": {
+          "etiket": "Typeform — Pricing",
+          "url": "https://www.typeform.com/pricing/"
+        }
       }
     ]
   },
@@ -36,12 +48,18 @@
       {
         "soru": "Does Drizzle ORM support MongoDB?",
         "cevap": "No. Drizzle's own Get started documentation lists its supported dialects as PostgreSQL, MySQL, SQLite, SingleStore, MSSQL, CockroachDB and Gel — every one of them a SQL engine (checked 10 September 2026). MongoDB is a document database and is not among them, and Drizzle's schema, query builder and migration tooling are all built around SQL tables. If you are on MongoDB, Mongoose or the official MongoDB driver is the equivalent layer; Drizzle only enters the picture if you move to a SQL engine.",
-        "kaynak": { "etiket": "Drizzle ORM — Get started (supported dialects)", "url": "https://orm.drizzle.team/docs/get-started" }
+        "kaynak": {
+          "etiket": "Drizzle ORM — Get started (supported dialects)",
+          "url": "https://orm.drizzle.team/docs/get-started"
+        }
       },
       {
         "soru": "What does each one cost?",
         "cevap": "They are not the same kind of purchase. Drizzle ORM itself is free and open source — the vendor publishes no price, and Drizzle Studio runs locally for free through drizzle-kit; only the hosted Gateway product is paid. MongoDB is the database you pay for: Atlas M0 is free at 512 MB with shared CPU and 100 operations per second, Flex runs $0.011/hour (about $8–$30/month) for 5 GB, and dedicated clusters start at M10 around $57/month, with egress billed separately.",
-        "kaynak": { "etiket": "MongoDB — Pricing", "url": "https://www.mongodb.com/pricing" }
+        "kaynak": {
+          "etiket": "MongoDB — Pricing",
+          "url": "https://www.mongodb.com/pricing"
+        }
       }
     ]
   },
@@ -51,12 +69,39 @@
       {
         "soru": "Which is cheaper for a team of 10, Linear or YouTrack?",
         "cevap": "YouTrack, and at that exact size it is free. YouTrack Cloud costs nothing for teams of up to 10 users, with no issue cap. Linear's Free plan is also $0 and allows unlimited members, but it stops at 2 teams and 250 issues — pass either limit and you are on Basic at $10 per user/month billed yearly, which is $100/month for those same 10 people. The eleventh user flips the comparison: YouTrack then charges $4.50 per user/month billed annually ($5.40 monthly), with the per-user rate falling as more seats are added.",
-        "kaynak": { "etiket": "JetBrains — YouTrack pricing", "url": "https://sales.jetbrains.com/hc/en-gb/articles/28384631938450-YouTrack-Pricing-Changes-Effective-October-1-2025" }
+        "kaynak": {
+          "etiket": "JetBrains — YouTrack pricing",
+          "url": "https://sales.jetbrains.com/hc/en-gb/articles/28384631938450-YouTrack-Pricing-Changes-Effective-October-1-2025"
+        }
       },
       {
         "soru": "What is the real difference between the Linear and YouTrack free plans?",
         "cevap": "They cap opposite things. Linear caps the work: unlimited members, but 2 teams, 250 issues and 10 MB file uploads. YouTrack caps the people: up to 10 users, with issues and projects unbounded, plus a free helpdesk for 3 agents and unlimited reporters. So a small team with a long backlog outgrows Linear's free plan first, while a growing team with a short backlog outgrows YouTrack's first.",
-        "kaynak": { "etiket": "Linear — Pricing", "url": "https://linear.app/pricing" }
+        "kaynak": {
+          "etiket": "Linear — Pricing",
+          "url": "https://linear.app/pricing"
+        }
+      }
+    ]
+  },
+  "paddle-vs-stripe": {
+    "kontrolTarihi": "2026-09-10",
+    "sorular": [
+      {
+        "soru": "Is Paddle or Stripe cheaper?",
+        "cevap": "Stripe, on the headline rate — and the gap is wide. Stripe's standard rate is 2.9% + 30¢ per successful domestic card transaction with no setup or monthly fee; Paddle charges 5% + 50¢ per checkout transaction, also with no monthly fee. On $10,000 of monthly sales spread over 200 orders of $50, that works out to about $350 through Stripe against $600 through Paddle — roughly $250 a month more. The question is what the $250 buys, and for a lot of software companies it is not nothing: see below.",
+        "kaynak": {
+          "etiket": "Paddle — Pricing",
+          "url": "https://www.paddle.com/pricing"
+        }
+      },
+      {
+        "soru": "What does Paddle's higher rate actually include?",
+        "cevap": "Two things Stripe prices separately or leaves to you. First, tax: Paddle acts as merchant of record and its pricing page states that full sales-tax registration, filing and remittance are included — with Stripe, that registration and filing is your legal obligation, and Stripe Tax is a paid add-on. Second, disputes: Paddle publishes no additional charge for chargebacks, payouts or currency conversion, while Stripe charges $15.00 for each dispute received and another $15.00 for each dispute countered manually, refunded only if you win, plus 1.5% on international cards and 1% when a currency conversion is required. So a business selling globally with a moderate dispute rate closes much of the gap; a business selling domestically to low-risk customers does not, and should stay on Stripe. Both figures checked 10 September 2026.",
+        "kaynak": {
+          "etiket": "Stripe — Pricing",
+          "url": "https://stripe.com/pricing"
+        }
       }
     ]
   }
