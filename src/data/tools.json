@@ -50393,7 +50393,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "HiBob is HR software for mid-size companies, with a focus on culture, engagement and a friendly interface.",
+    "longDescription": "HiBob sells a single HCM platform called Bob, organised into suites that all build on one system of record. Core is that record - people, org and role data - and includes Core HR, Time and Attendance, Time Off, the Your Voice feedback tool and a sandbox for testing configuration changes before they go live. Talent covers onboarding, hiring, performance, learning, surveys and compensation; Payroll and Benefits adds a Payroll Hub that keeps payroll data current in real time plus a full UK payroll run; Planning provides workforce planning and people analytics on headcount, growth, retention and absenteeism; and a Finance suite ties headcount and compensation to their cost. Bob AI works across that same data and reaches into connected tools through integrations and MCP. HiBob does not publish prices - the platform pages route to a demo request.",
     "pros": [
       "Interface staff actually use voluntarily",
       "Good engagement and culture features",
@@ -50452,7 +50452,33 @@
         "Product capability statements come from the existing ToolCompare catalogue record, not from this page."
       ],
       "reviewedAt": "2026-09-09"
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "One system of record",
+        "description": "Core holds people, org and role data; every other suite reads from it instead of keeping its own copy."
+      },
+      {
+        "title": "Sandbox before go-live",
+        "description": "Configuration changes can be tested in a sandbox before they reach the live system."
+      },
+      {
+        "title": "Talent lifecycle in one suite",
+        "description": "Onboarding, hiring, performance, learning, surveys and compensation run together."
+      },
+      {
+        "title": "Real-time payroll hub",
+        "description": "Payroll data stays current continuously; UK payroll is run end to end in the platform."
+      },
+      {
+        "title": "Planning and analytics",
+        "description": "Workforce planning models headcount, with live figures on growth, retention and absenteeism."
+      },
+      {
+        "title": "Quote-only pricing",
+        "description": "No published price list; platform pages route to a demo request."
+      }
+    ]
   },
   {
     "slug": "icims",
@@ -50463,7 +50489,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "iCIMS is enterprise talent acquisition software covering sourcing, applicant tracking and onboarding at scale.",
+    "longDescription": "iCIMS is enterprise talent acquisition software sold in three product lines on one platform. iCIMS Hire is the applicant tracking system and the surrounding hiring workflow - text recruiting, onboarding, offer management and a dedicated high volume hiring product for employers filling large numbers of roles at once. iCIMS Engage is the candidate relationship management side, used to build sourcing and nurture campaigns against a talent pipeline rather than reacting to applications. iCIMS Employer Branding covers career sites, a recruitment chatbot and employee testimonial videos, and an AI recruiting layer runs across them. The platform is aimed at large, often global employers and the vendor was named a Leader in the Gartner Magic Quadrant. iCIMS does not publish prices; every route ends in a demo or sales conversation.",
     "pros": [
       "Handles high-volume enterprise hiring",
       "Strong compliance and reporting",
@@ -50475,7 +50501,29 @@
       "Interface feels heavy"
     ],
     "targetAudience": "Large organisations hiring continuously at volume.",
-    "verdict": "Built for scale. Small teams should not go near it."
+    "verdict": "Built for scale. Small teams should not go near it.",
+    "keyFeatures": [
+      {
+        "title": "Applicant tracking (iCIMS Hire)",
+        "description": "Configurable enterprise ATS with onboarding, offer management and text recruiting around it."
+      },
+      {
+        "title": "High volume hiring",
+        "description": "A separate product for employers filling large numbers of roles at once."
+      },
+      {
+        "title": "Candidate CRM (iCIMS Engage)",
+        "description": "Sourcing and nurture campaigns against a pipeline rather than reacting to applications."
+      },
+      {
+        "title": "Employer branding",
+        "description": "Career sites, a recruitment chatbot and employee testimonial video tooling."
+      },
+      {
+        "title": "Quote-only pricing",
+        "description": "No published price list; product pages route to a demo or sales contact."
+      }
+    ]
   },
   {
     "slug": "papaya-global",
@@ -50598,7 +50646,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Paylocity provides US payroll and HR with self-service and workforce management features.",
+    "longDescription": "Paylocity is a US HR and payroll platform sold as a single HCM system rather than separate products: payroll, human resources, time and labour, talent, benefits administration, expense management, global payroll and an employee experience layer all sit on the same record. The platform capabilities are what the vendor leans on to separate it from a payroll bureau - automation and insights delivered inside the daily workflow, a mobile app that lets employees, supervisors and leaders complete tasks from a phone, third-party integrations, out-of-the-box reporting with custom dashboards, and configurable workflows for approvals and processes. Paylocity does not publish prices: the pricing page is a 'request pricing' form and the vendor states the package is matched to organisation size, so any figure for it would be a quote rather than a list price.",
     "pros": [
       "Solid US payroll and tax handling",
       "Employee self-service reduces HR load",
@@ -50610,7 +50658,29 @@
       "Support quality varies by account"
     ],
     "targetAudience": "US companies wanting payroll and HR from one vendor.",
-    "verdict": "A dependable US payroll choice. Irrelevant outside the US."
+    "verdict": "A dependable US payroll choice. Irrelevant outside the US.",
+    "keyFeatures": [
+      {
+        "title": "All-in-one HCM record",
+        "description": "Payroll, HR, time and labour, talent and benefits run on one employee record rather than linked products."
+      },
+      {
+        "title": "Mobile app for all roles",
+        "description": "Employees, supervisors and leaders complete most tasks from a phone, not just view payslips."
+      },
+      {
+        "title": "Reporting and dashboards",
+        "description": "Out-of-the-box reports plus custom dashboards across the business for compliance and workforce insight."
+      },
+      {
+        "title": "Configurable workflows",
+        "description": "Approvals and processes automated across departments to cut admin and data-entry errors."
+      },
+      {
+        "title": "Quote-only pricing",
+        "description": "No published price list; the vendor scopes to organisation size through a pricing request."
+      }
+    ]
   },
   {
     "slug": "beamery",
