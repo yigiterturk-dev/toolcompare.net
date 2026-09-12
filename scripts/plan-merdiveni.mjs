@@ -170,6 +170,20 @@ function planlariCikar(arac) {
         const aylik = Number(m.groups.fiyat.replace(/,/g, ""));
         if (!Number.isFinite(aylik) || aylik > 100000) continue;
 
+        /*
+          YILLIK TOPLAMI AYLIK TUTAR SAYMA (2026-09-12).
+          Penpot satirinda "Private Server $50,000/year" gecen tutar `aylik`
+          alanina yazilmisti: sayfa "Private Server $50,000/user/mo" diyordu
+          ve ayni rakam AggregateOffer highPrice olarak Google'a gidiyordu.
+
+          Kontrol SATIR duzeyinde degil TUTAR duzeyinde: ayni satirda
+          "Starter $4/mo billed annually ($48/yr)" gibi mesru bir basamak
+          olabilir -- orada tutar zaten aylik, parantez icindeki yillik
+          toplam yalnizca bilgi. Elenen sey, BU tutarin kendisinin yillik
+          olmasi; yani kuyrugun "/yr" ile baslamasi.
+        */
+        if (/^\s*(?:\/\s*|per\s+)(?:yr|year)\b/i.test(m.groups.kuyruk ?? "") && aylik > 0) continue;
+
         const birim = birimiCoz(m.groups.kuyruk, satir);
         if (!birim) continue;
 

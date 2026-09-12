@@ -11520,25 +11520,7 @@
       "You need a calendar with no Google dependency — it connects to Google Calendar first",
       "You expect calendar-specific paid features: the pricing page lists none, so there is nothing to upgrade to"
     ],
-    "fiyatKontrolTarihi": "2026-09-08",
-    "planlar": [
-      {
-        "ad": "Free",
-        "aylik": 0,
-        "birim": "kisi-basina",
-        "faturalama": null,
-        "kaynakSatiri": "Free $0, Plus $10/member/month, Business $20/member/month, Enterprise custom",
-        "kaynakUrl": "https://www.notion.com/pricing"
-      },
-      {
-        "ad": "Business",
-        "aylik": 20,
-        "birim": "kisi-basina",
-        "faturalama": null,
-        "kaynakSatiri": "Free $0, Plus $10/member/month, Business $20/member/month, Enterprise custom",
-        "kaynakUrl": "https://www.notion.com/pricing"
-      }
-    ]
+    "fiyatKontrolTarihi": "2026-09-08"
   },
   {
     "slug": "hey-email",
@@ -13706,14 +13688,6 @@
       {
         "ad": "Enterprise",
         "aylik": 25,
-        "birim": "kisi-basina",
-        "faturalama": null,
-        "kaynakSatiri": "Enterprise $25/user/month from $950/month with SSO and audit logs; Private Server $50,000/year; self-host available",
-        "kaynakUrl": "https://penpot.app/pricing"
-      },
-      {
-        "ad": "Private Server",
-        "aylik": 50000,
         "birim": "kisi-basina",
         "faturalama": null,
         "kaynakSatiri": "Enterprise $25/user/month from $950/month with SSO and audit logs; Private Server $50,000/year; self-host available",

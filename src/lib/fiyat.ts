@@ -26,6 +26,8 @@
  * Alan yoksa ve basePrice 0 ise: dogrulanmadi.
  */
 
+import { ilkUcretliBasamak } from "./plan.ts";
+
 export type FiyatModeli =
   | "bedava"
   | "ucretsiz-katman"
@@ -108,6 +110,28 @@ export type FiyatDurumu = {
   kisa: string;
 };
 
+/**
+ * Merdivenin ilk UCRETLI basamagindan turetilmis fiyat durumu.
+ * Basamak yoksa null -- cagiran yer eski davranisina doner.
+ */
+function merdivenDurumu(t: Arac): FiyatDurumu | null {
+  const basamak = ilkUcretliBasamak(t as never);
+  if (!basamak) return null;
+  const b = basamak.birim === "kisi-basina" ? "/user/mo" : "/mo";
+  const tutar = `$${basamak.aylik.toLocaleString("en-US")}`;
+  const fatura =
+    basamak.faturalama === "yillik" ? " billed annually"
+    : basamak.faturalama === "aylik" ? " billed monthly"
+    : "";
+  return {
+    karsilastirilabilir: true,
+    aylik: basamak.aylik,
+    metin: `From ${tutar}${b}${fatura}`,
+    // Dar yerlerde faturalama kaydi yer kaplar; rakam ve birim yeter.
+    kisa: `${tutar}${b}`,
+  };
+}
+
 export function fiyatDurumu(t: Arac): FiyatDurumu {
   const model = modeliCoz(t.fiyatModeli) ?? (typeof t.basePrice === "number" && t.basePrice > 0 ? "aylik" : undefined);
   const birim = t.isFlat ? "/mo" : "/user/mo";
@@ -118,6 +142,27 @@ export function fiyatDurumu(t: Arac): FiyatDurumu {
     tutar demek. Rakam yoksa fiyat iddia edilmiyor, model soyleniyor.
   */
   if ((model === "abonelik" || model === "kullanici-basina") && fiyatVar) {
+    /*
+      MERDIVEN VARSA O KAZANIR (2026-09-12).
+
+      NEDEN: fiyat merdiveni arac sayfasina basildigi gun ayni sayfada IKI
+      farkli "baslangic fiyati" gorundu -- yan panel `basePrice`'i, tablo
+      merdiveni okuyordu. Readwise "From $9.99/mo" derken hemen altinda
+      "Lite $5.59/mo billed annually" yaziyordu; ms-teams'te $6'ya karsi $4.
+      Ziyaretci icin bu, sitenin tek varligi olan seyi -- dogrulugu -- eder.
+
+      Ayrim su: `basePrice` elle girilmis bir alan, merdiven basamagi ise
+      saticinin fiyat sayfasindan okunmus bir cumleyle (`kaynakSatiri`)
+      birlikte geliyor. Deponun mevcut kurali da bu: KAYNAGINI
+      GOSTEREBILEN RAKAM KAZANIR (bkz. compare.ts/farkCumlesi).
+
+      Kapsam bilerek dar: yalnizca ZATEN aylik baslangic fiyati iddia eden
+      modellerde devreye giriyor. Bedava, teklife bagli ve kullanima gore
+      fiyatlanan araclarin anlami degismiyor -- orada "baslangic fiyati"
+      diye bir sey zaten yok.
+    */
+    const merdivenden = merdivenDurumu(t);
+    if (merdivenden) return merdivenden;
     return {
       karsilastirilabilir: true,
       aylik: t.basePrice as number,
@@ -156,6 +201,14 @@ export function fiyatDurumu(t: Arac): FiyatDurumu {
   }
 
   if (model === "aylik" && typeof t.basePrice === "number" && t.basePrice > 0) {
+    /*
+      `fiyatModeli` bos olan araclar da buraya dusuyor (slack, linear,
+      ms-teams, descript...) ve tam bu grupta celiski gorunuyordu: yan panel
+      $7,25 derken merdiven $8,75 diyordu. Ayni kural: kaynagini
+      gosterebilen rakam kazanir.
+    */
+    const merdivenden = merdivenDurumu(t);
+    if (merdivenden) return merdivenden;
     return {
       karsilastirilabilir: true,
       aylik: t.basePrice,
