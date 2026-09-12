@@ -134,7 +134,17 @@ function merdivenDurumu(t: Arac): FiyatDurumu | null {
 
 export function fiyatDurumu(t: Arac): FiyatDurumu {
   const model = modeliCoz(t.fiyatModeli) ?? (typeof t.basePrice === "number" && t.basePrice > 0 ? "aylik" : undefined);
-  const birim = t.isFlat ? "/mo" : "/user/mo";
+  /*
+    BIRIM IDDIASI DAYANAK ISTER (2026-09-13). Once varsayilan "/user/mo"
+    idi (`isFlat` elle girilmis bir alan ve varsayilani false), yani veri
+    hicbir sey soylemedigi zaman site koltuk basina fiyat IDDIA ediyordu.
+    Olculdu: hosting, site ve kullanima gore satilan 18 urun arama
+    sonucunda "/user/mo" diye yaziliyordu -- hostinger "$2.99/user/mo",
+    digitalocean "$4/user/mo". Ikisi de yanlis, ikisi de GSC'de goruluyor.
+    Koltuk basina fiyat artik yalnizca veri bunu ACIKCA soyluyorsa
+    yazilir; soylemiyorsa daha zayif ama dogru olan "/mo" kalir.
+  */
+  const birim = t.fiyatModeli === "kullanici-basina" && !t.isFlat ? "/user/mo" : "/mo";
   const fiyatVar = typeof t.basePrice === "number" && t.basePrice > 0;
 
   /*
@@ -166,8 +176,8 @@ export function fiyatDurumu(t: Arac): FiyatDurumu {
     return {
       karsilastirilabilir: true,
       aylik: t.basePrice as number,
-      metin: `From $${t.basePrice}${model === "kullanici-basina" ? "/user/mo" : birim}`,
-      kisa: `$${t.basePrice}${model === "kullanici-basina" ? "/user/mo" : birim}`,
+      metin: `From $${t.basePrice}${birim}`,
+      kisa: `$${t.basePrice}${birim}`,
     };
   }
 

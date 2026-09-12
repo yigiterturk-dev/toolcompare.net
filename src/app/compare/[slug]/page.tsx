@@ -14,6 +14,7 @@ import { elleYazilmisSorular } from "@/lib/karsilastirma-notlari";
 import { merdiven, planEtiketi } from "@/lib/plan";
 import { linklenebilirAkranlar, aracTaranmayaDeger } from "@/lib/tarama";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { ciftMetaAciklamasi } from "@/lib/meta";
 import { entegrasyonKaydi, entegrasyonBasligi, durumEtiketi } from "@/lib/entegrasyon";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
@@ -92,9 +93,16 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
     : cekirdek.length <= 65 ? cekirdek
     : kisa.length <= 65 ? kisa
     : `${tool1.name} vs ${tool2.name}`;
+  /*
+    ACIKLAMA SABLON DEGIL, O CIFTE OZGU (GSC, 2026-09-13).
+    Once burada 1.320 sayfanin hepsi ayni cumleyi yayinliyordu. Olculdu:
+    /compare 1.593 gosterim aliyor ve 4-25. sirada duran 350 gosterimde
+    TEK tik yok -- siralama yeterince iyi oldugu halde sonuc tiklanmiyor.
+    Kural src/lib/meta.ts'te: rakam yalnizca dogrulanmissa yazilir.
+  */
   const description = ent
     ? `${ent.ozet} Checked against ${ent.kaynakSahibi}'s own documentation on ${ent.checkedAt}.`
-    : `Compare ${tool1.name} and ${tool2.name} side-by-side: verified pricing, documented features, trade-offs, source dates and who each one fits.`;
+    : ciftMetaAciklamasi(tool1, tool2);
 
   // "a-vs-b" ve "b-vs-a" ayni sayfa. Kanonik olan alfabetik sirali olan;
   // aksi halde ayni icerik iki adreste indekslenir ve ikisi de zayiflar.

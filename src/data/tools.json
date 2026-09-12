@@ -4333,7 +4333,7 @@
         "The vendor's page priced in EUR for this read and states the figure depends on billing country, so no USD amount is claimed here."
       ]
     },
-    "fiyatModeli": "abonelik",
+    "fiyatModeli": "kullanici-basina",
     "bestFor": [
       "Teams that want boards, automations and dashboards without building them from scratch",
       "Two-person setups: the free plan covers 2 seats and 3 boards",
@@ -7059,7 +7059,7 @@
       "Bio Sites"
     ],
     "basePrice": 16,
-    "isFlat": false,
+    "isFlat": true,
     "category": "Design",
     "shortDescription": "Designer-grade websites.",
     "longDescription": "Squarespace focuses on the 'power of design,' making it the choice for creative professionals and luxury brands. It uses design constraints to ensure your site always looks polished and high-end. Its templates are world-class. With strong e-commerce and scheduling tools built-in, it lets a brand manage its entire digital presence with a premium aesthetic.",
@@ -9102,7 +9102,7 @@
       "Split Testing"
     ],
     "basePrice": 29,
-    "isFlat": false,
+    "isFlat": true,
     "category": "Marketing",
     "shortDescription": "Pro automation & CRM.",
     "longDescription": "ActiveCampaign is a powerhouse platform that combines advanced email marketing, marketing automation, and a sales CRM. It is designed for businesses that want to implement sophisticated, data-driven customer journeys. With its 'CXA' (Customer Experience Automation) approach, it uses machine learning to predict when each subscriber is most likely to open and which content is most likely to land. It is the gold standard for anyone who needs the deepest possible automation capabilities and a unified sales/marketing view.",
@@ -21244,7 +21244,7 @@
         "description": "Threads two-way email against the deal and contact record."
       }
     ],
-    "fiyatModeli": "abonelik",
+    "fiyatModeli": "kullanici-basina",
     "bestFor": [
       "Sales teams that want a visual pipeline without a heavy CRM rollout",
       "Small teams — the entry plan is $14 per seat/month billed annually",
@@ -36651,7 +36651,7 @@
     "websiteUrl": "https://www.dreamhost.com/",
     "incelendi": true,
     "basePrice": 1.99,
-    "isFlat": false,
+    "isFlat": true,
     "fiyatModeli": "abonelik",
     "kriterler": {
       "api": false,
@@ -36895,7 +36895,7 @@
     "websiteUrl": "https://www.hostinger.com",
     "incelendi": true,
     "basePrice": 2.99,
-    "isFlat": false,
+    "isFlat": true,
     "fiyatModeli": "abonelik",
     "kriterler": {
       "api": true,
@@ -37040,7 +37040,7 @@
     "websiteUrl": "https://www.ionos.com/",
     "incelendi": true,
     "basePrice": 1,
-    "isFlat": false,
+    "isFlat": true,
     "fiyatModeli": "abonelik",
     "kriterler": {
       "api": true,
@@ -37867,7 +37867,7 @@
     "websiteUrl": "https://www.plesk.com/",
     "incelendi": true,
     "basePrice": 12.04,
-    "isFlat": false,
+    "isFlat": true,
     "fiyatModeli": "abonelik",
     "kriterler": {
       "api": true,
