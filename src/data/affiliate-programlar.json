@@ -192,6 +192,146 @@
       "url": "https://www.semrush.com/lp/affiliate-program/en/",
       "kosul": "Satis basina $100-300 (Platinum'da Semrush One icin $450'ye kadar), ucretsiz deneme basina $10. 120 gunluk cerez, son-tiklama. !! KABUL ESIGI: sitenin aylik en az 1.000 TEKIL ZIYARETCISI olmali -- toolcompare bu esigi su an KARSILAMIYOR (28 gunde 9 tik). Kupon/cashback siteleri kabul edilmiyor.",
       "checkedAt": "2026-09-12"
+    },
+    "digitalocean": {
+      "durum": "var",
+      "ag": "cj",
+      "url": "https://www.digitalocean.com/affiliates",
+      "kosul": "Yonlendirilen her yeni odeyen kullanicinin aylik harcamasinin %10'u, bir yil boyunca (yinelenen). Katilim CJ (Commission Junction) agi uzerinden ve sayfa acikca 'anyone can join' diyor -- onay engeli yok.",
+      "checkedAt": "2026-09-12"
+    },
+    "gorgias": {
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://www.gorgias.com/affiliate-program",
+      "kosul": "Yonlendirmelerden gelen TUM odemelerin %20'si, ilk iki yil boyunca; hacim buyudukce oran artiyor. Ayrica icerik odemesi: 20.000 organik gosterim basina $100, yalnizca Gorgias'i anlatan tek-arac yazisinda tavan $1.000. Affiliate linki saniyeler icinde veriliyor.",
+      "checkedAt": "2026-09-12"
+    },
+    "grammarly": {
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://www.grammarly.com/affiliates",
+      "kosul": "Program var ve iki yoldan kazandiriyor; tam komisyon orani sayfada YAZMIYOR (sartlar ayri belgeye baglaniyor). Sayfada dogrulanan: 90 GUNLUK cerez penceresi (alisilmis 30-60 gunun ustunde), beyan edilen donusum orani %20-30, anahtar kelime teklifine izin veren politika, duzenli nakit bonuslar. Iletisim: affiliate_mktg@grammarly.com",
+      "checkedAt": "2026-09-12"
+    },
+    "xero": {
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://www.xero.com/affiliate-program/",
+      "kosul": "Yonlendirilen her uygun yeni odeyen abone icin komisyon; ORAN SAYFADA YAZMIYOR ('competitive' deniyor). Basvuru formla ve onaya tabi. Sayfa haber bulteni ve inceleme sitelerini acikca uygun sayiyor. Xero'nun ayri bir muhasebeci/danisman 'Partner Programme'i var -- affiliate ONDAN FARKLI, karistirma.",
+      "checkedAt": "2026-09-12"
+    },
+    "cursor": {
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://cursor.com/affiliate-program",
+      "kosul": "Program sayfasi var ve yayinda (200 donuyor); sartlar okunamadi cunku sayfa tamamen client-side ciziliyor, ham HTML'de tek satir komisyon bilgisi yok. Basvurmadan once panelde okunmali.",
+      "checkedAt": "2026-09-12"
+    },
+    "hugging-face": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TUZAK: huggingface.co/referral bir affiliate sayfasi DEGIL -- 'referralforever' adli bir KULLANICI PROFILI. Otomatik tarama bunu program sanip isaretledi. Gercek program arastirilmadi.",
+      "checkedAt": "2026-09-12"
+    },
+    "aircall": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "contentful": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "datadog": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "diligent": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "elastic": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "gitlab": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "hetzner": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "informatica": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "langchain": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "matomo": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "mattermost": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "paddle": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "raycast": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "segment": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "shopware": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "sketch": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "snyk": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "strapi": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "strava": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
+    },
+    "sugarcrm": {
+      "durum": "bilinmiyor",
+      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "checkedAt": "2026-09-12"
     }
   }
 }
