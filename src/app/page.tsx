@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ToolGridClient, { type IzgaraArac } from "@/components/ToolGridClient";
 import { getTools } from "@/lib/tools";
+import { izgaraKaydi } from "@/lib/izgara";
 
 
 export const metadata = {
@@ -35,43 +36,14 @@ export default async function Home() {
     `ease`, `featuresScore`, `iconName`, `color*` cikarildi: uydurma
     puanlar sokulmustu ve ikon/renk yerine artik gercek logo kullaniliyor.
   */
-  const IZGARA_ALANLARI = [
-    "slug", "name", "category", "shortDescription",
-    "basePrice", "isFlat", "fiyatModeli", "features", "keyFeatures",
-  ] as const;
-
   /*
-    Kirpma ciktisi TIPLI. Onceden `Record<string, unknown>` donuyordu ve
-    o yuzden asagidaki `t.slug` / `t.name` kullanimlari derleyicide hata
-    veriyordu (5 adet, aylardir duruyordu). Tip verilince hem o hatalar
-    kapandi hem de bir alan kirpildiginda derleyici uyariyor.
+    Kirpma mantigi lib/izgara.ts'te: denetim betigi de AYNI fonksiyonu
+    calistirsin diye (bkz. o dosyanin basligi). Burada tutuldugunda betik
+    kirpmayi taklit etmek zorunda kaliyor ve turetilmis alanlari goremiyordu.
   */
-  const tools: IzgaraArac[] = tumArac.map((t: Record<string, unknown>) => {
-    const kucuk: Record<string, unknown> = {};
-    for (const alan of IZGARA_ALANLARI) if (t?.[alan] !== undefined) kucuk[alan] = t[alan];
-    /*
-      keyFeatures BASLIGA indiriliyor.
-
-      OLCUM (2026-08-31): anasayfa 472 KB'ti; gorunur metin 5 KB, RSC
-      yuku 321 KB. Tek basina `keyFeatures` 124.7 KB tutuyordu ve RSC
-      sinirinda iki kez serilestiginden ~250 KB'a mal oluyordu. Oysa
-      ToolCard bu alandan YALNIZCA ilk uc maddenin `title`'ini okuyor
-      (ozellikBasliklari); her maddenin `description` metni istemciye
-      gidiyor ve hicbir yerde gorunmuyordu.
-
-      ToolCard zaten dizi elemaninin string olmasini destekliyor, o
-      yuzden basliklari duz string dizisi olarak geciriyoruz: 124.7 KB
-      -> ~12 KB.
-    */
-    const kf = kucuk.keyFeatures as { title?: string }[] | undefined;
-    if (kf) {
-      kucuk.keyFeatures = kf
-        .slice(0, 3)
-        .map((f) => (typeof f === "string" ? f : (f?.title ?? "")))
-        .filter(Boolean);
-    }
-    return kucuk as unknown as IzgaraArac;
-  });
+  const tools: IzgaraArac[] = tumArac.map(
+    (t: Record<string, unknown>) => izgaraKaydi(t) as unknown as IzgaraArac,
+  );
 
   // Izgara sayfalama yaptigi icin HTML'e yalnizca ilk sayfanin linkleri
   // giriyordu; kalan urun sayfalari hicbir yerden linklenmiyordu (orphan).

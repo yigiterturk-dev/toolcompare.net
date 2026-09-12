@@ -22,23 +22,22 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { fiyatDurumu } from "../src/lib/fiyat.ts";
+import { izgaraKaydi } from "../src/lib/izgara.ts";
 
 const kok = join(dirname(fileURLToPath(import.meta.url)), "..");
 const araclar = JSON.parse(readFileSync(join(kok, "src/data/tools.json"), "utf8"));
 
-// Alan listesini page.tsx'ten okuyoruz: tek dogruluk kaynagi orasi.
-const sayfa = readFileSync(join(kok, "src/app/page.tsx"), "utf8");
-const blok = sayfa.match(/IZGARA_ALANLARI\s*=\s*\[([\s\S]*?)\]\s*as const/);
-if (!blok) {
-  console.error("HATA: page.tsx icinde IZGARA_ALANLARI bulunamadi.");
-  process.exit(2);
-}
-const alanlar = [...blok[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]);
-
+/*
+  KIRPMAYI TAKLIT ETME, CALISTIR (2026-09-12).
+  Betik once alan listesini okuyup kirpmayi kendisi yapiyordu. Taklit,
+  TURETILMIS alanlari goremez: fiyat merdiveni izgaraya turetilmis bicimde
+  gecirilince (ham `planlar` degil, yalnizca ilk ucretli basamak) betik
+  hala eski celiskiyi raporladi. Artik sayfanin kullandigi fonksiyonun
+  KENDISI cagriliyor -- olculen sey iddianin ta kendisi.
+*/
 const farklar = [];
 for (const tam of araclar) {
-  const kirpik = {};
-  for (const a of alanlar) if (tam[a] !== undefined) kirpik[a] = tam[a];
+  const kirpik = izgaraKaydi(tam);
 
   const dTam = fiyatDurumu(tam);
   const dKirpik = fiyatDurumu(kirpik);
@@ -53,7 +52,7 @@ if (farklar.length) {
     console.error(`  ${f.slug}: urun sayfasi "${f.tam}" · anasayfa "${f.kirpik}"`);
   }
   if (farklar.length > 10) console.error(`  ... ve ${farklar.length - 10} tane daha`);
-  console.error("\nEksik alani IZGARA_ALANLARI'na ekle.");
+  console.error("\nEksik alani src/lib/izgara.ts icine ekle.");
   process.exit(1);
 }
 

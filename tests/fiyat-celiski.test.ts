@@ -101,3 +101,29 @@ test("ayiklayici yillik toplamlari eliyor", () => {
   assert.match(betik, /YILLIK TOPLAMI AYLIK TUTAR SAYMA/, "ayiklayicida yillik-toplam korumasi yok");
   assert.match(betik, /\(\?:yr\|year\)\\b\/i\.test\(m\.groups\.kuyruk/, "koruma tutar duzeyinde degil");
 });
+
+/**
+ * ANASAYFA IZGARASI ILE URUN SAYFASI AYNI RAKAMI SOYLEMELI.
+ *
+ * Izgaraya tam kayit degil KIRPILMIS kayit geciyor (dokuman 518 KB'dan
+ * inmesi icin). Liste elle tutuldugu surece her yeni alan sessizce
+ * disarida kaliyor: 2026-08-25'te `fiyatModeli` unutulmustu ve 266 arac
+ * anasayfada "Pricing not verified" gorunuyordu; 2026-09-12'de ayni sey
+ * `planlar` ile oldu -- descript urun sayfasinda "$16/mo", anasayfada
+ * "$12/user/mo".
+ *
+ * Kirpma artik lib/izgara.ts'te ve denetim betigi onu TAKLIT etmiyor,
+ * CALISTIRIYOR. Bu test de ayni fonksiyonu kullanir.
+ */
+test("kirpilmis izgara kaydi urun sayfasiyla ayni fiyati veriyor", async () => {
+  const { izgaraKaydi } = await import("../src/lib/izgara.ts");
+  const farkli: string[] = [];
+  for (const t of araclar) {
+    const tam = fiyatDurumu(t);
+    const kirpik = fiyatDurumu(izgaraKaydi(t as never) as never);
+    if (tam.kisa !== kirpik.kisa || tam.karsilastirilabilir !== kirpik.karsilastirilabilir) {
+      farkli.push(`${t.slug}: ürün "${tam.kisa}" vs ızgara "${kirpik.kisa}"`);
+    }
+  }
+  assert.deepEqual(farkli, [], `izgara kirpmasi fiyati degistiriyor:\n${farkli.join("\n")}`);
+});

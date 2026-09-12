@@ -13,6 +13,7 @@ import ToolRow from "@/components/ToolRow";
 import ToolLogo from "@/components/ToolLogo";
 import { fiyatDurumu, type FiyatModeli } from "@/lib/fiyat";
 import { oneCikanCiftler } from "@/lib/compare";
+import type { Plan } from "@/lib/plan";
 
 /*
   Anasayfa izgarasi.
@@ -52,6 +53,8 @@ export type IzgaraArac = {
   fiyatModeli?: FiyatModeli;
   features?: unknown[];
   keyFeatures?: unknown[];
+  /** Yalnizca en ucuz ucretli basamak; fiyatDurumu() bunu okuyor. */
+  planlar?: Plan[];
 };
 
 const KATEGORILER = [
