@@ -17,9 +17,10 @@
  * ayrisirsa Google'a celiskili sinyal gider.
  */
 
+import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
 import { talepGormus, yolTalepGormus } from "./talep.ts";
-import { ayniIslev } from "./islev.ts";
+import { ayniIslev, islevi } from "./islev.ts";
 import { entegrasyonVar } from "./entegrasyon.ts";
 /* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
 import type { Arac } from "./arac";
@@ -185,8 +186,46 @@ export function aracIndekslenir(t?: Arac): boolean {
  * Bu sayfa turunun tek ise yarar iddiasi "su fiyata su secenekler";
  * fiyat dogrulanmamissa sayfanin soyleyecek sozu yok.
  */
+/**
+ * Ayni islevi goren, FIYATI DOGRULANMIS arac sayisi.
+ *
+ * Neden `akranlar()` cagrilmiyor: o fonksiyon compare.ts'te ve compare.ts
+ * bu dosyayi iceri aliyor -- dongusel bagimlilik olurdu. Sayim burada
+ * dogrudan yapiliyor ve sonuc ayni: akran siralamasi kanitli araci one
+ * aldigi icin (bkz. compare.ts/siralamaKarsilastir) ve kanitli olmak
+ * fiyati dogrulanmis olmayi ICERDIGI icin, iki fiyatli akran varsa ikisi
+ * de listelenen ilk bese girer.
+ */
+function fiyatliAkranSayisi(slug: string): number {
+  const i = islevi(slug);
+  if (i === null) return 0;
+  return (toolsData as Arac[]).filter(
+    (t) => t.slug !== slug && islevi(t.slug) === i && fiyatiDogrulanmis(t),
+  ).length;
+}
+
 export function alternatifIndekslenir(t?: Arac): boolean {
-  return aracIndekslenir(t) && fiyatiDogrulanmis(t);
+  if (!aracIndekslenir(t)) return false;
+  if (fiyatiDogrulanmis(t)) return true;
+  /*
+    KAPI YER DEGISTIRDI (olcum, 2026-09-12). Eski kural, ARACIN KENDI
+    fiyatinin dogrulanmis olmasini sartti. Ama "gorgias alternatives"
+    arayan kisinin ihtiyaci ALTERNATIFLERIN rakamlari; Gorgias'in kendi
+    fiyati yalnizca "sundan ucuz" cumlesi icin gerekli -- ve o cumle zaten
+    iki taraf da dogrulanmadikca kurulmuyor (bkz. compare.ts/farkCumlesi).
+    Yani kapi, korumadigi bir iddia icin sayfayi kapatiyordu.
+
+    Olculdu: gosterim alan 8 alternatif sayfasi (99 gosterim) yalnizca bu
+    yuzden noindex'ti -- gorgias 40, greenhouse 26, ionos 16. Hepsinin
+    fiyati DOGRULANMIS akranlari vardi; eksik olan tek sey, sayfanin
+    konusu olan aracin kendi rakamiydi. Cogu kullanima-gore fiyatlanan
+    arac (azure, gorgias): onlarda "baslangic fiyati" zaten yok.
+
+    Yeni sart: en az IKI alternatifin fiyati dogrulanmis olsun. Bir secim
+    icin iki rakam gerekir; tek rakam liste degildir (ayni gerekce:
+    EN_AZ_ALTERNATIF).
+  */
+  return fiyatliAkranSayisi(t!.slug) >= 2;
 }
 
 /**

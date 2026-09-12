@@ -75,3 +75,39 @@ test("baslik az akranda sayi basmiyor", () => {
   assert.match(sayfa, /alts\.length >= 3/, "baslik akran sayisina gore ayrilmiyor");
   assert.match(sayfa, /`Best \$\{tool\.name\} Alternatives in 2026`/, "az akran icin sayisiz baslik yok");
 });
+
+/**
+ * KAPI, KORUMADIGI BIR IDDIA ICIN SAYFAYI KAPATIYORDU.
+ *
+ * Eski kural: alternatif sayfasi ancak ARACIN KENDI fiyati dogrulanmissa
+ * indekslenir. Ama "gorgias alternatives" arayan kisinin ihtiyaci
+ * ALTERNATIFLERIN rakamlari; aracin kendi fiyati yalnizca "sundan ucuz"
+ * cumlesi icin gerekli ve o cumle zaten iki taraf da dogrulanmadikca
+ * kurulmuyor (compare.ts/farkCumlesi).
+ *
+ * Olculdu (2026-09-12): gosterim alan 8 alternatif sayfasi (99 gosterim)
+ * yalnizca bu yuzden noindex'ti -- gorgias 40, greenhouse 26, ionos 16.
+ * Cogu kullanima-gore fiyatlanan arac: onlarda "baslangic fiyati" zaten yok.
+ */
+test("kendi fiyati dogrulanmayan arac, fiyatli alternatifleri varsa aciliyor", () => {
+  for (const slug of ["gorgias", "ionos", "azure"]) {
+    const t = araclar.find((x) => x.slug === slug);
+    assert.ok(t, `${slug} katalogda yok`);
+    assert.equal(alternatifIndekslenir(t), true,
+      `${slug}: fiyatli akranlari var ama alternatif sayfasi hala noindex`);
+  }
+});
+
+/** Fiyatli alternatifi olmayan arac ACILMAMALI: rakamsiz liste liste degildir. */
+test("fiyatli alternatifi olmayan arac acilmiyor", () => {
+  const t = araclar.find((x) => x.slug === "wise");
+  assert.ok(t, "wise katalogda yok");
+  assert.equal(alternatifIndekslenir(t), false,
+    "wise'in fiyati dogrulanmis akrani yok; sayfa acilmamaliydi");
+});
+
+/** Esik iki fiyatli alternatif: bir secim icin iki rakam gerekir. */
+test("kapi kaynaginda iki fiyatli akran sarti duruyor", () => {
+  const kaynak = readFileSync("src/lib/indeks.ts", "utf8");
+  assert.match(kaynak, /fiyatliAkranSayisi\(t!\.slug\) >= 2/, "iki fiyatli akran sarti kaybolmus");
+});
