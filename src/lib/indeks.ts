@@ -18,7 +18,7 @@
  */
 
 import { fiyatDurumu } from "./fiyat.ts";
-import { talepGormus } from "./talep.ts";
+import { talepGormus, yolTalepGormus } from "./talep.ts";
 import { ayniIslev } from "./islev.ts";
 /* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
 import type { Arac } from "./arac";
@@ -200,6 +200,12 @@ export function alternatifIndekslenir(t?: Arac): boolean {
  * Kapiya uygun arac 323/512 (fiyat kanitindaki hata duzeltilmeden once
  * 225'ti). Uretilen sitemap: 600 /compare, 341 /alternatives, 460 /tools.
  */
+/** Bu ciftin KENDI adresi Google'da gosterim almis mi. */
+function ciftTalebi(a: Arac, b: Arac): boolean {
+  const kanonik = a.slug < b.slug ? `${a.slug}-vs-${b.slug}` : `${b.slug}-vs-${a.slug}`;
+  return yolTalepGormus(`/compare/${kanonik}`);
+}
+
 export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
   // ISLEV KAPISI (bkz. src/lib/islev.ts): iki arac ayni isi gormuyorsa
   // sayfanin karsilastiracak bir seyi yok. Bu kural sitemap'ten ONCE
@@ -207,6 +213,26 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
   // (ornegin /compare/redis-vs-sentry) gelen Googlebot noindex gormeli,
   // yoksa sitemap disina cikardigimiz sayfa indekste kalir.
   if (!a || !b || !ayniIslev(a.slug, b.slug)) return false;
+  /*
+    TALEP MUAFIYETI (olcum, 2026-09-12). Bu kural arac sayfalarina cok once
+    konulmustu (aracIndekslenir: `icerikDerin || talepGormus`) ama ciftlere
+    hic uygulanmamisti. Olculdugunde: GSC'de gosterim alan 106 karsilastirma
+    sayfasinin yalnizca 21'i indekslenebiliyordu. 85'i `noindex, follow`
+    aliyordu -- yani site, Google'in FIILEN SIRADA GOSTERDIGI sayfalara
+    "beni indeksleme" diyordu. Icinde 13. sirada duran bir sayfa vardi.
+
+    Bunlarin 65'i islev kapisindan dusuyor (farkli isi goren araclar --
+    orada kalmalari DOGRU, talebin kaynagi karsilastirma degil entegrasyon
+    sorgusu). Geri kalan 20'si ayni isi goren, Google'in sirada tuttugu,
+    yalnizca fiyat/kriter kaniti eksik oldugu icin kapatilan sayfalar:
+    discord-vs-slack (62 gosterim), teamwork-vs-trello (31),
+    asana-vs-smartsheet (23)...
+
+    talep.ts'in kendi kurali: TALEP SAYFA ELEMEZ, YALNIZCA KURTARIR.
+    Gosterim almis olmak olumlu kanittir. Islev kapisi mutlak kalir:
+    anlamsiz cifti talep bile kurtarmaz.
+  */
+  if (ciftTalebi(a, b)) return true;
   return (
     incelenmis(a) && incelenmis(b) &&
     fiyatiDogrulanmis(a) && fiyatiDogrulanmis(b) &&
