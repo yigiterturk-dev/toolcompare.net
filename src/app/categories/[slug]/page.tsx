@@ -22,6 +22,8 @@ import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 
 import { paylasimMeta } from "@/lib/paylasim";
+import { aracIndekslenir } from "@/lib/indeks";
+import { aracTaranmayaDeger } from "@/lib/tarama";
 export function generateStaticParams() {
   return kategoriler().map((k) => ({ slug: k.slug }));
 }
@@ -139,12 +141,22 @@ export default async function CategoryPage({ params }: SayfaParametresi) {
                   {i + 1}
                 </span>
                 <div className="min-w-0 flex-1">
-                  <Link
-                    href={`/tools/${t.slug}`}
-                    className="font-serif text-base font-semibold no-underline transition-colors duration-150 hover:text-accent"
-                  >
-                    {t.name}
-                  </Link>
+                  {/*
+                    Sitemap disi araca link YOK (olcum, 2026-09-12):
+                    kategori sayfalari noindex arac sayfalarina 71 link
+                    veriyordu. Arac listede kalir -- kaybolan tek sey,
+                    Googlebot'u bos donecek bir adrese gondermek.
+                  */}
+                  {aracIndekslenir(t) && aracTaranmayaDeger(t) ? (
+                    <Link
+                      href={`/tools/${t.slug}`}
+                      className="font-serif text-base font-semibold no-underline transition-colors duration-150 hover:text-accent"
+                    >
+                      {t.name}
+                    </Link>
+                  ) : (
+                    <span className="font-serif text-base font-semibold">{t.name}</span>
+                  )}
                   {t.shortDescription && (
                     <p className="mt-1 text-sm text-ink-soft">{t.shortDescription}</p>
                   )}

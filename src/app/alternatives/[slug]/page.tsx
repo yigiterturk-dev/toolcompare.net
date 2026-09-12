@@ -14,7 +14,7 @@
  */
 
 import Header from "@/components/Header";
-import { alternatifIndekslenir, NOINDEX } from "@/lib/indeks";
+import { alternatifIndekslenir, aracIndekslenir, ciftIndekslenir, NOINDEX } from "@/lib/indeks";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
@@ -24,7 +24,7 @@ import type { Arac } from "@/lib/arac";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
 import { kategoriSlug } from "@/lib/categories";
 import { alternatifOzeti, ilkUcretliBasamak, planEtiketi } from "@/lib/plan";
-import { ciftTaranmayaDeger } from "@/lib/tarama";
+import { ciftTaranmayaDeger, aracTaranmayaDeger } from "@/lib/tarama";
 import { gitLinki } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
@@ -177,12 +177,21 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
                 {i + 1}
               </span>
               <div className="min-w-0 flex-1">
-                <Link
-                  href={`/tools/${alt.slug}`}
-                  className="font-serif text-base font-semibold no-underline transition-colors duration-150 hover:text-accent"
-                >
-                  {alt.name}
-                </Link>
+                {/*
+                  Arac sayfasi indekslenmiyorsa adi DUZ METIN kalir.
+                  Alternatifin kendisi degerli bir icerik -- israf olan,
+                  Google'a "burayi tara" deyip noindex ile karsilamak.
+                */}
+                {aracIndekslenir(alt) && aracTaranmayaDeger(alt) ? (
+                  <Link
+                    href={`/tools/${alt.slug}`}
+                    className="font-serif text-base font-semibold no-underline transition-colors duration-150 hover:text-accent"
+                  >
+                    {alt.name}
+                  </Link>
+                ) : (
+                  <span className="font-serif text-base font-semibold">{alt.name}</span>
+                )}
                 {alt.shortDescription && (
                   <p className="mt-1 text-sm text-ink-soft">{alt.shortDescription}</p>
                 )}
@@ -245,7 +254,17 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
                       verilir (bkz. lib/tarama.ts): olculdu, alternatif
                       sayfalari sitemap disi ciftlere 1.699 link
                       veriyordu ve budamayi anlamsiz kiliyordu. */}
-                  {ciftTaranmayaDeger(tool, alt) ? (
+                  {/*
+                    IKI KAPI (olcum, 2026-09-12). Burada yalnizca tarama
+                    kapisi soruluyordu; sitemap ise kanit kapisini DA
+                    istiyor. Arada kalan cift noindex olup link aliyordu:
+                    olculdu, indekslenebilir sayfalardan noindex sayfalara
+                    261 link gidiyordu ve en cok linkleneni
+                    betterstack-vs-datadog'du (15 sayfadan). Noindex bir
+                    sayfaya link vermek Googlebot'u bos bir sayfaya
+                    gonderir; kural tek: SITEMAP'TE OLANI LINKLE.
+                  */}
+                  {ciftIndekslenir(tool, alt) && ciftTaranmayaDeger(tool, alt) ? (
                     <Link
                       href={`/compare/${kanonikSlug(tool.slug, alt.slug)}`}
                       className="text-accent underline underline-offset-4"

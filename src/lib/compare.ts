@@ -412,5 +412,12 @@ export function karsilastirmaAkranlari(slug: string): Arac[] {
 /** Verilen araclardan alternatif sayfasi OLANLAR (link vermek guvenli). */
 export function alternatifSayfasiOlan(sluglar: string[]): Arac[] {
   const kume = new Set(sluglar);
-  return alternatifSayfasiOlanlar().filter((t) => kume.has(t.slug));
+  /*
+    Kategori sayfasi bu listeyi LINK olarak basiyor; o yuzden "sayfa
+    uretiliyor mu" degil "sayfa SITEMAP'TE mi" sorulmali. Onceki hali
+    yalnizca akran sayisina bakiyordu ve noindex alternatif sayfalarina
+    link veriyordu (olcum, 2026-09-12: 6 link). Kural tek:
+    SITEMAP'TE OLANI LINKLE.
+  */
+  return alternatifSayfasiOlanlar().filter((t) => kume.has(t.slug) && alternatifSayfasiVar(t.slug));
 }

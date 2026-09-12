@@ -28,6 +28,7 @@ import type { Arac } from "./arac.ts";
 import { talepGormus, yolTalepGormus } from "./talep.ts";
 import { merdivenVar } from "./plan.ts";
 import { notluCiftler } from "./karsilastirma-notlari.ts";
+import { ciftIndekslenir } from "./indeks.ts";
 
 const ELLE_NOTLU = new Set(notluCiftler());
 
@@ -104,5 +105,23 @@ export function ciftTaranmayaDeger(a?: Arac, b?: Arac): boolean {
  */
 export function linklenebilirAkranlar<T extends Arac>(arac: Arac | undefined, akranlar: T[]): T[] {
   if (!arac) return [];
-  return akranlar.filter((t) => t.slug !== arac.slug && ciftTaranmayaDeger(arac, t));
+  /*
+    IKI KAPI, TEK YERDE (olcum, 2026-09-12).
+
+    Burada yalnizca TARAMA kapisi soruluyordu; sitemap ise kanit kapisini
+    DA istiyor (bkz. compare.ts/sitemapCiftleri). Arada kalan cift
+    noindex olup yine de link aliyordu. Olculdu: indekslenebilir
+    sayfalardan noindex sayfalara 261 ic link gidiyordu; en cok
+    linklenen betterstack-vs-datadog'du (15 sayfadan).
+
+    Noindex bir sayfaya link vermek Googlebot'u oraya gonderip bos
+    dondurur -- tarama butcesi, sitenin asil sayfalarindan calinir.
+    Kural tek ve bu depoda zaten yazili: SITEMAP'TE OLANI LINKLE.
+    Kosul burada durdugu icin butun cagiranlar (karsilastirma sayfasinin
+    "Other X comparisons" seridi, arac sayfasi, alternatif sayfasi) ayni
+    cevabi alir.
+  */
+  return akranlar.filter(
+    (t) => t.slug !== arac.slug && ciftIndekslenir(arac, t) && ciftTaranmayaDeger(arac, t),
+  );
 }

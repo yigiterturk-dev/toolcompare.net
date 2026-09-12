@@ -10,7 +10,7 @@ import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { karsilastirmaSss } from "@/lib/sss";
 import { elleYazilmisSorular } from "@/lib/karsilastirma-notlari";
 import { merdiven, planEtiketi } from "@/lib/plan";
-import { linklenebilirAkranlar } from "@/lib/tarama";
+import { linklenebilirAkranlar, aracTaranmayaDeger } from "@/lib/tarama";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { entegrasyonKaydi, entegrasyonBasligi, durumEtiketi } from "@/lib/entegrasyon";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
@@ -21,6 +21,7 @@ import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide
 import type { Metadata } from "next";
 
 import { paylasimMeta } from "@/lib/paylasim";
+import { aracIndekslenir } from "@/lib/indeks";
 /**
  * Karsilastirma sayfalari build aninda uretilsin.
  *
@@ -333,14 +334,27 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
                 <tr>
                   <td />
                   <th scope="col" className="pb-3 font-serif text-lg font-semibold">
-                    <Link href={`/tools/${tool1.slug}`} className="no-underline hover:text-accent">
-                      {tool1.name}
-                    </Link>
+                    {/*
+                      Sitemap disi arac sayfasina link verilmez (olcum,
+                      2026-09-12): indekslenebilir sayfalardan noindex
+                      sayfalara 261 link gidiyordu. Ad duz metin kalir.
+                    */}
+                    {aracIndekslenir(tool1) && aracTaranmayaDeger(tool1) ? (
+                      <Link href={`/tools/${tool1.slug}`} className="no-underline hover:text-accent">
+                        {tool1.name}
+                      </Link>
+                    ) : (
+                      tool1.name
+                    )}
                   </th>
                   <th scope="col" className="pb-3 font-serif text-lg font-semibold">
-                    <Link href={`/tools/${tool2.slug}`} className="no-underline hover:text-accent">
-                      {tool2.name}
-                    </Link>
+                    {aracIndekslenir(tool2) && aracTaranmayaDeger(tool2) ? (
+                      <Link href={`/tools/${tool2.slug}`} className="no-underline hover:text-accent">
+                        {tool2.name}
+                      </Link>
+                    ) : (
+                      tool2.name
+                    )}
                   </th>
                 </tr>
               </thead>
