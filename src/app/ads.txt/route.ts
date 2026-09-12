@@ -10,10 +10,12 @@
  * yanlis bir ads.txt yayinlamaktansa hic yayinlamamak dogru.
  */
 
+import { adsTxtKimlik } from "@/lib/reklam";
+
 export const dynamic = "force-static";
 
 export function GET() {
-  const pub = process.env.ADSENSE_PUBLISHER_ID?.trim();
+  const pub = adsTxtKimlik();
   if (!pub) return new Response("Not found", { status: 404 });
 
   // Bicim Google'in sartnamesine gore: <alan>, <yayinci kimligi>, DIRECT, <sertifika>

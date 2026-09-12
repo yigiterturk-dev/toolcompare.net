@@ -12304,7 +12304,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Prometheus scrapes metrics from your services and stores them as time series, with its own query language for alerting and dashboards.",
+    "longDescription": "Prometheus is an open-source systems monitoring and alerting toolkit that has run as a standalone project since 2012 and joined the Cloud Native Computing Foundation as its second hosted project. It stores every measurement as time series data - a number recorded with the timestamp it was taken at, alongside optional key-value pairs called labels - and queries that dimensionality with its own language rather than with SQL. Collection works by pulling over HTTP from targets discovered through service discovery or listed in static configuration; short-lived jobs that finish before a scrape can push through an intermediary gateway instead. Server nodes are autonomous and depend on no distributed storage, which is why a single binary on one machine is already a working monitoring system.",
     "pros": [
       "The de facto standard for metrics in Kubernetes",
       "Pull model means no agent pushing to you",
@@ -12345,7 +12345,29 @@
       "You want logs and traces in the same tool",
       "You need vendor support without a managed provider"
     ],
-    "fiyatKontrolTarihi": "2026-09-08"
+    "fiyatKontrolTarihi": "2026-09-08",
+    "keyFeatures": [
+      {
+        "title": "Multi-dimensional data model",
+        "description": "Time series are identified by a metric name plus key/value labels, not by a fixed schema."
+      },
+      {
+        "title": "PromQL query language",
+        "description": "A query language built to exploit label dimensionality, used for both graphs and alert rules."
+      },
+      {
+        "title": "Pull collection over HTTP",
+        "description": "Targets are scraped over HTTP and found through service discovery or static configuration."
+      },
+      {
+        "title": "Autonomous server nodes",
+        "description": "Each server relies on local storage with no distributed storage dependency."
+      },
+      {
+        "title": "Push gateway for short jobs",
+        "description": "Batch jobs that end before a scrape push their metrics through an intermediary gateway."
+      }
+    ]
   },
   {
     "slug": "new-relic",
@@ -15775,7 +15797,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Things is a task manager for Apple devices with a carefully designed structure of areas, projects and today view.",
+    "longDescription": "Things is a personal task manager for Mac, iPhone, iPad and Apple Watch, and an Apple Design Award winner. The day is organised around a Today list that shows calendar events from the calendars you choose grouped above your to-dos, with a separate This Evening list for work that can only happen later, and an Upcoming list covering scheduled to-dos, repeating to-dos, deadlines and events for the days ahead. Projects can be split with headings that act as categories or milestones and can be dragged, archived or rearranged as a group, while checklists break a single to-do into its steps. Scheduling goes through a Jump Start popover with natural language date recognition, and Quick Find searches projects, to-dos and tags as you type.",
     "pros": [
       "Design clarity that reduces friction",
       "One-off purchase per platform",
@@ -15820,7 +15842,29 @@
         "No price is quoted: the page links out to the App Store to 'view in your currency' and showed a temporary Mac discount when fetched."
       ],
       "reviewedAt": "2026-09-09"
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Today and This Evening",
+        "description": "Daily list showing chosen calendar events above to-dos, with a separate evening list."
+      },
+      {
+        "title": "Upcoming list",
+        "description": "Scheduled to-dos, repeating to-dos, deadlines and calendar events for the days ahead."
+      },
+      {
+        "title": "Headings and checklists",
+        "description": "Projects split into draggable, archivable headings; single to-dos split into steps."
+      },
+      {
+        "title": "Jump Start scheduling",
+        "description": "Date popover with natural language recognition for terms like tomorrow or Saturday."
+      },
+      {
+        "title": "Quick Find",
+        "description": "Type-ahead search across projects, to-dos and tags, including app-wide tag filters."
+      }
+    ]
   },
   {
     "slug": "omnifocus",
@@ -16076,7 +16120,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Alfred is a macOS launcher with workflows, clipboard history and scriptable automation behind a keyboard shortcut.",
+    "longDescription": "Alfred is a macOS launcher driven from a hotkey: it finds applications and files on the Mac or on the web, learns from how you use the machine to prioritise results, and lets you act on a result without leaving the keyboard. Beyond launching it carries a clipboard history holding past text, images, file paths and colour hex codes, and snippets that auto-expand from a short abbreviation anywhere in the system. The paid Powerpack adds workflows, which chain hotkeys, keywords and actions together without writing code and can be imported from a large community library. Smaller built-ins cover calculations, spelling and definitions, file previews on the Shift key, large-type display and system commands such as sleeping the Mac or emptying the Trash.",
     "pros": [
       "Workflows automate genuinely complex tasks",
       "Mature and stable after many years",
@@ -16119,7 +16163,29 @@
         "Prices are published in GBP by the vendor; no USD figure is quoted."
       ]
     },
-    "fiyatKontrolTarihi": "2026-09-08"
+    "fiyatKontrolTarihi": "2026-09-08",
+    "keyFeatures": [
+      {
+        "title": "Hotkey launcher and search",
+        "description": "Finds apps and files locally or on the web and prioritises results from your usage."
+      },
+      {
+        "title": "Clipboard history",
+        "description": "Searches and re-pastes previously copied text, images, file paths and hex colours."
+      },
+      {
+        "title": "Snippet expansion",
+        "description": "Short abbreviations auto-expand into saved text anywhere on the system."
+      },
+      {
+        "title": "Workflows (Powerpack)",
+        "description": "Chains hotkeys, keywords and actions with no code; community workflows can be imported."
+      },
+      {
+        "title": "System commands",
+        "description": "Sleep, empty Trash, screensaver and similar macOS actions from a keyword."
+      }
+    ]
   },
   {
     "slug": "motion",
@@ -23986,7 +24052,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "SonarQube analyses code for bugs, vulnerabilities and maintainability problems, and can block merges that fail a quality gate.",
+    "longDescription": "SonarQube is static analysis that inspects a codebase for bugs, vulnerabilities, security hotspots and maintainability problems, and can block a merge whose changes fail a quality gate. Sonar sells it in three forms that are easy to confuse: SonarQube Server is self-managed and deployed inside your own perimeter for full data residency, SonarQube Cloud is the hosted service that scales without infrastructure work, and SonarQube for IDE is a free editor extension giving on-the-fly analysis and coding guidance as code is written. Analysis covers more than forty languages and frameworks and reports issues with an explanation rather than a bare score, so a finding can be reviewed on the pull request that introduced it. Advanced Security is a separate paid layer aimed at deeper vulnerability and supply chain analysis.",
     "pros": [
       "Quality gates enforce standards automatically",
       "Covers many languages",
@@ -24032,6 +24098,28 @@
       "You want a per-seat or usage price — licensing is per instance, per year, priced by lines of code, so cost tracks the codebase not the team",
       "You need more than one connection per DevOps platform: an edition supports one integration each for GitHub, GitLab, Bitbucket and Azure DevOps",
       "You do not want to run the server — SonarQube Cloud is the hosted product, a different SKU from the self-managed editions on this page"
+    ],
+    "keyFeatures": [
+      {
+        "title": "Quality gate on merges",
+        "description": "A pass/fail gate that can stop changes failing quality or security criteria from merging."
+      },
+      {
+        "title": "40+ languages and frameworks",
+        "description": "Static analysis coverage spanning more than forty languages and frameworks."
+      },
+      {
+        "title": "Self-managed or hosted",
+        "description": "Server runs inside your own perimeter for data residency; Cloud is delivered as a service."
+      },
+      {
+        "title": "Free IDE extension",
+        "description": "SonarQube for IDE gives on-the-fly analysis and guidance while code is being written."
+      },
+      {
+        "title": "Explainable findings",
+        "description": "Issues are reported with an explanation and reviewed in the existing review workflow."
+      }
     ]
   },
   {
@@ -27861,7 +27949,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Whereby runs video meetings entirely in the browser, with no download and no account needed for guests.",
+    "longDescription": "Whereby is a European-owned video calling service sold in two distinct products, and the difference matters when comparing it. Meetings is the browser-based product for individuals and teams: instant calls, permanent room links that stay the same between meetings, basic customisation, and no download or account required for guests. Embedded is a separate developer product that puts video calls inside another company's application, either through a pre-built UI reached from an iframe or web component in about three lines of code, or through the SDK for a fully custom interface, with programmatic room creation, cloud recording, AI transcriptions without recording, pre-call device checks, file sharing, chat and usage analytics. Both are built in Europe, GDPR compliant and ISO 27001 certified, and can be implemented to meet HIPAA requirements.",
     "pros": [
       "Guests join with a link, no install",
       "Rooms have stable URLs",
@@ -27928,6 +28016,28 @@
         "faturalama": null,
         "kaynakSatiri": "Business $13.99/month per host, minimum 3 hosts: 200 participants; 14-day trial",
         "kaynakUrl": "https://whereby.com/information/meetings/pricing"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Browser-based meetings",
+        "description": "Calls run in the browser with permanent room links and no download or guest account."
+      },
+      {
+        "title": "Embedded API and SDK",
+        "description": "A separate developer product adding video to another app via iframe, web component or SDK."
+      },
+      {
+        "title": "Recording and transcription",
+        "description": "Cloud recording to a storage bucket, plus AI transcription that needs no recording."
+      },
+      {
+        "title": "Compliance posture",
+        "description": "Built in Europe, GDPR compliant and ISO 27001 certified, implementable for HIPAA."
+      },
+      {
+        "title": "Call diagnostics",
+        "description": "Pre-call device and connectivity checks plus usage analytics for troubleshooting."
       }
     ]
   },
@@ -29212,7 +29322,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "LlamaIndex is an MIT-licensed application framework for connecting models to external data through loaders, indexes, retrievers, query engines and agents. The open-source packages are distinct from LlamaParse and other hosted document services.",
+    "longDescription": "LlamaIndex is an MIT-licensed application framework for connecting language models to external data. Source documents are brought in through data connectors and turned into the framework's document and node structures, indexed so that retrievers can pull relevant context, and served to the model through query engines or agents. Models, embedding providers and vector stores are added as separate integration packages rather than bundled, so the stack underneath can be swapped without rewriting the application, and supported index state can be persisted to disk and reloaded later instead of being rebuilt on every run. The company also sells hosted document parsing and extraction services, but the framework itself is the open-source part and carries no licence cost.",
     "pros": [
       "Retrieval components: Provides ingestion, indexing, storage and query abstractions.",
       "Modular integrations: Core packages connect to separately installed model, embedding and vector-store providers.",
@@ -45922,7 +46032,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Gitea is a lightweight, self-hostable Git service with issues, pull requests and CI, running comfortably on modest hardware.",
+    "longDescription": "Gitea is a self-hosted, all-in-one software development service covering Git hosting, code review, team collaboration, a package registry and CI/CD, released as open source under the MIT licence. It is built to be lightweight and to answer quickly even on repositories with long histories and large files, which is what makes it practical on modest hardware where a heavier forge would not fit. It is fully Git compatible, so existing tools and workflows keep working, and access controls restrict who can read or modify a repository. It runs on a range of operating systems, and because it is self-hosted the repositories and the data behind them stay under your own control. A managed cloud edition and a Gitea Enterprise edition with SSO, audit logs and SLA support are sold alongside the free version.",
     "pros": [
       "Runs on very little hardware",
       "Familiar interface for GitHub users",
@@ -45983,6 +46093,28 @@
         "faturalama": null,
         "kaynakSatiri": "Enterprise self-managed $9.50–$19/user/month, 30-day trial, SAML SSO, audit logs",
         "kaynakUrl": "https://about.gitea.com/pricing"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "All-in-one forge",
+        "description": "Git hosting, code review, issues, pull requests, package registry and CI/CD in one service."
+      },
+      {
+        "title": "Lightweight to run",
+        "description": "Built for quick response on large repositories and long histories, including on small hardware."
+      },
+      {
+        "title": "Full Git compatibility",
+        "description": "Existing Git tools and workflows work unchanged against a Gitea server."
+      },
+      {
+        "title": "Access control",
+        "description": "Repository permissions restrict who can read and modify code."
+      },
+      {
+        "title": "Self-hosted and MIT licensed",
+        "description": "Open source under MIT with repositories and data kept on your own infrastructure."
       }
     ]
   },
@@ -48299,7 +48431,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Simplenote is free, fast, plain-text note taking that syncs everywhere and does nothing else.",
+    "longDescription": "Simplenote is plain-text note taking from Automattic that syncs across iOS, Android, Mac, Windows, Linux and the browser, with no sync button because updates propagate automatically and in real time. Organisation is deliberately shallow: notes carry tags and instant search finds them, and there is no folder tree, formatting toolbar or attachment handling to manage. Notes can be shared with other people, published online as a link, or written in Markdown with a preview. Every change is backed up, so an earlier version of a note from last week or last month can be brought back. Apps, backups, syncing and sharing are all free - there is no paid tier, which is the trade-off behind how little the app tries to do.",
     "pros": [
       "Genuinely free with no tier",
       "Instant sync and search",
@@ -48351,7 +48483,29 @@
         "Vendor pricing page was reviewed by an editor on this date; this record is not a ToolCompare benchmark. Prices and limits change."
       ]
     },
-    "fiyatKontrolTarihi": "2026-09-08"
+    "fiyatKontrolTarihi": "2026-09-08",
+    "keyFeatures": [
+      {
+        "title": "Real-time sync everywhere",
+        "description": "Notes stay current across iOS, Android, Mac, Windows, Linux and the web with no sync step."
+      },
+      {
+        "title": "Tags and instant search",
+        "description": "Organisation is tag-based with search that narrows as you type."
+      },
+      {
+        "title": "Version history",
+        "description": "Every change is backed up, so an earlier state of a note can be restored."
+      },
+      {
+        "title": "Sharing and publishing",
+        "description": "Notes can be shared with collaborators or published online as a link."
+      },
+      {
+        "title": "Markdown support",
+        "description": "Notes can be written, previewed and published in Markdown."
+      }
+    ]
   },
   {
     "slug": "tiddlywiki",

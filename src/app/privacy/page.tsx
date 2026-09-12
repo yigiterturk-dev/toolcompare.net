@@ -5,6 +5,7 @@ import { Lock, Eye, Database, Cookie } from "lucide-react";
 import type { Metadata } from "next";
 
 import { OG_GORSEL } from "@/lib/paylasim";
+import { reklamAcik } from "@/lib/reklam";
 // Kendi metadata'si yoktu: kok layout'unkini miras alip
 // anasayfayla AYNI baslik/aciklamayi kullaniyordu.
 export const metadata: Metadata = {
@@ -16,6 +17,18 @@ export const metadata: Metadata = {
 
 
 export default function PrivacyPage() {
+  /*
+    Bu sayfa reklam durumunu OKUYOR, kendi basina bir sey iddia etmiyor.
+    Onceki hali "this site sets no cookies ... nothing to consent to"
+    diyordu; AdSense acildigi an o cumle YANLIS olacakti ve yanlisligi
+    kimse fark etmeyecekti cunku metin elle yaziliydi. Kapi `reklam.ts`
+    ile ayni degiskene bagli: betik basiliyorsa politika da onu soyler.
+    Sayfanin kendi sozu -- "if we ever start collecting something not
+    listed above, this page will say so before it happens" -- ancak
+    boyle tutulabilir.
+  */
+  const reklamli = reklamAcik();
+
   return (
     <>
       <Header />
@@ -31,9 +44,10 @@ export default function PrivacyPage() {
         <article>
           <section>
             <p>
-              <strong>The short version:</strong> this site sets no cookies, runs no
-              analytics, and has no advertising trackers. We store an email address only if you type one into
-              the newsletter box. Everything below describes exactly what does happen — nothing more.
+              <strong>The short version:</strong> {reklamli
+                ? "we run no analytics package of our own and store an email address only if you type one into the newsletter box. We do show Google advertising, and Google sets cookies to serve those ads — section 1 says exactly what that means."
+                : "this site sets no cookies, runs no analytics, and has no advertising trackers. We store an email address only if you type one into the newsletter box."}{" "}
+              Everything below describes exactly what does happen — nothing more.
             </p>
           </section>
 
@@ -41,11 +55,47 @@ export default function PrivacyPage() {
             <h2>
               <Cookie color="#10b981" /> 1. Cookies and analytics
             </h2>
-            <p>
-              We set no cookies. We run no analytics package — no Google Analytics, no tag manager, no
-              third-party advertising or behavioural trackers — and we do not write anything to your browser&apos;s
-              local storage. There is no cookie banner on this site because there is nothing to consent to.
-            </p>
+            {reklamli ? (
+              <>
+                <p>
+                  <strong>We set no cookies of our own.</strong> We run no analytics package — no Google
+                  Analytics, no tag manager, no behavioural tracker of ours — and we write nothing to your
+                  browser&apos;s local storage.
+                </p>
+                <p>
+                  <strong>Google advertising does set cookies.</strong> This site carries advertising served
+                  by Google AdSense. Google and its partners use cookies and similar identifiers to serve
+                  those ads and to measure them, and may use your previous visits to this and other websites
+                  to decide which ads you see. Google&apos;s use of advertising cookies is described in its{" "}
+                  <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener" target="_blank">
+                    privacy and terms for partner sites
+                  </a>.
+                </p>
+                <p>
+                  You can turn off personalised advertising at{" "}
+                  <a href="https://www.google.com/settings/ads" rel="nofollow noopener" target="_blank">
+                    Google Ads Settings
+                  </a>, and opt out of third-party vendor cookies at{" "}
+                  <a href="https://www.aboutads.info/choices/" rel="nofollow noopener" target="_blank">
+                    aboutads.info/choices
+                  </a>. If you are in the European Economic Area, the United Kingdom or Switzerland, a consent
+                  message appears before personalised ads are served and your choice is recorded; you can
+                  change it at any time from the link in that message.
+                </p>
+                <p>
+                  Advertising is how the research on this site is paid for. Which tools appear, how they are
+                  ranked and what the comparisons say is decided before any advertising is involved and is
+                  never sold — see the <a href="/methodology">methodology</a> and the{" "}
+                  <a href="/affiliate-disclosure">affiliate disclosure</a>.
+                </p>
+              </>
+            ) : (
+              <p>
+                We set no cookies. We run no analytics package — no Google Analytics, no tag manager, no
+                third-party advertising or behavioural trackers — and we do not write anything to your browser&apos;s
+                local storage. There is no cookie banner on this site because there is nothing to consent to.
+              </p>
+            )}
           </section>
 
           <section>

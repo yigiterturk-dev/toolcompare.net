@@ -8,6 +8,8 @@ import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki, kanitRel } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
+import ReklamBirimi from "@/components/ReklamBirimi";
+import { aracReklamAlir, reklamYayinci, icerikSlotu } from "@/lib/reklam";
 import FiyatBolumu from "@/components/FiyatBolumu";
 import { entegrasyonOrtaklari, durumEtiketi } from "@/lib/entegrasyon";
 import { kanonikSlug, indekslenebilirAkranlar, karsilastirmaAkranlari, alternatifSayfasiVar } from "@/lib/compare";
@@ -631,6 +633,20 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               )}
             </aside>
           </div>
+
+          {/*
+            Reklam ana anlatimin ALTINDA duruyor, icine degil: okur once
+            cevabi aliyor. Kapi `aracReklamAlir` -- ince ya da noindex
+            sayfa reklam almaz (AdSense politikasi), ve slot kimligi
+            tanimli degilse hic cizilmez.
+          */}
+          {(() => {
+            const yayinci = reklamYayinci();
+            const slot = icerikSlotu();
+            return aracReklamAlir(tool) && yayinci && slot ? (
+              <ReklamBirimi yayinci={yayinci} slot={slot} />
+            ) : null;
+          })()}
 
           {/* ---------- Ne kontrol edildi ---------- */}
           <section className="mt-14 border-t border-line pt-10">

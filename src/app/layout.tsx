@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { cspOlustur } from "@/lib/guvenlik";
+import { reklamYayinci } from "@/lib/reklam";
 import { Newsreader, Roboto } from "next/font/google";
 import "./globals.css";
 
@@ -66,7 +67,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const adsensePub = process.env.ADSENSE_PUBLISHER_ID?.trim();
+  const adsensePub = reklamYayinci();
 
   return (
     /*
