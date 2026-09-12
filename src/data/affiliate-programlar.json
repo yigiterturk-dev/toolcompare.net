@@ -234,8 +234,10 @@
       "checkedAt": "2026-09-12"
     },
     "aircall": {
-      "durum": "bilinmiyor",
-      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://aircall.io/partners/affiliate-partners/",
+      "kosul": "Dogrulanmis her nitelikli lead icin komisyon, yinelenen ve performansa dayali; takip otomatik, odeme AYLIK. Oran sayfada YAZMIYOR. Program acikca B2B kitlesi olan pazarlamaci ve YAYINCILAR icin -- inceleme sitesi uygun. ⚠️ Aircall'un ayri bir Channel/reseller partner programi var, affiliate ONDAN FARKLI.",
       "checkedAt": "2026-09-12"
     },
     "contentful": {
@@ -279,8 +281,10 @@
       "checkedAt": "2026-09-12"
     },
     "matomo": {
-      "durum": "bilinmiyor",
-      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "durum": "kurumsal",
+      "ag": "dogrudan",
+      "url": "https://matomo.org/matomo-partner-programme/",
+      "kosul": "Affiliate DEGIL: ajans/danisman/bayi ortakligi. Iki tur var (uygulama ortagi ve yetkili saglayici); her ortak Matomo tarafindan inceleniyor ve dizinde listeleniyor. Komisyon degil, musteriye hizmet/satis modeli -- icerik sitesi icin uygun degil.",
       "checkedAt": "2026-09-12"
     },
     "mattermost": {
@@ -325,7 +329,7 @@
     },
     "strava": {
       "durum": "bilinmiyor",
-      "kosul": "⚠️ TARAMA NEGATIF (2026-09-12): 18 yaygin affiliate yol kalibi denendi (/affiliates, /affiliate, /partners, /affiliate-program, /partners/affiliate, /referral, /partner-program, /become-a-partner, /resellers, /company/partners, /refer ...) -- hicbirinde komisyon dili tasiyan sayfa cikmadi. Bu 'program YOK' demek DEGIL: program bir AGDA (PartnerStack, Impact, CJ, ShareASale) duruyor olabilir ve satici kendi sitesinde duyurmuyordur. → curl ile tekrar aramak bosuna; bir sonraki adim ag panellerinde ada gore aramak (giris gerekir).",
+      "kosul": "⚠️ TUZAK: strava.com ana sayfasindaki 'utm_medium=referral' baglantilari affiliate DEGIL, yalnizca kendi ic trafigini etiketleyen UTM parametresi. Otomatik link taramasi bunu program sandi. huggingface ile ayni ders: URL'de 'referral' gecmesi kanit degil.",
       "checkedAt": "2026-09-12"
     },
     "sugarcrm": {
