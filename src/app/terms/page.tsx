@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { affiliateAktifMi, ACIKLAMA_METNI } from "@/lib/affiliate";
+import { affiliateAktifMi, ACIKLAMA_SOZ } from "@/lib/affiliate";
 import Footer from "@/components/Footer";
 import { Shield, Scale, FileText, ExternalLink } from "lucide-react";
 
@@ -48,7 +48,7 @@ export default function TermsPage() {
               neyse o yaziliyor.
             */}
             {affiliateAktifMi() ? (
-              <p>ToolCompare.net participates in affiliate programs: some outbound links earn us a commission if you sign up. {ACIKLAMA_METNI} Every compensated link is marked <code>rel=&quot;sponsored&quot;</code> in the page source. Our rankings are based on our own analysis and research, and no company has paid for placement or a better verdict.</p>
+              <p>ToolCompare.net participates in affiliate programs: some outbound links earn us a commission if you sign up. {ACIKLAMA_SOZ} Every compensated link is marked <code>rel=&quot;sponsored&quot;</code> in the page source. Our rankings are based on our own analysis and research, and no company has paid for placement or a better verdict.</p>
             ) : (
               <p>ToolCompare.net does not currently participate in any affiliate program and earns no commission from the links on this site. We may join such programs in the future; if that happens, this page will be updated before any paid link goes live and every compensated link will be marked as sponsored. Our rankings are based on our own analysis and research, and no company has paid for placement or a better verdict.</p>
             )}

@@ -55,6 +55,22 @@ export function relDegeri(slug: string): string {
     : "noopener noreferrer nofollow";
 }
 
-/** Ziyaretciye gosterilecek tek cumle. Metin de tek yerde dursun. */
-export const ACIKLAMA_METNI =
-  "Some links on this page earn us a commission if you sign up. It never changes a price you pay, a verdict we publish, or the order tools appear in.";
+/**
+ * Aciklama metni IKI parcadan olusur:
+ *   KAZANC  -- "komisyon aliyoruz" olgusu
+ *   SOZ     -- "ama sunu degistirmiyor" taahhudu
+ *
+ * NEDEN AYRILDI (2026-09-12, ilk anlasma devreye alininca gorundu):
+ * /terms ve /methodology bu olguyu zaten KENDI cumleleriyle soyluyor ve
+ * ardindan tam metni basiyordu; sonuc "...earn us a commission if you sign
+ * up. Some links on this page earn us a commission if you sign up." seklinde
+ * kekeleyen bir paragraftı. Iki sayfa da hukuki metin; kekelemesin.
+ * Olguyu kendi cumlesiyle soyleyen sayfa yalnizca SOZ'u ekler.
+ */
+export const ACIKLAMA_KAZANC =
+  "Some links on this page earn us a commission if you sign up.";
+export const ACIKLAMA_SOZ =
+  "It never changes a price you pay, a verdict we publish, or the order tools appear in.";
+
+/** Olguyu kendisi soylemeyen yerler (sayfa ici serit) icin tam cumle. */
+export const ACIKLAMA_METNI = `${ACIKLAMA_KAZANC} ${ACIKLAMA_SOZ}`;

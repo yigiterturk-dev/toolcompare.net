@@ -13,7 +13,7 @@
  */
 
 import Header from "@/components/Header";
-import { affiliateAktifMi, ACIKLAMA_METNI } from "@/lib/affiliate";
+import { affiliateAktifMi, ACIKLAMA_SOZ } from "@/lib/affiliate";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -132,7 +132,7 @@ export default function MethodologyPage() {
             <>
               <p>
                 Through affiliate links. Some outbound links earn us a commission if you sign up through
-                them. {ACIKLAMA_METNI}
+                them. {ACIKLAMA_SOZ}
               </p>
               <p>
                 The ranking rules above did not change when the first paid link went live, and every

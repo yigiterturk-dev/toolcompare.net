@@ -175,8 +175,9 @@
       "durum": "var",
       "ag": "dogrudan",
       "url": "https://railway.com/affiliate-program",
-      "kosul": "Yeni musterinin ilk 12 ay faturalarinin %15'i. ONAY SURECI YOK -- link dogrudan panelden aliniyor, trafik esigi yok. Odeme GitHub Sponsors veya Buy Me a Coffee uzerinden. Ayrica sablon dagitimi basina %25 veren acik kaynak partner programi var.",
-      "checkedAt": "2026-09-12"
+      "kosul": "Yeni musterinin ilk 12 ay faturalarinin %15'i (docs). Panelde yazan: \"15% cash earnings for every person who signs up using your code once they pay their first bill\"; yonlendirilen kisi kayitta $20 kredi aliyor. ONAY SURECI YOK -- link dogrudan panelden alindi. Odeme GitHub Sponsors veya Buy Me a Coffee uzerinden. Ayrica sablon dagitimi basina %25 veren acik kaynak partner programi var.",
+      "checkedAt": "2026-09-12",
+      "anlasma": "2026-09-12 -- link alindi, affiliate.json'a girildi"
     },
     "ionos": {
       "durum": "var",
