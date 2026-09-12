@@ -17,11 +17,12 @@ import Header from "@/components/Header";
 import { alternatifIndekslenir, NOINDEX } from "@/lib/indeks";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import toolsData from "@/data/tools.json"
 import type { Arac } from "@/lib/arac";
 import { akranlar, alternatifSayfasiOlanlar, farkCumlesi, kanonikSlug, EN_AZ_ALTERNATIF } from "@/lib/compare";
+import { kategoriSlug } from "@/lib/categories";
 import { alternatifOzeti, ilkUcretliBasamak, planEtiketi } from "@/lib/plan";
 import { ciftTaranmayaDeger } from "@/lib/tarama";
 import { gitLinki } from "@/lib/outbound";
@@ -48,7 +49,14 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
 
   const alts = akranlar(slug);
   // Baslik 65 karakteri asarsa arama sonucunda kesilir.
-  const cekirdek = `${alts.length} Best ${tool.name} Alternatives in 2026`;
+  /*
+    Sayi yalnizca 3+ akranda basliga giriyor: "2 Best Gumroad Alternatives"
+    hem kotu okunuyor hem de iddiayi kuculterek soyluyor. Az sayida gercek
+    alternatif varsa dogru cumle sayiyi ONE CIKARMAZ, sadece dogru olur.
+  */
+  const cekirdek = alts.length >= 3
+    ? `${alts.length} Best ${tool.name} Alternatives in 2026`
+    : `Best ${tool.name} Alternatives in 2026`;
   const title = cekirdek.length <= 51 ? `${cekirdek} | ToolCompare` : cekirdek;
   const description = `Looking for a ${tool.name} alternative? We compared ${alts.length} tools in the same category on starting price, ease of use and feature depth — and what each one does differently.`;
   const url = `/alternatives/${tool.slug}`;
@@ -71,8 +79,16 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
 
   const alts = akranlar(slug);
   const ozet = alternatifOzeti(tool as never, alts as never[]);
-  // Sayfa yalnizca yeterli alternatif varsa anlamli.
-  if (alts.length < EN_AZ_ALTERNATIF) notFound();
+  /*
+    ESIGIN ALTINDA 404 DEGIL YONLENDIRME (olcum, 2026-09-12).
+    Eskiden burada `notFound()` vardi ve bu, Google'in FIILEN SIRADA
+    GOSTERDIGI adreslerde sert 404 uretiyordu: /alternatives/zapier 79
+    gosterim, /alternatives/ramp 41 -- hepsi 404. Aranan sey bir liste;
+    tek akranli sayfa o listeyi veremez ama kategori sayfasi verir.
+    Gecici (307) yonlendirme: katalog buyuyup akran sayisi esige ulasinca
+    sayfa geri gelmeli, kalici yonlendirme onu onlerdi.
+  */
+  if (alts.length < EN_AZ_ALTERNATIF) redirect(`/categories/${kategoriSlug(tool.category)}`);
 
   const enUcuz = enUcuzArac(alts);
 

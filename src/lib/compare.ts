@@ -37,8 +37,19 @@ const araclar = toolsData as Arac[];
 /** Her aracin kac akrani olacak. Sayfa sayisini da link agini da bu belirler. */
 export const AKRAN_ADEDI = 5;
 
-/** Alternatif sayfasi icin gereken en az akran sayisi. Altinda sayfa uretilmez. */
-export const EN_AZ_ALTERNATIF = 3;
+/**
+ * Alternatif sayfasi icin gereken en az akran sayisi.
+ *
+ * 3 -> 2 (olcum, 2026-09-12). Esik 3 iken sayfa `notFound()` cagiriyordu ve
+ * bu SIRALANAN adreslerde sert 404 demekti: /alternatives/gumroad 90 gunde
+ * 175 gosterim aliyor ve 404 donuyordu. Google sonucu gosteriyor, tiklayan
+ * hicbir sey bulmuyordu -- alternatif sinifinin sifir tikinin bir kismi bu.
+ *
+ * Neden 2'de duruyor: iki arac bir secim yapar, bir arac yapmaz. Tek akranli
+ * sayfa "alternatifler" degildir; oradaki ziyaretci 404 yerine kategori
+ * sayfasina yonlendiriliyor (bkz. app/alternatives/[slug]/page.tsx).
+ */
+export const EN_AZ_ALTERNATIF = 2;
 
 /**
  * SIRALAMA OLCUTU: FIYAT.
