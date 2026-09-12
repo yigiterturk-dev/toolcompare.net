@@ -53,6 +53,12 @@ const PLAN_DEGIL = [
   /* Kaynak basina fiyatlanan eklentiler: BetterStack "status page password
      authentication $50 per page/month" bir PLAN degil, bir ozellik. */
   /\bper (?:\w+\s)?(?:page|domain|IP|form|bot|channel|inbox|number|record|site|workspace)\b/i,
+  /* SONUC/ETKILESIM BASINA UCRET (2026-09-12): Intercom "Fin AI agent $0.99
+     per outcome" basamak olarak alinmis, birimi de "kisi-basina" sayilmisti.
+     Arac sayfasi bu yuzden "Paid tiers start at $0.99/user/mo" yaziyordu --
+     $29/koltuk olan gercek giris planinin 30'da biri. Kullanim basina ucret
+     plan basamagi degildir. */
+  /\bper (?:outcome|resolution|conversation|ticket|session|order|contact|event|run|task|query|seat-hour)\b/i,
 ];
 
 /* Plan adinda olmasi imkansiz kelimeler (cumle parcasini ad saymayalim). */

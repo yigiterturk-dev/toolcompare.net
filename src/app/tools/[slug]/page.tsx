@@ -8,8 +8,10 @@ import { aracIndekslenir, NOINDEX } from "@/lib/indeks";
 import { gitLinki, kanitRel } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
+import FiyatBolumu from "@/components/FiyatBolumu";
 import { kanonikSlug, indekslenebilirAkranlar, karsilastirmaAkranlari, alternatifSayfasiVar } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { merdiven, planEtiketi } from "@/lib/plan";
 import { metaAciklamasi } from "@/lib/meta";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
 import { evidenceLabel, toolEvidence, kanitRakamli } from "@/lib/evidence";
@@ -114,7 +116,29 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   // Dogrulanmamis fiyat yapilandirilmis veriye KONMAZ: Google'a yanlis
   // fiyat beyan etmek zengin sonuclarda yaptirim sebebi.
-  if (fiyatDurumu(tool).karsilastirilabilir) {
+  /*
+    MERDIVEN VARSA HEPSI BEYAN EDILIR (2026-09-12). Tek bir "starts at"
+    rakami, "<arac> pricing" arayan kisinin sordugu sey degil: o kisi
+    basamaklari ariyor. Basamaklarin hepsi saticinin fiyat sayfasindan
+    okunmus oldugu icin beyan etmek guvenli -- uydurma rakam girmiyor.
+  */
+  const semaBasamaklari = merdiven(tool);
+  if (semaBasamaklari.length >= 2) {
+    yapilandirilmis.offers = {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: semaBasamaklari[0].aylik,
+      highPrice: semaBasamaklari[semaBasamaklari.length - 1].aylik,
+      offerCount: semaBasamaklari.length,
+      offers: semaBasamaklari.map((p) => ({
+        "@type": "Offer",
+        name: p.ad,
+        price: p.aylik,
+        priceCurrency: "USD",
+        description: planEtiketi(p),
+      })),
+    };
+  } else if (fiyatDurumu(tool).karsilastirilabilir) {
     yapilandirilmis.offers = {
       "@type": "Offer",
       price: tool.basePrice,
@@ -163,7 +187,13 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const bestFor: string[] = Array.isArray(tool.bestFor) ? tool.bestFor.filter(Boolean) : [];
   const skipIf: string[] = Array.isArray(tool.skipIf) ? tool.skipIf.filter(Boolean) : [];
   const sss: { soru: string; cevap: string }[] = [];
-  if (fiyat.karsilastirilabilir) {
+  /*
+    KAPI GENISLETILDI (2026-09-12): eskiden yalnizca `karsilastirilabilir`
+    fiyati olanlar bu SSS'yi aliyordu. Ucretsiz katmanli araclar (netlify,
+    elastic, obsidian...) o kapidan gecemiyordu -- oysa merdivenleri var ve
+    "netlify pricing" tam olarak o basamaklari soruyor.
+  */
+  if (fiyat.karsilastirilabilir || merdiven(tool).length >= 2) {
     /*
       DENETIMDE BULUNAN (2026-09-07): cumle "starts at ${metin} as a flat
       monthly price" olarak kuruluyordu. Bedava araclarda metin "Free"
@@ -172,11 +202,25 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       gidiyordu. Bedava, aylik ucret degildir: ayri cumle hak eder.
     */
     const bedavaMi = fiyat.aylik === 0;
+    /*
+      Merdiven varsa cevap basamaklarin KENDISI olur. "starts at $39" cumlesi
+      "spyfu pricing" arayan kisinin sordugu sey degil; o kisi $39/$119/$249
+      ayrimini ariyor ve sitenin elinde bu rakamlar zaten var.
+    */
+    const basamaklar = merdiven(tool);
+    const cevapMerdiven =
+      basamaklar.length >= 2
+        ? `${tool.name} publishes ${basamaklar.length} plans: ${basamaklar
+            .map((p) => `${p.ad} at ${planEtiketi(p)}`)
+            .join(", ")}. Every figure is read from the vendor's own pricing page; the pricing section above shows the source sentence for each tier.`
+        : null;
     sss.push({
       soru: `How much does ${tool.name} cost?`,
-      cevap: bedavaMi
-        ? `${tool.name} is free to use. We verified this against the vendor's own page; see "What we checked" below for the date.`
-        : `${tool.name} starts at ${fiyat.metin.replace(/^From /, "")}${tool.isFlat ? " as a flat monthly price" : " per user"}. We verified this against the vendor's pricing page; see "What we checked" below for the date.`,
+      cevap:
+        cevapMerdiven ??
+        (bedavaMi
+          ? `${tool.name} is free to use. We verified this against the vendor's own page; see "What we checked" below for the date.`
+          : `${tool.name} starts at ${fiyat.metin.replace(/^From /, "")}${tool.isFlat ? " as a flat monthly price" : " per user"}. We verified this against the vendor's pricing page; see "What we checked" below for the date.`),
     });
   }
   if (tool.fiyatModeli) {
@@ -299,6 +343,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <p className="mt-3 whitespace-pre-line text-ink-soft">{longDesc}</p>
                 </section>
               ) : null}
+
+              <FiyatBolumu tool={tool} altSayfasiVar={altSayfasiVar} />
 
               {features.length > 0 && (
                 <section>

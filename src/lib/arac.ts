@@ -19,6 +19,8 @@
  * yazilmaz.
  */
 
+import type { Plan } from "./plan";
+
 /** Bir ozelligin basligi ve aciklamasi. */
 export type OneCikanOzellik = { title?: string; description?: string };
 
@@ -74,6 +76,12 @@ export type Arac = {
   /** Fiyat modelinin ham degeri; yorumu YALNIZCA fiyat.ts yapar. */
   fiyatModeli?: string;
   fiyatKontrolTarihi?: string;
+  /**
+   * Saticinin yayinladigi plan merdiveni. Her basamak kaynak cumlesiyle gelir.
+   * Tipe 2026-09-12'de eklendi: alan 196 kayitta doluydu ama tipte yoktu, bu
+   * yuzden her kullanim yerinde `as` ile kaciliyordu (seffaflik.ts:96 gibi).
+   */
+  planlar?: Plan[];
   /** "Bunu al" / "bunu alma" maddeleri -- saticinin sitesinde olmayan icerik. */
   bestFor?: string[];
   skipIf?: string[];

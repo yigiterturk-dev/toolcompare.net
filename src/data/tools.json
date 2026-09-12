@@ -4817,14 +4817,6 @@
     ],
     "planlar": [
       {
-        "ad": "Fin AI agent",
-        "aylik": 0.99,
-        "birim": "kisi-basina",
-        "faturalama": null,
-        "kaynakSatiri": "Fin AI agent $0.99 per outcome",
-        "kaynakUrl": "https://www.intercom.com/pricing"
-      },
-      {
         "ad": "Essential",
         "aylik": 29,
         "birim": "kisi-basina",
