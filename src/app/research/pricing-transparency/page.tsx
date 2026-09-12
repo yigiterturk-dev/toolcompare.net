@@ -32,7 +32,9 @@ import { OG_GORSEL } from "@/lib/paylasim";
 const SURUM = "2026-09-11";
 
 export const metadata: Metadata = {
-  title: "The Pricing Transparency Index: 472 Software Products | ToolCompare",
+  // 67 karakterdi ve arama sonucunda kesiliyordu (olcum, 2026-09-12).
+  // Marka adi dusuruldu: kesilen sey basligin ANLAMI olmamali.
+  title: "The Pricing Transparency Index: 472 Software Products",
   description:
     "We opened the pricing page of 472 software products by hand and recorded whether a price could actually be read. 43% carried no usable figure. Full method, per-category breakdown and the raw CSV.",
   alternates: { canonical: "/research/pricing-transparency" },

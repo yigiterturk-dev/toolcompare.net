@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { NOINDEX } from "@/lib/indeks";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -6,20 +8,43 @@ import fs from 'fs';
 import path from 'path';
 
 
-export const metadata = {
-  // Kanonik SAYFA BASINA yazilir; kok layout artik miras birakmiyor
-  // (bkz. src/app/layout.tsx, 2026-09-09 olcumu).
-  alternates: { canonical: "/blog" },
-};
-export default function BlogPage() {
-  const postsPath = path.join(process.cwd(), 'src/data/posts.json');
-  /* `let posts = []` tipi `never[]` cikariyordu; JSON okunduktan sonra
-     her kullanim implicit any oluyordu. Sekil burada tanimli. */
-  type Yazi = { slug: string; title: string; image?: string; excerpt?: string; date?: string; readTime?: string; category?: string; author?: string };
-  let posts: Yazi[] = [];
-  if (fs.existsSync(postsPath)) {
-    posts = JSON.parse(fs.readFileSync(postsPath, 'utf8'));
+/** Yazi listesi: dosya yoksa bos. Hem metadata hem sayfa ayni kaynagi okur. */
+function yazilariOku(): { slug: string; title: string; image?: string; excerpt?: string; date?: string; readTime?: string; category?: string; author?: string }[] {
+  const yol = path.join(process.cwd(), "src/data/posts.json");
+  if (!fs.existsSync(yol)) return [];
+  try {
+    return JSON.parse(fs.readFileSync(yol, "utf8"));
+  } catch {
+    return [];
   }
+}
+
+/*
+  BOS LISTE SAYFASI INDEKSLENMEZ (olcum, 2026-09-12).
+  /blog kendi basligini hic tanimlamamisti; kok layout'tan ANASAYFANIN
+  basligini ve aciklamasini miras aliyordu -- yani site, iki ayri adreste
+  ayni basligi beyan ediyordu. Ustelik `posts.json` yok: sayfa hic yazi
+  icermiyor ve 90 gunde 0 gosterim almis. Icerigi olmayan, basligi baska
+  bir sayfadan odunc alinmis adres tam olarak tarama butcesi turunun
+  (2026-09-10) temizledigi seydi.
+
+  Kural kendi kendini duzeltiyor: ilk yazi eklendigi anda sayfa
+  indekslenebilir hale geliyor, kod degismeden.
+*/
+export function generateMetadata(): Metadata {
+  const yazilar = yazilariOku();
+  return {
+    title: "SaaS Insights | ToolCompare",
+    description:
+      "Guides and analysis on software pricing, tooling decisions and what tools actually cost to run.",
+    alternates: { canonical: "/blog" },
+    robots: yazilar.length > 0 ? undefined : NOINDEX,
+  };
+}
+export default function BlogPage() {
+  // Tek okuyucu: metadata ile sayfa ayni listeyi gorur, yoksa "bos ama
+  // indekslenebilir" gibi ayrisma dogar.
+  const posts = yazilariOku();
 
   return (
     <>
