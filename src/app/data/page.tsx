@@ -106,8 +106,49 @@ export default function DataPage() {
   const seffaflik = seffaflikOzeti(araclar);
   const atif = `ToolCompare, Verified SaaS Pricing Dataset (version ${SURUM}). https://toolcompare.net/data — licensed CC BY 4.0.`;
 
+  /*
+    DATASET SEMASI (2026-09-12). Sayfa lisansi, atfi ve indirme adresini
+    DUZ YAZIYLA soyluyordu ama makineye hic soylemiyordu: /data'da tek bir
+    JSON-LD yoktu. Google'in veri kumesi aramasi (ve ayni semayi okuyan
+    diger toplayicilar) schema.org/Dataset uzerinden calisir -- yani
+    sitenin atif alinmak icin kurdugu asil varlik, o kanala gorunmezdi.
+    Ayni sema /research/pricing-transparency'de zaten vardi; burada yoktu.
+
+    Alanlar uydurulmuyor: sayilar sayfanin kendi olcumunden (`say`,
+    `seffaflikOzeti`), lisans ve atif yukaridaki `atif` cumlesinden, iki
+    dagitim adresi de canli ve dogru tipte donuyor (/api/tools JSON,
+    /api/pricing-transparency CSV).
+  */
+  const sema = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "ToolCompare Verified SaaS Pricing Dataset",
+    description:
+      `Pricing, plan ladders and documented capabilities for ${s.toplam} software products. ` +
+      `Every price figure carries the vendor page it was read from and the date it was read.`,
+    url: "https://toolcompare.net/data",
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    creator: { "@type": "Organization", name: "ToolCompare", url: "https://toolcompare.net" },
+    version: SURUM,
+    isAccessibleForFree: true,
+    keywords: ["software pricing", "SaaS pricing", "pricing transparency", "software comparison"],
+    distribution: [
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/json",
+        contentUrl: "https://toolcompare.net/api/tools",
+      },
+      {
+        "@type": "DataDownload",
+        encodingFormat: "text/csv",
+        contentUrl: "https://toolcompare.net/api/pricing-transparency",
+      },
+    ],
+  };
+
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sema) }} />
       <Header />
       <main className="doc">
         <h1>Open dataset: software pricing, with its receipts</h1>
