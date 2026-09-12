@@ -127,3 +127,34 @@ test("kirpilmis izgara kaydi urun sayfasiyla ayni fiyati veriyor", async () => {
   }
   assert.deepEqual(farkli, [], `izgara kirpmasi fiyati degistiriyor:\n${farkli.join("\n")}`);
 });
+
+/**
+ * BASKA URUNUN FIYATI MERDIVEN SAYILMASIN.
+ *
+ * notion-calendar'in fiyat kanidi Notion CALISMA ALANI planlarini
+ * yaziyordu ("Free $0, Plus $10/member/month, Business $20/member/month")
+ * ve ilk satiri zaten "Notion Calendar included on Free, Plus, Business
+ * and Enterprise" diyordu -- yani urunun ayri fiyati YOK. Merdiven olarak
+ * okununca sayfa "Notion Calendar publishes 2 plans" deyip baska bir
+ * urunun rakamlarini kendi fiyati gibi gosteriyordu.
+ *
+ * Kanit silinmedi (satir dogru ve sayfada isine yariyor); kaynak
+ * `farkliUrun: true` ile isaretlendi ve ayiklayici onu MERDIVEN olarak
+ * okumuyor. Iki cikarma yolu da kapatildi: fiyatli satirlar ve
+ * rakamsiz "Free" satiri.
+ */
+test("farkliUrun isaretli kaynaktan merdiven uretilmiyor", () => {
+  const betik = readFileSync("scripts/plan-merdiveni.mjs", "utf8");
+  const kapilar = betik.match(/if \(kaynak\.farkliUrun\) continue;/g) ?? [];
+  assert.equal(kapilar.length, 2,
+    "farkliUrun kapisi iki cikarma yolunun ikisinde de olmali (fiyatli satir + 'Free' satiri)");
+});
+
+test("farkliUrun isaretli aracin merdiveni yok", () => {
+  for (const t of araclar) {
+    const kaynaklar = (t as { evidence?: { sources?: { farkliUrun?: boolean }[] } }).evidence?.sources ?? [];
+    if (!kaynaklar.length || !kaynaklar.every((k) => k.farkliUrun)) continue;
+    assert.equal((t.planlar ?? []).length, 0,
+      `${t.slug}: butun fiyat kaynaklari baska urune ait ama merdiven uretilmis`);
+  }
+});

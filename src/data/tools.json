@@ -11502,7 +11502,9 @@
             "Free $0, Plus $10/member/month, Business $20/member/month, Enterprise custom",
             "yearly billing saves up to 20%",
             "no calendar-specific limits or add-ons listed"
-          ]
+          ],
+          "farkliUrun": true,
+          "farkliUrunNotu": "Rakamlar Notion CALISMA ALANI planlarina ait; Notion Calendar bu planlarin hepsine dahil ve ayri fiyati yok. Merdiven olarak okunursa sayfa, urunun kendi fiyati diye baska bir urunun fiyatini gosterir."
         }
       ],
       "limitations": [
@@ -12115,7 +12117,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Ansible configures servers and deploys software from YAML playbooks, over SSH, with no agent to install on the target machines.",
+    "longDescription": "Ansible automates the management of remote systems and controls their desired state. Work runs from a control node — the machine Ansible is installed on — against managed nodes listed in an inventory, a logically organised list of the hosts you want to describe to Ansible. Nothing has to be installed on those hosts: Ansible is agentless and works over the existing SSH daemon, which is why it can be pointed at servers you do not own the provisioning of. Desired state is written as YAML playbooks that read as instructions rather than code, so they stay reviewable by people who did not write them. The project is GPL v3.0 or later and sponsored by Red Hat, which also sells Ansible Automation Platform on a quoted subscription with Standard and Premium support tiers.",
     "pros": [
       "No agent required on managed hosts",
       "Playbooks are readable by people who did not write them",
@@ -12150,6 +12152,17 @@
             "pricing varies by sizing and subscription; quote via Red Hat or partners",
             "Standard (business hours) and Premium (24x7) support tiers; trial available"
           ]
+        },
+        {
+          "label": "Ansible — Getting started (official docs)",
+          "url": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+          "checkedAt": "2026-09-12",
+          "supports": [
+            "Ansible automates the management of remote systems and controls their desired state",
+            "Control node: A system on which Ansible is installed. You run Ansible commands such as ansible or ansible-inventory on a control node",
+            "Managed node: A remote system, or host, that Ansible controls",
+            "Inventory: A list of managed nodes that are logically organized. You create an inventory on the control node to describe host deployments to Ansible"
+          ]
         }
       ],
       "limitations": [
@@ -12172,7 +12185,25 @@
         "cevap": "The Ansible engine is free, open-source software under the GPL v3. Red Hat Ansible Automation Platform, the commercial product with a web UI, RBAC and support, has no published price: Red Hat says pricing varies with sizing and subscription choices and provides a quote, with Standard (business hours) or Premium (24x7) support. A trial is offered."
       }
     ],
-    "fiyatKontrolTarihi": "2026-09-08"
+    "fiyatKontrolTarihi": "2026-09-08",
+    "keyFeatures": [
+      {
+        "title": "Agentless over SSH",
+        "description": "Runs through the existing SSH daemon, so managed hosts need nothing installed on them beforehand."
+      },
+      {
+        "title": "Inventory of managed nodes",
+        "description": "A logically organised list of the remote hosts Ansible controls, kept on the control node."
+      },
+      {
+        "title": "YAML playbooks",
+        "description": "Desired state is declared in readable YAML rather than scripts, which keeps changes reviewable by people who did not write them."
+      },
+      {
+        "title": "Open source, commercially supported",
+        "description": "GPL v3.0 or later and sponsored by Red Hat, which sells Ansible Automation Platform with Standard and Premium support on a quoted subscription."
+      }
+    ]
   },
   {
     "slug": "grafana",
@@ -21764,7 +21795,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "JetBrains sells language-specific IDEs that understand your code deeply — refactoring, navigation and inspections that generic editors approximate at best.",
+    "longDescription": "JetBrains sells language-specific IDEs rather than one editor with plugins: IntelliJ IDEA for Java and Kotlin, PyCharm for Python and data science, PhpStorm for PHP, GoLand for Go, Rider for .NET and game development, CLion for C and C++, RustRover for Rust, WebStorm for JavaScript and TypeScript, RubyMine for Ruby and Rails, plus DataGrip for databases and ReSharper as a Visual Studio extension. Because each one is built around a single stack, refactoring, navigation and inspections work on an understanding of the language rather than on text matching. IntelliJ IDEA and PyCharm are free for both commercial and non-commercial use, while CLion, DataGrip, Rider, RubyMine, RustRover and WebStorm are free for non-commercial use. AI is integrated natively with a choice of models, and you can bring your own AI subscriptions and API keys instead of being locked to one vendor.",
     "pros": [
       "Refactoring and code intelligence remain best in class",
       "Consistent experience across languages",
@@ -21792,6 +21823,20 @@
             "free for non-commercial use: CLion, DataGrip, GoLand, Rider, RubyMine, RustRover, WebStorm",
             "all yearly subscriptions include a perpetual fallback licence; prices excl. VAT"
           ]
+        },
+        {
+          "label": "JetBrains — IDEs",
+          "url": "https://www.jetbrains.com/ides/",
+          "checkedAt": "2026-09-12",
+          "supports": [
+            "IntelliJ IDEA: IDE for Java and Kotlin developers",
+            "PyCharm: IDE for Python developers and data scientists",
+            "GoLand: IDE for Go developers; WebStorm: IDE for JavaScript and TypeScript developers",
+            "DataGrip: Tool for multiple databases; ReSharper: Extension that makes Visual Studio a much better IDE",
+            "JetBrains offers IntelliJ IDEA and PyCharm for free for both commercial and non-commercial use",
+            "CLion, DataGrip, Rider, RubyMine, RustRover, and WebStorm are also free for non-commercial use",
+            "Natively integrated AI with transparent AI costs without vendor lock-in; bring your own AI subscriptions and API keys"
+          ]
         }
       ],
       "limitations": [
@@ -21815,7 +21860,25 @@
         "cevap": "For individuals, IntelliJ IDEA Ultimate costs US$199 for the first year, $159 the second and $119 from the third year on. The All Products Pack with 17 tools is $299, $239, then $179. WebStorm starts at $79 and most single IDEs at $109. WebStorm, PyCharm's community edition, CLion, DataGrip, GoLand, Rider, RubyMine and RustRover are free for non-commercial use, and yearly subscriptions include a perpetual fallback licence."
       }
     ],
-    "fiyatKontrolTarihi": "2026-09-08"
+    "fiyatKontrolTarihi": "2026-09-08",
+    "keyFeatures": [
+      {
+        "title": "One IDE per language",
+        "description": "Eleven separate products, each built around a single stack — IntelliJ IDEA for Java and Kotlin, PyCharm for Python, GoLand for Go, and so on — rather than one editor extended by plugins."
+      },
+      {
+        "title": "Free tiers that differ by product",
+        "description": "IntelliJ IDEA and PyCharm are free for commercial and non-commercial use; CLion, DataGrip, Rider, RubyMine, RustRover and WebStorm are free for non-commercial use only."
+      },
+      {
+        "title": "Bring your own AI keys",
+        "description": "AI is integrated natively with a choice of models, and your own AI subscriptions and API keys can be used instead of a single bundled vendor."
+      },
+      {
+        "title": "Database and Visual Studio tooling",
+        "description": "DataGrip covers multiple databases as a standalone tool, and ReSharper extends Visual Studio rather than replacing it."
+      }
+    ]
   },
   {
     "slug": "sublime-text",
@@ -48350,7 +48413,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Prezi presents on a zoomable canvas rather than a sequence of slides.",
+    "longDescription": "Prezi presents on a zoomable canvas rather than a sequence of slides: content sits on one open surface and you move between frames by panning and zooming. Prezi AI drafts a presentation from a prompt, an outline or an uploaded document, so a first version does not have to be built by hand, and existing PowerPoint decks can be imported instead of rebuilt. Presenter view carries speaker notes, a timer and content cues; paid tiers add viewer analytics showing how long people spend on each frame. Prezi also presents live over Zoom, Microsoft Teams, Google Meet and other conferencing tools, and a desktop app allows working and presenting offline.",
     "pros": [
       "Visually distinctive presentations",
       "Zooming can express structure well",
@@ -48391,6 +48454,20 @@
             "EDU Plus $4/month and EDU Pro $8/month",
             "14-day free trial on paid plans"
           ]
+        },
+        {
+          "label": "Prezi — Product",
+          "url": "https://prezi.com/product/",
+          "checkedAt": "2026-09-12",
+          "supports": [
+            "Create on an open, zoomable canvas",
+            "AI presentation makers convert your input (a prompt, outline, or document) into a structured presentation",
+            "PowerPoint Import: Turn your slides into engaging presentations",
+            "Analytics: See what's resonating with viewers and how much time they spend on each frame",
+            "Presenter View includes presenter notes, a helpful timer, and content cues",
+            "Offline Access: Work offline with our Desktop app or download your presentation to present",
+            "Present live over video conference with Zoom, Microsoft Teams, Cisco, GoToMeeting, GoToWebinar, and Google Meet"
+          ]
         }
       ],
       "limitations": [
@@ -48421,6 +48498,24 @@
         "faturalama": null,
         "kaynakSatiri": "Teams $39/month per user",
         "kaynakUrl": "https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans"
+      }
+    ],
+    "keyFeatures": [
+      {
+        "title": "Zoomable canvas",
+        "description": "Content is placed on one open, zoomable canvas and navigated by panning and zooming rather than advancing through a linear deck."
+      },
+      {
+        "title": "AI drafting",
+        "description": "Converts a prompt, an outline or an uploaded document into a structured presentation, giving a first draft to edit instead of a blank canvas."
+      },
+      {
+        "title": "PowerPoint import",
+        "description": "Existing slide decks are imported and converted rather than rebuilt, so teams standardised on PowerPoint can move without starting over."
+      },
+      {
+        "title": "Viewer analytics",
+        "description": "Reports which frames resonate and how long viewers spend on each one; available on the higher paid tiers."
       }
     ]
   },

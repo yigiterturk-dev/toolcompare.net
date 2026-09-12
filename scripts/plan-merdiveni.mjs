@@ -154,6 +154,19 @@ function planlariCikar(arac) {
   const gorulen = new Set();
 
   for (const kaynak of arac.evidence?.sources ?? []) {
+    /*
+      BASKA URUNUN FIYATI (2026-09-12). Bazi kayitlarda fiyat kanitı, urunun
+      KENDI fiyati degil icinde bulundugu paketin fiyati oluyor:
+      notion-calendar'in kaynagi Notion calisma alani planlarini yaziyor ve
+      ilk satiri zaten "Notion Calendar included on Free, Plus, Business and
+      Enterprise" diyor -- yani urunun ayri fiyati YOK. Merdiven olarak
+      okunursa sayfa, "Notion Calendar publishes 2 plans" deyip baska bir
+      urunun rakamlarini kendi fiyati gibi gosterir.
+
+      Kanit silinmiyor: satir dogru ve sayfada isine yariyor. Yalnizca
+      MERDIVEN olarak okunmuyor.
+    */
+    if (kaynak.farkliUrun) continue;
     for (const satir of kaynak.supports ?? []) {
       if (!/\$\s?\d/.test(satir)) continue;
       if (PLAN_DEGIL.some((r) => r.test(satir))) continue;
@@ -213,6 +226,10 @@ function planlariCikar(arac) {
   */
   if (!cikan.some((p) => p.aylik === 0)) {
     for (const kaynak of arac.evidence?.sources ?? []) {
+      // Ucretsiz basamak yolu da ayni kurali izler: baska bir urunun
+      // plan tablosundan "Free" satiri devsirmek, urune ait olmayan bir
+      // merdiven kurar (bkz. yukaridaki farkliUrun notu).
+      if (kaynak.farkliUrun) continue;
       for (const satir of kaynak.supports ?? []) {
         const m = /^Free(?: (?:Forever|Tools|plan|tier|Plan|Tier))?\b\s*(?:[:\-—$]|\d)/.exec(satir);
         if (!m) continue;
