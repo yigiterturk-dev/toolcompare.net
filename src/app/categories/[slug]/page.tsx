@@ -12,6 +12,8 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ReklamBirimi from "@/components/ReklamBirimi";
+import { kategoriReklamAlir, reklamYayinci, icerikSlotu } from "@/lib/reklam";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -232,6 +234,18 @@ export default async function CategoryPage({ params }: SayfaParametresi) {
             </ul>
           </section>
         )}
+          {/*
+            Reklam sayfanin SONUNDA: okur once cevabi aliyor. Kapi
+            `kategoriReklamAlir` -- ince ya da noindex sayfa reklam almaz
+            (AdSense politikasi), slot tanimli degilse hic cizilmez.
+          */}
+          {(() => {
+            const yayinci = reklamYayinci();
+            const slot = icerikSlotu();
+            return kategoriReklamAlir(kategori.araclar.length) && yayinci && slot ? (
+              <ReklamBirimi yayinci={yayinci} slot={slot} />
+            ) : null;
+          })()}
       </main>
 
       <Footer />

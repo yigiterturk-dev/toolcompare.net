@@ -16,6 +16,8 @@
 import Header from "@/components/Header";
 import { alternatifIndekslenir, aracIndekslenir, ciftIndekslenir, NOINDEX } from "@/lib/indeks";
 import Footer from "@/components/Footer";
+import ReklamBirimi from "@/components/ReklamBirimi";
+import { alternatifReklamAlir, reklamYayinci, icerikSlotu } from "@/lib/reklam";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
@@ -286,6 +288,18 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
           ))}
         </ol>
         <AffiliateNotu />
+          {/*
+            Reklam sayfanin SONUNDA: okur once cevabi aliyor. Kapi
+            `alternatifReklamAlir` -- ince ya da noindex sayfa reklam almaz
+            (AdSense politikasi), slot tanimli degilse hic cizilmez.
+          */}
+          {(() => {
+            const yayinci = reklamYayinci();
+            const slot = icerikSlotu();
+            return alternatifReklamAlir(tool) && yayinci && slot ? (
+              <ReklamBirimi yayinci={yayinci} slot={slot} />
+            ) : null;
+          })()}
       </main>
 
       <Footer />

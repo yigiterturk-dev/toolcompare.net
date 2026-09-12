@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ReklamBirimi from "@/components/ReklamBirimi";
+import { ciftReklamAlir, reklamYayinci, icerikSlotu } from "@/lib/reklam";
 import toolsData from "@/data/tools.json"
 import type { Arac, Kanit, Kaynak, OneCikanOzellik } from "@/lib/arac";
 import { gitLinki } from "@/lib/outbound";
@@ -681,6 +683,18 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
             </ul>
           </section>
         )}
+          {/*
+            Reklam sayfanin SONUNDA: okur once cevabi aliyor. Kapi
+            `ciftReklamAlir` -- ince ya da noindex sayfa reklam almaz
+            (AdSense politikasi), slot tanimli degilse hic cizilmez.
+          */}
+          {(() => {
+            const yayinci = reklamYayinci();
+            const slot = icerikSlotu();
+            return ciftReklamAlir(tool1, tool2) && yayinci && slot ? (
+              <ReklamBirimi yayinci={yayinci} slot={slot} />
+            ) : null;
+          })()}
       </main>
 
       <Footer />

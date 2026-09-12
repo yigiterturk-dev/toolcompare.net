@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import toolsData from "../src/data/tools.json" with { type: "json" };
-import { aracIndekslenir, icerikDerin } from "../src/lib/indeks.ts";
+import { aracIndekslenir, icerikDerin, ciftIndekslenir, alternatifIndekslenir } from "../src/lib/indeks.ts";
 import type { Arac } from "../src/lib/arac.ts";
 
 /*
@@ -131,4 +131,63 @@ test("ads.txt ve betik AYNI kaynagi okuyor", () => {
       `${yol} env'i dogrudan okuyor -- kaynak ikiye ayrilmis`,
     );
   }
+});
+
+/* ---- Reklam yuzeyi: /tools disindaki bolumler ---- */
+
+test("karsilastirma: IKI taraf da derin degilse reklam yok", async () => {
+  const { m, geri } = await taze("ca-pub-0000000000000000", "1234567890");
+  const derin = T.filter(icerikDerin);
+  const ince = T.filter((t) => !icerikDerin(t));
+  assert.ok(derin.length > 0 && ince.length > 0, "olcut anlamsizlasmis");
+
+  // Indekslenen ama bir tarafi ince olan her cift reklamsiz kalmali.
+  let denendi = 0;
+  for (const a of derin.slice(0, 40)) {
+    for (const b of ince) {
+      if (!ciftIndekslenir(a, b)) continue;
+      denendi++;
+      assert.equal(m.ciftReklamAlir(a, b), false, `yarim cift reklam aldi: ${a.slug}/${b.slug}`);
+    }
+  }
+  assert.ok(denendi > 0, "tek bir yarim cift bile denenemedi -- test bos gecmis olur");
+  geri();
+});
+
+test("alternatif sayfasi: indeks kapisi gecse de ince ise reklam yok", async () => {
+  const { m, geri } = await taze("ca-pub-0000000000000000", "1234567890");
+  let denendi = 0;
+  for (const t of T) {
+    if (alternatifIndekslenir(t) && !icerikDerin(t)) {
+      denendi++;
+      assert.equal(m.alternatifReklamAlir(t), false, `ince alternatif reklam aldi: ${t.slug}`);
+    }
+    if (!alternatifIndekslenir(t)) {
+      assert.equal(m.alternatifReklamAlir(t), false, `noindex alternatif reklam aldi: ${t.slug}`);
+    }
+  }
+  // denendi 0 olabilir (o kesisim bos olabilir); asil guvence ikinci kosul.
+  assert.ok(denendi >= 0);
+  geri();
+});
+
+test("kategori: esigin altindaki liste reklam almaz", async () => {
+  const { m, geri } = await taze("ca-pub-0000000000000000", "1234567890");
+  assert.equal(m.kategoriReklamAlir(0), false);
+  assert.equal(m.kategoriReklamAlir(1), false);
+  assert.equal(m.kategoriReklamAlir(2), false);
+  assert.equal(m.kategoriReklamAlir(3), true, "esikteki kategori reklam almali");
+  assert.equal(m.kategoriReklamAlir(50), true);
+  geri();
+});
+
+test("reklam kapaliyken dort bolumun HICBIRI reklam almaz", async () => {
+  const { m, geri } = await taze(undefined, undefined);
+  const a = T.find(icerikDerin)!;
+  const b = T.filter(icerikDerin)[1]!;
+  assert.equal(m.aracReklamAlir(a), false);
+  assert.equal(m.ciftReklamAlir(a, b), false);
+  assert.equal(m.alternatifReklamAlir(a), false);
+  assert.equal(m.kategoriReklamAlir(99), false);
+  geri();
 });

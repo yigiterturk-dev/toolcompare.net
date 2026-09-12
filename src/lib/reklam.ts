@@ -9,7 +9,13 @@
  * tarafinda iki kez cikti (bkz. lib/fiyat.ts).
  */
 
-import { icerikDerin, aracIndekslenir } from "./indeks.ts";
+import {
+  icerikDerin,
+  aracIndekslenir,
+  ciftIndekslenir,
+  alternatifIndekslenir,
+} from "./indeks.ts";
+import { EN_AZ_ARAC } from "./categories.ts";
 import type { Arac } from "./arac";
 
 /**
@@ -66,4 +72,42 @@ export function icerikSlotu(): string | null {
 export function aracReklamAlir(t?: Arac): boolean {
   if (!reklamAcik()) return false;
   return aracIndekslenir(t) && icerikDerin(t);
+}
+
+/**
+ * KARSILASTIRMA SAYFASI reklam alir mi.
+ *
+ * Sayfa iki aracin govdesinden besleniyor: biri inceyse tablo yarim
+ * kaliyor, yani "az icerikli sayfa" tanimina giren sey tek bir aracin
+ * eksikligi olabiliyor. Bu yuzden IKI tarafin da derin olmasi sart --
+ * indeks kapisindan (`ciftIndekslenir`) daha katı, bilerek.
+ */
+export function ciftReklamAlir(a?: Arac, b?: Arac): boolean {
+  if (!reklamAcik()) return false;
+  return ciftIndekslenir(a, b) && icerikDerin(a) && icerikDerin(b);
+}
+
+/**
+ * ALTERNATIF SAYFASI reklam alir mi.
+ *
+ * `alternatifIndekslenir` zaten `aracIndekslenir`'i iceriyor, ama o da
+ * talep muafiyetiyle ince sayfayi gecirebiliyor -- reklam icin yine
+ * `icerikDerin` ayrica soruluyor.
+ */
+export function alternatifReklamAlir(t?: Arac): boolean {
+  if (!reklamAcik()) return false;
+  return alternatifIndekslenir(t) && icerikDerin(t);
+}
+
+/**
+ * KATEGORI SAYFASI reklam alir mi.
+ *
+ * Kategori bir LISTE sayfasi: kendi anlatimi yok, degeri listeledigi
+ * araclarda. O yuzden olcut sayfanin kendi metni degil, listenin
+ * doldugu nokta -- indeks kapisiyla ayni esik (EN_AZ_ARAC). Esigin
+ * altindaki kategori zaten noindex, reklam da almaz.
+ */
+export function kategoriReklamAlir(aracSayisi: number): boolean {
+  if (!reklamAcik()) return false;
+  return aracSayisi >= EN_AZ_ARAC;
 }
