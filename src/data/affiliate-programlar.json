@@ -149,6 +149,48 @@
       "durum": "kurumsal",
       "neden": "ortaklik programi; acik affiliate degil",
       "checkedAt": "2026-09-07"
+    },
+    "dreamhost": {
+      "durum": "var",
+      "ag": "TUNE",
+      "url": "https://www.dreamhost.com/affiliates/",
+      "kosul": "Web Hosting Launch: aylik E15, 1 yillik E50, 2 yillik E100; DreamPress E150-1.000; Dedicated E200. Odeme ESIGI YOK -- ilk onayli yonlendirmeden itibaren odenir. 97 gun bekleme suresi, aylik banka havalesi.",
+      "checkedAt": "2026-09-12"
+    },
+    "kinsta": {
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://kinsta.com/affiliate-program/",
+      "kosul": "Tek seferlik $500'a kadar bonus + her yonlendirme icin omur boyu aylik %10. 60 gunluk cerez, son-dokunus atfi. Odeme esigi sayfada yazmiyor.",
+      "checkedAt": "2026-09-12"
+    },
+    "netlify": {
+      "durum": "var",
+      "ag": "PartnerStack",
+      "url": "https://www.netlify.com/partners/",
+      "kosul": "Ecosystem Partner: uygun self-serve yeni isin %20'si, 12 aya kadar. Yayinci/icerik ureticisi/freelancer acikca uygun ve Netlify musterisi olma sarti YOK. Basvuru Netlify onayina tabi; 30 gun icinde cevap gelmezse reddedilmis sayilir.",
+      "checkedAt": "2026-09-12"
+    },
+    "railway": {
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://railway.com/affiliate-program",
+      "kosul": "Yeni musterinin ilk 12 ay faturalarinin %15'i. ONAY SURECI YOK -- link dogrudan panelden aliniyor, trafik esigi yok. Odeme GitHub Sponsors veya Buy Me a Coffee uzerinden. Ayrica sablon dagitimi basina %25 veren acik kaynak partner programi var.",
+      "checkedAt": "2026-09-12"
+    },
+    "ionos": {
+      "durum": "var",
+      "ag": "dogrudan",
+      "url": "https://www.ionos.com/agency-partner/affiliate",
+      "kosul": "Ucretsiz. Komisyon orani sayfada YAZMIYOR: key account manager ile gorusulup teklif atandiktan sonra takip linki bireysellestiriliyor. 8 ulke pazari icin ayri teklifler.",
+      "checkedAt": "2026-09-12"
+    },
+    "semrush": {
+      "durum": "var",
+      "ag": "Impact",
+      "url": "https://www.semrush.com/lp/affiliate-program/en/",
+      "kosul": "Satis basina $100-300 (Platinum'da Semrush One icin $450'ye kadar), ucretsiz deneme basina $10. 120 gunluk cerez, son-tiklama. !! KABUL ESIGI: sitenin aylik en az 1.000 TEKIL ZIYARETCISI olmali -- toolcompare bu esigi su an KARSILAMIYOR (28 gunde 9 tik). Kupon/cashback siteleri kabul edilmiyor.",
+      "checkedAt": "2026-09-12"
     }
   }
 }
