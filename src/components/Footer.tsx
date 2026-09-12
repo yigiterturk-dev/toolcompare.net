@@ -25,6 +25,7 @@ const LINKLER = [
   { href: "/categories", label: "Categories" },
   { href: "/top-picks", label: "Cheapest tools" },
   { href: "/compare", label: "Comparisons" },
+  { href: "/alternatives", label: "Alternatives" },
   { href: "/methodology", label: "How we rank" },
   { href: "/data", label: "Open dataset" },
   { href: "/research/pricing-transparency", label: "Pricing transparency index" },

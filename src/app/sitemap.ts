@@ -51,6 +51,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Karsilastirma giris kapisi. Footer her sayfadan buraya link
     // veriyordu ama sayfa YOKTU (canlida 404) -- 2026-09-10'da eklendi.
     '/compare',
+    // Alternatif giris kapisi. /compare ve /categories'in kapisi vardi,
+    // bunun yoktu -- adres canlida 404 donuyordu (olcum 2026-09-12).
+    '/alternatives',
     // Footer'dan link alan ama sitemap'te olmayan sayfalar.
     '/contact',
     '/privacy',
