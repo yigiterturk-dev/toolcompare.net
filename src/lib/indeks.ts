@@ -20,6 +20,7 @@
 import { fiyatDurumu } from "./fiyat.ts";
 import { talepGormus, yolTalepGormus } from "./talep.ts";
 import { ayniIslev } from "./islev.ts";
+import { entegrasyonVar } from "./entegrasyon.ts";
 /* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
 import type { Arac } from "./arac";
 
@@ -212,7 +213,19 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
   // sayfanin kendi robots etiketine de uygulanir: eski adreslerden
   // (ornegin /compare/redis-vs-sentry) gelen Googlebot noindex gormeli,
   // yoksa sitemap disina cikardigimiz sayfa indekste kalir.
-  if (!a || !b || !ayniIslev(a.slug, b.slug)) return false;
+  if (!a || !b) return false;
+  /*
+    FARKLI ISI GOREN CIFT (olcum, 2026-09-12). Islev kapisi bu ciftleri
+    karsilastirma olarak dogru biçimde reddediyor -- ama talep oradaydi ve
+    karsilastirma talebi DEGILDI: "typeform kajabi integration",
+    "woocommerce teachable integration". Farkli is gormek karsilastirmayi
+    anlamsiz kilar, ENTEGRASYONU anlamli kilar; zaten o yuzden entegre
+    ediliyorlar. Bu yuzden kapiyi acan sey talep degil, saticinin kendi
+    sayfasindan DOGRULANMIS bir entegrasyon kaydidir (lib/entegrasyon.ts).
+    Kayit yoksa sayfa noindex kalir: yanlis soruyu cevaplayan sayfayi
+    indekslemek talebi karsilamaz, yalnizca tarama butcesi yer.
+  */
+  if (!ayniIslev(a.slug, b.slug)) return entegrasyonVar(a.slug, b.slug);
   /*
     TALEP MUAFIYETI (olcum, 2026-09-12). Bu kural arac sayfalarina cok once
     konulmustu (aracIndekslenir: `icerikDerin || talepGormus`) ama ciftlere

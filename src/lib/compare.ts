@@ -19,6 +19,7 @@
 
 import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
+import { tumEntegrasyonlar } from "./entegrasyon.ts";
 import { ilkUcretliBasamak, planEtiketi } from "./plan.ts";
 import { ciftTaranmayaDeger, alternatifTaranmayaDeger } from "./tarama.ts";
 import type { KriterKumesi } from "./kriterler.ts";
@@ -183,6 +184,15 @@ export function karsilastirmaCiftleri(): string[] {
   }
   // Anasayfadan link alan ciftler de sitemap'te olmali.
   for (const c of oneCikanCiftler()) ciftler.add(c.slug);
+  /*
+    ENTEGRASYON CIFTLERI (2026-09-12). Bunlar `akranlar()` evreninde YOK --
+    cunku akranlik ayni isi gormeye bakar ve bu ciftler farkli isi goruyor
+    (typeform × kajabi, teachable × woocommerce). Ama talep olculdu ve
+    cevap saticinin kendi sayfasindan dogrulandi; sayfanin soyleyecek
+    sozu var. Evrene alinmazsa sonuc yarim kalirdi: sayfa indekslenebilir
+    ama sitemap'te olmayan, ic link almayan bir yetim olurdu.
+  */
+  for (const [c] of tumEntegrasyonlar()) ciftler.add(c);
   return [...ciftler].sort();
 }
 

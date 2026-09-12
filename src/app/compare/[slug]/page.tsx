@@ -12,6 +12,7 @@ import { elleYazilmisSorular } from "@/lib/karsilastirma-notlari";
 import { merdiven, planEtiketi } from "@/lib/plan";
 import { linklenebilirAkranlar } from "@/lib/tarama";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { entegrasyonKaydi, entegrasyonBasligi, durumEtiketi } from "@/lib/entegrasyon";
 import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
 import { notFound } from "next/navigation";
@@ -67,14 +68,30 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
   // uzun ciftlerde dusuruluyor ki asil ifade ("X vs Y") gorunur kalsin.
   // Uc kademeli kisaltma: cok uzun isimlerde CEKIRDEK basligin kendisi de
   // 65'i asiyordu (ornek: "ActiveCampaign vs Ahrefs Webmaster Tools").
-  const cekirdek = `${tool1.name} vs ${tool2.name}: Which Is Better in 2026?`;
-  const kisa = `${tool1.name} vs ${tool2.name} (2026)`;
+  /*
+    ENTEGRASYON CIFTI (GSC, 2026-09-12): bu adreslere gelen talebin bir kismi
+    "hangisi daha iyi" degil "bunlar birlikte calisiyor mu" sorusu --
+    "typeform kajabi integration", "woocommerce teachable integration".
+    Kaydi olan ciftte baslik ve aciklama SORUYA doner; yoksa karsilastirma
+    basligi kalir. Adres degismiyor: bu sayfalar Google'da zaten sirada
+    (getresponse-vs-typeform 13., teachable-vs-woocommerce 20.) ve yeni bir
+    adrese tasimak o birikimi cope atardi.
+  */
+  const ent = entegrasyonKaydi(tool1.slug, tool2.slug);
+  const cekirdek = ent
+    ? entegrasyonBasligi(tool1.name, tool2.name)
+    : `${tool1.name} vs ${tool2.name}: Which Is Better in 2026?`;
+  const kisa = ent
+    ? `${tool1.name} + ${tool2.name} integration`
+    : `${tool1.name} vs ${tool2.name} (2026)`;
   const title =
     cekirdek.length <= 46 ? `${cekirdek} | ToolCompare`
     : cekirdek.length <= 65 ? cekirdek
     : kisa.length <= 65 ? kisa
     : `${tool1.name} vs ${tool2.name}`;
-  const description = `Compare ${tool1.name} and ${tool2.name} side-by-side: verified pricing, documented features, trade-offs, source dates and who each one fits.`;
+  const description = ent
+    ? `${ent.ozet} Checked against ${ent.kaynakSahibi}'s own documentation on ${ent.checkedAt}.`
+    : `Compare ${tool1.name} and ${tool2.name} side-by-side: verified pricing, documented features, trade-offs, source dates and who each one fits.`;
 
   // "a-vs-b" ve "b-vs-a" ayni sayfa. Kanonik olan alfabetik sirali olan;
   // aksi halde ayni icerik iki adreste indekslenir ve ikisi de zayiflar.
@@ -99,6 +116,7 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
 
   const tool1 = (toolsData as Arac[]).find((t) => t.slug === parts[0]);
   const tool2 = (toolsData as Arac[]).find((t) => t.slug === parts[1]);
+  const ent = entegrasyonKaydi(parts[0], parts[1]);
 
   if (!tool1 || !tool2) notFound();
 
@@ -184,13 +202,71 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
         </Link>
 
         <header className="mt-8 border-b border-line pb-8">
-          <h1 className="text-3xl font-semibold sm:text-4xl">
-            {tool1.name} <span className="text-ink-muted">vs</span> {tool2.name}
-          </h1>
-          <p className="mt-3 max-w-2xl text-ink-soft">
-            A source-aware comparison of pricing, documented capabilities and workflow fit.
-          </p>
+          {/*
+            Entegrasyon kaydi olan ciftte H1 SORUNUN KENDISI olur. Bu
+            sayfalara gelen sorgu "hangisi daha iyi" degil ("typeform kajabi
+            integration"); baslikta baska bir soru yazmak, dogru cevabi
+            tasiyan sayfayi yanlis sayfa gibi gosteriyordu.
+          */}
+          {ent ? (
+            <>
+              <h1 className="text-3xl font-semibold sm:text-4xl">
+                {entegrasyonBasligi(tool1.name, tool2.name)}
+              </h1>
+              <p className="mt-3 max-w-2xl text-ink-soft">{ent.ozet}</p>
+            </>
+          ) : (
+            <>
+              <h1 className="text-3xl font-semibold sm:text-4xl">
+                {tool1.name} <span className="text-ink-muted">vs</span> {tool2.name}
+              </h1>
+              <p className="mt-3 max-w-2xl text-ink-soft">
+                A source-aware comparison of pricing, documented capabilities and workflow fit.
+              </p>
+            </>
+          )}
         </header>
+
+        {/*
+          ENTEGRASYON CEVABI. Rakamin yaninda kaynagini gosterme kurali burada
+          da gecerli: durum rozeti iddiayi, altindaki alinti o iddianin
+          geldigi satici cumlesini tasir. Ziyaretci "kim demis" diye
+          sorabilmeli -- bu sitenin tek varligi dogrulanabilirlik.
+        */}
+        {ent ? (
+          <section
+            id="integration"
+            className="mt-8 scroll-mt-24 rounded-[--radius-card] border border-line bg-surface p-5"
+            aria-labelledby="integration-baslik"
+          >
+            <div className="flex flex-wrap items-center gap-3">
+              <h2 id="integration-baslik" className="text-lg font-semibold">
+                {entegrasyonBasligi(tool1.name, tool2.name)}
+              </h2>
+              <span
+                className={`rounded-[--radius-pill] px-2 py-0.5 text-[11px] font-medium ${
+                  ent.durum === "yerlesik"
+                    ? "bg-verified-soft text-verified"
+                    : "bg-unverified-soft text-unverified"
+                }`}
+              >
+                {durumEtiketi(ent.durum)}
+              </span>
+            </div>
+            <p className="mt-3 text-ink-soft">{ent.ozet}</p>
+            <figure className="mt-4 border-l-2 border-line pl-4">
+              <blockquote className="text-sm text-ink-soft">
+                &ldquo;{ent.kaynakSatiri}&rdquo;
+              </blockquote>
+              <figcaption className="mt-2 text-xs text-ink-muted">
+                — {ent.kaynakSahibi}&rsquo;s own documentation, read on {ent.checkedAt}.{" "}
+                <a href={ent.kaynakUrl} target="_blank" rel="nofollow noopener" className="underline">
+                  Source
+                </a>
+              </figcaption>
+            </figure>
+          </section>
+        ) : null}
 
         {/*
           Kisa cevap. Ziyaretci "hangisi?" diye geliyor; cevabi sayfanin

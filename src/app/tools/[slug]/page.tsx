@@ -9,6 +9,7 @@ import { gitLinki, kanitRel } from "@/lib/outbound";
 import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
 import FiyatBolumu from "@/components/FiyatBolumu";
+import { entegrasyonOrtaklari, durumEtiketi } from "@/lib/entegrasyon";
 import { kanonikSlug, indekslenebilirAkranlar, karsilastirmaAkranlari, alternatifSayfasiVar } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { merdiven, planEtiketi } from "@/lib/plan";
@@ -345,6 +346,37 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               ) : null}
 
               <FiyatBolumu tool={tool} altSayfasiVar={altSayfasiVar} />
+
+              {/*
+                "BIRLIKTE CALISIYOR MU" baglantilari. Entegrasyon ciftleri
+                akran evreninde olmadigi icin baska hicbir yerden link
+                almiyorlar; sitemap'te olup link almayan sayfa oksuzdur
+                (bkz. lib/compare.ts basligi). Liste iki taraftan da
+                basildigi icin her cift iki arac sayfasindan link alir.
+              */}
+              {entegrasyonOrtaklari(tool.slug).length > 0 ? (
+                <section aria-labelledby="works-with">
+                  <h2 id="works-with" className="text-xl font-semibold">
+                    Does {tool.name} work with…
+                  </h2>
+                  <ul className="mt-4 grid list-none gap-2 p-0 sm:grid-cols-2">
+                    {entegrasyonOrtaklari(tool.slug).map((o) => {
+                      const ad = (toolsData as Arac[]).find((t) => t.slug === o.diger)?.name ?? o.diger;
+                      return (
+                        <li key={o.cift}>
+                          <Link
+                            href={`/compare/${o.cift}`}
+                            className="flex items-center justify-between gap-3 rounded-[--radius-control] border border-line px-3 py-2 text-sm no-underline"
+                          >
+                            <span>{ad}</span>
+                            <span className="text-xs text-ink-muted">{durumEtiketi(o.durum)}</span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              ) : null}
 
               {features.length > 0 && (
                 <section>

@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { sitemapCiftleri, karsilastirmaAkranlari, kanonikSlug, oneCikanCiftler } from "../src/lib/compare.ts";
+import { entegrasyonVar } from "../src/lib/entegrasyon.ts";
 
 /*
   OLCULEN (2026-09-09): sitemap'teki 1.314 karsilastirma sayfasinin 641'i
@@ -18,7 +19,15 @@ test("sitemap'teki her cift, iki aracinin listesinde de gorunur", () => {
   // One cikan ciftler linkini ANASAYFADAN alir, akranliktan degil; yetim
   // olmadiklari icin bu kuralin disindalar.
   const oneCikan = new Set(oneCikanCiftler().map((c) => c.slug));
-  const ciftler = sitemapCiftleri().filter((c) => !oneCikan.has(c));
+  /*
+    Entegrasyon ciftleri de bu kuralin disinda (2026-09-12): linklerini
+    akranliktan degil, arac sayfasindaki "Does X work with..." listesinden
+    alirlar -- ve o liste IKI taraftan da basildigi icin simetri korunur,
+    yalnizca kaynagi baskadir. Akran olamazlar: farkli is goruyorlar.
+  */
+  const ciftler = sitemapCiftleri()
+    .filter((c) => !oneCikan.has(c))
+    .filter((c) => !entegrasyonVar(...(c.split("-vs-") as [string, string])));
   const eksik: string[] = [];
   for (const cift of ciftler) {
     const [a, b] = cift.split("-vs-");
@@ -50,6 +59,9 @@ test("sitemap'teki her cift, en az bir aracinin listesinde yer alir", () => {
   const oneCikan = new Set(oneCikanCiftler().map((c) => c.slug));
   const yetim = sitemapCiftleri()
     .filter((c) => !oneCikan.has(c))
+    // Entegrasyon cifti linkini arac sayfasindaki "Does X work with..."
+    // listesinden alir, akranliktan degil (2026-09-12).
+    .filter((c) => !entegrasyonVar(...(c.split("-vs-") as [string, string])))
     .filter((c) => {
       const [a, b] = c.split("-vs-");
       return karsilastirmaAkranlari(a).length === 0 && karsilastirmaAkranlari(b).length === 0;
