@@ -50757,5 +50757,63 @@
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
     }
+  },
+  {
+    "slug": "n8n",
+    "name": "n8n",
+    "iconName": "Workflow",
+    "color1": "#ea4b71",
+    "color2": "#c03a5c",
+    "color": "#ea4b71",
+    "category": "Productivity",
+    "shortDescription": "Workflow automation you can also self-host.",
+    "longDescription": "n8n is a workflow automation tool that connects apps and services through a visual editor, and it is one of the few in this space that can run on your own infrastructure. Its Community Edition is a standard self-hosted build published on GitHub, while the hosted plans are billed on how many workflow executions you run each month rather than per step or per user. The vendor states that every plan includes unlimited users, unlimited workflows and every integration, so team size does not change the price. A workflow counts once when it runs from start to finish, which is the main difference from step-metered automation tools.",
+    "keyFeatures": [
+      "Visual workflow editor with every integration included on all plans",
+      "Self-hostable Community Edition published on GitHub",
+      "Billing by monthly workflow executions, not per step or per user",
+      "Unlimited users and workflows on every plan"
+    ],
+    "features": [
+      "Visual workflow editor",
+      "Self-hosting",
+      "Execution-based billing"
+    ],
+    "basePrice": null,
+    "isFlat": true,
+    "websiteUrl": "https://n8n.io",
+    "incelendi": false,
+    "kriterler": {
+      "api": true,
+      "acikKaynak": true,
+      "mobil": false,
+      "sso": null
+    },
+    "fiyatKontrolTarihi": "2026-09-13",
+    "evidence": {
+      "status": "vendor-sourced",
+      "reviewedAt": "2026-09-13",
+      "sources": [
+        {
+          "label": "n8n — Plans and Pricing",
+          "url": "https://n8n.io/pricing/",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "Starter plan 20 EUR per month billed annually, 2,500 workflow executions",
+            "Pro plan 50 EUR per month billed annually, 10,000 workflow executions",
+            "Enterprise plan priced by contact sales, hosted or self-hosted",
+            "Community Edition is a standard self-hosted version available on GitHub",
+            "All plans include unlimited users and workflows and every integration",
+            "Pricing based on monthly workflow executions, regardless of complexity"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark.",
+        "Vendor lists prices in EUR only and offers no USD figure, so the starting price is not comparable with the USD figures used elsewhere on this site.",
+        "This tool has not been reviewed by an editor; no verdict is published."
+      ]
+    },
+    "fiyatModeli": "kullanima-gore"
   }
 ]
