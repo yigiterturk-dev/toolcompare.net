@@ -512,5 +512,6 @@
   "prezi": null,
   "notion-calendar": null,
   "n8n": "automation",
-  "cpanel": "server-control-panel"
+  "cpanel": "server-control-panel",
+  "expensify": "expense-management"
 }

@@ -50906,5 +50906,87 @@
         "This tool has not been reviewed by an editor; no verdict is published."
       ]
     }
+  },
+  {
+    "slug": "expensify",
+    "name": "Expensify",
+    "category": "Finance Tools",
+    "shortDescription": "Receipt scanning and expense reports, priced per member.",
+    "longDescription": "Expensify handles receipt capture, expense reports, corporate card reconciliation and reimbursement, with travel booking and chat built into the same app. Individuals can scan receipts, send and receive money and chat at no cost; business functionality such as expense categorisation, approvals and accounting integrations sits behind the paid plans. Collect is the small-business tier at a published per-member rate and covers QuickBooks and Xero; Control is quoted rather than listed and is where NetSuite and Sage Intacct integrations, SAML/SSO, multiple approval flows, budgeting and custom reporting live. Expensify states that discounts apply for annual commitments and for using the Expensify Card.",
+    "keyFeatures": [
+      "Receipt scanning with unlimited SmartScans on every plan",
+      "Expense reports, approvals and ACH reimbursement on paid plans",
+      "Corporate card feeds and reconciliation, plus the Expensify Card",
+      "Travel booking and travel rules inside the same product",
+      "Accounting integrations: QuickBooks and Xero on Collect, NetSuite and Sage Intacct on Control"
+    ],
+    "features": [
+      "Expense reports",
+      "Receipt scanning",
+      "Corporate cards"
+    ],
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.expensify.com",
+    "incelendi": false,
+    "kriterler": {
+      "api": true,
+      "acikKaynak": false,
+      "mobil": true,
+      "sso": true
+    },
+    "fiyatKontrolTarihi": "2026-09-13",
+    "planlar": [
+      {
+        "ad": "Free",
+        "aylik": 0,
+        "birim": "kisi-basina",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Free for all members: receipt scanning, mileage tracking, expense reports, categories and tags, personal card import, chat on every expense",
+        "kaynakUrl": "https://www.expensify.com/pricing"
+      },
+      {
+        "ad": "Collect",
+        "aylik": 5,
+        "birim": "kisi-basina",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Collect: $5 per member/month — receipt scanning, reimbursements, corporate card management, expense and travel approvals, QuickBooks/Xero integrations",
+        "kaynakUrl": "https://www.expensify.com/pricing"
+      },
+      {
+        "ad": "Control",
+        "aylik": 9,
+        "birim": "kisi-basina",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Control: Custom pricing, as low as $9 per active member/month — multiple approval flows, ERP integration (NetSuite, Sage Intacct), Workday/Certinia, SAML/SSO, budgeting",
+        "kaynakUrl": "https://www.expensify.com/pricing"
+      }
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-13",
+      "sources": [
+        {
+          "label": "Expensify — Pricing",
+          "url": "https://www.expensify.com/pricing",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "Free for all members: unlimited SmartScans, mileage tracking, expense reports, categories and tags, personal card import",
+            "Collect $5 per member/month: reimbursements, corporate card management, expense and travel approvals, QuickBooks/Xero",
+            "Control is custom pricing, quoted on the page as low as $9 per active member/month",
+            "Control adds multiple approval flows, NetSuite and Sage Intacct, Workday/Certinia, SAML/SSO, budgeting and custom reporting",
+            "Discounts are available for annual commitments and when using the Expensify Card",
+            "Expensify Card cash back is 1% on US purchases and 2% for monthly spend over $250K",
+            "A dedicated account manager is available on accounts of 100+ members"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark.",
+        "Control is sold on custom pricing; the $9 figure is the vendor's own floor, not a quoted rate.",
+        "This tool has not been reviewed by an editor; no verdict is published."
+      ]
+    }
   }
 ]
