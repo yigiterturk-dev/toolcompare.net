@@ -50815,5 +50815,96 @@
       ]
     },
     "fiyatModeli": "kullanima-gore"
+  },
+  {
+    "slug": "cpanel",
+    "name": "cPanel",
+    "iconName": "Server",
+    "color1": "#ff6c2c",
+    "color2": "#cc5623",
+    "color": "#ff6c2c",
+    "category": "Hosting",
+    "shortDescription": "Web hosting control panel, licensed per server.",
+    "longDescription": "cPanel is a web hosting control panel used to administer servers and the accounts on them from a browser: domains, email, databases, DNS, SSL certificates and backups. It is licensed per server rather than per administrator, and the tiers differ by how many hosting accounts a single licence may run, from one account on Solo up to a hundred on Premier with extra accounts charged individually. The lower tiers are sold for cloud and VPS servers only; dedicated and bare-metal servers require the top tier. Every plan bundles WP Toolkit for managing WordPress installations on the server.",
+    "keyFeatures": [
+      "Browser-based administration for domains, email, databases, DNS and SSL",
+      "Licensed per server, with tiers set by the number of hosting accounts",
+      "WP Toolkit bundled with every plan",
+      "Cloud/VPS licensing on lower tiers; dedicated hardware on the top tier"
+    ],
+    "features": [
+      "Hosting control panel",
+      "Per-server licensing",
+      "WP Toolkit"
+    ],
+    "basePrice": 29.99,
+    "isFlat": true,
+    "fiyatModeli": "abonelik",
+    "websiteUrl": "https://cpanel.net",
+    "incelendi": false,
+    "kriterler": {
+      "api": true,
+      "acikKaynak": false,
+      "mobil": false,
+      "sso": null
+    },
+    "fiyatKontrolTarihi": "2026-09-13",
+    "planlar": [
+      {
+        "ad": "Solo",
+        "aylik": 29.99,
+        "birim": "sabit",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Solo: 1 Account, $29.99/mo (Excl. Tax), $27.46/mo billed annually; Available on Cloud/VPS Only",
+        "kaynakUrl": "https://cpanel.net/pricing/"
+      },
+      {
+        "ad": "Admin",
+        "aylik": 35.99,
+        "birim": "sabit",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Admin: Up to 5 Accounts, $35.99/mo (Excl. Tax), $32.96/mo billed annually",
+        "kaynakUrl": "https://cpanel.net/pricing/"
+      },
+      {
+        "ad": "Pro",
+        "aylik": 53.99,
+        "birim": "sabit",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Pro: Up to 30 Accounts, $53.99/mo (Excl. Tax), $49.46/mo billed annually",
+        "kaynakUrl": "https://cpanel.net/pricing/"
+      },
+      {
+        "ad": "Premier",
+        "aylik": 69.99,
+        "birim": "sabit",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Premier: Up to 100 Accounts, $69.99/mo, additional accounts $0.49 each; Cloud/VPS & Metal/Dedicated",
+        "kaynakUrl": "https://cpanel.net/pricing/"
+      }
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-13",
+      "sources": [
+        {
+          "label": "cPanel — Pricing Plans & Licensing Options",
+          "url": "https://cpanel.net/pricing/",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "Solo $29.99/mo for 1 Account, $27.46/mo billed annually",
+            "Admin $35.99/mo for up to 5 Accounts, $32.96/mo billed annually",
+            "Pro $53.99/mo for up to 30 Accounts, $49.46/mo billed annually",
+            "Premier $69.99/mo for up to 100 Accounts, additional accounts $0.49 each",
+            "Lower tiers are available on Cloud/VPS only; Premier also covers Metal/Dedicated",
+            "Prices exclude tax"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark.",
+        "This tool has not been reviewed by an editor; no verdict is published."
+      ]
+    }
   }
 ]

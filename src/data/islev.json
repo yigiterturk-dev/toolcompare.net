@@ -511,5 +511,6 @@
   "zim": null,
   "prezi": null,
   "notion-calendar": null,
-  "n8n": "automation"
+  "n8n": "automation",
+  "cpanel": "server-control-panel"
 }
