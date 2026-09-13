@@ -1,12 +1,36 @@
 {
   "_oku": "ENTEGRASYON KAYITLARI. Anahtar = kanonik cift slug'i (a-vs-b, alfabetik). durum: 'yerlesik' = saticilardan biri digerini KENDI entegrasyon dizininde listeliyor; 'dolayli' = yerlesik baglanti belgelenmemis ama iki taraf da ortak bir baglayiciya (Zapier/Make gibi) sahip; 'yok' = saticinin kendi belgesi bu baglantidan soz etmiyor ve onerdigi yol baska. Buraya YALNIZCA saticinin kendi sayfasinda GORULEN bilgi girilir; kaynakSatiri o sayfadan alinmis gercek cumledir, kaynakSahibi hangi saticinin sayfasi oldugunu soyler. Tahmin girilmez. Kapi: yalnizca GSC'de OLCULMUS talebi olan cift icin kayit acilir -- kartezyen uretim YOK (bkz. 2026-09-12 olcumu: 116 ilk-15 sayfasi ayda toplam 349 gosterim).",
   "ciftler": {
+    "activecampaign-vs-typeform": {
+      "durum": "yerlesik",
+      "ozet": "Typeform lists ActiveCampaign among its own connectors, so form responses can reach ActiveCampaign without a third-party bridge.",
+      "kaynakSatiri": "Follow up with automated, personalized emails",
+      "kaynakUrl": "https://www.typeform.com/connect/",
+      "kaynakSahibi": "Typeform",
+      "checkedAt": "2026-09-12"
+    },
     "convertkit-vs-kajabi": {
       "durum": "yerlesik",
       "ozet": "Kajabi lists Kit (formerly ConvertKit) in its own integrations directory, so the two connect without a third-party bridge.",
       "kaynakSatiri": "Spend less time on your email marketing and more time on creating.",
       "kaynakUrl": "https://kajabi.com/integrations",
       "kaynakSahibi": "Kajabi",
+      "checkedAt": "2026-09-12"
+    },
+    "convertkit-vs-typeform": {
+      "durum": "yerlesik",
+      "ozet": "Kit (formerly ConvertKit) lists Typeform in its own app directory, so form responses can reach Kit without a third-party bridge.",
+      "kaynakSatiri": "Capture leads, quiz your audience, and automate follow-ups - all from inside your emails.",
+      "kaynakUrl": "https://kit.com/apps",
+      "kaynakSahibi": "Kit",
+      "checkedAt": "2026-09-13"
+    },
+    "getresponse-vs-typeform": {
+      "durum": "dolayli",
+      "ozet": "GetResponse's own integrations directory does not list Typeform, although it carries a Forms & Surveys category. GetResponse instead points to general connectors, so a bridge is required.",
+      "kaynakSatiri": "Connect your favorite apps to GetResponse via Albato.",
+      "kaynakUrl": "https://www.getresponse.com/integrations",
+      "kaynakSahibi": "GetResponse",
       "checkedAt": "2026-09-12"
     },
     "kajabi-vs-mailchimp": {
@@ -17,28 +41,12 @@
       "kaynakSahibi": "Kajabi",
       "checkedAt": "2026-09-12"
     },
-    "activecampaign-vs-typeform": {
-      "durum": "yerlesik",
-      "ozet": "Typeform lists ActiveCampaign among its own connectors, so form responses can reach ActiveCampaign without a third-party bridge.",
-      "kaynakSatiri": "Follow up with automated, personalized emails",
-      "kaynakUrl": "https://www.typeform.com/connect/",
-      "kaynakSahibi": "Typeform",
-      "checkedAt": "2026-09-12"
-    },
     "kajabi-vs-typeform": {
       "durum": "dolayli",
       "ozet": "Kajabi's own integrations directory does not list Typeform. Kajabi does list Zapier, which is the documented route between the two.",
       "kaynakSatiri": "Moves info between your web apps automatically, so you can focus on your most important work.",
       "kaynakUrl": "https://kajabi.com/integrations",
       "kaynakSahibi": "Kajabi",
-      "checkedAt": "2026-09-12"
-    },
-    "getresponse-vs-typeform": {
-      "durum": "dolayli",
-      "ozet": "GetResponse's own integrations directory does not list Typeform, although it carries a Forms & Surveys category. GetResponse instead points to general connectors, so a bridge is required.",
-      "kaynakSatiri": "Connect your favorite apps to GetResponse via Albato.",
-      "kaynakUrl": "https://www.getresponse.com/integrations",
-      "kaynakSahibi": "GetResponse",
       "checkedAt": "2026-09-12"
     },
     "teachable-vs-woocommerce": {
