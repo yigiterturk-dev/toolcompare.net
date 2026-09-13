@@ -29228,8 +29228,8 @@
     ],
     "verdict": "Use LangChain when its agent and integration abstractions remove meaningful orchestration work; keep direct SDK calls as the baseline for simple flows.",
     "evidence": {
-      "status": "vendor-sourced",
-      "reviewedAt": "2026-08-24",
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-13",
       "sources": [
         {
           "label": "LangChain Docs — Agents",
@@ -29292,11 +29292,26 @@
             "create_agent tool binding",
             "prebuilt tool integrations"
           ]
+        },
+        {
+          "label": "LangSmith Plans and Pricing",
+          "url": "https://www.langchain.com/pricing",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "The LangChain framework itself is MIT-licensed and free; the published prices are for the hosted LangSmith platform",
+            "Developer: $0 per seat per month, then pay as you go, up to 5k base traces/mo, community support, 1 seat",
+            "Plus: $39 per seat per month, then pay as you go, up to 10k base traces/mo, unlimited seats, access to Deployment and Engine",
+            "Enterprise: custom pricing, self-hosted and hybrid deployment, custom SSO/ABAC/RBAC, support SLA",
+            "Usage units: LangChain Compute Unit $1.50 per LCU, LangChain Storage Unit $1.00 per LSU",
+            "Plus seat includes 10K traces total, then 0.005 LSU per additional trace",
+            "Discounted rates and up to $10,000 in credits for VC-backed startups"
+          ]
         }
       ],
       "limitations": [
         "Official documentation was reviewed; ToolCompare did not independently measure framework overhead, integration reliability or LangSmith operating cost for a production workload.",
-        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
+        "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor.",
+        "Prices on this record are the hosted LangSmith platform's, read from the vendor pricing page on 2026-09-13. The open-source LangChain framework is free, so no starting-price ladder is recorded and LangChain does not enter numeric price comparisons."
       ]
     },
     "sss": [
@@ -29304,7 +29319,8 @@
         "soru": "How do tools work in LangChain?",
         "cevap": "A tool is a plain function decorated with @tool: its type hints become the argument schema and its docstring becomes the description the model reads to decide when to call it. For structured inputs you pass a Pydantic model or JSON schema through args_schema. You hand a list of tools to create_agent together with a model, and the framework runs the loop: the model picks a tool, LangChain executes it and feeds the result back. Prebuilt integrations cover web search, code execution, databases and more."
       }
-    ]
+    ],
+    "fiyatKontrolTarihi": "2026-09-13"
   },
   {
     "slug": "llamaindex",
@@ -50985,6 +51001,207 @@
       "limitations": [
         "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark.",
         "Control is sold on custom pricing; the $9 figure is the vendor's own floor, not a quoted rate.",
+        "This tool has not been reviewed by an editor; no verdict is published."
+      ]
+    }
+  },
+  {
+    "slug": "datagrip",
+    "name": "DataGrip",
+    "category": "Developer Tools",
+    "shortDescription": "JetBrains database IDE, licensed per user.",
+    "longDescription": "DataGrip is JetBrains' database IDE: a SQL editor with schema-aware completion, refactoring, query execution and result editing across the relational engines the IntelliJ platform supports. Licensing follows the rest of the JetBrains range rather than the product: a free non-commercial licence covers learning, open-source work and hobby projects, while commercial use is a paid subscription priced differently for individuals and for organisations. Individual subscriptions carry JetBrains' continuity discount, so the yearly rate falls in the second and third years; organisation licences are quoted per user per year. The same work is also covered by the All Products Pack, which bundles DataGrip with the rest of the JetBrains IDEs.",
+    "keyFeatures": [
+      "Schema-aware SQL editor with completion and refactoring",
+      "Free non-commercial licence for learning, open source and hobby use",
+      "Per-user commercial subscription, priced separately for individuals and organisations",
+      "Continuity discount on individual yearly subscriptions in years two and three",
+      "Covered by the All Products Pack alongside the other JetBrains IDEs"
+    ],
+    "features": [
+      "Database IDE",
+      "SQL editor",
+      "Per-user licensing"
+    ],
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "ucretsiz-katman",
+    "websiteUrl": "https://www.jetbrains.com/datagrip/",
+    "incelendi": false,
+    "kriterler": {
+      "api": false,
+      "acikKaynak": false,
+      "mobil": false,
+      "sso": null
+    },
+    "fiyatKontrolTarihi": "2026-09-13",
+    "planlar": [
+      {
+        "ad": "Non-Commercial",
+        "aylik": 0,
+        "birim": "kisi-basina",
+        "faturalama": "aylik",
+        "kaynakSatiri": "Free — DataGrip Non-Commercial, for individual non-commercial development: learning and self-education, open-source contributions without commercial benefit, content creation and hobby development",
+        "kaynakUrl": "https://www.jetbrains.com/datagrip/buy/"
+      },
+      {
+        "ad": "Commercial — Individuals",
+        "aylik": 10.9,
+        "birim": "kisi-basina",
+        "faturalama": "aylik",
+        "kaynakSatiri": "DataGrip Commercial, Individuals: US $10.90 per month (incl. VAT US $13.08); billed annually US $109.00 per year, second year US $87.00, third year onwards US $65.00",
+        "kaynakUrl": "https://www.jetbrains.com/datagrip/buy/"
+      }
+    ],
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-13",
+      "sources": [
+        {
+          "label": "Buy DataGrip: Pricing and Licensing",
+          "url": "https://www.jetbrains.com/datagrip/buy/",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "DataGrip Non-Commercial is free for individual non-commercial development, with support through public forums and a bug tracker",
+            "Commercial, Individuals: US $10.90 per month, or US $109.00 per year",
+            "Individual yearly continuity discount: second year US $87.00, third year onwards US $65.00",
+            "Commercial, Organizations: US $259.00 per user, per year",
+            "All Products Pack, Individuals: US $29.90 per month",
+            "Commercial plans include a free 30-day trial and support via private tickets",
+            "All yearly subscriptions include a perpetual fallback licence",
+            "JetBrains AI Pro is a separate add-on at US $20.00 per user, per month"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark.",
+        "The organisation rate is published per year only; no monthly organisation figure is quoted, so it is not carried into the price ladder.",
+        "The page shows a second, lower figure next to a 'Supercharge with JetBrains AI Pro' label whose meaning is not stated; it is not quoted here.",
+        "Listed prices exclude VAT; the vendor states the tax rate depends on country and tax ID.",
+        "This tool has not been reviewed by an editor; no verdict is published."
+      ]
+    }
+  },
+  {
+    "slug": "fivetran",
+    "name": "Fivetran",
+    "category": "Developer Tools",
+    "shortDescription": "Managed data pipelines billed on monthly active rows.",
+    "longDescription": "Fivetran moves data from source systems into a warehouse through fully managed connectors, and adds transformations and reverse-ETL style activations on top of the same platform. It is sold on consumption rather than seats: billing follows monthly active rows for connections and activations and monthly model runs for transformations, so the bill tracks how much data actually changes rather than how many people use the tool. The published plans separate features rather than volume — Standard covers the managed connectors, 15-minute syncs, role-based access control and the REST API; Enterprise adds 1-minute syncs, enterprise database connectors, custom roles, SCIM and hybrid deployment; Business Critical adds customer-managed encryption keys, PCI DSS Level 1 and private networking. A free plan carries the Standard feature set up to stated volume limits. No dollar rates are published on the pricing page; Fivetran directs buyers to an estimator or to sales.",
+    "keyFeatures": [
+      "700+ fully managed connectors with 15-minute syncs on Standard",
+      "Consumption billing on monthly active rows, not per seat",
+      "Free plan with the Standard feature set up to stated volume limits",
+      "Enterprise tier adds 1-minute syncs, SCIM, custom roles and hybrid deployment",
+      "Business Critical adds customer-managed keys, PCI DSS Level 1 and private networking"
+    ],
+    "features": [
+      "Managed connectors",
+      "Usage-based billing",
+      "Transformations"
+    ],
+    "fiyatModeli": "kullanima-gore",
+    "websiteUrl": "https://www.fivetran.com",
+    "incelendi": false,
+    "kriterler": {
+      "api": true,
+      "acikKaynak": false,
+      "mobil": false,
+      "sso": true
+    },
+    "fiyatKontrolTarihi": "2026-09-13",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-13",
+      "sources": [
+        {
+          "label": "Fivetran — Pricing",
+          "url": "https://www.fivetran.com/pricing",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "Billing is consumption-based: monthly active rows (MAR) for connections and activations, monthly model runs (MMR) for transformations",
+            "Free plan: 500,000 MAR for connections, 3,500 MAR for activations, 5,000 model runs per month, with Standard plan features",
+            "Standard: unlimited users, 15-minute syncs, 700+ managed connectors, role-based access control, REST API, SSH tunnels",
+            "Enterprise: 1-minute syncs, enterprise database connectors, custom roles, SCIM provisioning, choice of cloud provider, hybrid deployment",
+            "Business Critical: customer-managed encryption keys, PCI DSS Level 1 certification, private networking",
+            "Annual contracts are stated to save up to 22%; Enterprise License Agreements are a fixed price per year with no consumption limit",
+            "Each new connection, activation and Quickstart data model carries a 14-day free trial"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pricing page was reviewed; this record is not a ToolCompare benchmark.",
+        "Fivetran publishes no dollar rates on its pricing page — plan tiers are feature-based and the cost depends on measured volume — so no price ladder is recorded and this tool cannot enter numeric price comparisons.",
+        "This tool has not been reviewed by an editor; no verdict is published."
+      ]
+    }
+  },
+  {
+    "slug": "haystack",
+    "name": "Haystack",
+    "category": "AI Tools",
+    "shortDescription": "Open-source Python framework for RAG and agent pipelines.",
+    "longDescription": "Haystack is deepset's open-source orchestration framework for building retrieval-augmented generation systems and tool-using agents in Python. Applications are assembled as pipelines of components — retrievers, rankers, generators, tools, memory — so each step can be inspected and replaced independently, and the framework deliberately avoids locking the application to one model or vector store: OpenAI, Anthropic, Mistral, Hugging Face, Weaviate, Pinecone and Elasticsearch are all integrations rather than dependencies. The framework itself is Apache-2.0 licensed and installed from PyPI, so there is no licence cost; deepset sells a separate Haystack Enterprise offering built around private support, deployment blueprints and premium features, and publishes no price for it.",
+    "keyFeatures": [
+      "Component pipelines for retrieval, generation, memory and tool use",
+      "Apache-2.0 licensed, installed with pip install haystack-ai",
+      "Model- and store-agnostic: OpenAI, Anthropic, Mistral, Hugging Face, Weaviate, Pinecone, Elasticsearch",
+      "Inspectable pipeline steps for debugging agent decisions",
+      "Separate paid Haystack Enterprise track for private support and blueprints"
+    ],
+    "features": [
+      "RAG pipelines",
+      "Agent orchestration",
+      "Open source"
+    ],
+    "basePrice": 0,
+    "isFlat": true,
+    "fiyatModeli": "bedava",
+    "websiteUrl": "https://haystack.deepset.ai",
+    "incelendi": false,
+    "kriterler": {
+      "api": true,
+      "acikKaynak": true,
+      "mobil": false,
+      "sso": null
+    },
+    "fiyatKontrolTarihi": "2026-09-13",
+    "evidence": {
+      "status": "pricing-page-verified",
+      "reviewedAt": "2026-09-13",
+      "sources": [
+        {
+          "label": "Haystack — Open-Source AI Orchestration",
+          "url": "https://haystack.deepset.ai/",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "Positioned as open-source AI orchestration for production-grade agents, installed with pip install haystack-ai",
+            "Integrates with OpenAI, Anthropic, Mistral, Hugging Face, Weaviate, Pinecone and Elasticsearch with no vendor lock-in",
+            "Haystack 3.1 adds context compaction, token counters and AgentTool for multi-agent systems"
+          ]
+        },
+        {
+          "label": "haystack-ai on PyPI and the repository licence",
+          "url": "https://pypi.org/project/haystack-ai/",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "Package haystack-ai 3.1.1 is published under Apache-2.0",
+            "The repository LICENSE file is the Apache License, Version 2.0"
+          ]
+        },
+        {
+          "label": "deepset — Haystack Enterprise",
+          "url": "https://www.deepset.ai/products-and-services/haystack-enterprise",
+          "checkedAt": "2026-09-13",
+          "supports": [
+            "Haystack Enterprise is sold as enterprise support for the open-source framework: private expert support, best-practice blueprints and premium access",
+            "The page carries no price and routes to a demo booking instead"
+          ]
+        }
+      ],
+      "limitations": [
+        "Vendor pages were reviewed; this record is not a ToolCompare benchmark.",
+        "The free figure covers the Apache-2.0 framework only. Haystack Enterprise publishes no price, and running the framework still costs whatever the chosen model and vector store charge.",
         "This tool has not been reviewed by an editor; no verdict is published."
       ]
     }

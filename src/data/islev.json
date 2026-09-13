@@ -513,5 +513,8 @@
   "notion-calendar": null,
   "n8n": "automation",
   "cpanel": "server-control-panel",
-  "expensify": "expense-management"
+  "expensify": "expense-management",
+  "datagrip": "database-gui",
+  "fivetran": "data-integration",
+  "haystack": "ai-framework"
 }
