@@ -83,3 +83,21 @@ export function yolTalepGormus(yol?: string): boolean {
 export function yolGosterimi(yol?: string): number {
   return yol ? YOL_GOSTERIM.get(yol.replace(/\/$/, "")) || 0 : 0;
 }
+
+/**
+ * Belirli bir on ekle baslayan, talep GORMUS yollar.
+ *
+ * NEDEN (olcum, 2026-09-13): `akranlar()` her araca yalnizca AKRAN_ADEDI=5
+ * akran veriyor. Bu bir sezgisel siralama; Google'in olcusu degil. Sonuc:
+ * ayni islevli, kanit kapisini gecen ve GOOGLE'IN 1. SAYFADA GOSTERDIGI
+ * ciftler evrene hic girmiyordu -- linear-vs-youtrack poz 8,3 / 26 gosterim,
+ * asana-vs-teamwork 22 gosterim, clickup-vs-teamwork 18 gosterim. Talep,
+ * ilk-5 sezgisinden daha guclu bir kanittir; evren ona da acilir.
+ */
+export function talepliYollar(onEk: string): string[] {
+  const cikti: string[] = [];
+  for (const [yol, gosterim] of YOL_GOSTERIM) {
+    if (yol.startsWith(onEk) && gosterim >= EN_AZ_GOSTERIM) cikti.push(yol);
+  }
+  return cikti.sort();
+}

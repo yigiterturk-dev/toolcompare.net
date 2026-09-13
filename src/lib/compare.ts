@@ -25,6 +25,7 @@ import { ciftTaranmayaDeger, alternatifTaranmayaDeger } from "./tarama.ts";
 import type { KriterKumesi } from "./kriterler.ts";
 import { ciftIndekslenir, aracIndekslenir, alternatifIndekslenir, fiyatiDogrulanmis, kriterliMi } from "./indeks.ts";
 import { islevi, ayniIslev } from "./islev.ts";
+import { talepliYollar, yolTalepGormus } from "./talep.ts";
 
 export { kriterAyrimi, ayrimCumlesi } from "./kriter-ayrimi.ts";
 
@@ -133,10 +134,22 @@ export function akranlar(slug: string, adet: number = AKRAN_ADEDI): Arac[] {
   // karsilastirma ya da alternatif sayfasi da uretmez.
   const i = islevi(slug);
   if (i === null) return [];
-  return araclar
-    .filter((t) => t.slug !== slug && islevi(t.slug) === i)
-    .sort(siralamaKarsilastir)
-    .slice(0, adet);
+  const ayniIslevliler = araclar.filter((t) => t.slug !== slug && islevi(t.slug) === i);
+  const secilen = ayniIslevliler.sort(siralamaKarsilastir).slice(0, adet);
+  /*
+    TALEP, ILK-5 SEZGISINI EZER (2026-09-13). `adet` bizim siralamamiz;
+    Google'in olcusu degil. Olculdu: linear-vs-youtrack poz 8,3 / 26
+    gosterim alirken youtrack linear'in ilk 5'inde degildi, dolayisiyla
+    cift ne sitemap'e ne de ic linklere giriyordu. Talep cift bazli
+    olculdugu icin bu promosyon SIMETRIKTIR: A, B'yi talep yuzunden
+    listeliyorsa B de A'yi listeler -- yetim ya da tek yonlu cift olusmaz.
+  */
+  const secilmis = new Set(secilen.map((t) => t.slug));
+  for (const t of ayniIslevliler) {
+    if (secilmis.has(t.slug)) continue;
+    if (yolTalepGormus(`/compare/${kanonikSlug(slug, t.slug)}`)) secilen.push(t);
+  }
+  return secilen;
 }
 
 /** Geriye donuk ad. */
@@ -204,6 +217,26 @@ export function karsilastirmaCiftleri(): string[] {
     ama sitemap'te olmayan, ic link almayan bir yetim olurdu.
   */
   for (const [c] of tumEntegrasyonlar()) ciftler.add(c);
+  /*
+    OLCULMUS TALEBI OLAN AYNI-ISLEV CIFTLERI (2026-09-13). `akranlar()`
+    araç basina AKRAN_ADEDI=5 akran veriyor; bu bizim sezgisel siralamamiz,
+    Google'in olcusu degil. Olculdu: ayni islevli, kanit kapisini gecen ve
+    Google'in 1. SAYFADA gosterdigi ciftler evrene hic giremiyordu --
+    linear-vs-youtrack (poz 8,3 / 26 gosterim), asana-vs-teamwork (22),
+    clickup-vs-teamwork (18). Sayfa indekslenebiliyor ama sitemap'te yok ve
+    ic link almiyordu; entegrasyon ciftlerinde cozdugumuz YETIM sorununun
+    aynisi. Kapi GEVSEMIYOR: asagidaki iki suzgec (ciftIndekslenir +
+    ciftTaranmayaDeger) bu ciftlere de aynen uygulaniyor. Capraz islevli
+    cift buradan GIREMEZ -- onun yolu hala entegrasyon kaydi.
+  */
+  const mevcutSlug = new Set(araclar.map((t) => t.slug));
+  for (const yol of talepliYollar("/compare/")) {
+    const [a, b] = yol.slice("/compare/".length).split("-vs-");
+    if (!a || !b) continue;
+    if (!mevcutSlug.has(a) || !mevcutSlug.has(b)) continue;
+    if (!ayniIslev(a, b)) continue;
+    ciftler.add(kanonikSlug(a, b));
+  }
   return [...ciftler].sort();
 }
 
