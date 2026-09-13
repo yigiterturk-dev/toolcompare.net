@@ -10,6 +10,8 @@ import {
   alternatifSayfasiOlanlar,
   oneCikanCiftler,
   kumeIcindekiCiftler,
+  aracListesindenLinkli,
+  karsilastirmaOrtaklari,
 } from "../src/lib/compare.ts";
 import { kategoriler } from "../src/lib/categories.ts";
 import { aracIndekslenir, fiyatiDogrulanmis, kriterliMi } from "../src/lib/indeks.ts";
@@ -67,7 +69,7 @@ test("islevi olmayan aracin akrani da karsilastirma sayfasi da yok", () => {
 test("sitemap'teki capraz islevli cift yalnizca entegrasyon kaydiyla giriyor", () => {
   const kotu = sitemapCiftleri().filter((c) => {
     const [a, b] = c.split("-vs-");
-    return !ayniIslev(a, b) && !entegrasyonVar(a, b);
+    return !ayniIslev(a, b) && !aracListesindenLinkli(a, b);
   });
   assert.deepEqual(kotu, [], `kaydi olmayan capraz islev cifti: ${kotu.slice(0, 5).join(", ")}`);
 });
@@ -128,6 +130,15 @@ test("sitemap'teki her karsilastirma sayfasi en az bir yerden link aliyor", () =
     icin her cift iki arac sayfasindan link alir.
   */
   for (const [cift] of tumEntegrasyonlar()) linkli.add(cift);
+  /*
+    IKINCI LISTE KAYNAGI (2026-09-13): arac sayfasindaki "People also
+    compare X with..." listesi. Karsilastirma sorgusuyla acilmis capraz
+    ciftler de akran evreninde degil; linklerini bu listeden alirlar ve
+    liste iki taraftan da basilir.
+  */
+  for (const t of araclar) {
+    for (const o of karsilastirmaOrtaklari(t.slug)) linkli.add(o.cift);
+  }
   const oksuz = sitemapCiftleri().filter((c) => !linkli.has(c));
   assert.deepEqual(oksuz, [], `hicbir sayfadan link almayan cift: ${oksuz.slice(0, 5).join(", ")}`);
 });

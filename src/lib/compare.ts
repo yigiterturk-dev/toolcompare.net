@@ -19,13 +19,13 @@
 
 import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
-import { tumEntegrasyonlar } from "./entegrasyon.ts";
+import { tumEntegrasyonlar, entegrasyonVar } from "./entegrasyon.ts";
 import { ilkUcretliBasamak, planEtiketi } from "./plan.ts";
 import { ciftTaranmayaDeger, alternatifTaranmayaDeger } from "./tarama.ts";
 import type { KriterKumesi } from "./kriterler.ts";
 import { ciftIndekslenir, aracIndekslenir, alternatifIndekslenir, fiyatiDogrulanmis, kriterliMi } from "./indeks.ts";
 import { islevi, ayniIslev } from "./islev.ts";
-import { talepliYollar, yolTalepGormus } from "./talep.ts";
+import { talepliYollar, yolTalepGormus, karsilastirmaSorgusuYollari } from "./talep.ts";
 
 export { kriterAyrimi, ayrimCumlesi } from "./kriter-ayrimi.ts";
 
@@ -230,11 +230,32 @@ export function karsilastirmaCiftleri(): string[] {
     cift buradan GIREMEZ -- onun yolu hala entegrasyon kaydi.
   */
   const mevcutSlug = new Set(araclar.map((t) => t.slug));
+  const harita = new Map(araclar.map((t) => [t.slug, t]));
   for (const yol of talepliYollar("/compare/")) {
     const [a, b] = yol.slice("/compare/".length).split("-vs-");
     if (!a || !b) continue;
     if (!mevcutSlug.has(a) || !mevcutSlug.has(b)) continue;
     if (!ayniIslev(a, b)) continue;
+    ciftler.add(kanonikSlug(a, b));
+  }
+  /*
+    KARSILASTIRMA SORGUSU ALMIS CAPRAZ CIFTLER (2026-09-13). Entegrasyon
+    ciftleriyle ayni gerekce: akran evreninde yoklar, ama sorgu harfiyen
+    "A vs B" oldugu icin sayfanin cevabi gercek. Evrene alinmazsa yine
+    yetim olurlardi. Kapi (ciftIndekslenir) asagida aynen uygulanir.
+  */
+  for (const yol of karsilastirmaSorgusuYollari("/compare/")) {
+    const [a, b] = yol.slice("/compare/".length).split("-vs-");
+    if (!a || !b) continue;
+    if (!mevcutSlug.has(a) || !mevcutSlug.has(b)) continue;
+    if (ayniIslev(a, b)) continue;
+    /* TEKIL ARAC HARIC: islevi olmayan aracin hic karsilastirma sayfasi
+       olmaz (bkz. akranlar). Capraz islev muafiyeti bu kurali delmez --
+       `ayniIslev` tekil ciftte de false doner, o yuzden ayrica eleniyor. */
+    if (islevi(a) === null || islevi(b) === null) continue;
+    const A = harita.get(a);
+    const B = harita.get(b);
+    if (!A || !B || !ciftIndekslenir(A, B)) continue;
     ciftler.add(kanonikSlug(a, b));
   }
   return [...ciftler].sort();
@@ -453,4 +474,42 @@ export function alternatifSayfasiOlan(sluglar: string[]): Arac[] {
     SITEMAP'TE OLANI LINKLE.
   */
   return alternatifSayfasiOlanlar().filter((t) => kume.has(t.slug) && alternatifSayfasiVar(t.slug));
+}
+
+/**
+ * KARSILASTIRMA SORGUSUYLA ACILMIS capraz islevli ciftler.
+ *
+ * Entegrasyon ciftlerinin ikizi (bkz. entegrasyonOrtaklari): bunlar da
+ * akran evreninde YOK -- farkli is goruyorlar -- ama Google'a gelen sorgu
+ * harfiyen "A vs B" oldugu icin sayfanin cevapladigi soru gercek. Liste
+ * IKI arac sayfasindan da basilir; simetri ve yetimsizlik boyle korunur.
+ */
+export function karsilastirmaOrtaklari(slug?: string): { cift: string; diger: string }[] {
+  if (!slug) return [];
+  const cikti: { cift: string; diger: string }[] = [];
+  for (const yol of karsilastirmaSorgusuYollari("/compare/")) {
+    const [a, b] = yol.slice("/compare/".length).split("-vs-");
+    if (!a || !b || (a !== slug && b !== slug)) continue;
+    if (ayniIslev(a, b)) continue; // ayni islevliler zaten akran listesinden gelir
+    const A = araclar.find((t) => t.slug === a);
+    const B = araclar.find((t) => t.slug === b);
+    if (!A || !B || !ciftIndekslenir(A, B)) continue;
+    cikti.push({ cift: kanonikSlug(a, b), diger: a === slug ? b : a });
+  }
+  return cikti;
+}
+
+/**
+ * Bu cift linkini AKRANLIKTAN degil, arac sayfasindaki bir LISTEDEN alir.
+ *
+ * Iki tur var ve ikisi de capraz islevli oldugu icin akran olamazlar:
+ *   - entegrasyon kaydi olanlar  -> "Does X work with…" listesi
+ *   - karsilastirma sorgusu alanlar -> "People also compare X with…" listesi
+ * Her iki liste de IKI arac sayfasindan basildigi icin simetri korunur;
+ * yetim kalmazlar. Testler bu yuklemi kullanir, kural tek yerde durur.
+ */
+export function aracListesindenLinkli(a?: string, b?: string): boolean {
+  if (!a || !b) return false;
+  if (entegrasyonVar(a, b)) return true;
+  return karsilastirmaOrtaklari(a).some((o) => o.diger === b);
 }

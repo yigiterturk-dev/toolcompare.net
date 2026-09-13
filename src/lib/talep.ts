@@ -101,3 +101,79 @@ export function talepliYollar(onEk: string): string[] {
   }
   return cikti.sort();
 }
+
+/**
+ * O yola gelen sorgular arasinda KARSILASTIRMA BICIMLI olan var mi?
+ *
+ * NEDEN (olcum, 2026-09-13): islev kapisi capraz islevli cifti yalnizca
+ * entegrasyon kaydiyla aciyordu ve gerekcesi suydu -- "farkli is goren
+ * ciftin talebi karsilastirma talebi degil, entegrasyon talebidir".
+ * Bu, olculdugu kume icin (typeform x kajabi) DOGRUYDU. Ama noindex'li
+ * capraz ciftlerin sorgulari cekilince tablo tersine dondu:
+ *   KARSILASTIRMA 16 gosterim  /  ENTEGRASYON 0
+ *   "keycloak vs firebase" poz 9 . "groupme vs slack" . "slack vs groupme"
+ *   "cloudflare vs hetzner" poz 9 . "ionos vs digitalocean" poz 10,5
+ * Insanlar harfiyen "A vs B" yaziyor; sayfa tam o soruyu cevapliyor ama
+ * noindex yiyordu.
+ *
+ * OLCUT KASITLI OLARAK DAR: yalnizca "vs"/"versus" geceni sayiyoruz.
+ * Salt talep yetmez -- "drizzle mongodb" gibi ima edilmis sorgu bu kapiyi
+ * ACMAZ. Boylece `redis-vs-sentry` gibi gercekten anlamsiz cift kapali
+ * kalir: oyle bir sorgu yoktur. Kapiyi acan talep degil, talebin BICIMI.
+ */
+const KARSILASTIRMA_BICIMI = /\b(vs|versus)\b/i;
+
+/** Karsilastirma icin kimlik jetonu: kucuk harf, harf-rakam disi atilir. */
+function jeton(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+function yolSorgulari(): Map<string, string[]> {
+  const harita = new Map<string, string[]>();
+  for (const satir of ((ham as { rows?: (Satir & { query?: string })[] }).rows || [])) {
+    if (!satir.query || !KARSILASTIRMA_BICIMI.test(satir.query)) continue;
+    const yol = (satir.page || "").replace(/^https?:\/\/[^/]+/, "").replace(/[?#].*$/, "").replace(/\/$/, "");
+    if (!yol) continue;
+    const mevcut = harita.get(yol);
+    if (mevcut) mevcut.push(satir.query);
+    else harita.set(yol, [satir.query]);
+  }
+  return harita;
+}
+
+const YOL_KARSILASTIRMA_SORGULARI = yolSorgulari();
+
+/**
+ * O yola gelen sorgular arasinda, BU IKI ARACI anan karsilastirma
+ * sorgusu var mi?
+ *
+ * OLCULEN HATA (2026-09-13, ilk deneme): olcut "yolda vs gecen sorgu var mi"
+ * idi ve fazla gevsekti -- /compare/betterstack-vs-caddy'yi "caddy vs jenkins"
+ * sorgusu aciyordu. Sorgu karsilastirma bicimliydi ama BASKA bir cift
+ * hakkindaydi; Google sayfayi alakasiz sorguya servis etmisti. Kapiyi acan
+ * sorgunun bu ciftin KENDISI hakkinda olmasi sart: iki tarafin kimlik jetonu
+ * da sorguda gecmeli.
+ */
+export function karsilastirmaSorgusuGormus(
+  yol?: string,
+  aKimlikleri: (string | undefined)[] = [],
+  bKimlikleri: (string | undefined)[] = [],
+): boolean {
+  if (!yol) return false;
+  const sorgular = YOL_KARSILASTIRMA_SORGULARI.get(yol.replace(/\/$/, ""));
+  if (!sorgular) return false;
+  // Her taraf icin slug YA DA ad eslesebilir: "bill-com" slug'i "Bill.com"
+  // adiyla ayni jetona iner, ama her zaman inmez.
+  const a = aKimlikleri.filter((k): k is string => Boolean(k)).map(jeton).filter(Boolean);
+  const b = bKimlikleri.filter((k): k is string => Boolean(k)).map(jeton).filter(Boolean);
+  if (!a.length || !b.length) return false;
+  return sorgular.some((q) => {
+    const j = jeton(q);
+    return a.some((x) => j.includes(x)) && b.some((y) => j.includes(y));
+  });
+}
+
+/** Karsilastirma sorgusu almis yollar (evren kurulumu icin on eleme). */
+export function karsilastirmaSorgusuYollari(onEk: string): string[] {
+  return [...YOL_KARSILASTIRMA_SORGULARI.keys()].filter((y) => y.startsWith(onEk)).sort();
+}

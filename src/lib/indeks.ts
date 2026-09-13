@@ -19,9 +19,9 @@
 
 import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
-import { talepGormus, yolTalepGormus } from "./talep.ts";
+import { talepGormus, yolTalepGormus, karsilastirmaSorgusuGormus } from "./talep.ts";
 import { ayniIslev, islevi } from "./islev.ts";
-import { entegrasyonVar } from "./entegrasyon.ts";
+import { entegrasyonVar, kanonikCift } from "./entegrasyon.ts";
 /* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
 import type { Arac } from "./arac";
 
@@ -264,7 +264,27 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
     Kayit yoksa sayfa noindex kalir: yanlis soruyu cevaplayan sayfayi
     indekslemek talebi karsilamaz, yalnizca tarama butcesi yer.
   */
-  if (!ayniIslev(a.slug, b.slug)) return entegrasyonVar(a.slug, b.slug);
+  /*
+    KARSILASTIRMA SORGUSU MUAFIYETI (olcum, 2026-09-13). Yukaridaki gerekce
+    olculdugu kume icin dogruydu ama genel degilmis: noindex'li capraz
+    ciftlerin sorgulari cekilince niyet dagilimi KARSILASTIRMA 16 gosterim /
+    ENTEGRASYON 0 cikti -- "keycloak vs firebase" (poz 9), "groupme vs slack",
+    "cloudflare vs hetzner" (poz 9), "ionos vs digitalocean" (poz 10,5).
+    Farkli is goren iki arac bazen tam da bu yuzden karsilastirilir (ORM x
+    veritabani, terminal x editor, CDN x hosting) ve soruyu soran Google'in
+    bize yolladigi kisidir.
+
+    Kapiyi acan sey yine TALEP DEGIL, talebin BICIMI: yalnizca "vs"/"versus"
+    gecen sorgu sayilir (bkz. talep.ts). "drizzle mongodb" gibi ima edilmis
+    sorgu acmaz; `redis-vs-sentry` de kapali kalir cunku oyle bir sorgu yok.
+    Islev kapisi hala mutlak -- yalnizca "anlamsiz" tanimi olcume baglandi.
+  */
+  if (!ayniIslev(a.slug, b.slug)) {
+    return (
+      entegrasyonVar(a.slug, b.slug) ||
+      karsilastirmaSorgusuGormus(`/compare/${kanonikCift(a.slug, b.slug)}`, [a.slug, a.name], [b.slug, b.name])
+    );
+  }
   /*
     TALEP MUAFIYETI (olcum, 2026-09-12). Bu kural arac sayfalarina cok once
     konulmustu (aracIndekslenir: `icerikDerin || talepGormus`) ama ciftlere

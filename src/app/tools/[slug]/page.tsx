@@ -12,7 +12,7 @@ import ReklamBirimi from "@/components/ReklamBirimi";
 import { aracReklamAlir, reklamYayinci, icerikSlotu } from "@/lib/reklam";
 import FiyatBolumu from "@/components/FiyatBolumu";
 import { entegrasyonOrtaklari, durumEtiketi } from "@/lib/entegrasyon";
-import { kanonikSlug, indekslenebilirAkranlar, karsilastirmaAkranlari, alternatifSayfasiVar } from "@/lib/compare";
+import { kanonikSlug, indekslenebilirAkranlar, karsilastirmaAkranlari, alternatifSayfasiVar, karsilastirmaOrtaklari } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { merdiven, planEtiketi } from "@/lib/plan";
 import { metaAciklamasi } from "@/lib/meta";
@@ -372,6 +372,36 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                           >
                             <span>{ad}</span>
                             <span className="text-xs text-ink-muted">{durumEtiketi(o.durum)}</span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </section>
+              ) : null}
+
+              {/*
+                KARSILASTIRMA SORGUSUYLA ACILMIS capraz ciftler (2026-09-13).
+                "Does X work with…" listesinin ikizi: bu ciftler de akran
+                evreninde degil, baska hicbir yerden link almiyorlar. Liste
+                iki arac sayfasindan da basildigi icin simetri korunur.
+              */}
+              {karsilastirmaOrtaklari(tool.slug).length > 0 ? (
+                <section aria-labelledby="also-compared">
+                  <h2 id="also-compared" className="text-xl font-semibold">
+                    People also compare {tool.name} with…
+                  </h2>
+                  <ul className="mt-4 grid list-none gap-2 p-0 sm:grid-cols-2">
+                    {karsilastirmaOrtaklari(tool.slug).map((o) => {
+                      const ad = (toolsData as Arac[]).find((t) => t.slug === o.diger)?.name ?? o.diger;
+                      return (
+                        <li key={o.cift}>
+                          <Link
+                            href={`/compare/${o.cift}`}
+                            className="flex items-center justify-between gap-3 rounded-[--radius-control] border border-line px-3 py-2 text-sm no-underline"
+                          >
+                            <span>{ad}</span>
+                            <span className="text-xs text-ink-muted">Compare</span>
                           </Link>
                         </li>
                       );

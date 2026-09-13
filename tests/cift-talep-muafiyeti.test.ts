@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { ciftIndekslenir } from "../src/lib/indeks.ts";
 import { ayniIslev } from "../src/lib/islev.ts";
 import { entegrasyonVar, tumEntegrasyonlar } from "../src/lib/entegrasyon.ts";
+import { karsilastirmaSorgusuGormus } from "../src/lib/talep.ts";
 import type { Arac } from "../src/lib/arac.ts";
 
 /**
@@ -46,12 +47,21 @@ test("kapi kaynaginda talep muafiyeti duruyor", () => {
 });
 
 /**
- * ISLEV KAPISI MUTLAK. Talep bile anlamsiz cifti acmamali: "typeform vs
- * kajabi" 24 gosterim aliyor ama bu bir KARSILASTIRMA talebi degil,
- * entegrasyon sorgusu. Yanlis soruyu cevaplayan sayfayi indekslemek
- * talebi karsilamaz, yalnizca tarama butcesi yer.
+ * ISLEV KAPISINI SALT TALEP ACMAZ.
+ *
+ * Kural 2026-09-13'te DARALTILARAK genisledi. Once: kapiyi yalnizca
+ * dogrulanmis entegrasyon kaydi aciyordu, gerekcesi "farkli isi goren
+ * ciftin talebi karsilastirma talebi degildir" idi. Olculdugu kume icin
+ * (typeform x kajabi) dogruydu. Ama noindex'li capraz ciftlerin sorgulari
+ * cekilince tablo tersine dondu: KARSILASTIRMA 16 gosterim / ENTEGRASYON 0
+ * ("keycloak vs firebase" poz 9, "groupme vs slack", "cloudflare vs
+ * hetzner"). Insanlar harfiyen "A vs B" ariyordu.
+ *
+ * Yeni kural: kapiyi acan TALEP degil, talebin BICIMI -- sorgu hem
+ * "vs"/"versus" icermeli hem de IKI ARACI DA anmali. Bu test o darligi
+ * korur: bicimsiz talep (ornegin "drizzle mongodb") kapiyi acmamali.
  */
-test("talep, islev kapisini acmiyor -- yalnizca dogrulanmis entegrasyon acar", () => {
+test("bicimsiz talep, islev kapisini acmiyor", () => {
   let bakilan = 0;
   for (const [cift] of talepliCiftler()) {
     const [x, y] = cift.split("-vs-");
@@ -60,11 +70,31 @@ test("talep, islev kapisini acmiyor -- yalnizca dogrulanmis entegrasyon acar", (
     // Entegrasyon kaydi olan cift bilerek aciliyor: sayfa artik gercek bir
     // soruyu cevapliyor ve cevabin arkasinda satici kaynagi var.
     if (entegrasyonVar(a.slug, b.slug)) continue;
+    // Karsilastirma BICIMLI sorgu alan cift de bilerek aciliyor: sorgu
+    // harfiyen "A vs B" ise sayfanin cevapladigi soru gercektir.
+    if (karsilastirmaSorgusuGormus(`/compare/${cift}`, [a.slug, a.name], [b.slug, b.name])) continue;
     bakilan++;
     assert.equal(ciftIndekslenir(a, b), false,
-      `${cift}: farkli isi goren cift, entegrasyon kaydi OLMADAN indekslenebilir olmus`);
+      `${cift}: farkli isi goren cift, ne entegrasyon kaydi ne karsilastirma sorgusu varken indekslenebilir olmus`);
   }
-  assert.ok(bakilan > 0, "test anlamsiz olurdu: kayitsiz farkli islevli talepli cift yok");
+  assert.ok(bakilan > 0, "test anlamsiz olurdu: kapiyi acan hicbir sebebi olmayan farkli islevli talepli cift yok");
+});
+
+/*
+  Yeni kapinin DARLIGI: sorgu iki araci da anmali. Olculen hata
+  (2026-09-13): olcut "yolda vs gecen sorgu var mi" iken
+  /compare/betterstack-vs-caddy'yi "caddy vs jenkins" sorgusu aciyordu --
+  karsilastirma bicimliydi ama BASKA bir cift hakkindaydi.
+*/
+test("baska cift hakkindaki vs sorgusu kapiyi acmiyor", () => {
+  const a = harita.get("betterstack"), b = harita.get("caddy");
+  if (a && b) {
+    assert.equal(
+      karsilastirmaSorgusuGormus("/compare/betterstack-vs-caddy", [a.slug, a.name], [b.slug, b.name]),
+      false,
+      "'caddy vs jenkins' sorgusu betterstack-vs-caddy'yi acmamali",
+    );
+  }
 });
 
 /** Kaydi olan farkli-islevli cift indekslenebilir OLMALI: sayfanin soylecek sozu var. */
