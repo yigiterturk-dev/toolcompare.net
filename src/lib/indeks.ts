@@ -280,9 +280,21 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
     Islev kapisi hala mutlak -- yalnizca "anlamsiz" tanimi olcume baglandi.
   */
   if (!ayniIslev(a.slug, b.slug)) {
-    return (
-      entegrasyonVar(a.slug, b.slug) ||
-      karsilastirmaSorgusuGormus(`/compare/${kanonikCift(a.slug, b.slug)}`, [a.slug, a.name], [b.slug, b.name])
+    if (entegrasyonVar(a.slug, b.slug)) return true;
+    /*
+      TEKIL ARAC MUAFIYETIN DISINDA (olcum, 2026-09-13). `ayniIslev` islevi
+      olmayan cift icin de false doner; muafiyeti oraya da uygulayinca
+      mailchimp-vs-substack, bill-com-vs-ramp, bill-com-vs-brex robots
+      etiketinde indekslenebilir olup sitemap'te YOK haline geldi --
+      sitemap ile sayfa metadata'si celisti (bkz. bu dosyanin basligi).
+      Islevi olmayan arac karsilastirma sayfasi uretmez; kural burada da
+      gecerli, yoksa evren ile etiket ayrisiyor.
+    */
+    if (islevi(a.slug) === null || islevi(b.slug) === null) return false;
+    return karsilastirmaSorgusuGormus(
+      `/compare/${kanonikCift(a.slug, b.slug)}`,
+      [a.slug, a.name],
+      [b.slug, b.name],
     );
   }
   /*

@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { ciftIndekslenir } from "../src/lib/indeks.ts";
-import { ayniIslev } from "../src/lib/islev.ts";
+import { ayniIslev, islevi } from "../src/lib/islev.ts";
 import { entegrasyonVar, tumEntegrasyonlar } from "../src/lib/entegrasyon.ts";
 import { karsilastirmaSorgusuGormus } from "../src/lib/talep.ts";
 import type { Arac } from "../src/lib/arac.ts";
@@ -138,4 +138,30 @@ test("discord-vs-slack ornegi indekslenebilir", () => {
   assert.ok(a && b, "ornek araclar katalogda yok");
   assert.equal(ayniIslev("discord", "slack"), true, "ayni islev bekleniyordu");
   assert.equal(ciftIndekslenir(a, b), true, "62 gosterim alan sayfa hala noindex");
+});
+
+/*
+  SITEMAP ile ROBOTS ETIKETI AYRISMAMALI (olcum, 2026-09-13). Karsilastirma
+  sorgusu muafiyeti ilk halinde `ayniIslev`in tekil cift icin de false
+  donmesinden yararlaniyordu ve mailchimp-vs-substack, bill-com-vs-ramp,
+  bill-com-vs-brex "indekslenebilir ama sitemap disi" haline gelmisti.
+  Islevi olmayan arac karsilastirma sayfasi uretmez -- kural iki yerde de
+  ayni cevabi vermeli.
+*/
+test("islevi olmayan arac iceren cift hicbir muafiyetle indekslenebilir olmuyor", () => {
+  const kacak: string[] = [];
+  for (const t of araclar) {
+    if (islevi(t.slug) !== null) continue;
+    for (const o of araclar) {
+      if (o.slug === t.slug) continue;
+      const a = harita.get(t.slug), b = harita.get(o.slug);
+      if (!a || !b) continue;
+      // Entegrasyon kaydi ayri bir karar; bu test karsilastirma muafiyetini kilitler.
+      if (entegrasyonVar(a.slug, b.slug)) continue;
+      if (ciftIndekslenir(a, b)) {
+        kacak.push(a.slug < b.slug ? `${a.slug}-vs-${b.slug}` : `${b.slug}-vs-${a.slug}`);
+      }
+    }
+  }
+  assert.deepEqual([...new Set(kacak)], [], `tekil arac iceren cift indekslenebilir olmus: ${kacak.slice(0, 5).join(", ")}`);
 });
