@@ -5,7 +5,8 @@ import { sitemapCiftleri, alternatifSayfasiOlanlar } from '@/lib/compare'
 import { sitemapKategorileri } from '@/lib/categories'
 import { aracTaranmayaDeger, alternatifTaranmayaDeger } from '@/lib/tarama'
 import { aracIndekslenir, alternatifIndekslenir } from '@/lib/indeks'
-import { aracTarihi, turetilmisTarih, tarihNesnesi, TABAN_TARIH } from '@/lib/degisiklik'
+import { aracTarihi, turetilmisTarih, tarihNesnesi, enYeni, TABAN_TARIH } from '@/lib/degisiklik'
+import { entegrasyonKaydi } from '@/lib/entegrasyon'
 import fs from 'fs';
 import path from 'path';
 
@@ -117,14 +118,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Kapi artik sitemapCiftleri()'nin ICINDE (bkz. lib/compare.ts): ayni
   // liste kategori ve /top-picks linklerini de besliyor, tek yerden
   // suzulmesi gerekiyordu.
-  const comparisonRoutes = sitemapCiftleri().map((cift) => ({
-    url: `${baseUrl}/compare/${cift}`,
-    lastModified: tarihNesnesi(
-      turetilmisTarih(cift.split('-vs-').map((slug) => aracHaritasi.get(slug))),
-    ),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-  }))
+  /*
+    DENETIMDE BULUNAN (2026-09-13): lastmod yalnizca iki aracin tarihinden
+    turetiliyordu; entegrasyon kaydinin `checkedAt`'i hesaba girmiyordu.
+    Oysa kayit acmak sayfanin BASLIGINI ve meta aciklamasini bastan yaziyor
+    ("Does X work with Y?"). 2026-09-12'de boyle degistirilen alti sayfa
+    sitemap'te hala 09-07/09-08/09-10 ilan ediyordu -- yani icerik degisti,
+    Google'a giden sinyal degismedi. Tarih yine VERIDEN geliyor: kaydin
+    kendi checkedAt'i, arac tarihleriyle birlikte en yenisi aliniyor.
+  */
+  const comparisonRoutes = sitemapCiftleri().map((cift) => {
+    const [a, b] = cift.split('-vs-')
+    const kayit = entegrasyonKaydi(a, b)
+    return {
+      url: `${baseUrl}/compare/${cift}`,
+      lastModified: tarihNesnesi(
+        enYeni(
+          turetilmisTarih([a, b].map((slug) => aracHaritasi.get(slug))),
+          kayit?.checkedAt,
+        ),
+      ),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }
+  })
 
   // Kategori sayfalari ("Best X Tools in 2026"). Bu sayfa turu yeni;
   // once yalnizca /?category=X sorgu adresi vardi ve o indekslenmiyordu.
