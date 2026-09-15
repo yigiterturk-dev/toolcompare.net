@@ -56,6 +56,14 @@
       "kaynakUrl": "https://support.teachable.com/en/articles/11682579-teachable-for-wordpress",
       "kaynakSahibi": "Teachable",
       "checkedAt": "2026-09-12"
+    },
+    "sendgrid-vs-typeform": {
+      "durum": "yerlesik",
+      "ozet": "Typeform lists SendGrid in its own connectors directory (typeform.com/connect/sendgrid), so a form completion can trigger action in SendGrid — the flow Typeform itself publishes on that page is carried by Zapier.",
+      "kaynakSatiri": "When someone completes your typeform, you can automatically take action in SendGrid to easily manage recipients, content, scheduling, and testing.",
+      "kaynakUrl": "https://www.typeform.com/connect/sendgrid",
+      "kaynakSahibi": "Typeform",
+      "checkedAt": "2026-09-15"
     }
   }
 }
