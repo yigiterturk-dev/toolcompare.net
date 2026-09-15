@@ -10,7 +10,7 @@ import AffiliateNotu from "@/components/AffiliateNotu";
 import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ayrimCumlesi } from "@/lib/compare";
 import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { karsilastirmaSss } from "@/lib/sss";
-import { elleYazilmisSorular } from "@/lib/karsilastirma-notlari";
+import { elleYazilmisSorular, elleYazilmisKisaCevap } from "@/lib/karsilastirma-notlari";
 import { merdiven, planEtiketi } from "@/lib/plan";
 import { linklenebilirAkranlar, aracTaranmayaDeger } from "@/lib/tarama";
 import { fiyatDurumu } from "@/lib/fiyat";
@@ -37,6 +37,21 @@ import { aracIndekslenir } from "@/lib/indeks";
  * ornegin ters sirali /compare/zapier-vs-1password -- yine calisir ve
  * kanonik adresi gosterir. Kapatmak o adresleri 404 yapardi.
  */
+/** Arama sonucu ~158 karakter gosterir; cumle sinirinda kes, ortadan kesme. */
+function metaKisalt(metin: string, sinir = 158): string {
+  if (metin.length <= sinir) return metin;
+  // Cumleleri sigdigi kadar al; tek cumle cok kisa kalirsa kelime sinirinda kes.
+  const cumleler = metin.match(/[^.!?]+[.!?]+(\s|$)/g) ?? [metin];
+  let birikim = "";
+  for (const c of cumleler) {
+    if ((birikim + c).trim().length > sinir) break;
+    birikim += c;
+  }
+  birikim = birikim.trim();
+  if (birikim.length >= 90) return birikim;
+  return metin.slice(0, sinir).replace(/\s+\S*$/, "") + "…";
+}
+
 export function generateStaticParams() {
   return karsilastirmaCiftleri().map((slug) => ({ slug }));
 }
@@ -100,9 +115,14 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
     TEK tik yok -- siralama yeterince iyi oldugu halde sonuc tiklanmiyor.
     Kural src/lib/meta.ts'te: rakam yalnizca dogrulanmissa yazilir.
   */
+  /* Elle yazilmis kisa cevap varsa aciklama odur: sablon fiyat notu
+     ("Keycloak starts at Free; Firebase: Free tier") tiklanmiyordu. */
+  const kisaCevapMeta = elleYazilmisKisaCevap(kanonikSlug(tool1.slug, tool2.slug));
   const description = ent
     ? `${ent.ozet} Checked against ${ent.kaynakSahibi}'s own documentation on ${ent.checkedAt}.`
-    : ciftMetaAciklamasi(tool1, tool2);
+    : kisaCevapMeta
+      ? metaKisalt(kisaCevapMeta.ozet)
+      : ciftMetaAciklamasi(tool1, tool2);
 
   // "a-vs-b" ve "b-vs-a" ayni sayfa. Kanonik olan alfabetik sirali olan;
   // aksi halde ayni icerik iki adreste indekslenir ve ikisi de zayiflar.
@@ -150,12 +170,18 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
     parca bu. Ayrim yoksa bos doner ve satir hic basilmaz.
   */
   const ayrim = ayrimCumlesi(tool1, tool2);
+  // Elle yazilmis kisa cevap sablon satirlarin yerine gecer (bkz. lib/karsilastirma-notlari.ts).
+  const kisaCevap = elleYazilmisKisaCevap(kanonikSlug(tool1.slug, tool2.slug));
 
   // Yalnizca akranlar: sitemap disi bir sayfaya link verilmemeli.
   // Yalnizca sitemap'te olan cifte link verilir (bkz. lib/tarama.ts):
   // sitemap disi sayfaya verilen link Googlebot'u oraya goturur ve
   // budamayi anlamsiz kilar.
   const ilgili = linklenebilirAkranlar(tool1, akranlar(tool1.slug)).filter((t: Arac) => t.slug !== tool2.slug);
+  // Ikinci tarafin akranlari da linklenir (2026-09-15): firebase-vs-keycloak
+  // sayfasi yalnizca Firebase akranlarina bakiyordu, o kume sitemap'te
+  // yoksa sayfa sifir ic linkle kaliyordu. Ayni kapi, iki taraf.
+  const ilgili2 = linklenebilirAkranlar(tool2, akranlar(tool2.slug)).filter((t: Arac) => t.slug !== tool1.slug);
 
   /*
     Karsilastirma satiri. Onceki surumde `type="score"` dali `{val1}%`
@@ -283,6 +309,49 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
           Kisa cevap. Ziyaretci "hangisi?" diye geliyor; cevabi sayfanin
           basinda veriyoruz, tablonun altinda degil.
         */}
+        {kisaCevap ? (
+          <section className="mt-8 rounded-[--radius-card] border border-line bg-surface p-5">
+            <h2 className="text-lg font-semibold">Short answer</h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink-soft">{kisaCevap.ozet}</p>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              {[tool1, tool2].map((t: Arac) =>
+                kisaCevap.sec[t.slug]?.length ? (
+                  <div key={t.slug}>
+                    <h3 className="text-sm font-semibold text-ink">{t.name} is the pick when</h3>
+                    <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-ink-soft">
+                      {kisaCevap.sec[t.slug].map((m: string) => (
+                        <li key={m}>{m}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null,
+              )}
+            </div>
+            <p className="mt-4 border-t border-line pt-3 text-xs text-ink-muted">
+              Written by hand from both vendors&rsquo; own documentation
+              {kisaCevap.kontrolTarihi ? `, checked ${kisaCevap.kontrolTarihi}` : ""}.
+              {kisaCevap.kaynaklar.length > 0 ? (
+                <>
+                  {" "}Sources:{" "}
+                  {kisaCevap.kaynaklar.map((k, i) => (
+                    <span key={k.url}>
+                      {i > 0 ? ", " : ""}
+                      <a href={k.url} target="_blank" rel="nofollow noopener" className="underline">
+                        {k.etiket}
+                      </a>
+                    </span>
+                  ))}
+                  .
+                </>
+              ) : null}{" "}
+              Prices below come from the pricing we track.{" "}
+              <Link href="/methodology" className="text-accent underline underline-offset-4">
+                How we score tools
+              </Link>
+              .
+            </p>
+          </section>
+        ) : (
         <section className="mt-8 rounded-[--radius-card] border border-line bg-surface p-5">
           <h2 className="text-lg font-semibold">Short answer</h2>
           <ul className="mt-3 list-none space-y-2 p-0 text-sm text-ink-soft">
@@ -314,6 +383,7 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
             .
           </p>
         </section>
+        )}
 
         {/*
           Elde duran longDescription hicbir karsilastirma sayfasinda
@@ -674,21 +744,30 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
         )}
 
         {/* ---------- Ilgili karsilastirmalar ---------- */}
-        {ilgili.length > 0 && (
+        {(ilgili.length > 0 || ilgili2.length > 0) && (
           <section className="mt-12 border-t border-line pt-10">
-            <h2 className="text-lg font-semibold">Other {tool1.name} comparisons</h2>
-            <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
-              {ilgili.map((t: Arac) => (
-                <li key={t.slug}>
-                  <Link
-                    href={`/compare/${kanonikSlug(tool1.slug, t.slug)}`}
-                    className="inline-flex rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
-                  >
-                    {tool1.name} vs {t.name}
-                  </Link>
-                </li>
+            {[
+              { asil: tool1, digerleri: ilgili },
+              { asil: tool2, digerleri: ilgili2 },
+            ]
+              .filter((g) => g.digerleri.length > 0)
+              .map((g, i) => (
+                <div key={g.asil.slug} className={i > 0 ? "mt-8" : ""}>
+                  <h2 className="text-lg font-semibold">Other {g.asil.name} comparisons</h2>
+                  <ul className="mt-4 flex list-none flex-wrap gap-2 p-0">
+                    {g.digerleri.map((t: Arac) => (
+                      <li key={t.slug}>
+                        <Link
+                          href={`/compare/${kanonikSlug(g.asil.slug, t.slug)}`}
+                          className="inline-flex rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
+                        >
+                          {g.asil.name} vs {t.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
           </section>
         )}
           {/*

@@ -22,6 +22,7 @@ import { fiyatDurumu } from "./fiyat.ts";
 import { talepGormus, yolTalepGormus, karsilastirmaSorgusuGormus } from "./talep.ts";
 import { ayniIslev, islevi } from "./islev.ts";
 import { entegrasyonVar, kanonikCift } from "./entegrasyon.ts";
+import { elleYazilmisKisaCevap } from "./karsilastirma-notlari.ts";
 /* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
 import type { Arac } from "./arac";
 
@@ -119,6 +120,11 @@ export function kriterliMi(t?: Arac): boolean {
  */
 export function gercekFarkVar(a?: Arac, b?: Arac): boolean {
   if (!a || !b) return false;
+  /* ELLE YAZILMIS FARK (2026-09-15): dort bitlik kriter tablosu ayni cikan
+     ama fiilen farkli araclar (semrush/similarweb, amplitude/hotjar) burada
+     "fark yok" diye noindex kaliyordu. Kisa cevap yazilmissa fark yazilmis
+     demektir; kapi acilir. Bkz. lib/karsilastirma-notlari.ts. */
+  if (elleYazilmisKisaCevap(kanonikCift(a.slug, b.slug))) return true;
   const da = fiyatDurumu(a as never);
   const db = fiyatDurumu(b as never);
   if (da.karsilastirilabilir && db.karsilastirilabilir && da.aylik !== db.aylik) return true;

@@ -1,5 +1,5 @@
 {
-  "_aciklama": "Karsilastirma ciftlerine ELLE yazilmis, kaynagi kayitli sorular. NEDEN: lib/sss.ts'in turettigi sorular fiyat ve kriter kiyasini kapsiyor, ama GSC'de bu sayfalara gelen sorgularin bir kismi entegrasyon sorusu ('woocommerce teachable integration', 'typeform getresponse integration') ya da somut takim buyuklugu sorusu. O cevap veride yok, arastirilip yazilmasi gerekiyor. Anahtar kanonik cift slug'i (lib/compare.ts kanonikSlug). Kural: her madde dogrulanmis bir kaynaga dayanir; dogrulanamayan sey 'dogrulayamadik' diye yazilir, uydurulmaz.",
+  "_aciklama": "Karsilastirma ciftlerine ELLE yazilmis, kaynagi kayitli sorular. NEDEN: lib/sss.ts'in turettigi sorular fiyat ve kriter kiyasini kapsiyor, ama GSC'de bu sayfalara gelen sorgularin bir kismi entegrasyon sorusu ('woocommerce teachable integration', 'typeform getresponse integration') ya da somut takim buyuklugu sorusu. O cevap veride yok, arastirilip yazilmasi gerekiyor. Anahtar kanonik cift slug'i (lib/compare.ts kanonikSlug). Kural: her madde dogrulanmis bir kaynaga dayanir; dogrulanamayan sey 'dogrulayamadik' diye yazilir, uydurulmaz. `kisaCevap` (2026-09-15): sayfanin ustundeki 'Short answer' kutusunun ELLE yazilmis hali -- ozet paragraf + her iki taraf icin 'sec' maddeleri + kaynaklar. Rakam yazilmaz (fiyat izlenen veriden basilir). Varsa lib/indeks.ts gercekFarkVar kapisini acar.",
   "teachable-vs-woocommerce": {
     "kontrolTarihi": "2026-09-10",
     "sorular": [
@@ -104,5 +104,537 @@
         }
       }
     ]
+  },
+  "firebase-vs-keycloak": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "This is really Firebase Authentication versus Keycloak. Firebase Auth is a hosted service inside Google's app platform: email, phone and social sign-in with native SDKs for iOS, Android, web and Flutter, and nothing to run yourself; enterprise protocols such as SAML and OpenID Connect providers arrive through the paid Identity Platform tier. Keycloak is a self-hosted identity server from the Red Hat-backed open-source project: SAML 2.0 and OpenID Connect out of the box, LDAP and Active Directory user federation, realms for multi-tenancy, fine-grained roles and identity brokering to other providers. It ships no mobile SDK; apps talk to it through standard OIDC flows. The choice is operational: zero-ops managed auth for app teams versus full control and data ownership for platform teams.",
+      "sec": {
+        "firebase": [
+          "you are already on Firebase or Google Cloud and want auth wired to Firestore rules in an afternoon",
+          "the product is mobile-first and you want first-party iOS, Android and Flutter SDKs",
+          "nobody on the team wants to run, patch or back up an identity server"
+        ],
+        "keycloak": [
+          "you need SAML, LDAP or Active Directory federation without a per-user cloud bill",
+          "users, sessions and tokens must stay on your own infrastructure",
+          "you run several tenants or brands and want realm-level isolation"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Firebase Authentication docs",
+          "url": "https://firebase.google.com/docs/auth"
+        },
+        {
+          "etiket": "Keycloak documentation",
+          "url": "https://www.keycloak.org/documentation"
+        }
+      ]
+    }
+  },
+  "discord-vs-slack": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Slack is workplace messaging built around an organisation: channels, threads, search across everything and an app directory that plugs in Jira, GitHub, Google Drive and the rest, with paid plans unlocking message history, unlimited apps and SSO. Discord grew up around gaming communities: servers anyone can join, always-on voice channels, screen sharing and roles that scale to very large member counts, with the core product free. Discord is the better fit for public communities, open-source projects and companies that want a customer or developer community; Slack is the better fit for internal team communication where compliance, retention and integrations matter.",
+      "sec": {
+        "slack": [
+          "internal company chat with retention, SSO and admin controls",
+          "deep integrations with your work tools and workflow automation",
+          "search across years of history is part of how the team works"
+        ],
+        "discord": [
+          "a public or semi-public community: users, players, open-source contributors",
+          "always-on voice rooms and screen sharing with no meeting to schedule",
+          "a large member base on a budget of zero"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Slack features",
+          "url": "https://slack.com/features"
+        },
+        {
+          "etiket": "Discord",
+          "url": "https://discord.com/"
+        }
+      ]
+    }
+  },
+  "bigcommerce-vs-shopify": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Both are hosted storefronts, so neither needs a server. Shopify has the larger app store and theme market, the smoother checkout and point-of-sale story and its own payment processor; using a third-party gateway on Shopify adds a transaction fee on most plans. BigCommerce charges no extra transaction fee for outside gateways, ships more catalogue features natively (variants, faceted search, B2B price lists on higher tiers) and is friendlier to headless builds through its APIs. Small and mid-size brands usually pick Shopify for the ecosystem; larger catalogues, B2B sellers and teams committed to a specific payment provider lean BigCommerce.",
+      "sec": {
+        "shopify": [
+          "you want the biggest app and theme ecosystem and the most third-party help",
+          "retail plus online with Shopify POS in the same account",
+          "you are happy to use Shopify Payments as your processor"
+        ],
+        "bigcommerce": [
+          "you must keep an existing payment gateway without an added platform fee",
+          "a large catalogue with complex variants or B2B price lists",
+          "a headless storefront on your own front end"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Shopify pricing",
+          "url": "https://www.shopify.com/pricing"
+        },
+        {
+          "etiket": "BigCommerce",
+          "url": "https://www.bigcommerce.com/"
+        }
+      ]
+    }
+  },
+  "podia-vs-teachable": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Teachable is a course platform first: curriculum builder, quizzes, certificates, coaching products and a student experience tuned for structured learning. Podia is a broader creator storefront: courses, digital downloads, webinars, memberships, email marketing and a website builder in one account, with a simpler course builder. If teaching is the product, Teachable's course tooling is deeper. If you sell a mix of downloads, community access and the occasional course, Podia bundles more of that under one roof.",
+      "sec": {
+        "teachable": [
+          "structured courses with quizzes, completion certificates and drip schedules",
+          "coaching or cohort products alongside self-paced courses",
+          "you want the platform many students already recognise"
+        ],
+        "podia": [
+          "you sell downloads, memberships and webinars, not only courses",
+          "you want email marketing and a website in the same tool",
+          "a simpler builder is worth more to you than deep course features"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Teachable",
+          "url": "https://teachable.com/"
+        },
+        {
+          "etiket": "Podia",
+          "url": "https://www.podia.com/"
+        }
+      ]
+    }
+  },
+  "teamwork-vs-trello": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Trello is a kanban board: cards move across lists, and Power-Ups add calendars, timelines and automation. It is fast to learn and works for any team that thinks in boards. Teamwork.com is project management aimed at agencies and client-services teams: task lists, Gantt-style timelines, time tracking, billing and client permissions are built in. Trello is the lighter tool for tracking work; Teamwork is the one to pick when you bill clients for that work and need time, budgets and invoices in the same place.",
+      "sec": {
+        "trello": [
+          "visual boards are how the team already thinks",
+          "a small team or personal workflow with light process",
+          "you want to start in minutes and grow through Power-Ups"
+        ],
+        "teamwork": [
+          "agency or client work with time tracking and billable hours",
+          "Gantt timelines, workload and budgets on every project",
+          "clients need their own login with restricted visibility"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Trello",
+          "url": "https://trello.com/"
+        },
+        {
+          "etiket": "Teamwork.com",
+          "url": "https://www.teamwork.com/"
+        }
+      ]
+    }
+  },
+  "ecwid-vs-woocommerce": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "WooCommerce is a free plugin that turns a WordPress site into a store; you own the hosting, the theme and every extension, and the plugin ecosystem is enormous. Ecwid by Lightspeed is a hosted cart you embed into any existing site, social profile or marketplace listing, with hosting, security and updates handled for you. WooCommerce gives control and no platform fee at the cost of maintenance; Ecwid gives a store that runs anywhere within the hour at the cost of flexibility.",
+      "sec": {
+        "woocommerce": [
+          "you already run WordPress and want full control of theme and checkout",
+          "you need a specific extension only the WooCommerce ecosystem has",
+          "you would rather pay for hosting than a platform subscription"
+        ],
+        "ecwid": [
+          "your site is on Wix, Squarespace or a static builder and needs a cart",
+          "selling the same catalogue on the site, Instagram and marketplaces",
+          "nobody wants to maintain plugins and PHP updates"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "WooCommerce",
+          "url": "https://woocommerce.com/"
+        },
+        {
+          "etiket": "Ecwid",
+          "url": "https://www.ecwid.com/"
+        }
+      ]
+    }
+  },
+  "asana-vs-smartsheet": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Asana is a work-management tool organised around tasks, projects and goals, with list, board, timeline and calendar views and a strong mobile app. Smartsheet is a spreadsheet that learned project management: rows, columns and formulas at the core, with Gantt charts, dashboards, forms and enterprise reporting layered on top. Teams that already live in spreadsheets and need formulas, cross-sheet references and heavy reporting choose Smartsheet; teams that want a clean task tool with less setup choose Asana.",
+      "sec": {
+        "asana": [
+          "cross-functional teams tracking tasks and goals, not cell formulas",
+          "you want an interface people adopt without training",
+          "workflow rules and forms matter more than reporting grids"
+        ],
+        "smartsheet": [
+          "your project plans are already spreadsheets with formulas",
+          "portfolio dashboards and roll-up reports across many projects",
+          "PMO-style resource management and enterprise controls"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Asana",
+          "url": "https://asana.com/"
+        },
+        {
+          "etiket": "Smartsheet",
+          "url": "https://www.smartsheet.com/"
+        }
+      ]
+    }
+  },
+  "notion-vs-obsidian": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Notion is a hosted workspace: pages, databases, shared docs, wikis and team permissions live in the cloud, with real-time collaboration and an API. Obsidian is a local-first note app: notes are plain Markdown files on your disk, linked into a graph and extended by community plugins, with sync and publishing as optional paid services. Notion is for teams that need one shared source of truth; Obsidian is for individuals who want ownership of their files, offline access and a personal knowledge graph.",
+      "sec": {
+        "notion": [
+          "a team wiki, docs and databases everyone edits together",
+          "structured databases with relations, rollups and views",
+          "it should work the same in a browser on any machine"
+        ],
+        "obsidian": [
+          "your notes must be plain files you own and back up yourself",
+          "offline-first and private by default",
+          "linked thinking, backlinks and a plugin ecosystem"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Notion",
+          "url": "https://www.notion.com/"
+        },
+        {
+          "etiket": "Obsidian",
+          "url": "https://obsidian.md/"
+        }
+      ]
+    }
+  },
+  "monday-vs-smartsheet": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "monday.com is a visual work OS: boards with status columns, automation recipes, dashboards and templates for marketing, CRM and development teams. Smartsheet keeps the spreadsheet as its core object and adds Gantt, dashboards, forms and enterprise governance. Both track projects; the difference is who sets them up. monday.com is built for teams that configure boards themselves and want an automation-heavy workflow; Smartsheet is built for planners and PMOs who need formulas, cross-sheet references and control over large portfolios.",
+      "sec": {
+        "monday": [
+          "visual boards and automations set up by the team, not IT",
+          "marketing, sales pipeline and ops on one platform",
+          "onboarding speed and a friendly interface matter"
+        ],
+        "smartsheet": [
+          "formulas, cell linking and spreadsheet logic inside the plan",
+          "portfolio-level reporting and resource management",
+          "enterprise admin and governance across many workspaces"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "monday.com",
+          "url": "https://monday.com/"
+        },
+        {
+          "etiket": "Smartsheet",
+          "url": "https://www.smartsheet.com/"
+        }
+      ]
+    }
+  },
+  "clickup-vs-teamwork": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "ClickUp tries to be the one app for everything: tasks, docs, whiteboards, goals, chat and dashboards, with an unusually deep settings surface. Teamwork.com narrows the scope to client work: projects, time tracking, billing, workload and client access. If you want a single workspace to replace several tools and will invest in configuring it, ClickUp is the broader product. If you run an agency and the point is billing clients for tracked time, Teamwork has that flow built in without add-ons.",
+      "sec": {
+        "clickup": [
+          "replacing docs, tasks and chat with one workspace",
+          "a team that enjoys customising views and automations",
+          "many small teams with different working styles on one account"
+        ],
+        "teamwork": [
+          "client-facing projects with billable hours and invoices",
+          "workload and capacity planning for a services team",
+          "a focused tool rather than a configurable platform"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "ClickUp",
+          "url": "https://clickup.com/"
+        },
+        {
+          "etiket": "Teamwork.com",
+          "url": "https://www.teamwork.com/"
+        }
+      ]
+    }
+  },
+  "asana-vs-teamwork": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Asana and Teamwork.com both manage tasks and projects, but they serve different rooms. Asana is the internal work tool: goals, portfolios, workflow rules and cross-team visibility, with a polished interface teams adopt quickly. Teamwork is the agency tool: time tracking, billing, budgets and client logins are core features rather than integrations. Pick Asana for coordinating work inside a company; pick Teamwork when the work is done for clients and has to be invoiced.",
+      "sec": {
+        "asana": [
+          "internal projects and company goals across departments",
+          "a clean, widely known tool with minimal setup",
+          "reporting on progress matters more than tracking hours"
+        ],
+        "teamwork": [
+          "billable time, budgets and invoices per project",
+          "clients need controlled access to their own projects",
+          "resource and workload planning for a services team"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Asana",
+          "url": "https://asana.com/"
+        },
+        {
+          "etiket": "Teamwork.com",
+          "url": "https://www.teamwork.com/"
+        }
+      ]
+    }
+  },
+  "monday-vs-teamwork": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "monday.com is a general work platform: boards, automations and dashboards you shape for sales, marketing, operations or development. Teamwork.com is project management for client-services teams, with time tracking, billing and client permissions in the box. monday.com wins on flexibility and breadth; Teamwork wins when your projects are billed to clients and the tool has to understand hours and budgets.",
+      "sec": {
+        "monday": [
+          "several departments need one configurable platform",
+          "visual boards and automation recipes over process rigour",
+          "CRM, marketing and ops work sit alongside projects"
+        ],
+        "teamwork": [
+          "agency projects with billable hours and invoicing",
+          "clients log in to see their own projects",
+          "workload planning across a services team"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "monday.com",
+          "url": "https://monday.com/"
+        },
+        {
+          "etiket": "Teamwork.com",
+          "url": "https://www.teamwork.com/"
+        }
+      ]
+    }
+  },
+  "claude-vs-gemini": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Claude is Anthropic's assistant, available as web and desktop apps, an API and the Claude Code agent for developers; it is known for long-document work, careful writing and coding. Gemini is Google's model family and assistant, woven into Search, Gmail, Docs, Android and Google Cloud, with strong multimodal input across text, image, audio and video. Choose by ecosystem and job: Claude for writing, analysis and agentic coding where the quality of reasoning is the point; Gemini when your work already lives in Google Workspace or you need native multimodal features and Google's cloud tooling.",
+      "sec": {
+        "claude": [
+          "long documents, careful writing and code work",
+          "you build agents on the API and want strong tool use",
+          "you want a coding agent in the terminal or IDE"
+        ],
+        "gemini": [
+          "your team runs on Gmail, Docs and Drive and wants the assistant inside them",
+          "image, audio and video inputs are part of the workflow",
+          "you deploy on Google Cloud and Vertex AI"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Claude",
+          "url": "https://claude.ai/"
+        },
+        {
+          "etiket": "Gemini",
+          "url": "https://gemini.google.com/"
+        }
+      ]
+    }
+  },
+  "bunny-net-vs-cloudflare": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Cloudflare is a network platform: CDN, DNS, DDoS protection, WAF, Zero Trust access, Workers for edge compute and R2 storage, with a free plan at the bottom and enterprise tiers above it. Bunny.net is a focused CDN and media company: pull and push zones, edge storage, image optimisation and video streaming, priced by traffic and known for simplicity and low cost. If you need security, DNS and edge apps in one place, Cloudflare is the platform. If you want a fast, inexpensive CDN for static assets, images or video with transparent pay-as-you-go pricing, Bunny.net is the specialist.",
+      "sec": {
+        "cloudflare": [
+          "DNS, DDoS protection and a WAF in front of the whole site",
+          "edge functions and storage alongside caching",
+          "the free plan covers a small site"
+        ],
+        "bunny-net": [
+          "video delivery or large media libraries by the terabyte",
+          "predictable per-gigabyte pricing without plan tiers",
+          "a simple CDN in front of an existing origin"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Cloudflare",
+          "url": "https://www.cloudflare.com/"
+        },
+        {
+          "etiket": "Bunny.net",
+          "url": "https://bunny.net/"
+        }
+      ]
+    }
+  },
+  "elevenlabs-vs-synthesia": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "These are different products that share the AI-media aisle. ElevenLabs makes voices: text-to-speech, voice cloning, dubbing and speech-to-text through an app and an API, and it is what developers embed when a product needs to speak. Synthesia makes videos: pick an AI avatar, paste a script and it produces a presenter-style training or marketing video with the voice included, aimed at learning and marketing teams rather than developers. If the deliverable is audio, or you are building a product, ElevenLabs. If the deliverable is a talking-head video without a camera, Synthesia.",
+      "sec": {
+        "elevenlabs": [
+          "audio is the output: narration, dubbing, voice agents",
+          "you integrate speech into your own app through an API",
+          "voice cloning and multilingual dubbing"
+        ],
+        "synthesia": [
+          "training, onboarding or explainer videos with an on-screen presenter",
+          "non-technical teams producing video from a script",
+          "templates and brand kits for corporate video"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "ElevenLabs",
+          "url": "https://elevenlabs.io/"
+        },
+        {
+          "etiket": "Synthesia",
+          "url": "https://www.synthesia.io/"
+        }
+      ]
+    }
+  },
+  "semrush-vs-similarweb": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Semrush is an SEO and content suite: keyword research, rank tracking, site audits, backlink analysis and PPC data, used to work on your own site's search performance. Similarweb is market intelligence: estimated traffic, traffic sources, audience overlap and app usage for any site, used to size markets and benchmark competitors. They overlap on competitor keywords but answer different questions. SEO teams doing the work choose Semrush; strategy, investment and sales teams who need to know how big a competitor is choose Similarweb.",
+      "sec": {
+        "semrush": [
+          "day-to-day SEO: keywords, audits, rank tracking, backlinks",
+          "content planning and PPC research in one workspace",
+          "agency reporting on client sites"
+        ],
+        "similarweb": [
+          "traffic estimates and channel mix for sites you do not own",
+          "market sizing, benchmarking and competitive research",
+          "audience and app intelligence for strategy or sales prospecting"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Semrush",
+          "url": "https://www.semrush.com/"
+        },
+        {
+          "etiket": "Similarweb",
+          "url": "https://www.similarweb.com/"
+        }
+      ]
+    }
+  },
+  "moz-vs-similarweb": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Moz Pro is a classic SEO toolset: keyword research, rank tracking, site crawl and the Domain Authority link metric, priced for small teams and consultants. Similarweb is market and traffic intelligence: estimated visits, referral sources and audience data for any website or app. Moz helps you improve your own site's rankings; Similarweb tells you how much traffic a competitor gets and where it comes from. They are complements more than rivals.",
+      "sec": {
+        "moz": [
+          "SEO fundamentals on a modest budget",
+          "link research and Domain Authority tracking",
+          "learning SEO with strong guides and community"
+        ],
+        "similarweb": [
+          "competitor traffic and channel estimates",
+          "market research and prospect qualification",
+          "app and audience analytics beyond search"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Moz",
+          "url": "https://moz.com/"
+        },
+        {
+          "etiket": "Similarweb",
+          "url": "https://www.similarweb.com/"
+        }
+      ]
+    }
+  },
+  "amplitude-vs-hotjar": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Amplitude is product analytics: events, funnels, retention, cohorts and experimentation, built for product teams who instrument their app and ask quantitative questions. Hotjar is behaviour analytics: heatmaps, session recordings, surveys and feedback widgets that show what a user did on a page and why. Amplitude tells you where users drop off across the product; Hotjar shows you the screen where it happened. Many teams run both; if you only run one, product-led SaaS teams start with Amplitude and marketing or UX teams start with Hotjar.",
+      "sec": {
+        "amplitude": [
+          "event-based funnels, retention and cohort analysis",
+          "a product team that instruments features and measures adoption",
+          "experiments and feature flags tied to analytics"
+        ],
+        "hotjar": [
+          "heatmaps and session replays of real visits",
+          "on-page surveys and feedback without engineering",
+          "conversion work on marketing and landing pages"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Amplitude",
+          "url": "https://amplitude.com/"
+        },
+        {
+          "etiket": "Hotjar",
+          "url": "https://www.hotjar.com/"
+        }
+      ]
+    }
+  },
+  "airtable-vs-filemaker": {
+    "kontrolTarihi": "2026-09-15",
+    "kisaCevap": {
+      "ozet": "Airtable is a cloud database that looks like a spreadsheet: bases, views, forms, automations and interfaces, collaborative by default and quick to start. Claris FileMaker is a mature low-code platform for building custom business apps with its own scripting, layouts and relational engine, deployable on Claris Cloud or your own server and long used for internal systems that outlive the people who built them. Airtable is for teams who want a shared, flexible database today; FileMaker is for organisations building durable line-of-business apps with more control over logic, hosting and offline use.",
+      "sec": {
+        "airtable": [
+          "a shared database the whole team edits in the browser",
+          "lightweight automations and interfaces without a developer",
+          "connecting to modern SaaS tools through integrations"
+        ],
+        "filemaker": [
+          "custom business apps with complex scripting and layouts",
+          "on-premise or private hosting and desktop clients",
+          "a long-lived internal system with a dedicated developer"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Airtable",
+          "url": "https://www.airtable.com/"
+        },
+        {
+          "etiket": "Claris FileMaker",
+          "url": "https://www.claris.com/filemaker/"
+        }
+      ]
+    }
   }
 }

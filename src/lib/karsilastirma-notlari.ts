@@ -28,7 +28,66 @@ import type { Soru } from "./sss.ts";
 type Not = {
   kontrolTarihi?: string;
   sorular?: { soru?: string; cevap?: string; kaynak?: { etiket?: string; url?: string } }[];
+  kisaCevap?: {
+    ozet?: string;
+    sec?: Record<string, string[]>;
+    kaynaklar?: { etiket?: string; url?: string }[];
+  };
 };
+
+/**
+ * ELLE YAZILMIS KISA CEVAP (olcum, 2026-09-15).
+ *
+ * Sayfanin "Short answer" kutusu fiyat verisinden turetiliyordu:
+ * "Price: not directly comparable -- Firebase is free tier available,
+ * Keycloak is free." Her ciftte ayni kalip. firebase-vs-keycloak 9. sirada
+ * dururken ustundeki kucuk siteler (skycloak, solodevstack) SAML/LDAP,
+ * mobil SDK, self-host gibi GERCEK ayrimlari yaziyordu; bizde o ayrim
+ * dort bitlik kriter tablosundan cikmiyordu.
+ *
+ * Ayni dort bit ikinci bir zarar daha veriyordu: semrush-vs-similarweb,
+ * amplitude-vs-hotjar, elevenlabs-vs-synthesia gibi ciftlerde iki tarafin
+ * api/mobil/acikKaynak/sso degerleri birebir ayni ciktigi icin
+ * `gercekFarkVar` false donuyor, sayfa noindex kaliyordu -- oysa fark var,
+ * tabloda gorunmuyor. Elle yazilmis kisa cevap o farkin kendisidir; varsa
+ * kapiyi acar (bkz. lib/indeks.ts gercekFarkVar).
+ *
+ * `sec` anahtari arac slug'idir: her iki taraf icin "bunu sec, eger..."
+ * maddeleri. Rakam yazilmaz -- fiyat zaten izlenen veriden basiliyor ve
+ * elle yazilan rakam eskir.
+ */
+export type KisaCevap = {
+  ozet: string;
+  sec: Record<string, string[]>;
+  kaynaklar: { etiket: string; url: string }[];
+  kontrolTarihi?: string;
+};
+
+export function elleYazilmisKisaCevap(kanonik: string): KisaCevap | null {
+  const kayit = notlar[kanonik];
+  if (!kayit || typeof kayit === "string" || !kayit.kisaCevap) return null;
+  const k = kayit.kisaCevap;
+  if (typeof k.ozet !== "string" || !k.ozet.trim()) return null;
+  const sec: Record<string, string[]> = {};
+  for (const [slug, maddeler] of Object.entries(k.sec ?? {})) {
+    if (!Array.isArray(maddeler)) continue;
+    const temiz = maddeler.filter((m): m is string => typeof m === "string" && m.trim().length > 0).map((m) => m.trim());
+    if (temiz.length) sec[slug] = temiz;
+  }
+  return {
+    ozet: k.ozet.trim(),
+    sec,
+    kaynaklar: (k.kaynaklar ?? [])
+      .filter((x): x is { etiket: string; url: string } => Boolean(x && x.etiket && x.url))
+      .map((x) => ({ etiket: x.etiket, url: x.url })),
+    kontrolTarihi: kayit.kontrolTarihi,
+  };
+}
+
+/** Kisa cevabi elle yazilmis ciftler -- denetim ve testler icin. */
+export function kisaCevapliCiftler(): string[] {
+  return Object.keys(notlar).filter((k) => !k.startsWith("_") && elleYazilmisKisaCevap(k) !== null);
+}
 
 const notlar = notlarData as unknown as Record<string, Not | string>;
 
