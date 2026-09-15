@@ -14608,10 +14608,20 @@
             "JavaScript rendering, scheduling, custom extraction and Google Analytics/Search Console integration available in both free and paid",
             "paid crawl limit depends on allocated memory and storage"
           ]
+        },
+        {
+          "label": "undefined — Pricing (fetched 2026-09-15)",
+          "url": "https://www.screamingfrog.co.uk/seo-spider/",
+          "checkedAt": "2026-09-15",
+          "supports": [
+            "Download & crawl 500 URLs for free, or buy a licence for £199 per year.",
+            "For just £199 per year you can purchase a licence, which removes the 500 URL crawl limit, allows you to save crawls, and opens up the spider’s configuration options and advanced features."
+          ]
         }
       ],
       "limitations": [
-        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark.",
+        "Pricing page was fetched on this date and contained the quoted pricing text; figures were read from the vendor page by hand."
       ]
     },
     "keyFeatures": [
@@ -21443,10 +21453,19 @@
             "free edition limited to 10 data exports and 5,000 API calls per day",
             "AI agents, predictive intelligence, unlimited reports and CPQ start at Professional"
           ]
+        },
+        {
+          "label": "Zoho CRM — Pricing (fetched 2026-09-15)",
+          "url": "https://www.zoho.com/crm/zohocrm-pricing.html",
+          "checkedAt": "2026-09-15",
+          "supports": [
+            "Sales, marketing, service in one unified package. Starts at $20/user/month."
+          ]
         }
       ],
       "limitations": [
-        "Vendor pricing page was reviewed; regional list prices vary by billing country."
+        "Vendor pricing page was reviewed; regional list prices vary by billing country.",
+        "Pricing page was fetched on this date and contained the quoted pricing text; figures were read from the vendor page by hand."
       ]
     },
     "keyFeatures": [
@@ -22001,14 +22020,21 @@
           "url": "https://sublimehq.com/store/text",
           "checkedAt": "2026-09-07",
           "supports": [
-            "personal licence $99 one-time with 3 years of updates",
-            "business licence $65/seat/year at 1-10 seats, falling to $50/seat/year at 50+",
-            "free evaluation with no stated time limit, licence required for continued use"
+            "Sublime Text is sold as a one-time license per user; team purchases use seat-based annual pricing with volume discounts for larger teams."
+          ]
+        },
+        {
+          "label": "Sublime Text — Pricing (fetched 2026-09-15)",
+          "url": "https://www.sublimehq.com/store/text",
+          "checkedAt": "2026-09-15",
+          "supports": [
+            "Sublime Text is sold as a one-time license per user; team purchases use seat-based annual pricing with volume discounts for larger teams."
           ]
         }
       ],
       "limitations": [
-        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark."
+        "Vendor pricing pages were reviewed; this record is not a ToolCompare benchmark.",
+        "Pricing page was fetched on this date and contained the quoted pricing text; figures were read from the vendor page by hand."
       ]
     },
     "fiyatModeli": "tek-seferlik",
