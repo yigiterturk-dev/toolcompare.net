@@ -29320,7 +29320,17 @@
         "cevap": "A tool is a plain function decorated with @tool: its type hints become the argument schema and its docstring becomes the description the model reads to decide when to call it. For structured inputs you pass a Pydantic model or JSON schema through args_schema. You hand a list of tools to create_agent together with a model, and the framework runs the loop: the model picks a tool, LangChain executes it and feeds the result back. Prebuilt integrations cover web search, code execution, databases and more."
       }
     ],
-    "fiyatKontrolTarihi": "2026-09-13"
+    "fiyatKontrolTarihi": "2026-09-13",
+    "planlar": [
+      {
+        "ad": "Developer",
+        "aylik": 0,
+        "birim": "kisi-basina",
+        "faturalama": null,
+        "kaynakSatiri": "Developer: $0 per seat per month, then pay as you go, up to 5k base traces/mo, community support, 1 seat",
+        "kaynakUrl": "https://www.langchain.com/pricing"
+      }
+    ]
   },
   {
     "slug": "llamaindex",
@@ -50870,32 +50880,32 @@
         "ad": "Solo",
         "aylik": 29.99,
         "birim": "sabit",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Solo: 1 Account, $29.99/mo (Excl. Tax), $27.46/mo billed annually; Available on Cloud/VPS Only",
+        "faturalama": "yillik",
+        "kaynakSatiri": "Solo $29.99/mo for 1 Account, $27.46/mo billed annually",
         "kaynakUrl": "https://cpanel.net/pricing/"
       },
       {
         "ad": "Admin",
         "aylik": 35.99,
-        "birim": "sabit",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Admin: Up to 5 Accounts, $35.99/mo (Excl. Tax), $32.96/mo billed annually",
+        "birim": "kisi-basina",
+        "faturalama": "yillik",
+        "kaynakSatiri": "Admin $35.99/mo for up to 5 Accounts, $32.96/mo billed annually",
         "kaynakUrl": "https://cpanel.net/pricing/"
       },
       {
         "ad": "Pro",
         "aylik": 53.99,
         "birim": "sabit",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Pro: Up to 30 Accounts, $53.99/mo (Excl. Tax), $49.46/mo billed annually",
+        "faturalama": "yillik",
+        "kaynakSatiri": "Pro $53.99/mo for up to 30 Accounts, $49.46/mo billed annually",
         "kaynakUrl": "https://cpanel.net/pricing/"
       },
       {
         "ad": "Premier",
         "aylik": 69.99,
         "birim": "sabit",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Premier: Up to 100 Accounts, $69.99/mo, additional accounts $0.49 each; Cloud/VPS & Metal/Dedicated",
+        "faturalama": null,
+        "kaynakSatiri": "Premier $69.99/mo for up to 100 Accounts, additional accounts $0.49 each",
         "kaynakUrl": "https://cpanel.net/pricing/"
       }
     ],
@@ -50955,27 +50965,11 @@
     "fiyatKontrolTarihi": "2026-09-13",
     "planlar": [
       {
-        "ad": "Free",
-        "aylik": 0,
-        "birim": "kisi-basina",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Free for all members: receipt scanning, mileage tracking, expense reports, categories and tags, personal card import, chat on every expense",
-        "kaynakUrl": "https://www.expensify.com/pricing"
-      },
-      {
         "ad": "Collect",
         "aylik": 5,
         "birim": "kisi-basina",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Collect: $5 per member/month — receipt scanning, reimbursements, corporate card management, expense and travel approvals, QuickBooks/Xero integrations",
-        "kaynakUrl": "https://www.expensify.com/pricing"
-      },
-      {
-        "ad": "Control",
-        "aylik": 9,
-        "birim": "kisi-basina",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Control: Custom pricing, as low as $9 per active member/month — multiple approval flows, ERP integration (NetSuite, Sage Intacct), Workday/Certinia, SAML/SSO, budgeting",
+        "faturalama": null,
+        "kaynakSatiri": "Collect $5 per member/month: reimbursements, corporate card management, expense and travel approvals, QuickBooks/Xero",
         "kaynakUrl": "https://www.expensify.com/pricing"
       }
     ],
@@ -51037,19 +51031,11 @@
     "fiyatKontrolTarihi": "2026-09-13",
     "planlar": [
       {
-        "ad": "Non-Commercial",
-        "aylik": 0,
+        "ad": "JetBrains AI Pro is a separate add-on at US",
+        "aylik": 20,
         "birim": "kisi-basina",
-        "faturalama": "aylik",
-        "kaynakSatiri": "Free — DataGrip Non-Commercial, for individual non-commercial development: learning and self-education, open-source contributions without commercial benefit, content creation and hobby development",
-        "kaynakUrl": "https://www.jetbrains.com/datagrip/buy/"
-      },
-      {
-        "ad": "Commercial — Individuals",
-        "aylik": 10.9,
-        "birim": "kisi-basina",
-        "faturalama": "aylik",
-        "kaynakSatiri": "DataGrip Commercial, Individuals: US $10.90 per month (incl. VAT US $13.08); billed annually US $109.00 per year, second year US $87.00, third year onwards US $65.00",
+        "faturalama": null,
+        "kaynakSatiri": "JetBrains AI Pro is a separate add-on at US $20.00 per user, per month",
         "kaynakUrl": "https://www.jetbrains.com/datagrip/buy/"
       }
     ],
@@ -51134,7 +51120,17 @@
         "Fivetran publishes no dollar rates on its pricing page — plan tiers are feature-based and the cost depends on measured volume — so no price ladder is recorded and this tool cannot enter numeric price comparisons.",
         "This tool has not been reviewed by an editor; no verdict is published."
       ]
-    }
+    },
+    "planlar": [
+      {
+        "ad": "Free plan",
+        "aylik": 0,
+        "birim": "sabit",
+        "faturalama": null,
+        "kaynakSatiri": "Free plan: 500,000 MAR for connections, 3,500 MAR for activations, 5,000 model runs per month, with Standard plan features",
+        "kaynakUrl": "https://www.fivetran.com/pricing"
+      }
+    ]
   },
   {
     "slug": "haystack",
