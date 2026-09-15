@@ -636,5 +636,151 @@
         }
       ]
     }
+  },
+  "chatwoot-vs-zendesk": {
+    "kontrolTarihi": "2026-09-15",
+    "sorular": [
+      {
+        "soru": "Is Chatwoot cheaper than Zendesk?",
+        "cevap": "On the entry tiers the headline prices actually meet: Chatwoot's Startups plan is $19/agent/month billed annually and Zendesk's Support Team is $19/agent/month billed annually ($25 monthly). The gap opens above that: Chatwoot's Business is $39 and Enterprise $99 per agent per month, while Zendesk's Suite Team is $55 annual, Suite Professional $115 and Suite Enterprise $169 annual. Chatwoot also runs a $0 Hacker plan for up to 2 agents with 500 conversations a month, which has no equivalent on Zendesk's published price list — Zendesk offers a 14-day trial on a Professional-grade plan instead of a free tier.",
+        "kaynak": {
+          "etiket": "Chatwoot — Pricing; Zendesk — Pricing",
+          "url": "https://www.chatwoot.com/pricing"
+        }
+      },
+      {
+        "soru": "Can you self-host Chatwoot or Zendesk?",
+        "cevap": "Chatwoot publishes MIT-licensed community code and documents a self-hosted deployment path (web servers, workers, PostgreSQL and sidekiq are listed in its own developer docs), so you can run it on your own infrastructure. Zendesk's pricing page describes seat-based cloud subscriptions with a 14-day trial and add-ons; we could not find any self-hosted Zendesk offering on the pricing page. If keeping conversations on your own servers is a hard requirement, that difference decides this comparison on its own.",
+        "kaynak": {
+          "etiket": "Chatwoot — MIT license & self-hosted deployment docs",
+          "url": "https://github.com/chatwoot/chatwoot/blob/develop/LICENSE"
+        }
+      },
+      {
+        "soru": "What does Zendesk charge for AI agents?",
+        "cevap": "Zendesk prices its AI agents on automated resolutions — the unit billed for customer requests the AI agent resolves without escalating to a human — and states that AI agents are included in every Suite and Support plan with usage-based billing on top. Copilot, the admin/agent AI assistant, is a $50/agent/month annual add-on. Chatwoot takes a bundled-credits approach instead: paid plans include a monthly Captain AI credit allowance (300 on Startups, 500 on Business, 800 on Enterprise), with extra credits at $20 per 1,000. Two different AI cost models — outcome-based versus bundled credits — so compare against your expected AI resolution volume, not the seat price.",
+        "kaynak": {
+          "etiket": "Zendesk — Pricing FAQ: AI agents & Copilot addon",
+          "url": "https://www.zendesk.com/pricing/"
+        }
+      }
+    ],
+    "kisaCevap": {
+      "ozet": "This is open-source customer messaging versus an enterprise service suite. Chatwoot is a MIT-licensed platform you can self-host or take as cloud, with a genuinely free tier for tiny teams, per-agent paid plans, and bundled AI credits that only arrive on the paid side. Zendesk is a large SaaS platform built around ticketing, omnichannel routing, AI agents and a wide add-on marketplace, priced per agent per month with annual discounts and outcome-based AI billing. The practical split: small teams and open-source shops that want control and low cost land on Chatwoot; companies that need deep workflow governance, an admin copilot and vendor-grade scale pay for Zendesk. Pick by whether you want to run the software or buy the outcome.",
+      "sec": {
+        "chatwoot": [
+          "you want conversations to run on your own infrastructure under an MIT license",
+          "your team is small and the free tier or the low per-agent price covers it",
+          "you prefer simple per-agent plans with bundled AI credits"
+        ],
+        "zendesk": [
+          "you need enterprise workflow governance, custom agent roles and audit tooling",
+          "you want outcome-based AI agents and an admin copilot from one vendor",
+          "you rely on a large integration marketplace and mature reporting"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Chatwoot — Pricing",
+          "url": "https://www.chatwoot.com/pricing"
+        },
+        {
+          "etiket": "Zendesk — Pricing",
+          "url": "https://www.zendesk.com/pricing/"
+        }
+      ]
+    }
+  },
+  "surveymonkey-vs-typeform": {
+    "kontrolTarihi": "2026-09-15",
+    "sorular": [
+      {
+        "soru": "How do SurveyMonkey and Typeform meter usage?",
+        "cevap": "Both meter on responses rather than seats. Typeform publishes the caps directly: the free tier allows 100 responses per month with unlimited questions per form, Basic $25/month annual ($29 monthly) keeps the same 100-response cap, Plus $50/month annual raises it to 1,000 responses. SurveyMonkey's paid structure is documented on its pricing details page, where the free plan carries a 10-question limit and team plans carry a three-user minimum; its help center adds that incomplete and deleted responses count toward limits and unused responses do not roll over. So on both products, a viral survey can move you up a tier — the difference is which side of the meter matters to you: question count (SurveyMonkey free) versus response volume (both).",
+        "kaynak": {
+          "etiket": "Typeform — Pricing; SurveyMonkey — Pricing details & billing help",
+          "url": "https://www.typeform.com/pricing/"
+        }
+      },
+      {
+        "soru": "What can you build for free on each?",
+        "cevap": "Typeform's free tier gives you unlimited questions per form with the 100-responses-per-month cap, which is why it is the common pick for public quizzes and lead forms. SurveyMonkey's free plan limits you to 10 questions per survey, pushing anything structured onto paid tiers. For teams, SurveyMonkey requires at least three users on its team plans and adds enterprise controls such as SSO and regional hosting on the enterprise product. If your form is short and your audience small, both free tiers work; if you need long forms with no questions limit, Typeform's free tier is the only one of the two that supports it.",
+        "kaynak": {
+          "etiket": "SurveyMonkey — Pricing details (10-question limit, 3-user minimum)",
+          "url": "https://www.surveymonkey.com/pricing/details/"
+        }
+      }
+    ],
+    "kisaCevap": {
+      "ozet": "Research program versus branded conversation. SurveyMonkey is a long-established survey platform: question banks and logic, response-counting rules documented in its billing help, team plans with a user minimum, and an enterprise track with SSO and regional hosting. Typeform is design-first: one-question-at-a-time forms that feel like a conversation, a free tier with unlimited questions per form metered on responses, and pricing that steps up as responses grow. Neither is objectivity better — the meter moves on response volume for both, so a popular form costs money on either. Pick SurveyMonkey for structured research programs, panel features and enterprise controls; pick Typeform when the form itself is part of your brand experience and you want completions, not compliance.",
+      "sec": {
+        "surveymonkey": [
+          "you run ongoing research programs with benchmarks, panels or repeating waves",
+          "your organization needs SSO, admin controls or regional hosting",
+          "your team will analyze responses with survey-native reporting"
+        ],
+        "typeform": [
+          "completion rate matters more than methodology — the one-question flow lifts it",
+          "your form is public-facing and should match your brand",
+          "you want unlimited questions per form on the free tier"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Typeform — Pricing",
+          "url": "https://www.typeform.com/pricing/"
+        },
+        {
+          "etiket": "SurveyMonkey — Pricing details",
+          "url": "https://www.surveymonkey.com/pricing/details/"
+        }
+      ]
+    }
+  },
+  "ramp-vs-wise": {
+    "kontrolTarihi": "2026-09-15",
+    "sorular": [
+      {
+        "soru": "Are Ramp and Wise competitors?",
+        "cevap": "Mostly no — they do different jobs. Ramp is a spend-management platform: it issues corporate cards (unlimited cards on the free plan), handles travel and expense, and automates accounts payable with OCR, syncing to accounting tools. Wise is a cross-border money mover: multi-currency accounts for holding and converting balances, business payments, and per-transfer pricing that depends on the route. The overlap is small enough that many finance teams run both: Wise to pay overseas contractors and suppliers in local currency, Ramp to control what the team spends at home. Choosing one over the other only makes sense if your problem is domestic spend control or international payments — each covers only one half.",
+        "kaynak": {
+          "etiket": "Ramp — Pricing; Wise — Fees for using Wise",
+          "url": "https://ramp.com/pricing"
+        }
+      },
+      {
+        "soru": "Is Ramp actually free?",
+        "cevap": "Ramp's core plan is published as Free $0/user/month: unlimited cards, travel and expense, AP with OCR and basic accounting integrations. The paid Plus tier is $15/month per user plus a platform fee based on team size, with a 30-day trial and a discount on annual billing; Enterprise is custom and annual-only, adding a dedicated manager, Workday/Oracle integrations and local-currency cards. Wise inverts the model: there is no seat subscription to compare — its help center documents country-dependent registration fees, an account-details fee and regional pricing, so cost scales with how much you move and which corridors you use rather than with headcount.",
+        "kaynak": {
+          "etiket": "Ramp — Pricing; Wise — Fees for using Wise",
+          "url": "https://wise.com/help/articles/2977969/fees-for-using-wise"
+        }
+      }
+    ],
+    "kisaCevap": {
+      "ozet": "Different tools that happen to both touch company money. Ramp is spend management: corporate cards, expense and travel, and accounts payable with OCR — free at the core, with paid tiers for scale-up controls and enterprise integrations. Wise is international payments: multi-currency accounts, local payment rails and per-transfer fees that depend on the currency route. Ramp's job is stopping overspend before it happens; Wise's job is moving money across borders cheaply and transparently. Many finance stacks use both — Wise to settle foreign invoices and contractors, Ramp to govern what the team spends. Choose Ramp if the problem is visibility and control of team spend; choose Wise if the problem is the cost and friction of cross-border payments.",
+      "sec": {
+        "ramp": [
+          "you issue corporate cards and want budgets and approvals enforced at the card level",
+          "you want expense, travel and accounts payable in one free-to-use platform",
+          "you need Workday/Oracle-grade accounting integrations on the enterprise tier"
+        ],
+        "wise": [
+          "you pay contractors or suppliers in other countries and need local rails",
+          "you hold balances in several currencies and convert with transparent fees",
+          "you want per-transfer pricing instead of a subscription"
+        ]
+      },
+      "kaynaklar": [
+        {
+          "etiket": "Ramp — Pricing",
+          "url": "https://ramp.com/pricing"
+        },
+        {
+          "etiket": "Wise — Fees for using Wise",
+          "url": "https://wise.com/help/articles/2977969/fees-for-using-wise"
+        }
+      ]
+    }
   }
 }
