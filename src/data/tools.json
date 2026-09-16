@@ -305,7 +305,7 @@
       }
     ],
     "targetAudience": "Founders, Writers, Creators, and Modern Product Teams.",
-    "verdict": "The ultimate solution for centralizing scattered notes and projects into one smart hub.",
+    "verdict": "Free tier covers personal use; plans step up by member count. Fits teams that want docs, databases and projects on one canvas — skip it for offline-first note keeping.",
     "websiteUrl": "https://www.notion.so",
     "color": "#000000",
     "incelendi": true,
@@ -8268,7 +8268,7 @@
       }
     ],
     "targetAudience": "DevOps Engineers and Software Developers.",
-    "verdict": "The essential standard for modern software shipping and deployment.",
+    "verdict": "Free for individuals; paid tiers add org features and support. The standard way to containerize and ship software — skip it for simple static hosting.",
     "color": "#2496ed",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://www.docker.com",
@@ -9662,7 +9662,7 @@
       }
     ],
     "targetAudience": "Knowledge Workers, Students, and Privacy Advocates.",
-    "verdict": "The ultimate tool for building a private, networked, and long-lasting knowledge base.",
+    "verdict": "Personal use on every device is free; the commercial-use license and Sync are paid add-ons. Fits private, local-first knowledge bases — skip it for live team docs.",
     "color": "#7c3aed",
     "fiyatModeli": "ucretsiz-katman",
     "websiteUrl": "https://obsidian.md",
