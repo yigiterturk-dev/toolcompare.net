@@ -4,6 +4,7 @@ import Link from "next/link";
 import { kategoriler } from "@/lib/categories";
 import { kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { aracIndekslenir } from "@/lib/indeks";
 import type { Arac } from "@/lib/arac";
 
 /*
@@ -35,7 +36,15 @@ export const metadata = {
 };
 
 export default function ToolsIndexPage() {
-  const kategoriListesi = kategoriler();
+  /*
+    INDEKS KAPISI (2026-09-16): dizin sayfasindaki her link, hedefin
+    indeks kapisini de sormali. Katalog yeni eklenen (incelenmemis)
+    araclar noindex durumdayken dizin onlari basiyordu — taze build'te
+    71 siziintinin kaynagi bu sayfaydi. Kural tek: SITEMAP'TE OLANI LINKLE.
+  */
+  const kategoriListesi = kategoriler()
+    .map((k) => ({ ...k, araclar: k.araclar.filter(aracIndekslenir) }))
+    .filter((k) => k.araclar.length > 0);
   const sema = kirintiSemasi([{ ad: "Tools", yol: "/tools" }]);
 
   const tumAraclar = kategoriListesi.flatMap((k) => k.araclar);

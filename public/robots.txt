@@ -2,6 +2,6 @@ User-agent: *
 Allow: /
 # Dis link yonlendirmeleri: hedef sitenin kopyasi degil, sadece gecis.
 Disallow: /go/
-# Yonetici paneli: indekslenmemeli.
-Disallow: /management-hq-2026
+# Yonetici paneli robots.txt'ten CIKARILDI (2026-09-16): Disallow satiri adresi
+# duyurur; panel meta noindex'li (layout.tsx) — tarama + noindex temiz dusus verir.
 Sitemap: https://toolcompare.net/sitemap.xml

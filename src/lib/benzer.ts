@@ -22,6 +22,7 @@ import type { Arac } from "./arac";
 import { islevi } from "./islev.ts";
 import { kategoriSlug } from "./categories.ts";
 import { fiyatDurumu } from "./fiyat.ts";
+import { aracIndekslenir } from "./indeks.ts";
 
 const araclar = toolsData as Arac[];
 
@@ -69,7 +70,17 @@ export function benzerAraclar(
 
   if (i !== null) {
     const ayniIslev = araclar
-      .filter((t) => !disarida.has(t.slug) && islevi(t.slug) === i)
+      .filter(
+        (t) =>
+          !disarida.has(t.slug) &&
+          islevi(t.slug) === i &&
+          /* INDEKS KAPISI (2026-09-16): benzer modulu indeks kapisindan
+             gecmeyen (incelenmemis/noindex) sayfalara da link basiyordu.
+             Taze build'te 285 siziintiden 285'i bu modulden cikti;
+             ic-link-sizintisi testi yakaladi. Kural tek: noindex sayfaya
+             link = tarama butcesi bosa. */
+          aracIndekslenir(t),
+      )
       .sort(siralamaKarsilastir);
     if (ayniIslev.length > 0) {
       return { kaynak: "islev", araclar: ayniIslev.slice(0, adet) };
@@ -79,7 +90,13 @@ export function benzerAraclar(
   if (!arac.category) return null;
   const kat = kategoriSlug(arac.category);
   const ayniKategori = araclar
-    .filter((t) => !disarida.has(t.slug) && t.category && kategoriSlug(t.category) === kat)
+    .filter(
+      (t) =>
+        !disarida.has(t.slug) &&
+        t.category &&
+        kategoriSlug(t.category) === kat &&
+        aracIndekslenir(t),
+    )
     .sort(siralamaKarsilastir);
   if (ayniKategori.length === 0) return null;
 
