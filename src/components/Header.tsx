@@ -13,6 +13,7 @@ import Link from "next/link";
 */
 
 const NAV = [
+  { href: "/tools", label: "All tools" },
   { href: "/categories", label: "Categories" },
   { href: "/top-picks", label: "Cheapest tools" },
   { href: "/methodology", label: "How we rank" },

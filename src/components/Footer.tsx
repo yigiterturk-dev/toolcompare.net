@@ -22,6 +22,7 @@ import { useState } from "react";
 */
 
 const LINKLER = [
+  { href: "/tools", label: "All tools" },
   { href: "/categories", label: "Categories" },
   { href: "/top-picks", label: "Cheapest tools" },
   { href: "/compare", label: "Comparisons" },

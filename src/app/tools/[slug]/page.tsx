@@ -14,6 +14,7 @@ import FiyatBolumu from "@/components/FiyatBolumu";
 import { entegrasyonOrtaklari, durumEtiketi } from "@/lib/entegrasyon";
 import { kanonikSlug, indekslenebilirAkranlar, karsilastirmaAkranlari, alternatifSayfasiVar, karsilastirmaOrtaklari } from "@/lib/compare";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { benzerAraclar } from "@/lib/benzer";
 import { merdiven, planEtiketi } from "@/lib/plan";
 import { metaAciklamasi } from "@/lib/meta";
 import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
@@ -185,6 +186,19 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const tumKarsilastirmalar = karsilastirmaAkranlari(tool.slug);
   // Alternatif sayfasi kapisi karsilastirma cifti kapisindan AYRI (bkz. compare.ts).
   const altSayfasiVar = alternatifSayfasiVar(tool.slug);
+  /*
+    BENZER ARACLAR (2026-09-16). Yukaridaki `tumKarsilastirmalar` bu
+    sayfanin tek akran baglantisiydi ve hedefi hep /compare/* idi --
+    yani bir arac sayfasindan baska bir arac sayfasina DOGRUDAN link
+    yoktu. Islevi haritalanmamis 41 aracta ise hic akran baglantisi
+    yoktu. Zaten rozetle linklenmis araclar disarida tutuluyor ki ayni
+    hedefe iki link basilmasin.
+  */
+  const benzer = benzerAraclar(
+    tool.slug,
+    undefined,
+    tumKarsilastirmalar.map((t: Arac) => t.slug),
+  );
   const fiyat = fiyatDurumu(tool);
   const ucretsizModel = ["bedava", "ucretsiz", "ucretsiz-katman"].includes(tool.fiyatModeli ?? "");
   const bestFor: string[] = Array.isArray(tool.bestFor) ? tool.bestFor.filter(Boolean) : [];
@@ -803,6 +817,58 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </ul>
               )}
 
+            </section>
+          )}
+
+          {/* ---------- Benzer araclar: dogrudan arac -> arac linkleri ----------
+              Baslik iddiaya gore degisiyor. "Ayni isi yapan" demek icin
+              islev haritasinda ayni grupta olmak gerekir (src/lib/islev.ts);
+              yalnizca ayni kategoride olmak bunu karsilamaz -- "Developer
+              Tools" Redis ile Sentry'yi ayni kutuya koyuyor. Yanlis vaat
+              etmektense zayif olani zayif etiketliyoruz. */}
+          {benzer && (
+            <section className="mt-12 border-t border-line pt-10">
+              <h2 className="text-xl font-semibold">
+                {benzer.kaynak === "islev"
+                  ? `Tools that do the same job as ${tool.name}`
+                  : `Other ${tool.category} tools`}
+              </h2>
+              <p className="mt-2 text-sm text-ink-soft">
+                {benzer.kaynak === "islev"
+                  ? "Same job, different pricing. Verified starting price first."
+                  : `Not direct replacements for ${tool.name} — the same category, listed by verified starting price.`}
+              </p>
+
+              <ul className="mt-4 grid list-none grid-cols-1 gap-x-8 gap-y-px p-0 sm:grid-cols-2">
+                {benzer.araclar.map((t: Arac) => {
+                  const d = fiyatDurumu(t);
+                  return (
+                    <li key={t.slug} className="border-b border-line">
+                      <Link
+                        href={`/tools/${t.slug}`}
+                        className="flex items-baseline justify-between gap-3 py-2.5 no-underline transition-colors duration-150 hover:text-accent"
+                      >
+                        <span className="min-w-0 truncate text-sm font-medium text-ink">{t.name}</span>
+                        <span className="flex shrink-0 items-center gap-1.5">
+                          <span className="text-xs text-ink-soft tabular-nums">{d.kisa}</span>
+                          <span
+                            aria-hidden="true"
+                            className={`size-1.5 shrink-0 rounded-full ${
+                              d.karsilastirilabilir ? "bg-verified" : "bg-unverified"
+                            }`}
+                          />
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <p className="mt-4 text-sm">
+                <Link href="/tools" className="text-accent underline underline-offset-4">
+                  Browse all tools we track →
+                </Link>
+              </p>
             </section>
           )}
 

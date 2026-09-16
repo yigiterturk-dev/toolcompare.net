@@ -50,6 +50,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/top-picks',
     // /categories sitemap'te hic yoktu.
     '/categories',
+    /*
+      Arac dizini (2026-09-16). Adres canlida 404 donuyordu: 518 arac
+      sayfasinin ustunde dizin yoktu, hicbir sayfa da oraya link
+      vermiyordu. Her arac sayfasina dogrudan link veren tek sayfa;
+      sitemap disinda kalirsa isini goremez.
+    */
+    '/tools',
     // Karsilastirma giris kapisi. Footer her sayfadan buraya link
     // veriyordu ama sayfa YOKTU (canlida 404) -- 2026-09-10'da eklendi.
     '/compare',
