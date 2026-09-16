@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { aracTarihi, turetilmisTarih, enYeni, TABAN_TARIH } from "../src/lib/degisiklik.ts";
+import { karsilastirmaTarihi, notluCiftler } from "../src/lib/karsilastirma-notlari.ts";
 
 /**
  * Sitemap'teki her adres lastModified olarak `new Date()` yaziyordu:
@@ -37,6 +38,24 @@ test("turetilmis sayfa icerdigi araclarin en yenisini alir", () => {
   const b = { evidence: { reviewedAt: "2026-09-07" } };
   assert.equal(turetilmisTarih([a, b]), "2026-09-07");
   assert.equal(turetilmisTarih([a, undefined]), TABAN_TARIH, "bilinmeyen arac tabani getirir");
+});
+
+test("plan merdiveninin kontrol tarihi arac tarihine girer", () => {
+  const t = {
+    evidence: { reviewedAt: "2026-09-07" },
+    planlar: [{ ad: "Pro", aylik: 29, kontrolTarihi: "2026-09-15" }],
+  };
+  assert.equal(aracTarihi(t), "2026-09-15");
+  // kontrolTarihi olmayan eski plan kayitlari tabana dusurmez:
+  assert.equal(aracTarihi({ planlar: [{ ad: "Pro", aylik: 29 }] }), TABAN_TARIH);
+});
+
+test("karsilastirma tarihi: notlu her cift gecerli ISO veriyor, bilinmeyen cift tanimsiz", () => {
+  for (const anahtar of notluCiftler()) {
+    const t = karsilastirmaTarihi(anahtar);
+    if (t) assert.match(t, /^\d{4}-\d{2}-\d{2}/, `${anahtar}: kontrolTarihi gecersiz`);
+  }
+  assert.equal(karsilastirmaTarihi("olmayan-vs-arac"), undefined);
 });
 
 test("ayni veri ayni tarihi verir (build tekrari sitemap'i degistirmez)", () => {

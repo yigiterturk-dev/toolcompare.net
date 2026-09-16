@@ -39,6 +39,22 @@ function kanitOku(t: unknown): { kanit?: Kanit; fiyatTarihi?: string } {
 
 const GECERLI = /^\d{4}-\d{2}-\d{2}/;
 
+/*
+  Plan merdiveni (2026-09-15): plan kaydi ayiklandiginde kontrolTarihi
+  aliyor. O tarih sitede YENI icerik anlamina gelir (fiyat merdiveni o gun
+  eklendi/degisti) -- ama aracTarihi onu okumadigi icin sitemap eski gunu
+  ilan etmeye devam ediyordu; degisen sayfa Google'a "degismedi" diyor.
+*/
+function merdivenTarihleri(t: unknown): string[] {
+  if (!t || typeof t !== "object") return [];
+  const o = t as { planlar?: unknown };
+  if (!Array.isArray(o.planlar)) return [];
+  return o.planlar
+    .filter((p): p is { kontrolTarihi?: string } => Boolean(p && typeof p === "object"))
+    .map((p) => p.kontrolTarihi)
+    .filter((t): t is string => typeof t === "string");
+}
+
 /** Verilen tarihlerin en yenisi; hicbiri gecerli degilse taban. */
 export function enYeni(...tarihler: (string | undefined)[]): string {
   const g = tarihler.filter((t): t is string => typeof t === "string" && GECERLI.test(t));
@@ -53,6 +69,7 @@ export function aracTarihi(t: TarihliArac | undefined): string {
     fiyatTarihi,
     kanit?.reviewedAt,
     ...(kanit?.sources ?? []).map((k) => k.checkedAt),
+    ...merdivenTarihleri(t),
   );
 }
 

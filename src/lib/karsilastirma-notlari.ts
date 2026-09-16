@@ -117,3 +117,19 @@ export function elleYazilmisSorular(kanonik: string): Soru[] {
 export function notluCiftler(): string[] {
   return Object.keys(notlar).filter((k) => !k.startsWith("_"));
 }
+
+/*
+  Kanonik ciftin not kontrol tarihi (sitemap lastmod'u besler).
+
+  NEDEN (2026-09-15): sitemap'te compare sayfasinin lastmod'u iki aracin
+  kanit tarihi + entegrasyon kaydindan turetiliyordu; elle yazilan
+  soru-cevap ve kisa cevap eklenince sayfa icerigi degistigi halde tarih
+  degismiyordu. chatwoot-vs-zendesk 09-15'te yeniden yazildi, sitemap
+  09-07 ilan etti -- Google'a "degismedi" sinyali. Tarih yine VERIDEN
+  gelir: not kaydinin kendi kontrolTarihi.
+*/
+export function karsilastirmaTarihi(kanonik: string): string | undefined {
+  const kayit = notlar[kanonik];
+  if (!kayit || typeof kayit === "string") return undefined;
+  return typeof kayit.kontrolTarihi === "string" ? kayit.kontrolTarihi : undefined;
+}

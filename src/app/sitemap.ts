@@ -7,6 +7,7 @@ import { aracTaranmayaDeger, alternatifTaranmayaDeger } from '@/lib/tarama'
 import { aracIndekslenir, alternatifIndekslenir } from '@/lib/indeks'
 import { aracTarihi, turetilmisTarih, tarihNesnesi, enYeni, TABAN_TARIH } from '@/lib/degisiklik'
 import { entegrasyonKaydi } from '@/lib/entegrasyon'
+import { karsilastirmaTarihi } from '@/lib/karsilastirma-notlari'
 import fs from 'fs';
 import path from 'path';
 
@@ -136,6 +137,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         enYeni(
           turetilmisTarih([a, b].map((slug) => aracHaritasi.get(slug))),
           kayit?.checkedAt,
+          // Elle yazilan not (soru-cevap + kisa cevap) sayfa iceriginin
+          // bir parcasi; kontrolTarihi'siz sayfa yeniden yazildiginda
+          // sitemap "degismedi" diyordu (2026-09-15 olcumu).
+          karsilastirmaTarihi(cift),
         ),
       ),
       changeFrequency: 'monthly' as const,

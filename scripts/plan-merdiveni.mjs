@@ -29,6 +29,17 @@
  *                                                # kaynak cumlesiyle bas (gozle denetim)
  */
 import fs from "node:fs";
+import { yerelTarih } from "./_tarih.mjs";
+
+/*
+  Ayiklama gunu: merdiven sayfaya ilk kez BUGUN girdi -- sitemap lastmod'u
+  bu gercegi ilan etsin (bkz. lib/degisiklik.ts aracTarihi, planlar).
+  Ayni gun icinde tekrar koşturmak tarihi degistirmez; ertesi gun
+  koşturulursa kanit satiri degismemis olsa bile ayiklama yeniden yasanmis
+  sayilir. Kural ayni: tarih VERIDEN gelir -- script calistirilma olayidir,
+  build degil.
+*/
+const BUGUN = yerelTarih();
 
 const YOL = "src/data/tools.json";
 
@@ -271,7 +282,7 @@ for (const t of arr) {
     hepsi.push(...planlar.map((p) => ({ slug: t.slug, ...p })));
   }
   if (process.argv.includes("--yaz")) {
-    if (planlar.length) t.planlar = planlar;
+    if (planlar.length) t.planlar = planlar.map((p) => ({ ...p, kontrolTarihi: BUGUN }));
     else delete t.planlar;
   }
 }

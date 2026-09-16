@@ -19,6 +19,8 @@ export type Plan = {
   faturalama: "yillik" | "aylik" | null;
   kaynakSatiri: string;
   kaynakUrl: string | null;
+  /** Ayiklamanin yapildigi gun (yerel takvim). Sitemap lastmod'u buna bakar. */
+  kontrolTarihi?: string;
 };
 
 export type MerdivenliArac = { name: string; slug: string; planlar?: Plan[] };
