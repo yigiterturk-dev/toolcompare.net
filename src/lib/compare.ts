@@ -25,7 +25,7 @@ import { ciftTaranmayaDeger, alternatifTaranmayaDeger } from "./tarama.ts";
 import type { KriterKumesi } from "./kriterler.ts";
 import { ciftIndekslenir, aracIndekslenir, alternatifIndekslenir, fiyatiDogrulanmis, kriterliMi } from "./indeks.ts";
 import { islevi, ayniIslev } from "./islev.ts";
-import { talepliYollar, yolTalepGormus, karsilastirmaSorgusuYollari } from "./talep.ts";
+import { talepliYollar, yolTalepGormus, karsilastirmaSorgusuYollari, vsSorguKelimeleri, kimlikSorgudaGeciyor } from "./talep.ts";
 
 export { kriterAyrimi, ayrimCumlesi } from "./kriter-ayrimi.ts";
 
@@ -198,6 +198,36 @@ export function oneCikanCiftler(): { slug: string; label: string }[] {
   return sonuc;
 }
 
+/**
+ * "A vs B" SORGUSUNDAN TURETILEN CAPRAZ CIFTLER (2026-09-17).
+ *
+ * Yol olcutunun ikizi, ama yolu degil sorgunun kendisini okuyor: Google
+ * "caddy vs jenkins" sorgusunu caddy-vs-neon, betterstack-vs-caddy ve
+ * caddy-vs-new-relic sayfalarina servis etmisti (poz 213-233) -- ucu de
+ * yanlis cift, dogru cift ise evrende yoktu. Sorgu iki aracin kimligini
+ * de aniyorsa cift oradadir, sayfanin nereye dustugunden bagimsiz.
+ *
+ * Uc sinir: kimlik jetonu 3 harften kisa olan arac sayilmaz (2 harfli
+ * slug her sorgunun icinde tesadufen gecer); bir sorgu UCTEN fazla araci
+ * aniyorsa atlanir (hangi ciftten soz ettigi belirsizdir); kapi
+ * (ciftIndekslenir) asagida aynen uygulanir -- bu liste yalnizca adayi
+ * evrene sokar.
+ */
+function vsSorgusuCaprazCiftleri(): string[] {
+  const kimlikler = araclar.map((t) => ({ slug: t.slug, jetonlar: [t.slug, t.name].filter(Boolean).map(String) }));
+  const cikti = new Set<string>();
+  for (const kelimeler of vsSorguKelimeleri()) {
+    const eslesen = kimlikler
+      .filter((k) => k.jetonlar.some((j) => kimlikSorgudaGeciyor(kelimeler, j)))
+      .map((k) => k.slug);
+    if (eslesen.length < 2 || eslesen.length > 3) continue;
+    for (let i = 0; i < eslesen.length; i++) {
+      for (let j = i + 1; j < eslesen.length; j++) cikti.add(kanonikSlug(eslesen[i], eslesen[j]));
+    }
+  }
+  return [...cikti];
+}
+
 /** Sitemap'e girecek karsilastirma adresleri: akranlar + one cikan ciftler. */
 export function karsilastirmaCiftleri(): string[] {
   const ciftler = new Set<string>();
@@ -244,8 +274,12 @@ export function karsilastirmaCiftleri(): string[] {
     "A vs B" oldugu icin sayfanin cevabi gercek. Evrene alinmazsa yine
     yetim olurlardi. Kapi (ciftIndekslenir) asagida aynen uygulanir.
   */
-  for (const yol of karsilastirmaSorgusuYollari("/compare/")) {
-    const [a, b] = yol.slice("/compare/".length).split("-vs-");
+  const capraAdaylar = new Set<string>([
+    ...karsilastirmaSorgusuYollari("/compare/").map((y) => y.slice("/compare/".length)),
+    ...vsSorgusuCaprazCiftleri(),
+  ]);
+  for (const cift of capraAdaylar) {
+    const [a, b] = cift.split("-vs-");
     if (!a || !b) continue;
     if (!mevcutSlug.has(a) || !mevcutSlug.has(b)) continue;
     if (ayniIslev(a, b)) continue;
@@ -487,8 +521,12 @@ export function alternatifSayfasiOlan(sluglar: string[]): Arac[] {
 export function karsilastirmaOrtaklari(slug?: string): { cift: string; diger: string }[] {
   if (!slug) return [];
   const cikti: { cift: string; diger: string }[] = [];
-  for (const yol of karsilastirmaSorgusuYollari("/compare/")) {
-    const [a, b] = yol.slice("/compare/".length).split("-vs-");
+  const adaylar = new Set<string>([
+    ...karsilastirmaSorgusuYollari("/compare/").map((y) => y.slice("/compare/".length)),
+    ...vsSorgusuCaprazCiftleri(),
+  ]);
+  for (const cift of adaylar) {
+    const [a, b] = cift.split("-vs-");
     if (!a || !b || (a !== slug && b !== slug)) continue;
     if (ayniIslev(a, b)) continue; // ayni islevliler zaten akran listesinden gelir
     const A = araclar.find((t) => t.slug === a);

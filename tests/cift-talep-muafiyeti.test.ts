@@ -4,7 +4,8 @@ import { readFileSync } from "node:fs";
 import { ciftIndekslenir } from "../src/lib/indeks.ts";
 import { ayniIslev, islevi } from "../src/lib/islev.ts";
 import { entegrasyonVar, tumEntegrasyonlar } from "../src/lib/entegrasyon.ts";
-import { karsilastirmaSorgusuGormus } from "../src/lib/talep.ts";
+import { karsilastirmaSorgusuGormus, ciftVsSorgusuGormus, kimlikSorgudaGeciyor } from "../src/lib/talep.ts";
+import { karsilastirmaCiftleri } from "../src/lib/compare.ts";
 import type { Arac } from "../src/lib/arac.ts";
 
 /**
@@ -71,8 +72,11 @@ test("bicimsiz talep, islev kapisini acmiyor", () => {
     // soruyu cevapliyor ve cevabin arkasinda satici kaynagi var.
     if (entegrasyonVar(a.slug, b.slug)) continue;
     // Karsilastirma BICIMLI sorgu alan cift de bilerek aciliyor: sorgu
-    // harfiyen "A vs B" ise sayfanin cevapladigi soru gercektir.
+    // harfiyen "A vs B" ise sayfanin cevapladigi soru gercektir. Sorgunun
+    // hangi sayfaya dustugu onemli degil (2026-09-17): "new relic vs caddy"
+    // 9 gosterim almisti ama hep BASKA sayfalara servis edilmisti.
     if (karsilastirmaSorgusuGormus(`/compare/${cift}`, [a.slug, a.name], [b.slug, b.name])) continue;
+    if (ciftVsSorgusuGormus([a.slug, a.name], [b.slug, b.name])) continue;
     bakilan++;
     assert.equal(ciftIndekslenir(a, b), false,
       `${cift}: farkli isi goren cift, ne entegrasyon kaydi ne karsilastirma sorgusu varken indekslenebilir olmus`);
@@ -164,4 +168,46 @@ test("islevi olmayan arac iceren cift hicbir muafiyetle indekslenebilir olmuyor"
     }
   }
   assert.deepEqual([...new Set(kacak)], [], `tekil arac iceren cift indekslenebilir olmus: ${kacak.slice(0, 5).join(", ")}`);
+});
+
+/*
+  SORGU HANGI SAYFAYA DUSTUYSE DUSSUN (olcum, 2026-09-17). Kapi talebi
+  sorgunun DUSTUGU YOLA gore okuyordu; Google ise sorguyu diledigi sayfaya
+  servis ediyor. "caddy vs jenkins" 9 farkli /compare/ sayfasina dusmustu
+  (caddy-vs-neon poz 213, betterstack-vs-caddy poz 233, caddy-vs-codecov...)
+  ve hicbiri dogru cift degildi; dogru cift olan caddy-vs-jenkins ise sorguyu
+  kendi yoluna hic almadigi icin evrene bile girmiyordu. Kanit sorgunun
+  dustugu yer degil, sorgunun kendisi.
+*/
+test("baska sayfaya dusmus 'A vs B' sorgusu dogru cifti aciyor", () => {
+  const a = harita.get("caddy"), b = harita.get("jenkins");
+  assert.ok(a && b, "ornek araclar katalogda yok");
+  assert.equal(ayniIslev("caddy", "jenkins"), false, "capraz islevli cift bekleniyordu");
+  assert.equal(
+    karsilastirmaSorgusuGormus("/compare/caddy-vs-jenkins", [a.slug, a.name], [b.slug, b.name]),
+    false,
+    "on kabul degisti: sorgu artik dogru yola dusuyor, bu testin ornegi gecersiz",
+  );
+  assert.equal(ciftVsSorgusuGormus([a.slug, a.name], [b.slug, b.name]), true, "sorgu var ama cift olcutu gormuyor");
+  assert.equal(ciftIndekslenir(a, b), true, "talebi olculmus cift hala kapali");
+  assert.ok(
+    karsilastirmaCiftleri().includes("caddy-vs-jenkins"),
+    "cift acildi ama sitemap evreninde yok -- yetim sayfa",
+  );
+});
+
+/*
+  PARCA ESLESME TUZAGI (olcum, 2026-09-17). Ilk uygulama sorguyu tek jetona
+  yapistirip `includes` ile ariyordu: "digitalocean" icinde "git",
+  "linear" icinde "line" gectigi icin git-vs-ionos, line-vs-monday gibi
+  kimsenin sormadigi 20'den fazla cift dogmustu. Eslesme kelime tabanli
+  olmali.
+*/
+test("kimlik parca olarak eslesmiyor", () => {
+  const kelimeler = "digitalocean vs linode".split(" ");
+  assert.equal(kimlikSorgudaGeciyor(kelimeler, "git"), false, "'digitalocean' icindeki 'git' eslesti");
+  assert.equal(kimlikSorgudaGeciyor(kelimeler, "digitalocean"), true, "tam kelime eslesmeliydi");
+  assert.equal(kimlikSorgudaGeciyor("linear vs monday".split(" "), "line"), false, "'linear' icindeki 'line' eslesti");
+  // Iki kelimeye bolunmus kimlik ("new relic") tek jetona inmeli.
+  assert.equal(kimlikSorgudaGeciyor("new relic vs caddy".split(" "), "New Relic"), true, "bitisik kelime eslesmedi");
 });

@@ -25,7 +25,7 @@
  */
 
 import type { Arac } from "./arac.ts";
-import { talepGormus, yolTalepGormus } from "./talep.ts";
+import { talepGormus, yolTalepGormus, ciftVsSorgusuGormus } from "./talep.ts";
 import { merdivenVar } from "./plan.ts";
 import { notluCiftler } from "./karsilastirma-notlari.ts";
 import { ciftIndekslenir } from "./indeks.ts";
@@ -85,7 +85,15 @@ export function alternatifTaranmayaDeger(t?: Arac): boolean {
 export function ciftTaranmayaDeger(a?: Arac, b?: Arac): boolean {
   if (!a || !b) return false;
   const kanonik = a.slug < b.slug ? `${a.slug}-vs-${b.slug}` : `${b.slug}-vs-${a.slug}`;
-  return ciftAyirtEdici(a, b) || yolTalepGormus(`/compare/${kanonik}`);
+  /* Ucuncu kanit (2026-09-17): sorgu harfiyen "A vs B" ise cift taranmaya
+     deger -- sorgunun BU yola dusmus olmasi sart degil. Sart kosulursa
+     caddy-vs-jenkins gibi ciftler indekslenebilir olup sitemap disinda
+     kaliyordu: sayfa var, kapiyi geciyor, ama kimse linklemiyor. */
+  return (
+    ciftAyirtEdici(a, b) ||
+    yolTalepGormus(`/compare/${kanonik}`) ||
+    ciftVsSorgusuGormus([a.slug, a.name], [b.slug, b.name])
+  );
 }
 
 /**

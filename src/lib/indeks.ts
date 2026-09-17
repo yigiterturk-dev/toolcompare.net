@@ -19,7 +19,7 @@
 
 import toolsData from "../data/tools.json" with { type: "json" };
 import { fiyatDurumu } from "./fiyat.ts";
-import { talepGormus, yolTalepGormus, karsilastirmaSorgusuGormus } from "./talep.ts";
+import { talepGormus, yolTalepGormus, karsilastirmaSorgusuGormus, ciftVsSorgusuGormus } from "./talep.ts";
 import { ayniIslev, islevi } from "./islev.ts";
 import { entegrasyonVar, kanonikCift } from "./entegrasyon.ts";
 import { elleYazilmisKisaCevap } from "./karsilastirma-notlari.ts";
@@ -297,10 +297,15 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
       gecerli, yoksa evren ile etiket ayrisiyor.
     */
     if (islevi(a.slug) === null || islevi(b.slug) === null) return false;
-    return karsilastirmaSorgusuGormus(
-      `/compare/${kanonikCift(a.slug, b.slug)}`,
-      [a.slug, a.name],
-      [b.slug, b.name],
+    /* Sorgu bu sayfaya dusmus olabilir (yol olcutu) ya da Google onu baska
+       bir sayfaya servis etmis olabilir (cift olcutu, 2026-09-17). Ikisi de
+       ayni kaniti tasir: birisi harfiyen "A vs B" yazmis. */
+    return (
+      karsilastirmaSorgusuGormus(
+        `/compare/${kanonikCift(a.slug, b.slug)}`,
+        [a.slug, a.name],
+        [b.slug, b.name],
+      ) || ciftVsSorgusuGormus([a.slug, a.name], [b.slug, b.name])
     );
   }
   /*

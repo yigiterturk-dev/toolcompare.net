@@ -173,6 +173,88 @@ export function karsilastirmaSorgusuGormus(
   });
 }
 
+/**
+ * SITE GENELINDEKI "A vs B" SORGULARI (jetonlanmis).
+ *
+ * NEDEN (olcum, 2026-09-17): kapi, talebi sorgunun DUSTUGU YOLA gore
+ * okuyordu. Oysa Google bir sorguyu hangi sayfaya servis edecegine kendi
+ * karar veriyor ve siklikla yanlis sayfaya servis ediyor:
+ *   "caddy vs jenkins" -> /compare/caddy-vs-neon        (poz 213)
+ *                      -> /compare/betterstack-vs-caddy (poz 233)
+ *                      -> /compare/caddy-vs-new-relic   (poz 229)
+ * Ucu de yanlis cift. Dogru cift (caddy-vs-jenkins) ise sorguyu hic
+ * gormedigi icin evrene bile girmiyordu: talep olculmustu, sayfa yoktu.
+ *
+ * Kanit sorgunun DUSTUGU YER degil, sorgunun KENDISI. Bu liste yol
+ * bilgisini atar; eslesmeyi cift yapar (bkz. ciftVsSorgusuGormus). Kural
+ * yol olcutunden DAHA DAR: "caddy vs jenkins" betterstack-vs-caddy'yi
+ * ACMAZ, cunku sorguda "betterstack" gecmiyor -- 2026-09-13'te yol
+ * olcutunun dustugu tuzak buydu.
+ */
+/**
+ * Sorgu KELIMELERE bolunur, jetonlanmis halde degil.
+ *
+ * Ilk deneme sorguyu tek jetona yapistirip `includes` ile arıyordu ve
+ * kelime siniri olmadigi icin uydurma cift uretti: "digitalocean" icinde
+ * "git", "linear" icinde "line" geciyor -- git-vs-ionos, line-vs-monday
+ * gibi kimsenin sormadigi 20'den fazla sayfa dogmustu.
+ */
+const VS_SORGU_KELIMELERI: string[][] = (() => {
+  const kume = new Map<string, string[]>();
+  for (const satir of ((ham as { rows?: { query?: string }[] }).rows || [])) {
+    const q = satir.query;
+    if (!q || !KARSILASTIRMA_BICIMI.test(q)) continue;
+    if (kume.has(q)) continue;
+    kume.set(q, q.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+  }
+  return [...kume.values()];
+})();
+
+/** Jeton eslesmesi icin en kisa kimlik uzunlugu: 2 harfli slug ("go", "r")
+    her sorguda tesadufen bulunur ve uydurma cift uretir. */
+const EN_KISA_JETON = 3;
+
+/**
+ * Bu kimlik sorguda geciyor mu? Ya tek kelimeye ("caddy") ya da BITISIK
+ * IKI kelimeye ("new relic" -> newrelic, "bill.com" -> billcom) esit
+ * olmali. Parca eslesme yok.
+ */
+function jetonGeciyor(kelimeler: string[], jeton: string): boolean {
+  for (let i = 0; i < kelimeler.length; i++) {
+    if (kelimeler[i] === jeton) return true;
+    if (i + 1 < kelimeler.length && kelimeler[i] + kelimeler[i + 1] === jeton) return true;
+    if (i + 2 < kelimeler.length && kelimeler[i] + kelimeler[i + 1] + kelimeler[i + 2] === jeton) return true;
+  }
+  return false;
+}
+
+/**
+ * Bu cift hakkinda, SITENIN HERHANGI BIR SAYFASINA dusmus, "vs" bicimli
+ * bir sorgu var mi? Iki tarafin kimligi de sorguda gecmelidir.
+ */
+export function ciftVsSorgusuGormus(
+  aKimlikleri: (string | undefined)[] = [],
+  bKimlikleri: (string | undefined)[] = [],
+): boolean {
+  const a = aKimlikleri.filter((k): k is string => Boolean(k)).map(jeton).filter((k) => k.length >= EN_KISA_JETON);
+  const b = bKimlikleri.filter((k): k is string => Boolean(k)).map(jeton).filter((k) => k.length >= EN_KISA_JETON);
+  if (!a.length || !b.length) return false;
+  return VS_SORGU_KELIMELERI.some(
+    (kelimeler) => a.some((x) => jetonGeciyor(kelimeler, x)) && b.some((y) => jetonGeciyor(kelimeler, y)),
+  );
+}
+
+/** Site genelindeki "vs" bicimli sorgular, kelimelerine bolunmus. */
+export function vsSorguKelimeleri(): string[][] {
+  return VS_SORGU_KELIMELERI;
+}
+
+/** Bir kimligin sorguda gecip gecmedigi (evren kurulumu ayni olcutu kullanir). */
+export function kimlikSorgudaGeciyor(kelimeler: string[], kimlik: string): boolean {
+  const j = jeton(kimlik);
+  return j.length >= EN_KISA_JETON && jetonGeciyor(kelimeler, j);
+}
+
 /** Karsilastirma sorgusu almis yollar (evren kurulumu icin on eleme). */
 export function karsilastirmaSorgusuYollari(onEk: string): string[] {
   return [...YOL_KARSILASTIRMA_SORGULARI.keys()].filter((y) => y.startsWith(onEk)).sort();
