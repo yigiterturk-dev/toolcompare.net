@@ -29,17 +29,17 @@ import { seffaflikOzeti, ASGARI_ORNEKLEM, type BulunamamaSebebi } from "@/lib/se
 import { OG_GORSEL } from "@/lib/paylasim";
 
 /* Olcumun surumu. Tekrarlandiginda artar; eski surum alintilarda yasar. */
-const SURUM = "2026-09-11";
+const SURUM = "2026-09-21";
 
 export const metadata: Metadata = {
   // 67 karakterdi ve arama sonucunda kesiliyordu (olcum, 2026-09-12).
   // Marka adi dusuruldu: kesilen sey basligin ANLAMI olmamali.
-  title: "The Pricing Transparency Index: 472 Software Products",
+  title: "The Pricing Transparency Index: 478 Software Products",
   description:
-    "We opened the pricing page of 472 software products by hand and recorded whether a price could actually be read. 43% carried no usable figure. Full method, per-category breakdown and the raw CSV.",
+    "We opened the pricing page of 478 software products by hand and recorded whether a price could actually be read. 43% carried no usable figure. Full method, per-category breakdown and the raw CSV.",
   alternates: { canonical: "/research/pricing-transparency" },
   openGraph: {
-    title: "The Pricing Transparency Index: 472 Software Products",
+    title: "The Pricing Transparency Index: 478 Software Products",
     description:
       "43% of software products publish no usable price figure on their own pricing page. Method, per-category breakdown and raw data, free under CC BY 4.0.",
     url: "/research/pricing-transparency",
