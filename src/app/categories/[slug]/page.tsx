@@ -26,6 +26,7 @@ import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 import { paylasimMeta } from "@/lib/paylasim";
 import { aracIndekslenir } from "@/lib/indeks";
 import { aracTaranmayaDeger } from "@/lib/tarama";
+import rehberler from "@/data/kategori-rehberleri.json" with { type: "json" };
 export function generateStaticParams() {
   return kategoriler().map((k) => ({ slug: k.slug }));
 }
@@ -117,6 +118,31 @@ export default async function CategoryPage({ params }: SayfaParametresi) {
             </>
           ) : null}
         </p>
+
+        {/* Kategoriye ozgu secim rehberi (2026-09-21): her kategori kendi
+            fiyattuzagiyla yazilir, sablon kopyalanmaz. Veri
+            data/kategori-rehberleri.json'da; girdisi olmayan kategoride
+            bolum hic cizilmez, bos yer doldurulmaz. */}
+        {(() => {
+          const rehber = (rehberler as Record<string, { baslik: string; paragraflar: string[]; kontrol: string[] }>)[kategori.slug];
+          if (!rehber) return null;
+          return (
+            <section className="mt-10 max-w-4xl">
+              <h2 className="text-xl font-semibold">{rehber.baslik}</h2>
+              {rehber.paragraflar.map((p: string) => (
+                <p key={p.slice(0, 32)} className="mt-3 text-ink-soft">
+                  {p}
+                </p>
+              ))}
+              <p className="mt-4 text-sm font-medium text-ink">Before you commit, check:</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-ink-soft">
+                {rehber.kontrol.map((s: string) => (
+                  <li key={s.slice(0, 32)}>{s}</li>
+                ))}
+              </ul>
+            </section>
+          );
+        })()}
 
         <p className="mt-4 rounded-[--radius-card] border border-line bg-surface p-4 text-sm text-ink-soft">
           No vendor has paid for a position on this page. Price is not quality: the cheapest tool

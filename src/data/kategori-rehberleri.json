@@ -1,0 +1,184 @@
+{
+  "ai-tools": {
+    "baslik": "How to choose an AI tool",
+    "paragraflar": [
+      "AI tools share one habit: the headline price rarely covers the metered part. Chat assistants charge per seat but meter the advanced models; image and video generators sell credits; API platforms bill by token. Any of these can start small and grow quickly once real usage arrives.",
+      "So treat a verified starting price as the entry ticket, not the monthly total. Check what the free tier throttles — model quality, message caps, watermarks and export limits are the usual levers — and how usage is measured if the plan is credit-based. Data handling deserves an explicit decision too: retention settings and whether your inputs train anything should be choices you make, not defaults you inherit."
+    ],
+    "kontrol": [
+      "What the credits or tokens actually cover, and what happens when they run out",
+      "Whether the free tier restricts the model, output size or commercial use",
+      "Retention and training defaults for your data",
+      "Whether advanced features are seat-based, credit-based or charged per output"
+    ]
+  },
+  "crm": {
+    "baslik": "How to choose a CRM",
+    "paragraflar": [
+      "CRMs are priced per seat, but the seat is rarely the trap — the contact tier is. Several vendors start cheap and then price by how many contacts you store, so a growing database can cost more than a growing team. Free tiers are common and genuine, but they usually gate features like automation and reporting rather than contacts.",
+      "The other cost is switching. Data lives in custom fields, pipelines and activity history, and moving it later is a project. Before choosing, test how the tool handles your actual sales process rather than its demo pipeline. The verified starting prices below tell you what entry costs — not what year two costs."
+    ],
+    "kontrol": [
+      "Whether pricing scales by seats, contacts, or both",
+      "What the free tier withholds: automation, reports, or integrations",
+      "Import and export support for the data you already have",
+      "Email and calendar integration depth, since capture effort decides whether the CRM stays current"
+    ]
+  },
+  "communication": {
+    "baslik": "How to choose team communication software",
+    "paragraflar": [
+      "Team communication is the simplest category here: almost everything is per-seat per month, with annual billing as the main discount. The differences that matter are in the free tiers — most cap message history, which quietly turns the free plan into a trial you eventually pay to leave.",
+      "Look past the seat price at what your team actually does: external partners (guest access rules differ a lot between tools), video meeting limits, and whether admin controls like retention policies sit on the plan you can afford. A cheaper seat that withholds retention or compliance features is not cheaper for a regulated team."
+    ],
+    "kontrol": [
+      "Message and file history limits on the free plan",
+      "Guest and external-partner access rules",
+      "Whether admin, retention and compliance controls need a higher tier",
+      "The gap between annual and monthly pricing"
+    ]
+  },
+  "customer-service": {
+    "baslik": "How to choose a helpdesk",
+    "paragraflar": [
+      "Helpdesk pricing is per agent — the person answering tickets, not the person asking. Two details complicate it. First, what counts as an agent: some plans count anyone who can view a ticket. Second, the newer wave of AI resolution fees, charged per automated answer on top of the seat.",
+      "Channel coverage is where plans differ quietly: chat, phone, social and email are often split across tiers, and a missing channel usually means a second subscription. The verified prices here are starting points; support teams tend to land on the tier above what they first budgeted."
+    ],
+    "kontrol": [
+      "How the vendor counts an agent, and whether read-only viewers count",
+      "Per-resolution or per-conversation AI charges, if any",
+      "Which channels are included at each tier",
+      "Ticket volume limits, if any are stated"
+    ]
+  },
+  "design": {
+    "baslik": "How to choose a design tool",
+    "paragraflar": [
+      "Design tools price per editor, and the useful question is who really needs to be an editor. Most suites let viewers or commenters in free or cheap, so a team of three designers and thirty stakeholders pays for three seats, not thirty-three.",
+      "The newer variable is AI: image generation and similar features increasingly run on credit allowances that differ by plan. For print and production work, also check export formats and color management — a plan that watermarks or restricts exports is not usable output, whatever it costs."
+    ],
+    "kontrol": [
+      "Editor versus viewer seat rules",
+      "AI or asset credits: allowance size and what happens at zero",
+      "Export formats and commercial-use rights",
+      "Collaboration features like comments and shared libraries at each tier"
+    ]
+  },
+  "developer-tools": {
+    "baslik": "How to choose developer tools",
+    "paragraflar": [
+      "This category mixes two pricing worlds: open-source projects that cost nothing to license and everything to operate, and hosted services with free individual tiers that get serious once a team or workload arrives. Both models are honest — the cost just sits in different places.",
+      "For open source, the real cost is operations: hosting, upgrades and on-call time that no comparison table shows. For hosted tools, watch the usage dimensions — compute, bandwidth, build minutes — because a small project can sit in the free tier for a year and then jump two tiers in a month. The verified starting prices here tell you where the door is, not the whole staircase."
+    ],
+    "kontrol": [
+      "What the free tier includes, and the usage limits that force an upgrade",
+      "Self-hosting support and license terms, if the tool is open source",
+      "Team features like roles and SSO that often sit on the top tiers",
+      "Usage-based dimensions you would be billed on as you grow"
+    ]
+  },
+  "e-commerce": {
+    "baslik": "How to choose e-commerce software",
+    "paragraflar": [
+      "E-commerce pricing comes in two shapes: platform plans with a monthly fee, and payment infrastructure that charges per transaction. Many stores end up paying both, so the honest number to compare is the stack — plan fee, plus processing percentage, plus any app fees.",
+      "Enterprise platforms often quote instead of publishing, which is why several entries here say quote only. For smaller stores, the plan limits that matter are usually staff seats, order volume and the transaction-fee difference between tiers."
+    ],
+    "kontrol": [
+      "Whether transaction fees are charged on top of the plan",
+      "Payment gateway lock-in, or a fee for using an external one",
+      "Staff seats and order-volume limits per tier",
+      "What enterprise pricing covers when it is quote-only"
+    ]
+  },
+  "finance-tools": {
+    "baslik": "How to choose finance software",
+    "paragraflar": [
+      "Finance software prices by scope more than by size: a plan is usually priced per business entity, per user, or per feature block such as payroll or tax filing. That makes the entry price stable but the total sensitive to what your situation includes.",
+      "Regional coverage is the quiet differentiator. Tax rules differ by country, and features like Making Tax Digital filing are specific to the UK. Confirm the tool handles your jurisdiction before comparing anything else; the verified starting prices below assume the feature set is usable where you operate."
+    ],
+    "kontrol": [
+      "Whether pricing is per user, per entity, or per feature block",
+      "Country and tax-rule coverage for your jurisdiction",
+      "Bank feed limits and connection quality",
+      "What filing and payroll features cost extra, if anything"
+    ]
+  },
+  "hr-software": {
+    "baslik": "How to choose HR software",
+    "paragraflar": [
+      "HR and payroll platforms mostly price per employee per month, frequently with a minimum spend. Two costs hide around the edges: one-time implementation or onboarding fees, and country coverage — payroll that runs in your country is a different product from one that does not.",
+      "Because the price scales with headcount, this is the category where annual commitments matter most. Verify what happens when headcount dips, and which modules — recruiting, performance, benefits — are bundled versus sold separately."
+    ],
+    "kontrol": [
+      "Per-employee pricing plus any minimum monthly spend",
+      "Implementation or onboarding fees charged once",
+      "Country coverage for payroll and compliance",
+      "Which HR modules are included rather than additive"
+    ]
+  },
+  "hosting": {
+    "baslik": "How to choose a hosting provider",
+    "paragraflar": [
+      "Hosting is the category with the widest gap between entry price and renewal price. Promotional rates apply to the first term; the renewal rate is the real one, and it is usually printed on the same page. The verified prices here mark which figure they refer to.",
+      "After the sticker, the limits decide the value: storage and bandwidth caps, backup policy, and whether support is around the clock or ticket-only at the cheap tier. For anything mission-critical, read the uptime commitment and what compensation it actually offers before you rely on it."
+    ],
+    "kontrol": [
+      "Renewal price versus the advertised intro price",
+      "Storage, bandwidth and site-count limits",
+      "Backup and restore policy included in the plan",
+      "Support hours and channels at the tier you would actually buy"
+    ]
+  },
+  "legal-tools": {
+    "baslik": "How to choose legal software",
+    "paragraflar": [
+      "Legal software splits between document automation sold per seat and contract lifecycle platforms sold by quote. Volume drives the model: a freelancer reviewing contracts monthly can buy a seat, while a company routing thousands of agreements gets a sales conversation.",
+      "E-signature is often a separate product or add-on, so check whether it is bundled. And if you work across jurisdictions, template and clause libraries tied to a single legal system are less useful than they look."
+    ],
+    "kontrol": [
+      "Whether e-signature is included or charged separately",
+      "Contract or document volume limits per tier",
+      "Seat-based versus quote-only pricing at your volume",
+      "Jurisdiction coverage of templates and clause libraries"
+    ]
+  },
+  "marketing": {
+    "baslik": "How to choose marketing tools",
+    "paragraflar": [
+      "Marketing tools price by limits, and the limit that binds first differs by sub-category: keywords tracked and reports for SEO suites, contacts or sends for email tools, profiles or seats for scheduling platforms. The cheapest plan is usually usable until one of those limits is hit — the trick is knowing which one you will hit.",
+      "Annual discounts are significant here, and several vendors show annual pricing by default with monthly as a higher figure. When comparing, read the limit structure before the price: the plan that tracks twice as many keywords can be the cheaper one for you."
+    ],
+    "kontrol": [
+      "Which usage limit — contacts, keywords, sends, profiles — binds first for you",
+      "The gap between annual and monthly pricing",
+      "Whether AI features are bundled or metered",
+      "Data history limits on the lower tiers"
+    ]
+  },
+  "productivity": {
+    "baslik": "How to choose productivity tools",
+    "paragraflar": [
+      "Productivity tools are the freemium heart of this site: almost every one starts free, and the paid plans mainly lift limits — version history, guests, automations, storage. The free tiers are genuine products, not trials, which is why several entries below read free tier rather than a price.",
+      "The costs arrive with scale. Guest and collaborator rules decide whether external partners need paid seats, and AI assistants are increasingly sold as a per-seat add-on on top of the plan. Verify the limits that map to how your team actually shares work."
+    ],
+    "kontrol": [
+      "Guest and collaborator limits on free and paid plans",
+      "Version history and storage caps by tier",
+      "Whether AI features cost extra per seat",
+      "Automation limits, if the tool has workflows"
+    ]
+  },
+  "project-management": {
+    "baslik": "How to choose project management software",
+    "paragraflar": [
+      "Project management tools price per seat and gate features by tier, with free plans that commonly cap seats or lock the views teams actually need — timelines, workload and automation usually sit above the entry tier.",
+      "Seat minimums exist on some mid-tier plans, and guests are handled inconsistently: sometimes free, sometimes counted as seats. Since these tools are typically deployed on annual contracts, check both the monthly rate and the commitment the better features require."
+    ],
+    "kontrol": [
+      "The feature gates that matter to you: timeline, workload, automation",
+      "Seat minimums on mid-tier plans",
+      "How external guests are counted and charged",
+      "The difference between monthly and annual commitment"
+    ]
+  }
+}

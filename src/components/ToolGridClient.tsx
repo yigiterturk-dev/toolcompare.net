@@ -67,7 +67,7 @@ const KATEGORILER = [
   "E-commerce",
 ];
 
-function ToolGrid({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?: React.ReactNode }) {
+function ToolGrid({ initialTools, dizin, sss }: { initialTools: IzgaraArac[]; dizin?: React.ReactNode; sss?: React.ReactNode }) {
   const router = useRouter();
 
   // useSearchParams() statik uretimde BAILOUT_TO_CLIENT_SIDE_RENDERING'e yol
@@ -353,8 +353,9 @@ function ToolGrid({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?:
           <AIWizard tools={tools} />
         </section>
 
-        {/* Tam dizin: footer'dan ONCE. */}
+        {/* Tam dizin ve SSS: footer'dan ONCE. */}
         {dizin}
+        {sss}
       </main>
 
       {/* ---------- Karsilastirma seridi ---------- */}
@@ -403,6 +404,14 @@ function ToolGrid({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?:
   );
 }
 
-export default function ToolGridClient({ initialTools, dizin }: { initialTools: IzgaraArac[]; dizin?: React.ReactNode }) {
-  return <ToolGrid initialTools={initialTools} dizin={dizin} />;
+export default function ToolGridClient({
+  initialTools,
+  dizin,
+  sss,
+}: {
+  initialTools: IzgaraArac[];
+  dizin?: React.ReactNode;
+  sss?: React.ReactNode;
+}) {
+  return <ToolGrid initialTools={initialTools} dizin={dizin} sss={sss} />;
 }

@@ -62,6 +62,42 @@ export default async function Home() {
   // Site geneli yapilandirilmis veri: arama kutusu (sitelinks searchbox) ve
   // yayinci kimligi. Arac listesi ItemList olarak veriliyor ki Google
   // katalogun kapsamini tek istekte gorsun.
+  /*
+    SSS (2026-09-21): icerik olarak eklendi -- FAQPage zengin sonucu
+    Google 2023'ten beri otoriter sitelerle sinirli oldugu icin sema
+    yine de veriliyor; gorunen metinle harfiyen ayni kalmak zorunda.
+    Cevaplar /affiliate-disclosure ve /methodology ile ayyni gercegi
+    soyluyor; uclu celisme durumunda en dogru olan kaybeder.
+  */
+  const sssListe = [
+    {
+      soru: 'What does "verified" mean on a price?',
+      cevap:
+        "A human opened the vendor's own pricing page and recorded the starting price, with the date. When a tool cannot honestly be put on that scale — usage-based pricing, quote-only enterprise plans, or a price we could not verify — the entry says so instead of showing a number.",
+    },
+    {
+      soru: 'How current are the prices?',
+      cevap:
+        'We re-verify prices on a rolling basis. Every tool page shows the date it was last reviewed, so you can judge freshness yourself. If you spot a wrong price, tell us — corrections go through the submit page.',
+    },
+    {
+      soru: 'Why is there no quality score?',
+      cevap:
+        'Because we would be inventing a number. We publish what we can actually check: verified starting prices, free-tier status and the features we looked at. Which tool is better for your team is a fit question, not a scoreboard.',
+    },
+    {
+      soru: 'Do vendors pay for placement?',
+      cevap:
+        'No. Lists are ordered by verified starting price. ToolCompare takes part in affiliate programmes — some outbound links earn us a commission if you sign up — but that never changes the price you pay, a verdict, or the order of any list.',
+    },
+    {
+      soru: 'What is "not a monthly price"?',
+      cevap:
+        'Some tools cannot honestly be expressed as a monthly figure: usage-based platforms bill by what you consume, and some enterprise products only give quotes. We label those as such rather than presenting them as free or as a made-up number.',
+    },
+  ];
+
+
   const siteSemasi = {
     "@context": "https://schema.org",
     "@graph": [
@@ -98,6 +134,15 @@ export default async function Home() {
             name: t.name,
             url: `https://toolcompare.net/tools/${t.slug}`,
           })),
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://toolcompare.net/#faq',
+        mainEntity: sssListe.map((s) => ({
+          '@type': 'Question',
+          name: s.soru,
+          acceptedAnswer: { '@type': 'Answer', text: s.cevap },
+        })),
       },
     ],
   };
@@ -159,6 +204,31 @@ export default async function Home() {
     </details>
   );
 
+  const sss = (
+    <section className="mx-auto max-w-4xl border-t border-line px-4 py-12 sm:px-6">
+      <h2 className="text-2xl font-semibold">Frequently asked questions</h2>
+      <div className="mt-6 space-y-5">
+        {sssListe.map((s) => (
+          <div key={s.soru}>
+            <h3 className="font-medium">{s.soru}</h3>
+            <p className="mt-1 text-ink-soft">{s.cevap}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-6 text-sm text-ink-soft">
+        The full method, with its limits, is on the{' '}
+        <Link href="/methodology" className="text-accent underline underline-offset-4">
+          methodology
+        </Link>{' '}
+        page. Corrections are welcome via{' '}
+        <Link href="/submit" className="text-accent underline underline-offset-4">
+          submit
+        </Link>
+        .
+      </p>
+    </section>
+  );
+
   return (
     <>
       <script
@@ -174,7 +244,7 @@ export default async function Home() {
         512 linklik dev liste. Footer sayfanin ortasinda kaliyor, liste
         ondan sarkiyordu.
       */}
-      <ToolGridClient initialTools={tools} dizin={dizin} />
+      <ToolGridClient initialTools={tools} dizin={dizin} sss={sss} />
 
     </>
   );

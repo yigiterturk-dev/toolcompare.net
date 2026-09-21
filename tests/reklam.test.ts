@@ -138,16 +138,28 @@ test("ads.txt ve betik AYNI kaynagi okuyor", () => {
 test("karsilastirma: IKI taraf da derin degilse reklam yok", async () => {
   const { m, geri } = await taze("ca-pub-0000000000000000", "1234567890");
   const derin = T.filter(icerikDerin);
-  const ince = T.filter((t) => !icerikDerin(t));
-  assert.ok(derin.length > 0 && ince.length > 0, "olcut anlamsizlasmis");
+  assert.ok(derin.length > 0, "olcut anlamsizlasmis: derin sayfa kalmamis");
+
+  /*
+    2026-09-21: icerik zenginlestirmesi (19 arac tam yaziya cekildi) gercek
+    verideki yarim cift havuzunu tuketti -- bir tarafi ince, indekslenen
+    cift kalmamisti ve test bos geciyordu. Senaryo artik veri bolumunden
+    bagimsiz: indekslenen gercek bir ciftin bir tarafi BELLEKTE inceltilir.
+    ciftIndekslenir longDescription/keyFeatures okumaz, ciftReklamAlir okur;
+    boylece reklam kapisinin ince tarafa reklam vermeme davranisi her veri
+    bolumuyle de kurulur.
+  */
+  const incelt = (t: Arac): Arac => ({ ...t, longDescription: "kisa", keyFeatures: [] });
 
   // Indekslenen ama bir tarafi ince olan her cift reklamsiz kalmali.
   let denendi = 0;
   for (const a of derin.slice(0, 40)) {
-    for (const b of ince) {
-      if (!ciftIndekslenir(a, b)) continue;
+    for (const b of derin) {
+      if (a.slug === b.slug) continue;
+      const inceB = incelt(b);
+      if (!ciftIndekslenir(a, inceB)) continue;
       denendi++;
-      assert.equal(m.ciftReklamAlir(a, b), false, `yarim cift reklam aldi: ${a.slug}/${b.slug}`);
+      assert.equal(m.ciftReklamAlir(a, inceB), false, `yarim cift reklam aldi: ${a.slug}/${b.slug}`);
     }
   }
   assert.ok(denendi > 0, "tek bir yarim cift bile denenemedi -- test bos gecmis olur");

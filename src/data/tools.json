@@ -15644,7 +15644,7 @@
       "acikKaynak": true,
       "sso": false
     },
-    "longDescription": "Plausible is a lightweight analytics script that reports the numbers most sites actually use, without cookies and without collecting personal data.",
+    "longDescription": "Plausible is a privacy-first web analytics platform positioned as a simpler alternative to Google Analytics. The tracking script is lightweight, which keeps pages fast, and it runs without cookies, so many sites can use it without a consent banner. The dashboard shows pageviews, referrers, entry and exit pages and campaign data in a single view, and goals and custom events can be tracked without extra configuration. It is open source, so it can be self-hosted, or run as a hosted service.",
     "pros": [
       "Script is tiny, so it barely affects page speed",
       "No cookies, which simplifies consent",
@@ -15674,7 +15674,35 @@
         "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
         "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Realtime dashboard",
+        "description": "Live visitor counts, referrers and top pages update as traffic arrives."
+      },
+      {
+        "title": "Goals and custom events",
+        "description": "Track conversions and interactions such as button clicks or form submissions."
+      },
+      {
+        "title": "Campaign reporting",
+        "description": "UTM tags are broken out automatically to show which campaigns bring visitors."
+      },
+      {
+        "title": "API access",
+        "description": "Pull stats into other tools or build custom reports over a documented API."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does Plausible need a cookie banner?",
+        "cevap": "No. Plausible runs without cookies and does not collect personal data, which is why many sites can use it without a consent prompt. You should still confirm this fits your own regulatory reading."
+      },
+      {
+        "soru": "Is Plausible a drop-in replacement for Google Analytics?",
+        "cevap": "No. It deliberately shows fewer reports with less configuration, and some GA features have no equivalent. Its pitch is simplicity, not parity."
+      }
+    ]
   },
   {
     "slug": "fathom-analytics",
@@ -16132,7 +16160,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "OmniFocus is a deep task manager built around Getting Things Done, with perspectives, deferred dates and review cycles.",
+    "longDescription": "OmniFocus is a task manager built around the Getting Things Done method, made by The Omni Group for iPhone, iPad and Mac. Tasks are organized into projects, tags and folders, and a review cycle keeps lists current. The Forecast view combines calendar events with due tasks so the day can be judged at a glance, and Perspectives let each person save their own filtered views of the database. Data syncs across devices through the company's sync service.",
     "pros": [
       "Handles genuinely complex personal systems",
       "Custom perspectives are powerful",
@@ -16162,7 +16190,35 @@
         "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Forecast view",
+        "description": "Calendar events and due tasks side by side to plan realistic days."
+      },
+      {
+        "title": "Perspectives",
+        "description": "Save custom filtered views for focus modes like today's work or waiting-on items."
+      },
+      {
+        "title": "Projects and tags",
+        "description": "Sequential and parallel projects with tags for context across lists."
+      },
+      {
+        "title": "Capture everywhere",
+        "description": "Quick entry on iPhone, iPad, Mac and Apple Watch."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Is OmniFocus available on Windows or Android?",
+        "cevap": "No. It is built for Apple devices only — iPhone, iPad, Mac and Apple Watch — with sync between them. Mixed-platform teams should look elsewhere."
+      },
+      {
+        "soru": "Does OmniFocus require a subscription?",
+        "cevap": "Both models exist: a one-time purchase per major version, or a subscription that bundles the apps with ongoing updates. Check which model the current version uses before buying."
+      }
+    ]
   },
   {
     "slug": "ticktick",
@@ -26014,7 +26070,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Typefully helps write, schedule and analyse posts and threads for social platforms, with a clean writing surface.",
+    "longDescription": "Typefully is a writing and scheduling tool aimed at people who post threads on X. The editor is built around drafting long threads in one document, with previews of how posts will appear once published. Drafts can be queued, scheduled or published directly, and a calendar view shows what is planned. Analytics cover how posts perform, and multiple accounts can be managed from the same workspace.",
     "pros": [
       "Writing experience is the focus",
       "Scheduling and analytics included",
@@ -26026,7 +26082,35 @@
       "Best value only for text-first accounts"
     ],
     "targetAudience": "Writers and founders posting regularly on text-first platforms.",
-    "verdict": "The nicest place to write threads. Multi-network marketing teams need a broader tool."
+    "verdict": "The nicest place to write threads. Multi-network marketing teams need a broader tool.",
+    "keyFeatures": [
+      {
+        "title": "Thread editor",
+        "description": "Draft and rearrange long threads in a single document with live previews."
+      },
+      {
+        "title": "Scheduling queue",
+        "description": "Plan posts and threads on a calendar and let the queue publish them."
+      },
+      {
+        "title": "Analytics",
+        "description": "See follower growth and how individual posts perform over time."
+      },
+      {
+        "title": "Multi-account support",
+        "description": "Switch between accounts and teams inside one workspace."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does Typefully support platforms other than X?",
+        "cevap": "It has expanded beyond X — adding LinkedIn, Threads and Mastodon — though the thread editor was designed around X first."
+      },
+      {
+        "soru": "Can several people share a Typefully workspace?",
+        "cevap": "Yes. Paid plans include team workspaces with shared drafts and roles."
+      }
+    ]
   },
   {
     "slug": "loops",
@@ -26418,7 +26502,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Microsoft 365 provides Office desktop applications, Exchange mail, Teams and OneDrive under one subscription.",
+    "longDescription": "Microsoft 365 bundles the Office desktop and web apps — Word, Excel, PowerPoint, Outlook and OneNote — with cloud services such as OneDrive storage and Teams. For businesses it adds Exchange mailboxes, SharePoint, and security and device management through the admin center, so accounts, licenses and policies sit in one place. The apps run on Windows, macOS, web and mobile, and documents stay in sync across them. It is the default productivity stack in many companies.",
     "pros": [
       "Desktop Word and Excel remain the most capable",
       "Enterprise identity and compliance tooling",
@@ -26448,7 +26532,35 @@
         "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Office apps",
+        "description": "Word, Excel, PowerPoint and Outlook on desktop, web and mobile."
+      },
+      {
+        "title": "OneDrive and SharePoint",
+        "description": "File storage, sharing and team sites with version history."
+      },
+      {
+        "title": "Teams",
+        "description": "Chat, meetings and collaboration connected to the rest of the suite."
+      },
+      {
+        "title": "Admin and security",
+        "description": "Central license, policy and device management for organizations."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Do I need Microsoft 365 to open Office files?",
+        "cevap": "No. The web versions of Word, Excel and PowerPoint are free with a Microsoft account, and files open in other vendors' apps too. Subscriptions add the full desktop apps, storage and Teams."
+      },
+      {
+        "soru": "Can Microsoft 365 be used without OneDrive?",
+        "cevap": "Yes — documents can stay on disk, though sharing, version history and sync assume cloud storage. Business plans include OneDrive whether it is used or not."
+      }
+    ]
   },
   {
     "slug": "dropbox",
@@ -28176,7 +28288,7 @@
       "acikKaynak": false,
       "sso": true
     },
-    "longDescription": "Zoom Phone adds a cloud telephone system to Zoom, with numbers, routing and voicemail in the same app as meetings.",
+    "longDescription": "Zoom Phone is Zoom's cloud telephony service, added on top of Zoom Meetings. It replaces a desk-phone system with a softphone in the Zoom app plus optional desk phones, and calls can move between mobile and desktop. Admins set up call routing, auto-receptionists and IVR menus from a central console, and reporting covers call queues and users. It suits companies that already run meetings on Zoom and want voice in the same platform.",
     "pros": [
       "Same app as your meetings",
       "Cheaper than legacy phone systems",
@@ -28188,7 +28300,35 @@
       "Number availability varies by country"
     ],
     "targetAudience": "Companies already standardised on Zoom that want to replace desk phones.",
-    "verdict": "Convenient consolidation for Zoom shops. Contact centres need a purpose-built platform."
+    "verdict": "Convenient consolidation for Zoom shops. Contact centres need a purpose-built platform.",
+    "keyFeatures": [
+      {
+        "title": "Cloud PBX",
+        "description": "Call routing, auto-receptionist and IVR managed from the admin console."
+      },
+      {
+        "title": "Works with Zoom Meetings",
+        "description": "Move from a call to a meeting, or escalate a chat to voice, in one app."
+      },
+      {
+        "title": "Mobile and desk phones",
+        "description": "The same number rings on the desktop app, mobile app and supported hardware."
+      },
+      {
+        "title": "SMS and call recording",
+        "description": "Text messaging and call recording where regulations and plans allow."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does Zoom Phone include calling minutes?",
+        "cevap": "It depends on the calling plan for your country: domestic calling is the usual shape, with metered rates or add-ons for international. Check the country plan before comparing prices."
+      },
+      {
+        "soru": "Can existing phone numbers be ported to Zoom Phone?",
+        "cevap": "Yes, numbers can be ported in, though the process and timeline depend on the current carrier and country."
+      }
+    ]
   },
   {
     "slug": "dialpad",
@@ -28765,7 +28905,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Porkbun registers domains at low prices with renewals that do not jump, and includes WHOIS privacy and basic tooling free.",
+    "longDescription": "Porkbun is a domain registrar known for straightforward pricing and a no-nonsense control panel. Registrations include WHOIS privacy and SSL certificates at no additional cost, and the panel provides DNS management, email forwarding and URL redirects without needing separate services. It also sells hosting add-ons such as a website builder and email hosting. It has built a following among developers who want a registrar that stays out of the way.",
     "pros": [
       "Cheap registration and honest renewals",
       "Free WHOIS privacy",
@@ -28777,7 +28917,35 @@
       "Hosting products are basic"
     ],
     "targetAudience": "Anyone buying domains who is tired of first-year pricing tricks.",
-    "verdict": "The renewal honesty is the whole point. Registrars that hide renewal prices cost more over time."
+    "verdict": "The renewal honesty is the whole point. Registrars that hide renewal prices cost more over time.",
+    "keyFeatures": [
+      {
+        "title": "WHOIS privacy included",
+        "description": "Registrations include privacy protection to keep personal details out of WHOIS."
+      },
+      {
+        "title": "DNS management",
+        "description": "Full DNS control with forwarding and support for common record types."
+      },
+      {
+        "title": "Email forwarding",
+        "description": "Forward addresses on your domain to an existing mailbox."
+      },
+      {
+        "title": "SSL certificates",
+        "description": "Certificates for registered domains included."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does Porkbun include hosting?",
+        "cevap": "It sells website and email hosting as add-ons, but its core business is domain registration; many buyers point DNS elsewhere."
+      },
+      {
+        "soru": "Can a domain registered elsewhere be transferred in?",
+        "cevap": "Yes, transfers are supported for most TLDs and typically add a year to the registration. The domain has to be unlocked at the current registrar first."
+      }
+    ]
   },
   {
     "slug": "printful",
@@ -30046,7 +30214,7 @@
       "acikKaynak": true,
       "sso": true
     },
-    "longDescription": "Weaviate is a BSD-licensed vector database available as a managed cloud service or a self-managed deployment. Its hybrid search runs keyword and vector searches together and fuses their results, with configurable weighting between the two components.",
+    "longDescription": "Weaviate is an open-source vector database used to store and search data embeddings. It combines vector similarity search with keyword (BM25) search in a single hybrid query, which helps retrieval stay accurate when embeddings alone miss context. It offers modules for vectorizing data at import time, a GraphQL and REST API, multi-tenancy, and can be self-hosted or run on its cloud service. Teams use it for retrieval-augmented generation, semantic search and recommendation systems.",
     "pros": [
       "Hybrid retrieval: Combines BM25 keyword and vector results in one query.",
       "Deployment choice: Use Weaviate Cloud or run the same database yourself.",
@@ -30153,7 +30321,17 @@
         "Vendor documentation was reviewed; ToolCompare did not independently benchmark retrieval quality, memory use, scaling behavior or cloud cost.",
         "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "Can Weaviate run locally for development?",
+        "cevap": "Yes. Besides Docker and Kubernetes deployments and the cloud service, Weaviate can run embedded inside a Python application."
+      },
+      {
+        "soru": "Does Weaviate support hybrid search?",
+        "cevap": "Yes. Vector similarity and BM25 keyword search combine in one hybrid query with configurable weighting."
+      }
+    ]
   },
   {
     "slug": "qdrant",
@@ -30526,7 +30704,7 @@
       "acikKaynak": false,
       "sso": false
     },
-    "longDescription": "Bolt generates and runs web applications from prompts in a browser-based environment, exposes the project code, connects external tools and publishes through Bolt hosting or supported alternatives. AI work consumes plan tokens, while hosting has separate account-wide traffic limits.",
+    "longDescription": "Bolt New is StackBlitz's prompt-driven web app builder. You describe an application, it generates a project in the browser using WebContainers — so Node.js runs without local setup — and you keep editing the code as it iterates on follow-up prompts. Projects can be connected to databases and deployment services and shipped without leaving the tool. It is aimed at developers who want speed and less setup, and at non-developers who want a working starting point.",
     "pros": [
       "Browser runtime: Builds and previews supported web applications without a local installation.",
       "Editable project code: Users can inspect and continue working with the generated files.",
@@ -30634,7 +30812,17 @@
         "Vendor documentation was reviewed; ToolCompare did not independently test generated-code quality, security, browser compatibility, connector permissions, token consumption or hosting reliability.",
         "The pricing source was added by an automated check: the page was fetched on this date and contained pricing information. The other sources on this record were read by an editor."
       ]
-    }
+    },
+    "sss": [
+      {
+        "soru": "Do you own the code Bolt New generates?",
+        "cevap": "Yes. Projects are real codebases that can be downloaded and continued in your own editor; the tool is a starting point, not a lock-in."
+      },
+      {
+        "soru": "Does Bolt New run the backend as well?",
+        "cevap": "It scaffolds full-stack projects and runs them in the browser through WebContainers, with integrations for databases and deployment, but serious production traffic still needs real infrastructure."
+      }
+    ]
   },
   {
     "slug": "gorgias",
@@ -46633,7 +46821,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Forgejo is a community-governed fork of Gitea, created to keep the project fully open and independently run.",
+    "longDescription": "Forgejo is a community-driven software forge, started in late 2022 as a hard fork of Gitea after governance disagreements. It provides self-hosted Git repository hosting with issues, pull requests, wikis and code review, plus Forgejo Actions, a CI system that runs GitHub Actions-compatible workflows. Codeberg, the nonprofit code hosting service, runs on Forgejo. It is a common choice for organizations that want code hosting on their own infrastructure.",
     "pros": [
       "Community governance rather than a single company",
       "Same low resource needs as Gitea",
@@ -46655,7 +46843,35 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Git hosting",
+        "description": "Repositories with issues, pull requests, wikis and code review."
+      },
+      {
+        "title": "Forgejo Actions",
+        "description": "CI that runs GitHub Actions-compatible workflow files."
+      },
+      {
+        "title": "Lightweight self-hosting",
+        "description": "Runs on modest hardware with low maintenance overhead."
+      },
+      {
+        "title": "Migrations",
+        "description": "Imports repositories and issues from GitHub, Gitea and other forges."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Is Forgejo compatible with Gitea?",
+        "cevap": "Largely yes. It forked from Gitea and migrations between the two are straightforward, but they are separate projects with separate governance now."
+      },
+      {
+        "soru": "Who is behind Forgejo?",
+        "cevap": "Codeberg e.V., a German nonprofit, stewards the project, and Codeberg.org is its flagship instance."
+      }
+    ]
   },
   {
     "slug": "gitee",
@@ -46716,7 +46932,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Redmine is an open-source project management and issue tracking application that has run reliably for over a decade.",
+    "longDescription": "Redmine is a long-running open-source project management and issue tracker written in Ruby on Rails. It supports multiple projects with sub-projects, role-based access control, Gantt charts and calendars, time tracking, wikis, forums and files per project. Its flexibility comes largely from a plugin ecosystem and themes built up over many years. Teams that want self-hosted issue tracking without a subscription model still standardize on it.",
     "pros": [
       "Free and self-hostable with no seat limits",
       "Plugin ecosystem covers most needs",
@@ -46756,7 +46972,35 @@
         "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
         "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Multi-project support",
+        "description": "Nested projects with per-role permissions and cross-project views."
+      },
+      {
+        "title": "Gantt and calendar",
+        "description": "Schedule issues visually and track time against them."
+      },
+      {
+        "title": "Flexible workflows",
+        "description": "Custom statuses, trackers and per-role issue transitions."
+      },
+      {
+        "title": "Plugins and themes",
+        "description": "A large ecosystem built up over the project's long life."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Is Redmine still maintained?",
+        "cevap": "Yes, though releases move slowly. It is a mature project with a large plugin ecosystem rather than a fast-moving product."
+      },
+      {
+        "soru": "Does Redmine have kanban boards?",
+        "cevap": "Not in the core. Gantt, calendar and issue views are built in; boards come from plugins."
+      }
+    ]
   },
   {
     "slug": "openproject",
@@ -47321,7 +47565,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Microsoft Project is the long-standing tool for formal project scheduling: dependencies, critical path and resource levelling.",
+    "longDescription": "Microsoft Project is the long-established project scheduling tool for Windows and the web, used for resource planning on complex projects. It centers on Gantt chart scheduling: tasks, dependencies, durations, resource assignments and leveling when work exceeds capacity. Roadmaps and portfolio views aggregate multiple projects, and it connects to Teams, Power BI and Microsoft 365 data. It is aimed at professional planners rather than lightweight task lists.",
     "pros": [
       "Serious scheduling capability",
       "Expected in many enterprise and construction contexts",
@@ -47333,7 +47577,35 @@
       "Overkill for anything but formal projects"
     ],
     "targetAudience": "Project managers running plans with real dependencies and resources.",
-    "verdict": "Still the reference for critical-path planning. Software teams almost never need it."
+    "verdict": "Still the reference for critical-path planning. Software teams almost never need it.",
+    "keyFeatures": [
+      {
+        "title": "Gantt scheduling",
+        "description": "Task dependencies, constraints, critical path and baselines."
+      },
+      {
+        "title": "Resource management",
+        "description": "Assign people and materials, then level overallocated work."
+      },
+      {
+        "title": "Roadmaps and portfolios",
+        "description": "Roll several projects up into one program view."
+      },
+      {
+        "title": "Microsoft 365 integration",
+        "description": "Connects with Teams, Power BI and Project for the web."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Is Microsoft Project the same as Planner?",
+        "cevap": "No. Planner covers lightweight task boards inside Microsoft 365; Project is the scheduling tool with dependencies, resource leveling and baselines."
+      },
+      {
+        "soru": "Can Project be used without the desktop app?",
+        "cevap": "Partly. Project for the web handles lighter planning, while the full Gantt feature set lives in the desktop application."
+      }
+    ]
   },
   {
     "slug": "checkvist",
@@ -48251,7 +48523,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Chartbeat shows what is happening on your site right now, built for newsrooms deciding what to promote.",
+    "longDescription": "Chartbeat is a real-time analytics platform built for editorial teams rather than marketers. It measures engaged time — how long readers actively spend with content — rather than raw pageviews, and newsrooms use it to decide what to promote while traffic is happening. Headline testing, alerts for spikes and dashboards for the front page give editors immediate feedback, while historical reporting covers audience behavior over time.",
     "pros": [
       "Real-time attention data, not just pageviews",
       "Built around editorial decisions",
@@ -48263,7 +48535,35 @@
       "Historical analysis is not the focus"
     ],
     "targetAudience": "Publishers making live decisions about content placement.",
-    "verdict": "Excellent for newsrooms and irrelevant for almost everyone else."
+    "verdict": "Excellent for newsrooms and irrelevant for almost everyone else.",
+    "keyFeatures": [
+      {
+        "title": "Realtime dashboard",
+        "description": "Live view of concurrent visitors, referrers and page performance."
+      },
+      {
+        "title": "Engaged time",
+        "description": "Measures active reading rather than just loads of a page."
+      },
+      {
+        "title": "Headline testing",
+        "description": "Try alternate headlines and promote the one that holds readers."
+      },
+      {
+        "title": "Alerts",
+        "description": "Notifications when traffic spikes or drops on monitored pages."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does Chartbeat measure the whole audience?",
+        "cevap": "It measures through a JavaScript tag on your pages, so AMP versions, native apps and off-site syndication need their own handling to be counted."
+      },
+      {
+        "soru": "Is Chartbeat for marketers or editors?",
+        "cevap": "Mainly editorial teams: the realtime view and engaged-time metric exist to guide coverage decisions while a story is live, not to track campaigns."
+      }
+    ]
   },
   {
     "slug": "statcounter",
@@ -49046,7 +49346,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "TiddlyWiki is a self-contained personal wiki that lives in a single HTML file you own outright.",
+    "longDescription": "TiddlyWiki is a non-linear personal wiki that lives in a single HTML file. Each note is a small 'tiddler', and tiddlers can be linked, tagged and transcluded to build a personal knowledge base that works offline in any browser. Because the whole wiki is one file, it can be stored anywhere — synced, emailed, put on a USB stick — or served on the web. A plugin ecosystem adds search, task lists and other extensions, and it is free and open source.",
     "pros": [
       "Entire wiki is one portable file",
       "No server or account needed",
@@ -49086,7 +49386,35 @@
         "Automated check: the vendor page states the software is open source and free to use. An editor has not read it line by line.",
         "Covers the open-source edition only; the same vendor may sell a paid cloud or enterprise tier."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Single-file wiki",
+        "description": "The entire wiki is one portable HTML file that works offline."
+      },
+      {
+        "title": "Tiddlers",
+        "description": "Small linked, tagged and transcludable notes instead of long pages."
+      },
+      {
+        "title": "Plugins",
+        "description": "Add search, task lists, calendars and other extensions."
+      },
+      {
+        "title": "Host it anywhere",
+        "description": "Serve it on the web, sync it or carry it on a USB stick."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Can TiddlyWiki be used by a team?",
+        "cevap": "It is designed as a single-writer tool. Multi-user use means hosting a server-based edition, which trades away the simplicity of the single file."
+      },
+      {
+        "soru": "Where does TiddlyWiki save data?",
+        "cevap": "In the single HTML file itself. Saving takes either the browser's download flow or one of the saver plugins that write to a server or storage service."
+      }
+    ]
   },
   {
     "slug": "prezi",
@@ -49339,7 +49667,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "CorelDRAW is a long-established vector design suite, strong in print, signage and apparel workflows.",
+    "longDescription": "CorelDRAW is a vector illustration and page layout suite, originally released in 1989 and positioned mainly on Windows. The suite combines the CorelDRAW vector editor with Photo-Paint for bitmap editing, plus tools for typography, page layout and print production. It remains common in sign-making, screen printing, engraving and print shops, where multipage layout and precise color output matter, and it imports and exports a wide range of file formats.",
     "pros": [
       "Deep vector and print production features",
       "One-off licence still available",
@@ -49351,7 +49679,35 @@
       "Smaller community than Adobe"
     ],
     "targetAudience": "Print, signage and apparel designers with established workflows.",
-    "verdict": "Entrenched in specific trades for good reasons. Screen designers should look elsewhere."
+    "verdict": "Entrenched in specific trades for good reasons. Screen designers should look elsewhere.",
+    "keyFeatures": [
+      {
+        "title": "Vector illustration",
+        "description": "Node-level control over curves, shapes and line work."
+      },
+      {
+        "title": "Page layout",
+        "description": "Multipage documents with master layers and precise print setup."
+      },
+      {
+        "title": "Photo-Paint",
+        "description": "Bitmap editing and retouching inside the same suite."
+      },
+      {
+        "title": "Print and sign production",
+        "description": "Color management, output profiles and industry file-format support."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does CorelDRAW run on Mac?",
+        "cevap": "Yes. After decades as Windows-only, a native Mac version returned in 2019, though the Windows release remains the more complete one."
+      },
+      {
+        "soru": "Can CorelDRAW open Adobe files?",
+        "cevap": "It imports Illustrator and Photoshop files, but complex live effects do not always survive the trip, so round-tripping needs a check."
+      }
+    ]
   },
   {
     "slug": "affinity",
@@ -49359,9 +49715,49 @@
     "category": "Design",
     "shortDescription": "Topics referred to by the same term.",
     "websiteUrl": "https://affinity.studio",
-    "incelendi": false,
+    "incelendi": true,
     "basePrice": 0,
-    "isFlat": true
+    "isFlat": true,
+    "verdict": "A relationship-intelligence CRM built for dealmaking teams that want contact and pipeline data maintained automatically rather than by hand.",
+    "longDescription": "Affinity is a relationship-intelligence CRM aimed at deal-driven teams, most visibly in venture capital, private equity and investment banking. Its distinguishing behavior is automatic data capture: it reads email and calendar activity from connected Outlook or Gmail accounts and keeps contacts, interactions and relationship strength scores up to date without manual entry. On top of that layer sit deal pipelines, introduction maps and reporting, so a team can see who knows whom and which deals have gone quiet. It trades the breadth of a general-purpose CRM for depth in relationship-driven workflows.",
+    "keyFeatures": [
+      {
+        "title": "Relationship intelligence",
+        "description": "Email and calendar activity updates contact records and strength scores automatically."
+      },
+      {
+        "title": "Deal pipelines",
+        "description": "Stage-based deal tracking with signals on stalled or quiet opportunities."
+      },
+      {
+        "title": "Relationship map",
+        "description": "See who on the team is connected to a contact or organization."
+      },
+      {
+        "title": "Integrations",
+        "description": "Works with Outlook and Gmail, plus API access for custom workflows."
+      }
+    ],
+    "pros": [
+      "Automatic CRM data: Contact and interaction records maintain themselves from email and calendar activity.",
+      "Built for dealmaking: Pipeline, introductions and relationship strength match VC and PE workflows.",
+      "Low manual entry: Teams adopt it because users do not have to type CRM updates themselves."
+    ],
+    "cons": [
+      "Narrow focus: General sales teams may miss the breadth of mainstream CRM platforms.",
+      "Depends on email access: Value hinges on connecting mailboxes, which some organizations restrict.",
+      "Pricing not published: Costs are given on inquiry, so budgeting requires talking to sales."
+    ],
+    "sss": [
+      {
+        "soru": "Is Affinity a general-purpose CRM?",
+        "cevap": "Not really. It is built for relationship-driven deal work — venture capital, private equity, banking — where the CRM maintains itself from email and calendar activity rather than manual entry."
+      },
+      {
+        "soru": "How does Affinity get its data?",
+        "cevap": "It connects to team mailboxes and calendars on Outlook or Gmail, reads interactions with contacts and organizations, and builds relationship strength scores from them."
+      }
+    ]
   },
   {
     "slug": "blackmagic-design",
@@ -50566,7 +50962,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "FreeAgent is accounting software for freelancers and small businesses, strong in the UK where it handles tax filing.",
+    "longDescription": "FreeAgent is UK-focused accounting software for freelancers and small businesses, owned by NatWest Group. It handles invoicing, expense capture, bank feeds and VAT returns, with direct support for Making Tax Digital filing and self-assessment. The timeline and bank reconciliation views are designed for owners who do their own bookkeeping rather than for accountants, though accountants get multi-client access. Payroll and project time tracking are included.",
     "pros": [
       "UK tax filing built in",
       "Clear interface for non-accountants",
@@ -50596,7 +50992,35 @@
         "This record's price has NOT been verified line by line by an editor: the only evidence is an automated reachability check of the vendor pricing page. Treat the figures as unconfirmed until an editor reviews the page.",
         "Automated check: the pricing page was fetched on this date and contained pricing information. An editor has not read it line by line."
       ]
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Invoicing and estimates",
+        "description": "Create, send and chase invoices with automated reminders."
+      },
+      {
+        "title": "Bank feeds",
+        "description": "Transactions flow in from bank accounts for categorizing and matching."
+      },
+      {
+        "title": "MTD VAT and self-assessment",
+        "description": "File VAT returns under Making Tax Digital and submit self-assessment."
+      },
+      {
+        "title": "Projects and time tracking",
+        "description": "Track billable time per project and turn it into invoices."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does FreeAgent work outside the UK?",
+        "cevap": "It is built around UK tax rules — VAT, Making Tax Digital and self-assessment — so businesses outside the UK will find the fit poor."
+      },
+      {
+        "soru": "Can an accountant access a client's FreeAgent for free?",
+        "cevap": "Yes. Accountants get free access through a separate practice view covering their clients."
+      }
+    ]
   },
   {
     "slug": "quicken",
@@ -50607,7 +51031,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "Quicken manages personal and small business finances on the desktop, with a long history and a subscription model.",
+    "longDescription": "Quicken is one of the longest-running personal finance programs, sold as desktop software for Windows and Mac. It tracks accounts in one place: budgets, bills, spending categories and investment portfolios, with reports that go deeper than most web apps. Higher tiers add small-business invoicing and rental property tracking. Data stays on the desktop, with optional sync to mobile apps, which is part of its appeal to users who avoid browser-only finance tools.",
     "pros": [
       "Deep personal finance features",
       "Long track record and stable data model",
@@ -50619,7 +51043,35 @@
       "Bank connections break periodically"
     ],
     "targetAudience": "People managing detailed personal or rental finances.",
-    "verdict": "Still the most capable personal finance tool. The move to subscription annoyed a loyal base."
+    "verdict": "Still the most capable personal finance tool. The move to subscription annoyed a loyal base.",
+    "keyFeatures": [
+      {
+        "title": "All accounts in one place",
+        "description": "Banking, credit cards, loans and investments aggregated."
+      },
+      {
+        "title": "Budgeting and bills",
+        "description": "Category budgets, bill reminders and cash-flow projections."
+      },
+      {
+        "title": "Investment tracking",
+        "description": "Portfolio performance, cost basis and capital gains reports."
+      },
+      {
+        "title": "Property and business",
+        "description": "Rental income tracking and small-business invoicing on higher tiers."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Does Quicken work on mobile?",
+        "cevap": "As a companion only. The desktop application is the product; mobile apps sync to it rather than replace it."
+      },
+      {
+        "soru": "Does Quicken require a subscription now?",
+        "cevap": "Yes. Quicken moved to an annual subscription; older versions keep working locally but lose online services such as bank downloads once they age out."
+      }
+    ]
   },
   {
     "slug": "tally-solutions",
@@ -51264,7 +51716,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "OTRS is an open-source service management and ticketing system used for IT service desks.",
+    "longDescription": "OTRS is an open-source ticket and service-desk system originally from Germany, whose community edition ended in 2020 and now continues as the community-maintained Znuny fork. Tickets arrive by email or portal and move through configurable queues, priorities and SLAs with escalation rules. It includes an FAQ, a knowledge base and ITSM modules for change and configuration management, and it remains a common self-hosted choice for IT support teams.",
     "pros": [
       "Open source with a self-hosted option",
       "ITSM process support",
@@ -51276,7 +51728,35 @@
       "Commercial edition needed for some features"
     ],
     "targetAudience": "IT service desks that need process compliance without commercial licensing.",
-    "verdict": "Capable where ITSM process matters. Expect configuration work, not a quick setup."
+    "verdict": "Capable where ITSM process matters. Expect configuration work, not a quick setup.",
+    "keyFeatures": [
+      {
+        "title": "Queue-based ticketing",
+        "description": "Email-created tickets routed by queues, priorities and SLAs."
+      },
+      {
+        "title": "ITSM modules",
+        "description": "Change, incident and configuration management extensions."
+      },
+      {
+        "title": "FAQ and knowledge base",
+        "description": "Reusable answers for agents and a customer-facing portal."
+      },
+      {
+        "title": "Automation",
+        "description": "Generic agents and access controls automate routing and policy."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Is OTRS still open source?",
+        "cevap": "The original community edition ended in 2020. The open-source line continues as the community fork Znuny, while OTRS Group sells a commercial product."
+      },
+      {
+        "soru": "Is OTRS free to self-host?",
+        "cevap": "The Znuny fork is, under the same open-source terms. The commercial OTRS product is licensed separately."
+      }
+    ]
   },
   {
     "slug": "uservoice",
@@ -51287,7 +51767,7 @@
     "incelendi": true,
     "basePrice": 0,
     "isFlat": true,
-    "longDescription": "UserVoice collects product feedback and feature requests, letting customers vote and product teams see demand.",
+    "longDescription": "UserVoice is a product feedback platform that collects ideas from customers and turns voting data into prioritization. Customers submit and vote on ideas through public or private portals, teams can capture feedback from support tickets and sales calls, and reports rank requests by votes, accounts and revenue so roadmap decisions can be backed by demand evidence. It is used by product organizations that want proof of need before committing to features.",
     "pros": [
       "Customer voting surfaces real demand",
       "Keeps requests out of support inboxes",
@@ -51309,7 +51789,35 @@
     "kriterKaynagi": {
       "yontem": "site-scan",
       "checkedAt": "2026-08-31"
-    }
+    },
+    "keyFeatures": [
+      {
+        "title": "Idea portals",
+        "description": "Public or private spaces where customers submit and vote on ideas."
+      },
+      {
+        "title": "Feedback capture",
+        "description": "Collect requests from tickets, calls and surveys into one pipeline."
+      },
+      {
+        "title": "Prioritization reports",
+        "description": "Rank requests by votes, accounts and revenue impact."
+      },
+      {
+        "title": "Roadmap integration",
+        "description": "Sync accepted ideas into delivery tools such as Jira."
+      }
+    ],
+    "sss": [
+      {
+        "soru": "Is UserVoice a helpdesk?",
+        "cevap": "It started as one and moved to feedback management: idea portals, voting and prioritization reporting. Ticketing is no longer its focus."
+      },
+      {
+        "soru": "Can customers see each other's requests?",
+        "cevap": "That depends on the portal. Public portals share submissions and votes; private portals show them only to your team."
+      }
+    ]
   },
   {
     "slug": "n8n",
