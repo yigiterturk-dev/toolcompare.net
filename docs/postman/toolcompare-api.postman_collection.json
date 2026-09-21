@@ -1,0 +1,44 @@
+{
+  "info": {
+    "name": "ToolCompare Pricing API",
+    "description": "Free JSON dataset of software pricing, with the date each price was read and what could not be verified. No API key required. CC BY 4.0 — attribution required. Docs: https://toolcompare.net/data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "https://toolcompare.net" }
+  ],
+  "item": [
+    {
+      "name": "All tools (first page)",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/tools?limit=50&offset=0",
+        "description": "Paginated tool records. X-Total-Count header gives the full row count."
+      }
+    },
+    {
+      "name": "Field selection",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/tools?fields=slug,name,category,basePrice&limit=10",
+        "description": "Pick only the fields you need to keep responses small."
+      }
+    },
+    {
+      "name": "Compact format",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/tools?format=compact&limit=10",
+        "description": "Trimmed records for quick overviews."
+      }
+    },
+    {
+      "name": "Pricing transparency sample",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/tools?fields=slug,name,evidence&limit=25",
+        "description": "Evidence block carries the source URL and the date a human read that pricing page — the field most pricing datasets leave out."
+      }
+    }
+  ]
+}
