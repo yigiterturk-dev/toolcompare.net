@@ -32,7 +32,6 @@ export default function Image() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={mark} width={144} height={92} alt="" />
           <div style={{ display: "flex", fontSize: 92, color: "#1B2633", fontWeight: 700, lineHeight: 1.05 }}>
             Tool<span style={{ color: "#0A6CFA" }}>Compare</span>

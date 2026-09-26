@@ -36,10 +36,13 @@
   /* Marka: editoryal siyah birincil, tek vurgu */
   --color-brand: #18181b;
   --color-brand-ink: #ffffff;
-  /* #ec4899 (skill onerisi) ve #db2777 acik zeminde 4.5 kontrasti tutturamadi;
-     olculen 4.40. Ayni renk ailesinin bir tonu koyusu 4.5 esigini geciyor. */
-  --color-accent: #be185d;
-  --color-accent-soft: #fdf2f8;
+  /* Logo mavisi (#0A6CFA) #fafafa zeminde 4.43 -- 4.5 esiginin alti.
+     Metin/link icin bir ton koyusu: #0A63E6 = beyazda 5.33, canvas'ta 5.11,
+     accent-soft uzerinde 4.87. Eski pembe (#be185d) logoyla catisiyordu. */
+  --color-accent: #0A63E6;
+  --color-accent-soft: #eff5ff;
+  /* Ana donusum butonu (Visit): siyah digerleriyle karisiyordu. */
+  --color-cta: #0A63E6;
 
   /*
     Anlam tasiyan renkler. Sitenin sattigi sey fiyatin DOGRULANMIS olmasi;

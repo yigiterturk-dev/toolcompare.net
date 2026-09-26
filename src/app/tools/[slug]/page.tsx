@@ -21,7 +21,8 @@ import { KRITER_SIRA, KRITER_ETIKET, KRITER_ACIKLAMA } from "@/lib/kriterler";
 import { evidenceLabel, toolEvidence, kanitRakamli } from "@/lib/evidence";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, XCircle, Award, Target, MessageSquareQuote } from "lucide-react";
+import ToolLogo from "@/components/ToolLogo";
+import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -322,12 +323,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
         <article className="mt-8">
           <header className="flex flex-wrap items-start gap-4 border-b border-line pb-8">
-            <span
-              aria-hidden="true"
-              className="grid size-16 shrink-0 place-items-center rounded-[--radius-card] bg-surface-sunken font-serif text-2xl font-semibold text-ink-soft"
-            >
-              {tool.name.charAt(0)}
-            </span>
+            {/* Eskiden her aracta sabit bas harf vardi; 501 aracin logosu duruyordu. */}
+            <ToolLogo slug={tool.slug} name={tool.name} size={64} className="text-2xl" />
             <div className="min-w-0 flex-1">
               {tool.category ? (
                 <p className="text-xs font-medium tracking-wide text-ink-muted uppercase">
@@ -639,7 +636,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                     target="_blank"
                     rel={relDegeri(tool.slug)}
                     data-tap
-                    className="mt-4 block rounded-[--radius-control] bg-brand px-4 py-2.5 text-center text-sm font-medium text-brand-ink no-underline transition-opacity duration-150 hover:opacity-90"
+                    className="mt-4 block rounded-[--radius-control] bg-cta px-4 py-2.5 text-center text-sm font-medium text-white no-underline transition-opacity duration-150 hover:opacity-90"
                   >
                     Visit {tool.name}
                   </a>
@@ -647,34 +644,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 <AffiliateNotu />
               </div>
 
-              {(tool.pros?.length || tool.cons?.length) && (
-                <div className="rounded-[--radius-card] border border-line bg-surface p-5">
-                  {tool.pros?.length ? (
-                    <>
-                      <h2 className="flex items-center gap-1.5 font-sans text-sm font-semibold text-verified">
-                        <CheckCircle2 size={16} aria-hidden="true" /> Pros
-                      </h2>
-                      <ul className="mt-2 list-none space-y-1.5 p-0 text-sm text-ink-soft">
-                        {(tool.pros || []).map((pro: string, i: number) => (
-                          <li key={i}>{pro}</li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : null}
-                  {tool.cons?.length ? (
-                    <>
-                      <h2 className="mt-5 flex items-center gap-1.5 font-sans text-sm font-semibold text-danger">
-                        <XCircle size={16} aria-hidden="true" /> Cons
-                      </h2>
-                      <ul className="mt-2 list-none space-y-1.5 p-0 text-sm text-ink-soft">
-                        {(tool.cons || []).map((con: string, i: number) => (
-                          <li key={i}>{con}</li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : null}
-                </div>
-              )}
+              {/*
+                Pros/Cons burada ikinci kez listeleniyordu: ana sutundaki
+                "Strengths and trade-offs" ile kelimesi kelimesine ayni metin.
+                Tekrar okura gurultu, sayfaya ozgun icerik degil. Tek yer: ana sutun.
+              */}
             </aside>
           </div>
 
