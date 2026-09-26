@@ -29,9 +29,9 @@ export default function Header() {
           aria-label="ToolCompare — home"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/mark.svg" alt="" aria-hidden="true" width="28" height="28" className="h-7 w-7" />
-          <span className="font-serif text-lg font-semibold tracking-tight text-ink">
-            ToolCompare
+          <img src="/brand/mark.svg" alt="" aria-hidden="true" width="44" height="28" className="h-7 w-auto" />
+          <span className="font-sans text-lg font-bold tracking-tight text-[#1B2633]">
+            Tool<span className="text-[#0A6CFA]">Compare</span>
           </span>
         </Link>
 

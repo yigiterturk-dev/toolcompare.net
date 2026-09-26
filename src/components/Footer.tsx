@@ -79,8 +79,10 @@ export default function Footer() {
           <div className="max-w-sm">
             <p className="flex items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/brand/mark.svg" alt="" aria-hidden="true" width="28" height="28" className="size-6" />
-              <span className="font-serif text-base font-semibold">ToolCompare</span>
+              <img src="/brand/mark.svg" alt="" aria-hidden="true" width="38" height="24" className="h-6 w-auto" />
+              <span className="font-sans text-base font-bold tracking-tight text-[#1B2633]">
+                Tool<span className="text-[#0A6CFA]">Compare</span>
+              </span>
             </p>
             <p className="mt-2 text-sm text-ink-soft">
               Software compared on what it actually costs to start — pricing model spelled out, no
