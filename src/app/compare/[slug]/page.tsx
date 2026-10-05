@@ -73,6 +73,28 @@ const ComparisonRow = ({ label, val1, val2 }: { label: string; val1: React.React
   </tr>
 );
 
+function VisitButtons({ tools }: { tools: Arac[] }) {
+  const available = tools.filter((tool) => tool.websiteUrl);
+  if (!available.length) return null;
+
+  return (
+    <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line pt-4" role="group" aria-label="Visit tools">
+      <span className="mr-1 text-xs font-medium uppercase tracking-wide text-ink-muted">Ready to try?</span>
+      {available.map((tool) => (
+        <a
+          key={tool.slug}
+          href={gitLinki(tool.slug)}
+          target="_blank"
+          rel={relDegeri(tool.slug)}
+          className="inline-flex items-center gap-1.5 rounded-[--radius-pill] bg-accent px-3.5 py-2 text-sm font-semibold text-white no-underline transition-colors hover:bg-accent/90"
+        >
+          Visit {tool.name} <ArrowRight size={14} aria-hidden="true" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export async function generateMetadata({ params }: SayfaParametresi): Promise<Metadata> {
   const resolvedParams = await params;
   const parts = resolvedParams.slug.split("-vs-");
@@ -327,6 +349,7 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
                 ) : null,
               )}
             </div>
+            <VisitButtons tools={[tool1, tool2]} />
             <p className="mt-4 border-t border-line pt-3 text-xs text-ink-muted">
               Written by hand from both vendors&rsquo; own documentation
               {kisaCevap.kontrolTarihi ? `, checked ${kisaCevap.kontrolTarihi}` : ""}.
@@ -375,6 +398,7 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
               </li>
             ) : null}
           </ul>
+          <VisitButtons tools={[tool1, tool2]} />
           <p className="mt-4 border-t border-line pt-3 text-xs text-ink-muted">
             These lines are generated from the pricing we track, not from a paid placement.{" "}
             <Link href="/methodology" className="text-accent underline underline-offset-4">

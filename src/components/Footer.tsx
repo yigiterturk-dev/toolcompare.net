@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { affiliateAktifMi } from "@/lib/affiliate";
 
 /*
   Footer.
@@ -40,6 +41,7 @@ const LINKLER = [
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const affiliateAktif = affiliateAktifMi();
 
   const abone = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -148,8 +150,9 @@ export default function Footer() {
         </nav>
 
         <p className="mt-5 text-xs text-ink-muted">
-          © 2026 ToolCompare · We are in no affiliate programme and earn no commission from the
-          links on this site. If that changes, it will say so here first.
+          © 2026 ToolCompare · {affiliateAktif
+            ? "Some outbound links earn us a commission; compensated links are marked in our affiliate disclosure."
+            : "We are in no affiliate programme and earn no commission from the links on this site."}
         </p>
       </div>
     </footer>

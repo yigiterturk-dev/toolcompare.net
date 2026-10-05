@@ -436,7 +436,7 @@ export default function AdminDashboard() {
               </tbody>
             </table>
             <p style={{ color: '#666', fontSize: '0.8rem', marginTop: '1rem', marginBottom: 0 }}>
-              &quot;free&quot; = the click leaves the site with no affiliate tag, so it earns nothing. Add an <code>affiliateUrl</code> to that tool in tools.json once a program is approved.
+              &quot;free&quot; = the click leaves the site with no affiliate tag, so it earns nothing. Once a programme is approved, add the compensated URL to <code>src/data/affiliate.json</code>; disclosure and sponsored-link handling follow that single source.
             </p>
           </div>
         )}

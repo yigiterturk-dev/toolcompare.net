@@ -3,14 +3,13 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Loader2, Search } from "lucide-react";
+import { ArrowRight, Check, Loader2, Search, Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AIAssistant from "@/components/AIAssistant";
 import AIWizard from "@/components/AIWizard";
 import ToolCard from "@/components/ToolCard";
 import ToolRow from "@/components/ToolRow";
-import ToolLogo from "@/components/ToolLogo";
 import { fiyatDurumu, type FiyatModeli } from "@/lib/fiyat";
 import { oneCikanCiftler } from "@/lib/compare";
 import type { Plan } from "@/lib/plan";
@@ -144,9 +143,6 @@ function ToolGrid({ initialTools, dizin, sss }: { initialTools: IzgaraArac[]; di
     ].filter((b) => b.liste.length > 0);
   }, [tools]);
 
-  // Logo seridi: kimlik icin, dekoratif. Yalnizca logosu olanlardan.
-  const seritAraclari = useMemo(() => tools.slice(0, 28), [tools]);
-
   const sayfaSayisi = Math.max(1, Math.ceil(filteredTools.length / pageSize));
   const gorunen = filteredTools.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
@@ -158,111 +154,108 @@ function ToolGrid({ initialTools, dizin, sss }: { initialTools: IzgaraArac[]; di
       <Header />
 
       <main id="main" className="pb-20">
-        {/* ---------- Kimlik blogu ---------- */}
-        {/*
-          Zemin tam genislikte, icerik kapsayicida. Onceden `-mx-4` ile
-          disari tasiriliyordu; o yalnizca kapsayicinin dolgusu kadar
-          genisletiyor, geniş ekranda blok sagda kesik duruyordu.
-        */}
-        <section className="bg-accent-soft py-8 sm:py-10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          {/*
-            Logo seridi. Katalogda gercekten NE oldugunu tek bakista
-            gosteriyor -- 512 arac yazmaktan daha ikna edici.
+        {/* ---------- Decision engine hero ---------- */}
+        <section className="relative overflow-hidden bg-[#101b2d] text-white">
+          <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(255,255,255,.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.07)_1px,transparent_1px)] [background-size:44px_44px]" aria-hidden="true" />
+          <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-medium text-blue-100">
+                <Sparkles className="size-3.5" aria-hidden="true" />
+                Verified pricing, clearer decisions
+              </div>
+              <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] font-semibold tracking-tight sm:text-6xl">
+                Choose software with confidence.
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-blue-100 sm:text-lg">
+                Compare {tools.length} tools by what they actually cost to start. Find the right fit,
+                understand the trade-offs, and make your shortlist in minutes.
+              </p>
 
-            ONCEDEN TIKLANMIYORDU: seride her logo <span> idi ve blok
-            aria-hidden'di, yani "dekoratif" ilan edilmisti. Ama insan
-            bir arac logosu gorunce ona tiklar; ustelik anasayfadan 24
-            arac sayfasina giden bu linkler Google icin de degerli.
-            Artik her logo kendi sayfasina giden bir link.
-          */}
-          <ul className="flex list-none gap-2 overflow-x-auto p-0 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {seritAraclari.map((t) => (
-              <li key={t.slug} className="shrink-0">
+              <div className="mt-8 flex max-w-2xl flex-col gap-3 sm:flex-row">
+                <div className="relative min-w-0 flex-1">
+                  <Search
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-1/2 left-4 size-5 -translate-y-1/2 text-ink-muted"
+                  />
+                  <label htmlFor="tool-search" className="sr-only">Search tools by name</label>
+                  <input
+                    id="tool-search"
+                    type="search"
+                    placeholder="What software are you looking for?"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="h-14 w-full rounded-[--radius-control] border border-white/20 bg-white px-4 pl-12 text-base text-ink shadow-xl placeholder:text-ink-muted focus:border-white focus:outline-none"
+                  />
+                </div>
                 <Link
-                  href={`/tools/${t.slug}`}
-                  aria-label={t.name}
-                  title={t.name}
-                  className="grid size-10 place-items-center rounded-[--radius-control] border border-line bg-surface no-underline transition-colors duration-150 hover:border-line-strong hover:bg-surface-soft"
+                  href="/compare"
+                  data-tap
+                  className="inline-flex h-14 items-center justify-center gap-2 rounded-[--radius-control] bg-[#5d9cff] px-5 text-sm font-semibold text-[#071426] no-underline transition-colors hover:bg-white"
                 >
-                  <ToolLogo slug={t.slug} name={t.name} size={22} className="rounded-none bg-transparent" />
+                  Compare tools <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
-              </li>
-            ))}
-          </ul>
+              </div>
 
-          <h1 className="mt-8 max-w-3xl text-3xl leading-tight font-semibold sm:text-5xl">
-            {catFilter ? `The best ${catFilter} tools` : "Software pricing you can check yourself"}
-          </h1>
-          <p className="mt-3 max-w-2xl text-base text-ink-soft sm:text-lg">
-            {filteredTools.length} tools. Every price says whether it is verified, usage-based or a
-            free tier — and we publish no invented quality scores.
-          </p>
-
-          <div className="relative mt-6 max-w-xl">
-            <Search
-              aria-hidden="true"
-              className="pointer-events-none absolute top-1/2 left-3.5 size-5 -translate-y-1/2 text-ink-muted"
-            />
-            <label htmlFor="tool-search" className="sr-only">
-              Search tools by name
-            </label>
-            <input
-              id="tool-search"
-              type="search"
-              placeholder="Search by name…"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full rounded-[--radius-control] border border-line bg-surface py-3 pr-4 pl-11 text-base text-ink placeholder:text-ink-muted focus:border-line-strong focus:outline-none"
-            />
-          </div>
-
-          <nav aria-label="Categories" className="mt-5">
-            <ul className="flex flex-wrap gap-2">
-              {KATEGORILER.map((ad) => (
-                <li key={ad}>
+              <nav aria-label="Popular categories" className="mt-5 flex flex-wrap items-center gap-2">
+                <span className="mr-1 text-xs text-blue-200">Popular:</span>
+                {KATEGORILER.map((ad) => (
                   <Link
+                    key={ad}
                     href={`/categories/${ad.toLowerCase().replace(/\s+/g, "-")}`}
                     data-tap
-                    className="inline-flex items-center rounded-[--radius-pill] border border-line bg-surface px-3 py-1.5 text-sm text-ink-soft no-underline transition-colors duration-150 hover:border-line-strong hover:text-ink"
+                    className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-blue-50 no-underline transition-colors hover:border-white/40 hover:bg-white/10"
                   >
                     {ad}
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                ))}
+              </nav>
+              <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-blue-100">
+                <span className="text-xs text-blue-200">Popular comparisons</span>
+                {oneCikanCiftler().map((vs) => (
+                  <Link
+                    key={vs.slug}
+                    href={`/compare/${vs.slug}`}
+                    className="underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white"
+                  >
+                    {vs.label}
+                  </Link>
+                ))}
+              </p>
+            </div>
 
-          {/*
-            Karsilastirma sayfalarina ic link. Hero yeniden yazilirken
-            dusmustu; bu linkler 1.374 karsilastirma sayfasinin tarayiciya
-            acilan tek kapisi, dekorasyon degil.
-          */}
-          <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
-            {/* Pembe zeminde ink-muted 4.43 olcuyordu (gereken 4.5); bir ton koyu. */}
-            <span className="text-ink-soft">Popular comparisons</span>
-            {oneCikanCiftler().map((vs) => (
-              <Link
-                key={vs.slug}
-                href={`/compare/${vs.slug}`}
-                className="text-ink-soft underline decoration-line-strong underline-offset-4 transition-colors duration-150 hover:text-accent hover:decoration-accent"
-              >
-                {vs.label}
-              </Link>
-            ))}
-          </p>
+            <div className="mt-12 grid max-w-3xl grid-cols-1 gap-3 border-t border-white/15 pt-5 text-sm text-blue-100 sm:grid-cols-3">
+              <div className="flex items-center gap-2"><Check className="size-4 text-[#8dbbff]" aria-hidden="true" /> No invented scores</div>
+              <div className="flex items-center gap-2"><Check className="size-4 text-[#8dbbff]" aria-hidden="true" /> Prices checked by humans</div>
+              <div className="flex items-center gap-2"><Check className="size-4 text-[#8dbbff]" aria-hidden="true" /> {tools.length} tools to explore</div>
+            </div>
           </div>
+        </section>
+
+        {/* ---------- Karar yardımcısı ---------- */}
+        <section aria-label="Help me choose" className="mx-auto max-w-7xl border-b border-line px-4 py-12 sm:px-6">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold tracking-[0.14em] text-accent uppercase">Not sure yet?</p>
+              <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">Start with what you need to do.</h2>
+              <p className="mt-2 max-w-xl text-sm text-ink-soft">Answer a few questions and we’ll narrow the catalogue down for you.</p>
+            </div>
+            <Link href="/methodology" className="text-sm font-medium text-accent underline underline-offset-4">How our data works</Link>
+          </div>
+          <AIWizard tools={tools} />
         </section>
 
         {/* ---------- Kuratorlu bolumler ---------- */}
         {!searchTerm && !catFilter && (
-          <div className="mx-auto max-w-7xl space-y-8 px-4 py-10 sm:px-6">
+          <div className="mx-auto max-w-7xl space-y-10 px-4 py-12 sm:px-6">
             {bolumler.map((b) => (
               <section key={b.anahtar} aria-labelledby={`bolum-${b.anahtar}`}>
-                <h2 id={`bolum-${b.anahtar}`} className="text-xl font-semibold">
-                  {b.baslik}
-                </h2>
-                <p className="mt-1 text-sm text-ink-muted">{b.alt}</p>
+                <div className="flex flex-wrap items-end justify-between gap-3">
+                  <div>
+                    <h2 id={`bolum-${b.anahtar}`} className="text-xl font-semibold">{b.baslik}</h2>
+                    <p className="mt-1 text-sm text-ink-muted">{b.alt}</p>
+                  </div>
+                  <Link href={b.anahtar === "ucuz" ? "/top-picks" : "/tools"} className="text-sm font-medium text-accent no-underline hover:underline">See all <span aria-hidden="true">→</span></Link>
+                </div>
                 <ul className="mt-3 flex list-none gap-2 overflow-x-auto p-0 pb-2 [scrollbar-width:thin]">
                   {b.liste.map((t) => (
                     <li key={t.slug}>
@@ -343,14 +336,6 @@ function ToolGrid({ initialTools, dizin, sss }: { initialTools: IzgaraArac[]; di
               </button>
             </nav>
           )}
-        </section>
-
-        {/*
-          Sihirbaz artik burada: ne aradigini bilen once araci gorur, ne
-          aradigini bilmeyen asagida yardimi bulur. Eskiden tam tersiydi.
-        */}
-        <section aria-label="Help me choose" className="mx-auto max-w-7xl border-t border-line px-4 py-12 sm:px-6">
-          <AIWizard tools={tools} />
         </section>
 
         {/* Tam dizin ve SSS: footer'dan ONCE. */}

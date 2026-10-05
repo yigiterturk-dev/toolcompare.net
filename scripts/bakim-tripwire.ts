@@ -22,6 +22,17 @@ const TIK_ESIGI = Number(process.env.TRIPWIRE_TIK_ESIGI ?? 5);
 const SIRA_ESIGI = Number(process.env.TRIPWIRE_SIRA_ESIGI ?? 15);
 
 type Olcum = { mulk: string; gosterim: number; tik: number; sira: number; gunlukTik: number };
+type SearchConsoleResponse = {
+  rows?: Array<{
+    impressions?: unknown;
+    clicks?: unknown;
+    position?: unknown;
+  }>;
+};
+
+function finiteNumber(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
 
 async function olc(token: string, mulk: string): Promise<Olcum | null> {
   const y = await fetch(
@@ -32,15 +43,19 @@ async function olc(token: string, mulk: string): Promise<Olcum | null> {
       body: JSON.stringify({ startDate: isoDay(30), endDate: isoDay(2), rowLimit: 1 }),
     },
   );
-  const j: any = await y.json();
+  const j = (await y.json()) as SearchConsoleResponse;
   const r = j.rows?.[0];
   if (!r) return null;
+  const gosterim = finiteNumber(r.impressions);
+  const tik = finiteNumber(r.clicks);
+  const sira = finiteNumber(r.position);
+  if (gosterim === null || tik === null || sira === null) return null;
   return {
     mulk: mulk.replace("sc-domain:", ""),
-    gosterim: r.impressions,
-    tik: r.clicks,
-    sira: r.position,
-    gunlukTik: r.clicks / 28,
+    gosterim,
+    tik,
+    sira,
+    gunlukTik: tik / 28,
   };
 }
 

@@ -48,7 +48,10 @@ export default function Header() {
         <nav aria-label="Main" className="min-w-0 flex-1">
           <ul className="flex items-center justify-start gap-1 overflow-x-auto text-sm [scrollbar-width:none] sm:justify-end sm:gap-2 [&::-webkit-scrollbar]:hidden">
             {NAV.map((item) => (
-              <li key={item.href} className="shrink-0">
+              <li
+                key={item.href}
+                className={`shrink-0 ${item.href === "/top-picks" || item.href === "/methodology" ? "hidden sm:block" : ""}`}
+              >
                 <Link
                   href={item.href}
                   data-tap
