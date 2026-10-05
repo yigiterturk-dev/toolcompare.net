@@ -22,7 +22,8 @@
     "denetim": "node scripts/verify-claims.mjs && node scripts/check-fiyat-modelleri.mjs && node scripts/check-izgara-alanlari.mjs && node scripts/check-plan-basePrice.mjs",
     "check:plan": "node scripts/check-plan-basePrice.mjs",
     "plan:merdiven": "node scripts/plan-merdiveni.mjs",
-    "rozet:hedef": "node --experimental-strip-types --no-warnings scripts/rozet-hedefleri.ts"
+    "rozet:hedef": "node --experimental-strip-types --no-warnings scripts/rozet-hedefleri.ts",
+    "veri:paket": "node scripts/veri-paketi.mjs"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

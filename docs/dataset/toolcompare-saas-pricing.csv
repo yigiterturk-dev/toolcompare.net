@@ -1,0 +1,519 @@
+slug,name,category,website_url,starting_price_usd,pricing_model,evidence_status,price_read_on,source_url,toolcompare_url
+hubspot-crm,HubSpot CRM,CRM,https://www.hubspot.com,0,free-tier,pricing-page-verified,2026-09-10,https://www.hubspot.com/pricing/crm,https://toolcompare.net/tools/hubspot-crm
+slack,Slack,Communication,https://slack.com,7.25,,pricing-page-verified,2026-09-09,https://slack.com/pricing,https://toolcompare.net/tools/slack
+notion,Notion,Productivity,https://www.notion.so,0,free-tier,pricing-page-verified,2026-09-07,https://www.notion.com/pricing,https://toolcompare.net/tools/notion
+chatgpt,ChatGPT,AI Tools,https://chatgpt.com,20,,vendor-sourced,2026-08-24,https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus,https://toolcompare.net/tools/chatgpt
+stripe,Stripe,E-commerce,https://stripe.com,0,usage-based,pricing-page-verified,2026-09-09,https://stripe.com/pricing,https://toolcompare.net/tools/stripe
+figma,Figma,Design,https://www.figma.com,16,,pricing-page-verified,2026-09-09,https://www.figma.com/pricing/,https://toolcompare.net/tools/figma
+webflow,Webflow,Design,https://webflow.com,0,free-tier,pricing-page-verified,2026-09-07,https://webflow.com/pricing,https://toolcompare.net/tools/webflow
+asana,Asana,Project Management,https://asana.com,0,free-tier,pricing-page-verified,2026-09-07,https://asana.com/pricing,https://toolcompare.net/tools/asana
+semrush,SEMrush,Marketing,https://www.semrush.com,117.33,subscription,pricing-page-verified,2026-09-07,https://www.semrush.com/prices/,https://toolcompare.net/tools/semrush
+ahrefs,Ahrefs,Marketing,https://ahrefs.com,29,flat,pricing-page-verified,2026-09-09,https://ahrefs.com/pricing,https://toolcompare.net/tools/ahrefs
+canva,Canva,Design,https://www.canva.com,0,free-tier,vendor-sourced,2026-09-10,https://www.canva.com/en/pricing/,https://toolcompare.net/tools/canva
+premiere-pro,Adobe Premiere Pro,Design,https://www.adobe.com/products/premiere.html,22,,pricing-page-verified,2026-09-08,https://www.adobe.com/products/premiere/plans.html,https://toolcompare.net/tools/premiere-pro
+capcut,CapCut,Design,https://www.capcut.com,0,free-tier,unverified,,,https://toolcompare.net/tools/capcut
+discord,Discord,Communication,https://discord.com,0,free-tier,unverified,,,https://toolcompare.net/tools/discord
+ms-teams,Microsoft Teams,Communication,https://www.microsoft.com/microsoft-teams/group-chat-software,6,,pricing-page-verified,2026-09-09,https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options,https://toolcompare.net/tools/ms-teams
+zoom,Zoom,Communication,https://zoom.us,14,,vendor-sourced,2026-08-31,https://zoom.us/pricing,https://toolcompare.net/tools/zoom
+elevenlabs,ElevenLabs,AI Tools,https://elevenlabs.io,5,,pricing-page-verified,2026-09-09,https://www.elevenlabs.io/pricing,https://toolcompare.net/tools/elevenlabs
+midjourney,Midjourney,Design,https://www.midjourney.com,10,flat,unverified,,,https://toolcompare.net/tools/midjourney
+claude,Claude,AI Tools,https://claude.ai,20,,vendor-sourced,2026-08-24,https://www.anthropic.com/pricing?subjects=claude&type=product,https://toolcompare.net/tools/claude
+perplexity,Perplexity,AI Tools,https://www.perplexity.ai,0,free-tier,vendor-sourced,2026-08-24,https://www.perplexity.ai/help-center/en/articles/10352155-what-is-perplexity,https://toolcompare.net/tools/perplexity
+1password,1Password,Productivity,https://1password.com,3,,pricing-page-verified,2026-09-09,https://1password.com/business-pricing,https://toolcompare.net/tools/1password
+hotjar,Hotjar,Marketing,https://www.hotjar.com,0,free-tier,pricing-page-verified,2026-09-07,https://help.hotjar.com/hc/en-us/articles/36819964833169-Hotjar-Plans,https://toolcompare.net/tools/hotjar
+todoist,Todoist,Productivity,https://todoist.com,4,,pricing-page-verified,2026-09-09,https://todoist.com/pricing,https://toolcompare.net/tools/todoist
+buffer,Buffer,Marketing,https://buffer.com,5,,pricing-page-verified,2026-09-09,https://buffer.com/pricing,https://toolcompare.net/tools/buffer
+gusto,Gusto,HR Software,https://gusto.com,49,subscription,pricing-page-verified,2026-09-07,https://gusto.com/product/pricing,https://toolcompare.net/tools/gusto
+quickbooks,QuickBooks,Finance Tools,https://quickbooks.intuit.com,38,subscription,pricing-page-verified,2026-09-07,https://quickbooks.intuit.com/pricing/,https://toolcompare.net/tools/quickbooks
+mailchimp,Mailchimp,Marketing,https://mailchimp.com,13,,pricing-page-verified,2026-09-08,https://mailchimp.com/pricing/marketing/,https://toolcompare.net/tools/mailchimp
+github,GitHub,Developer Tools,https://github.com,0,free-tier,pricing-page-verified,2026-09-07,https://github.com/pricing,https://toolcompare.net/tools/github
+vercel,Vercel,Hosting,https://vercel.com,0,free-tier,pricing-page-verified,2026-09-09,https://vercel.com/pricing,https://toolcompare.net/tools/vercel
+jasper,Jasper,AI Tools,https://www.jasper.ai,59,subscription,pricing-page-verified,2026-09-07,https://www.jasper.ai/pricing,https://toolcompare.net/tools/jasper
+copy-ai,Copy.ai,AI Tools,https://www.copy.ai,24,subscription,pricing-page-verified,2026-09-07,https://www.copy.ai/prices,https://toolcompare.net/tools/copy-ai
+descript,Descript,Design,https://www.descript.com,12,,pricing-page-verified,2026-09-08,https://www.descript.com/pricing,https://toolcompare.net/tools/descript
+loom,Loom,Communication,https://www.loom.com,12,,pricing-page-verified,2026-09-08,https://www.loom.com/pricing,https://toolcompare.net/tools/loom
+calendly,Calendly,Productivity,https://calendly.com,0,free-tier,pricing-page-verified,2026-09-07,https://calendly.com/pricing,https://toolcompare.net/tools/calendly
+miro,Miro,Productivity,https://miro.com,8,subscription,vendor-sourced,2026-09-07,https://miro.com/pricing/,https://toolcompare.net/tools/miro
+zapier,Zapier,Productivity,https://zapier.com,20,,pricing-page-verified,2026-09-08,https://zapier.com/pricing,https://toolcompare.net/tools/zapier
+make,Make.com,Productivity,https://www.make.com,0,free-tier,vendor-sourced,2026-09-10,https://www.make.com/en/pricing,https://toolcompare.net/tools/make
+airtable,Airtable,Productivity,https://www.airtable.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.airtable.com/pricing,https://toolcompare.net/tools/airtable
+clickup,ClickUp,Project Management,https://clickup.com,0,free-tier,pricing-page-verified,2026-09-07,https://clickup.com/pricing,https://toolcompare.net/tools/clickup
+monday,Monday.com,Project Management,https://monday.com,9,per-user,pricing-page-verified,2026-09-07,https://monday.com/pricing,https://toolcompare.net/tools/monday
+trello,Trello,Project Management,https://trello.com,5,,pricing-page-verified,2026-09-09,https://trello.com/pricing,https://toolcompare.net/tools/trello
+jira,Jira,Developer Tools,https://www.atlassian.com/software/jira,8,,pricing-page-verified,2026-09-09,https://www.atlassian.com/software/jira/pricing,https://toolcompare.net/tools/jira
+zendesk,Zendesk,Customer Service,https://www.zendesk.com,55,subscription,pricing-page-verified,2026-09-07,https://www.zendesk.com/pricing/,https://toolcompare.net/tools/zendesk
+intercom,Intercom,Customer Service,https://www.intercom.com,29,subscription,vendor-sourced,2026-09-07,https://www.intercom.com/pricing,https://toolcompare.net/tools/intercom
+shopify,Shopify,E-commerce,https://www.shopify.com,19,subscription,pricing-page-verified,2026-09-07,https://www.shopify.com/pricing,https://toolcompare.net/tools/shopify
+magento,Magento,E-commerce,https://business.adobe.com/products/magento/magento-commerce.html,0,quote,vendor-sourced,2026-09-07,https://business.adobe.com/products/commerce/magento/open-source.html,https://toolcompare.net/tools/magento
+bigcommerce,BigCommerce,E-commerce,https://www.bigcommerce.com,29,subscription,pricing-page-verified,2026-09-07,https://www.bigcommerce.com/essentials/pricing/,https://toolcompare.net/tools/bigcommerce
+framer,Framer,Design,https://www.framer.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.framer.com/pricing/,https://toolcompare.net/tools/framer
+spline,Spline,Design,https://spline.design,0,free-tier,pricing-page-verified,2026-09-09,https://spline.design/pricing,https://toolcompare.net/tools/spline
+aws,AWS,Hosting,https://aws.amazon.com,0,usage-based,pricing-page-verified,2026-09-07,https://aws.amazon.com/free/,https://toolcompare.net/tools/aws
+google-cloud,Google Cloud,Hosting,https://cloud.google.com,0,usage-based,pricing-page-verified,2026-09-08,https://docs.cloud.google.com/free/docs/free-cloud-features,https://toolcompare.net/tools/google-cloud
+digitalocean,DigitalOcean,Hosting,https://www.digitalocean.com,4,,pricing-page-verified,2026-09-08,https://www.digitalocean.com/pricing/droplets,https://toolcompare.net/tools/digitalocean
+mongodb,MongoDB,Developer Tools,https://www.mongodb.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.mongodb.com/pricing,https://toolcompare.net/tools/mongodb
+supabase,Supabase,Developer Tools,https://supabase.com,0,free-tier,pricing-page-verified,2026-09-08,https://supabase.com/pricing,https://toolcompare.net/tools/supabase
+ghost,Ghost,Productivity,https://ghost.org,9,,pricing-page-verified,2026-09-08,https://ghost.org/pricing,https://toolcompare.net/tools/ghost
+beehiiv,Beehiiv,Marketing,https://www.beehiiv.com,0,free-tier,pricing-page-verified,2026-09-07,https://beehiiv.com/pricing,https://toolcompare.net/tools/beehiiv
+strapi,Strapi,Developer Tools,https://strapi.io,0,free-tier,pricing-page-verified,2026-09-07,https://strapi.io/pricing,https://toolcompare.net/tools/strapi
+strava,Strava,Productivity,https://www.strava.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.strava.com/subscribe,https://toolcompare.net/tools/strava
+substack,Substack,Marketing,https://substack.com,0,usage-based,unverified,,,https://toolcompare.net/tools/substack
+postman,Postman,Developer Tools,https://www.postman.com,0,free-tier,vendor-sourced,2026-09-07,https://www.postman.com/pricing/,https://toolcompare.net/tools/postman
+sentry,Sentry,Developer Tools,https://sentry.io,0,free-tier,pricing-page-verified,2026-09-09,https://sentry.io/pricing/,https://toolcompare.net/tools/sentry
+firebase,Firebase,Developer Tools,https://firebase.google.com,0,free-tier,pricing-page-verified,2026-09-09,https://firebase.google.com/pricing,https://toolcompare.net/tools/firebase
+contentful,Contentful,Developer Tools,https://www.contentful.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.contentful.com/pricing/,https://toolcompare.net/tools/contentful
+wix,Wix,Design,https://www.wix.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.wix.com/plans,https://toolcompare.net/tools/wix
+squarespace,Squarespace,Design,https://www.squarespace.com,16,subscription,pricing-page-verified,2026-09-07,https://www.squarespace.com/pricing,https://toolcompare.net/tools/squarespace
+carrd,Carrd,Design,https://carrd.co,9,flat,pricing-page-verified,2026-09-08,https://carrd.com/pro,https://toolcompare.net/tools/carrd
+klaviyo,Klaviyo,Marketing,https://www.klaviyo.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.klaviyo.com/pricing,https://toolcompare.net/tools/klaviyo
+twilio,Twilio,Developer Tools,https://www.twilio.com,0,usage-based,pricing-page-verified,2026-09-08,https://www.twilio.com/en-us/sms/pricing/us,https://toolcompare.net/tools/twilio
+gumroad,Gumroad,E-commerce,https://gumroad.com,0,usage-based,pricing-page-verified,2026-09-07,https://gumroad.com/pricing,https://toolcompare.net/tools/gumroad
+kajabi,Kajabi,Marketing,https://kajabi.com,143,subscription,pricing-page-verified,2026-09-07,https://kajabi.com/pricing,https://toolcompare.net/tools/kajabi
+skool,Skool,Productivity,https://www.skool.com,9,subscription,pricing-page-verified,2026-09-07,https://www.skool.com/pricing,https://toolcompare.net/tools/skool
+azure,Microsoft Azure,Hosting,https://azure.microsoft.com,0,usage-based,vendor-sourced,2026-08-31,https://azure.microsoft.com/en-us/pricing,https://toolcompare.net/tools/azure
+cloudflare,Cloudflare,Hosting,https://www.cloudflare.com,0,free-tier,vendor-sourced,2026-09-07,https://www.cloudflare.com/plans/network-cdn/,https://toolcompare.net/tools/cloudflare
+postgresql,PostgreSQL,Developer Tools,https://www.postgresql.org,0,free,open-source-verified,2026-09-09,https://www.postgresql.org/about/licence/,https://toolcompare.net/tools/postgresql
+redis,Redis,Developer Tools,https://redis.io,0,free-tier,pricing-page-verified,2026-09-07,https://redis.io/pricing/,https://toolcompare.net/tools/redis
+docker,Docker,Developer Tools,https://www.docker.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.docker.com/pricing/,https://toolcompare.net/tools/docker
+netlify,Netlify,Hosting,https://www.netlify.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.netlify.com/pricing/,https://toolcompare.net/tools/netlify
+terraform,Terraform,Developer Tools,https://www.terraform.io,0,usage-based,pricing-page-verified,2026-09-07,https://www.hashicorp.com/en/pricing,https://toolcompare.net/tools/terraform
+datadog,Datadog,Developer Tools,https://www.datadoghq.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.datadoghq.com/pricing/,https://toolcompare.net/tools/datadog
+appwrite,Appwrite,Developer Tools,https://appwrite.io,0,free-tier,pricing-page-verified,2026-09-08,https://appwrite.io/pricing,https://toolcompare.net/tools/appwrite
+wix-studio,Wix Studio,Design,https://www.wix.com/studio,16,subscription,vendor-sourced,2026-09-07,https://www.wix.com/studio/plans,https://toolcompare.net/tools/wix-studio
+podia,Podia,E-commerce,https://www.podia.com,42,subscription,pricing-page-verified,2026-09-07,https://www.podia.com/pricing,https://toolcompare.net/tools/podia
+teachable,Teachable,E-commerce,https://teachable.com,29,subscription,pricing-page-verified,2026-09-07,https://teachable.com/pricing,https://toolcompare.net/tools/teachable
+convertkit,ConvertKit,Marketing,https://kit.com,0,free-tier,pricing-page-verified,2026-09-07,https://kit.com/pricing,https://toolcompare.net/tools/convertkit
+activecampaign,ActiveCampaign,Marketing,https://www.activecampaign.com,29,subscription,pricing-page-verified,2026-09-07,https://www.activecampaign.com/pricing,https://toolcompare.net/tools/activecampaign
+plaid,Plaid,Finance Tools,https://plaid.com,0,usage-based,pricing-page-verified,2026-09-08,https://plaid.com/pricing/,https://toolcompare.net/tools/plaid
+paddle,Paddle,E-commerce,https://www.paddle.com,0,usage-based,pricing-page-verified,2026-09-08,https://www.paddle.com/pricing,https://toolcompare.net/tools/paddle
+lemonsqueezy,Lemon Squeezy,E-commerce,https://www.lemonsqueezy.com,0,usage-based,pricing-page-verified,2026-09-08,https://www.lemonsqueezy.com/pricing,https://toolcompare.net/tools/lemonsqueezy
+obsidian,Obsidian,Productivity,https://obsidian.md,0,free-tier,vendor-sourced,2026-09-07,https://obsidian.md/pricing,https://toolcompare.net/tools/obsidian
+linear,Linear,Project Management,https://linear.app,8,,pricing-page-verified,2026-09-09,https://linear.app/pricing,https://toolcompare.net/tools/linear
+typeform,Typeform,Marketing,https://www.typeform.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.typeform.com/pricing/,https://toolcompare.net/tools/typeform
+replit,Replit,Developer Tools,https://replit.com,0,free-tier,pricing-page-verified,2026-09-09,https://replit.com/pricing,https://toolcompare.net/tools/replit
+surfer-seo,Surfer SEO,Marketing,https://surferseo.com,49,subscription,pricing-page-verified,2026-09-07,https://surferseo.com/pricing/,https://toolcompare.net/tools/surfer-seo
+vanta,Vanta,Legal Tools,https://www.vanta.com,0,quote,vendor-sourced,2026-09-09,https://www.vanta.com/pricing,https://toolcompare.net/tools/vanta
+posthog,PostHog,Marketing,https://posthog.com,0,free-tier,pricing-page-verified,2026-09-08,https://posthog.com/pricing,https://toolcompare.net/tools/posthog
+mixpanel,Mixpanel,Marketing,https://mixpanel.com,0,free-tier,pricing-page-verified,2026-09-09,https://mixpanel.com/pricing/,https://toolcompare.net/tools/mixpanel
+logrocket,LogRocket,Developer Tools,https://logrocket.com,0,usage-based,vendor-sourced,2026-09-10,https://logrocket.com/pricing,https://toolcompare.net/tools/logrocket
+segment,Segment,Marketing,https://segment.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.twilio.com/en-us/products/connections/pricing,https://toolcompare.net/tools/segment
+clarity,Microsoft Clarity,Marketing,https://clarity.microsoft.com,0,free,pricing-page-verified,2026-09-07,https://clarity.microsoft.com/,https://toolcompare.net/tools/clarity
+amplitude,Amplitude,Marketing,https://amplitude.com,0,free-tier,pricing-page-verified,2026-09-08,https://amplitude.com/pricing,https://toolcompare.net/tools/amplitude
+bubble,Bubble,Design,https://bubble.io,0,free-tier,pricing-page-verified,2026-09-07,https://bubble.io/pricing,https://toolcompare.net/tools/bubble
+sanity,Sanity,Developer Tools,https://www.sanity.io,0,free-tier,pricing-page-verified,2026-09-08,https://www.sanity.io/pricing,https://toolcompare.net/tools/sanity
+xano,Xano,Developer Tools,https://www.xano.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.xano.com/pricing/,https://toolcompare.net/tools/xano
+flutterflow,FlutterFlow,Design,https://flutterflow.io,0,free-tier,pricing-page-verified,2026-09-07,https://www.flutterflow.io/pricing,https://toolcompare.net/tools/flutterflow
+grammarly,Grammarly,AI Tools,https://www.grammarly.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.grammarly.com/plans,https://toolcompare.net/tools/grammarly
+adobe-firefly,Adobe Firefly,AI Tools,https://www.adobe.com/products/firefly.html,5,,unverified,,,https://toolcompare.net/tools/adobe-firefly
+notion-calendar,Notion Calendar,Productivity,https://www.notion.so/product/calendar,0,free,pricing-page-verified,2026-09-08,https://www.notion.com/pricing,https://toolcompare.net/tools/notion-calendar
+hey-email,HEY Email,Communication,https://www.hey.com,8.25,subscription,pricing-page-verified,2026-09-07,https://www.hey.com/pricing/,https://toolcompare.net/tools/hey-email
+gitlab,GitLab,Developer Tools,https://about.gitlab.com,0,free-tier,pricing-page-verified,2026-09-08,https://about.gitlab.com/pricing/,https://toolcompare.net/tools/gitlab
+bitbucket,Bitbucket,Developer Tools,https://bitbucket.org,0,free-tier,pricing-page-verified,2026-09-08,https://www.atlassian.com/software/bitbucket/pricing,https://toolcompare.net/tools/bitbucket
+circleci,CircleCI,Developer Tools,https://circleci.com,0,free-tier,pricing-page-verified,2026-09-07,https://circleci.com/pricing/,https://toolcompare.net/tools/circleci
+jenkins,Jenkins,Developer Tools,https://www.jenkins.io,0,free,open-source-verified,2026-09-08,https://www.jenkins.io/license/,https://toolcompare.net/tools/jenkins
+kubernetes,Kubernetes,Developer Tools,https://kubernetes.io,0,free,open-source-verified,2026-09-08,https://kubernetes.io/,https://toolcompare.net/tools/kubernetes
+ansible,Ansible,Developer Tools,https://www.ansible.com,0,free-tier,vendor-sourced,2026-09-12,https://github.com/ansible/ansible,https://toolcompare.net/tools/ansible
+grafana,Grafana,Developer Tools,https://grafana.com,0,free-tier,pricing-page-verified,2026-09-07,https://grafana.com/pricing/,https://toolcompare.net/tools/grafana
+prometheus,Prometheus,Developer Tools,https://prometheus.io,0,free,open-source-verified,2026-09-08,https://prometheus.io/,https://toolcompare.net/tools/prometheus
+new-relic,New Relic,Developer Tools,https://newrelic.com,0,free-tier,vendor-sourced,2026-09-07,https://newrelic.com/pricing,https://toolcompare.net/tools/new-relic
+bugsnag,Bugsnag,Developer Tools,https://www.bugsnag.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.bugsnag.com/pricing/,https://toolcompare.net/tools/bugsnag
+planetscale,PlanetScale,Developer Tools,https://planetscale.com,0,free-tier,pricing-page-verified,2026-09-08,https://planetscale.com/pricing,https://toolcompare.net/tools/planetscale
+neon,Neon,Developer Tools,https://neon.tech,0,free-tier,pricing-page-verified,2026-09-08,https://neon.com/pricing,https://toolcompare.net/tools/neon
+railway,Railway,Developer Tools,https://railway.com,0,usage-based,pricing-page-verified,2026-09-07,https://railway.com/pricing,https://toolcompare.net/tools/railway
+render,Render,Developer Tools,https://render.com,0,free-tier,pricing-page-verified,2026-09-09,https://render.com/pricing,https://toolcompare.net/tools/render
+fly-io,Fly.io,Developer Tools,https://fly.io,0,free-tier,pricing-page-verified,2026-09-09,https://fly.io/pricing,https://toolcompare.net/tools/fly-io
+insomnia,Insomnia,Developer Tools,https://insomnia.rest,0,free-tier,pricing-page-verified,2026-09-08,https://insomnia.rest/pricing,https://toolcompare.net/tools/insomnia
+swagger,Swagger,Developer Tools,https://swagger.io,0,free-tier,open-source-verified,2026-09-03,https://swagger.io/license/,https://toolcompare.net/tools/swagger
+sourcegraph,Sourcegraph,Developer Tools,https://sourcegraph.com,0,free-tier,vendor-sourced,2026-08-31,https://sourcegraph.com/pricing,https://toolcompare.net/tools/sourcegraph
+elastic,Elastic,Developer Tools,https://www.elastic.co,0,free-tier,pricing-page-verified,2026-09-08,https://www.elastic.co/pricing/cloud-hosted,https://toolcompare.net/tools/elastic
+hasura,Hasura,Developer Tools,https://hasura.io,0,free-tier,pricing-page-verified,2026-09-08,https://hasura.io/pricing,https://toolcompare.net/tools/hasura
+sketch,Sketch,Design,https://www.sketch.com,12,subscription,pricing-page-verified,2026-09-07,https://www.sketch.com/pricing/,https://toolcompare.net/tools/sketch
+penpot,Penpot,Design,https://penpot.app,0,free,pricing-page-verified,2026-09-08,https://penpot.app/pricing,https://toolcompare.net/tools/penpot
+blender,Blender,Design,https://www.blender.org,0,free,open-source-verified,2026-09-08,https://www.blender.org/about/license/,https://toolcompare.net/tools/blender
+procreate,Procreate,Design,https://procreate.com,0,one-time,vendor-sourced,2026-09-09,https://procreate.com/procreate,https://toolcompare.net/tools/procreate
+affinity-designer,Affinity Designer,Design,https://affinity.serif.com/designer/,0,free,vendor-sourced,2026-09-07,https://www.affinity.studio/,https://toolcompare.net/tools/affinity-designer
+removebg,remove.bg,Design,https://www.remove.bg,0,free-tier,vendor-sourced,2026-08-31,https://www.remove.bg/pricing,https://toolcompare.net/tools/removebg
+photopea,Photopea,Design,https://www.photopea.com,0,free-tier,vendor-sourced,2026-09-07,https://blog.photopea.com/photopea-premium.html,https://toolcompare.net/tools/photopea
+hootsuite,Hootsuite,Marketing,https://www.hootsuite.com,0,flat,pricing-page-verified,2026-09-08,https://www.hootsuite.com/plans,https://toolcompare.net/tools/hootsuite
+later,Later,Marketing,https://later.com,18.75,subscription,pricing-page-verified,2026-09-09,https://later.com/pricing/,https://toolcompare.net/tools/later
+sprout-social,Sprout Social,Marketing,https://sproutsocial.com,79,subscription,pricing-page-verified,2026-09-07,https://sproutsocial.com/pricing/,https://toolcompare.net/tools/sprout-social
+moz,Moz,Marketing,https://moz.com,0,flat,pricing-page-verified,2026-09-08,https://moz.com/products/pro/pricing,https://toolcompare.net/tools/moz
+screaming-frog,Screaming Frog,Marketing,https://www.screamingfrog.co.uk/seo-spider/,0,free-tier,vendor-sourced,2026-09-15,https://www.screamingfrog.co.uk/seo-spider/pricing/,https://toolcompare.net/tools/screaming-frog
+brevo,Brevo,Marketing,https://www.brevo.com,0,free-tier,vendor-sourced,2026-09-09,https://www.brevo.com/pricing/,https://toolcompare.net/tools/brevo
+mailerlite,MailerLite,Marketing,https://www.mailerlite.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.mailerlite.com/pricing,https://toolcompare.net/tools/mailerlite
+customer-io,Customer.io,Marketing,https://customer.io,0,flat,pricing-page-verified,2026-09-09,https://customer.io/pricing,https://toolcompare.net/tools/customer-io
+optinmonster,OptinMonster,Marketing,https://optinmonster.com,7,subscription,pricing-page-verified,2026-09-09,https://optinmonster.com/pricing/,https://toolcompare.net/tools/optinmonster
+unbounce,Unbounce,Marketing,https://unbounce.com,0,flat,pricing-page-verified,2026-09-08,https://unbounce.com/pricing/,https://toolcompare.net/tools/unbounce
+instapage,Instapage,Marketing,https://instapage.com,0,flat,vendor-sourced,2026-08-31,https://instapage.com/plans,https://toolcompare.net/tools/instapage
+crazy-egg,Crazy Egg,Marketing,https://www.crazyegg.com,0,flat,pricing-page-verified,2026-09-09,https://www.crazyegg.com/pricing,https://toolcompare.net/tools/crazy-egg
+matomo,Matomo,Marketing,https://matomo.org,0,free-tier,pricing-page-verified,2026-09-07,https://matomo.org/pricing/,https://toolcompare.net/tools/matomo
+plausible,Plausible,Marketing,https://plausible.io,0,flat,open-source-verified,2026-09-03,https://plausible.io/,https://toolcompare.net/tools/plausible
+fathom-analytics,Fathom Analytics,Marketing,https://usefathom.com,0,flat,pricing-page-verified,2026-09-09,https://usefathom.com/pricing,https://toolcompare.net/tools/fathom-analytics
+evernote,Evernote,Productivity,https://evernote.com,0,free-tier,vendor-sourced,2026-09-09,https://evernote.com/compare-plans,https://toolcompare.net/tools/evernote
+bear,Bear,Productivity,https://bear.app,0,free-tier,pricing-page-verified,2026-09-08,https://bear.app/,https://toolcompare.net/tools/bear
+craft,Craft,Productivity,https://www.craft.do,0,free-tier,pricing-page-verified,2026-09-08,https://www.craft.do/pricing,https://toolcompare.net/tools/craft
+things,Things,Productivity,https://culturedcode.com/things/,0,flat,vendor-sourced,2026-09-09,https://culturedcode.com/things/,https://toolcompare.net/tools/things
+omnifocus,OmniFocus,Productivity,https://www.omnigroup.com/omnifocus/,0,flat,vendor-sourced,2026-09-03,https://www.omnigroup.com/omnifocus/buy,https://toolcompare.net/tools/omnifocus
+ticktick,TickTick,Productivity,https://ticktick.com,0,free-tier,pricing-page-verified,2026-09-08,https://ticktick.com/about/upgrade,https://toolcompare.net/tools/ticktick
+raycast,Raycast,Productivity,https://www.raycast.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.raycast.com/pricing,https://toolcompare.net/tools/raycast
+alfred,Alfred,Productivity,https://www.alfredapp.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.alfredapp.com/powerpack/buy/,https://toolcompare.net/tools/alfred
+motion,Motion,Productivity,https://www.usemotion.com,0,flat,vendor-sourced,2026-08-31,https://www.usemotion.com/pricing,https://toolcompare.net/tools/motion
+reclaim,Reclaim.ai,Productivity,https://reclaim.ai,0,free-tier,pricing-page-verified,2026-09-09,https://reclaim.ai/pricing,https://toolcompare.net/tools/reclaim
+superhuman,Superhuman,Productivity,https://superhuman.com,12,per-user,pricing-page-verified,2026-09-09,https://superhuman.com/plans,https://toolcompare.net/tools/superhuman
+readwise,Readwise,Productivity,https://readwise.io,9.99,subscription,pricing-page-verified,2026-09-07,https://readwise.io/pricing,https://toolcompare.net/tools/readwise
+bitwarden,Bitwarden,Productivity,https://bitwarden.com,0,free-tier,pricing-page-verified,2026-09-08,https://bitwarden.com/pricing/,https://toolcompare.net/tools/bitwarden
+dashlane,Dashlane,Productivity,https://www.dashlane.com,0,free-tier,vendor-sourced,2026-09-09,https://www.dashlane.com/pricing,https://toolcompare.net/tools/dashlane
+proton-mail,Proton Mail,Productivity,https://proton.me/mail,0,free-tier,vendor-sourced,2026-09-10,https://proton.me/mail/pricing,https://toolcompare.net/tools/proton-mail
+basecamp,Basecamp,Project Management,https://basecamp.com,0,free-tier,pricing-page-verified,2026-09-07,https://basecamp.com/pricing,https://toolcompare.net/tools/basecamp
+wrike,Wrike,Project Management,https://www.wrike.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.wrike.com/price/,https://toolcompare.net/tools/wrike
+smartsheet,Smartsheet,Project Management,https://www.smartsheet.com,9,subscription,pricing-page-verified,2026-09-07,https://www.smartsheet.com/pricing,https://toolcompare.net/tools/smartsheet
+shortcut,Shortcut,Project Management,https://www.shortcut.com,0,free-tier,vendor-sourced,2026-08-31,https://www.shortcut.com/pricing/,https://toolcompare.net/tools/shortcut
+teamwork,Teamwork,Project Management,https://www.teamwork.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.teamwork.com/pricing/,https://toolcompare.net/tools/teamwork
+google-meet,Google Meet,Communication,https://meet.google.com,0,free-tier,pricing-page-verified,2026-09-08,https://workspace.google.com/products/meet/,https://toolcompare.net/tools/google-meet
+mattermost,Mattermost,Communication,https://mattermost.com,0,quote,vendor-sourced,2026-09-09,https://mattermost.com/pricing/,https://toolcompare.net/tools/mattermost
+rocket-chat,Rocket.Chat,Communication,https://www.rocket.chat,0,free-tier,vendor-sourced,2026-08-31,https://www.rocket.chat/plans,https://toolcompare.net/tools/rocket-chat
+twist,Twist,Communication,https://twist.com,0,free-tier,pricing-page-verified,2026-09-08,https://twist.com/pricing,https://toolcompare.net/tools/twist
+hetzner,Hetzner,Hosting,https://www.hetzner.com,0,usage-based,vendor-sourced,2026-09-09,https://www.hetzner.com/cloud,https://toolcompare.net/tools/hetzner
+fastly,Fastly,Hosting,https://www.fastly.com,0,usage-based,pricing-page-verified,2026-09-09,https://www.fastly.com/pricing,https://toolcompare.net/tools/fastly
+bunny-net,Bunny.net,Hosting,https://bunny.net,0,usage-based,pricing-page-verified,2026-09-08,https://bunny.net/pricing/,https://toolcompare.net/tools/bunny-net
+woocommerce,WooCommerce,E-commerce,https://woocommerce.com,0,free-tier,pricing-page-verified,2026-09-08,https://woocommerce.com/pricing/,https://toolcompare.net/tools/woocommerce
+ecwid,Ecwid,E-commerce,https://www.ecwid.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.ecwid.com/pricing,https://toolcompare.net/tools/ecwid
+shopware,Shopware,E-commerce,https://www.shopware.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.shopware.com/en/pricing/,https://toolcompare.net/tools/shopware
+snipcart,Snipcart,E-commerce,https://snipcart.com,0,usage-based,pricing-page-verified,2026-09-08,https://snipcart.com/pricing,https://toolcompare.net/tools/snipcart
+chargebee,Chargebee,E-commerce,https://www.chargebee.com,0,free-tier,pricing-page-verified,2026-09-09,https://www.chargebee.com/pricing/,https://toolcompare.net/tools/chargebee
+recurly,Recurly,E-commerce,https://recurly.com,0,flat,pricing-page-verified,2026-09-09,https://www.recurly.com/pricing,https://toolcompare.net/tools/recurly
+gemini,Google Gemini,AI Tools,https://gemini.google.com,0,free-tier,vendor-sourced,2026-08-24,https://one.google.com/about/plans,https://toolcompare.net/tools/gemini
+mistral,Mistral AI,AI Tools,https://mistral.ai,0,usage-based,pricing-page-verified,2026-09-09,https://mistral.ai/pricing,https://toolcompare.net/tools/mistral
+hugging-face,Hugging Face,AI Tools,https://huggingface.co,0,free-tier,pricing-page-verified,2026-09-09,https://huggingface.co/pricing,https://toolcompare.net/tools/hugging-face
+runway,Runway,AI Tools,https://runwayml.com,0,free-tier,pricing-page-verified,2026-09-08,https://runway.com/pricing,https://toolcompare.net/tools/runway
+suno,Suno,AI Tools,https://suno.com,0,free-tier,pricing-page-verified,2026-09-08,https://suno.com/pricing,https://toolcompare.net/tools/suno
+synthesia,Synthesia,AI Tools,https://www.synthesia.io,0,free-tier,pricing-page-verified,2026-09-07,https://www.synthesia.io/pricing,https://toolcompare.net/tools/synthesia
+heygen,HeyGen,AI Tools,https://www.heygen.com,0,free-tier,pricing-page-verified,2026-09-09,https://www.heygen.com/pricing,https://toolcompare.net/tools/heygen
+otter-ai,Otter.ai,AI Tools,https://otter.ai,0,free-tier,pricing-page-verified,2026-09-09,https://otter.ai/pricing,https://toolcompare.net/tools/otter-ai
+fireflies,Fireflies.ai,AI Tools,https://fireflies.ai,0,free-tier,pricing-page-verified,2026-09-09,https://fireflies.ai/pricing,https://toolcompare.net/tools/fireflies
+cursor,Cursor,AI Tools,https://cursor.com,0,free-tier,pricing-page-verified,2026-09-09,https://cursor.com/pricing,https://toolcompare.net/tools/cursor
+github-copilot,GitHub Copilot,AI Tools,https://github.com/features/copilot,0,free-tier,vendor-sourced,2026-08-24,https://docs.github.com/en/copilot/get-started/plans,https://toolcompare.net/tools/github-copilot
+writesonic,Writesonic,AI Tools,https://writesonic.com,79,subscription,pricing-page-verified,2026-09-09,https://writesonic.com/pricing,https://toolcompare.net/tools/writesonic
+freshdesk,Freshdesk,Customer Service,https://www.freshworks.com/freshdesk/,0,free-tier,pricing-page-verified,2026-09-09,https://www.freshworks.com/freshdesk/pricing/,https://toolcompare.net/tools/freshdesk
+help-scout,Help Scout,Customer Service,https://www.helpscout.com,0,flat,vendor-sourced,2026-09-09,https://www.helpscout.com/pricing/,https://toolcompare.net/tools/help-scout
+crisp,Crisp,Customer Service,https://crisp.chat,0,free-tier,pricing-page-verified,2026-09-08,https://crisp.chat/en/pricing/,https://toolcompare.net/tools/crisp
+tidio,Tidio,Customer Service,https://www.tidio.com,0,free-tier,pricing-page-verified,2026-09-09,https://www.tidio.com/pricing/,https://toolcompare.net/tools/tidio
+front,Front,Customer Service,https://front.com,0,flat,pricing-page-verified,2026-09-09,https://front.com/pricing,https://toolcompare.net/tools/front
+xero,Xero,Finance Tools,https://www.xero.com,25,subscription,pricing-page-verified,2026-09-07,https://www.xero.com/us/pricing-plans/,https://toolcompare.net/tools/xero
+wave,Wave,Finance Tools,https://www.waveapps.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.waveapps.com/pricing,https://toolcompare.net/tools/wave
+freshbooks,FreshBooks,Finance Tools,https://www.freshbooks.com,23,subscription,pricing-page-verified,2026-09-07,https://www.freshbooks.com/pricing,https://toolcompare.net/tools/freshbooks
+ramp,Ramp,Finance Tools,https://ramp.com,0,free,pricing-page-verified,2026-09-08,https://ramp.com/pricing,https://toolcompare.net/tools/ramp
+brex,Brex,Finance Tools,https://www.brex.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.brex.com/pricing,https://toolcompare.net/tools/brex
+deel,Deel,HR Software,https://www.deel.com,49,subscription,pricing-page-verified,2026-09-07,https://www.deel.com/pricing/,https://toolcompare.net/tools/deel
+remote-com,Remote,HR Software,https://remote.com,29,per-user,pricing-page-verified,2026-09-09,https://remote.com/pricing,https://toolcompare.net/tools/remote-com
+rippling,Rippling,HR Software,https://www.rippling.com,0,flat,vendor-sourced,2026-09-09,https://www.rippling.com/pricing,https://toolcompare.net/tools/rippling
+bamboohr,BambooHR,HR Software,https://www.bamboohr.com,10,subscription,pricing-page-verified,2026-09-07,https://www.bamboohr.com/pricing/,https://toolcompare.net/tools/bamboohr
+docusign,DocuSign,Legal Tools,https://www.docusign.com,0,flat,pricing-page-verified,2026-09-08,https://ecom.docusign.com/plans-and-pricing/esignature,https://toolcompare.net/tools/docusign
+pipedrive,Pipedrive,CRM,https://www.pipedrive.com,14,per-user,pricing-page-verified,2026-09-07,https://www.pipedrive.com/en/pricing,https://toolcompare.net/tools/pipedrive
+salesforce,Salesforce,CRM,https://www.salesforce.com,25,per-user,pricing-page-verified,2026-09-10,https://www.salesforce.com/editions-pricing/sales-cloud/,https://toolcompare.net/tools/salesforce
+zoho-crm,Zoho CRM,CRM,https://www.zoho.com/crm/,0,free-tier,vendor-sourced,2026-09-15,https://www.zoho.com/crm/zohocrm-pricing.html,https://toolcompare.net/tools/zoho-crm
+close,Close,CRM,https://www.close.com,0,flat,pricing-page-verified,2026-09-09,https://close.com/pricing/,https://toolcompare.net/tools/close
+attio,Attio,CRM,https://attio.com,0,free-tier,pricing-page-verified,2026-09-08,https://attio.com/pricing,https://toolcompare.net/tools/attio
+folk,folk,CRM,https://www.folk.app,24,subscription,pricing-page-verified,2026-09-07,https://www.folk.app/pricing,https://toolcompare.net/tools/folk
+vscode,Visual Studio Code,Developer Tools,https://code.visualstudio.com,0,free,open-source-verified,2026-09-08,https://code.visualstudio.com/,https://toolcompare.net/tools/vscode
+jetbrains,JetBrains,Developer Tools,https://www.jetbrains.com,0,flat,pricing-page-verified,2026-09-12,https://www.jetbrains.com/store/?section=personal&billing=yearly,https://toolcompare.net/tools/jetbrains
+sublime-text,Sublime Text,Developer Tools,https://www.sublimetext.com,99,one-time,vendor-sourced,2026-09-15,https://sublimehq.com/store/text,https://toolcompare.net/tools/sublime-text
+neovim,Neovim,Developer Tools,https://neovim.io,0,free,open-source-verified,2026-09-08,https://neovim.io/,https://toolcompare.net/tools/neovim
+warp,Warp,Developer Tools,https://www.warp.dev,0,free-tier,pricing-page-verified,2026-09-08,https://www.warp.dev/pricing,https://toolcompare.net/tools/warp
+iterm2,iTerm2,Developer Tools,https://iterm2.com,0,free,open-source-verified,2026-09-08,https://iterm2.com/,https://toolcompare.net/tools/iterm2
+dbeaver,DBeaver,Developer Tools,https://dbeaver.io,0,free-tier,vendor-sourced,2026-09-07,https://dbeaver.io/download/,https://toolcompare.net/tools/dbeaver
+tableplus,TablePlus,Developer Tools,https://tableplus.com,0,free-tier,pricing-page-verified,2026-09-08,https://tableplus.com/pricing,https://toolcompare.net/tools/tableplus
+prisma,Prisma,Developer Tools,https://www.prisma.io,0,free-tier,pricing-page-verified,2026-09-09,https://www.prisma.io/pricing,https://toolcompare.net/tools/prisma
+drizzle,Drizzle ORM,Developer Tools,https://orm.drizzle.team,0,free,pricing-page-verified,2026-09-07,https://orm.drizzle.team/,https://toolcompare.net/tools/drizzle
+turso,Turso,Developer Tools,https://turso.tech,0,free-tier,pricing-page-verified,2026-09-08,https://turso.tech/pricing,https://toolcompare.net/tools/turso
+upstash,Upstash,Developer Tools,https://upstash.com,0,free-tier,pricing-page-verified,2026-09-08,https://upstash.com/pricing/redis,https://toolcompare.net/tools/upstash
+clerk,Clerk,Developer Tools,https://clerk.com,0,free-tier,pricing-page-verified,2026-09-08,https://clerk.com/pricing,https://toolcompare.net/tools/clerk
+auth0,Auth0,Developer Tools,https://auth0.com,0,free-tier,pricing-page-verified,2026-09-08,https://auth0.com/pricing,https://toolcompare.net/tools/auth0
+keycloak,Keycloak,Developer Tools,https://www.keycloak.org,0,free,open-source-verified,2026-09-08,https://www.keycloak.org/,https://toolcompare.net/tools/keycloak
+nginx,NGINX,Developer Tools,https://nginx.org,0,free,open-source-verified,2026-09-08,https://nginx.org/LICENSE,https://toolcompare.net/tools/nginx
+caddy,Caddy,Developer Tools,https://caddyserver.com,0,free,open-source-verified,2026-09-09,https://caddyserver.com/,https://toolcompare.net/tools/caddy
+pulumi,Pulumi,Developer Tools,https://www.pulumi.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.pulumi.com/pricing/,https://toolcompare.net/tools/pulumi
+betterstack,Better Stack,Developer Tools,https://betterstack.com,0,free-tier,pricing-page-verified,2026-09-09,https://betterstack.com/pricing,https://toolcompare.net/tools/betterstack
+statuspage,Atlassian Statuspage,Developer Tools,https://www.atlassian.com/software/statuspage,0,free-tier,pricing-page-verified,2026-09-09,https://www.atlassian.com/software/statuspage/pricing,https://toolcompare.net/tools/statuspage
+launchdarkly,LaunchDarkly,Developer Tools,https://launchdarkly.com,0,free-tier,pricing-page-verified,2026-09-07,https://launchdarkly.com/pricing/,https://toolcompare.net/tools/launchdarkly
+codecov,Codecov,Developer Tools,https://about.codecov.io,0,free-tier,pricing-page-verified,2026-09-08,https://about.codecov.io/pricing/,https://toolcompare.net/tools/codecov
+snyk,Snyk,Developer Tools,https://snyk.io,0,free-tier,pricing-page-verified,2026-09-08,https://snyk.io/plans/,https://toolcompare.net/tools/snyk
+sonarqube,SonarQube,Developer Tools,https://www.sonarsource.com/products/sonarqube/,0,free-tier,vendor-sourced,2026-09-09,https://www.sonarsource.com/plans-and-pricing/sonarqube/,https://toolcompare.net/tools/sonarqube
+dribbble,Dribbble,Design,https://dribbble.com,0,free-tier,pricing-page-verified,2026-09-08,https://dribbble.com/pro,https://toolcompare.net/tools/dribbble
+behance,Behance,Design,https://www.behance.net,0,free,pricing-page-verified,2026-09-08,https://www.behance.net/pro,https://toolcompare.net/tools/behance
+fontawesome,Font Awesome,Design,https://fontawesome.com,0,free-tier,pricing-page-verified,2026-09-09,https://fontawesome.com/plans,https://toolcompare.net/tools/fontawesome
+coolors,Coolors,Design,https://coolors.co,0,free-tier,pricing-page-verified,2026-09-09,https://coolors.co/pricing,https://toolcompare.net/tools/coolors
+gohighlevel,GoHighLevel,Marketing,https://www.gohighlevel.com,0,flat,pricing-page-verified,2026-09-09,https://www.gohighlevel.com/pricing,https://toolcompare.net/tools/gohighlevel
+clickfunnels,ClickFunnels,Marketing,https://www.clickfunnels.com,0,flat,pricing-page-verified,2026-09-08,https://www.clickfunnels.com/pricing,https://toolcompare.net/tools/clickfunnels
+leadpages,Leadpages,Marketing,https://www.leadpages.com,0,flat,pricing-page-verified,2026-09-08,https://www.leadpages.com/pricing,https://toolcompare.net/tools/leadpages
+carrot,Carrot,Marketing,https://carrot.com,0,flat,pricing-page-verified,2026-09-08,https://carrot.com/pricing/,https://toolcompare.net/tools/carrot
+similarweb,Similarweb,Marketing,https://www.similarweb.com,0,quote,pricing-page-verified,2026-09-07,https://www.similarweb.com/corp/pricing/,https://toolcompare.net/tools/similarweb
+spyfu,SpyFu,Marketing,https://www.spyfu.com,39,subscription,pricing-page-verified,2026-09-07,https://www.spyfu.com/mainpurchase/?page=default,https://toolcompare.net/tools/spyfu
+buzzsumo,BuzzSumo,Marketing,https://buzzsumo.com,0,flat,pricing-page-verified,2026-09-09,https://buzzsumo.com/pricing/,https://toolcompare.net/tools/buzzsumo
+frase,Frase,Marketing,https://www.frase.io,39,subscription,pricing-page-verified,2026-09-09,https://www.frase.io/pricing,https://toolcompare.net/tools/frase
+clearscope,Clearscope,Marketing,https://www.clearscope.io,129,subscription,pricing-page-verified,2026-09-09,https://www.clearscope.io/pricing,https://toolcompare.net/tools/clearscope
+hypefury,Hypefury,Marketing,https://hypefury.com,0,flat,pricing-page-verified,2026-09-08,https://hypefury.com/features-pricing,https://toolcompare.net/tools/hypefury
+typefully,Typefully,Marketing,https://typefully.com,0,free-tier,unverified,,,https://toolcompare.net/tools/typefully
+loops,Loops,Marketing,https://loops.so,0,free-tier,vendor-sourced,2026-08-31,https://loops.so/pricing,https://toolcompare.net/tools/loops
+resend,Resend,Marketing,https://resend.com,0,free-tier,pricing-page-verified,2026-09-08,https://resend.com/pricing,https://toolcompare.net/tools/resend
+postmark,Postmark,Marketing,https://postmarkapp.com,0,usage-based,pricing-page-verified,2026-09-08,https://postmarkapp.com/pricing,https://toolcompare.net/tools/postmark
+sendgrid,SendGrid,Marketing,https://sendgrid.com,0,free-tier,vendor-sourced,2026-08-31,https://www.twilio.com/en-us/sendgrid,https://toolcompare.net/tools/sendgrid
+google-workspace,Google Workspace,Productivity,https://workspace.google.com,0,flat,vendor-sourced,2026-08-31,https://workspace.google.com/pricing,https://toolcompare.net/tools/google-workspace
+microsoft-365,Microsoft 365,Productivity,https://www.microsoft.com/microsoft-365,0,flat,vendor-sourced,2026-09-03,https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products,https://toolcompare.net/tools/microsoft-365
+dropbox,Dropbox,Productivity,https://www.dropbox.com,0,free-tier,pricing-page-verified,2026-09-09,https://www.dropbox.com/plans,https://toolcompare.net/tools/dropbox
+box,Box,Productivity,https://www.box.com,0,free-tier,vendor-sourced,2026-08-31,https://www.box.com/,https://toolcompare.net/tools/box
+sync-com,Sync.com,Productivity,https://www.sync.com,0,free-tier,pricing-page-verified,2026-09-08,https://www.sync.com/pricing-individual/,https://toolcompare.net/tools/sync-com
+keeper,Keeper,Productivity,https://www.keepersecurity.com,0,flat,vendor-sourced,2026-09-09,https://www.keepersecurity.com/pricing.html,https://toolcompare.net/tools/keeper
+sunsama,Sunsama,Productivity,https://www.sunsama.com,0,flat,pricing-page-verified,2026-09-08,https://www.sunsama.com/pricing,https://toolcompare.net/tools/sunsama
+akiflow,Akiflow,Productivity,https://akiflow.com,0,flat,pricing-page-verified,2026-09-08,https://akiflow.com/pricing,https://toolcompare.net/tools/akiflow
+fantastical,Fantastical,Productivity,https://flexibits.com/fantastical,0,free-tier,vendor-sourced,2026-08-31,https://flexibits.com/pricing?product=fantastical,https://toolcompare.net/tools/fantastical
+spark-mail,Spark Mail,Productivity,https://sparkmailapp.com,0,free-tier,pricing-page-verified,2026-09-09,https://sparkmailapp.com/pricing,https://toolcompare.net/tools/spark-mail
+shortwave,Shortwave,Productivity,https://www.shortwave.com,30,per-user,pricing-page-verified,2026-09-09,https://www.shortwave.com/pricing/,https://toolcompare.net/tools/shortwave
+mem,Mem,Productivity,https://get.mem.ai,0,free-tier,pricing-page-verified,2026-09-09,https://get.mem.ai/pricing,https://toolcompare.net/tools/mem
+capacities,Capacities,Productivity,https://capacities.io,0,free-tier,pricing-page-verified,2026-09-08,https://capacities.io/pricing,https://toolcompare.net/tools/capacities
+anytype,Anytype,Productivity,https://anytype.io,0,free-tier,pricing-page-verified,2026-09-09,https://anytype.io/pricing,https://toolcompare.net/tools/anytype
+logseq,Logseq,Productivity,https://logseq.com,0,free,open-source-verified,2026-09-08,https://github.com/logseq/logseq,https://toolcompare.net/tools/logseq
+productboard,Productboard,Project Management,https://www.productboard.com,0,flat,pricing-page-verified,2026-09-08,https://www.productboard.com/pricing/,https://toolcompare.net/tools/productboard
+aha,Aha!,Project Management,https://www.aha.io,59,per-user,pricing-page-verified,2026-09-10,https://www.aha.io/pricing,https://toolcompare.net/tools/aha
+plane,Plane,Project Management,https://plane.so,0,free-tier,pricing-page-verified,2026-09-08,https://plane.so/pricing,https://toolcompare.net/tools/plane
+youtrack,YouTrack,Project Management,https://www.jetbrains.com/youtrack/,0,free-tier,vendor-sourced,2026-09-07,https://sales.jetbrains.com/hc/en-gb/articles/28384631938450-YouTrack-Pricing-Changes-Effective-October-1-2025,https://toolcompare.net/tools/youtrack
+zoom-phone,Zoom Phone,Communication,https://www.zoom.com/en/products/voip-phone/,0,flat,unverified,,,https://toolcompare.net/tools/zoom-phone
+dialpad,Dialpad,Communication,https://www.dialpad.com,0,quote,pricing-page-verified,2026-09-07,https://www.dialpad.com/pricing/,https://toolcompare.net/tools/dialpad
+ringcentral,RingCentral,Communication,https://www.ringcentral.com,0,flat,vendor-sourced,2026-08-31,https://www.ringcentral.com/office/plansandpricing.html,https://toolcompare.net/tools/ringcentral
+aircall,Aircall,Communication,https://aircall.io,0,subscription,pricing-page-verified,2026-09-07,https://aircall.io/pricing/,https://toolcompare.net/tools/aircall
+whereby,Whereby,Communication,https://whereby.com,0,free-tier,pricing-page-verified,2026-09-08,https://whereby.com/information/meetings/pricing,https://toolcompare.net/tools/whereby
+kinsta,Kinsta,Hosting,https://kinsta.com,35,subscription,pricing-page-verified,2026-09-07,https://kinsta.com/plans/,https://toolcompare.net/tools/kinsta
+wpengine,WP Engine,Hosting,https://wpengine.com,0,flat,pricing-page-verified,2026-09-08,https://wpengine.com/plans/,https://toolcompare.net/tools/wpengine
+siteground,SiteGround,Hosting,https://www.siteground.com,0,flat,pricing-page-verified,2026-09-08,https://world.siteground.com/web-hosting.htm,https://toolcompare.net/tools/siteground
+porkbun,Porkbun,Hosting,https://porkbun.com,0,usage-based,unverified,,,https://toolcompare.net/tools/porkbun
+printful,Printful,E-commerce,https://www.printful.com,0,usage-based,pricing-page-verified,2026-09-08,https://www.printful.com/pricing,https://toolcompare.net/tools/printful
+printify,Printify,E-commerce,https://printify.com,0,free-tier,pricing-page-verified,2026-09-09,https://printify.com/pricing/,https://toolcompare.net/tools/printify
+payhip,Payhip,E-commerce,https://payhip.com,0,free-tier,vendor-sourced,2026-09-09,https://payhip.com/pricing,https://toolcompare.net/tools/payhip
+sellfy,Sellfy,E-commerce,https://sellfy.com,22,subscription,pricing-page-verified,2026-09-07,https://sellfy.com/pricing/,https://toolcompare.net/tools/sellfy
+deepseek,DeepSeek,AI Tools,https://www.deepseek.com,0,usage-based,vendor-sourced,2026-08-24,https://api-docs.deepseek.com/quick_start/pricing,https://toolcompare.net/tools/deepseek
+groq,Groq,AI Tools,https://groq.com,0,usage-based,vendor-sourced,2026-08-24,https://console.groq.com/docs/models,https://toolcompare.net/tools/groq
+together-ai,Together AI,AI Tools,https://www.together.ai,0,usage-based,pricing-page-verified,2026-09-09,https://www.together.ai/pricing,https://toolcompare.net/tools/together-ai
+replicate,Replicate,AI Tools,https://replicate.com,0,usage-based,pricing-page-verified,2026-09-09,https://replicate.com/pricing,https://toolcompare.net/tools/replicate
+openrouter,OpenRouter,AI Tools,https://openrouter.ai,0,usage-based,vendor-sourced,2026-08-24,https://openrouter.ai/docs/faq,https://toolcompare.net/tools/openrouter
+langchain,LangChain,AI Tools,https://www.langchain.com,0,free-tier,pricing-page-verified,2026-09-13,https://docs.langchain.com/oss/python/langchain/agents,https://toolcompare.net/tools/langchain
+llamaindex,LlamaIndex,AI Tools,https://www.llamaindex.ai,0,free-tier,vendor-sourced,2026-09-03,https://github.com/run-llama/llama_index,https://toolcompare.net/tools/llamaindex
+pinecone,Pinecone,AI Tools,https://www.pinecone.io,0,free-tier,pricing-page-verified,2026-09-09,https://www.pinecone.io/pricing/,https://toolcompare.net/tools/pinecone
+weaviate,Weaviate,AI Tools,https://weaviate.io,0,free-tier,vendor-sourced,2026-09-03,https://docs.weaviate.io/weaviate/concepts/search/hybrid-search,https://toolcompare.net/tools/weaviate
+qdrant,Qdrant,AI Tools,https://qdrant.tech,0,free-tier,vendor-sourced,2026-08-24,https://qdrant.tech/documentation/guides/,https://toolcompare.net/tools/qdrant
+chroma,Chroma,AI Tools,https://www.trychroma.com,0,free,vendor-sourced,2026-08-24,https://docs.trychroma.com/docs/overview/getting-started,https://toolcompare.net/tools/chroma
+v0,v0,AI Tools,https://v0.app,0,free-tier,vendor-sourced,2026-08-24,https://v0.dev/docs/faqs,https://toolcompare.net/tools/v0
+bolt-new,Bolt,AI Tools,https://bolt.new,0,free-tier,vendor-sourced,2026-09-03,https://support.bolt.new/building/quickstart,https://toolcompare.net/tools/bolt-new
+gorgias,Gorgias,Customer Service,https://www.gorgias.com,0,usage-based,vendor-sourced,2026-09-09,https://www.gorgias.com/pricing,https://toolcompare.net/tools/gorgias
+gladly,Gladly,Customer Service,https://www.gladly.com,0,flat,vendor-sourced,2026-09-08,https://www.gladly.ai/pricing/,https://toolcompare.net/tools/gladly
+chatwoot,Chatwoot,Customer Service,https://www.chatwoot.com,0,free-tier,vendor-sourced,2026-08-24,https://github.com/chatwoot/chatwoot/blob/develop/LICENSE,https://toolcompare.net/tools/chatwoot
+mercury,Mercury,Finance Tools,https://mercury.com,0,free-tier,vendor-sourced,2026-08-24,https://support.mercury.com/hc/en-us/articles/28770467511060-Eligibility,https://toolcompare.net/tools/mercury
+wise,Wise,Finance Tools,https://wise.com,0,usage-based,vendor-sourced,2026-08-24,https://wise.com/help/articles/2961337/how-do-i-open-a-wise-account-for-my-business,https://toolcompare.net/tools/wise
+bill-com,BILL,Finance Tools,https://www.bill.com,0,per-user,vendor-sourced,2026-08-24,https://www.bill.com/product/pricing,https://toolcompare.net/tools/bill-com
+workday,Workday,HR Software,https://www.workday.com,0,quote,pricing-page-verified,2026-09-07,https://www.workday.com/en-us/products.html,https://toolcompare.net/tools/workday
+lever,Lever,HR Software,https://www.lever.co,0,flat,vendor-sourced,2026-08-24,https://www.lever.co/,https://toolcompare.net/tools/lever
+greenhouse,Greenhouse,HR Software,https://www.greenhouse.com,0,flat,vendor-sourced,2026-08-24,https://support.greenhouse.io/hc/en-us/articles/360039539772-Structured-hiring-guide,https://toolcompare.net/tools/greenhouse
+ironclad,Ironclad,Legal Tools,https://ironcladapp.com,0,flat,vendor-sourced,2026-08-24,https://support.ironcladapp.com/hc/en-us/articles/12615001356567-Ironclad-Products-Overview,https://toolcompare.net/tools/ironclad
+copper,Copper,CRM,https://www.copper.com,0,per-user,vendor-sourced,2026-08-24,https://www.copper.com/pricing,https://toolcompare.net/tools/copper
+keap,Keap,CRM,https://keap.com,0,flat,vendor-sourced,2026-08-24,https://keap.com/pricing,https://toolcompare.net/tools/keap
+browserstack,BrowserStack,Developer Tools,https://www.browserstack.com,0,flat,vendor-sourced,2026-08-24,https://www.browserstack.com/docs/local-testing,https://toolcompare.net/tools/browserstack
+appveyor,AppVeyor,Developer Tools,https://www.appveyor.com/,0,free-tier,vendor-sourced,2026-08-24,https://www.appveyor.com/pricing/,https://toolcompare.net/tools/appveyor
+travis-ci,Travis CI,Developer Tools,https://travis-ci.com,0,usage-based,vendor-sourced,2026-08-24,https://www.travis-ci.com/pricing/,https://toolcompare.net/tools/travis-ci
+semaphore,Semaphore,Developer Tools,https://semaphore.io,0,usage-based,vendor-sourced,2026-08-24,https://semaphore.io/pricing,https://toolcompare.net/tools/semaphore
+cloudbees,CloudBees,Developer Tools,https://www.cloudbees.com/,0,flat,vendor-sourced,2026-08-24,https://docs.cloudbees.com/docs/cloudbees-ci/latest/,https://toolcompare.net/tools/cloudbees
+selenium,Selenium,Developer Tools,https://selenium.dev/,0,free,vendor-sourced,2026-08-24,https://www.selenium.dev/documentation/overview/,https://toolcompare.net/tools/selenium
+drupal,Drupal,Developer Tools,https://www.drupal.org/,0,free,open-source-verified,2026-09-09,https://www.drupal.org/about/licensing,https://toolcompare.net/tools/drupal
+joomla,Joomla,Developer Tools,https://www.joomla.org,0,free,vendor-sourced,2026-08-24,https://manual.joomla.org/docs/next/get-started/technical-requirements/,https://toolcompare.net/tools/joomla
+typo3,TYPO3,Developer Tools,https://typo3.org/,0,free,vendor-sourced,2026-08-24,https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/Administration/Installation/SystemRequirements/Index.html,https://toolcompare.net/tools/typo3
+prestashop,PrestaShop,E-commerce,https://prestashop-project.org,0,free,vendor-sourced,2026-08-24,https://devdocs.prestashop-project.org/9/basics/installation/system-requirements/,https://toolcompare.net/tools/prestashop
+filemaker,FileMaker,Developer Tools,https://www.claris.com/filemaker/,0,per-user,vendor-sourced,2026-09-09,https://www.claris.com/pricing/,https://toolcompare.net/tools/filemaker
+git,Git,Developer Tools,https://git-scm.com,0,free,vendor-sourced,2026-08-24,https://git-scm.com/about,https://toolcompare.net/tools/git
+mercurial,Mercurial,Developer Tools,https://www.mercurial-scm.org,0,free,vendor-sourced,2026-08-24,https://www.mercurial-scm.org/about,https://toolcompare.net/tools/mercurial
+fossil,Fossil,Developer Tools,https://www.fossil-scm.org,0,free,vendor-sourced,2026-09-03,https://fossil-scm.org/home/doc/trunk/www/quickstart.wiki,https://toolcompare.net/tools/fossil
+buildbot,Buildbot,Developer Tools,https://www.buildbot.net/,0,free,vendor-sourced,2026-08-24,https://docs.buildbot.net/current/manual/introduction.html,https://toolcompare.net/tools/buildbot
+hudson,Hudson,Developer Tools,https://projects.eclipse.org/projects/technology.hudson,0,free,vendor-sourced,2026-08-24,https://projects.eclipse.org/projects/technology.hudson,https://toolcompare.net/tools/hudson
+bookstack,BookStack,Developer Tools,https://www.bookstackapp.com,0,free,vendor-sourced,2026-08-24,https://www.bookstackapp.com/docs/admin/installation/,https://toolcompare.net/tools/bookstack
+grav,Grav,Developer Tools,https://getgrav.org/,0,free,vendor-sourced,2026-08-24,https://learn.getgrav.org/17/basics/requirements,https://toolcompare.net/tools/grav
+movable-type,Movable Type,Developer Tools,https://movabletype.org/,0,usage-based,vendor-sourced,2026-08-24,https://movabletype.org/documentation/appendices/release-notes/,https://toolcompare.net/tools/movable-type
+mediawiki,MediaWiki,Developer Tools,https://www.mediawiki.org,0,free,vendor-sourced,2026-08-24,https://www.mediawiki.org/wiki/Manual:Installation_requirements/en,https://toolcompare.net/tools/mediawiki
+netlify-cms,Netlify CMS,Developer Tools,https://decapcms.org/,0,free,vendor-sourced,2026-08-24,https://decapcms.org/docs/intro/,https://toolcompare.net/tools/netlify-cms
+bluefish,Bluefish,Developer Tools,https://bluefish.openoffice.nl,0,free,vendor-sourced,2026-08-24,https://bluefish.openoffice.nl/index.html,https://toolcompare.net/tools/bluefish
+netbeans,NetBeans,Developer Tools,https://netbeans.apache.org,0,free,vendor-sourced,2026-08-24,https://netbeans.apache.org/front/main/about/index.html,https://toolcompare.net/tools/netbeans
+xojo,Xojo,Developer Tools,https://www.xojo.com/,0,free-tier,vendor-sourced,2026-08-24,https://www.xojo.com/products/,https://toolcompare.net/tools/xojo
+uno-platform,Uno Platform,Developer Tools,https://platform.uno/,0,free-tier,vendor-sourced,2026-09-03,https://platform.uno/docs/articles/get-started.html,https://toolcompare.net/tools/uno-platform
+mamp,MAMP,Developer Tools,https://www.mamp.info/en/,0,free-tier,vendor-sourced,2026-08-24,https://www.mamp.info/en/comparison-matrix/,https://toolcompare.net/tools/mamp
+emmet,Emmet,Developer Tools,https://emmet.io/,0,free,vendor-sourced,2026-08-24,https://docs.emmet.io/abbreviations/,https://toolcompare.net/tools/emmet
+capybara,Capybara,Developer Tools,https://teamcapybara.github.io/capybara/,0,free,vendor-sourced,2026-08-24,https://teamcapybara.github.io/capybara/,https://toolcompare.net/tools/capybara
+bootstrap-studio,Bootstrap Studio,Design,https://bootstrapstudio.io,29,per-user,vendor-sourced,2026-08-24,https://bootstrapstudio.io/,https://toolcompare.net/tools/bootstrap-studio
+cloud-cms,Cloud CMS,Developer Tools,https://gitana.io/,0,free-tier,vendor-sourced,2026-08-24,https://gitana.io/,https://toolcompare.net/tools/cloud-cms
+pagecloud,PageCloud,Design,https://www.pagecloud.com/,0,free-tier,vendor-sourced,2026-08-24,https://www.pagecloud.com/,https://toolcompare.net/tools/pagecloud
+webnode,Webnode,Design,https://www.webnode.com/,0,free-tier,vendor-sourced,2026-08-24,https://www.webnode.com/features/,https://toolcompare.net/tools/webnode
+ravendb,RavenDB,Developer Tools,https://www.ravendb.net/,0,free-tier,vendor-sourced,2026-08-24,https://docs.ravendb.net/7.0/start/licensing/licensing-overview/,https://toolcompare.net/tools/ravendb
+oceanbase,OceanBase,Developer Tools,https://open.oceanbase.com/,0,free-tier,vendor-sourced,2026-08-24,https://github.com/oceanbase/oceanbase,https://toolcompare.net/tools/oceanbase
+valkey,Valkey,Developer Tools,https://valkey.io/,0,free,vendor-sourced,2026-08-24,https://valkey.io/topics/introduction/,https://toolcompare.net/tools/valkey
+maptiler,MapTiler,Developer Tools,https://www.maptiler.com/,0,free-tier,vendor-sourced,2026-08-24,https://www.maptiler.com/cloud/pricing/,https://toolcompare.net/tools/maptiler
+october,October CMS,Developer Tools,https://octobercms.com/,0,free-tier,vendor-sourced,2026-08-24,https://octobercms.com/pricing,https://toolcompare.net/tools/october
+backblaze,Backblaze,Hosting,https://www.backblaze.com,0,usage-based,vendor-sourced,2026-08-24,https://www.backblaze.com/cloud-storage/pricing,https://toolcompare.net/tools/backblaze
+dreamhost,DreamHost,Hosting,https://www.dreamhost.com/,1.99,subscription,vendor-sourced,2026-09-09,https://www.dreamhost.com/hosting/shared/,https://toolcompare.net/tools/dreamhost
+heroku,Heroku,Hosting,https://www.heroku.com/,5,usage-based,vendor-sourced,2026-08-24,https://www.heroku.com/dynos/,https://toolcompare.net/tools/heroku
+hostinger,Hostinger,Hosting,https://www.hostinger.com,2.99,subscription,vendor-sourced,2026-08-24,https://www.hostinger.com/web-hosting,https://toolcompare.net/tools/hostinger
+ionos,IONOS,Hosting,https://www.ionos.com/,1,subscription,vendor-sourced,2026-08-24,https://www.ionos.com/web-hosting,https://toolcompare.net/tools/ionos
+ovhcloud,OVHcloud,Hosting,https://www.ovhcloud.com,0,free-credits,vendor-sourced,2026-08-24,https://www.ovhcloud.com/en/public-cloud/prices/,https://toolcompare.net/tools/ovhcloud
+rackspace-technology,Rackspace Technology,Hosting,https://www.rackspace.com/,0,quote,vendor-sourced,2026-08-24,https://www.rackspace.com/services/professional-services,https://toolcompare.net/tools/rackspace-technology
+scaleway,Scaleway,Hosting,https://www.scaleway.com/,0.43,usage-based,vendor-sourced,2026-08-24,https://www.scaleway.com/en/pricing/virtual-instances/,https://toolcompare.net/tools/scaleway
+gandi,Gandi,Hosting,https://www.gandi.net/,0,variable,vendor-sourced,2026-08-24,https://www.gandi.net/en/domain,https://toolcompare.net/tools/gandi
+name-com,Name.com,Hosting,https://www.name.com/,0,variable,vendor-sourced,2026-08-24,https://www.name.com/domains,https://toolcompare.net/tools/name-com
+plesk,Plesk,Hosting,https://www.plesk.com/,12.04,subscription,vendor-sourced,2026-08-24,https://www.plesk.com/pricing/,https://toolcompare.net/tools/plesk
+alibaba-cloud,Alibaba Cloud,Hosting,https://intl.aliyun.com,0,usage-based,vendor-sourced,2026-08-24,https://www.alibabacloud.com/help/en/ecs/user-guide/what-is-ecs,https://toolcompare.net/tools/alibaba-cloud
+tencent-cloud,Tencent Cloud,Hosting,https://cloud.tencent.com/,0,usage-based,vendor-sourced,2026-08-24,https://www.tencentcloud.com/document/product/213/506,https://toolcompare.net/tools/tencent-cloud
+yandex-cloud,Yandex Cloud,Hosting,https://cloud.yandex.ru/,0,free-credits,vendor-sourced,2026-08-24,https://yandex.cloud/en,https://toolcompare.net/tools/yandex-cloud
+ibm-cloud,IBM Cloud,Hosting,https://www.ibm.com/cloud,0,free-credits,vendor-sourced,2026-08-24,https://www.ibm.com/cloud/pricing,https://toolcompare.net/tools/ibm-cloud
+cdnjs,Cdnjs,Hosting,https://cdnjs.com,0,free,open-source-verified,2026-09-09,https://cdnjs.com/about,https://toolcompare.net/tools/cdnjs
+jsdelivr,JSDelivr,Hosting,https://www.jsdelivr.com/,0,free,vendor-sourced,2026-08-24,https://github.com/jsdelivr/jsdelivr,https://toolcompare.net/tools/jsdelivr
+gcore,Gcore,Hosting,https://gcore.com/,8.93,usage-based,vendor-sourced,2026-08-24,https://gcore.com/pricing/cloud,https://toolcompare.net/tools/gcore
+fasthosts,Fasthosts,Hosting,https://www.fasthosts.co.uk/,5.75,subscription,vendor-sourced,2026-08-24,https://www.fasthosts.co.uk/web-hosting,https://toolcompare.net/tools/fasthosts
+heart-internet,Heart Internet,Hosting,https://www.heartinternet.uk/,5.99,subscription,vendor-sourced,2026-08-24,https://www.heartinternet.uk/web-hosting,https://toolcompare.net/tools/heart-internet
+bytemark,Bytemark,Hosting,https://www.bytemark.co.uk/,10,subscription,vendor-sourced,2026-08-24,https://docs.bytemark.co.uk/article/bigv-migration-faq/,https://toolcompare.net/tools/bytemark
+easily-ltd,Easily Ltd,Hosting,https://easily.uk/,0,quote,vendor-sourced,2026-08-24,https://easily.uk/node/69,https://toolcompare.net/tools/easily-ltd
+123-reg,123 Reg,Hosting,https://www.123-reg.co.uk/,6.99,subscription,vendor-sourced,2026-08-24,https://www.123-reg.co.uk/web-hosting/,https://toolcompare.net/tools/123-reg
+epik,Epik,Hosting,https://www.epik.com/,0,variable,vendor-sourced,2026-08-24,https://www.icann.org/en/contracted-parties/accredited-registrars/list-of-accredited-registrars,https://toolcompare.net/tools/epik
+nearlyfreespeech,NearlyFreeSpeech,Hosting,https://www.nearlyfreespeech.net/,0.25,usage-based,vendor-sourced,2026-08-24,https://www.nearlyfreespeech.net/services/pricing,https://toolcompare.net/tools/nearlyfreespeech
+aruba-s-p-a,Aruba S.p.A.,Hosting,https://www.aruba.it/,34.99,subscription,vendor-sourced,2026-08-24,https://hosting.aruba.it/web-hosting/linux/,https://toolcompare.net/tools/aruba-s-p-a
+advania,Advania,Hosting,https://advania.is/,0,quote,vendor-sourced,2026-08-24,https://advania.com/,https://toolcompare.net/tools/advania
+joyent,Joyent,Hosting,https://www.joyent.com/,0,quote,vendor-sourced,2026-08-24,https://console.tritondatacenter.com/blog/triton-transition-faq,https://toolcompare.net/tools/joyent
+openshift,OpenShift,Hosting,https://www.redhat.com/en/technologies/cloud-computing/openshift,0,quote,vendor-sourced,2026-08-24,https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing,https://toolcompare.net/tools/openshift
+cloud-foundry,Cloud Foundry,Hosting,https://www.cloudfoundry.org/,0,free,vendor-sourced,2026-08-24,https://www.cloudfoundry.org/,https://toolcompare.net/tools/cloud-foundry
+idrive-inc,IDrive Inc.,Hosting,https://www.idrive.com,11.99,free-tier,vendor-sourced,2026-08-24,https://www.idrive.com/pricing,https://toolcompare.net/tools/idrive-inc
+ultahost,Ultahost,Hosting,https://ultahost.com/,7.99,subscription,vendor-sourced,2026-08-24,https://ultahost.com/vps-hosting/free-vps,https://toolcompare.net/tools/ultahost
+glowhost,GlowHost,Hosting,https://glowhost.com,4.95,subscription,vendor-sourced,2026-08-24,https://glowhost.com/pricing/,https://toolcompare.net/tools/glowhost
+uniregistry,Uniregistry,Hosting,https://uniregistry.link/,0,quote,vendor-sourced,2026-08-24,https://aboutus.godaddy.net/newsroom/news-releases/press-release-details/2020/GoDaddy-Acquires-Uniregistrys-Registrar-Marketplace--Portfolio/default.aspx,https://toolcompare.net/tools/uniregistry
+sitew,SiteW,Design,https://www.sitew.com,0,free-tier,vendor-sourced,2026-08-24,https://www.sitew.com/Offres-de-creation-de-sites-Internet,https://toolcompare.net/tools/sitew
+ispconfig,ISPConfig,Hosting,https://www.ispconfig.org,0,free,vendor-sourced,2026-08-24,https://www.ispconfig.org/ispconfig/,https://toolcompare.net/tools/ispconfig
+panzura,Panzura,Hosting,https://panzura.com,0,quote,vendor-sourced,2026-08-24,https://panzura.com/products/cloudfs,https://toolcompare.net/tools/panzura
+citrix-cloud,Citrix Cloud,Hosting,https://www.citrix.com/products/citrix-cloud,0,quote,vendor-sourced,2026-08-24,https://docs.citrix.com/en-us/citrix-cloud/services.html,https://toolcompare.net/tools/citrix-cloud
+mirantis,Mirantis,Hosting,https://www.mirantis.com/,0,quote,vendor-sourced,2026-08-24,https://docs.mirantis.com/k0rdent-enterprise/,https://toolcompare.net/tools/mirantis
+snowflake-inc,Snowflake Inc.,Developer Tools,https://www.snowflake.com,0,usage-based,vendor-sourced,2026-08-24,https://www.snowflake.com/en/pricing-options/,https://toolcompare.net/tools/snowflake-inc
+splunk,Splunk,Developer Tools,https://www.splunk.com/,0,quote,vendor-sourced,2026-08-24,https://www.splunk.com/en_us/products/pricing/platform-pricing.html,https://toolcompare.net/tools/splunk
+sumo-logic,Sumo Logic,Developer Tools,https://www.sumologic.com,0,free-tier,vendor-sourced,2026-08-24,https://www.sumologic.com/pricing,https://toolcompare.net/tools/sumo-logic
+datastax,DataStax,Developer Tools,https://www.datastax.com/,0,free-tier,vendor-sourced,2026-09-10,https://docs.datastax.com/en/astra-db-serverless/databases/database-limits.html,https://toolcompare.net/tools/datastax
+cloudant,Cloudant,Developer Tools,https://www.ibm.com/products/cloudant,0,free-tier,vendor-sourced,2026-08-24,https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-what-is-cloudant,https://toolcompare.net/tools/cloudant
+informatica,Informatica,Developer Tools,https://www.informatica.com,0,quote,vendor-sourced,2026-08-24,https://www.informatica.com/products/cloud-integration/pricing.html.html.html.html.html.html.html.html,https://toolcompare.net/tools/informatica
+boomi-lp,"Boomi, LP",Developer Tools,https://boomi.com/,0,usage-based,vendor-sourced,2026-08-24,https://boomi.com/pricing/,https://toolcompare.net/tools/boomi-lp
+caspio,Caspio,Developer Tools,https://www.caspio.com/,300,subscription,vendor-sourced,2026-08-24,https://www.caspio.com/pricing/,https://toolcompare.net/tools/caspio
+smartbear-software,SmartBear Software,Developer Tools,https://smartbear.com/,0,per-product,vendor-sourced,2026-08-24,https://smartbear.com/store/,https://toolcompare.net/tools/smartbear-software
+zscaler,Zscaler,Developer Tools,https://www.zscaler.com/,0,quote,vendor-sourced,2026-08-24,https://www.zscaler.com/pricing-and-plans,https://toolcompare.net/tools/zscaler
+cloudbolt,CloudBolt,Developer Tools,https://www.cloudbolt.io,0,quote,vendor-sourced,2026-08-24,https://www.cloudbolt.io/solutions/cloud-management-platform/,https://toolcompare.net/tools/cloudbolt
+surveymonkey,SurveyMonkey,Marketing,https://www.surveymonkey.com/,30,free-tier,vendor-sourced,2026-08-24,https://www.surveymonkey.com/pricing/details/,https://toolcompare.net/tools/surveymonkey
+qualtrics,Qualtrics,Marketing,https://www.qualtrics.com/,420,free-tier,vendor-sourced,2026-08-24,https://www.qualtrics.com/support/survey-platform/managing-your-account/trial-accounts/,https://toolcompare.net/tools/qualtrics
+braze-inc,Braze,Marketing,https://www.braze.com/,0,quote,vendor-sourced,2026-08-24,https://www.braze.com/pricing,https://toolcompare.net/tools/braze-inc
+weebly,Weebly,Design,https://www.weebly.com/,0,free-tier,vendor-sourced,2026-08-24,https://www.weebly.com/pricing,https://toolcompare.net/tools/weebly
+honeybook,HoneyBook,CRM,https://www.honeybook.com/,29,subscription-plus-transaction,vendor-sourced,2026-08-24,https://www.honeybook.com/pricing,https://toolcompare.net/tools/honeybook
+jobvite,Jobvite,HR Software,https://www.jobvite.com/,0,quote,vendor-sourced,2026-08-24,https://www.jobvite.com/pricing/,https://toolcompare.net/tools/jobvite
+epos-now,Epos Now,E-commerce,https://www.eposnow.com/,54,subscription-plus-transaction,vendor-sourced,2026-08-24,https://www.eposnow.com/uk/systems/,https://toolcompare.net/tools/epos-now
+titanfile,TitanFile,Productivity,https://www.titanfile.com,16,per-user,vendor-sourced,2026-08-24,https://www.titanfile.com/pricing-plans/,https://toolcompare.net/tools/titanfile
+diligent-corporation,Diligent,Legal Tools,https://diligent.com/,0,quote,vendor-sourced,2026-08-24,https://www.diligent.com/en-gb/pricing,https://toolcompare.net/tools/diligent-corporation
+skype,Skype,Communication,https://www.skype.com/,0,free,vendor-sourced,2026-08-24,https://support.microsoft.com/en-us/skype/skype-is-retiring-in-may-2025-what-you-need-to-know,https://toolcompare.net/tools/skype
+telegram,Telegram,Communication,https://telegram.org,0,free-tier,vendor-sourced,2026-08-24,https://telegram.org/faq,https://toolcompare.net/tools/telegram
+viber,Viber,Communication,https://www.viber.com/,0,free-tier,vendor-sourced,2026-08-24,https://help.viber.com/hc/en-us/articles/8909167863453-End-to-end-encryption-in-chats,https://toolcompare.net/tools/viber
+wechat,WeChat,Communication,https://www.wechat.com,0,free-tier,vendor-sourced,2026-08-24,https://www.tencent.com/products/weixin-wechat/,https://toolcompare.net/tools/wechat
+line,LINE,Communication,https://line.me/,0,free-tier,vendor-sourced,2026-08-24,https://help.line.me/line/?contentId=50000087,https://toolcompare.net/tools/line
+groupme,GroupMe,Communication,https://groupme.com,0,free,vendor-sourced,2026-08-24,https://support.microsoft.com/en-us/groupme/what-is-groupme,https://toolcompare.net/tools/groupme
+jitsi,Jitsi,Communication,https://jitsi.org,0,free,vendor-sourced,2026-08-24,https://jitsi.org/security/,https://toolcompare.net/tools/jitsi
+threema,Threema,Communication,https://threema.ch,7.49,per-product,vendor-sourced,2026-08-24,https://shop.threema.ch/en/buy,https://toolcompare.net/tools/threema
+wire,Wire,Communication,https://wire.com,7.45,per-user,vendor-sourced,2026-08-24,https://wire.com/en/pricing,https://toolcompare.net/tools/wire
+wickr,Wickr,Communication,https://aws.amazon.com/wickr/,0,,vendor-sourced,2026-08-25,https://aws.amazon.com/wickr/,https://toolcompare.net/tools/wickr
+briar,Briar,Communication,https://briarproject.org,0,free,vendor-sourced,2026-08-25,https://briarproject.org/how-it-works/,https://toolcompare.net/tools/briar
+jami,Jami,Communication,https://jami.net/,0,free,vendor-sourced,2026-08-25,https://jami.net/,https://toolcompare.net/tools/jami
+linphone,Linphone,Communication,https://www.linphone.org/,0,flat,unverified,,,https://toolcompare.net/tools/linphone
+dingtalk,DingTalk,Communication,https://www.dingtalk.com/,0,flat,unverified,,,https://toolcompare.net/tools/dingtalk
+adobe-connect,Adobe Connect,Communication,https://www.connectusers.com/,0,flat,unverified,,,https://toolcompare.net/tools/adobe-connect
+lifesize,Lifesize,Communication,https://www.lifesize.com,0,flat,vendor-sourced,2026-08-31,https://www.enghousevideo.com/lifesize,https://toolcompare.net/tools/lifesize
+google-messages,Google Messages,Communication,https://messages.google.com,0,flat,unverified,,,https://toolcompare.net/tools/google-messages
+gitea,Gitea,Developer Tools,https://gitea.com,0,flat,open-source-verified,2026-09-08,https://about.gitea.com/pricing,https://toolcompare.net/tools/gitea
+forgejo,Forgejo,Developer Tools,https://forgejo.org/,0,flat,unverified,,,https://toolcompare.net/tools/forgejo
+gitee,Gitee,Developer Tools,https://gitee.com/,0,flat,unverified,,,https://toolcompare.net/tools/gitee
+kallithea,Kallithea,Developer Tools,https://kallithea-scm.org/,0,flat,unverified,,,https://toolcompare.net/tools/kallithea
+azure-devops-server,Azure DevOps Server,Developer Tools,https://visualstudio.com/tfs,0,flat,unverified,,,https://toolcompare.net/tools/azure-devops-server
+redmine,Redmine,Project Management,https://www.redmine.org,0,flat,open-source-verified,2026-09-03,https://www.redmine.org/,https://toolcompare.net/tools/redmine
+openproject,OpenProject,Project Management,https://www.openproject.org,5.95,per-user,pricing-page-verified,2026-09-10,https://www.openproject.org/pricing/,https://toolcompare.net/tools/openproject
+freedcamp,Freedcamp,Project Management,https://freedcamp.com,0,free-tier,pricing-page-verified,2026-09-09,https://freedcamp.com/pricing,https://toolcompare.net/tools/freedcamp
+toggl-track,Toggl Track,Productivity,https://toggl.com/,0,flat,pricing-page-verified,2026-09-09,https://toggl.com/track/pricing/,https://toolcompare.net/tools/toggl-track
+workflowy,Workflowy,Productivity,https://workflowy.com,0,free-tier,pricing-page-verified,2026-09-07,https://workflowy.com/pricing/,https://toolcompare.net/tools/workflowy
+zulip,Zulip,Communication,https://zulip.com/,0,free-tier,pricing-page-verified,2026-09-09,https://zulip.com/plans/,https://toolcompare.net/tools/zulip
+microsoft-project,Microsoft Project,Project Management,https://products.office.com/project,0,flat,unverified,,,https://toolcompare.net/tools/microsoft-project
+checkvist,Checkvist,Productivity,https://checkvist.com,0,free-tier,pricing-page-verified,2026-09-09,https://checkvist.com/pricing,https://toolcompare.net/tools/checkvist
+mindomo,Mindomo,Productivity,https://www.mindomo.com/,0,free-tier,pricing-page-verified,2026-09-09,https://www.mindomo.com/pricing,https://toolcompare.net/tools/mindomo
+tom-s-planner,Tom's Planner,Project Management,https://www.tomsplanner.com/,0,flat,unverified,,,https://toolcompare.net/tools/tom-s-planner
+projectmanager-com,ProjectManager.com,Project Management,https://www.projectmanager.com,0,flat,vendor-sourced,2026-08-31,https://www.projectmanager.com/pricing,https://toolcompare.net/tools/projectmanager-com
+proworkflow,ProWorkflow,Project Management,https://www.proworkflow.com,20,per-user,pricing-page-verified,2026-09-09,https://www.proworkflow.com/pricing/,https://toolcompare.net/tools/proworkflow
+helix-alm,Helix ALM,Project Management,https://www.perforce.com/products/helix-alm,0,flat,unverified,,,https://toolcompare.net/tools/helix-alm
+dotproject,DotProject,Project Management,https://dotproject.net,0,flat,open-source-verified,2026-09-03,https://www.dotproject.net/,https://toolcompare.net/tools/dotproject
+planta-project,PLANTA Project,Project Management,https://www.planta.de/,0,flat,unverified,,,https://toolcompare.net/tools/planta-project
+bigtime-enterprise-psa,BigTime Enterprise PSA,Project Management,https://www.bigtime.net/bigtime-enterprise-psa/,0,flat,vendor-sourced,2026-08-31,https://www.bigtime.net/pricing/,https://toolcompare.net/tools/bigtime-enterprise-psa
+ceiton,CEITON,Project Management,https://www.ceiton.com/,0,flat,unverified,,,https://toolcompare.net/tools/ceiton
+cloudforge,CloudForge,Developer Tools,https://cloudforge.solutions,0,flat,vendor-sourced,2026-08-31,https://cloudforge.solutions/pricing/,https://toolcompare.net/tools/cloudforge
+teamforge,TeamForge,Developer Tools,https://www.collab.net/products/teamforge-alm,0,flat,open-source-verified,2026-09-03,https://digital.ai/products/teamforge/,https://toolcompare.net/tools/teamforge
+getresponse,GetResponse,Marketing,https://www.getresponse.com/,19,subscription,pricing-page-verified,2026-09-10,https://www.getresponse.com/pricing,https://toolcompare.net/tools/getresponse
+mailgun,Mailgun,Marketing,https://mailgun.com,0,free-tier,pricing-page-verified,2026-09-07,https://www.mailgun.com/pricing/,https://toolcompare.net/tools/mailgun
+mailjet,Mailjet,Marketing,https://www.mailjet.com/,0,free-tier,pricing-page-verified,2026-09-07,https://www.mailjet.com/pricing/,https://toolcompare.net/tools/mailjet
+chartbeat,Chartbeat,Marketing,https://chartbeat.com/,0,flat,unverified,,,https://toolcompare.net/tools/chartbeat
+statcounter,StatCounter,Marketing,https://statcounter.com/,0,flat,vendor-sourced,2026-08-31,https://statcounter.com/pricing/,https://toolcompare.net/tools/statcounter
+liveperson,LivePerson,Customer Service,https://www.liveperson.com,0,flat,unverified,,,https://toolcompare.net/tools/liveperson
+yoast-seo,Yoast SEO,Marketing,https://wordpress.org/plugins/wordpress-seo/,0,free-tier,vendor-sourced,2026-09-07,https://yoast.com/wordpress/plugins/seo/,https://toolcompare.net/tools/yoast-seo
+phplist,PhpList,Marketing,https://www.phplist.org,0,flat,open-source-verified,2026-09-03,https://www.phplist.org/,https://toolcompare.net/tools/phplist
+open-web-analytics,Open Web Analytics,Marketing,https://www.openwebanalytics.com/,0,flat,unverified,,,https://toolcompare.net/tools/open-web-analytics
+awstats,AWStats,Marketing,https://www.awstats.org,0,flat,open-source-verified,2026-09-03,https://www.awstats.org/,https://toolcompare.net/tools/awstats
+goaccess,GoAccess,Marketing,https://goaccess.io/,0,flat,open-source-verified,2026-09-03,https://goaccess.io/,https://toolcompare.net/tools/goaccess
+lastpass,LastPass,Productivity,https://lastpass.com,0,free-tier,vendor-sourced,2026-09-10,https://www.lastpass.com/pricing,https://toolcompare.net/tools/lastpass
+nordpass,NordPass,Productivity,https://nordpass.com/,0,free-tier,vendor-sourced,2026-09-07,https://support.nordpass.com/hc/en-us/articles/360006700458-Premium-vs-Free-version-of-NordPass,https://toolcompare.net/tools/nordpass
+enpass,Enpass,Productivity,https://www.enpass.io,0,free-tier,pricing-page-verified,2026-09-09,https://www.enpass.io/pricing,https://toolcompare.net/tools/enpass
+keeweb,KeeWeb,Productivity,https://keeweb.info/,0,flat,open-source-verified,2026-09-03,https://keeweb.info/,https://toolcompare.net/tools/keeweb
+passwork,Passwork,Productivity,https://passwork.pro/,0,flat,unverified,,,https://toolcompare.net/tools/passwork
+simplenote,Simplenote,Productivity,https://simplenote.com/,0,flat,open-source-verified,2026-09-08,https://simplenote.com/,https://toolcompare.net/tools/simplenote
+tiddlywiki,TiddlyWiki,Productivity,https://tiddlywiki.com/,0,flat,open-source-verified,2026-09-03,https://tiddlywiki.com/,https://toolcompare.net/tools/tiddlywiki
+prezi,Prezi,Design,https://www.prezi.com/,0,free-tier,pricing-page-verified,2026-09-12,https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans,https://toolcompare.net/tools/prezi
+freeplane,Freeplane,Productivity,https://www.freeplane.org,0,flat,open-source-verified,2026-09-03,https://docs.freeplane.org/,https://toolcompare.net/tools/freeplane
+qownnotes,QOwnNotes,Productivity,https://www.qownnotes.org/,0,flat,open-source-verified,2026-09-03,https://www.qownnotes.org/,https://toolcompare.net/tools/qownnotes
+zim,Zim,Productivity,https://zim-wiki.org/,0,flat,unverified,,,https://toolcompare.net/tools/zim
+tagspaces,TagSpaces,Productivity,https://www.tagspaces.org/,0,flat,open-source-verified,2026-09-03,https://www.tagspaces.org/,https://toolcompare.net/tools/tagspaces
+coreldraw,CorelDRAW,Design,https://www.coreldraw.com/en/product/coreldraw/,0,flat,unverified,,,https://toolcompare.net/tools/coreldraw
+affinity,Affinity,Design,https://affinity.studio,0,flat,unverified,,,https://toolcompare.net/tools/affinity
+blackmagic-design,Blackmagic Design,Design,https://www.blackmagicdesign.com/,0,flat,unverified,,,https://toolcompare.net/tools/blackmagic-design
+picsart,Picsart,Design,https://picsart.com,0,flat,pricing-page-verified,2026-09-08,https://picsart.com/pricing/,https://toolcompare.net/tools/picsart
+pixelmator-pro,Pixelmator Pro,Design,https://www.pixelmator.com/pro/,49.99,one-time,pricing-page-verified,2026-09-07,https://www.apple.com/pixelmator-pro/,https://toolcompare.net/tools/pixelmator-pro
+kinemaster,KineMaster,Design,https://www.kinemaster.com/,0,flat,unverified,,,https://toolcompare.net/tools/kinemaster
+vegas-pro,Vegas Pro,Design,https://www.vegascreativesoftware.com/vegas-pro/,0,flat,vendor-sourced,2026-08-31,https://www.vegascreativesoftware.com/vegas-pro/plans-pricing/,https://toolcompare.net/tools/vegas-pro
+xara-designer-pro,Xara Designer Pro+,Design,https://www.xara.com/,0,flat,vendor-sourced,2026-08-31,https://www.xara.com/pricing/,https://toolcompare.net/tools/xara-designer-pro
+recraft,Recraft,AI Tools,https://recraft.ai/,0,flat,vendor-sourced,2026-08-31,https://www.recraft.ai/pricing,https://toolcompare.net/tools/recraft
+screenpal,ScreenPal,Design,https://screenpal.com/,0,free-tier,pricing-page-verified,2026-09-09,https://screenpal.com/plans,https://toolcompare.net/tools/screenpal
+canvas-x,Canvas X,Design,https://www.canvasgfx.com/,0,flat,unverified,,,https://toolcompare.net/tools/canvas-x
+civicrm,CiviCRM,CRM,https://civicrm.org/,0,free,vendor-sourced,2026-09-07,https://civicrm.org/download,https://toolcompare.net/tools/civicrm
+sugarcrm,SugarCRM,CRM,https://www.sugarcrm.com/,59,subscription,vendor-sourced,2026-09-07,https://www.sugarai.com/pricing,https://toolcompare.net/tools/sugarcrm
+kayako,Kayako,Customer Service,https://www.kayako.com,0,flat,vendor-sourced,2026-08-31,https://kayako.com/pricing/,https://toolcompare.net/tools/kayako
+livechat,LiveChat,Customer Service,https://www.livechat.com,19,per-user,pricing-page-verified,2026-09-09,https://www.livechat.com/pricing/,https://toolcompare.net/tools/livechat
+microsoft-dynamics,Microsoft Dynamics,CRM,https://dynamics.microsoft.com/en-us/,65,subscription,vendor-sourced,2026-09-07,https://www.microsoft.com/en-us/dynamics-365/products/sales/pricing,https://toolcompare.net/tools/microsoft-dynamics
+nationbuilder,NationBuilder,CRM,https://nationbuilder.com/,34,subscription,pricing-page-verified,2026-09-09,https://nationbuilder.com/pricing,https://toolcompare.net/tools/nationbuilder
+onlyoffice,OnlyOffice,Productivity,https://www.onlyoffice.com,0,flat,unverified,,,https://toolcompare.net/tools/onlyoffice
+servicetitan,ServiceTitan,CRM,https://servicetitan.com,0,flat,unverified,,,https://toolcompare.net/tools/servicetitan
+snapforce-crm,Snapforce CRM,CRM,https://www.snapforce.com/,0,flat,unverified,,,https://toolcompare.net/tools/snapforce-crm
+dolibarr,Dolibarr,CRM,https://www.dolibarr.org,0,flat,open-source-verified,2026-09-03,https://www.dolibarr.org/,https://toolcompare.net/tools/dolibarr
+erpnext,ERPNext,Finance Tools,https://erpnext.com/,5,usage-based,pricing-page-verified,2026-09-09,https://erpnext.com/pricing,https://toolcompare.net/tools/erpnext
+freeagent,FreeAgent,Finance Tools,https://www.freeagent.com/,0,flat,vendor-sourced,2026-08-31,https://www.freeagent.com/pricing/,https://toolcompare.net/tools/freeagent
+quicken,Quicken,Finance Tools,https://www.quicken.com/,0,flat,unverified,,,https://toolcompare.net/tools/quicken
+tally-solutions,Tally Solutions,Finance Tools,https://tallysolutions.com/,0,flat,vendor-sourced,2026-09-03,https://tallysolutions.com/buy-tally/,https://toolcompare.net/tools/tally-solutions
+tipalti,Tipalti,Finance Tools,https://www.tipalti.com,99,subscription-plus-transaction,pricing-page-verified,2026-09-09,https://www.tipalti.com/pricing,https://toolcompare.net/tools/tipalti
+bench-accounting,Bench Accounting,Finance Tools,https://bench.co/,199,subscription,pricing-page-verified,2026-09-09,https://bench.co/pricing,https://toolcompare.net/tools/bench-accounting
+ledgersmb,LedgerSMB,Finance Tools,https://ledgersmb.org/,0,flat,open-source-verified,2026-09-03,https://ledgersmb.org/,https://toolcompare.net/tools/ledgersmb
+7shifts,7shifts,HR Software,https://www.7shifts.com/,0,flat,vendor-sourced,2026-08-31,https://www.7shifts.com/pricing/,https://toolcompare.net/tools/7shifts
+hibob,HiBob,HR Software,https://www.hibob.com/,0,flat,vendor-sourced,2026-09-09,https://www.hibob.com/pricing/,https://toolcompare.net/tools/hibob
+icims,ICIMS,HR Software,https://www.icims.com/,0,flat,unverified,,,https://toolcompare.net/tools/icims
+papaya-global,Papaya Global,HR Software,https://www.papayaglobal.com/,29,per-user,pricing-page-verified,2026-09-09,https://www.papayaglobal.com/pricing/,https://toolcompare.net/tools/papaya-global
+paylocity,Paylocity,HR Software,https://www.paylocity.com/,0,flat,unverified,,,https://toolcompare.net/tools/paylocity
+beamery,Beamery,HR Software,https://beamery.com/,0,flat,unverified,,,https://toolcompare.net/tools/beamery
+otrs,OTRS,Customer Service,https://www.otrs.com,0,flat,unverified,,,https://toolcompare.net/tools/otrs
+uservoice,UserVoice,Customer Service,https://www.uservoice.com/,0,flat,unverified,,,https://toolcompare.net/tools/uservoice
+n8n,n8n,Productivity,https://n8n.io,,usage-based,vendor-sourced,2026-09-13,https://n8n.io/pricing/,https://toolcompare.net/tools/n8n
+cpanel,cPanel,Hosting,https://cpanel.net,29.99,subscription,pricing-page-verified,2026-09-13,https://cpanel.net/pricing/,https://toolcompare.net/tools/cpanel
+expensify,Expensify,Finance Tools,https://www.expensify.com,0,free-tier,pricing-page-verified,2026-09-13,https://www.expensify.com/pricing,https://toolcompare.net/tools/expensify
+datagrip,DataGrip,Developer Tools,https://www.jetbrains.com/datagrip/,0,free-tier,pricing-page-verified,2026-09-13,https://www.jetbrains.com/datagrip/buy/,https://toolcompare.net/tools/datagrip
+fivetran,Fivetran,Developer Tools,https://www.fivetran.com,,usage-based,pricing-page-verified,2026-09-13,https://www.fivetran.com/pricing,https://toolcompare.net/tools/fivetran
+haystack,Haystack,AI Tools,https://haystack.deepset.ai,0,free,pricing-page-verified,2026-09-13,https://haystack.deepset.ai/,https://toolcompare.net/tools/haystack

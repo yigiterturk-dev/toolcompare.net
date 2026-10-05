@@ -1,0 +1,22 @@
+{
+  "title": "SaaS Pricing Dataset - Verified Against Vendors",
+  "id": "REPLACE_WITH_KAGGLE_USERNAME/saas-pricing-verified",
+  "subtitle": "Starting prices for 518 software tools with source URL and read date",
+  "description": "# SaaS Pricing Dataset (verified against vendor pages)\n\nStarting prices for 518 software tools, each with the vendor source URL and the date the price was read — including the records that could not be verified.\n\n**Source & live version:** https://toolcompare.net/data · public JSON API: `https://toolcompare.net/api/tools?format=compact`\n**Snapshot:** 2026-10-05 · **License:** CC BY 4.0 — attribution required.\n\n## Why this dataset\n\nMost pricing lists copy each other. Every row here says *where* the price came from and *when* it was read,\nand rows we could not verify are kept and labelled instead of dropped.\n\n## Columns\n\n| column | meaning |\n|---|---|\n| `slug`, `name`, `category` | tool identity |\n| `website_url` | vendor site |\n| `starting_price_usd` | cheapest paid monthly starting price we could read (0 = free tier / open source) |\n| `pricing_model` | free, free-tier, flat, subscription, per-user, usage-based, quote, one-time… |\n| `evidence_status` | how the price was established (below) |\n| `price_read_on` | date the price was read from the source |\n| `source_url` | the vendor page the price was read from |\n| `toolcompare_url` | full record with plans, limits and notes |\n\n## Evidence status\n\n| status | rows |\n|---|---|\n| `pricing-page-verified` | 247 |\n| `vendor-sourced` | 200 |\n| `unverified` | 40 |\n| `open-source-verified` | 31 |\n\n`pricing-page-verified` = read from the vendor's own pricing page. `open-source-verified` = vendor page states open source / free.\n`vendor-sourced` = vendor documentation, no public price table. `unverified` = not verified; do not treat as a fact.\n\n## Citation\n\n> ToolCompare, SaaS Pricing Dataset (snapshot 2026-10-05). https://toolcompare.net/data — CC BY 4.0.\n\nCorrections: https://toolcompare.net/contact\n",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "business",
+    "software",
+    "pricing"
+  ],
+  "resources": [
+    {
+      "path": "toolcompare-saas-pricing.csv",
+      "description": "One row per tool"
+    }
+  ]
+}
