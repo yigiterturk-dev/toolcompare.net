@@ -190,7 +190,7 @@ function ToolGrid({ initialTools, dizin, sss }: { initialTools: IzgaraArac[]; di
                 <Link
                   href="/compare"
                   data-tap
-                  className="inline-flex h-14 items-center justify-center gap-2 rounded-[--radius-control] bg-[#5d9cff] px-5 text-sm font-semibold text-[#071426] no-underline transition-colors hover:bg-white"
+                  className="inline-flex h-14 items-center justify-center gap-2 rounded-[--radius-control] bg-accent px-6 text-sm font-semibold text-white no-underline transition-colors hover:bg-[#0852c2]"
                 >
                   Compare tools <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
@@ -233,14 +233,6 @@ function ToolGrid({ initialTools, dizin, sss }: { initialTools: IzgaraArac[]; di
 
         {/* ---------- Karar yardımcısı ---------- */}
         <section aria-label="Help me choose" className="mx-auto max-w-7xl border-b border-line px-4 py-12 sm:px-6">
-          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.14em] text-accent uppercase">Not sure yet?</p>
-              <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">Start with what you need to do.</h2>
-              <p className="mt-2 max-w-xl text-sm text-ink-soft">Answer a few questions and we’ll narrow the catalogue down for you.</p>
-            </div>
-            <Link href="/methodology" className="text-sm font-medium text-accent underline underline-offset-4">How our data works</Link>
-          </div>
           <AIWizard tools={tools} />
         </section>
 

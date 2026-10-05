@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { fiyatDurumu, type FiyatModeli } from "@/lib/fiyat";
+import ToolLogo from "@/components/ToolLogo";
 
 /*
   "Bana uygun olani bul" secicisi.
@@ -102,7 +103,10 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
       <h2 className="text-2xl font-semibold sm:text-3xl">Not sure where to start?</h2>
       <p className="mt-2 max-w-2xl text-ink-soft">
         Pick a category and a budget. Results are ordered by verified monthly price — nothing here
-        is scored or ranked by us.
+        is scored or ranked by us.{" "}
+        <Link href="/methodology" className="text-accent underline underline-offset-4">
+          How our data works
+        </Link>
       </p>
 
       {/*
@@ -113,7 +117,7 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
       */}
       <div className="mt-8">
         <div className="flex flex-col gap-5 border-y border-line py-5">
-          <fieldset>
+          <fieldset className="min-w-0">
             <legend className="text-xs font-medium tracking-wide text-ink-muted uppercase">
               Category
             </legend>
@@ -122,13 +126,13 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
               secenek listesi; klavyeyle gezilebiliyor ve secili olan
               aria-pressed ile bildiriliyor.
             */}
-            <div className="mt-2 flex flex-wrap gap-2">
+            <div className="-mx-4 mt-2 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
               <button
                 type="button"
                 onClick={() => setKategori("")}
                 aria-pressed={kategori === ""}
                 data-tap
-                className={`rounded-[--radius-pill] border px-3 py-1.5 text-sm transition-colors duration-150 ${
+                className={`shrink-0 whitespace-nowrap rounded-[--radius-pill] border px-3 py-1.5 text-sm transition-colors duration-150 ${
                   kategori === ""
                     ? "border-brand bg-brand text-brand-ink"
                     : "border-line bg-surface text-ink-soft hover:border-line-strong hover:text-ink"
@@ -143,7 +147,7 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
                   onClick={() => setKategori(k === kategori ? "" : k)}
                   aria-pressed={k === kategori}
                   data-tap
-                  className={`rounded-[--radius-pill] border px-3 py-1.5 text-sm transition-colors duration-150 ${
+                  className={`shrink-0 whitespace-nowrap rounded-[--radius-pill] border px-3 py-1.5 text-sm transition-colors duration-150 ${
                     k === kategori
                       ? "border-brand bg-brand text-brand-ink"
                       : "border-line bg-surface text-ink-soft hover:border-line-strong hover:text-ink"
@@ -155,7 +159,7 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
             </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset className="min-w-0">
             <legend className="text-xs font-medium tracking-wide text-ink-muted uppercase">
               Budget
             </legend>
@@ -201,10 +205,13 @@ export default function AIWizard({ tools }: { tools: Arac[] }) {
                   <li key={t.slug}>
                     <Link
                       href={`/tools/${t.slug}`}
-                      className="block h-full rounded-[--radius-card] border border-line bg-surface p-4 no-underline transition-colors duration-150 hover:border-line-strong"
+                      className="block h-full rounded-[--radius-card] border border-line bg-surface p-4 no-underline transition-[border-color,box-shadow] duration-150 hover:border-accent/40 hover:shadow-[0_4px_16px_-8px_rgba(10,99,230,0.35)]"
                     >
-                      <p className="font-serif text-base font-semibold">{t.name}</p>
-                      <p className="mt-1 flex flex-wrap items-baseline gap-2">
+                      <div className="flex items-center gap-3">
+                        <ToolLogo slug={t.slug} name={t.name} size={36} className="border border-line p-1" />
+                        <p className="font-serif text-base font-semibold">{t.name}</p>
+                      </div>
+                      <p className="mt-3 flex flex-wrap items-baseline gap-2">
                         <span className="text-sm font-medium">{d.kisa}</span>
                         <span
                           className={`rounded-[--radius-pill] px-1.5 py-0.5 text-[11px] ${

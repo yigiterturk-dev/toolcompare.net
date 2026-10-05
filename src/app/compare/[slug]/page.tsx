@@ -20,6 +20,7 @@ import { evidenceLabel, toolEvidence } from "@/lib/evidence";
 import { KRITER_SIRA, KRITER_ETIKET } from "@/lib/kriterler";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import ToolLogo from "@/components/ToolLogo";
 import { CheckCircle2, X, Zap, Star, ArrowRight, ArrowLeft, Check } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -416,13 +417,21 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
           tekrarini seyreltmenin en ucuz yolu onu basmak.
         */}
         {[tool1, tool2].some((t: Arac) => t.longDescription) && (
-          <section className="mt-10 grid gap-6 sm:grid-cols-2">
+          <section className="mt-10 grid items-start gap-6 sm:grid-cols-2">
             {[tool1, tool2]
               .filter((t: Arac) => t.longDescription)
               .map((t: Arac) => (
                 <div key={t.slug} className="rounded-[--radius-card] border border-line bg-surface p-5">
-                  <h2 className="text-base font-semibold">What {t.name} is</h2>
-                  <p className="mt-2 text-sm text-ink-soft">{t.longDescription}</p>
+                  <h2 className="flex items-center gap-2.5 text-base font-semibold">
+                    <ToolLogo slug={t.slug} name={t.name} size={28} />
+                    What {t.name} is
+                  </h2>
+                  {/* Anlatim tek blok yaziliyor; "Who it is for:" / "Where it falls short:" isaretlerinden paragrafa bolunuyor. */}
+                  {String(t.longDescription)
+                    .split(/\s(?=Who it is for:|Where it falls short:)/)
+                    .map((parca, i) => (
+                      <p key={i} className="mt-2 text-sm leading-relaxed text-ink-soft">{parca}</p>
+                    ))}
                 </div>
               ))}
           </section>

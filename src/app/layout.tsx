@@ -11,7 +11,7 @@ const newsreader = Newsreader({ subsets: ["latin"], weight: ["400", "500", "600"
 const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"], variable: "--font-roboto", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "ToolCompare | The World's Best Software Tools, Compared",
+  title: "Software Pricing Compared, Verified by Hand | ToolCompare",
   description: "Software tools compared on what they cost to start. Every price says whether it is verified, usage-based or a free tier — and we publish no invented quality scores.",
   /*
     TEK KIMLIK. Onceden UC AYRI simge vardi ve hangisinin gorunecegi
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     tests/kanonik.test.ts kendi kanonigini yazmayan sayfa kalirsa kiriliyor.
   */
   openGraph: {
-    title: "ToolCompare | The World's Best Software Tools, Compared",
+    title: "Software Pricing Compared, Verified by Hand | ToolCompare",
     description:
       "Software tools compared on what they cost to start. Every price says whether it is verified, usage-based or a free tier — and we publish no invented quality scores.",
     url: "/",
