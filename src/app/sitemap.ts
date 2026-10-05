@@ -69,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms',
     '/methodology',
     '/data',
+    '/badge',
     /*
       Olcum sayfasi (2026-09-11). Sitenin tek amaci link olan sayfasi:
       GSC Links raporu bu domain icin bos donuyor, ortalama sira 54 ve

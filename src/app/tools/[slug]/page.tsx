@@ -22,6 +22,8 @@ import { evidenceLabel, toolEvidence, kanitRakamli } from "@/lib/evidence";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ToolLogo from "@/components/ToolLogo";
+import { rozetUygun, rozetKodu, rozetMarkdown, okumaTarihi, rozetGenisligi, ROZET_YUKSEKLIK } from "@/lib/rozet";
+import KopyalaKodu from "@/components/KopyalaKodu";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -873,6 +875,31 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 see the full {tool.category} category
               </Link>
             </p>
+          )}
+
+          {/* Saticiya rozet (bkz. lib/rozet.ts). Ayri sayfa yok: kod burada, satici maili /tools/slug#badge'e link verir. */}
+          {rozetUygun(tool) && (
+            <details id="badge" className="mt-6 scroll-mt-24 rounded-[--radius-card] border border-line bg-surface p-4">
+              <summary className="cursor-pointer text-sm font-medium">
+                Work at {tool.name}? Embed the verified-pricing badge
+              </summary>
+              <p className="mt-3 text-sm text-ink-soft">
+                We read this pricing from {tool.name}&rsquo;s own pricing page on {okumaTarihi(tool)}. The badge says
+                that and nothing more: no rating, no payment.{" "}
+                <Link href="/badge" className="text-accent underline underline-offset-4">How the badge works</Link>
+              </p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/api/badge/${tool.slug}`}
+                alt={`${tool.name} pricing verified by ToolCompare`}
+                width={rozetGenisligi(tool)}
+                height={ROZET_YUKSEKLIK}
+                loading="lazy"
+                className="mt-3"
+              />
+              <KopyalaKodu etiket="HTML" kod={rozetKodu(tool)} />
+              <KopyalaKodu etiket="Markdown (README, docs)" kod={rozetMarkdown(tool)} />
+            </details>
           )}
         </article>
       </main>

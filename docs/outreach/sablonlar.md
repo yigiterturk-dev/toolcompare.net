@@ -98,3 +98,41 @@ I track this across 512 tools at toolcompare.net; the {TOOL} page is
 No ask beyond that — just thought you'd want it accurate.
 
 Yigit
+
+---
+
+## 6) Rozet maili (2026-10-05 — 1. şablonun yerine geçer, rozete uygun araçlarda)
+
+Liste: `docs/outreach/rozet-hedefleri.csv` (362 uygun araç, gösterime göre sıralı;
+yeniden üretmek için `npm run rozet:hedef`). `kanal` = mail/form ise direkt kullan,
+`teyit-gerek` ise önce satıcının sitesinden adres bul. **Öncelik orta boy ve bağımsız
+araçlar** (Photopea, Obsidian, DBeaver, Screaming Frog, Strapi, Matomo, Sketch,
+Shopware…). IBM / Microsoft / Red Hat gibi devler rozet gömmez, zaman harcama.
+
+Neden 1. şablondan güçlü: 1. şablon "bizi press sayfanıza koyun" diye dolaylı rica
+ediyor; bu, satıcıya hazır, işine yarayan bir şey veriyor ("fiyatımız gerçek" diyen
+rozet), link onun içinde geliyor.
+
+**Subject:** {TOOL}'s pricing — verified badge, if useful
+
+Hi {FIRST_NAME or team},
+
+I run ToolCompare (toolcompare.net), an independent catalogue that lists software
+by what it actually costs to start. We read {TOOL}'s pricing from your own pricing
+page on {FIYAT_OKUMA} and list it with the source link:
+{ROZET_LINKI}
+
+Because that check passed, there's a small badge you can embed if it's useful —
+it says "Pricing verified" and the month we read it. No rating, no payment, nothing
+to sign up for. The HTML snippet is at that link.
+
+And if anything on the page is out of date, a one-line reply is enough and I'll
+fix it the same day.
+
+Thanks,
+Yigit
+ToolCompare · toolcompare.net
+
+**Takip (7 gün sonra, tek sefer):**
+> Just bumping this once in case it got buried — the badge snippet is here:
+> {ROZET_LINKI}. No worries if it's not a fit.
