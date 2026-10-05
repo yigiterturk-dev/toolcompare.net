@@ -40,4 +40,4 @@ jobs:
         run: npm run denetim
 
       - name: Build all comparison pages
-        run: npm run build -- --webpack
+        run: npm run build
