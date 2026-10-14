@@ -23,6 +23,7 @@ import { talepGormus, yolTalepGormus, karsilastirmaSorgusuGormus, ciftVsSorgusuG
 import { ayniIslev, islevi } from "./islev.ts";
 import { entegrasyonVar, kanonikCift } from "./entegrasyon.ts";
 import { elleYazilmisKisaCevap } from "./karsilastirma-notlari.ts";
+import { cekirdekte } from "./cekirdek.ts";
 /* Tek tip: src/lib/arac.ts (bkz. oradaki not). */
 import type { Arac } from "./arac";
 
@@ -184,6 +185,8 @@ export function icerikDerin(t?: Arac): boolean {
  */
 export function aracIndekslenir(t?: Arac): boolean {
   if (!incelenmis(t)) return false;
+  // Site duzeyi dususten sonra yalnizca Google'in tuttugu cekirdek (bkz. cekirdek.ts).
+  if (!cekirdekte(`/tools/${t!.slug}`)) return false;
   return icerikDerin(t) || talepGormus(t?.slug);
 }
 
@@ -212,6 +215,7 @@ function fiyatliAkranSayisi(slug: string): number {
 
 export function alternatifIndekslenir(t?: Arac): boolean {
   if (!aracIndekslenir(t)) return false;
+  if (!cekirdekte(`/alternatives/${t!.slug}`)) return false;
   if (fiyatiDogrulanmis(t)) return true;
   /*
     KAPI YER DEGISTIRDI (olcum, 2026-09-12). Eski kural, ARACIN KENDI
@@ -259,6 +263,7 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
   // (ornegin /compare/redis-vs-sentry) gelen Googlebot noindex gormeli,
   // yoksa sitemap disina cikardigimiz sayfa indekste kalir.
   if (!a || !b) return false;
+  if (!cekirdekte(`/compare/${kanonikCift(a.slug, b.slug)}`)) return false;
   /*
     FARKLI ISI GOREN CIFT (olcum, 2026-09-12). Islev kapisi bu ciftleri
     karsilastirma olarak dogru biçimde reddediyor -- ama talep oradaydi ve
