@@ -57,6 +57,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       sitemap disinda kalirsa isini goremez.
     */
     '/tools',
+    '/stack',
+    '/price-changes',
     // Karsilastirma giris kapisi. Footer her sayfadan buraya link
     // veriyordu ama sayfa YOKTU (canlida 404) -- 2026-09-10'da eklendi.
     '/compare',

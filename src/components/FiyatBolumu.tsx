@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Arac } from "@/lib/arac";
 import { merdiven, planEtiketi, ilkUcretliBasamak } from "@/lib/plan";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { aracDegisimleri } from "@/lib/fiyat-gecmisi";
 
 /**
  * ARAC SAYFASININ FIYAT BOLUMU.
@@ -34,12 +35,19 @@ function kontrolTarihi(t: Arac): string | null {
   return t.fiyatKontrolTarihi || t.evidence?.reviewedAt || null;
 }
 
+const para = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 2,
+});
+
 export default function FiyatBolumu({ tool, altSayfasiVar }: { tool: Arac; altSayfasiVar: boolean }) {
   const basamaklar = merdiven(tool);
   const durum = fiyatDurumu(tool);
   const tarih = kontrolTarihi(tool);
   const ucretli = ilkUcretliBasamak(tool);
   const bedavaBasamak = basamaklar.some((p) => p.aylik === 0);
+  const sonDegisim = aracDegisimleri(tool.slug)[0] ?? null;
 
   /*
     Acilis cumlesi. Merdiven varsa araligi soyler; yoksa modelin ne oldugunu
@@ -117,8 +125,29 @@ export default function FiyatBolumu({ tool, altSayfasiVar }: { tool: Arac; altSa
               Source{kaynaklar(tool).length > 1 ? ` ${i + 1}` : ""}
             </a>
           </span>
-        ))}
+        ))}{" "}
+        <Link href="/price-changes" className="underline">
+          Price verification log
+        </Link>
+        .
       </p>
+
+      {sonDegisim && (
+        <p className="mt-2 text-xs text-ink-muted">
+          Latest recorded change:{" "}
+          <strong className="font-medium text-ink">
+            {sonDegisim.plan}{" "}
+            {sonDegisim.type === "plan-added"
+              ? `added at ${sonDegisim.to === null ? "—" : para.format(sonDegisim.to)}`
+              : sonDegisim.type === "plan-removed"
+                ? `removed (was ${sonDegisim.from === null ? "—" : para.format(sonDegisim.from)})`
+                : `${sonDegisim.from === null ? "—" : para.format(sonDegisim.from)} → ${
+                    sonDegisim.to === null ? "—" : para.format(sonDegisim.to)
+                  }`}
+          </strong>{" "}
+          on {sonDegisim.at}.
+        </p>
+      )}
 
       {/*
         PARA HUNISI. Fiyat sorgusu ticari niyetin en yogun oldugu yer: kisi

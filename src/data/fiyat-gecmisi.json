@@ -1,0 +1,5068 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-24T09:06:21.373Z",
+  "sonKontrol": "2026-10-24",
+  "baseline": [
+    {
+      "slug": "1password",
+      "name": "1Password",
+      "plan": "Teams Starter Pack",
+      "aylik": 24.95,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://1password.com/business-pricing"
+    },
+    {
+      "slug": "ahrefs",
+      "name": "Ahrefs",
+      "plan": "Advanced",
+      "aylik": 449,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ahrefs.com/pricing"
+    },
+    {
+      "slug": "ahrefs",
+      "name": "Ahrefs",
+      "plan": "Enterprise",
+      "aylik": 1499,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ahrefs.com/pricing"
+    },
+    {
+      "slug": "ahrefs",
+      "name": "Ahrefs",
+      "plan": "Lite",
+      "aylik": 129,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ahrefs.com/pricing"
+    },
+    {
+      "slug": "ahrefs",
+      "name": "Ahrefs",
+      "plan": "Standard",
+      "aylik": 249,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ahrefs.com/pricing"
+    },
+    {
+      "slug": "ahrefs",
+      "name": "Ahrefs",
+      "plan": "Starter",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ahrefs.com/pricing"
+    },
+    {
+      "slug": "airtable",
+      "name": "Airtable",
+      "plan": "Business",
+      "aylik": 45,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.airtable.com/pricing"
+    },
+    {
+      "slug": "airtable",
+      "name": "Airtable",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.airtable.com/pricing"
+    },
+    {
+      "slug": "airtable",
+      "name": "Airtable",
+      "plan": "Team",
+      "aylik": 20,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.airtable.com/pricing"
+    },
+    {
+      "slug": "amplitude",
+      "name": "Amplitude",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://amplitude.com/pricing"
+    },
+    {
+      "slug": "anytype",
+      "name": "Anytype",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://anytype.io/pricing"
+    },
+    {
+      "slug": "anytype",
+      "name": "Anytype",
+      "plan": "Pro",
+      "aylik": 8,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://anytype.io/pricing"
+    },
+    {
+      "slug": "anytype",
+      "name": "Anytype",
+      "plan": "Ultra",
+      "aylik": 16,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://anytype.io/pricing"
+    },
+    {
+      "slug": "appwrite",
+      "name": "Appwrite",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://appwrite.io/pricing"
+    },
+    {
+      "slug": "appwrite",
+      "name": "Appwrite",
+      "plan": "Pro",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://appwrite.io/pricing"
+    },
+    {
+      "slug": "asana",
+      "name": "Asana",
+      "plan": "Advanced",
+      "aylik": 24.99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://asana.com/pricing"
+    },
+    {
+      "slug": "asana",
+      "name": "Asana",
+      "plan": "Starter",
+      "aylik": 10.99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://asana.com/pricing"
+    },
+    {
+      "slug": "attio",
+      "name": "Attio",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://attio.com/pricing"
+    },
+    {
+      "slug": "attio",
+      "name": "Attio",
+      "plan": "Pro",
+      "aylik": 99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://attio.com/pricing"
+    },
+    {
+      "slug": "auth0",
+      "name": "Auth0",
+      "plan": "Essentials",
+      "aylik": 35,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://auth0.com/pricing"
+    },
+    {
+      "slug": "auth0",
+      "name": "Auth0",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://auth0.com/pricing"
+    },
+    {
+      "slug": "auth0",
+      "name": "Auth0",
+      "plan": "Professional",
+      "aylik": 240,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://auth0.com/pricing"
+    },
+    {
+      "slug": "bamboohr",
+      "name": "BambooHR",
+      "plan": "Core",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bamboohr.com/pricing/"
+    },
+    {
+      "slug": "bamboohr",
+      "name": "BambooHR",
+      "plan": "Elite",
+      "aylik": 25,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bamboohr.com/pricing/"
+    },
+    {
+      "slug": "bamboohr",
+      "name": "BambooHR",
+      "plan": "Pro",
+      "aylik": 17,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bamboohr.com/pricing/"
+    },
+    {
+      "slug": "basecamp",
+      "name": "Basecamp",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://basecamp.com/pricing"
+    },
+    {
+      "slug": "basecamp",
+      "name": "Basecamp",
+      "plan": "Freelancer",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://basecamp.com/pricing"
+    },
+    {
+      "slug": "basecamp",
+      "name": "Basecamp",
+      "plan": "Pro",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://basecamp.com/pricing"
+    },
+    {
+      "slug": "basecamp",
+      "name": "Basecamp",
+      "plan": "Studio",
+      "aylik": 59,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://basecamp.com/pricing"
+    },
+    {
+      "slug": "basecamp",
+      "name": "Basecamp",
+      "plan": "Unlimited Edition",
+      "aylik": 299,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://basecamp.com/pricing"
+    },
+    {
+      "slug": "bear",
+      "name": "Bear",
+      "plan": "Bear Pro",
+      "aylik": 2.99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bear.app/"
+    },
+    {
+      "slug": "beehiiv",
+      "name": "Beehiiv",
+      "plan": "Launch",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://beehiiv.com/pricing"
+    },
+    {
+      "slug": "beehiiv",
+      "name": "Beehiiv",
+      "plan": "Max",
+      "aylik": 96,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://beehiiv.com/pricing"
+    },
+    {
+      "slug": "beehiiv",
+      "name": "Beehiiv",
+      "plan": "Scale",
+      "aylik": 43,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://beehiiv.com/pricing"
+    },
+    {
+      "slug": "bench-accounting",
+      "name": "Bench Accounting",
+      "plan": "Bookkeeping Core",
+      "aylik": 3830,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bench.co/pricing"
+    },
+    {
+      "slug": "betterstack",
+      "name": "Better Stack",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://betterstack.com/pricing"
+    },
+    {
+      "slug": "betterstack",
+      "name": "Better Stack",
+      "plan": "Mega",
+      "aylik": 250,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://betterstack.com/pricing"
+    },
+    {
+      "slug": "betterstack",
+      "name": "Better Stack",
+      "plan": "Micro",
+      "aylik": 120,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://betterstack.com/pricing"
+    },
+    {
+      "slug": "betterstack",
+      "name": "Better Stack",
+      "plan": "Responder license",
+      "aylik": 34,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://betterstack.com/pricing"
+    },
+    {
+      "slug": "bigcommerce",
+      "name": "BigCommerce",
+      "plan": "Core",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    {
+      "slug": "bigcommerce",
+      "name": "BigCommerce",
+      "plan": "Growth",
+      "aylik": 79,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    {
+      "slug": "bigcommerce",
+      "name": "BigCommerce",
+      "plan": "Performance",
+      "aylik": 1499,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    {
+      "slug": "bigcommerce",
+      "name": "BigCommerce",
+      "plan": "Scale",
+      "aylik": 299,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bigcommerce.com/essentials/pricing/"
+    },
+    {
+      "slug": "bitbucket",
+      "name": "Bitbucket",
+      "plan": "Premium",
+      "aylik": 7.25,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.atlassian.com/software/bitbucket/pricing"
+    },
+    {
+      "slug": "bitbucket",
+      "name": "Bitbucket",
+      "plan": "Standard",
+      "aylik": 3.65,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.atlassian.com/software/bitbucket/pricing"
+    },
+    {
+      "slug": "bitwarden",
+      "name": "Bitwarden",
+      "plan": "Enterprise",
+      "aylik": 6,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bitwarden.com/pricing/"
+    },
+    {
+      "slug": "bitwarden",
+      "name": "Bitwarden",
+      "plan": "Families",
+      "aylik": 3.99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bitwarden.com/pricing/"
+    },
+    {
+      "slug": "bitwarden",
+      "name": "Bitwarden",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bitwarden.com/pricing/"
+    },
+    {
+      "slug": "bitwarden",
+      "name": "Bitwarden",
+      "plan": "Premium",
+      "aylik": 1.65,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bitwarden.com/pricing/"
+    },
+    {
+      "slug": "bitwarden",
+      "name": "Bitwarden",
+      "plan": "Teams",
+      "aylik": 4,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bitwarden.com/pricing/"
+    },
+    {
+      "slug": "brex",
+      "name": "Brex",
+      "plan": "Essentials",
+      "aylik": 0,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.brex.com/pricing"
+    },
+    {
+      "slug": "brex",
+      "name": "Brex",
+      "plan": "Premium",
+      "aylik": 12,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.brex.com/pricing"
+    },
+    {
+      "slug": "bubble",
+      "name": "Bubble",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bubble.io/pricing"
+    },
+    {
+      "slug": "bubble",
+      "name": "Bubble",
+      "plan": "Growth",
+      "aylik": 209,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bubble.io/pricing"
+    },
+    {
+      "slug": "bubble",
+      "name": "Bubble",
+      "plan": "Starter",
+      "aylik": 59,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bubble.io/pricing"
+    },
+    {
+      "slug": "bubble",
+      "name": "Bubble",
+      "plan": "Team",
+      "aylik": 549,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://bubble.io/pricing"
+    },
+    {
+      "slug": "buffer",
+      "name": "Buffer",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://buffer.com/pricing"
+    },
+    {
+      "slug": "bugsnag",
+      "name": "Bugsnag",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.bugsnag.com/pricing/"
+    },
+    {
+      "slug": "buzzsumo",
+      "name": "BuzzSumo",
+      "plan": "Content Creation",
+      "aylik": 199,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://buzzsumo.com/pricing/"
+    },
+    {
+      "slug": "buzzsumo",
+      "name": "BuzzSumo",
+      "plan": "PR & Comms",
+      "aylik": 299,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://buzzsumo.com/pricing/"
+    },
+    {
+      "slug": "calendly",
+      "name": "Calendly",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://calendly.com/pricing"
+    },
+    {
+      "slug": "calendly",
+      "name": "Calendly",
+      "plan": "Standard",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://calendly.com/pricing"
+    },
+    {
+      "slug": "calendly",
+      "name": "Calendly",
+      "plan": "Teams",
+      "aylik": 16,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://calendly.com/pricing"
+    },
+    {
+      "slug": "canva",
+      "name": "Canva",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.canva.com/en/pricing/"
+    },
+    {
+      "slug": "capacities",
+      "name": "Capacities",
+      "plan": "AI add-on",
+      "aylik": 8.33,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://capacities.io/pricing"
+    },
+    {
+      "slug": "capacities",
+      "name": "Capacities",
+      "plan": "Believer",
+      "aylik": 12.49,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://capacities.io/pricing"
+    },
+    {
+      "slug": "carrot",
+      "name": "Carrot",
+      "plan": "Agency",
+      "aylik": 299,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://carrot.com/pricing/"
+    },
+    {
+      "slug": "carrot",
+      "name": "Carrot",
+      "plan": "AI Suite add-on",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://carrot.com/pricing/"
+    },
+    {
+      "slug": "carrot",
+      "name": "Carrot",
+      "plan": "Individual",
+      "aylik": 119,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://carrot.com/pricing/"
+    },
+    {
+      "slug": "checkvist",
+      "name": "Checkvist",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://checkvist.com/pricing"
+    },
+    {
+      "slug": "checkvist",
+      "name": "Checkvist",
+      "plan": "PRO team",
+      "aylik": 6.9,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://checkvist.com/pricing"
+    },
+    {
+      "slug": "circleci",
+      "name": "CircleCI",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://circleci.com/pricing/"
+    },
+    {
+      "slug": "circleci",
+      "name": "CircleCI",
+      "plan": "Performance",
+      "aylik": 15,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://circleci.com/pricing/"
+    },
+    {
+      "slug": "clearscope",
+      "name": "Clearscope",
+      "plan": "Business",
+      "aylik": 399,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.clearscope.io/pricing"
+    },
+    {
+      "slug": "clearscope",
+      "name": "Clearscope",
+      "plan": "Essentials",
+      "aylik": 129,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.clearscope.io/pricing"
+    },
+    {
+      "slug": "clerk",
+      "name": "Clerk",
+      "plan": "Business",
+      "aylik": 300,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://clerk.com/pricing"
+    },
+    {
+      "slug": "clerk",
+      "name": "Clerk",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://clerk.com/pricing"
+    },
+    {
+      "slug": "clerk",
+      "name": "Clerk",
+      "plan": "Pro",
+      "aylik": 25,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://clerk.com/pricing"
+    },
+    {
+      "slug": "clickfunnels",
+      "name": "ClickFunnels",
+      "plan": "Launch",
+      "aylik": 97,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.clickfunnels.com/pricing"
+    },
+    {
+      "slug": "clickup",
+      "name": "ClickUp",
+      "plan": "Brain AI",
+      "aylik": 7.2,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://clickup.com/pricing"
+    },
+    {
+      "slug": "clickup",
+      "name": "ClickUp",
+      "plan": "Business",
+      "aylik": 12,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://clickup.com/pricing"
+    },
+    {
+      "slug": "clickup",
+      "name": "ClickUp",
+      "plan": "Everything AI",
+      "aylik": 22.4,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://clickup.com/pricing"
+    },
+    {
+      "slug": "clickup",
+      "name": "ClickUp",
+      "plan": "Unlimited",
+      "aylik": 7,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://clickup.com/pricing"
+    },
+    {
+      "slug": "cloudflare",
+      "name": "Cloudflare",
+      "plan": "Business",
+      "aylik": 200,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.cloudflare.com/plans/network-cdn/"
+    },
+    {
+      "slug": "cloudflare",
+      "name": "Cloudflare",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.cloudflare.com/plans/network-cdn/"
+    },
+    {
+      "slug": "cloudflare",
+      "name": "Cloudflare",
+      "plan": "Pro",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.cloudflare.com/plans/network-cdn/"
+    },
+    {
+      "slug": "codecov",
+      "name": "Codecov",
+      "plan": "Pro",
+      "aylik": 12,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://about.codecov.io/pricing/"
+    },
+    {
+      "slug": "codecov",
+      "name": "Codecov",
+      "plan": "Team",
+      "aylik": 5,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://about.codecov.io/pricing/"
+    },
+    {
+      "slug": "contentful",
+      "name": "Contentful",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.contentful.com/pricing/"
+    },
+    {
+      "slug": "contentful",
+      "name": "Contentful",
+      "plan": "Lite",
+      "aylik": 300,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.contentful.com/pricing/"
+    },
+    {
+      "slug": "convertkit",
+      "name": "ConvertKit",
+      "plan": "Creator",
+      "aylik": 33,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://kit.com/pricing"
+    },
+    {
+      "slug": "convertkit",
+      "name": "ConvertKit",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://kit.com/pricing"
+    },
+    {
+      "slug": "convertkit",
+      "name": "ConvertKit",
+      "plan": "Pro",
+      "aylik": 66,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://kit.com/pricing"
+    },
+    {
+      "slug": "coolors",
+      "name": "Coolors",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://coolors.co/pricing"
+    },
+    {
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "plan": "Chat",
+      "aylik": 24,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.copy.ai/prices"
+    },
+    {
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "plan": "Expansion",
+      "aylik": 2000,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.copy.ai/prices"
+    },
+    {
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "plan": "Growth",
+      "aylik": 1000,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.copy.ai/prices"
+    },
+    {
+      "slug": "copy-ai",
+      "name": "Copy.ai",
+      "plan": "Scale",
+      "aylik": 3000,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.copy.ai/prices"
+    },
+    {
+      "slug": "cpanel",
+      "name": "cPanel",
+      "plan": "Admin",
+      "aylik": 35.99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://cpanel.net/pricing/"
+    },
+    {
+      "slug": "cpanel",
+      "name": "cPanel",
+      "plan": "Premier",
+      "aylik": 69.99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://cpanel.net/pricing/"
+    },
+    {
+      "slug": "cpanel",
+      "name": "cPanel",
+      "plan": "Pro",
+      "aylik": 53.99,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://cpanel.net/pricing/"
+    },
+    {
+      "slug": "cpanel",
+      "name": "cPanel",
+      "plan": "Solo",
+      "aylik": 29.99,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://cpanel.net/pricing/"
+    },
+    {
+      "slug": "craft",
+      "name": "Craft",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.craft.do/pricing"
+    },
+    {
+      "slug": "crazy-egg",
+      "name": "Crazy Egg",
+      "plan": "Enterprise",
+      "aylik": 599,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.crazyegg.com/pricing"
+    },
+    {
+      "slug": "crazy-egg",
+      "name": "Crazy Egg",
+      "plan": "Pro",
+      "aylik": 249,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.crazyegg.com/pricing"
+    },
+    {
+      "slug": "crazy-egg",
+      "name": "Crazy Egg",
+      "plan": "Starter",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.crazyegg.com/pricing"
+    },
+    {
+      "slug": "crisp",
+      "name": "Crisp",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://crisp.chat/en/pricing/"
+    },
+    {
+      "slug": "cursor",
+      "name": "Cursor",
+      "plan": "Individual",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://cursor.com/pricing"
+    },
+    {
+      "slug": "cursor",
+      "name": "Cursor",
+      "plan": "Teams",
+      "aylik": 40,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://cursor.com/pricing"
+    },
+    {
+      "slug": "customer-io",
+      "name": "Customer.io",
+      "plan": "Essentials",
+      "aylik": 100,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://customer.io/pricing"
+    },
+    {
+      "slug": "customer-io",
+      "name": "Customer.io",
+      "plan": "Premium",
+      "aylik": 1000,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://customer.io/pricing"
+    },
+    {
+      "slug": "datadog",
+      "name": "Datadog",
+      "plan": "APM Enterprise",
+      "aylik": 40,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.datadoghq.com/pricing/"
+    },
+    {
+      "slug": "datadog",
+      "name": "Datadog",
+      "plan": "APM Pro",
+      "aylik": 35,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.datadoghq.com/pricing/"
+    },
+    {
+      "slug": "datadog",
+      "name": "Datadog",
+      "plan": "Enterprise",
+      "aylik": 23,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.datadoghq.com/pricing/"
+    },
+    {
+      "slug": "datadog",
+      "name": "Datadog",
+      "plan": "Infrastructure Pro",
+      "aylik": 15,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.datadoghq.com/pricing/"
+    },
+    {
+      "slug": "datagrip",
+      "name": "DataGrip",
+      "plan": "JetBrains AI Pro is a separate add-on at US",
+      "aylik": 20,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.jetbrains.com/datagrip/buy/"
+    },
+    {
+      "slug": "deel",
+      "name": "Deel",
+      "plan": "Contractor of Record",
+      "aylik": 325,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.deel.com/pricing/"
+    },
+    {
+      "slug": "deel",
+      "name": "Deel",
+      "plan": "Find Talent",
+      "aylik": 14,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.deel.com/pricing/"
+    },
+    {
+      "slug": "deel",
+      "name": "Deel",
+      "plan": "Hire Contractors",
+      "aylik": 49,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.deel.com/pricing/"
+    },
+    {
+      "slug": "deel",
+      "name": "Deel",
+      "plan": "US PEO",
+      "aylik": 125,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.deel.com/pricing/"
+    },
+    {
+      "slug": "descript",
+      "name": "Descript",
+      "plan": "Business",
+      "aylik": 50,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "slug": "descript",
+      "name": "Descript",
+      "plan": "Creator",
+      "aylik": 24,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "slug": "descript",
+      "name": "Descript",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "slug": "descript",
+      "name": "Descript",
+      "plan": "Hobbyist",
+      "aylik": 16,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "slug": "docker",
+      "name": "Docker",
+      "plan": "Business",
+      "aylik": 24,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.docker.com/pricing/"
+    },
+    {
+      "slug": "docker",
+      "name": "Docker",
+      "plan": "Pro",
+      "aylik": 9,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.docker.com/pricing/"
+    },
+    {
+      "slug": "docker",
+      "name": "Docker",
+      "plan": "Team",
+      "aylik": 15,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.docker.com/pricing/"
+    },
+    {
+      "slug": "docusign",
+      "name": "DocuSign",
+      "plan": "Business Pro",
+      "aylik": 45,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ecom.docusign.com/plans-and-pricing/esignature"
+    },
+    {
+      "slug": "docusign",
+      "name": "DocuSign",
+      "plan": "Personal",
+      "aylik": 11,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ecom.docusign.com/plans-and-pricing/esignature"
+    },
+    {
+      "slug": "docusign",
+      "name": "DocuSign",
+      "plan": "Standard",
+      "aylik": 30,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ecom.docusign.com/plans-and-pricing/esignature"
+    },
+    {
+      "slug": "dropbox",
+      "name": "Dropbox",
+      "plan": "Advanced",
+      "aylik": 24,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.dropbox.com/plans"
+    },
+    {
+      "slug": "dropbox",
+      "name": "Dropbox",
+      "plan": "Standard",
+      "aylik": 15,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.dropbox.com/plans"
+    },
+    {
+      "slug": "ecwid",
+      "name": "Ecwid",
+      "plan": "Starter",
+      "aylik": 5,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.ecwid.com/pricing"
+    },
+    {
+      "slug": "ecwid",
+      "name": "Ecwid",
+      "plan": "Venture",
+      "aylik": 35,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.ecwid.com/pricing"
+    },
+    {
+      "slug": "elastic",
+      "name": "Elastic",
+      "plan": "Enterprise",
+      "aylik": 184,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.elastic.co/pricing/cloud-hosted"
+    },
+    {
+      "slug": "elastic",
+      "name": "Elastic",
+      "plan": "Gold",
+      "aylik": 114,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.elastic.co/pricing/cloud-hosted"
+    },
+    {
+      "slug": "elastic",
+      "name": "Elastic",
+      "plan": "Platinum",
+      "aylik": 131,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.elastic.co/pricing/cloud-hosted"
+    },
+    {
+      "slug": "elastic",
+      "name": "Elastic",
+      "plan": "Standard as low as",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.elastic.co/pricing/cloud-hosted"
+    },
+    {
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.elevenlabs.io/pricing"
+    },
+    {
+      "slug": "enpass",
+      "name": "Enpass",
+      "plan": "Family Plan advertised at",
+      "aylik": 3.99,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.enpass.io/pricing"
+    },
+    {
+      "slug": "enpass",
+      "name": "Enpass",
+      "plan": "Free tier",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.enpass.io/pricing"
+    },
+    {
+      "slug": "erpnext",
+      "name": "ERPNext",
+      "plan": "Frappe Cloud Servers",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://erpnext.com/pricing"
+    },
+    {
+      "slug": "erpnext",
+      "name": "ERPNext",
+      "plan": "Frappe Cloud Sites",
+      "aylik": 5,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://erpnext.com/pricing"
+    },
+    {
+      "slug": "evernote",
+      "name": "Evernote",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://evernote.com/compare-plans"
+    },
+    {
+      "slug": "expensify",
+      "name": "Expensify",
+      "plan": "Collect",
+      "aylik": 5,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.expensify.com/pricing"
+    },
+    {
+      "slug": "figma",
+      "name": "Figma",
+      "plan": "Collab",
+      "aylik": 5,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.figma.com/pricing/"
+    },
+    {
+      "slug": "figma",
+      "name": "Figma",
+      "plan": "Collab seat",
+      "aylik": 3,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.figma.com/pricing/"
+    },
+    {
+      "slug": "figma",
+      "name": "Figma",
+      "plan": "Dev",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.figma.com/pricing/"
+    },
+    {
+      "slug": "figma",
+      "name": "Figma",
+      "plan": "Dev seat",
+      "aylik": 12,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.figma.com/pricing/"
+    },
+    {
+      "slug": "fireflies",
+      "name": "Fireflies.ai",
+      "plan": "Business",
+      "aylik": 19,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fireflies.ai/pricing"
+    },
+    {
+      "slug": "fireflies",
+      "name": "Fireflies.ai",
+      "plan": "Enterprise",
+      "aylik": 39,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fireflies.ai/pricing"
+    },
+    {
+      "slug": "fireflies",
+      "name": "Fireflies.ai",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fireflies.ai/pricing"
+    },
+    {
+      "slug": "fireflies",
+      "name": "Fireflies.ai",
+      "plan": "Pro",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fireflies.ai/pricing"
+    },
+    {
+      "slug": "fivetran",
+      "name": "Fivetran",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.fivetran.com/pricing"
+    },
+    {
+      "slug": "flutterflow",
+      "name": "FlutterFlow",
+      "plan": "Basic",
+      "aylik": 39,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.flutterflow.io/pricing"
+    },
+    {
+      "slug": "flutterflow",
+      "name": "FlutterFlow",
+      "plan": "Business",
+      "aylik": 150,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.flutterflow.io/pricing"
+    },
+    {
+      "slug": "flutterflow",
+      "name": "FlutterFlow",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.flutterflow.io/pricing"
+    },
+    {
+      "slug": "flutterflow",
+      "name": "FlutterFlow",
+      "plan": "Growth",
+      "aylik": 80,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.flutterflow.io/pricing"
+    },
+    {
+      "slug": "fly-io",
+      "name": "Fly.io",
+      "plan": "Dedicated IPv4",
+      "aylik": 2,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fly.io/pricing"
+    },
+    {
+      "slug": "fly-io",
+      "name": "Fly.io",
+      "plan": "Launch",
+      "aylik": 282,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fly.io/pricing"
+    },
+    {
+      "slug": "fly-io",
+      "name": "Fly.io",
+      "plan": "Performance",
+      "aylik": 1922,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fly.io/pricing"
+    },
+    {
+      "slug": "fly-io",
+      "name": "Fly.io",
+      "plan": "Scale",
+      "aylik": 962,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fly.io/pricing"
+    },
+    {
+      "slug": "fly-io",
+      "name": "Fly.io",
+      "plan": "Starter",
+      "aylik": 72,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fly.io/pricing"
+    },
+    {
+      "slug": "folk",
+      "name": "folk",
+      "plan": "Enterprise",
+      "aylik": 100,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.folk.app/pricing"
+    },
+    {
+      "slug": "folk",
+      "name": "folk",
+      "plan": "Premium",
+      "aylik": 60,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.folk.app/pricing"
+    },
+    {
+      "slug": "folk",
+      "name": "folk",
+      "plan": "Standard",
+      "aylik": 30,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.folk.app/pricing"
+    },
+    {
+      "slug": "fontawesome",
+      "name": "Font Awesome",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fontawesome.com/plans"
+    },
+    {
+      "slug": "fontawesome",
+      "name": "Font Awesome",
+      "plan": "Solo",
+      "aylik": 8,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fontawesome.com/plans"
+    },
+    {
+      "slug": "fontawesome",
+      "name": "Font Awesome",
+      "plan": "Starter",
+      "aylik": 4,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fontawesome.com/plans"
+    },
+    {
+      "slug": "fontawesome",
+      "name": "Font Awesome",
+      "plan": "Team",
+      "aylik": 16,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://fontawesome.com/plans"
+    },
+    {
+      "slug": "framer",
+      "name": "Framer",
+      "plan": "Basic",
+      "aylik": 10,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.framer.com/pricing/"
+    },
+    {
+      "slug": "framer",
+      "name": "Framer",
+      "plan": "Pro",
+      "aylik": 30,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.framer.com/pricing/"
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.frase.io/pricing"
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "plan": "Professional",
+      "aylik": 103,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.frase.io/pricing"
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "plan": "Scale",
+      "aylik": 239,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.frase.io/pricing"
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "plan": "Starter",
+      "aylik": 39,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.frase.io/pricing"
+    },
+    {
+      "slug": "freedcamp",
+      "name": "Freedcamp",
+      "plan": "Business",
+      "aylik": 7.49,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://freedcamp.com/pricing"
+    },
+    {
+      "slug": "freedcamp",
+      "name": "Freedcamp",
+      "plan": "Enterprise",
+      "aylik": 16.99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://freedcamp.com/pricing"
+    },
+    {
+      "slug": "freedcamp",
+      "name": "Freedcamp",
+      "plan": "Pro",
+      "aylik": 1.49,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://freedcamp.com/pricing"
+    },
+    {
+      "slug": "freshbooks",
+      "name": "FreshBooks",
+      "plan": "Lite",
+      "aylik": 23,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "slug": "freshbooks",
+      "name": "FreshBooks",
+      "plan": "Premium",
+      "aylik": 70,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.freshbooks.com/pricing"
+    },
+    {
+      "slug": "freshdesk",
+      "name": "Freshdesk",
+      "plan": "Enterprise",
+      "aylik": 89,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.freshworks.com/freshdesk/pricing/"
+    },
+    {
+      "slug": "freshdesk",
+      "name": "Freshdesk",
+      "plan": "Growth",
+      "aylik": 19,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.freshworks.com/freshdesk/pricing/"
+    },
+    {
+      "slug": "freshdesk",
+      "name": "Freshdesk",
+      "plan": "Pro",
+      "aylik": 55,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.freshworks.com/freshdesk/pricing/"
+    },
+    {
+      "slug": "front",
+      "name": "Front",
+      "plan": "Enterprise",
+      "aylik": 105,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://front.com/pricing"
+    },
+    {
+      "slug": "front",
+      "name": "Front",
+      "plan": "Professional",
+      "aylik": 65,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://front.com/pricing"
+    },
+    {
+      "slug": "front",
+      "name": "Front",
+      "plan": "Starter",
+      "aylik": 25,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://front.com/pricing"
+    },
+    {
+      "slug": "getresponse",
+      "name": "GetResponse",
+      "plan": "Creator",
+      "aylik": 69,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.getresponse.com/pricing"
+    },
+    {
+      "slug": "getresponse",
+      "name": "GetResponse",
+      "plan": "Marketer",
+      "aylik": 59,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.getresponse.com/pricing"
+    },
+    {
+      "slug": "getresponse",
+      "name": "GetResponse",
+      "plan": "Starter",
+      "aylik": 19,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.getresponse.com/pricing"
+    },
+    {
+      "slug": "ghost",
+      "name": "Ghost",
+      "plan": "Business",
+      "aylik": 199,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ghost.org/pricing"
+    },
+    {
+      "slug": "ghost",
+      "name": "Ghost",
+      "plan": "Publisher",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ghost.org/pricing"
+    },
+    {
+      "slug": "ghost",
+      "name": "Ghost",
+      "plan": "Starter",
+      "aylik": 18,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ghost.org/pricing"
+    },
+    {
+      "slug": "gitea",
+      "name": "Gitea",
+      "plan": "Enterprise self-managed",
+      "aylik": 9.5,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://about.gitea.com/pricing"
+    },
+    {
+      "slug": "github",
+      "name": "GitHub",
+      "plan": "Enterprise",
+      "aylik": 21,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://github.com/pricing"
+    },
+    {
+      "slug": "github",
+      "name": "GitHub",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://github.com/pricing"
+    },
+    {
+      "slug": "github",
+      "name": "GitHub",
+      "plan": "Team",
+      "aylik": 4,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://github.com/pricing"
+    },
+    {
+      "slug": "gitlab",
+      "name": "GitLab",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://about.gitlab.com/pricing/"
+    },
+    {
+      "slug": "gitlab",
+      "name": "GitLab",
+      "plan": "Premium",
+      "aylik": 29,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://about.gitlab.com/pricing/"
+    },
+    {
+      "slug": "gohighlevel",
+      "name": "GoHighLevel",
+      "plan": "Agency Pro",
+      "aylik": 497,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.gohighlevel.com/pricing"
+    },
+    {
+      "slug": "gohighlevel",
+      "name": "GoHighLevel",
+      "plan": "Starter",
+      "aylik": 97,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.gohighlevel.com/pricing"
+    },
+    {
+      "slug": "gohighlevel",
+      "name": "GoHighLevel",
+      "plan": "Unlimited",
+      "aylik": 297,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.gohighlevel.com/pricing"
+    },
+    {
+      "slug": "grafana",
+      "name": "Grafana",
+      "plan": "Pro",
+      "aylik": 19,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://grafana.com/pricing/"
+    },
+    {
+      "slug": "grammarly",
+      "name": "Grammarly",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.grammarly.com/plans"
+    },
+    {
+      "slug": "grammarly",
+      "name": "Grammarly",
+      "plan": "Pro",
+      "aylik": 12,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.grammarly.com/plans"
+    },
+    {
+      "slug": "gusto",
+      "name": "Gusto",
+      "plan": "Simple plan",
+      "aylik": 49,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://gusto.com/product/pricing"
+    },
+    {
+      "slug": "hasura",
+      "name": "Hasura",
+      "plan": "Advanced",
+      "aylik": 30,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://hasura.io/pricing"
+    },
+    {
+      "slug": "hasura",
+      "name": "Hasura",
+      "plan": "Base",
+      "aylik": 5,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://hasura.io/pricing"
+    },
+    {
+      "slug": "heygen",
+      "name": "HeyGen",
+      "plan": "Creator",
+      "aylik": 29,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "slug": "heygen",
+      "name": "HeyGen",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "slug": "heygen",
+      "name": "HeyGen",
+      "plan": "Pro",
+      "aylik": 49,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "slug": "hootsuite",
+      "name": "Hootsuite",
+      "plan": "Professional",
+      "aylik": 199,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.hootsuite.com/plans"
+    },
+    {
+      "slug": "hootsuite",
+      "name": "Hootsuite",
+      "plan": "Standard",
+      "aylik": 99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.hootsuite.com/plans"
+    },
+    {
+      "slug": "hotjar",
+      "name": "Hotjar",
+      "plan": "Business",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://help.hotjar.com/hc/en-us/articles/36819964833169-Hotjar-Plans"
+    },
+    {
+      "slug": "hubspot-crm",
+      "name": "HubSpot CRM",
+      "plan": "Free Tools",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.hubspot.com/pricing/crm"
+    },
+    {
+      "slug": "hubspot-crm",
+      "name": "HubSpot CRM",
+      "plan": "Starter Customer Platform",
+      "aylik": 7,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.hubspot.com/pricing/crm"
+    },
+    {
+      "slug": "hugging-face",
+      "name": "Hugging Face",
+      "plan": "Enterprise",
+      "aylik": 50,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://huggingface.co/pricing"
+    },
+    {
+      "slug": "hugging-face",
+      "name": "Hugging Face",
+      "plan": "Hub storage",
+      "aylik": 12,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://huggingface.co/pricing"
+    },
+    {
+      "slug": "hugging-face",
+      "name": "Hugging Face",
+      "plan": "Team",
+      "aylik": 20,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://huggingface.co/pricing"
+    },
+    {
+      "slug": "hypefury",
+      "name": "Hypefury",
+      "plan": "Flexible",
+      "aylik": 6,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://hypefury.com/features-pricing"
+    },
+    {
+      "slug": "hypefury",
+      "name": "Hypefury",
+      "plan": "Full",
+      "aylik": 19,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://hypefury.com/features-pricing"
+    },
+    {
+      "slug": "insomnia",
+      "name": "Insomnia",
+      "plan": "Enterprise",
+      "aylik": 45,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://insomnia.rest/pricing"
+    },
+    {
+      "slug": "insomnia",
+      "name": "Insomnia",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://insomnia.rest/pricing"
+    },
+    {
+      "slug": "intercom",
+      "name": "Intercom",
+      "plan": "Advanced",
+      "aylik": 85,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.intercom.com/pricing"
+    },
+    {
+      "slug": "intercom",
+      "name": "Intercom",
+      "plan": "Essential",
+      "aylik": 29,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.intercom.com/pricing"
+    },
+    {
+      "slug": "intercom",
+      "name": "Intercom",
+      "plan": "Expert",
+      "aylik": 132,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.intercom.com/pricing"
+    },
+    {
+      "slug": "jasper",
+      "name": "Jasper",
+      "plan": "Pro",
+      "aylik": 59,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.jasper.ai/pricing"
+    },
+    {
+      "slug": "jira",
+      "name": "Jira",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.atlassian.com/software/jira/pricing"
+    },
+    {
+      "slug": "kajabi",
+      "name": "Kajabi",
+      "plan": "Basic",
+      "aylik": 143,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://kajabi.com/pricing"
+    },
+    {
+      "slug": "kajabi",
+      "name": "Kajabi",
+      "plan": "Growth",
+      "aylik": 199,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://kajabi.com/pricing"
+    },
+    {
+      "slug": "kajabi",
+      "name": "Kajabi",
+      "plan": "Pro",
+      "aylik": 399,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://kajabi.com/pricing"
+    },
+    {
+      "slug": "langchain",
+      "name": "LangChain",
+      "plan": "Developer",
+      "aylik": 0,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.langchain.com/pricing"
+    },
+    {
+      "slug": "lastpass",
+      "name": "LastPass",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.lastpass.com/pricing"
+    },
+    {
+      "slug": "later",
+      "name": "Later",
+      "plan": "Growth",
+      "aylik": 37.5,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://later.com/pricing/"
+    },
+    {
+      "slug": "later",
+      "name": "Later",
+      "plan": "Scale",
+      "aylik": 82.5,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://later.com/pricing/"
+    },
+    {
+      "slug": "later",
+      "name": "Later",
+      "plan": "Starter",
+      "aylik": 18.75,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://later.com/pricing/"
+    },
+    {
+      "slug": "launchdarkly",
+      "name": "LaunchDarkly",
+      "plan": "Developer plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://launchdarkly.com/pricing/"
+    },
+    {
+      "slug": "launchdarkly",
+      "name": "LaunchDarkly",
+      "plan": "Foundation",
+      "aylik": 10,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://launchdarkly.com/pricing/"
+    },
+    {
+      "slug": "leadpages",
+      "name": "Leadpages",
+      "plan": "Business",
+      "aylik": 28,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.leadpages.com/pricing"
+    },
+    {
+      "slug": "leadpages",
+      "name": "Leadpages",
+      "plan": "HTML Pub Starter",
+      "aylik": 6,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.leadpages.com/pricing"
+    },
+    {
+      "slug": "leadpages",
+      "name": "Leadpages",
+      "plan": "Leadpages Grow",
+      "aylik": 57,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.leadpages.com/pricing"
+    },
+    {
+      "slug": "leadpages",
+      "name": "Leadpages",
+      "plan": "Optimize",
+      "aylik": 115,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.leadpages.com/pricing"
+    },
+    {
+      "slug": "leadpages",
+      "name": "Leadpages",
+      "plan": "Pro",
+      "aylik": 17,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.leadpages.com/pricing"
+    },
+    {
+      "slug": "leadpages",
+      "name": "Leadpages",
+      "plan": "Scale",
+      "aylik": 231,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.leadpages.com/pricing"
+    },
+    {
+      "slug": "linear",
+      "name": "Linear",
+      "plan": "Basic",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://linear.app/pricing"
+    },
+    {
+      "slug": "linear",
+      "name": "Linear",
+      "plan": "Business",
+      "aylik": 16,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://linear.app/pricing"
+    },
+    {
+      "slug": "linear",
+      "name": "Linear",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://linear.app/pricing"
+    },
+    {
+      "slug": "livechat",
+      "name": "LiveChat",
+      "plan": "Business",
+      "aylik": 79,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.livechat.com/pricing/"
+    },
+    {
+      "slug": "livechat",
+      "name": "LiveChat",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.livechat.com/pricing/"
+    },
+    {
+      "slug": "livechat",
+      "name": "LiveChat",
+      "plan": "Starter",
+      "aylik": 19,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.livechat.com/pricing/"
+    },
+    {
+      "slug": "livechat",
+      "name": "LiveChat",
+      "plan": "Team",
+      "aylik": 49,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.livechat.com/pricing/"
+    },
+    {
+      "slug": "loom",
+      "name": "Loom",
+      "plan": "Business",
+      "aylik": 18,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.loom.com/pricing"
+    },
+    {
+      "slug": "loom",
+      "name": "Loom",
+      "plan": "Business + AI",
+      "aylik": 24,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.loom.com/pricing"
+    },
+    {
+      "slug": "mailchimp",
+      "name": "Mailchimp",
+      "plan": "Essentials",
+      "aylik": 13,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://mailchimp.com/pricing/marketing/"
+    },
+    {
+      "slug": "mailchimp",
+      "name": "Mailchimp",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://mailchimp.com/pricing/marketing/"
+    },
+    {
+      "slug": "mailchimp",
+      "name": "Mailchimp",
+      "plan": "Premium",
+      "aylik": 350,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://mailchimp.com/pricing/marketing/"
+    },
+    {
+      "slug": "mailchimp",
+      "name": "Mailchimp",
+      "plan": "Standard",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://mailchimp.com/pricing/marketing/"
+    },
+    {
+      "slug": "mailerlite",
+      "name": "MailerLite",
+      "plan": "Comfort",
+      "aylik": 12,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailerlite.com/pricing"
+    },
+    {
+      "slug": "mailerlite",
+      "name": "MailerLite",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailerlite.com/pricing"
+    },
+    {
+      "slug": "mailerlite",
+      "name": "MailerLite",
+      "plan": "Power",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailerlite.com/pricing"
+    },
+    {
+      "slug": "mailgun",
+      "name": "Mailgun",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailgun.com/pricing/"
+    },
+    {
+      "slug": "mailjet",
+      "name": "Mailjet",
+      "plan": "Essential",
+      "aylik": 17,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailjet.com/pricing/"
+    },
+    {
+      "slug": "mailjet",
+      "name": "Mailjet",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailjet.com/pricing/"
+    },
+    {
+      "slug": "mailjet",
+      "name": "Mailjet",
+      "plan": "Premium",
+      "aylik": 27,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailjet.com/pricing/"
+    },
+    {
+      "slug": "mailjet",
+      "name": "Mailjet",
+      "plan": "Starter",
+      "aylik": 9,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mailjet.com/pricing/"
+    },
+    {
+      "slug": "maptiler",
+      "name": "MapTiler",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.maptiler.com/terms/cloud/"
+    },
+    {
+      "slug": "mem",
+      "name": "Mem",
+      "plan": "Extra Usage is sold as a",
+      "aylik": 50,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://get.mem.ai/pricing"
+    },
+    {
+      "slug": "mem",
+      "name": "Mem",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://get.mem.ai/pricing"
+    },
+    {
+      "slug": "mem",
+      "name": "Mem",
+      "plan": "Mem Pro",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://get.mem.ai/pricing"
+    },
+    {
+      "slug": "mem",
+      "name": "Mem",
+      "plan": "Mem Pro 10x",
+      "aylik": 149,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://get.mem.ai/pricing"
+    },
+    {
+      "slug": "mem",
+      "name": "Mem",
+      "plan": "Mem Pro 20x",
+      "aylik": 199,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://get.mem.ai/pricing"
+    },
+    {
+      "slug": "mem",
+      "name": "Mem",
+      "plan": "Mem Pro 2x",
+      "aylik": 49,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://get.mem.ai/pricing"
+    },
+    {
+      "slug": "mem",
+      "name": "Mem",
+      "plan": "Mem Pro 5x",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://get.mem.ai/pricing"
+    },
+    {
+      "slug": "microsoft-dynamics",
+      "name": "Microsoft Dynamics",
+      "plan": "Sales Enterprise",
+      "aylik": 95,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.microsoft.com/en-us/dynamics-365/products/sales/pricing"
+    },
+    {
+      "slug": "microsoft-dynamics",
+      "name": "Microsoft Dynamics",
+      "plan": "Sales Professional",
+      "aylik": 65,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.microsoft.com/en-us/dynamics-365/products/sales/pricing"
+    },
+    {
+      "slug": "mindomo",
+      "name": "Mindomo",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mindomo.com/pricing"
+    },
+    {
+      "slug": "mindomo",
+      "name": "Mindomo",
+      "plan": "Premium",
+      "aylik": 7,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mindomo.com/pricing"
+    },
+    {
+      "slug": "mindomo",
+      "name": "Mindomo",
+      "plan": "Professional",
+      "aylik": 16,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.mindomo.com/pricing"
+    },
+    {
+      "slug": "miro",
+      "name": "Miro",
+      "plan": "Business",
+      "aylik": 20,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://miro.com/pricing/"
+    },
+    {
+      "slug": "miro",
+      "name": "Miro",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://miro.com/pricing/"
+    },
+    {
+      "slug": "miro",
+      "name": "Miro",
+      "plan": "Starter",
+      "aylik": 8,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://miro.com/pricing/"
+    },
+    {
+      "slug": "mistral",
+      "name": "Mistral AI",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://mistral.ai/pricing"
+    },
+    {
+      "slug": "mixpanel",
+      "name": "Mixpanel",
+      "plan": "Growth",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://mixpanel.com/pricing/"
+    },
+    {
+      "slug": "moz",
+      "name": "Moz",
+      "plan": "Standard",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://moz.com/products/pro/pricing"
+    },
+    {
+      "slug": "ms-teams",
+      "name": "Microsoft Teams",
+      "plan": "Microsoft 365 Business Basic",
+      "aylik": 7,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+    },
+    {
+      "slug": "ms-teams",
+      "name": "Microsoft Teams",
+      "plan": "Microsoft 365 Copilot Business add-on",
+      "aylik": 21,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+    },
+    {
+      "slug": "ms-teams",
+      "name": "Microsoft Teams",
+      "plan": "Microsoft Teams Essentials",
+      "aylik": 4,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+    },
+    {
+      "slug": "ms-teams",
+      "name": "Microsoft Teams",
+      "plan": "Microsoft Teams Premium add-on",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options"
+    },
+    {
+      "slug": "nationbuilder",
+      "name": "NationBuilder",
+      "plan": "Pro",
+      "aylik": 160,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://nationbuilder.com/pricing"
+    },
+    {
+      "slug": "nationbuilder",
+      "name": "NationBuilder",
+      "plan": "Starter",
+      "aylik": 34,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://nationbuilder.com/pricing"
+    },
+    {
+      "slug": "neon",
+      "name": "Neon",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://neon.com/pricing"
+    },
+    {
+      "slug": "netlify",
+      "name": "Netlify",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.netlify.com/pricing/"
+    },
+    {
+      "slug": "netlify",
+      "name": "Netlify",
+      "plan": "Personal",
+      "aylik": 9,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.netlify.com/pricing/"
+    },
+    {
+      "slug": "netlify",
+      "name": "Netlify",
+      "plan": "Pro",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.netlify.com/pricing/"
+    },
+    {
+      "slug": "new-relic",
+      "name": "New Relic",
+      "plan": "Pro",
+      "aylik": 349,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://newrelic.com/pricing"
+    },
+    {
+      "slug": "new-relic",
+      "name": "New Relic",
+      "plan": "Standard",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://newrelic.com/pricing"
+    },
+    {
+      "slug": "notion",
+      "name": "Notion",
+      "plan": "Business",
+      "aylik": 20,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.notion.com/pricing"
+    },
+    {
+      "slug": "notion",
+      "name": "Notion",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.notion.com/pricing"
+    },
+    {
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "plan": "Publish",
+      "aylik": 8,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://obsidian.md/pricing"
+    },
+    {
+      "slug": "obsidian",
+      "name": "Obsidian",
+      "plan": "Sync",
+      "aylik": 4,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://obsidian.md/pricing"
+    },
+    {
+      "slug": "optinmonster",
+      "name": "OptinMonster",
+      "plan": "Basic",
+      "aylik": 7,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://optinmonster.com/pricing/"
+    },
+    {
+      "slug": "optinmonster",
+      "name": "OptinMonster",
+      "plan": "Growth",
+      "aylik": 49,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://optinmonster.com/pricing/"
+    },
+    {
+      "slug": "optinmonster",
+      "name": "OptinMonster",
+      "plan": "Pro",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://optinmonster.com/pricing/"
+    },
+    {
+      "slug": "otter-ai",
+      "name": "Otter.ai",
+      "plan": "Business",
+      "aylik": 30,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://otter.ai/pricing"
+    },
+    {
+      "slug": "otter-ai",
+      "name": "Otter.ai",
+      "plan": "Pro",
+      "aylik": 16.99,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://otter.ai/pricing"
+    },
+    {
+      "slug": "papaya-global",
+      "name": "Papaya Global",
+      "plan": "Contractor solution starting",
+      "aylik": 5,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.papayaglobal.com/pricing/"
+    },
+    {
+      "slug": "payhip",
+      "name": "Payhip",
+      "plan": "Free Forever",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://payhip.com/pricing"
+    },
+    {
+      "slug": "penpot",
+      "name": "Penpot",
+      "plan": "Enterprise",
+      "aylik": 25,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://penpot.app/pricing"
+    },
+    {
+      "slug": "pinecone",
+      "name": "Pinecone",
+      "plan": "Builder",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.pinecone.io/pricing/"
+    },
+    {
+      "slug": "pinecone",
+      "name": "Pinecone",
+      "plan": "Standard",
+      "aylik": 50,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.pinecone.io/pricing/"
+    },
+    {
+      "slug": "pinecone",
+      "name": "Pinecone",
+      "plan": "Starter",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.pinecone.io/pricing/"
+    },
+    {
+      "slug": "pixelmator-pro",
+      "name": "Pixelmator Pro",
+      "plan": "Apple Creator Studio subscription",
+      "aylik": 12.99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.apple.com/pixelmator-pro/"
+    },
+    {
+      "slug": "plane",
+      "name": "Plane",
+      "plan": "Business",
+      "aylik": 13,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://plane.so/pricing"
+    },
+    {
+      "slug": "plane",
+      "name": "Plane",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://plane.so/pricing"
+    },
+    {
+      "slug": "planetscale",
+      "name": "PlanetScale",
+      "plan": "Postgres EBS HA",
+      "aylik": 15,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://planetscale.com/pricing"
+    },
+    {
+      "slug": "planetscale",
+      "name": "PlanetScale",
+      "plan": "Postgres Metal HA",
+      "aylik": 50,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://planetscale.com/pricing"
+    },
+    {
+      "slug": "planetscale",
+      "name": "PlanetScale",
+      "plan": "Vitess HA",
+      "aylik": 39,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://planetscale.com/pricing"
+    },
+    {
+      "slug": "planetscale",
+      "name": "PlanetScale",
+      "plan": "Vitess Metal",
+      "aylik": 609,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://planetscale.com/pricing"
+    },
+    {
+      "slug": "podia",
+      "name": "Podia",
+      "plan": "Earthquaker",
+      "aylik": 150,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.podia.com/pricing"
+    },
+    {
+      "slug": "podia",
+      "name": "Podia",
+      "plan": "Shaker",
+      "aylik": 84,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.podia.com/pricing"
+    },
+    {
+      "slug": "postman",
+      "name": "Postman",
+      "plan": "Enterprise",
+      "aylik": 49,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.postman.com/pricing/"
+    },
+    {
+      "slug": "postman",
+      "name": "Postman",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.postman.com/pricing/"
+    },
+    {
+      "slug": "postman",
+      "name": "Postman",
+      "plan": "Solo",
+      "aylik": 9,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.postman.com/pricing/"
+    },
+    {
+      "slug": "postman",
+      "name": "Postman",
+      "plan": "Team",
+      "aylik": 19,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.postman.com/pricing/"
+    },
+    {
+      "slug": "postmark",
+      "name": "Postmark",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://postmarkapp.com/pricing"
+    },
+    {
+      "slug": "prezi",
+      "name": "Prezi",
+      "plan": "Premium",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans"
+    },
+    {
+      "slug": "prezi",
+      "name": "Prezi",
+      "plan": "Standard",
+      "aylik": 7,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans"
+    },
+    {
+      "slug": "prezi",
+      "name": "Prezi",
+      "plan": "Teams",
+      "aylik": 39,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://support.prezi.com/hc/en-us/articles/360003478934-Guide-to-Prezi-plans"
+    },
+    {
+      "slug": "printify",
+      "name": "Printify",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://printify.com/pricing/"
+    },
+    {
+      "slug": "prisma",
+      "name": "Prisma",
+      "plan": "Business",
+      "aylik": 129,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.prisma.io/pricing"
+    },
+    {
+      "slug": "prisma",
+      "name": "Prisma",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.prisma.io/pricing"
+    },
+    {
+      "slug": "prisma",
+      "name": "Prisma",
+      "plan": "Pro",
+      "aylik": 49,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.prisma.io/pricing"
+    },
+    {
+      "slug": "prisma",
+      "name": "Prisma",
+      "plan": "Starter",
+      "aylik": 10,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.prisma.io/pricing"
+    },
+    {
+      "slug": "productboard",
+      "name": "Productboard",
+      "plan": "Business",
+      "aylik": 59,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.productboard.com/pricing/"
+    },
+    {
+      "slug": "productboard",
+      "name": "Productboard",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.productboard.com/pricing/"
+    },
+    {
+      "slug": "pulumi",
+      "name": "Pulumi",
+      "plan": "Enterprise",
+      "aylik": 400,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.pulumi.com/pricing/"
+    },
+    {
+      "slug": "quickbooks",
+      "name": "QuickBooks",
+      "plan": "Advanced",
+      "aylik": 340,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://quickbooks.intuit.com/pricing/"
+    },
+    {
+      "slug": "quickbooks",
+      "name": "QuickBooks",
+      "plan": "Essentials",
+      "aylik": 85,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://quickbooks.intuit.com/pricing/"
+    },
+    {
+      "slug": "railway",
+      "name": "Railway",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://railway.com/pricing"
+    },
+    {
+      "slug": "ramp",
+      "name": "Ramp",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://ramp.com/pricing"
+    },
+    {
+      "slug": "raycast",
+      "name": "Raycast",
+      "plan": "Advanced AI add-on",
+      "aylik": 8,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.raycast.com/pricing"
+    },
+    {
+      "slug": "raycast",
+      "name": "Raycast",
+      "plan": "Pro",
+      "aylik": 10,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.raycast.com/pricing"
+    },
+    {
+      "slug": "raycast",
+      "name": "Raycast",
+      "plan": "Teams Pro",
+      "aylik": 15,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.raycast.com/pricing"
+    },
+    {
+      "slug": "readwise",
+      "name": "Readwise",
+      "plan": "Full",
+      "aylik": 9.99,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://readwise.io/pricing"
+    },
+    {
+      "slug": "readwise",
+      "name": "Readwise",
+      "plan": "Lite",
+      "aylik": 5.59,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://readwise.io/pricing"
+    },
+    {
+      "slug": "reclaim",
+      "name": "Reclaim.ai",
+      "plan": "Starter",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://reclaim.ai/pricing"
+    },
+    {
+      "slug": "remote-com",
+      "name": "Remote",
+      "plan": "Contractor Management",
+      "aylik": 29,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://remote.com/pricing"
+    },
+    {
+      "slug": "remote-com",
+      "name": "Remote",
+      "plan": "Contractor of Record",
+      "aylik": 325,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://remote.com/pricing"
+    },
+    {
+      "slug": "remote-com",
+      "name": "Remote",
+      "plan": "Employer of Record",
+      "aylik": 699,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://remote.com/pricing"
+    },
+    {
+      "slug": "remote-com",
+      "name": "Remote",
+      "plan": "Equity",
+      "aylik": 39,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://remote.com/pricing"
+    },
+    {
+      "slug": "remote-com",
+      "name": "Remote",
+      "plan": "Global Payroll",
+      "aylik": 29,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://remote.com/pricing"
+    },
+    {
+      "slug": "render",
+      "name": "Render",
+      "plan": "Hobby",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://render.com/pricing"
+    },
+    {
+      "slug": "render",
+      "name": "Render",
+      "plan": "Pro",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://render.com/pricing"
+    },
+    {
+      "slug": "render",
+      "name": "Render",
+      "plan": "Scale",
+      "aylik": 499,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://render.com/pricing"
+    },
+    {
+      "slug": "render",
+      "name": "Render",
+      "plan": "SSD disks",
+      "aylik": 0.25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://render.com/pricing"
+    },
+    {
+      "slug": "replit",
+      "name": "Replit",
+      "plan": "Core",
+      "aylik": 20,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://replit.com/pricing"
+    },
+    {
+      "slug": "replit",
+      "name": "Replit",
+      "plan": "Pro",
+      "aylik": 100,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://replit.com/pricing"
+    },
+    {
+      "slug": "resend",
+      "name": "Resend",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://resend.com/pricing"
+    },
+    {
+      "slug": "resend",
+      "name": "Resend",
+      "plan": "Pro",
+      "aylik": 40,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://resend.com/pricing"
+    },
+    {
+      "slug": "runway",
+      "name": "Runway",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://runway.com/pricing"
+    },
+    {
+      "slug": "salesforce",
+      "name": "Salesforce",
+      "plan": "Advanced",
+      "aylik": 395,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.salesforce.com/editions-pricing/sales-cloud/"
+    },
+    {
+      "slug": "salesforce",
+      "name": "Salesforce",
+      "plan": "Core",
+      "aylik": 195,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.salesforce.com/editions-pricing/sales-cloud/"
+    },
+    {
+      "slug": "salesforce",
+      "name": "Salesforce",
+      "plan": "Max",
+      "aylik": 550,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.salesforce.com/editions-pricing/sales-cloud/"
+    },
+    {
+      "slug": "salesforce",
+      "name": "Salesforce",
+      "plan": "Pro Suite",
+      "aylik": 100,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.salesforce.com/editions-pricing/sales-cloud/"
+    },
+    {
+      "slug": "salesforce",
+      "name": "Salesforce",
+      "plan": "Starter Suite",
+      "aylik": 25,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.salesforce.com/editions-pricing/sales-cloud/"
+    },
+    {
+      "slug": "sanity",
+      "name": "Sanity",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sanity.io/pricing"
+    },
+    {
+      "slug": "sanity",
+      "name": "Sanity",
+      "plan": "Growth",
+      "aylik": 15,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sanity.io/pricing"
+    },
+    {
+      "slug": "screenpal",
+      "name": "ScreenPal",
+      "plan": "Solo Deluxe",
+      "aylik": 4,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://screenpal.com/plans"
+    },
+    {
+      "slug": "screenpal",
+      "name": "ScreenPal",
+      "plan": "Solo Max",
+      "aylik": 10,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://screenpal.com/plans"
+    },
+    {
+      "slug": "segment",
+      "name": "Segment",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.twilio.com/en-us/products/connections/pricing"
+    },
+    {
+      "slug": "segment",
+      "name": "Segment",
+      "plan": "Team",
+      "aylik": 120,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.twilio.com/en-us/products/connections/pricing"
+    },
+    {
+      "slug": "sellfy",
+      "name": "Sellfy",
+      "plan": "Business",
+      "aylik": 79,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sellfy.com/pricing/"
+    },
+    {
+      "slug": "sellfy",
+      "name": "Sellfy",
+      "plan": "Premium",
+      "aylik": 159,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sellfy.com/pricing/"
+    },
+    {
+      "slug": "sellfy",
+      "name": "Sellfy",
+      "plan": "Starter",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sellfy.com/pricing/"
+    },
+    {
+      "slug": "semrush",
+      "name": "SEMrush",
+      "plan": "Advanced",
+      "aylik": 549,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.semrush.com/prices/"
+    },
+    {
+      "slug": "semrush",
+      "name": "SEMrush",
+      "plan": "Pro+",
+      "aylik": 299,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.semrush.com/prices/"
+    },
+    {
+      "slug": "semrush",
+      "name": "SEMrush",
+      "plan": "SEO plan",
+      "aylik": 139,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.semrush.com/prices/"
+    },
+    {
+      "slug": "semrush",
+      "name": "SEMrush",
+      "plan": "Starter",
+      "aylik": 199,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.semrush.com/prices/"
+    },
+    {
+      "slug": "sentry",
+      "name": "Sentry",
+      "plan": "Business",
+      "aylik": 80,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sentry.io/pricing/"
+    },
+    {
+      "slug": "sentry",
+      "name": "Sentry",
+      "plan": "Team",
+      "aylik": 26,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sentry.io/pricing/"
+    },
+    {
+      "slug": "shopify",
+      "name": "Shopify",
+      "plan": "Advanced",
+      "aylik": 299,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.shopify.com/pricing"
+    },
+    {
+      "slug": "shopify",
+      "name": "Shopify",
+      "plan": "Basic",
+      "aylik": 19,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.shopify.com/pricing"
+    },
+    {
+      "slug": "shopify",
+      "name": "Shopify",
+      "plan": "Grow",
+      "aylik": 54,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.shopify.com/pricing"
+    },
+    {
+      "slug": "shortwave",
+      "name": "Shortwave",
+      "plan": "Business",
+      "aylik": 30,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.shortwave.com/pricing/"
+    },
+    {
+      "slug": "shortwave",
+      "name": "Shortwave",
+      "plan": "Max",
+      "aylik": 120,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.shortwave.com/pricing/"
+    },
+    {
+      "slug": "shortwave",
+      "name": "Shortwave",
+      "plan": "Premier",
+      "aylik": 45,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.shortwave.com/pricing/"
+    },
+    {
+      "slug": "siteground",
+      "name": "SiteGround",
+      "plan": "StartUp",
+      "aylik": 2.99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://world.siteground.com/web-hosting.htm"
+    },
+    {
+      "slug": "sketch",
+      "name": "Sketch",
+      "plan": "Enterprise",
+      "aylik": 44,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sketch.com/pricing/"
+    },
+    {
+      "slug": "sketch",
+      "name": "Sketch",
+      "plan": "Professional",
+      "aylik": 24,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sketch.com/pricing/"
+    },
+    {
+      "slug": "sketch",
+      "name": "Sketch",
+      "plan": "Standard",
+      "aylik": 12,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sketch.com/pricing/"
+    },
+    {
+      "slug": "slack",
+      "name": "Slack",
+      "plan": "Business+",
+      "aylik": 18,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://slack.com/pricing"
+    },
+    {
+      "slug": "slack",
+      "name": "Slack",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://slack.com/pricing"
+    },
+    {
+      "slug": "slack",
+      "name": "Slack",
+      "plan": "Pro",
+      "aylik": 8.75,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://slack.com/pricing"
+    },
+    {
+      "slug": "smartsheet",
+      "name": "Smartsheet",
+      "plan": "Business",
+      "aylik": 19,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.smartsheet.com/pricing"
+    },
+    {
+      "slug": "smartsheet",
+      "name": "Smartsheet",
+      "plan": "Pro",
+      "aylik": 9,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.smartsheet.com/pricing"
+    },
+    {
+      "slug": "snyk",
+      "name": "Snyk",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://snyk.io/plans/"
+    },
+    {
+      "slug": "snyk",
+      "name": "Snyk",
+      "plan": "Team",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://snyk.io/plans/"
+    },
+    {
+      "slug": "spark-mail",
+      "name": "Spark Mail",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sparkmailapp.com/pricing"
+    },
+    {
+      "slug": "spark-mail",
+      "name": "Spark Mail",
+      "plan": "Pro",
+      "aylik": 20,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sparkmailapp.com/pricing"
+    },
+    {
+      "slug": "spline",
+      "name": "Spline",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://spline.design/pricing"
+    },
+    {
+      "slug": "spline",
+      "name": "Spline",
+      "plan": "Hobby",
+      "aylik": 12,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://spline.design/pricing"
+    },
+    {
+      "slug": "spline",
+      "name": "Spline",
+      "plan": "Max",
+      "aylik": 60,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://spline.design/pricing"
+    },
+    {
+      "slug": "spline",
+      "name": "Spline",
+      "plan": "Pro",
+      "aylik": 25,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://spline.design/pricing"
+    },
+    {
+      "slug": "sprout-social",
+      "name": "Sprout Social",
+      "plan": "Advanced",
+      "aylik": 399,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sproutsocial.com/pricing/"
+    },
+    {
+      "slug": "sprout-social",
+      "name": "Sprout Social",
+      "plan": "Essentials",
+      "aylik": 79,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sproutsocial.com/pricing/"
+    },
+    {
+      "slug": "sprout-social",
+      "name": "Sprout Social",
+      "plan": "Professional",
+      "aylik": 299,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sproutsocial.com/pricing/"
+    },
+    {
+      "slug": "sprout-social",
+      "name": "Sprout Social",
+      "plan": "Standard",
+      "aylik": 199,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://sproutsocial.com/pricing/"
+    },
+    {
+      "slug": "spyfu",
+      "name": "SpyFu",
+      "plan": "Basic",
+      "aylik": 39,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.spyfu.com/mainpurchase/?page=default"
+    },
+    {
+      "slug": "spyfu",
+      "name": "SpyFu",
+      "plan": "Pro",
+      "aylik": 119,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.spyfu.com/mainpurchase/?page=default"
+    },
+    {
+      "slug": "spyfu",
+      "name": "SpyFu",
+      "plan": "Team",
+      "aylik": 249,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.spyfu.com/mainpurchase/?page=default"
+    },
+    {
+      "slug": "statuspage",
+      "name": "Atlassian Statuspage",
+      "plan": "Business",
+      "aylik": 399,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.atlassian.com/software/statuspage/pricing"
+    },
+    {
+      "slug": "statuspage",
+      "name": "Atlassian Statuspage",
+      "plan": "Enterprise",
+      "aylik": 1499,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.atlassian.com/software/statuspage/pricing"
+    },
+    {
+      "slug": "statuspage",
+      "name": "Atlassian Statuspage",
+      "plan": "Hobby",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.atlassian.com/software/statuspage/pricing"
+    },
+    {
+      "slug": "statuspage",
+      "name": "Atlassian Statuspage",
+      "plan": "Startup",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.atlassian.com/software/statuspage/pricing"
+    },
+    {
+      "slug": "strapi",
+      "name": "Strapi",
+      "plan": "Business",
+      "aylik": 450,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://strapi.io/pricing"
+    },
+    {
+      "slug": "strapi",
+      "name": "Strapi",
+      "plan": "Pro",
+      "aylik": 90,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://strapi.io/pricing"
+    },
+    {
+      "slug": "strapi",
+      "name": "Strapi",
+      "plan": "Starter",
+      "aylik": 35,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://strapi.io/pricing"
+    },
+    {
+      "slug": "sugarcrm",
+      "name": "SugarCRM",
+      "plan": "Advanced",
+      "aylik": 85,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sugarai.com/pricing"
+    },
+    {
+      "slug": "sugarcrm",
+      "name": "SugarCRM",
+      "plan": "Premier",
+      "aylik": 135,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sugarai.com/pricing"
+    },
+    {
+      "slug": "sugarcrm",
+      "name": "SugarCRM",
+      "plan": "Standard",
+      "aylik": 59,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sugarai.com/pricing"
+    },
+    {
+      "slug": "suno",
+      "name": "Suno",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://suno.com/pricing"
+    },
+    {
+      "slug": "suno",
+      "name": "Suno",
+      "plan": "Premier",
+      "aylik": 24,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://suno.com/pricing"
+    },
+    {
+      "slug": "supabase",
+      "name": "Supabase",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://supabase.com/pricing"
+    },
+    {
+      "slug": "supabase",
+      "name": "Supabase",
+      "plan": "Pro",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://supabase.com/pricing"
+    },
+    {
+      "slug": "supabase",
+      "name": "Supabase",
+      "plan": "Team",
+      "aylik": 599,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://supabase.com/pricing"
+    },
+    {
+      "slug": "superhuman",
+      "name": "Superhuman",
+      "plan": "Business",
+      "aylik": 33,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://superhuman.com/plans"
+    },
+    {
+      "slug": "superhuman",
+      "name": "Superhuman",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://superhuman.com/plans"
+    },
+    {
+      "slug": "superhuman",
+      "name": "Superhuman",
+      "plan": "Pro",
+      "aylik": 12,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://superhuman.com/plans"
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "plan": "AI Search Analytics",
+      "aylik": 158,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://surferseo.com/pricing/"
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "plan": "Discovery",
+      "aylik": 49,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://surferseo.com/pricing/"
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "plan": "Peace of Mind",
+      "aylik": 299,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://surferseo.com/pricing/"
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "plan": "Pro",
+      "aylik": 182,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://surferseo.com/pricing/"
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "plan": "Standard",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://surferseo.com/pricing/"
+    },
+    {
+      "slug": "sync-com",
+      "name": "Sync.com",
+      "plan": "Personal 1 TB",
+      "aylik": 16,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sync.com/pricing-individual/"
+    },
+    {
+      "slug": "sync-com",
+      "name": "Sync.com",
+      "plan": "Personal 150 GB",
+      "aylik": 4,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sync.com/pricing-individual/"
+    },
+    {
+      "slug": "sync-com",
+      "name": "Sync.com",
+      "plan": "Pro Solo 5 TB",
+      "aylik": 32,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.sync.com/pricing-individual/"
+    },
+    {
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "plan": "Creator",
+      "aylik": 89,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "plan": "Free plan",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "slug": "synthesia",
+      "name": "Synthesia",
+      "plan": "Starter",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "slug": "tableplus",
+      "name": "TablePlus",
+      "plan": "Basic",
+      "aylik": 99,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://tableplus.com/pricing"
+    },
+    {
+      "slug": "tableplus",
+      "name": "TablePlus",
+      "plan": "Standard",
+      "aylik": 129,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://tableplus.com/pricing"
+    },
+    {
+      "slug": "tableplus",
+      "name": "TablePlus",
+      "plan": "Team",
+      "aylik": 79,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://tableplus.com/pricing"
+    },
+    {
+      "slug": "teamwork",
+      "name": "Teamwork",
+      "plan": "Accelerate",
+      "aylik": 24.99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.teamwork.com/pricing/"
+    },
+    {
+      "slug": "teamwork",
+      "name": "Teamwork",
+      "plan": "Basics",
+      "aylik": 9.99,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.teamwork.com/pricing/"
+    },
+    {
+      "slug": "teamwork",
+      "name": "Teamwork",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.teamwork.com/pricing/"
+    },
+    {
+      "slug": "tidio",
+      "name": "Tidio",
+      "plan": "Growth",
+      "aylik": 49.17,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.tidio.com/pricing/"
+    },
+    {
+      "slug": "tidio",
+      "name": "Tidio",
+      "plan": "Starter",
+      "aylik": 24.17,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.tidio.com/pricing/"
+    },
+    {
+      "slug": "tipalti",
+      "name": "Tipalti",
+      "plan": "Tipalti Accounts Payable plans",
+      "aylik": 99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.tipalti.com/pricing"
+    },
+    {
+      "slug": "tipalti",
+      "name": "Tipalti",
+      "plan": "Tipalti Mass Payments plans",
+      "aylik": 249,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.tipalti.com/pricing"
+    },
+    {
+      "slug": "toggl-track",
+      "name": "Toggl Track",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://toggl.com/track/pricing/"
+    },
+    {
+      "slug": "toggl-track",
+      "name": "Toggl Track",
+      "plan": "Starter",
+      "aylik": 9,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://toggl.com/track/pricing/"
+    },
+    {
+      "slug": "trello",
+      "name": "Trello",
+      "plan": "Enterprise",
+      "aylik": 17.5,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://trello.com/pricing"
+    },
+    {
+      "slug": "trello",
+      "name": "Trello",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://trello.com/pricing"
+    },
+    {
+      "slug": "trello",
+      "name": "Trello",
+      "plan": "Premium",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://trello.com/pricing"
+    },
+    {
+      "slug": "trello",
+      "name": "Trello",
+      "plan": "Standard",
+      "aylik": 6,
+      "birim": "kisi-basina",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://trello.com/pricing"
+    },
+    {
+      "slug": "turso",
+      "name": "Turso",
+      "plan": "Developer",
+      "aylik": 4.99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://turso.tech/pricing"
+    },
+    {
+      "slug": "turso",
+      "name": "Turso",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://turso.tech/pricing"
+    },
+    {
+      "slug": "turso",
+      "name": "Turso",
+      "plan": "Pro",
+      "aylik": 416.58,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://turso.tech/pricing"
+    },
+    {
+      "slug": "turso",
+      "name": "Turso",
+      "plan": "Scaler",
+      "aylik": 24.92,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://turso.tech/pricing"
+    },
+    {
+      "slug": "twist",
+      "name": "Twist",
+      "plan": "Unlimited",
+      "aylik": 6,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://twist.com/pricing"
+    },
+    {
+      "slug": "typeform",
+      "name": "Typeform",
+      "plan": "Basic",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.typeform.com/pricing/"
+    },
+    {
+      "slug": "typeform",
+      "name": "Typeform",
+      "plan": "Business",
+      "aylik": 83,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.typeform.com/pricing/"
+    },
+    {
+      "slug": "unbounce",
+      "name": "Unbounce",
+      "plan": "Starter",
+      "aylik": 29,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://unbounce.com/pricing/"
+    },
+    {
+      "slug": "upstash",
+      "name": "Upstash",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://upstash.com/pricing/redis"
+    },
+    {
+      "slug": "upstash",
+      "name": "Upstash",
+      "plan": "Prod Pack +",
+      "aylik": 200,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://upstash.com/pricing/redis"
+    },
+    {
+      "slug": "vercel",
+      "name": "Vercel",
+      "plan": "Hobby",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://vercel.com/pricing"
+    },
+    {
+      "slug": "vercel",
+      "name": "Vercel",
+      "plan": "Pro",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://vercel.com/pricing"
+    },
+    {
+      "slug": "vercel",
+      "name": "Vercel",
+      "plan": "SAML SSO add-on",
+      "aylik": 300,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://vercel.com/pricing"
+    },
+    {
+      "slug": "warp",
+      "name": "Warp",
+      "plan": "Build",
+      "aylik": 20,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.warp.dev/pricing"
+    },
+    {
+      "slug": "warp",
+      "name": "Warp",
+      "plan": "Business",
+      "aylik": 50,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.warp.dev/pricing"
+    },
+    {
+      "slug": "warp",
+      "name": "Warp",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.warp.dev/pricing"
+    },
+    {
+      "slug": "warp",
+      "name": "Warp",
+      "plan": "Max",
+      "aylik": 200,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.warp.dev/pricing"
+    },
+    {
+      "slug": "wave",
+      "name": "Wave",
+      "plan": "Advisors",
+      "aylik": 149,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.waveapps.com/pricing"
+    },
+    {
+      "slug": "wave",
+      "name": "Wave",
+      "plan": "Payroll",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.waveapps.com/pricing"
+    },
+    {
+      "slug": "wave",
+      "name": "Wave",
+      "plan": "Pro",
+      "aylik": 19,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.waveapps.com/pricing"
+    },
+    {
+      "slug": "webflow",
+      "name": "Webflow",
+      "plan": "Basic site plan",
+      "aylik": 15,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://webflow.com/pricing"
+    },
+    {
+      "slug": "whereby",
+      "name": "Whereby",
+      "plan": "Business",
+      "aylik": 13.99,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://whereby.com/information/meetings/pricing"
+    },
+    {
+      "slug": "whereby",
+      "name": "Whereby",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://whereby.com/information/meetings/pricing"
+    },
+    {
+      "slug": "whereby",
+      "name": "Whereby",
+      "plan": "Pro",
+      "aylik": 10.99,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://whereby.com/information/meetings/pricing"
+    },
+    {
+      "slug": "wix",
+      "name": "Wix",
+      "plan": "Business",
+      "aylik": 39.77,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wix.com/plans"
+    },
+    {
+      "slug": "wix",
+      "name": "Wix",
+      "plan": "Business Elite",
+      "aylik": 159.77,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wix.com/plans"
+    },
+    {
+      "slug": "wix",
+      "name": "Wix",
+      "plan": "Core",
+      "aylik": 29.77,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wix.com/plans"
+    },
+    {
+      "slug": "wix",
+      "name": "Wix",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wix.com/plans"
+    },
+    {
+      "slug": "wix",
+      "name": "Wix",
+      "plan": "Light",
+      "aylik": 17.77,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wix.com/plans"
+    },
+    {
+      "slug": "workflowy",
+      "name": "Workflowy",
+      "plan": "Pro",
+      "aylik": 8.99,
+      "birim": "sabit",
+      "faturalama": "aylik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://workflowy.com/pricing/"
+    },
+    {
+      "slug": "wrike",
+      "name": "Wrike",
+      "plan": "Business",
+      "aylik": 25,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wrike.com/price/"
+    },
+    {
+      "slug": "wrike",
+      "name": "Wrike",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wrike.com/price/"
+    },
+    {
+      "slug": "wrike",
+      "name": "Wrike",
+      "plan": "Team",
+      "aylik": 10,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.wrike.com/price/"
+    },
+    {
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "plan": "Basic",
+      "aylik": 199,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://writesonic.com/pricing"
+    },
+    {
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "plan": "Growth",
+      "aylik": 399,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://writesonic.com/pricing"
+    },
+    {
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "plan": "Starter",
+      "aylik": 79,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://writesonic.com/pricing"
+    },
+    {
+      "slug": "xano",
+      "name": "Xano",
+      "plan": "Essential",
+      "aylik": 85,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.xano.com/pricing/"
+    },
+    {
+      "slug": "xano",
+      "name": "Xano",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.xano.com/pricing/"
+    },
+    {
+      "slug": "xano",
+      "name": "Xano",
+      "plan": "Pro",
+      "aylik": 224,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.xano.com/pricing/"
+    },
+    {
+      "slug": "xero",
+      "name": "Xero",
+      "plan": "Early",
+      "aylik": 25,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.xero.com/us/pricing-plans/"
+    },
+    {
+      "slug": "xero",
+      "name": "Xero",
+      "plan": "Established",
+      "aylik": 90,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.xero.com/us/pricing-plans/"
+    },
+    {
+      "slug": "xero",
+      "name": "Xero",
+      "plan": "Growing",
+      "aylik": 55,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.xero.com/us/pricing-plans/"
+    },
+    {
+      "slug": "zapier",
+      "name": "Zapier",
+      "plan": "Free",
+      "aylik": 0,
+      "birim": "sabit",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://zapier.com/pricing"
+    },
+    {
+      "slug": "zapier",
+      "name": "Zapier",
+      "plan": "Professional",
+      "aylik": 19.99,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://zapier.com/pricing"
+    },
+    {
+      "slug": "zapier",
+      "name": "Zapier",
+      "plan": "Team",
+      "aylik": 69,
+      "birim": "sabit",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://zapier.com/pricing"
+    },
+    {
+      "slug": "zendesk",
+      "name": "Zendesk",
+      "plan": "Contact Center",
+      "aylik": 83,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.zendesk.com/pricing/"
+    },
+    {
+      "slug": "zendesk",
+      "name": "Zendesk",
+      "plan": "Suite Professional",
+      "aylik": 115,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.zendesk.com/pricing/"
+    },
+    {
+      "slug": "zendesk",
+      "name": "Zendesk",
+      "plan": "Suite Team",
+      "aylik": 55,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.zendesk.com/pricing/"
+    },
+    {
+      "slug": "zendesk",
+      "name": "Zendesk",
+      "plan": "Workforce Engagement",
+      "aylik": 50,
+      "birim": "kisi-basina",
+      "faturalama": null,
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://www.zendesk.com/pricing/"
+    },
+    {
+      "slug": "zulip",
+      "name": "Zulip",
+      "plan": "Self-hosted Business",
+      "aylik": 6.67,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://zulip.com/plans/"
+    },
+    {
+      "slug": "zulip",
+      "name": "Zulip",
+      "plan": "Zulip Cloud Standard",
+      "aylik": 6.67,
+      "birim": "kisi-basina",
+      "faturalama": "yillik",
+      "checkedAt": "2026-09-16",
+      "sourceUrl": "https://zulip.com/plans/"
+    }
+  ],
+  "changes": []
+}

@@ -23,7 +23,8 @@
     "check:plan": "node scripts/check-plan-basePrice.mjs",
     "plan:merdiven": "node scripts/plan-merdiveni.mjs",
     "rozet:hedef": "node --experimental-strip-types --no-warnings scripts/rozet-hedefleri.ts",
-    "veri:paket": "node scripts/veri-paketi.mjs"
+    "veri:paket": "node scripts/veri-paketi.mjs",
+    "fiyat:gecmis": "node --experimental-strip-types --no-warnings scripts/fiyat-gecmisi.ts"
   },
   "dependencies": {
     "dotenv": "^17.4.2",

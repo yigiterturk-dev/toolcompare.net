@@ -24,6 +24,8 @@ import { affiliateAktifMi } from "@/lib/affiliate";
 
 const LINKLER = [
   { href: "/tools", label: "All tools" },
+  { href: "/stack", label: "Stack cost calculator" },
+  { href: "/price-changes", label: "Price changes" },
   { href: "/categories", label: "Categories" },
   { href: "/top-picks", label: "Cheapest tools" },
   { href: "/compare", label: "Comparisons" },
