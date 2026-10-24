@@ -26,7 +26,14 @@ import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
 import { paylasimMeta } from "@/lib/paylasim";
 import { aracIndekslenir } from "@/lib/indeks";
 import { aracTaranmayaDeger } from "@/lib/tarama";
+import { serializeStack, stackAraclari, stackTotals } from "@/lib/stack";
 import rehberler from "@/data/kategori-rehberleri.json" with { type: "json" };
+const paraBicim = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 2,
+});
+
 export function generateStaticParams() {
   return kategoriler().map((k) => ({ slug: k.slug }));
 }
@@ -69,6 +76,16 @@ export default async function CategoryPage({ params }: SayfaParametresi) {
   // dogrulanmamis 0'lar en basa gecip "cheapest is AWS at $0/mo" gibi
   // yanlis cumleler uretiyordu.
   const enUcuz = enUcuzArac(kategori.araclar);
+  const stackTools = stackAraclari(kategori.araclar);
+  const adaylar = stackTools.flatMap((tool) => {
+    const plan = tool.plans.find((entry) => entry.aylik > 0);
+    return plan ? [{ tool, plan }] : [];
+  });
+  adaylar.sort((a, b) => a.plan.aylik - b.plan.aylik || a.tool.name.localeCompare(b.tool.name, "en"));
+  const secili = adaylar.slice(0, 3);
+  const stackItems = secili.map(({ tool, plan }) => ({ slug: tool.slug, plan: plan.ad, seats: 5 }));
+  const stackToplam = stackTotals(stackTools, stackItems);
+  const stackUrl = stackItems.length >= 2 ? `/stack?s=${serializeStack(stackItems)}` : null;
 
   // Kategori icindeki en guclu iki arac: dogal "X vs Y" merakini karsilar.
   // Bu kategorideki araclar arasindaki GERCEKTEN VAR OLAN karsilastirma
@@ -118,6 +135,40 @@ export default async function CategoryPage({ params }: SayfaParametresi) {
             </>
           ) : null}
         </p>
+
+        {/* Fiyat kapisi (2026-10-24): kategori sayfalari "en ucuz uc arac"
+            bilgisini tek tek veriyordu ama ekip maliyetini vermiyordu. Bu
+            kutu, dogrulanmis en dusuk ucretli uc baslangici 5 koltuk icin
+            toplar; iddia "en iyi stack" degil, yalnizca aritmetik. */}
+        {stackUrl && stackToplam.monthly > 0 && (
+          <section className="mt-10 rounded-[--radius-card] border border-line bg-surface p-5">
+            <p className="text-xs font-medium tracking-wide text-ink-muted uppercase">
+              Cheapest verified trio · 5 seats
+            </p>
+            <h2 className="mt-1 font-serif text-xl font-semibold">{kategori.ad} at team size</h2>
+            <p className="mt-2 max-w-2xl text-sm text-ink-soft">
+              Not a recommendation: the three lowest verified paid starting prices in this category,
+              added up for a five-person team. Flat plans are not multiplied by seats.
+            </p>
+            <ul className="mt-3 list-none divide-y divide-line border-y border-line p-0">
+              {stackToplam.lines.map((line) => (
+                <li key={line.slug} className="flex flex-wrap items-baseline justify-between gap-3 py-2">
+                  <span className="text-sm font-medium text-ink">
+                    {line.name} <span className="font-normal text-ink-soft">/ {line.plan}</span>
+                  </span>
+                  <span className="text-sm tabular-nums">{paraBicim.format(line.monthly)}/mo</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 text-sm text-ink-soft">
+              Total <strong className="font-medium text-ink">{paraBicim.format(stackToplam.monthly)}/mo</strong>{" "}
+              ({paraBicim.format(stackToplam.annual)}/yr) ·{" "}
+              <Link href={stackUrl} className="text-accent underline underline-offset-4">
+                Open this stack in the calculator →
+              </Link>
+            </p>
+          </section>
+        )}
 
         {/* Kategoriye ozgu secim rehberi (2026-09-21): her kategori kendi
             fiyattuzagiyla yazilir, sablon kopyalanmaz. Veri
