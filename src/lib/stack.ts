@@ -6,11 +6,21 @@ export const MAX_SEATS = 2000;
 
 export type StackPlan = Pick<Plan, "ad" | "aylik" | "birim" | "faturalama" | "kontrolTarihi">;
 
+export type StackAlternative = {
+  slug: string;
+  name: string;
+  plan: string;
+  aylik: number;
+  birim: Plan["birim"];
+};
+
 export type StackTool = {
   slug: string;
   name: string;
   category: string;
   plans: StackPlan[];
+  /** Ayni isi goren, indekslenebilir ve daha ucuz bir arac (sunucuda hesaplanir). */
+  alternatives?: StackAlternative[];
 };
 
 export type StackItem = {

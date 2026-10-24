@@ -12,6 +12,7 @@ import {
   stackCsv,
   stackPlanLabel,
   stackTotals,
+  type StackAlternative,
   type StackItem,
   type StackTool,
 } from "@/lib/stack";
@@ -100,6 +101,20 @@ export default function StackCalculator({ tools }: { tools: StackTool[] }) {
 
   function removeItem(slug: string) {
     setItems((current) => current.filter((item) => item.slug !== slug));
+  }
+
+  function switchTo(currentSlug: string, alternative: StackAlternative) {
+    setItems((current) =>
+      current.map((item) =>
+        item.slug === currentSlug
+          ? {
+              slug: alternative.slug,
+              plan: alternative.plan,
+              seats: alternative.birim === "kisi-basina" ? clampSeats(item.seats) : 1,
+            }
+          : item,
+      ),
+    );
   }
 
   function downloadCsv() {
@@ -197,6 +212,17 @@ export default function StackCalculator({ tools }: { tools: StackTool[] }) {
               const item = items.find((entry) => entry.slug === line.slug);
               if (!tool || !item) return null;
               const checked = checkedLabel(line.checkedAt);
+              const alternative = (tool.alternatives ?? []).find((entry) => {
+                if (selected.has(entry.slug)) return false;
+                const monthly =
+                  entry.birim === "kisi-basina" ? entry.aylik * clampSeats(line.seats) : entry.aylik;
+                return monthly < line.monthly;
+              });
+              const alternativeMonthly = alternative
+                ? alternative.birim === "kisi-basina"
+                  ? Math.round(alternative.aylik * clampSeats(item.seats) * 100) / 100
+                  : alternative.aylik
+                : null;
               return (
                 <li
                   key={line.slug}
@@ -261,6 +287,20 @@ export default function StackCalculator({ tools }: { tools: StackTool[] }) {
                       <p className="text-xs text-ink-muted tabular-nums">{money.format(line.annual)}/yr</p>
                     </div>
                   </div>
+
+                  {alternative && alternativeMonthly !== null && (
+                    <p className="mt-3 border-t border-line pt-2 text-xs text-ink-muted">
+                      Cheaper same-job option:{" "}
+                      <button
+                        type="button"
+                        onClick={() => switchTo(line.slug, alternative)}
+                        className="font-medium text-ink underline underline-offset-4 hover:text-accent"
+                      >
+                        {alternative.name} — {money.format(alternativeMonthly)}/mo
+                      </button>{" "}
+                      <span>(switch)</span>
+                    </p>
+                  )}
                 </li>
               );
             })}

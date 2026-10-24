@@ -6,6 +6,7 @@ import StackCalculator from "@/components/StackCalculator";
 import toolsData from "@/data/tools.json";
 import type { Arac } from "@/lib/arac";
 import { stackAraclari } from "@/lib/stack";
+import { stackAlternatifleri } from "@/lib/stack-alternatives";
 import { kirintiSemasi } from "@/lib/yapilandirilmis";
 
 export const metadata: Metadata = {
@@ -47,7 +48,11 @@ const ADIMLAR = [
 ];
 
 export default function StackPage() {
-  const tools = stackAraclari(toolsData as Arac[]);
+  const alternatifler = stackAlternatifleri(toolsData as Arac[]);
+  const tools = stackAraclari(toolsData as Arac[]).map((tool) => ({
+    ...tool,
+    alternatives: alternatifler[tool.slug] ?? [],
+  }));
   const sema = kirintiSemasi([
     { ad: "Tools", yol: "/tools" },
     { ad: "Stack cost calculator", yol: "/stack" },
