@@ -36,6 +36,13 @@ export function merdivenVar(t: MerdivenliArac): boolean {
 }
 
 /** "$16/user/mo (annual)" gibi tek satirlik etiket. */
+/** Bir planin N koltuk icin aylik tutari; sabit plan koltukla carpilmaz. */
+export function koltukMaliyeti(p: Plan | null | undefined, seats: number): number | null {
+  if (!p) return null;
+  const count = p.birim === "kisi-basina" ? Math.max(1, Math.trunc(seats)) : 1;
+  return Math.round(p.aylik * count * 100) / 100;
+}
+
 export function planEtiketi(p: Plan): string {
   const tutar = p.aylik === 0 ? "$0" : `$${p.aylik.toLocaleString("en-US")}`;
   const birim = p.birim === "kisi-basina" ? "/user/mo" : "/mo";

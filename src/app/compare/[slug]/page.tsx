@@ -11,7 +11,7 @@ import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ay
 import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { karsilastirmaSss } from "@/lib/sss";
 import { elleYazilmisSorular, elleYazilmisKisaCevap } from "@/lib/karsilastirma-notlari";
-import { merdiven, planEtiketi } from "@/lib/plan";
+import { ilkUcretliBasamak, koltukMaliyeti, merdiven, planEtiketi } from "@/lib/plan";
 import { linklenebilirAkranlar, aracTaranmayaDeger } from "@/lib/tarama";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { ciftMetaAciklamasi } from "@/lib/meta";
@@ -26,6 +26,12 @@ import type { Metadata } from "next";
 
 import { paylasimMeta } from "@/lib/paylasim";
 import { aracIndekslenir } from "@/lib/indeks";
+
+const paraBicim = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 2,
+});
 /**
  * Karsilastirma sayfalari build aninda uretilsin.
  *
@@ -178,6 +184,16 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
   // sayilardan turetiliyor.
   const f1 = fiyatDurumu(tool1);
   const f2 = fiyatDurumu(tool2);
+  const ucretli1 = ilkUcretliBasamak(tool1 as never);
+  const ucretli2 = ilkUcretliBasamak(tool2 as never);
+  const koltukSatirlari = [1, 5, 25]
+    .map((seats) => ({
+      seats,
+      a: koltukMaliyeti(ucretli1, seats),
+      b: koltukMaliyeti(ucretli2, seats),
+    }))
+    .filter((row) => row.a !== null || row.b !== null);
+  const yillikFaturali = [ucretli1, ucretli2].some((plan) => plan?.faturalama === "yillik");
   const e1 = toolEvidence(tool1);
   const e2 = toolEvidence(tool2);
   // Fiyat kiyasi ancak IKI TARAF DA dogrulanmissa yapilir.
@@ -741,6 +757,58 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
                 );
               })}
             </div>
+          </section>
+        )}
+
+        {/*
+          TAKIM BOYUTU MALIYETI (2026-10-24). Plan tablosu birim fiyati
+          gosteriyor; "5 kisilik ekipte hangisi ucuz" sorusunun cevabi
+          koltukla carpilmadan gorunmuyor. Yalnizca dogrulanmis EN UCUZ
+          ucretli basamak kullanilir; sabit plan koltukla carpilmaz.
+        */}
+        {koltukSatirlari.length > 0 && (
+          <section className="mt-12 border-t border-line pt-10">
+            <h2 className="text-lg font-semibold">Cost at team size</h2>
+            <p className="mt-2 text-sm text-ink-soft">
+              Each tool&apos;s cheapest paid plan, multiplied by seats. Flat plans do not scale with
+              headcount; per-seat plans do. No plan means no row.
+            </p>
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full min-w-[28rem] border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-line">
+                    <th scope="col" className="py-2 pr-4 text-xs font-semibold tracking-wide text-ink-muted uppercase">Team size</th>
+                    <th scope="col" className="py-2 pr-4 text-xs font-semibold tracking-wide text-ink-muted uppercase">{tool1.name}</th>
+                    <th scope="col" className="py-2 pr-4 text-xs font-semibold tracking-wide text-ink-muted uppercase">{tool2.name}</th>
+                    <th scope="col" className="py-2 text-xs font-semibold tracking-wide text-ink-muted uppercase">Difference</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {koltukSatirlari.map((row) => {
+                    const diff = row.a !== null && row.b !== null ? Math.round((row.b - row.a) * 100) / 100 : null;
+                    return (
+                      <tr key={row.seats} className="border-b border-line/60">
+                        <th scope="row" className="py-2.5 pr-4 font-medium">{row.seats} seats</th>
+                        <td className="py-2.5 pr-4 tabular-nums">{row.a === null ? "—" : paraBicim.format(row.a)}</td>
+                        <td className="py-2.5 pr-4 tabular-nums">{row.b === null ? "—" : paraBicim.format(row.b)}</td>
+                        <td className="py-2.5 text-ink-soft tabular-nums">
+                          {diff === null
+                            ? "—"
+                            : diff === 0
+                              ? "Same"
+                              : `${paraBicim.format(Math.abs(diff))} cheaper: ${diff < 0 ? tool2.name : tool1.name}`}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            {yillikFaturali && (
+              <p className="mt-2 text-xs text-ink-muted">
+                Monthly equivalent for plans billed annually; the vendor charges the yearly amount up front.
+              </p>
+            )}
           </section>
         )}
 

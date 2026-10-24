@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { merdiven, planEtiketi, ilkUcretliBasamak, merdivenCumlesi, type Plan } from "../src/lib/plan.ts";
+import { merdiven, planEtiketi, ilkUcretliBasamak, koltukMaliyeti, merdivenCumlesi, type Plan } from "../src/lib/plan.ts";
 import toolsData from "../src/data/tools.json" with { type: "json" };
 
 /*
@@ -108,4 +108,13 @@ test("planEtiketi birimi ve faturalamayi yazar", () => {
     planEtiketi({ ad: "Free", aylik: 0, birim: "sabit", faturalama: null, kaynakSatiri: "", kaynakUrl: null }),
     "$0/mo"
   );
+});
+
+test("koltuk maliyeti kisi basina plani carpar, sabit plani carpmez", () => {
+  const kisi = { ad: "Pro", aylik: 10, birim: "kisi-basina", faturalama: null, kaynakSatiri: "", kaynakUrl: null } satisfies Plan;
+  const sabit = { ad: "Team", aylik: 49, birim: "sabit", faturalama: null, kaynakSatiri: "", kaynakUrl: null } satisfies Plan;
+  assert.equal(koltukMaliyeti(kisi, 5), 50);
+  assert.equal(koltukMaliyeti(sabit, 25), 49);
+  assert.equal(koltukMaliyeti(kisi, 0), 10);
+  assert.equal(koltukMaliyeti(null, 5), null);
 });
