@@ -2,6 +2,7 @@
 # Daily backup of the pieces that git does not own: price history, subscribers,
 # local env, Caddyfile and the deploy units.
 set -euo pipefail
+umask 077
 
 APP_DIR="${APP_DIR:-/opt/toolcompare.net}"
 DATA_DIR="${DATA_DIR:-/opt/toolcompare-data}"
@@ -19,6 +20,7 @@ items=("$DATA_DIR")
 
 ARCHIVE="$BACKUP_DIR/toolcompare-$STAMP.tar.gz"
 tar -czf "$ARCHIVE" --absolute-names "${items[@]}"
+chmod 600 "$ARCHIVE"
 find "$BACKUP_DIR" -type f -name 'toolcompare-*.tar.gz' -mtime +14 -delete
 
 # Offsite: ayni hesaptaki hetzner sunucusu. Ulasilamazsa yerel yedek kalir.

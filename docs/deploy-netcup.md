@@ -90,6 +90,15 @@ Restore example:
 tar -xzf /opt/toolcompare-backups/toolcompare-YYYY-MM-DD-HHMM.tar.gz -C /
 ```
 
+## Uptime monitoring
+
+- Jarvis on netcup watches `https://toolcompare.net` (10 min interval) and can
+  restart the `toolcompare` unit; alerts go through its Telegram/mail setup.
+- The hetzner host runs `toolcompare-uptime.timer` every 5 minutes against
+  `https://toolcompare.net/stack`. After three consecutive failures it sends a
+  Telegram alert and sends a recovery message when the site returns.
+- Telegram credentials live in `/etc/toolcompare-alert.env` on hetzner (0600).
+
 ## Environment
 
 No `.env.production` is present on the server. Public pages and `/api/tools`
