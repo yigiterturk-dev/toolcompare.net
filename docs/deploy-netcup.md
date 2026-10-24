@@ -74,7 +74,10 @@ Do not delete that directory unless you intentionally want to reset the log.
 
 `toolcompare-backup.timer` writes a daily tar of `/opt/toolcompare-data`
 (price history), `subscribers.json`, an optional `.env.production`, the Caddyfile
-and the deploy units to `/opt/toolcompare-backups/`, keeping 14 days.
+and the deploy units to `/opt/toolcompare-backups/`, keeping 14 days. It also
+copies the archive to the hetzner host (`root@89.167.52.36`) under
+`/opt/toolcompare-backups/`, keeping 30 days there. If the offsite host is
+unreachable the local archive is kept and the failure is logged.
 
 ```bash
 systemctl status toolcompare-backup.timer

@@ -17,6 +17,23 @@ items=("$DATA_DIR")
 [ -f /etc/systemd/system/toolcompare-autodeploy.service ] && items+=(/etc/systemd/system/toolcompare-autodeploy.service)
 [ -f /etc/systemd/system/toolcompare-autodeploy.timer ] && items+=(/etc/systemd/system/toolcompare-autodeploy.timer)
 
-tar -czf "$BACKUP_DIR/toolcompare-$STAMP.tar.gz" --absolute-names "${items[@]}"
+ARCHIVE="$BACKUP_DIR/toolcompare-$STAMP.tar.gz"
+tar -czf "$ARCHIVE" --absolute-names "${items[@]}"
 find "$BACKUP_DIR" -type f -name 'toolcompare-*.tar.gz' -mtime +14 -delete
-echo "backup: $BACKUP_DIR/toolcompare-$STAMP.tar.gz"
+
+# Offsite: ayni hesaptaki hetzner sunucusu. Ulasilamazsa yerel yedek kalir.
+OFFSITE_HOST="${OFFSITE_HOST:-root@89.167.52.36}"
+OFFSITE_DIR="${OFFSITE_DIR:-/opt/toolcompare-backups}"
+OFFSITE_KEY="${OFFSITE_KEY:-/root/.ssh/hetzner_tun}"
+SSH_CMD="ssh -i $OFFSITE_KEY -o BatchMode=yes -o ConnectTimeout=8 -o StrictHostKeyChecking=accept-new"
+if $SSH_CMD "$OFFSITE_HOST" "mkdir -p '$OFFSITE_DIR'" >/dev/null 2>&1; then
+  if rsync -az -e "$SSH_CMD" "$ARCHIVE" "$OFFSITE_HOST:$OFFSITE_DIR/"; then
+    $SSH_CMD "$OFFSITE_HOST" "find '$OFFSITE_DIR' -type f -name 'toolcompare-*.tar.gz' -mtime +30 -delete" >/dev/null 2>&1 || true
+    echo "offsite: $OFFSITE_HOST:$OFFSITE_DIR/$(basename "$ARCHIVE")"
+  else
+    echo "offsite copy failed; local backup kept: $ARCHIVE"
+  fi
+else
+  echo "offsite host unreachable; local backup kept: $ARCHIVE"
+fi
+echo "backup: $ARCHIVE"

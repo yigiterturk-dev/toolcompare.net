@@ -8,6 +8,7 @@ import { aracIndekslenir, alternatifIndekslenir } from '@/lib/indeks'
 import { aracTarihi, turetilmisTarih, tarihNesnesi, enYeni, TABAN_TARIH } from '@/lib/degisiklik'
 import { entegrasyonKaydi } from '@/lib/entegrasyon'
 import { karsilastirmaTarihi } from '@/lib/karsilastirma-notlari'
+import { fiyatGecmisi } from '@/lib/fiyat-gecmisi'
 import fs from 'fs';
 import path from 'path';
 
@@ -85,7 +86,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/submit',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: tarihNesnesi(TABAN_TARIH),
+    /* Fiyat kaydi her deploy'da degil, son gercek snapshot tarihinde degisir. */
+    lastModified:
+      route === '/price-changes'
+        ? tarihNesnesi(fiyatGecmisi().sonKontrol || TABAN_TARIH)
+        : tarihNesnesi(TABAN_TARIH),
     changeFrequency: 'daily' as const,
     priority: 1,
   }))
