@@ -18,8 +18,23 @@ ssh netcup
 /opt/toolcompare.net/scripts/deploy-netcup.sh
 ```
 
-The script pulls `main`, runs `npm ci`, builds, and restarts the unit. A build
-takes a few minutes; requests during the build may fail until the restart.
+The script pulls `main`, refreshes the price snapshot, runs `npm ci`, builds,
+and restarts the unit. A build takes a few minutes; requests during the build
+may fail until the restart.
+
+## Auto-deploy without GitHub Actions
+
+GitHub Actions is disabled on this repository. `toolcompare-autodeploy.timer`
+checks `origin/main` every 10 minutes and runs the deploy script only when the
+commit changed. The price snapshot is kept on the server at
+`/opt/toolcompare-data/fiyat-gecmisi.json` (daily archives in `arsiv/`), so it
+survives `git reset --hard` and does not depend on Actions.
+
+```bash
+systemctl status toolcompare-autodeploy.timer
+systemctl start toolcompare-autodeploy.service   # deploy now
+journalctl -u toolcompare-autodeploy.service -n 50
+```
 
 ## Reverse proxy block
 
@@ -47,6 +62,13 @@ Reload after editing: `docker exec legafetch-caddy caddy reload --config /etc/ca
 Hostinger DNS: `@ A` and `@ AAAA` point to netcup; `www` is a CNAME to the apex.
 DNS is managed through the Hostinger API token in `~/.config/nocturn/hostinger.env`
 (on the workstation).
+
+## Price history storage
+
+`src/data/fiyat-gecmisi.json` in git is only a baseline. The live history is
+`/opt/toolcompare-data/fiyat-gecmisi.json`; the deploy script restores it before
+running `npm run fiyat:gecmis`, then copies the result back and archives it.
+Do not delete that directory unless you intentionally want to reset the log.
 
 ## Environment
 
