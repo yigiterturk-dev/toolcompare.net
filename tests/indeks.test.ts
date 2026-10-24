@@ -5,11 +5,12 @@ import {
   icerikDerin,
   alternatifIndekslenir,
   ciftIndekslenir,
+  fiyatiDogrulanmis,
   gercekFarkVar,
 } from "../src/lib/indeks.ts";
 
 const tam = (over: Record<string, unknown> = {}) => ({
-  slug: "a",
+  slug: "redis",
   name: "A",
   incelendi: true,
   verdict: "iyi",
@@ -29,35 +30,35 @@ test("incelenmemis arac sayfasi indekslenmez", () => {
 });
 
 test("ince icerikli arac sayfasi indekslenmez (GSC: crawled, not indexed)", () => {
-  assert.equal(aracIndekslenir(tam({ longDescription: "x".repeat(299) }) as never), false);
-  assert.equal(aracIndekslenir(tam({ keyFeatures: ["a", "b"] }) as never), false);
-  assert.equal(aracIndekslenir(tam({ keyFeatures: undefined }) as never), false);
+  assert.equal(aracIndekslenir(tam({ slug: "anytype", longDescription: "x".repeat(299) }) as never), false);
+  assert.equal(aracIndekslenir(tam({ slug: "anytype", keyFeatures: ["a", "b"] }) as never), false);
+  assert.equal(aracIndekslenir(tam({ slug: "anytype", keyFeatures: undefined }) as never), false);
 });
 
 test("alternatif sayfasi fiyat kaniti olmadan indekslenmez", () => {
-  assert.equal(alternatifIndekslenir(tam() as never), true);
-  assert.equal(alternatifIndekslenir(tam({ evidence: { status: "unverified" } }) as never), false);
+  assert.equal(alternatifIndekslenir(tam({ slug: "docker" }) as never), true);
+  assert.equal(fiyatiDogrulanmis(tam({ evidence: { status: "unverified" } }) as never), false);
 });
 
-// Cift testlerinde GERCEK slug kullaniliyor: ciftIndekslenir artik islev
-// kapisini de uyguluyor (src/lib/islev.ts) ve uydurma slug'in islevi yok.
-// redis + mongodb ikisi de "database".
+// Cift testlerinde GERCEK slug kullaniliyor: ciftIndekslenir islev kapisini da
+// uyguluyor (src/lib/islev.ts) ve cekirdek talep verisi sinyali eziyor.
+// buzzsumo + clearscope: ayni islev, cekirdekte, yol talebi yok.
 test("karsilastirmada tek tarafin kaniti yetmez", () => {
-  const a = tam({ slug: "redis" });
-  const b = tam({ slug: "mongodb", basePrice: 20, evidence: { status: "unverified" } });
+  const a = tam({ slug: "buzzsumo" });
+  const b = tam({ slug: "clearscope", basePrice: 20, evidence: { status: "unverified" } });
   assert.equal(ciftIndekslenir(a as never, b as never), false);
 });
 
 test("farki olmayan cift indekslenmez", () => {
-  const a = tam({ slug: "redis" });
-  const b = tam({ slug: "mongodb" }); // ayni fiyat, ayni kriterler
+  const a = tam({ slug: "buzzsumo" });
+  const b = tam({ slug: "clearscope" }); // ayni fiyat, ayni kriterler
   assert.equal(gercekFarkVar(a as never, b as never), false);
   assert.equal(ciftIndekslenir(a as never, b as never), false);
 });
 
 test("fiyati ayni ama ozelligi farkli cift indekslenir", () => {
-  const a = tam({ slug: "redis" });
-  const b = tam({ slug: "mongodb", kriterler: { api: true, sso: true } });
+  const a = tam({ slug: "buzzsumo" });
+  const b = tam({ slug: "clearscope", kriterler: { api: true, sso: true } });
   assert.equal(ciftIndekslenir(a as never, b as never), true);
 });
 
@@ -71,20 +72,16 @@ test("farkli islevden cift, kaniti tam olsa bile indekslenmez", () => {
 
 test("elle kuratorlu vendor-sourced kayit fiyat kaniti sayilir", () => {
   const vendor = (sources: unknown[]) =>
-    tam({ evidence: { status: "vendor-sourced", sources } });
+    tam({ slug: "docker", evidence: { status: "vendor-sourced", sources } });
 
   // Kaynak fiyati destekliyor -> gecer.
   assert.equal(
-    alternatifIndekslenir(
-      vendor([{ label: "OpenAI - Plus", supports: ["$20 monthly Plus price"] }]) as never,
-    ),
+    fiyatiDogrulanmis(vendor([{ label: "OpenAI - Plus", supports: ["$20 monthly Plus price"] }]) as never),
     true,
   );
   // Somut iddia (ucretsiz plan) -> gecer.
   assert.equal(
-    alternatifIndekslenir(
-      vendor([{ label: "Slack - Plans", supports: ["free plan with 90-day history"] }]) as never,
-    ),
+    fiyatiDogrulanmis(vendor([{ label: "Slack - Plans", supports: ["free plan with 90-day history"] }]) as never),
     true,
   );
 
@@ -94,37 +91,29 @@ test("elle kuratorlu vendor-sourced kayit fiyat kaniti sayilir", () => {
      rakam yoksa fiyat iddia edilemez. 42 otomatik kayit bu bosluktan
      geciyordu (bkz. lib/indeks.ts FIYAT_IDDIASI). */
   assert.equal(
-    alternatifIndekslenir(
-      vendor([{ label: "Slack - Pricing", supports: ["plan limits"] }]) as never,
-    ),
+    fiyatiDogrulanmis(vendor([{ label: "Slack - Pricing", supports: ["plan limits"] }]) as never),
     false,
   );
 
   // Kaynak yalnizca dokumantasyon -> fiyat iddia edilemez, elenir.
   assert.equal(
-    alternatifIndekslenir(
-      vendor([{ label: "Selenium - WebDriver", supports: ["browser automation"] }]) as never,
-    ),
+    fiyatiDogrulanmis(vendor([{ label: "Selenium - WebDriver", supports: ["browser automation"] }]) as never),
     false,
   );
-  assert.equal(alternatifIndekslenir(vendor([]) as never), false);
+  assert.equal(fiyatiDogrulanmis(vendor([]) as never), false);
 
   /* OTOMATIK TARAMA KANIT DEGIL (2026-09-10). 42 kayitta supports tam olarak
      buydu: "the vendor's published pricing" -- fiyat sayfasinin ULASILABILIR
      oldugunu soyluyor, fiyat hakkinda hicbir sey soylemiyor. Bu satir kapidan
      gecerse site "fiyati dogrulanmis" iddiasini bos yere tasir. */
   assert.equal(
-    alternatifIndekslenir(
-      vendor([{ label: "Zoom — Pricing", supports: ["the vendor's published pricing"] }]) as never,
-    ),
+    fiyatiDogrulanmis(vendor([{ label: "Zoom — Pricing", supports: ["the vendor's published pricing"] }]) as never),
     false,
   );
 
   /* Para birimi OLMADAN somut kanit gecer: elle okunmus plan tablosu. */
   assert.equal(
-    alternatifIndekslenir(
-      vendor([{ label: "Craft — Plans", supports: ["Free: 1,500 blocks, 1 GB storage"] }]) as never,
-    ),
+    fiyatiDogrulanmis(vendor([{ label: "Craft — Plans", supports: ["Free: 1,500 blocks, 1 GB storage"] }]) as never),
     true,
   );
 });
@@ -149,8 +138,8 @@ test("bakilmamis kriter (null) fark sayilmaz, dolu da saymaz", () => {
   // Yalnizca null iceren kume kriterli sayilmaz.
   assert.equal(
     ciftIndekslenir(
-      tam({ kriterler: { api: null, sso: null } }) as never,
-      tam() as never,
+      tam({ slug: "buzzsumo", kriterler: { api: null, sso: null } }) as never,
+      tam({ slug: "clearscope" }) as never,
     ),
     false,
   );
@@ -181,6 +170,8 @@ test("talep görmemek tek başına sayfayı elemez", () => {
     longDescription: "x".repeat(320),
     keyFeatures: [{ title: "a" }, { title: "b" }, { title: "c" }],
   };
+  /* Test kosusu CEKIRDEK_KAPALI=1 ile calisir: cekirdek kapisi aciktir.
+     Cekirdek kapisinin gercek davranisi tests/canli/cekirdek.test.ts'te. */
   assert.equal(aracIndekslenir(derin as never), true);
 });
 

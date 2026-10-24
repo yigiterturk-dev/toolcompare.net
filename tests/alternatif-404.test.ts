@@ -90,7 +90,7 @@ test("baslik az akranda sayi basmiyor", () => {
  * Cogu kullanima-gore fiyatlanan arac: onlarda "baslangic fiyati" zaten yok.
  */
 test("kendi fiyati dogrulanmayan arac, fiyatli alternatifleri varsa aciliyor", () => {
-  for (const slug of ["gorgias", "ionos", "azure"]) {
+  for (const slug of ["gorgias", "ionos", "greenhouse"]) {
     const t = araclar.find((x) => x.slug === slug);
     assert.ok(t, `${slug} katalogda yok`);
     assert.equal(alternatifIndekslenir(t), true,

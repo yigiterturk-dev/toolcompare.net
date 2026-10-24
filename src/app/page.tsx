@@ -2,6 +2,7 @@ import Link from "next/link";
 import ToolGridClient, { type IzgaraArac } from "@/components/ToolGridClient";
 import { getTools } from "@/lib/tools";
 import { izgaraKaydi } from "@/lib/izgara";
+import { aracIndekslenir } from "@/lib/indeks";
 
 
 export const metadata = {
@@ -41,7 +42,15 @@ export default async function Home() {
     calistirsin diye (bkz. o dosyanin basligi). Burada tutuldugunda betik
     kirpmayi taklit etmek zorunda kaliyor ve turetilmis alanlari goremiyordu.
   */
-  const tools: IzgaraArac[] = tumArac.map(
+  /*
+    LINK KAPISI (2026-10-23): anasayfa 518 aracin tamamina link veriyordu.
+    Cekirdek disi ve talep almamis sayfalar noindex oldugu icin bu, indekslenebilir
+    bir sayfadan noindex sayfaya 300+ ic link demekti (ic-link-sizintisi testi).
+    Kural ayni: SITEMAP'TE OL ANI LINKLE. /tools dizini bunu zaten yapiyordu,
+    anasayfa yapmiyordu.
+  */
+  const indeksli = tumArac.filter((t) => aracIndekslenir(t));
+  const tools: IzgaraArac[] = indeksli.map(
     (t: Record<string, unknown>) => izgaraKaydi(t) as unknown as IzgaraArac,
   );
 

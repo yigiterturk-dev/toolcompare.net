@@ -185,9 +185,12 @@ export function icerikDerin(t?: Arac): boolean {
  */
 export function aracIndekslenir(t?: Arac): boolean {
   if (!incelenmis(t)) return false;
-  // Site duzeyi dususten sonra yalnizca Google'in tuttugu cekirdek (bkz. cekirdek.ts).
-  if (!cekirdekte(`/tools/${t!.slug}`)) return false;
-  return icerikDerin(t) || talepGormus(t?.slug);
+  const talepli = talepGormus(t?.slug);
+  // Site duzeyi dususten sonra cekirdek disi sayfalar noindex'ti. Ama Google'in
+  // FIILEN gosterim verdigi sayfayi kendi elimizle gizlemek, talep.ts'in
+  // "talep sayfa elemez, yalnizca kurtarir" kuralinin tersi. Talep cekirdegi ezer.
+  if (!talepli && !cekirdekte(`/tools/${t!.slug}`)) return false;
+  return icerikDerin(t) || talepli;
 }
 
 /**
@@ -215,7 +218,9 @@ function fiyatliAkranSayisi(slug: string): number {
 
 export function alternatifIndekslenir(t?: Arac): boolean {
   if (!aracIndekslenir(t)) return false;
-  if (!cekirdekte(`/alternatives/${t!.slug}`)) return false;
+  // Ayni kural: kendi adresi gosterim aldiysa cekirdek disi olmasi onu gizlemez.
+  const talepli = yolTalepGormus(`/alternatives/${t!.slug}`);
+  if (!talepli && !cekirdekte(`/alternatives/${t!.slug}`)) return false;
   if (fiyatiDogrulanmis(t)) return true;
   /*
     KAPI YER DEGISTIRDI (olcum, 2026-09-12). Eski kural, ARACIN KENDI
@@ -253,7 +258,15 @@ export function alternatifIndekslenir(t?: Arac): boolean {
 /** Bu ciftin KENDI adresi Google'da gosterim almis mi. */
 function ciftTalebi(a: Arac, b: Arac): boolean {
   const kanonik = a.slug < b.slug ? `${a.slug}-vs-${b.slug}` : `${b.slug}-vs-${a.slug}`;
-  return yolTalepGormus(`/compare/${kanonik}`);
+  /* Iki kanit: sorgu bu yola dusmus olabilir (yol olcutu) ya da Google
+     ayni "A vs B" sorgusunu baska bir sayfaya servis etmis olabilir
+     (cift olcutu). Ikincisi cekirdek kapisindan ONCE uygulanmazsa
+     caddy-vs-jenkins gibi ciftler hep noindex kalir -- cunku sayfa
+     cekirdekte degil ama sorgu gercekten var. */
+  return (
+    yolTalepGormus(`/compare/${kanonik}`) ||
+    ciftVsSorgusuGormus([a.slug, a.name], [b.slug, b.name])
+  );
 }
 
 export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
@@ -263,7 +276,10 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
   // (ornegin /compare/redis-vs-sentry) gelen Googlebot noindex gormeli,
   // yoksa sitemap disina cikardigimiz sayfa indekste kalir.
   if (!a || !b) return false;
-  if (!cekirdekte(`/compare/${kanonikCift(a.slug, b.slug)}`)) return false;
+  const talepli = ciftTalebi(a, b);
+  // Cekirdek disi olmak tek basina noindex sebebi degil: bu cift Google'da
+  // gosterim aldiysa sayfa geri acilir. Talep cekirdegi ezer.
+  if (!talepli && !cekirdekte(`/compare/${kanonikCift(a.slug, b.slug)}`)) return false;
   /*
     FARKLI ISI GOREN CIFT (olcum, 2026-09-12). Islev kapisi bu ciftleri
     karsilastirma olarak dogru biçimde reddediyor -- ama talep oradaydi ve
@@ -332,7 +348,7 @@ export function ciftIndekslenir(a?: Arac, b?: Arac): boolean {
     Gosterim almis olmak olumlu kanittir. Islev kapisi mutlak kalir:
     anlamsiz cifti talep bile kurtarmaz.
   */
-  if (ciftTalebi(a, b)) return true;
+  if (talepli) return true;
   return (
     incelenmis(a) && incelenmis(b) &&
     fiyatiDogrulanmis(a) && fiyatiDogrulanmis(b) &&

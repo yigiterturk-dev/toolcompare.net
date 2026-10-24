@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { listeSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu } from "@/lib/fiyat";
+import { aracIndekslenir } from "@/lib/indeks";
 import { kumeIcindekiCiftler, alternatifSayfasiOlan } from "@/lib/compare";
 
 export const metadata = {
@@ -38,9 +39,15 @@ export const metadata = {
 const ADET = 10;
 
 export default function TopPicksPage() {
+  /*
+    LINK KAPISI (2026-10-23): "en ucuz" listesi indekslenmeyen araclara link
+    veriyordu (figma, elevenlabs). Fiyati dogrulanmis olmak tek basina yetmez;
+    hedef sayfa da indekslenebilir olmali -- ayni kural: SITEMAP'TE OLANI LINKLE.
+  */
   const olculebilir = (toolsData as Arac[])
     .map((t) => ({ arac: t, durum: fiyatDurumu(t) }))
-    .filter((x) => x.durum.karsilastirilabilir && x.durum.aylik !== null);
+    .filter((x) => x.durum.karsilastirilabilir && x.durum.aylik !== null)
+    .filter((x) => aracIndekslenir(x.arac));
 
   /*
     UCRETSIZLER AYRI SAYILIYOR. Ilk hal 10 satirin ONUNU "Free" olarak

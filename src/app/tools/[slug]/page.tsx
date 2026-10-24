@@ -176,7 +176,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const incelendi = Boolean(tool.incelendi ?? tool.verdict);
   // Metin icinde akranlardan bahsedilebilir; ama LINK verilen liste
   // yalnizca cift sayfasi indekslenebilenler (bkz. indekslenebilirAkranlar).
-  const karsilastirmalar = indekslenebilirAkranlar(tool.slug);
+  const karsilastirmalar = indekslenebilirAkranlar(tool.slug).filter((t) => aracIndekslenir(t));
   /*
     Sayfanin ALT kismindaki tam liste, ust kisimdaki "one cikan uc
     karsilastirma"dan farkli bir soruyu cevaplar: hangi karsilastirma

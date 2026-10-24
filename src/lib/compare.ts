@@ -170,11 +170,11 @@ export const alternatifler = akranlar;
  *     alan bir sayfa sitemap disinda kalmaz
  */
 const SECILMIS_CIFTLER: [string, string][] = [
-  ["chatgpt", "claude"],
   ["notion", "obsidian"],
-  ["semrush", "ahrefs"],
-  ["figma", "sketch"],
-  ["stripe", "paddle"],
+  ["bigcommerce", "shopify"],
+  ["bitbucket", "github"],
+  ["discord", "slack"],
+  ["claude", "gemini"],
 ];
 
 export function oneCikanCiftler(): { slug: string; label: string }[] {
