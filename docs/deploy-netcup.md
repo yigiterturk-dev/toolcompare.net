@@ -18,9 +18,9 @@ ssh netcup
 /opt/toolcompare.net/scripts/deploy-netcup.sh
 ```
 
-The script pulls `main`, refreshes the price snapshot, runs `npm ci`, builds,
-and restarts the unit. A build takes a few minutes; requests during the build
-may fail until the restart.
+The script pulls `main`, refreshes the price snapshot, runs `npm ci`, runs the
+test suite, builds, and restarts the unit. Tests run before the build: a code
+failure stops the deploy while the old process is still serving.
 
 ## Auto-deploy without GitHub Actions
 
@@ -69,6 +69,23 @@ DNS is managed through the Hostinger API token in `~/.config/nocturn/hostinger.e
 `/opt/toolcompare-data/fiyat-gecmisi.json`; the deploy script restores it before
 running `npm run fiyat:gecmis`, then copies the result back and archives it.
 Do not delete that directory unless you intentionally want to reset the log.
+
+## Backups
+
+`toolcompare-backup.timer` writes a daily tar of `/opt/toolcompare-data`
+(price history), `subscribers.json`, an optional `.env.production`, the Caddyfile
+and the deploy units to `/opt/toolcompare-backups/`, keeping 14 days.
+
+```bash
+systemctl status toolcompare-backup.timer
+systemctl start toolcompare-backup.service
+```
+
+Restore example:
+
+```bash
+tar -xzf /opt/toolcompare-backups/toolcompare-YYYY-MM-DD-HHMM.tar.gz -C /
+```
 
 ## Environment
 

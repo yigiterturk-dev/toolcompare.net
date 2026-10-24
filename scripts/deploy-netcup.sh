@@ -30,6 +30,8 @@ cp src/data/fiyat-gecmisi.json "$DATA_DIR/arsiv/fiyat-gecmisi-$(date +%F).json"
 find "$DATA_DIR/arsiv" -type f -name 'fiyat-gecmisi-*.json' -mtime +60 -delete
 
 npm ci --no-audit --no-fund
+# Testler build'den once: kod hatasi varsa canliya dokunmadan cik.
+npm test
 npm run build
 systemctl restart toolcompare
 systemctl --no-pager --lines=5 status toolcompare
