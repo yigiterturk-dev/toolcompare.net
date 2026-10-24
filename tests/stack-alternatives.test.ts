@@ -5,6 +5,7 @@ import type { Arac } from "../src/lib/arac.ts";
 import { aracIndekslenir } from "../src/lib/indeks.ts";
 import { islevi } from "../src/lib/islev.ts";
 import { stackAlternatifleri } from "../src/lib/stack-alternatives.ts";
+import { stackPlanlari } from "../src/lib/stack.ts";
 
 const ARACLAR = toolsData as Arac[];
 const HARITA = new Map(ARACLAR.map((tool) => [tool.slug, tool]));
@@ -17,7 +18,7 @@ test("alternatif onerileri ayni islevde, indeksli ve daha ucuz", () => {
   for (const slug of slugs) {
     const tool = HARITA.get(slug);
     assert.ok(tool, `${slug} katalogda yok`);
-    const own = [...(tool.planlar ?? [])]
+    const own = stackPlanlari(tool)
       .filter((plan) => plan.aylik > 0)
       .sort((a, b) => a.aylik - b.aylik)[0];
     assert.ok(own, `${slug}: ucretli plan yok`);
@@ -31,7 +32,7 @@ test("alternatif onerileri ayni islevde, indeksli ve daha ucuz", () => {
       assert.equal(aracIndekslenir(target), true, `${slug} -> ${alternative.slug}: noindex hedef`);
       assert.equal(alternative.birim, own.birim, `${slug} -> ${alternative.slug}: birim farkli`);
       assert.ok(alternative.aylik < own.aylik, `${slug} -> ${alternative.slug}: daha ucuz degil`);
-      const plan = (target.planlar ?? []).find((entry) => entry.ad === alternative.plan);
+      const plan = stackPlanlari(target).find((entry) => entry.ad === alternative.plan);
       assert.ok(plan, `${alternative.slug}: ${alternative.plan} plani yok`);
       assert.equal(plan.aylik, alternative.aylik);
     }

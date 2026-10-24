@@ -1,5 +1,6 @@
 import type { Arac } from "./arac.ts";
 import type { Plan } from "./plan.ts";
+import { fiyatDurumu } from "./fiyat.ts";
 
 export const MAX_STACK_ITEMS = 20;
 export const MAX_SEATS = 2000;
@@ -72,17 +73,51 @@ export function stackPlanLabel(plan: StackPlan): string {
   fiyat yayinlamiyoruz" sozunu bozardi. Plan varsa rakam da kaynak
   cumlesiyle birlikte geliyor (bkz. plan.ts).
 */
+export function stackPlanlari(tool: Arac): StackPlan[] {
+  const plans = new Map<string, StackPlan>();
+  for (const plan of tool.planlar ?? []) {
+    if (!plan.ad || !Number.isFinite(plan.aylik) || plan.aylik < 0) continue;
+    if (!plans.has(plan.ad)) plans.set(plan.ad, plan);
+  }
+  if (plans.size > 0) {
+    return [...plans.values()].sort((a, b) => a.aylik - b.aylik || a.ad.localeCompare(b.ad));
+  }
+
+  /*
+    PLAN MERDIVENI OLMAYAN ARAC (2026-10-24): 318 aracin plani yok ama
+    84'unun baslangic fiyati fiyat.ts tarafindan zaten dogrulanmis
+    (ChatGPT $20, Zoom $14, Claude $20...). Bunlari hesaplayicidan atmak,
+    dogrulanmis veriyi gizlemek olurdu. Tek basamakli "Starting price"
+    olarak eklenir; birim ve faturalama fiyat.ts'in kisa/metin ciktisindan
+    okunur, UYDURULMAZ. Plan merdiveni olan araclar bu yola girmez.
+  */
+  const durum = fiyatDurumu(tool);
+  if (!durum.karsilastirilabilir || durum.aylik === null) return [];
+  const birim: Plan["birim"] = durum.kisa.includes("/user/mo") ? "kisi-basina" : "sabit";
+  const faturalama: Plan["faturalama"] = durum.metin.includes("billed annually")
+    ? "yillik"
+    : durum.metin.includes("billed monthly")
+      ? "aylik"
+      : null;
+  return [
+    {
+      ad: durum.aylik === 0 ? "Free plan" : "Starting price",
+      aylik: durum.aylik,
+      birim,
+      faturalama,
+      kontrolTarihi: tool.fiyatKontrolTarihi || tool.evidence?.reviewedAt,
+    },
+  ];
+}
+
 export function stackAraclari(tools: readonly Arac[]): StackTool[] {
   return tools
-    .map((tool) => {
-      const plans = new Map<string, StackPlan>();
-      for (const plan of tool.planlar ?? []) {
-        if (!plan.ad || !Number.isFinite(plan.aylik) || plan.aylik < 0) continue;
-        if (!plans.has(plan.ad)) plans.set(plan.ad, plan);
-      }
-      const sorted = [...plans.values()].sort((a, b) => a.aylik - b.aylik || a.ad.localeCompare(b.ad));
-      return { slug: tool.slug, name: tool.name, category: tool.category, plans: sorted };
-    })
+    .map((tool) => ({
+      slug: tool.slug,
+      name: tool.name,
+      category: tool.category,
+      plans: stackPlanlari(tool),
+    }))
     .filter((tool) => tool.plans.length > 0)
     .sort((a, b) => a.name.localeCompare(b.name, "en"));
 }

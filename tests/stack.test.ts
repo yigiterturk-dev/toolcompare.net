@@ -10,6 +10,7 @@ import {
   serializeStack,
   stackCsv,
   stackAraclari,
+  stackPlanlari,
   stackTotals,
   stackUrl,
   type StackTool,
@@ -130,4 +131,20 @@ test("CSV ciktisi basliklari, koltuk ve kacis kurallarini tasir", () => {
   assert.equal(lines[0], "tool,plan,billing_unit,seats,monthly_usd,annual_usd,price_checked");
   assert.match(csv, /Alpha,Pro,per_user,3,30,360,2026-09-10/);
   assert.match(csv, /"Team, plan~x"/);
+});
+
+test("plan merdiveni olmayan dogrulanmis fiyat tek basamak olarak girer", () => {
+  const tools = stackAraclari(toolsData as never);
+  assert.ok(tools.length >= 270, `hesaplayici yalnizca ${tools.length} arac iceriyor`);
+
+  const chatgpt = tools.find((tool) => tool.slug === "chatgpt");
+  assert.ok(chatgpt, "chatgpt hesaplayicida yok");
+  assert.equal(chatgpt.plans[0].ad, "Starting price");
+  assert.equal(chatgpt.plans[0].aylik, 20);
+  assert.equal(chatgpt.plans[0].birim, "sabit");
+
+  const monday = tools.find((tool) => tool.slug === "monday");
+  assert.ok(monday, "monday hesaplayicida yok");
+  assert.equal(monday.plans[0].aylik, 9);
+  assert.equal(monday.plans[0].birim, "kisi-basina");
 });

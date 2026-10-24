@@ -1,10 +1,9 @@
 import type { Arac } from "./arac.ts";
-import type { Plan } from "./plan.ts";
 import { aracIndekslenir } from "./indeks.ts";
 import { islevi } from "./islev.ts";
-import type { StackAlternative } from "./stack.ts";
+import { stackPlanlari, type StackAlternative } from "./stack.ts";
 
-type Entry = { tool: Arac; plan: Plan };
+type Entry = { tool: Arac; plan: ReturnType<typeof stackPlanlari>[number] };
 
 /*
   "Bu stack'te daha ucuz secenek" onerisi. Iki sart:
@@ -21,15 +20,9 @@ export function stackAlternatifleri(tools: readonly Arac[]): Record<string, Stac
 
   for (const tool of tools) {
     if (!aracIndekslenir(tool)) continue;
-    /* stackAraclari ile ayni tekillestirme: ayni plan adi iki kez gelirse
-       ILK kayit gecer. Aksi halde onerideki plan adi, hedef aracin
-       sayfasinda baska bir fiyata cozulur. */
-    const planlar = new Map<string, Plan>();
-    for (const entry of tool.planlar ?? []) {
-      if (!entry.ad || !Number.isFinite(entry.aylik) || entry.aylik < 0) continue;
-      if (!planlar.has(entry.ad)) planlar.set(entry.ad, entry);
-    }
-    const plan = [...planlar.values()]
+    /* stackAraclari ile ayni kaynak: plan merdiveni yoksa dogrulanmis
+       baslangic fiyati tek basamak olarak gelir. */
+    const plan = stackPlanlari(tool)
       .filter((entry) => entry.aylik > 0)
       .sort((a, b) => a.aylik - b.aylik)[0];
     if (!plan) continue;
