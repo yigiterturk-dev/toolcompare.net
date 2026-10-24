@@ -215,7 +215,7 @@ export const degisimEtiketi = (type: FiyatDegisimiType) => TIP_ETIKETI[type];
 export function enSonKontroller(limit = 20) {
   const harita = new Map<
     string,
-    { slug: string; name: string; checkedAt: string; plans: number; from: number | null }
+    { slug: string; name: string; checkedAt: string; plans: number; from: number | null; sourceUrl: string }
   >();
   for (const point of fiyatGecmisi().baseline) {
     const entry = harita.get(point.slug) || {
@@ -224,9 +224,11 @@ export function enSonKontroller(limit = 20) {
       checkedAt: "",
       plans: 0,
       from: null,
+      sourceUrl: "",
     };
     entry.plans += 1;
     if (point.checkedAt && point.checkedAt > entry.checkedAt) entry.checkedAt = point.checkedAt;
+    if (!entry.sourceUrl && point.sourceUrl) entry.sourceUrl = point.sourceUrl;
     if (point.aylik > 0 && (entry.from === null || point.aylik < entry.from)) entry.from = point.aylik;
     harita.set(point.slug, entry);
   }

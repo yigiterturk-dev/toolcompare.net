@@ -63,7 +63,12 @@ const ARAC_HARITASI = new Map(ARACLAR.map((tool) => [tool.slug, tool]));
 export default function PriceChangesPage() {
   const ozet = gecmisOzeti();
   const degisimler = sonDegisimler(60);
-  const kontroller = enSonKontroller(24);
+  const tumKontroller = enSonKontroller(500);
+  const kontroller = tumKontroller.slice(0, 24);
+  const cutoff = new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
+  const eskiler = tumKontroller
+    .filter((entry) => entry.checkedAt < cutoff)
+    .sort((a, b) => a.checkedAt.localeCompare(b.checkedAt) || a.name.localeCompare(b.name, "en"));
   const ilkKayit = fiyatGecmisi().sonKontrol;
   const sema = kirintiSemasi([
     { ad: "Tools", yol: "/tools" },
@@ -235,6 +240,44 @@ export default function PriceChangesPage() {
               );
             })}
           </ul>
+        </section>
+
+        <section className="mt-14 border-t border-line pt-8">
+          <h2 className="font-serif text-2xl font-semibold">Re-verification queue</h2>
+          <p className="mt-2 text-sm text-ink-soft">
+            {eskiler.length > 0
+              ? `${eskiler.length} tools were last checked before ${tarih(cutoff)}. Oldest first — this is the queue, not a claim that the price is wrong.`
+              : "Every tracked tool has been checked in the last 30 days."}
+          </p>
+          {eskiler.length > 0 && (
+            <ul className="mt-4 list-none divide-y divide-line border-y border-line p-0">
+              {eskiler.slice(0, 10).map((entry) => {
+                const tool = ARAC_HARITASI.get(entry.slug);
+                const link = tool && aracIndekslenir(tool) ? `/tools/${entry.slug}` : null;
+                return (
+                  <li key={entry.slug} className="flex flex-wrap items-baseline justify-between gap-3 py-2.5">
+                    <span className="text-sm font-medium text-ink">
+                      {link ? (
+                        <Link href={link} className="hover:text-accent">
+                          {entry.name}
+                        </Link>
+                      ) : (
+                        entry.name
+                      )}
+                    </span>
+                    <span className="flex items-baseline gap-3 text-xs text-ink-muted tabular-nums">
+                      <span>checked {tarih(entry.checkedAt)}</span>
+                      {entry.sourceUrl ? (
+                        <a href={entry.sourceUrl} rel="noopener noreferrer" className="text-accent underline underline-offset-4">
+                          source
+                        </a>
+                      ) : null}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </section>
 
         <p className="mt-8 max-w-3xl text-sm text-ink-soft">
