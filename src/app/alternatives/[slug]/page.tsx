@@ -32,11 +32,18 @@ import { relDegeri } from "@/lib/affiliate";
 import AffiliateNotu from "@/components/AffiliateNotu";
 import { listeSemasi, kirintiSemasi } from "@/lib/yapilandirilmis";
 import { fiyatDurumu, enUcuz as enUcuzArac } from "@/lib/fiyat";
+import { serializeStack, stackAraclari, stackPlanLabel, stackTotals } from "@/lib/stack";
 
 import { paylasimMeta } from "@/lib/paylasim";
 function aracBul(slug: string): Arac | undefined {
   return (toolsData as Arac[]).find((t) => t.slug === slug);
 }
+
+const paraBicim = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 2,
+});
 
 export function generateStaticParams() {
   return alternatifSayfasiOlanlar().map((t) => ({ slug: t.slug }));
@@ -93,6 +100,19 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
   if (alts.length < EN_AZ_ALTERNATIF) redirect(`/categories/${kategoriSlug(tool.category)}`);
 
   const enUcuz = enUcuzArac(alts);
+  const altStack = stackAraclari(alts);
+  const altAdaylar = altStack
+    .flatMap((item) => {
+      const plan = item.plans.find((entry) => entry.aylik > 0);
+      return plan ? [{ item, plan }] : [];
+    })
+    .sort((a, b) => a.plan.aylik - b.plan.aylik || a.item.name.localeCompare(b.item.name, "en"));
+  const cheapestAlt = altAdaylar[0] ?? null;
+  const altItems = cheapestAlt
+    ? [{ slug: cheapestAlt.item.slug, plan: cheapestAlt.plan.ad, seats: 5 }]
+    : [];
+  const altTotal = stackTotals(altStack, altItems);
+  const altStackUrl = altItems.length ? `/stack?s=${serializeStack(altItems)}` : null;
 
   const semalar = [
     listeSemasi(`Best ${tool.name} Alternatives in 2026`, `/alternatives/${tool.slug}`, alts),
@@ -150,6 +170,32 @@ export default async function AlternativesPage({ params }: SayfaParametresi) {
           (bkz. lib/plan.ts); hicbiri yoksa hic basilmaz.
         */}
         {ozet && <p className="mt-3 max-w-4xl text-ink-soft">{ozet}</p>}
+
+        {/*
+          EKIP MALIYETI (2026-10-24): alternatif sayfasi "en ucuz baslangic"
+          diyordu ama 5 kisilik ekipte ne demek oldugunu soylemiyordu.
+          Yalnizca dogrulanmis en ucuz ucretli plan; sabit plan koltukla
+          carpilmaz. Tik alan ama dönüşmeyen sayfalarda somut bir sonraki adim.
+        */}
+        {cheapestAlt && altStackUrl && altTotal.monthly > 0 && (
+          <section className="mt-6 max-w-4xl rounded-[--radius-card] border border-line bg-surface p-5">
+            <p className="text-xs font-medium tracking-wide text-ink-muted uppercase">
+              Cheapest verified alternative · 5 seats
+            </p>
+            <p className="mt-2 text-sm text-ink-soft">
+              <strong className="font-medium text-ink">{cheapestAlt.item.name}</strong> —{" "}
+              {stackPlanLabel(cheapestAlt.plan)}. For five seats that is{" "}
+              <strong className="font-medium text-ink">{paraBicim.format(altTotal.monthly)}/mo</strong>{" "}
+              ({paraBicim.format(altTotal.annual)}/yr). Flat plans are not multiplied by seats.
+            </p>
+            <Link
+              href={altStackUrl}
+              className="mt-2 inline-block text-sm text-accent underline underline-offset-4"
+            >
+              Open in the stack calculator →
+            </Link>
+          </section>
+        )}
 
         {Array.isArray(tool.cons) && tool.cons.length > 0 && (
           <section className="mt-8 max-w-4xl rounded-[--radius-card] border border-line bg-surface p-5">
