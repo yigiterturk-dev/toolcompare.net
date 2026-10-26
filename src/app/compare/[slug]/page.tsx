@@ -11,7 +11,8 @@ import { kanonikSlug, akranlar, karsilastirmaCiftleri, ciftIndekslenebilirMi, ay
 import { listeSemasi, kirintiSemasi, sssSemasi } from "@/lib/yapilandirilmis";
 import { karsilastirmaSss } from "@/lib/sss";
 import { elleYazilmisSorular, elleYazilmisKisaCevap } from "@/lib/karsilastirma-notlari";
-import { ilkUcretliBasamak, koltukMaliyeti, merdiven, planEtiketi } from "@/lib/plan";
+import { merdiven, planEtiketi } from "@/lib/plan";
+import { enUcuzStackPlani, planMonthly, stackPlanLabel } from "@/lib/stack";
 import { linklenebilirAkranlar, aracTaranmayaDeger } from "@/lib/tarama";
 import { fiyatDurumu } from "@/lib/fiyat";
 import { ciftMetaAciklamasi } from "@/lib/meta";
@@ -184,13 +185,13 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
   // sayilardan turetiliyor.
   const f1 = fiyatDurumu(tool1);
   const f2 = fiyatDurumu(tool2);
-  const ucretli1 = ilkUcretliBasamak(tool1 as never);
-  const ucretli2 = ilkUcretliBasamak(tool2 as never);
+  const ucretli1 = enUcuzStackPlani(tool1);
+  const ucretli2 = enUcuzStackPlani(tool2);
   const koltukSatirlari = [1, 5, 25]
     .map((seats) => ({
       seats,
-      a: koltukMaliyeti(ucretli1, seats),
-      b: koltukMaliyeti(ucretli2, seats),
+      a: ucretli1 ? planMonthly(ucretli1, seats) : null,
+      b: ucretli2 ? planMonthly(ucretli2, seats) : null,
     }))
     .filter((row) => row.a !== null || row.b !== null);
   const yillikFaturali = [ucretli1, ucretli2].some((plan) => plan?.faturalama === "yillik");
@@ -770,8 +771,15 @@ export default async function ComparisonPage({ params }: SayfaParametresi) {
           <section className="mt-12 border-t border-line pt-10">
             <h2 className="text-lg font-semibold">Cost at team size</h2>
             <p className="mt-2 text-sm text-ink-soft">
-              Each tool&apos;s cheapest paid plan, multiplied by seats. Flat plans do not scale with
-              headcount; per-seat plans do. No plan means no row.
+              Each tool&apos;s cheapest verified paid plan, multiplied by seats. Flat plans do not
+              scale with headcount; per-seat plans do. No verified paid plan means no row.
+            </p>
+            <p className="mt-1 text-xs text-ink-muted">
+              Plans used:{" "}
+              {[ucretli1 ? `${tool1.name} — ${stackPlanLabel(ucretli1)}` : null, ucretli2 ? `${tool2.name} — ${stackPlanLabel(ucretli2)}` : null]
+                .filter(Boolean)
+                .join(" · ")}
+              .
             </p>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[28rem] border-collapse text-left text-sm">

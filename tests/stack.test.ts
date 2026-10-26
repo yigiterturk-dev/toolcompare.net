@@ -9,6 +9,7 @@ import {
   planMonthly,
   serializeStack,
   stackCsv,
+  enUcuzStackPlani,
   stackAraclari,
   stackPlanlari,
   stackTotals,
@@ -147,4 +148,16 @@ test("plan merdiveni olmayan dogrulanmis fiyat tek basamak olarak girer", () => 
   assert.ok(monday, "monday hesaplayicida yok");
   assert.equal(monday.plans[0].aylik, 9);
   assert.equal(monday.plans[0].birim, "kisi-basina");
+});
+
+test("enUcuzStackPlani plan merdiveni yoksa baslangic fiyatina duser", () => {
+  const chatgpt = (toolsData as never[]).find((tool) => (tool as { slug: string }).slug === "chatgpt") as never;
+  const notion = (toolsData as never[]).find((tool) => (tool as { slug: string }).slug === "notion") as never;
+  const chatgptPlan = enUcuzStackPlani(chatgpt);
+  assert.ok(chatgptPlan);
+  assert.equal(chatgptPlan.ad, "Starting price");
+  assert.equal(chatgptPlan.aylik, 20);
+  const notionPlan = enUcuzStackPlani(notion);
+  assert.ok(notionPlan);
+  assert.equal(notionPlan.ad, "Business");
 });

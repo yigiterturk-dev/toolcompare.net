@@ -127,6 +127,15 @@ export function defaultPlan(tool: StackTool): StackPlan | null {
   return tool.plans.find((plan) => plan.aylik > 0) ?? tool.plans[0] ?? null;
 }
 
+/** En ucuz DOGRULANMIS ucretli plan; plan merdiveni yoksa baslangic fiyati. */
+export function enUcuzStackPlani(tool: Arac): StackPlan | null {
+  return (
+    stackPlanlari(tool)
+      .filter((plan) => plan.aylik > 0)
+      .sort((a, b) => a.aylik - b.aylik || a.ad.localeCompare(b.ad))[0] ?? null
+  );
+}
+
 export function planMonthly(plan: StackPlan, seats: number | string = 1): number {
   const count = plan.birim === "kisi-basina" ? clampSeats(seats) : 1;
   return round2(plan.aylik * count);
