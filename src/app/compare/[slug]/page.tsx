@@ -103,6 +103,19 @@ function VisitButtons({ tools }: { tools: Arac[] }) {
   );
 }
 
+/*
+  CTR BASLIKLARI (GSC, 2026-10-24): bu uc cift 4-18. sirada, 29-40
+  gosterim aliyor ve tik SIFIR. Aciklama zaten cifte ozgu; baslik ise
+  "Which Is Better in 2026?" sablonuydu. Snippet'te fiyat/niyet ayrimi
+  gorunmedigi icin tiklanmiyor. Baslik yalnizca BURADA elle degistirilir;
+  entegrasyon kaydi olan ciftler kendi sorusunu korur.
+*/
+const OZEL_BASLIKLAR: Record<string, string> = {
+  "drizzle-vs-mongodb": "Drizzle vs MongoDB: ORM vs Database, Priced",
+  "postman-vs-smartbear-software": "Postman vs SmartBear: API Testing Costs",
+  "groupme-vs-slack": "GroupMe vs Slack: Free Chat vs Team Chat",
+};
+
 export async function generateMetadata({ params }: SayfaParametresi): Promise<Metadata> {
   const resolvedParams = await params;
   const parts = resolvedParams.slug.split("-vs-");
@@ -127,9 +140,10 @@ export async function generateMetadata({ params }: SayfaParametresi): Promise<Me
     adrese tasimak o birikimi cope atardi.
   */
   const ent = entegrasyonKaydi(tool1.slug, tool2.slug);
+  const ozelBaslik = OZEL_BASLIKLAR[kanonikSlug(tool1.slug, tool2.slug)];
   const cekirdek = ent
     ? entegrasyonBasligi(tool1.name, tool2.name)
-    : `${tool1.name} vs ${tool2.name}: Which Is Better in 2026?`;
+    : ozelBaslik ?? `${tool1.name} vs ${tool2.name}: Which Is Better in 2026?`;
   const kisa = ent
     ? `${tool1.name} + ${tool2.name} integration`
     : `${tool1.name} vs ${tool2.name} (2026)`;
