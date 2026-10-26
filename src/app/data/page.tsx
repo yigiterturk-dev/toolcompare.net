@@ -143,6 +143,11 @@ export default function DataPage() {
         encodingFormat: "text/csv",
         contentUrl: "https://toolcompare.net/api/pricing-transparency",
       },
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/json",
+        contentUrl: "https://toolcompare.net/api/price-history",
+      },
     ],
   };
 
@@ -182,6 +187,18 @@ export default function DataPage() {
         </ul>
         <p>
           With no parameters the response is unchanged from before, so existing callers keep working.
+        </p>
+        <p>
+          The separate <strong>price history</strong> dataset records each verified plan figure and every
+          change we catch between checks:{" "}
+          <a href="/api/price-history" rel="nofollow">
+            <code>GET /api/price-history</code>
+          </a>{" "}
+          (JSON) or{" "}
+          <a href="/api/price-history?format=csv" rel="nofollow">
+            <code>?format=csv</code>
+          </a>
+          . The live log is at <Link href="/price-changes">/price-changes</Link>.
         </p>
 
         <section>

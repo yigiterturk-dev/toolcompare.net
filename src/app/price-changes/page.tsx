@@ -65,7 +65,11 @@ export default function PriceChangesPage() {
   const degisimler = sonDegisimler(60);
   const tumKontroller = enSonKontroller(500);
   const kontroller = tumKontroller.slice(0, 24);
-  const cutoff = new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
+  /* Build-zamani saf hesap: son snapshot tarihinden 30 gun once. Date.now()
+     kullanmak React purity kuralini kiriyor ve sayfa zaten statik. */
+  const cutoff = new Date(new Date(`${ozet.sonKontrol}T00:00:00Z`).getTime() - 30 * 86400000)
+    .toISOString()
+    .slice(0, 10);
   const eskiler = tumKontroller
     .filter((entry) => entry.checkedAt < cutoff)
     .sort((a, b) => a.checkedAt.localeCompare(b.checkedAt) || a.name.localeCompare(b.name, "en"));
@@ -279,6 +283,18 @@ export default function PriceChangesPage() {
             </ul>
           )}
         </section>
+
+        <p className="mt-8 max-w-3xl text-sm text-ink-soft">
+          Download this log:{" "}
+          <a href="/api/price-history" rel="nofollow" className="text-accent underline underline-offset-4">
+            JSON
+          </a>{" "}
+          or{" "}
+          <a href="/api/price-history?format=csv" rel="nofollow" className="text-accent underline underline-offset-4">
+            CSV
+          </a>
+          . Licensed CC BY 4.0; attribution required.
+        </p>
 
         <p className="mt-8 max-w-3xl text-sm text-ink-soft">
           How the check works: we read the plan names and monthly figures from the vendor&apos;s own
