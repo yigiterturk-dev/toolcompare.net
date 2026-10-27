@@ -99,6 +99,22 @@ tar -xzf /opt/toolcompare-backups/toolcompare-YYYY-MM-DD-HHMM.tar.gz -C /
   Telegram alert and sends a recovery message when the site returns.
 - Telegram credentials live in `/etc/toolcompare-alert.env` on hetzner (0600).
 
+## Weekly GSC summary
+
+`toolcompare-gsc.timer` runs Monday 09:00 and sends a Telegram summary of the
+last 28 days (vs the previous 28), top pages and the count of 4–20th-position
+pages with no clicks. The JSON snapshot is written to
+`/opt/toolcompare-data/gsc-haftalik.json`.
+
+- Service account key: `/etc/toolcompare-gsc/service-account.json` (0600)
+- Telegram env: `/etc/toolcompare-gsc/env` (0600)
+- Unit: `/etc/systemd/system/toolcompare-gsc.service` + `.timer`
+
+```bash
+systemctl start toolcompare-gsc.service
+journalctl -u toolcompare-gsc.service -n 30
+```
+
 ## Environment
 
 No `.env.production` is present on the server. Public pages and `/api/tools`
