@@ -92,7 +92,31 @@ export function stackPlanlari(tool: Arac): StackPlan[] {
     okunur, UYDURULMAZ. Plan merdiveni olan araclar bu yola girmez.
   */
   const durum = fiyatDurumu(tool);
-  if (!durum.karsilastirilabilir || durum.aylik === null) return [];
+  if (!durum.karsilastirilabilir || durum.aylik === null) {
+    /*
+      UCRETSIZ KATMAN (2026-10-27): fiyat.ts "ucretsiz-katman" modelini
+      sayisal baslangic fiyati olmadigi icin karsilastirilabilir saymiyor
+      -- dogru, cunku ucretli basamak bilinmiyor. Ama stack icin $0'lik
+      FREE TIER gercek bir secenektir; Photopea/Matomo gibi 70 arac bu
+      yuzden hesaplayicidan dusuyordu. Yalnizca kaniti olan modele izin
+      verilir; "ucretsiz-kredi" plan degildir, disarida kalir.
+    */
+    const model = tool.fiyatModeli ?? "";
+    const kanit = tool.evidence?.status ?? "";
+    const kanitli = ["pricing-page-verified", "vendor-sourced", "open-source-verified", "observed", "tested"].includes(kanit);
+    if ((model === "bedava" || model === "ucretsiz" || model === "ucretsiz-katman") && kanitli) {
+      return [
+        {
+          ad: model === "ucretsiz-katman" ? "Free tier" : "Free",
+          aylik: 0,
+          birim: "sabit",
+          faturalama: null,
+          kontrolTarihi: tool.fiyatKontrolTarihi || tool.evidence?.reviewedAt,
+        },
+      ];
+    }
+    return [];
+  }
   const birim: Plan["birim"] = durum.kisa.includes("/user/mo") ? "kisi-basina" : "sabit";
   const faturalama: Plan["faturalama"] = durum.metin.includes("billed annually")
     ? "yillik"

@@ -148,6 +148,12 @@ test("plan merdiveni olmayan dogrulanmis fiyat tek basamak olarak girer", () => 
   assert.ok(monday, "monday hesaplayicida yok");
   assert.equal(monday.plans[0].aylik, 9);
   assert.equal(monday.plans[0].birim, "kisi-basina");
+
+  const photopea = tools.find((tool) => tool.slug === "photopea");
+  assert.ok(photopea, "photopea hesaplayicida yok");
+  assert.equal(photopea.plans[0].ad, "Free tier");
+  assert.equal(photopea.plans[0].aylik, 0);
+  assert.equal(photopea.plans[0].birim, "sabit");
 });
 
 test("enUcuzStackPlani plan merdiveni yoksa baslangic fiyatina duser", () => {
