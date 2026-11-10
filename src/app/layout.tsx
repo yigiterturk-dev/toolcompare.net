@@ -88,7 +88,7 @@ export default function RootLayout({
         */}
         <meta
           httpEquiv="Content-Security-Policy"
-          content={cspOlustur({ adsense: Boolean(adsensePub), meta: true })}
+          content={cspOlustur({ gelistirme: process.env.NODE_ENV === "development", adsense: Boolean(adsensePub), meta: true })}
         />
         {/*
           AdSense betigi yalnizca yayinci kimligi TANIMLIYSA basilir.
